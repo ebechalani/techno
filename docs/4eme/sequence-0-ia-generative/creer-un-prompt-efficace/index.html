@@ -154,6 +154,13 @@
     </div>
     
     
+<div class="student-bar">
+  <span class="sb-info">💾 Tes réponses sont enregistrées automatiquement sur cet appareil.</span>
+  <span class="sb-actions">
+    <button class="btn btn-ghost btn-sm" id="print-answers" type="button">🖨 Imprimer / PDF</button>
+    <button class="btn btn-ghost btn-sm" id="clear-answers" type="button">🗑 Tout effacer</button>
+  </span>
+</div>
     <div class="prose">
       <figure class="embed embed-doc">
   <div class="embed-bar">
@@ -166,6 +173,70 @@
 
     </div>
     
+<section class="quiz" id="quiz">
+  <h2>🧠 Teste tes connaissances</h2>
+  <p class="quiz-hint">Réponds aux questions puis clique sur « Vérifier » — la correction s'affiche aussitôt.</p>
+  
+    <div class="quiz-q" data-ok="1" data-explain="Un prompt, c'est la consigne donnée à l'IA pour qu'elle aide à faire une tâche : expliquer, résumer, générer une idée, corriger un texte, etc.">
+      <p class="qq-text">1. D'après la fiche, qu'est-ce qu'un « prompt » ?</p>
+      <div class="qq-opts">
+        <label class="qq-opt"><input type="radio" name="q0" value="0"><span>Le nom du logiciel d'intelligence artificielle</span></label>
+        <label class="qq-opt"><input type="radio" name="q0" value="1"><span>La consigne que je donne à l'IA pour qu'elle m'aide à faire une tâche</span></label>
+        <label class="qq-opt"><input type="radio" name="q0" value="2"><span>La réponse produite par l'IA</span></label>
+        <label class="qq-opt"><input type="radio" name="q0" value="3"><span>Un bouton pour lancer une recherche sur Internet</span></label>
+      </div>
+      <button class="btn btn-ghost qq-check" type="button">Vérifier ma réponse</button>
+      <div class="qq-feedback" aria-live="polite"></div>
+    </div>
+
+    <div class="quiz-q" data-ok="2" data-explain="La méthode ACTIF repose sur 5 éléments : Identité, Contexte, Action, Tonalité et Format.">
+      <p class="qq-text">2. Combien d'éléments compte la méthode ACTIF pour construire un bon prompt ?</p>
+      <div class="qq-opts">
+        <label class="qq-opt"><input type="radio" name="q1" value="0"><span>3</span></label>
+        <label class="qq-opt"><input type="radio" name="q1" value="1"><span>4</span></label>
+        <label class="qq-opt"><input type="radio" name="q1" value="2"><span>5</span></label>
+        <label class="qq-opt"><input type="radio" name="q1" value="3"><span>10</span></label>
+      </div>
+      <button class="btn btn-ghost qq-check" type="button">Vérifier ma réponse</button>
+      <div class="qq-feedback" aria-live="polite"></div>
+    </div>
+
+    <div class="quiz-q" data-ok="1" data-explain="L'Identité précise le rôle que l'on donne à l'IA, par exemple « Tu es mon assistant en Technologie ».">
+      <p class="qq-text">3. Dans la méthode ACTIF, quel élément répond à la question « Quel rôle veux-tu que l'IA joue ? » (par exemple : « Tu es mon assistant en Technologie ») ?</p>
+      <div class="qq-opts">
+        <label class="qq-opt"><input type="radio" name="q2" value="0"><span>Le Contexte</span></label>
+        <label class="qq-opt"><input type="radio" name="q2" value="1"><span>L'Identité</span></label>
+        <label class="qq-opt"><input type="radio" name="q2" value="2"><span>Le Format</span></label>
+        <label class="qq-opt"><input type="radio" name="q2" value="3"><span>L'Action</span></label>
+      </div>
+      <button class="btn btn-ghost qq-check" type="button">Vérifier ma réponse</button>
+      <div class="qq-feedback" aria-live="polite"></div>
+    </div>
+
+    <div class="quiz-q" data-ok="3" data-explain="Le Format indique la forme attendue de la réponse : une liste, un paragraphe, des exemples…">
+      <p class="qq-text">4. La phrase « Réponds sous forme de liste à puces, avec 5 exemples » correspond à quel élément de la méthode ACTIF ?</p>
+      <div class="qq-opts">
+        <label class="qq-opt"><input type="radio" name="q3" value="0"><span>La Tonalité</span></label>
+        <label class="qq-opt"><input type="radio" name="q3" value="1"><span>Le Contexte</span></label>
+        <label class="qq-opt"><input type="radio" name="q3" value="2"><span>L'Identité</span></label>
+        <label class="qq-opt"><input type="radio" name="q3" value="3"><span>Le Format</span></label>
+      </div>
+      <button class="btn btn-ghost qq-check" type="button">Vérifier ma réponse</button>
+      <div class="qq-feedback" aria-live="polite"></div>
+    </div>
+
+    <div class="quiz-q" data-ok="0" data-explain="Le Contexte explique dans quelle situation on utilise l'IA et à quoi va servir sa réponse, comme préparer un exposé en 4e.">
+      <p class="qq-text">5. La phrase « Je prépare un exposé en 4e » correspond à quel élément de la méthode ACTIF ?</p>
+      <div class="qq-opts">
+        <label class="qq-opt"><input type="radio" name="q4" value="0"><span>Le Contexte</span></label>
+        <label class="qq-opt"><input type="radio" name="q4" value="1"><span>L'Action</span></label>
+        <label class="qq-opt"><input type="radio" name="q4" value="2"><span>La Tonalité</span></label>
+      </div>
+      <button class="btn btn-ghost qq-check" type="button">Vérifier ma réponse</button>
+      <div class="qq-feedback" aria-live="polite"></div>
+    </div>
+  <div class="quiz-score" aria-live="polite"></div>
+</section>
     
     <nav class="pager">
       <a class="pg-prev" href="../seance-1-corr/"><span class="pg-label">← Précédent</span><span class="pg-title">Séance 1 (correction) : Utiliser l’IA Générative comme assistant personnel</span></a>

@@ -154,6 +154,13 @@
     </div>
     
     
+<div class="student-bar">
+  <span class="sb-info">💾 Tes réponses sont enregistrées automatiquement sur cet appareil.</span>
+  <span class="sb-actions">
+    <button class="btn btn-ghost btn-sm" id="print-answers" type="button">🖨 Imprimer / PDF</button>
+    <button class="btn btn-ghost btn-sm" id="clear-answers" type="button">🗑 Tout effacer</button>
+  </span>
+</div>
     <div class="prose">
       <figure class="embed embed-doc">
   <div class="embed-bar">
@@ -166,6 +173,71 @@
 
     </div>
     
+<section class="quiz" id="quiz">
+  <h2>🧠 Teste tes connaissances</h2>
+  <p class="quiz-hint">Réponds aux questions puis clique sur « Vérifier » — la correction s'affiche aussitôt.</p>
+  
+    <div class="quiz-q" data-ok="1" data-explain="La fiche indique qu'une IAG fonctionne grâce à des algorithmes qui ont été entraînés sur de grandes quantités de données.">
+      <p class="qq-text">1. Grâce à quoi une IAG fonctionne-t-elle ?</p>
+      <div class="qq-opts">
+        <label class="qq-opt"><input type="radio" name="q0" value="0"><span>Une personne qui répond en direct aux questions</span></label>
+        <label class="qq-opt"><input type="radio" name="q0" value="1"><span>Des algorithmes entraînés sur de grandes quantités de données</span></label>
+        <label class="qq-opt"><input type="radio" name="q0" value="2"><span>Un dictionnaire qui contient toutes les vérités du monde</span></label>
+        <label class="qq-opt"><input type="radio" name="q0" value="3"><span>Un moteur de recherche qui recopie des sites</span></label>
+      </div>
+      <button class="btn btn-ghost qq-check" type="button">Vérifier ma réponse</button>
+      <div class="qq-feedback" aria-live="polite"></div>
+    </div>
+
+    <div class="quiz-q" data-ok="2" data-explain="Une hallucination, c'est quand l'IA invente des informations qui semblent vraies mais ne le sont pas.">
+      <p class="qq-text">2. Qu'appelle-t-on une « hallucination » d'une IA ?</p>
+      <div class="qq-opts">
+        <label class="qq-opt"><input type="radio" name="q1" value="0"><span>Une image générée trop lumineuse</span></label>
+        <label class="qq-opt"><input type="radio" name="q1" value="1"><span>Une panne de l'ordinateur</span></label>
+        <label class="qq-opt"><input type="radio" name="q1" value="2"><span>Une information inventée qui semble vraie mais est fausse</span></label>
+        <label class="qq-opt"><input type="radio" name="q1" value="3"><span>Une réponse trop longue à lire</span></label>
+      </div>
+      <button class="btn btn-ghost qq-check" type="button">Vérifier ma réponse</button>
+      <div class="qq-feedback" aria-live="polite"></div>
+    </div>
+
+    <div class="quiz-q" data-ok="1" data-explain="L'IAG est très utile pour résumer un texte, trouver des idées, expliquer une notion ou préparer un exposé, mais elle ne remplace pas le travail personnel.">
+      <p class="qq-text">3. D'après la fiche, à quoi une IAG peut-elle être très utile ?</p>
+      <div class="qq-opts">
+        <label class="qq-opt"><input type="radio" name="q2" value="0"><span>À faire ses devoirs à sa place sans les relire</span></label>
+        <label class="qq-opt"><input type="radio" name="q2" value="1"><span>À résumer un texte ou à préparer un exposé</span></label>
+        <label class="qq-opt"><input type="radio" name="q2" value="2"><span>À remplacer complètement le travail personnel</span></label>
+        <label class="qq-opt"><input type="radio" name="q2" value="3"><span>À donner des réponses toujours exactes</span></label>
+      </div>
+      <button class="btn btn-ghost qq-check" type="button">Vérifier ma réponse</button>
+      <div class="qq-feedback" aria-live="polite"></div>
+    </div>
+
+    <div class="quiz-q" data-ok="2" data-explain="La fiche précise que l'IAG consomme beaucoup de ressources, notamment de l'énergie et des données.">
+      <p class="qq-text">4. D'après la fiche, quelles ressources une IAG consomme-t-elle en grande quantité pour fonctionner ?</p>
+      <div class="qq-opts">
+        <label class="qq-opt"><input type="radio" name="q3" value="0"><span>Du papier et de l'encre</span></label>
+        <label class="qq-opt"><input type="radio" name="q3" value="1"><span>De l'eau de pluie uniquement</span></label>
+        <label class="qq-opt"><input type="radio" name="q3" value="2"><span>De l'énergie et des données</span></label>
+        <label class="qq-opt"><input type="radio" name="q3" value="3"><span>Aucune ressource</span></label>
+      </div>
+      <button class="btn btn-ghost qq-check" type="button">Vérifier ma réponse</button>
+      <div class="qq-feedback" aria-live="polite"></div>
+    </div>
+
+    <div class="quiz-q" data-ok="3" data-explain="L'IAG doit rester un outil d'aide pour progresser, pas de triche : il faut vérifier et reformuler ses réponses, sans jamais copier-coller sans comprendre.">
+      <p class="qq-text">5. Comment utiliser une IAG de manière responsable ?</p>
+      <div class="qq-opts">
+        <label class="qq-opt"><input type="radio" name="q4" value="0"><span>Copier-coller ses réponses sans les comprendre</span></label>
+        <label class="qq-opt"><input type="radio" name="q4" value="1"><span>Lui faire une confiance aveugle</span></label>
+        <label class="qq-opt"><input type="radio" name="q4" value="2"><span>Lui faire faire ses devoirs à sa place</span></label>
+        <label class="qq-opt"><input type="radio" name="q4" value="3"><span>S'en servir comme outil d'aide et toujours vérifier ses réponses</span></label>
+      </div>
+      <button class="btn btn-ghost qq-check" type="button">Vérifier ma réponse</button>
+      <div class="qq-feedback" aria-live="polite"></div>
+    </div>
+  <div class="quiz-score" aria-live="polite"></div>
+</section>
     
     <nav class="pager">
       <a class="pg-prev" href="../creer-un-prompt-efficace/"><span class="pg-label">← Précédent</span><span class="pg-title">Créer un prompt efficace</span></a>

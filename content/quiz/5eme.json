@@ -1,0 +1,222 @@
+{
+  "sequence-1-cybersecurite/seance-1": [
+    {
+      "q": "Dans la situation déclenchante, qu'est-il arrivé à Mathieu ?",
+      "options": [
+        "Il a perdu son téléphone portable au collège",
+        "Son compte Pronote a été piraté et son bulletin modifié puis diffusé sur les réseaux sociaux",
+        "Son ordinateur est tombé en panne pendant un exposé",
+        "Il a oublié son mot de passe et ne peut plus se connecter"
+      ],
+      "answer": 1,
+      "explain": "Une personne malveillante a piraté le compte Pronote de Mathieu, modifié son bulletin scolaire, puis l'a diffusé sur plusieurs réseaux sociaux avec des commentaires insultants."
+    },
+    {
+      "q": "Quel est le problème à résoudre de cette séance ?",
+      "options": [
+        "Comment installer un antivirus sur son ordinateur ?",
+        "Comment créer un compte sur un réseau social ?",
+        "Comment protéger ses données personnelles et se protéger sur les réseaux sociaux ?"
+      ],
+      "answer": 2,
+      "explain": "La correction formule le problème ainsi : « Comment protéger ses données personnelles et se protéger sur les réseaux sociaux ? »"
+    },
+    {
+      "q": "Pour éviter de se faire pirater son compte, que faut-il faire avec son mot de passe ?",
+      "options": [
+        "Le donner uniquement à ses meilleurs amis",
+        "Ne jamais le donner et éviter qu'il soit facile à deviner",
+        "L'écrire sur son cahier pour ne pas l'oublier",
+        "Utiliser son prénom pour bien le retenir"
+      ],
+      "answer": 1,
+      "explain": "La correction indique qu'il ne faut ni donner son mot de passe ni choisir un mot de passe facile à deviner."
+    },
+    {
+      "q": "Si l'on est victime d'un piratage comme Mathieu, que faut-il faire ?",
+      "options": [
+        "Répondre aux moqueries sur les réseaux sociaux",
+        "Ne rien dire et attendre que ça passe",
+        "Pirater le compte de la personne pour se venger",
+        "Signaler rapidement la situation aux adultes"
+      ],
+      "answer": 3,
+      "explain": "La correction précise qu'il faut signaler rapidement la situation aux adultes."
+    }
+  ],
+  "sequence-1-cybersecurite/seance-2": [
+    {
+      "q": "Qu'est-ce qu'une donnée personnelle en informatique ?",
+      "options": [
+        "Une information concernant une personne, comme son nom ou son adresse",
+        "Un logiciel installé sur l'ordinateur",
+        "Un fichier vidéo enregistré sur le bureau",
+        "Le nom d'un site internet"
+      ],
+      "answer": 0,
+      "explain": "Une donnée personnelle est une information concernant une personne, comme son nom, son adresse, ses notes, etc."
+    },
+    {
+      "q": "Combien de temps mettrait un fraudeur à trouver un mot de passe de 8 caractères composé uniquement de chiffres ?",
+      "options": [
+        "37 jours",
+        "37 heures",
+        "37 secondes",
+        "37 minutes"
+      ],
+      "answer": 2,
+      "explain": "D'après le document étudié en classe, un mot de passe de 8 chiffres est trouvé en 37 secondes seulement."
+    },
+    {
+      "q": "Quelle couleur correspond à un mot de passe très fort ?",
+      "options": [
+        "Le rouge",
+        "Le vert",
+        "L'orange"
+      ],
+      "answer": 1,
+      "explain": "Sur le document du cours, la couleur verte correspond à un mot de passe très fort."
+    },
+    {
+      "q": "Quelles sont les conditions pour créer un mot de passe fort ?",
+      "options": [
+        "Utiliser uniquement des chiffres, c'est plus rapide à taper",
+        "Utiliser son prénom suivi de sa date de naissance",
+        "Choisir un seul mot du dictionnaire",
+        "Combiner minuscules, majuscules, chiffres et caractères spéciaux avec au moins 13 caractères"
+      ],
+      "answer": 3,
+      "explain": "Un mot de passe fort combine lettres minuscules et majuscules, chiffres et caractères spéciaux, avec au moins 13 caractères."
+    },
+    {
+      "q": "Quel raccourci clavier permet d'effacer rapidement les traces de navigation dans Firefox ?",
+      "options": [
+        "Ctrl + C",
+        "Ctrl + Z",
+        "Ctrl + Maj + Suppr",
+        "Alt + F4"
+      ],
+      "answer": 2,
+      "explain": "La correction indique le raccourci « Ctrl + Maj + Suppr » (Ctrl + Shift + Delete) comme procédure plus rapide pour effacer les traces de navigation."
+    }
+  ],
+  "sequence-1-cybersecurite/seance-3": [
+    {
+      "q": "Quelle est la bonne définition de la cyberviolence ?",
+      "options": [
+        "L'utilisation d'outils numériques pour célébrer et féliciter les personnes",
+        "Des actes malveillants commis par le biais des technologies numériques : insultes, menaces, harcèlement, diffusion de photos privées",
+        "Le fait de jouer trop longtemps aux jeux vidéo"
+      ],
+      "answer": 1,
+      "explain": "La cyberviolence désigne les actes malveillants commis par le biais des technologies numériques, comme les insultes, les menaces, le harcèlement ou la diffusion de photos et vidéos privées."
+    },
+    {
+      "q": "Qu'est-ce que l'usurpation d'identité ?",
+      "options": [
+        "Utiliser une photo d'une personne avec son accord pour illustrer un document",
+        "Changer son pseudonyme sur un réseau social",
+        "Utiliser l'identité d'une personne sans son consentement pour commettre des actes malveillants"
+      ],
+      "answer": 2,
+      "explain": "L'usurpation d'identité est l'utilisation de l'identité d'une personne sans son consentement pour commettre des actes malveillants."
+    },
+    {
+      "q": "Qu'est-ce que l'usage détourné ?",
+      "options": [
+        "Utiliser une image ou une information dans un but autre que celui pour lequel elle était prévue",
+        "Utiliser l'identité d'une personne sans son consentement",
+        "Éteindre son téléphone pour se couper d'internet",
+        "Télécharger une image libre de droits"
+      ],
+      "answer": 0,
+      "explain": "L'usage détourné est l'utilisation d'une image, d'une substance ou d'une information dans un but autre que celui pour lequel elle a été conçue ou prévue."
+    },
+    {
+      "q": "La situation vécue par Mathieu (bulletin piraté et diffusé pour se moquer de lui) est-elle de la cyberviolence ?",
+      "options": [
+        "Non, car ce n'est qu'une blague entre élèves",
+        "Non, car cela ne se passe pas dans la vraie vie",
+        "Oui, car c'est une usurpation d'identité utilisée pour insulter une personne par le biais d'une technologie numérique"
+      ],
+      "answer": 2,
+      "explain": "C'est bien de la cyberviolence : il s'agit d'une usurpation d'identité utilisée pour insulter une personne par le biais d'une technologie numérique."
+    },
+    {
+      "q": "Que dois-tu faire si tu es victime d'une situation de cyberviolence ?",
+      "options": [
+        "Répondre aux messages haineux pour te défendre",
+        "Supprimer tous les messages pour tout oublier",
+        "Ne rien dire à personne",
+        "Demander de l'aide aux adultes de confiance et conserver les preuves"
+      ],
+      "answer": 3,
+      "explain": "Il faut demander de l'aide à ses parents ou aux adultes de confiance et conserver les preuves pour que l'auteur soit puni par la loi."
+    },
+    {
+      "q": "Que dois-tu faire si tu es témoin d'une situation de cyberviolence ?",
+      "options": [
+        "Partager les messages pour les montrer aux autres",
+        "Alerter les adultes et soutenir la victime pour qu'elle ne se sente pas seule",
+        "Ne pas t'en mêler, cela ne te concerne pas"
+      ],
+      "answer": 1,
+      "explain": "En tant que témoin, on alerte les adultes et on soutient la victime pour qu'elle ne se sente pas seule."
+    }
+  ],
+  "sequence-1-cybersecurite/seance-4": [
+    {
+      "q": "Qu'est-ce qu'une arborescence ?",
+      "options": [
+        "Un logiciel qui dessine des arbres",
+        "Un type de virus informatique",
+        "L'organisation des dossiers et sous-dossiers, semblable à un arbre avec ses branches et ses feuilles",
+        "La liste des mots de passe enregistrés"
+      ],
+      "answer": 2,
+      "explain": "Une arborescence est l'organisation des dossiers et sous-dossiers, semblable à un arbre avec ses branches et ses feuilles."
+    },
+    {
+      "q": "Que faut-il faire pour retrouver plus facilement ses documents dans son espace personnel ?",
+      "options": [
+        "Tout enregistrer sur le bureau de l'ordinateur",
+        "Créer une arborescence avec des dossiers et des sous-dossiers",
+        "Donner le même nom à tous ses fichiers",
+        "Supprimer les fichiers dont on ne se sert pas souvent"
+      ],
+      "answer": 1,
+      "explain": "Pour retrouver plus facilement ses documents, il faut créer une arborescence dans son espace personnel, par exemple avec un sous-dossier par discipline."
+    },
+    {
+      "q": "À quoi sert l'extension d'un fichier (par exemple .jpg, .mp4, .pdf) ?",
+      "options": [
+        "À connaître la taille du fichier",
+        "À protéger le fichier par un mot de passe",
+        "À identifier le type de fichier : texte, image, tableur ou vidéo"
+      ],
+      "answer": 2,
+      "explain": "L'extension permet d'identifier le type d'un fichier : texte, image, tableur ou vidéo."
+    },
+    {
+      "q": "D'après le document 4, que doit cocher Mathieu pour sécuriser son fichier ?",
+      "options": [
+        "« Enregistrer avec mot de passe »",
+        "« Partager avec tout le monde »",
+        "« Enregistrer une copie sur le bureau »",
+        "« Supprimer après lecture »"
+      ],
+      "answer": 0,
+      "explain": "Pour sécuriser son fichier, Mathieu doit cocher l'option « Enregistrer avec mot de passe »."
+    },
+    {
+      "q": "Qu'est-ce que des droits d'accès ?",
+      "options": [
+        "Le prix à payer pour installer un logiciel",
+        "La vitesse de connexion à internet",
+        "Les permissions accordées à un utilisateur pour lire, modifier ou supprimer un fichier"
+      ],
+      "answer": 2,
+      "explain": "Les droits d'accès sont les permissions accordées à un utilisateur : elles indiquent s'il peut lire, modifier ou supprimer un fichier."
+    }
+  ]
+}

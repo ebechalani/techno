@@ -1,0 +1,303 @@
+{
+  "sequence-0-ia-generative/seance-1": [
+    {
+      "q": "Quelle phrase définit le mieux une intelligence artificielle générative (IAG) ?",
+      "options": [
+        "Un moteur de recherche qui donne des liens",
+        "Un outil capable de créer du contenu (texte, image…) à partir d'une demande",
+        "Un programme qui fabrique des objets",
+        "Un robot qui fait les devoirs à notre place"
+      ],
+      "answer": 1,
+      "explain": "Une IAG est un outil capable de créer du contenu (texte, image…) à partir d'une demande : ce n'est ni un moteur de recherche, ni un robot qui travaille à notre place."
+    },
+    {
+      "q": "Dans la situation de départ, le devoir rédigé par ChatGPT parle d'un « téléphone invisible ». Qu'est-ce que cela montre ?",
+      "options": [
+        "Que l'IA a découvert un téléphone secret",
+        "Que Google a donné une mauvaise information",
+        "Que l'IA peut inventer des informations fausses",
+        "Que l'élève a mal recopié le texte"
+      ],
+      "answer": 2,
+      "explain": "L'IAG peut donner des réponses fausses : elle invente parfois des informations, c'est pourquoi il faut toujours vérifier ce qu'elle produit."
+    },
+    {
+      "q": "Comment appelle-t-on la requête que l'on formule pour guider la production d'une intelligence artificielle ?",
+      "options": [
+        "Un algorithme",
+        "Une hallucination",
+        "Un lien",
+        "Un prompt"
+      ],
+      "answer": 3,
+      "explain": "Le prompt est la bonne requête qu'il faut savoir formuler pour guider la production de l'intelligence artificielle."
+    },
+    {
+      "q": "Parmi ces phrases, laquelle correspond à une vraie limite de l'IAG vue en séance ?",
+      "options": [
+        "Elle connaît tout et ne se trompe jamais",
+        "Elle peut donner des réponses fausses",
+        "Elle est toujours plus rapide qu'un moteur de recherche"
+      ],
+      "answer": 1,
+      "explain": "Le cours rappelle que l'IAG peut donner des réponses fausses (et qu'elle consomme de l'énergie pour fonctionner) : elle ne connaît pas tout et n'est pas infaillible."
+    },
+    {
+      "q": "Un élève fait rédiger tout son devoir par une IAG sans le lire ni le corriger. Quel problème cela pose-t-il d'après la correction ?",
+      "options": [
+        "Le devoir sera forcément trop court",
+        "Il peut y avoir des erreurs et l'élève ne progresse pas lui-même",
+        "L'IA refusera de répondre la prochaine fois",
+        "Le professeur ne pourra pas ouvrir le fichier"
+      ],
+      "answer": 1,
+      "explain": "Sans relecture, le texte peut contenir des erreurs ou ne pas répondre aux attentes du professeur, et l'élève ne progresse pas lui-même en Technologie."
+    },
+    {
+      "q": "Que dois-tu toujours faire après avoir utilisé une IAG ?",
+      "options": [
+        "Recopier directement sa réponse dans ton devoir",
+        "Supprimer sa réponse sans la lire",
+        "Relire, vérifier et reformuler sa réponse",
+        "Poser exactement la même question une deuxième fois"
+      ],
+      "answer": 2,
+      "explain": "Il faut relire, corriger ou reformuler ce que l'IA a donné, car elle peut se tromper ou inventer, et vérifier que cela correspond aux attentes du cours."
+    }
+  ],
+  "sequence-0-ia-generative/creer-un-prompt-efficace": [
+    {
+      "q": "D'après la fiche, qu'est-ce qu'un « prompt » ?",
+      "options": [
+        "Le nom du logiciel d'intelligence artificielle",
+        "La consigne que je donne à l'IA pour qu'elle m'aide à faire une tâche",
+        "La réponse produite par l'IA",
+        "Un bouton pour lancer une recherche sur Internet"
+      ],
+      "answer": 1,
+      "explain": "Un prompt, c'est la consigne donnée à l'IA pour qu'elle aide à faire une tâche : expliquer, résumer, générer une idée, corriger un texte, etc."
+    },
+    {
+      "q": "Combien d'éléments compte la méthode ACTIF pour construire un bon prompt ?",
+      "options": [
+        "3",
+        "4",
+        "5",
+        "10"
+      ],
+      "answer": 2,
+      "explain": "La méthode ACTIF repose sur 5 éléments : Identité, Contexte, Action, Tonalité et Format."
+    },
+    {
+      "q": "Dans la méthode ACTIF, quel élément répond à la question « Quel rôle veux-tu que l'IA joue ? » (par exemple : « Tu es mon assistant en Technologie ») ?",
+      "options": [
+        "Le Contexte",
+        "L'Identité",
+        "Le Format",
+        "L'Action"
+      ],
+      "answer": 1,
+      "explain": "L'Identité précise le rôle que l'on donne à l'IA, par exemple « Tu es mon assistant en Technologie »."
+    },
+    {
+      "q": "La phrase « Réponds sous forme de liste à puces, avec 5 exemples » correspond à quel élément de la méthode ACTIF ?",
+      "options": [
+        "La Tonalité",
+        "Le Contexte",
+        "L'Identité",
+        "Le Format"
+      ],
+      "answer": 3,
+      "explain": "Le Format indique la forme attendue de la réponse : une liste, un paragraphe, des exemples…"
+    },
+    {
+      "q": "La phrase « Je prépare un exposé en 4e » correspond à quel élément de la méthode ACTIF ?",
+      "options": [
+        "Le Contexte",
+        "L'Action",
+        "La Tonalité"
+      ],
+      "answer": 0,
+      "explain": "Le Contexte explique dans quelle situation on utilise l'IA et à quoi va servir sa réponse, comme préparer un exposé en 4e."
+    }
+  ],
+  "sequence-0-ia-generative/prompts-avantages-et-biais": [
+    {
+      "q": "Grâce à quoi une IAG fonctionne-t-elle ?",
+      "options": [
+        "Une personne qui répond en direct aux questions",
+        "Des algorithmes entraînés sur de grandes quantités de données",
+        "Un dictionnaire qui contient toutes les vérités du monde",
+        "Un moteur de recherche qui recopie des sites"
+      ],
+      "answer": 1,
+      "explain": "La fiche indique qu'une IAG fonctionne grâce à des algorithmes qui ont été entraînés sur de grandes quantités de données."
+    },
+    {
+      "q": "Qu'appelle-t-on une « hallucination » d'une IA ?",
+      "options": [
+        "Une image générée trop lumineuse",
+        "Une panne de l'ordinateur",
+        "Une information inventée qui semble vraie mais est fausse",
+        "Une réponse trop longue à lire"
+      ],
+      "answer": 2,
+      "explain": "Une hallucination, c'est quand l'IA invente des informations qui semblent vraies mais ne le sont pas."
+    },
+    {
+      "q": "D'après la fiche, à quoi une IAG peut-elle être très utile ?",
+      "options": [
+        "À faire ses devoirs à sa place sans les relire",
+        "À résumer un texte ou à préparer un exposé",
+        "À remplacer complètement le travail personnel",
+        "À donner des réponses toujours exactes"
+      ],
+      "answer": 1,
+      "explain": "L'IAG est très utile pour résumer un texte, trouver des idées, expliquer une notion ou préparer un exposé, mais elle ne remplace pas le travail personnel."
+    },
+    {
+      "q": "D'après la fiche, quelles ressources une IAG consomme-t-elle en grande quantité pour fonctionner ?",
+      "options": [
+        "Du papier et de l'encre",
+        "De l'eau de pluie uniquement",
+        "De l'énergie et des données",
+        "Aucune ressource"
+      ],
+      "answer": 2,
+      "explain": "La fiche précise que l'IAG consomme beaucoup de ressources, notamment de l'énergie et des données."
+    },
+    {
+      "q": "Comment utiliser une IAG de manière responsable ?",
+      "options": [
+        "Copier-coller ses réponses sans les comprendre",
+        "Lui faire une confiance aveugle",
+        "Lui faire faire ses devoirs à sa place",
+        "S'en servir comme outil d'aide et toujours vérifier ses réponses"
+      ],
+      "answer": 3,
+      "explain": "L'IAG doit rester un outil d'aide pour progresser, pas de triche : il faut vérifier et reformuler ses réponses, sans jamais copier-coller sans comprendre."
+    }
+  ],
+  "sequence-1-ia-securite/seance-1": [
+    {
+      "q": "Pourquoi Léo a-t-il activé la géolocalisation sur son téléphone ?",
+      "options": [
+        "Pour recevoir des recommandations personnalisées",
+        "Pour économiser la batterie de son téléphone",
+        "Pour que ses parents puissent le surveiller",
+        "Pour écouter de la musique sur son enceinte"
+      ],
+      "answer": 0,
+      "explain": "Dans l'histoire, Léo active la géolocalisation pour recevoir des recommandations personnalisées."
+    },
+    {
+      "q": "Quel événement inquiétant arrive à la famille de Léo ?",
+      "options": [
+        "Leur enceinte connectée tombe en panne",
+        "Une personne inconnue prétend connaître leur adresse, leurs habitudes et des discussions privées",
+        "Leur connexion Internet est coupée",
+        "Léo perd son téléphone au collège"
+      ],
+      "answer": 1,
+      "explain": "Les parents reçoivent un message étrange d'une personne qui prétend connaître leur adresse, leurs habitudes et des extraits de discussions privées."
+    },
+    {
+      "q": "Quelle erreur Léo a-t-il commise avec les outils numériques ?",
+      "options": [
+        "Il a oublié d'éteindre son enceinte connectée",
+        "Il a utilisé un mot de passe trop long",
+        "Il a cliqué sur « Accepter » sans réfléchir aux autorisations demandées",
+        "Il a refusé toutes les mises à jour"
+      ],
+      "answer": 2,
+      "explain": "Léo a cliqué sur « Accepter » pour autoriser certains paramètres en pensant que c'était sans danger."
+    },
+    {
+      "q": "Quel est le problème à résoudre de cette séance ?",
+      "options": [
+        "Comment installer une enceinte connectée à la maison ?",
+        "Comment rester en sécurité avec les outils numériques du quotidien ?",
+        "Comment faire ses devoirs plus vite avec une IA ?"
+      ],
+      "answer": 1,
+      "explain": "La correction formule le problème ainsi : « Comment rester en sécurité avec les outils numériques du quotidien ? »"
+    },
+    {
+      "q": "Quelle idée est retenue à la fin de la séance pour se protéger ?",
+      "options": [
+        "Ne jamais partager d'informations personnelles sensibles (adresse, numéro de téléphone, photos privées) sur des sites ou applis inconnus",
+        "Ne plus jamais utiliser Internet à la maison",
+        "Accepter toutes les demandes d'autorisation pour gagner du temps",
+        "Donner son mot de passe seulement à ses amis proches"
+      ],
+      "answer": 0,
+      "explain": "L'idée retenue est de ne jamais partager d'informations personnelles sensibles sur des sites ou applis qu'on ne connaît pas."
+    }
+  ],
+  "sequence-1-ia-securite/seance-2": [
+    {
+      "q": "Parmi ces outils, lequel est une IA générative ?",
+      "options": [
+        "Google Home",
+        "Google Translate",
+        "ChatGPT",
+        "Wikipédia"
+      ],
+      "answer": 2,
+      "explain": "Dans le cours, ChatGPT est l'exemple d'IA générative, contrairement à Google Home, Google Translate ou Wikipédia."
+    },
+    {
+      "q": "Lequel de ces éléments est un objet communicant ?",
+      "options": [
+        "Une calculatrice",
+        "Une montre connectée",
+        "Une imprimante 3D"
+      ],
+      "answer": 1,
+      "explain": "D'après le cours, l'enceinte connectée et la montre connectée sont des objets communicants, pas la calculatrice ni l'imprimante 3D."
+    },
+    {
+      "q": "Quel est un risque si on utilise une IA générative sans vérifier ses réponses ?",
+      "options": [
+        "L'IA peut donner une information fausse ou incomplète",
+        "L'IA efface les fichiers de l'ordinateur",
+        "L'IA rend le devoir toujours parfait",
+        "L'IA bloque la connexion Internet"
+      ],
+      "answer": 0,
+      "explain": "La synthèse rappelle que l'IA peut donner une information fausse ou incomplète, et qu'on peut tricher en copiant sans comprendre."
+    },
+    {
+      "q": "Quel paramètre est conseillé de désactiver sur une enceinte connectée pour protéger sa vie privée ?",
+      "options": [
+        "Le volume sonore",
+        "La lecture de musique",
+        "L'enregistrement automatique des requêtes vocales"
+      ],
+      "answer": 2,
+      "explain": "La correction indique qu'il faut désactiver l'enregistrement automatique des requêtes vocales (ou l'historique vocal)."
+    },
+    {
+      "q": "Que risque un élève qui partage son mot de passe avec un camarade sur un jeu en ligne ?",
+      "options": [
+        "Rien, tant que c'est un ami",
+        "Le piratage de son compte",
+        "Une connexion Internet plus lente",
+        "La panne de son enceinte connectée"
+      ],
+      "answer": 1,
+      "explain": "La correction cite le piratage de compte parmi les risques : il ne faut jamais partager ses mots de passe."
+    },
+    {
+      "q": "Quel est un bon usage d'une IA générative pour un travail scolaire ?",
+      "options": [
+        "Remettre au professeur le texte de l'IA tel quel",
+        "Demander à l'IA de faire tous les devoirs sans les lire",
+        "Demander une explication ou un plan, puis le relire et l'adapter soi-même"
+      ],
+      "answer": 2,
+      "explain": "Le bon usage attendu est de demander une explication ou un plan à l'IA, puis de le relire et de l'adapter soi-même."
+    }
+  ]
+}
