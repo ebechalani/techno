@@ -1,0 +1,350 @@
+{
+  "_comment": "Overlay 4ème : (1) comble deux pages laissées vides, (2) ajoute des séquences neuves alignées sur le programme 2024 (ajoutées après relecture).",
+  "replacePages": {
+    "sequence-2-portail-automatise/seance-1-corr": {
+      "title": "Correction — Étude du besoin",
+      "shortTitle": "Séance 1 — correction",
+      "tagline": "Correction de l'analyse du besoin du portail de M. Durand.",
+      "content_md": "## Rappel de la situation\n\nM. Durand ne peut pas rentrer sa voiture dans son garage : son allée est régulièrement encombrée. Il souhaite un **portail automatisé** qu'il puisse ouvrir et fermer sans descendre de sa voiture.\n\n## Correction — Identifier le besoin\n\n**À qui le portail automatisé rend-il service ?**\n\n> À M. Durand et aux personnes qui utilisent l'entrée de sa propriété (famille, visiteurs).\n\n**Sur quoi (sur quel élément) le portail agit-il ?**\n\n> Sur l'**accès à la propriété** : il ouvre ou ferme le passage entre la rue et la cour.\n\n**Dans quel but ? (Quel est le besoin ?)**\n\n> Permettre d'**entrer et de sortir en voiture facilement et en sécurité, sans avoir à descendre** pour ouvrir le portail à la main.\n\n## La « bête à cornes » complétée\n\n| Question | Réponse |\n| --- | --- |\n| À qui rend-il service ? | À M. Durand (et aux usagers de l'entrée) |\n| Sur quoi agit-il ? | Sur l'accès à la propriété |\n| Dans quel but ? | Ouvrir et fermer l'entrée automatiquement, sans effort et en sécurité |\n\n**Énoncé du besoin :** « Le portail automatisé permet à M. Durand d'**ouvrir et fermer l'accès à sa propriété automatiquement**, sans descendre de son véhicule. »\n\n## Ce que je retiens\n\nAnalyser un besoin, c'est répondre à trois questions : **à qui** l'objet rend service, **sur quoi** il agit, et **dans quel but**. C'est la première étape avant de rédiger le cahier des charges.",
+      "resources": []
+    },
+    "sequence-6-serre-autonome/seance-3": {
+      "title": "Séance 3 : Programmer le système",
+      "shortTitle": "Séance 3",
+      "tagline": "De l'algorithme au programme : rendre la serre autonome.",
+      "objectifs_md": "- Identifier les entrées (capteurs) et les sorties (actionneurs) du système.\n- Écrire l'algorithme d'une fonction automatique.\n- **Traduire un algorithme en programme** (repère de 4ᵉ).",
+      "content_md": "## Où en est le projet ?\n\nNotre serre doit fonctionner **toute seule** : arroser quand la terre est sèche, éclairer quand il fait sombre, aérer quand il fait trop chaud. Pour cela, une **carte programmable** (micro:bit ou Arduino) lit les **capteurs** et commande les **actionneurs**.\n\n## Activité 1 — Entrées et sorties\n\nRelie chaque élément à la bonne catégorie.\n\n**Les ENTRÉES (ce que la carte mesure — les capteurs) :**\n\n……………………………………………………………………\n\n**Les SORTIES (ce que la carte commande — les actionneurs) :**\n\n……………………………………………………………………\n\n> *Aide : capteur d'humidité du sol, capteur de luminosité, capteur de température ; pompe à eau, lampe, ventilateur.*\n\n## Activité 2 — Écrire l'algorithme de l'arrosage\n\nOn veut arroser **seulement quand la terre est trop sèche**. Complète l'algorithme :\n\n```\nSi   humidité du sol  <  seuil (par exemple 30 %)\nAlors  ......................................\nSinon  ......................................\n```\n\n**Complète les deux lignes :**\n\n……………………………………………………………………\n\n……………………………………………………………………\n\n## Activité 3 — Les autres fonctions\n\nÉcris, sur le même modèle « Si … Alors … Sinon … », l'algorithme de :\n\n**L'éclairage automatique** (allumer la lampe quand la luminosité est faible) :\n\n……………………………………………………………………\n\n**La ventilation** (allumer le ventilateur quand la température dépasse 28 °C) :\n\n……………………………………………………………………\n\n## Activité 4 — De l'algorithme au programme\n\nPour que la serre réagisse en permanence, tout le programme est placé dans une **boucle « répéter indéfiniment »**. Chaque test « Si … Alors … Sinon … » devient un **bloc conditionnel** dans le logiciel de programmation (MakeCode pour micro:bit, ou mBlock/Arduino).\n\nÀ retenir dans ton programme :\n- une **variable** stocke la valeur lue par un capteur (ex. `humidite`) ;\n- une **condition** compare cette variable à un **seuil** (`humidite < 30`) ;\n- une **boucle** répète les tests en continu.\n\n**Quel bloc utilise-t-on pour comparer la valeur d'un capteur à un seuil ?**\n\n……………………………………………………………………\n\n## Ce que je retiens\n\nUn système automatique fonctionne selon le schéma **capteur → programme → actionneur**. Programmer, c'est d'abord **écrire un algorithme** (Si… Alors… Sinon…), puis le **traduire en blocs** dans une boucle qui se répète, pour que le système réagisse tout seul à son environnement.",
+      "quiz": [
+        {
+          "q": "Dans la serre, le capteur d'humidité du sol est :",
+          "options": [
+            "Une entrée du système",
+            "Une sortie du système",
+            "Un actionneur"
+          ],
+          "answer": 0,
+          "explain": "Un capteur fournit une information à la carte : c'est une entrée du système."
+        },
+        {
+          "q": "La pompe à eau est :",
+          "options": [
+            "Un capteur",
+            "Un actionneur (une sortie)",
+            "Une variable"
+          ],
+          "answer": 1,
+          "explain": "La pompe est commandée par la carte pour agir : c'est un actionneur, donc une sortie."
+        },
+        {
+          "q": "Quel algorithme arrose correctement la plante ?",
+          "options": [
+            "Si humidité < 30 % Alors arrêter la pompe",
+            "Si humidité < 30 % Alors activer la pompe",
+            "Si humidité > 30 % Alors activer la pompe"
+          ],
+          "answer": 1,
+          "explain": "Quand la terre est trop sèche (humidité faible), il faut activer la pompe pour arroser."
+        },
+        {
+          "q": "Pourquoi place-t-on le programme dans une boucle « répéter indéfiniment » ?",
+          "options": [
+            "Pour qu'il s'exécute une seule fois",
+            "Pour que la serre réagisse en permanence à son environnement",
+            "Pour économiser de l'énergie"
+          ],
+          "answer": 1,
+          "explain": "La boucle répète les mesures et les tests en continu, pour que le système reste autonome."
+        }
+      ],
+      "resources": []
+    }
+  },
+  "addSequences": [
+    {
+      "slug": "sequence-depanner-reparer",
+      "eyebrow": "Séquence",
+      "year": "2025-2026",
+      "title": "Dépanner et réparer un objet technique",
+      "tagline": "Diagnostiquer une panne, localiser la pièce défectueuse dans la chaîne d'énergie ou d'information, puis la remplacer — sans notice de réparation.",
+      "intro_md": "Nos objets techniques tombent parfois en panne. Faut-il les **jeter** et en racheter un neuf ? Pas forcément : beaucoup peuvent être **réparés**. Encore faut-il savoir **trouver l'origine de la panne**, car les objets ne sont presque jamais accompagnés d'une notice de dépannage.\n\nDans cette séquence, tu apprends à jouer au **technicien de maintenance** : observer un symptôme, émettre des hypothèses, tester les différents **maillons** de l'objet (grâce aux **chaînes d'énergie et d'information**), **localiser** la pièce défectueuse et la **remplacer** — le tout **sans protocole fourni**.\n\nTu découvres aussi pourquoi réparer est un **geste écologique et économique** : fiabilité, durabilité, **indice de réparabilité** et lutte contre le **gaspillage**.",
+      "objectifs_md": "À la fin de cette séquence, je suis capable de :\n\n- **décrire le symptôme** d'une panne et le relier à une **chaîne fonctionnelle** ;\n- **formuler des hypothèses** puis les **tester une par une** ;\n- **localiser** la pièce défectueuse dans la **chaîne d'énergie** ou la **chaîne d'information** ;\n- **remplacer ou réparer** cette pièce **sans protocole fourni**, puis **vérifier** que la panne est résolue ;\n- expliquer l'intérêt de la **réparation** : fiabilité, durabilité, **indice de réparabilité** et lutte contre le gaspillage.",
+      "competences_md": "**Programme de Technologie — cycle 4 (2024), Thème 2 : « Le dépannage et la réparation ».**\n\n- **Compétence de fin de cycle :** *« Identifier un dysfonctionnement d'un objet technique et y remédier. »*\n- **Repère de progressivité (4e) :** *remplacer une pièce défectueuse sans protocole fourni* — l'élève localise lui-même la panne dans la chaîne fonctionnelle.\n- **Connaissances et notions associées :** fiabilité, durabilité, indice de réparabilité ; **chaîne d'énergie** (Alimenter / Distribuer / Convertir / Transmettre) et **chaîne d'information** (Acquérir / Traiter / Communiquer) pour localiser la panne ; **démarche de résolution de problème technique**.\n\n::embed[Programme de Technologie au cycle 4 (Eduscol)](https://eduscol.education.fr/2098/technologie-au-cycle-4)",
+      "pages": [
+        {
+          "slug": "seance-1",
+          "kind": "seance",
+          "num": 1,
+          "title": "Diagnostiquer une panne : de l'observation à la localisation",
+          "shortTitle": "Séance 1",
+          "tagline": "Observer un symptôme, formuler des hypothèses et découvrir la démarche de diagnostic.",
+          "objectifs_md": "- Décrire un **symptôme** de panne.\n- Réviser la **chaîne d'énergie** et la **chaîne d'information**.\n- **Formuler des hypothèses** et connaître la **démarche de diagnostic**.\n- Définir **fiabilité, durabilité** et **indice de réparabilité**.",
+          "content_md": "## La situation de départ\n\nChez Léa, la **guirlande à LED** du salon ne s'allume plus. Pourtant, elle fonctionnait hier soir. Son petit frère veut la jeter et en racheter une neuve. Léa, elle, se demande si on ne pourrait pas simplement la **réparer**.\n\nLe même week-end, le **ventilateur USB** posé sur son bureau ne tourne plus, et la **lampe de chevet** reste éteinte.\n\nAucun de ces objets n'est livré avec une notice de réparation. Il n'existe **pas de protocole** qui dirait « appuie ici, change cette pièce ». Il faut donc **chercher soi-même** d'où vient la panne.\n\n> ❓ **Problème à résoudre :** comment trouver l'origine d'une panne dans un objet technique, puis remplacer la pièce défectueuse, **sans notice de réparation** ?\n\n## Activité 1 — Observer et décrire le symptôme\n\nAvant de démonter quoi que ce soit, un bon technicien **observe**. Le **symptôme**, c'est ce que l'on constate : ce qui ne fonctionne pas.\n\n**a.** Pour la guirlande de Léa, quel est le symptôme (ce que l'on voit ou n'entend pas) ?\n\n……………………………………………………\n\n**b.** Cite un objet du quotidien qui est déjà tombé en panne chez toi et décris son symptôme en une phrase.\n\n……………………………………………………\n\n**c.** Pourquoi vaut-il mieux **observer** le symptôme avant de démonter l'objet ?\n\n……………………………………………………\n\n## Activité 2 — Rappel : la chaîne d'énergie et la chaîne d'information\n\nPour trouver la panne, on décompose l'objet en **maillons** : des blocs qui ont chacun un rôle précis. On réutilise pour cela les deux « chaînes » vues en cours.\n\n**La chaîne d'énergie** transforme l'énergie pour agir. Elle comporte 4 fonctions :\n\n- **Alimenter** : fournir l'énergie (pile, batterie, prise, port USB).\n- **Distribuer** : laisser passer ou couper l'énergie (interrupteur, bouton).\n- **Convertir** : transformer l'énergie en une autre forme (moteur → mouvement, LED → lumière).\n- **Transmettre** : transporter l'action jusqu'à l'élément à animer (axe, hélice, engrenage).\n\n**La chaîne d'information** gère les informations. Elle comporte 3 fonctions :\n\n- **Acquérir** : capter une information (capteur, bouton, télécommande).\n- **Traiter** : décider quoi faire (carte programmable, circuit).\n- **Communiquer** : transmettre l'information (voyant, écran, signal sonore).\n\nExemple d'un **ventilateur USB** décomposé dans la chaîne d'énergie :\n\n| Élément | Fonction |\n| --- | --- |\n| Câble et port USB | Alimenter |\n| Interrupteur marche/arrêt | Distribuer |\n| Moteur électrique | Convertir |\n| Hélice | Transmettre |\n\n**a.** Dans une **lampe de bureau à LED**, associe chaque élément à sa fonction de la chaîne d'énergie (Alimenter, Distribuer, Convertir).\n\n**L'adaptateur branché sur la prise :**\n\n……………………………………………………\n\n**L'interrupteur :**\n\n……………………………………………………\n\n**La LED :**\n\n……………………………………………………\n\n## Activité 3 — Formuler des hypothèses\n\nUne **hypothèse**, c'est une explication possible de la panne, que l'on va ensuite **tester**. On en formule plusieurs, en général de la **plus simple et la plus probable** vers la moins probable.\n\nExemple pour la **guirlande éteinte** :\n\n1. Les **piles** sont vides (Alimenter).\n2. L'**interrupteur** est cassé ou en position « arrêt » (Distribuer).\n3. Un **fil** est coupé (liaison).\n4. Une **LED** est grillée (Convertir).\n\n**a.** Pour le **ventilateur USB** qui ne tourne plus, propose **trois hypothèses** différentes, en précisant à chaque fois la fonction concernée (Alimenter, Distribuer, Convertir…).\n\n**Hypothèse 1 :**\n\n……………………………………………………\n\n**Hypothèse 2 :**\n\n……………………………………………………\n\n**Hypothèse 3 :**\n\n……………………………………………………\n\n**b.** Par quelle hypothèse est-il malin de **commencer** les tests ? Pourquoi ?\n\n……………………………………………………\n\n## Activité 4 — La démarche de diagnostic\n\nRéparer sans notice, c'est suivre une **démarche de résolution de problème technique**. On peut la résumer en **6 étapes** :\n\n1. **Observer** le symptôme.\n2. **Formuler** des hypothèses (dans quelle chaîne, quelle fonction ?).\n3. **Tester** chaque hypothèse, une par une.\n4. **Localiser** précisément le maillon en panne.\n5. **Remplacer ou réparer** la pièce défectueuse.\n6. **Vérifier** que l'objet fonctionne de nouveau.\n\n**a.** Remets ces étapes dans le bon ordre : *Vérifier — Observer — Remplacer — Tester — Formuler des hypothèses — Localiser.*\n\n……………………………………………………\n\n**b.** À quelle étape de la démarche dit-on : « je pense que ce sont les piles qui sont vides » ?\n\n……………………………………………………\n\n## Activité 5 — Réparer plutôt que jeter\n\nRéparer un objet, ce n'est pas seulement pratique : c'est aussi un **choix écologique et économique**.\n\n- La **fiabilité** : la capacité d'un objet à fonctionner **sans tomber en panne** pendant une durée donnée.\n- La **durabilité** : sa capacité à **durer longtemps** (matériaux solides, pièces que l'on peut changer).\n- L'**indice de réparabilité** : une **note sur 10** affichée sur certains produits (ordinateurs portables, aspirateurs, lave-vaisselle…). Plus la note est haute, plus l'objet est **facile à réparer** : pièces détachées disponibles, démontage simple, notice fournie.\n\nRéparer au lieu de jeter permet de **lutter contre le gaspillage** : on économise des matières premières et de l'énergie, et on produit **moins de déchets**.\n\n::embed[L'indice de réparabilité (ministère de la Transition écologique)](https://www.ecologie.gouv.fr/politiques-publiques/indice-reparabilite)\n\n::embed[Où réparer près de chez soi (ADEME)](https://quefairedemesdechets.ademe.fr/)\n\n**a.** Explique avec tes mots la différence entre **fiabilité** et **durabilité**.\n\n……………………………………………………\n\n**b.** Deux aspirateurs coûtent le même prix. L'un a un indice de réparabilité de **8,2/10**, l'autre de **3,1/10**. Lequel choisis-tu, et pourquoi ?\n\n……………………………………………………\n\n**c.** Cite **deux avantages** (pour la planète ou pour le porte-monnaie) de réparer un objet plutôt que d'en racheter un neuf.\n\n……………………………………………………\n\n## Ce que je retiens\n\n- Devant une panne, on suit une **démarche de diagnostic** : **observer → formuler des hypothèses → tester → localiser → remplacer/réparer → vérifier**.\n- Pour localiser la panne, on décompose l'objet avec la **chaîne d'énergie** (Alimenter, Distribuer, Convertir, Transmettre) et la **chaîne d'information** (Acquérir, Traiter, Communiquer).\n- On teste les hypothèses **une par une**, en commençant par la **plus simple et la plus probable**.\n- **Fiabilité**, **durabilité** et **indice de réparabilité** aident à choisir des objets **réparables**.\n- **Réparer plutôt que jeter**, c'est **lutter contre le gaspillage**.",
+          "resources": [
+            {
+              "kind": "external",
+              "title": "Indice de réparabilité — ministère de la Transition écologique",
+              "url": "https://www.ecologie.gouv.fr/politiques-publiques/indice-reparabilite"
+            },
+            {
+              "kind": "external",
+              "title": "Où réparer près de chez soi (ADEME)",
+              "url": "https://quefairedemesdechets.ademe.fr/"
+            }
+          ],
+          "quiz": [
+            {
+              "q": "Quelle est la première étape de la démarche de diagnostic ?",
+              "options": [
+                "Remplacer la pièce défectueuse",
+                "Observer et décrire le symptôme",
+                "Vérifier que tout fonctionne",
+                "Racheter un objet neuf"
+              ],
+              "answer": 1,
+              "explain": "La démarche commence toujours par l'observation du symptôme, avant de formuler des hypothèses puis de tester."
+            },
+            {
+              "q": "À quelle fonction de la chaîne d'énergie appartient l'interrupteur d'une lampe ?",
+              "options": [
+                "Alimenter",
+                "Distribuer",
+                "Convertir",
+                "Transmettre"
+              ],
+              "answer": 1,
+              "explain": "L'interrupteur laisse passer ou coupe l'énergie : il assure la fonction Distribuer."
+            },
+            {
+              "q": "Dans une lampe, la LED transforme l'électricité en lumière. Quelle fonction assure-t-elle ?",
+              "options": [
+                "Alimenter",
+                "Distribuer",
+                "Convertir",
+                "Acquérir"
+              ],
+              "answer": 2,
+              "explain": "La LED transforme l'énergie électrique en lumière : c'est la fonction Convertir."
+            },
+            {
+              "q": "Que signifie un indice de réparabilité proche de 9/10 ?",
+              "options": [
+                "L'objet consomme peu d'électricité",
+                "L'objet est très facile à réparer",
+                "L'objet est le moins cher du magasin",
+                "L'objet est le plus puissant"
+              ],
+              "answer": 1,
+              "explain": "L'indice de réparabilité est une note sur 10 : plus elle est élevée, plus l'objet est facile à réparer (pièces disponibles, démontage simple)."
+            }
+          ]
+        },
+        {
+          "slug": "seance-2",
+          "kind": "seance",
+          "num": 2,
+          "title": "Localiser, remplacer et vérifier — sans protocole fourni",
+          "shortTitle": "Séance 2",
+          "tagline": "Tester chaque maillon d'un objet, remplacer la pièce défectueuse et vérifier la réparation.",
+          "objectifs_md": "- **Décomposer** un objet en maillons.\n- **Tester** chaque maillon et **localiser** la panne.\n- **Remplacer ou réparer** la pièce, puis **vérifier**.\n- Évaluer la **réparabilité** d'un objet.",
+          "content_md": "## La situation de départ\n\nLéa a maintenant une méthode. Aujourd'hui, en atelier, chaque groupe reçoit un objet en panne : une **guirlande à LED**, un **ventilateur USB**, une **lampe de bureau** ou un petit **montage électronique** (une pile, une résistance, une LED et des fils). Aucun protocole n'est fourni. Objectif : **localiser la pièce défectueuse et la remplacer**.\n\n> ❓ **Problème :** comment tester chaque maillon d'un objet pour **localiser** la pièce en panne, puis la **remplacer** et **vérifier** la réparation ?\n\n> ⚠️ **Sécurité :** en classe, on ne dépanne que des objets à **très basse tension** (piles, USB 5 V). On **ne touche jamais** un appareil branché sur le **secteur (230 V)** : ce travail est réservé à un adulte professionnel.\n\n## Activité 1 — Décomposer l'objet en maillons\n\nPrends l'objet de ton groupe et repère ses différents **maillons**.\n\nExemple du **montage LED** : pile → interrupteur (ou fil) → résistance → LED → fil de retour.\n\n**a.** Écris la chaîne d'énergie de ton objet, du début (Alimenter) à la fin (Convertir).\n\n……………………………………………………\n\n**b.** Quel maillon **convertit** l'énergie électrique (en lumière ou en mouvement) dans ton objet ?\n\n……………………………………………………\n\n## Activité 2 — Tester chaque maillon\n\nOn teste **du plus simple au plus probable**. Pour cela on peut : utiliser ses **sens** (regarder, écouter), se servir d'un **multimètre** (position continuité), ou **remplacer** un élément par un élément identique dont on est sûr qu'il fonctionne.\n\nExemple de tableau de tests pour le **montage LED** :\n\n| Hypothèse (maillon) | Test réalisé | Résultat |\n| --- | --- | --- |\n| Pile vide (Alimenter) | Mesurer la tension / mettre une pile neuve | Pile OK : 4,5 V |\n| Interrupteur (Distribuer) | Vérifier la position, tester la continuité | Laisse passer le courant : OK |\n| Fils (liaison) | Regarder, bouger les fils | Un fil est **dessoudé** ❌ |\n| LED (Convertir) | Essayer la LED sur un montage qui marche | S'allume : OK |\n\nIci, la panne vient d'un **fil dessoudé**.\n\n**a.** Pour **ton** objet, note **au moins deux tests** que tu réalises et leurs résultats.\n\n**Test 1 :**\n\n……………………………………………………\n\n**Test 2 :**\n\n……………………………………………………\n\n**b.** Pourquoi teste-t-on les hypothèses **une par une**, et non toutes en même temps ?\n\n……………………………………………………\n\n## Activité 3 — Localiser la pièce défectueuse\n\n**a.** D'après tes tests, quel **maillon** est en panne dans ton objet ? À quelle **fonction** appartient-il (Alimenter, Distribuer, Convertir, Transmettre) ?\n\n……………………………………………………\n\n**b.** Dans certaines guirlandes, si une **seule** LED grille, toute la guirlande s'éteint. Propose une explication (indice : comment les LED sont-elles reliées entre elles ?).\n\n……………………………………………………\n\n## Activité 4 — Remplacer et vérifier\n\nUne fois la pièce localisée, on la **remplace** par une pièce identique (même modèle, mêmes caractéristiques) ou on la **répare** (ressouder un fil, renfoncer un connecteur, nettoyer un contact).\n\n**a.** Quelle **précaution** faut-il prendre pour choisir la pièce de remplacement (par exemple une pile ou une LED) ?\n\n……………………………………………………\n\n**b.** Après le remplacement, quelle est la **dernière étape** de la démarche ? Pourquoi est-elle indispensable ?\n\n……………………………………………………\n\n**c.** Ton objet fonctionne-t-il de nouveau ? Si **non**, que dois-tu faire ?\n\n……………………………………………………\n\n## Activité 5 — Bilan réparabilité\n\n**a.** Ton objet était-il **facile à réparer** (démontage, accès aux pièces, pièces trouvables) ? Justifie.\n\n……………………………………………………\n\n**b.** Propose **une amélioration** que le fabricant pourrait apporter pour rendre l'objet **plus réparable**.\n\n……………………………………………………\n\n::embed[Tout savoir sur l'indice de réparabilité (economie.gouv.fr)](https://www.economie.gouv.fr/particuliers/mes-droits-conso/bien-consommer/tout-savoir-sur-lindice-de-reparabilite)\n\n## Ce que je retiens\n\n- Pour dépanner sans notice, je **décompose** l'objet en maillons, puis je **teste chaque maillon** un par un (mes sens, un multimètre, ou un échange avec une pièce qui fonctionne).\n- Je **localise** la pièce défectueuse dans la **chaîne d'énergie** ou la **chaîne d'information**, je la **remplace par une pièce identique** (ou je la répare), puis je **vérifie**.\n- Une pièce de remplacement doit avoir les **mêmes caractéristiques** (tension, type…).\n- Un objet **réparable** (assemblé par vis plutôt que par colle, pièces standard disponibles) a un meilleur **indice de réparabilité** et évite le **gaspillage**.",
+          "resources": [
+            {
+              "kind": "external",
+              "title": "Tout savoir sur l'indice de réparabilité (economie.gouv.fr)",
+              "url": "https://www.economie.gouv.fr/particuliers/mes-droits-conso/bien-consommer/tout-savoir-sur-lindice-de-reparabilite"
+            }
+          ],
+          "quiz": [
+            {
+              "q": "Pour trouver l'origine d'une panne, il vaut mieux :",
+              "options": [
+                "Tout changer en même temps",
+                "Tester les maillons un par un",
+                "Jeter l'objet directement",
+                "Commencer par la pièce la plus chère"
+              ],
+              "answer": 1,
+              "explain": "On teste les maillons un par un, en commençant par le plus simple et le plus probable, pour localiser précisément la panne."
+            },
+            {
+              "q": "En classe, sur quels objets peut-on intervenir en sécurité ?",
+              "options": [
+                "Un appareil branché sur le secteur 230 V",
+                "Un objet à très basse tension (piles, USB 5 V)",
+                "N'importe quel appareil électrique",
+                "Un appareil de chauffage allumé"
+              ],
+              "answer": 1,
+              "explain": "On n'intervient que sur des objets à très basse tension (piles, USB). On ne touche jamais un appareil branché sur le secteur 230 V."
+            },
+            {
+              "q": "Tu remplaces une pile usée. La pièce neuve doit avant tout :",
+              "options": [
+                "Être d'une autre marque",
+                "Avoir la même tension et le même format",
+                "Être plus grosse que l'ancienne",
+                "Être d'une autre couleur"
+              ],
+              "answer": 1,
+              "explain": "La pièce de remplacement doit avoir les mêmes caractéristiques (même tension, même format) pour fonctionner correctement."
+            },
+            {
+              "q": "Quelle est la dernière étape, après avoir remplacé la pièce défectueuse ?",
+              "options": [
+                "Formuler une nouvelle hypothèse",
+                "Vérifier que l'objet fonctionne de nouveau",
+                "Observer le symptôme de départ",
+                "Acheter un objet neuf"
+              ],
+              "answer": 1,
+              "explain": "La dernière étape est la vérification : on s'assure que la réparation a bien résolu la panne."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "sequence-objet-developpement-durable",
+      "eyebrow": "Séquence",
+      "year": "2025-2026",
+      "title": "Choisir un objet dans un contexte de développement durable",
+      "tagline": "De l'évolution des objets à leur cycle de vie : apprendre à choisir un objet responsable.",
+      "objectifs_md": "À la fin de cette séquence, je suis capable de :\n\n- décrire l'**évolution** d'un objet technique et le situer dans une **famille** et une **lignée** ;\n- distinguer une **invention** d'une **innovation** ;\n- décrire les **étapes du cycle de vie** d'un objet ;\n- comparer des objets selon des **critères de développement durable** (indice énergétique, indice de réparabilité, durabilité, recyclabilité).",
+      "competences_md": "**Programme de Technologie — cycle 4 (2024), Thème 1.**\n\n- Objets d'étude : « L'évolution des OST » et « Le choix d'un OST dans un contexte de développement durable ».\n- **Compétences de fin de cycle :** « Décrire les liens entre usages et évolutions technologiques des OST » ; « Caractériser et choisir un OST selon différents critères ».\n- **Connaissances :** invention et innovation ; famille et lignée d'objets ; étapes du cycle de vie ; piliers du développement durable ; indice énergétique et indice de réparabilité ; critères de choix (qualité, efficacité énergétique, durabilité, recyclabilité).",
+      "intro_md": "Les objets techniques **évoluent** sans cesse : le téléphone d'aujourd'hui n'a plus grand-chose à voir avec celui d'il y a 40 ans. Mais fabriquer, utiliser puis jeter ces objets a un **impact** sur la planète. Cette séquence t'apprend à **comprendre l'évolution des objets** et à **choisir un objet de façon responsable**, en pensant à son **cycle de vie** et au **développement durable**.",
+      "pages": [
+        {
+          "slug": "seance-1",
+          "kind": "seance",
+          "num": 1,
+          "title": "L'évolution des objets techniques",
+          "shortTitle": "Séance 1",
+          "tagline": "Invention, innovation, famille et lignée d'objets.",
+          "objectifs_md": "- Distinguer invention et innovation.\n- Situer un objet dans une famille et une lignée.",
+          "content_md": "## La situation de départ\n\nMaïa retrouve dans un tiroir le vieux téléphone de ses parents : un gros appareil avec des touches, sans écran tactile, qui servait **seulement à téléphoner**. Son smartphone, lui, prend des photos, va sur internet, guide en voiture… Comment les objets ont-ils autant **changé** en si peu de temps ?\n\n> ❓ **Problème :** comment un objet technique évolue-t-il au fil du temps ?\n\n## Activité 1 — Invention ou innovation ?\n\nDeux mots à ne pas confondre :\n\n- Une **invention** : c'est la **création de quelque chose qui n'existait pas** (le premier téléphone, la première roue, la première ampoule).\n- Une **innovation** : c'est une **amélioration** d'un objet qui existe déjà, qui apporte un vrai progrès et se diffuse (ajouter un écran tactile, rendre un téléphone portable).\n\n**a.** Classe ces exemples en « invention » ou « innovation » :\n\n« Le tout premier téléphone (1876) » → ……………………\n\n« Ajouter un appareil photo dans un téléphone » → ……………………\n\n« La toute première ampoule électrique » → ……………………\n\n« Rendre une trottinette électrique et pliable » → ……………………\n\n## Activité 2 — Famille et lignée\n\n- Une **famille d'objets** regroupe des objets qui rendent le **même service** à une même époque (par exemple : tous les moyens d'écouter de la musique aujourd'hui — smartphone, enceinte, baladeur).\n- Une **lignée d'objets** montre l'**évolution d'un même objet au fil du temps** (par exemple, pour téléphoner : téléphone à cadran → téléphone à touches → téléphone portable → smartphone).\n\n**a.** Complète la **lignée** d'un objet qui sert à écouter de la musique, du plus ancien au plus récent (aide : tourne-disque, baladeur cassette, baladeur CD, lecteur MP3, smartphone).\n\n……………………………………………………\n\n**b.** Cite **deux objets** qui font partie de la même **famille** « s'éclairer » aujourd'hui.\n\n……………………………………………………\n\n## Activité 3 — Pourquoi les objets évoluent-ils ?\n\n**Cite deux raisons** qui poussent les objets à évoluer (aide : nouveaux besoins, nouvelles technologies, confort, réduction de la pollution…).\n\n……………………………………………………\n\n## Ce que je retiens\n\nUne **invention** crée un objet nouveau ; une **innovation** l'améliore. Les objets qui rendent le même service à une même époque forment une **famille** ; l'évolution d'un même objet au fil du temps forme une **lignée**. Les objets évoluent pour répondre à de **nouveaux besoins** et grâce aux **progrès techniques**.",
+          "quiz": [
+            {
+              "q": "Quelle est la différence entre une invention et une innovation ?",
+              "options": [
+                "Il n'y en a aucune",
+                "L'invention crée un objet nouveau, l'innovation améliore un objet existant",
+                "L'innovation crée un objet nouveau, l'invention l'améliore"
+              ],
+              "answer": 1,
+              "explain": "Inventer, c'est créer ce qui n'existait pas ; innover, c'est améliorer un objet existant."
+            },
+            {
+              "q": "Une « lignée d'objets » représente :",
+              "options": [
+                "Des objets rangés par couleur",
+                "L'évolution d'un même objet au fil du temps",
+                "Le prix des objets"
+              ],
+              "answer": 1,
+              "explain": "Une lignée montre comment un même objet a évolué au cours du temps."
+            },
+            {
+              "q": "Tourne-disque → baladeur cassette → lecteur MP3 → smartphone. C'est un exemple de :",
+              "options": [
+                "Une famille d'objets",
+                "Une lignée d'objets",
+                "Une invention"
+              ],
+              "answer": 1,
+              "explain": "C'est l'évolution dans le temps d'objets servant à écouter de la musique : une lignée."
+            },
+            {
+              "q": "Le smartphone et l'enceinte connectée qui servent tous deux à écouter de la musique aujourd'hui forment :",
+              "options": [
+                "Une même famille d'objets",
+                "Une lignée",
+                "Une invention"
+              ],
+              "answer": 0,
+              "explain": "Ils rendent le même service à la même époque : ils appartiennent à la même famille."
+            }
+          ],
+          "resources": []
+        },
+        {
+          "slug": "seance-2",
+          "kind": "seance",
+          "num": 2,
+          "title": "Cycle de vie et choix responsable",
+          "shortTitle": "Séance 2",
+          "tagline": "Le cycle de vie d'un objet et les critères d'un choix durable.",
+          "objectifs_md": "- Décrire les étapes du cycle de vie d'un objet.\n- Comparer des objets selon des critères de développement durable.",
+          "content_md": "## La situation de départ\n\nLes parents de Maïa veulent lui offrir un téléphone. En magasin, deux modèles se ressemblent, mais l'un affiche un **indice de réparabilité de 8,3/10** et une **bonne étiquette énergie**, l'autre non. Lequel choisir, et pourquoi ?\n\n> ❓ **Problème :** comment choisir un objet en pensant à la planète, et pas seulement au prix ?\n\n## Activité 1 — Le cycle de vie d'un objet\n\nTout objet passe par des **étapes**, de sa fabrication à sa fin de vie. C'est son **cycle de vie** :\n\n1. **Extraction** des matières premières (métaux, plastique…).\n2. **Fabrication** de l'objet.\n3. **Transport** et distribution.\n4. **Utilisation** par le consommateur.\n5. **Fin de vie** : recyclage, réemploi ou déchet.\n\nÀ **chaque étape**, l'objet consomme de l'énergie et peut polluer.\n\n**a.** À quelle étape se produit la pollution liée aux **camions et bateaux** qui déplacent l'objet ?\n\n……………………………………………………\n\n**b.** Cite **deux étapes** où l'on peut agir pour **réduire l'impact** d'un objet (aide : mieux recycler, l'utiliser plus longtemps, le réparer…).\n\n……………………………………………………\n\n## Activité 2 — Les trois piliers du développement durable\n\nLe **développement durable**, c'est répondre à nos besoins **sans épuiser la planète ni pénaliser les autres**. Il repose sur **trois piliers** :\n\n- 🌍 **Environnement** : protéger la nature, économiser les ressources, limiter la pollution.\n- 🤝 **Société** : de bonnes conditions pour les personnes (santé, travail).\n- 💶 **Économie** : une activité viable, un coût raisonnable.\n\n**a.** Classe ces idées dans le bon pilier (Environnement / Société / Économie) :\n\n« Recycler le plastique de l'objet » → ……………………\n\n« Fabriquer dans de bonnes conditions de travail » → ……………………\n\n« Un objet solide qui évite de racheter, donc moins cher à long terme » → ……………………\n\n## Activité 3 — Comparer pour bien choisir\n\nDeux étiquettes indiquent des informations utiles :\n\n- L'**indice de réparabilité** (note sur 10) : l'objet est-il facile à réparer ?\n- L'**étiquette / indice énergétique** (de A à G) : l'objet consomme-t-il peu d'énergie ?\n\nOn peut aussi regarder la **durabilité** (l'objet dure-t-il longtemps ?) et la **recyclabilité** (ses matériaux se recyclent-ils ?).\n\n**Voici deux aspirateurs :**\n\n| Critère | Aspirateur A | Aspirateur B |\n| --- | --- | --- |\n| Prix | 90 € | 75 € |\n| Indice de réparabilité | 8,3 / 10 | 3,1 / 10 |\n| Indice énergétique | A | E |\n| Pièces détachées | disponibles 10 ans | non disponibles |\n\n**a.** Quel aspirateur est le **plus responsable** pour la planète ? Justifie avec **deux critères** du tableau.\n\n……………………………………………………\n\n**b.** L'aspirateur le moins cher à l'achat est-il forcément le plus économique **sur le long terme** ? Explique.\n\n……………………………………………………\n\n## Ce que je retiens\n\nUn objet a un **cycle de vie** en 5 étapes, de l'extraction des matières à la fin de vie ; chaque étape a un **impact** sur l'environnement. Pour **choisir un objet de façon responsable**, on ne regarde pas seulement le prix : on compare aussi l'**indice de réparabilité**, l'**indice énergétique**, la **durabilité** et la **recyclabilité**, en pensant aux **trois piliers du développement durable**.",
+          "quiz": [
+            {
+              "q": "Combien d'étapes compte le cycle de vie d'un objet vu en cours ?",
+              "options": [
+                "3 (fabrication, vente, poubelle)",
+                "5 (extraction, fabrication, transport, utilisation, fin de vie)",
+                "2 (achat, utilisation)"
+              ],
+              "answer": 1,
+              "explain": "Le cycle de vie compte 5 étapes : extraction, fabrication, transport, utilisation et fin de vie."
+            },
+            {
+              "q": "Quels sont les trois piliers du développement durable ?",
+              "options": [
+                "Environnement, société, économie",
+                "Eau, air, terre",
+                "Prix, marque, couleur"
+              ],
+              "answer": 0,
+              "explain": "Le développement durable repose sur l'environnement, la société et l'économie."
+            },
+            {
+              "q": "Que t'indique un indice énergétique « A » ?",
+              "options": [
+                "L'objet est facile à réparer",
+                "L'objet consomme peu d'énergie",
+                "L'objet est le plus cher"
+              ],
+              "answer": 1,
+              "explain": "L'étiquette énergie va de A (peu gourmand) à G ; « A » signifie une faible consommation."
+            },
+            {
+              "q": "Pour un choix responsable, on doit regarder :",
+              "options": [
+                "Uniquement le prix",
+                "Plusieurs critères : réparabilité, énergie, durabilité, recyclabilité",
+                "Uniquement la couleur"
+              ],
+              "answer": 1,
+              "explain": "Un choix durable compare plusieurs critères, pas seulement le prix d'achat."
+            }
+          ],
+          "resources": [
+            {
+              "kind": "external",
+              "title": "L'indice de réparabilité (ministère de l'Économie)",
+              "url": "https://www.economie.gouv.fr/particuliers/mes-droits-conso/bien-consommer/tout-savoir-sur-lindice-de-reparabilite"
+            },
+            {
+              "kind": "external",
+              "title": "Comprendre l'étiquette énergie (ADEME)",
+              "url": "https://agirpourlatransition.ademe.fr/particuliers/maison/equipements/comprendre-nouvelle-etiquette-energie"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "sequenceOrder": [
+    "sequence-0-ia-generative",
+    "sequence-1-ia-securite",
+    "sequence-depanner-reparer",
+    "sequence-objet-developpement-durable",
+    "sequence-1-reseau-informatique",
+    "sequence-2-portail-automatise",
+    "sequence-3-objets-connectes",
+    "sequence-4-microbit",
+    "sequence-5-feu-tricolore-arduino",
+    "sequence-6-serre-autonome",
+    "chaines-fonctionnelles",
+    "olympiades-informatique"
+  ]
+}

@@ -51,6 +51,26 @@ Chaque niveau (5ème, 4ème, 3ème) regroupe **toutes** ses séquences au même
 endroit ; une pastille d'année (2025-2026 ou 2020-2024) indique le programme
 d'origine de chaque séquence.
 
+## Ajouts et retraits durables (`content/authored/`)
+
+Le dossier `content/sections/` est **régénéré** par `tools/build-content.js`.
+Pour ajouter, remplacer ou retirer du contenu de façon **durable** (sans qu'il
+soit écrasé à la régénération), on utilise un *overlay* : `content/authored/<niveau>.json`.
+Il est appliqué automatiquement à la fin de la génération. Clés disponibles :
+
+| Clé | Effet |
+| --- | --- |
+| `tagline`, `intro_md` | Remplace le sous-titre / l'intro de la section |
+| `dropSequences` | Retire des séquences (liste de slugs) |
+| `dropPages` | Retire des pages (`"slugSéquence/slugPage"`) |
+| `replacePages` | Remplace/complète une page |
+| `replaceSequences` | Remplace une séquence entière (par slug) |
+| `addSequences` | Ajoute de nouvelles séquences |
+| `sequenceOrder` | Fixe l'ordre d'affichage des séquences |
+
+C'est ce mécanisme qui **retire les données personnelles des pages ASSR** et qui
+**ajoute les séquences neuves** alignées sur le programme 2024.
+
 ## Modifier le contenu
 
 1. Ouvrir le fichier JSON de la section concernée dans `content/sections/`

@@ -3,10 +3,10 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Séance 3: programmer un système · Serre autonome — Technologie &amp; SNT</title>
-<meta name="description" content="Analyse fonctionnelle, modélisation 3D et programmation d'une serre autonome.">
-<meta property="og:title" content="Séance 3: programmer un système · Serre autonome — Technologie &amp; SNT">
-<meta property="og:description" content="Analyse fonctionnelle, modélisation 3D et programmation d'une serre autonome.">
+<title>Séance 3 : Programmer le système · Serre autonome — Technologie &amp; SNT</title>
+<meta name="description" content="De l'algorithme au programme : rendre la serre autonome.">
+<meta property="og:title" content="Séance 3 : Programmer le système · Serre autonome — Technologie &amp; SNT">
+<meta property="og:description" content="De l'algorithme au programme : rendre la serre autonome.">
 <meta property="og:type" content="website">
 <link rel="icon" href="../../../assets/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -52,7 +52,7 @@
     <a href="../../../index.html">Accueil</a><span class="sep">›</span>
     <a href="../../">4ème</a><span class="sep">›</span>
     <a href="../">Serre autonome</a><span class="sep">›</span>
-    <span class="current">Séance 3: programmer un système</span>
+    <span class="current">Séance 3 : Programmer le système</span>
   </nav>
 <div class="wrap course-layout">
   <aside class="sidebar" style="--accent:undefined;--accent-soft:undefined;">
@@ -75,6 +75,20 @@
         <a href="../../sequence-1-ia-securite/seance-2/">Séance 2</a>
         <a href="../../sequence-1-ia-securite/seance-2-corr/">Séance 2 — correction</a>
         <a href="../../sequence-1-ia-securite/ressources/">Ressources</a>
+      </div>
+    </details>
+    <details>
+      <summary><a href="../../sequence-depanner-reparer/" style="all:unset;cursor:pointer">Dépanner et réparer un objet technique</a></summary>
+      <div class="sb-pages">
+        <a href="../../sequence-depanner-reparer/seance-1/">Séance 1</a>
+        <a href="../../sequence-depanner-reparer/seance-2/">Séance 2</a>
+      </div>
+    </details>
+    <details>
+      <summary><a href="../../sequence-objet-developpement-durable/" style="all:unset;cursor:pointer">Choisir un objet dans un contexte de développement durable</a></summary>
+      <div class="sb-pages">
+        <a href="../../sequence-objet-developpement-durable/seance-1/">Séance 1</a>
+        <a href="../../sequence-objet-developpement-durable/seance-2/">Séance 2</a>
       </div>
     </details>
     <details>
@@ -149,15 +163,125 @@
         <span class="badge">Serre autonome</span>
         <span class="badge badge-arch">2020-2024</span>
       </div>
-      <h1>Séance 3: programmer un système</h1>
-      
+      <h1>Séance 3 : Programmer le système</h1>
+      <p class="desc">De l'algorithme au programme : rendre la serre autonome.</p>
     </div>
+    <div class="callout callout-objectif"><span class="co-icon">🎯</span><div class="co-body"><div class="co-title">Objectifs</div><ul>
+<li>Identifier les entrées (capteurs) et les sorties (actionneurs) du système.</li>
+<li>Écrire l&#39;algorithme d&#39;une fonction automatique.</li>
+<li><strong>Traduire un algorithme en programme</strong> (repère de 4ᵉ).</li>
+</ul>
+</div></div>
     
-    
+<div class="student-bar">
+  <span class="sb-info">💾 Tes réponses sont enregistrées automatiquement sur cet appareil.</span>
+  <span class="sb-actions">
+    <button class="btn btn-ghost btn-sm" id="print-answers" type="button">🖨 Imprimer / PDF</button>
+    <button class="btn btn-ghost btn-sm" id="clear-answers" type="button">🗑 Tout effacer</button>
+  </span>
+</div>
     <div class="prose">
-      
+      <h2>Où en est le projet ?</h2>
+<p>Notre serre doit fonctionner <strong>toute seule</strong> : arroser quand la terre est sèche, éclairer quand il fait sombre, aérer quand il fait trop chaud. Pour cela, une <strong>carte programmable</strong> (micro:bit ou Arduino) lit les <strong>capteurs</strong> et commande les <strong>actionneurs</strong>.</p>
+<h2>Activité 1 — Entrées et sorties</h2>
+<p>Relie chaque élément à la bonne catégorie.</p>
+<p><strong>Les ENTRÉES (ce que la carte mesure — les capteurs) :</strong></p>
+<div class="answer-field">
+  <textarea rows="3" data-answer-idx="0" placeholder="✏️ Écris ta réponse ici…" aria-label="Zone de réponse de l'élève"></textarea>
+</div>
+<p><strong>Les SORTIES (ce que la carte commande — les actionneurs) :</strong></p>
+<div class="answer-field">
+  <textarea rows="3" data-answer-idx="1" placeholder="✏️ Écris ta réponse ici…" aria-label="Zone de réponse de l'élève"></textarea>
+</div>
+<blockquote>
+<p><em>Aide : capteur d&#39;humidité du sol, capteur de luminosité, capteur de température ; pompe à eau, lampe, ventilateur.</em></p>
+</blockquote>
+<h2>Activité 2 — Écrire l&#39;algorithme de l&#39;arrosage</h2>
+<p>On veut arroser <strong>seulement quand la terre est trop sèche</strong>. Complète l&#39;algorithme :</p>
+<pre><code>Si   humidité du sol  &lt;  seuil (par exemple 30 %)
+Alors  ......................................
+Sinon  ......................................
+</code></pre>
+<p><strong>Complète les deux lignes :</strong></p>
+<div class="answer-field">
+  <textarea rows="5" data-answer-idx="2" placeholder="✏️ Écris ta réponse ici…" aria-label="Zone de réponse de l'élève"></textarea>
+</div>
+<h2>Activité 3 — Les autres fonctions</h2>
+<p>Écris, sur le même modèle « Si … Alors … Sinon … », l&#39;algorithme de :</p>
+<p><strong>L&#39;éclairage automatique</strong> (allumer la lampe quand la luminosité est faible) :</p>
+<div class="answer-field">
+  <textarea rows="3" data-answer-idx="3" placeholder="✏️ Écris ta réponse ici…" aria-label="Zone de réponse de l'élève"></textarea>
+</div>
+<p><strong>La ventilation</strong> (allumer le ventilateur quand la température dépasse 28 °C) :</p>
+<div class="answer-field">
+  <textarea rows="3" data-answer-idx="4" placeholder="✏️ Écris ta réponse ici…" aria-label="Zone de réponse de l'élève"></textarea>
+</div>
+<h2>Activité 4 — De l&#39;algorithme au programme</h2>
+<p>Pour que la serre réagisse en permanence, tout le programme est placé dans une <strong>boucle « répéter indéfiniment »</strong>. Chaque test « Si … Alors … Sinon … » devient un <strong>bloc conditionnel</strong> dans le logiciel de programmation (MakeCode pour micro:bit, ou mBlock/Arduino).</p>
+<p>À retenir dans ton programme :</p>
+<ul>
+<li>une <strong>variable</strong> stocke la valeur lue par un capteur (ex. <code>humidite</code>) ;</li>
+<li>une <strong>condition</strong> compare cette variable à un <strong>seuil</strong> (<code>humidite &lt; 30</code>) ;</li>
+<li>une <strong>boucle</strong> répète les tests en continu.</li>
+</ul>
+<p><strong>Quel bloc utilise-t-on pour comparer la valeur d&#39;un capteur à un seuil ?</strong></p>
+<div class="answer-field">
+  <textarea rows="3" data-answer-idx="5" placeholder="✏️ Écris ta réponse ici…" aria-label="Zone de réponse de l'élève"></textarea>
+</div>
+<h2>Ce que je retiens</h2>
+<p>Un système automatique fonctionne selon le schéma <strong>capteur → programme → actionneur</strong>. Programmer, c&#39;est d&#39;abord <strong>écrire un algorithme</strong> (Si… Alors… Sinon…), puis le <strong>traduire en blocs</strong> dans une boucle qui se répète, pour que le système réagisse tout seul à son environnement.</p>
+
     </div>
     
+<section class="quiz" id="quiz">
+  <h2>🧠 Teste tes connaissances</h2>
+  <p class="quiz-hint">Réponds aux questions puis clique sur « Vérifier » — la correction s'affiche aussitôt.</p>
+  
+    <div class="quiz-q" data-ok="0" data-explain="Un capteur fournit une information à la carte : c'est une entrée du système.">
+      <p class="qq-text">1. Dans la serre, le capteur d'humidité du sol est :</p>
+      <div class="qq-opts">
+        <label class="qq-opt"><input type="radio" name="q0" value="0"><span>Une entrée du système</span></label>
+        <label class="qq-opt"><input type="radio" name="q0" value="1"><span>Une sortie du système</span></label>
+        <label class="qq-opt"><input type="radio" name="q0" value="2"><span>Un actionneur</span></label>
+      </div>
+      <button class="btn btn-ghost qq-check" type="button">Vérifier ma réponse</button>
+      <div class="qq-feedback" aria-live="polite"></div>
+    </div>
+
+    <div class="quiz-q" data-ok="1" data-explain="La pompe est commandée par la carte pour agir : c'est un actionneur, donc une sortie.">
+      <p class="qq-text">2. La pompe à eau est :</p>
+      <div class="qq-opts">
+        <label class="qq-opt"><input type="radio" name="q1" value="0"><span>Un capteur</span></label>
+        <label class="qq-opt"><input type="radio" name="q1" value="1"><span>Un actionneur (une sortie)</span></label>
+        <label class="qq-opt"><input type="radio" name="q1" value="2"><span>Une variable</span></label>
+      </div>
+      <button class="btn btn-ghost qq-check" type="button">Vérifier ma réponse</button>
+      <div class="qq-feedback" aria-live="polite"></div>
+    </div>
+
+    <div class="quiz-q" data-ok="1" data-explain="Quand la terre est trop sèche (humidité faible), il faut activer la pompe pour arroser.">
+      <p class="qq-text">3. Quel algorithme arrose correctement la plante ?</p>
+      <div class="qq-opts">
+        <label class="qq-opt"><input type="radio" name="q2" value="0"><span>Si humidité &lt; 30 % Alors arrêter la pompe</span></label>
+        <label class="qq-opt"><input type="radio" name="q2" value="1"><span>Si humidité &lt; 30 % Alors activer la pompe</span></label>
+        <label class="qq-opt"><input type="radio" name="q2" value="2"><span>Si humidité &gt; 30 % Alors activer la pompe</span></label>
+      </div>
+      <button class="btn btn-ghost qq-check" type="button">Vérifier ma réponse</button>
+      <div class="qq-feedback" aria-live="polite"></div>
+    </div>
+
+    <div class="quiz-q" data-ok="1" data-explain="La boucle répète les mesures et les tests en continu, pour que le système reste autonome.">
+      <p class="qq-text">4. Pourquoi place-t-on le programme dans une boucle « répéter indéfiniment » ?</p>
+      <div class="qq-opts">
+        <label class="qq-opt"><input type="radio" name="q3" value="0"><span>Pour qu'il s'exécute une seule fois</span></label>
+        <label class="qq-opt"><input type="radio" name="q3" value="1"><span>Pour que la serre réagisse en permanence à son environnement</span></label>
+        <label class="qq-opt"><input type="radio" name="q3" value="2"><span>Pour économiser de l'énergie</span></label>
+      </div>
+      <button class="btn btn-ghost qq-check" type="button">Vérifier ma réponse</button>
+      <div class="qq-feedback" aria-live="polite"></div>
+    </div>
+  <div class="quiz-score" aria-live="polite"></div>
+</section>
     
     <nav class="pager">
       <a class="pg-prev" href="../seance-2/"><span class="pg-label">← Précédent</span><span class="pg-title">Séance 2: modélisation 3D de la serre</span></a>

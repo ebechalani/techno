@@ -4,7 +4,7 @@
   "year": "",
   "archived": false,
   "tagline": "Sciences Numériques et Technologie — seconde générale et technologique.",
-  "intro_md": "SNT\n\n**Thème 1: Python**",
+  "intro_md": "L'enseignement de **Sciences Numériques et Technologie** (SNT) est commun à tous les élèves de seconde. Il explore le monde numérique à travers plusieurs **thèmes** : Internet, le Web, les réseaux sociaux, les données structurées, la localisation et la cartographie, la photographie numérique, en s'appuyant sur la **programmation en Python**.",
   "resources": [],
   "sequences": [
     {
@@ -149,6 +149,369 @@
           "content_md": "**CSS**\n\nLe langage CSS (pour Cascading Style Sheets) permet de définir le style graphique d’une page Web (arrière-plan, type et taille des polices de caractères, etc.). La modification du style d’un élément dans une feuille de style se répercute automatiquement à toutes les pages HTML qui y font appel.\n\nRetournez sur le site de [jsfiddle](https://jsfiddle.net/) et copiez/collez le code suivant dans la case CSS. En ayant pris la peine de récupérer votre code html précédent. Appuyez sur Run.\n\nbody{\n\nbackground-color: white;/\\*ligne 2\\*/\n\nfont-family: \"OpenSans\", sans-serif;\n\npadding: 5px 25px;\n\nfont-size: 18px;/\\*ligne 5\\*/\n\nmargin: 0;\n\ncolor: purple;\n\n}\n\nh1{\n\nfont-family: \"Merryweather\",serif;\n\nfont-size: 32px;\n\ncolor: #FF0000;\n\n}\n\n**Créer un site Web dans Notepad++**\n\n**Télecharger notepad++ en appuyant sur** [**ce lien**](https://notepad-plus-plus.org/downloads/v8.3.3/)\n\n**Les étapes à suivre pour créer une page html dans notepad++:**\n\n1- File--> New\n\n2- Appuyez sur l'onglet Language-->H-->Html\n\n3- Sauvegardez votre page avec l'extension .html; exemple: page1.html\n\n**Les étapes à suivre pour créer une** **fichier CSS** **dans notepad++:**\n\n1- File--> New\n\n2- Appuyez sur l'onglet Language-->C-->CSS\n\n3- Sauvegardez votre page avec l'extension .CSS; exemple: style1.css\n\n**Pour appeler le css dans notepad++**\n\nAjoutez la balise qui appelle le code css dans html\n&lt;link rel=\"stylesheet\" href=\"styles.css\">\n\nA noter que href est la référence du fichier css que vous avez créé, si je prends le cas précédent mon fichier css est nommé **style1.css** alors il faut modifier href ainsi:\n\n&lt;link rel=\"stylesheet\" href=\"style1.css\">\n\n### Insertion d'image\n\nUtiliser la balise &lt;img> pour insérer une image .\n\nSupposons qu'une image nommée html5.png soit stockée dans le même répertoire que votre fichier html de travail.\n\nLe code en langage html ci-dessous:\n\n&lt;img src=\"html5.png\">\n\nOn peut également modifier la largeur et la hauteur de l'image en ajoutant les arguments: Width et height.\n\nExemple pou réduire la largeur et la hauteur de l'image précédente à moitié:\n\n&lt;img src=\"html5.png\" width=\"50%\" height=\"50%>\n\n### Insertion d'un lien hypertexte\n\nUn lien hypertexte nous permet d’accéder de nouvelles pages à partir de la page courante en se référant au lien de la nouvelle page .\n\nAvant d'insérer un lien hypertexte vers une page, il faut que la page existe. Pour cela le lien hypertexte sera ajouté une fois que vous ayez terminer et sauvegarder toutes vos page html.\n\nLa balise **&lt;a href=\"page2.html\">Next&lt;/a>** crée un bouton Next sur la page qui nous mène vers la page 2.\n\n**Aligner un paragraphe**\n\nPour aligner un paragraphe, on utilise la balise &lt;p> qui prend comme argument l' option align=\"center\" / \"left\"/\"right\" et qui doit se fermer une fois le paragraphe est terminé &lt;/p>\n\nexemple: pour insérer la phrase \"bonjour tout le monde au miieu\" -->\n\n&lt;p align=\"center\">\n\nbonjour tout le monde\n\n&lt;/p>\n\n**N.B:** vous pouvez également aligner une image en utilisant la balsie &lt;p align=\"...\"> &lt;img src=...\"> &lt;/p>\n\n**Ajouter un tableau dans une page HTML**",
           "resources": [],
           "srcUrl": "https://sites.google.com/view/lmtechno25/2nde-snt/thème-3-web/4-le-langage-htmlcss-2"
+        }
+      ]
+    },
+    {
+      "slug": "theme-reseaux-sociaux",
+      "eyebrow": "Thème",
+      "year": "",
+      "title": "Les réseaux sociaux",
+      "shortTitle": "Les réseaux sociaux",
+      "tagline": "Identité numérique, modèle économique, graphes de relations et lutte contre la cyberviolence.",
+      "objectifs_md": "À la fin de ce thème, je suis capable de :\n\n- décrire l'**identité numérique** et l'**e-réputation**, distinguer **identification** et **authentification** ;\n- expliquer le **modèle économique** des réseaux sociaux gratuits ;\n- représenter un **graphe de relations** et en calculer le **rayon**, le **diamètre** et le **centre** ;\n- expliquer le phénomène du **petit monde** (expérience de Milgram) ;\n- connaître le **cadre légal** contre la cyberviolence et les **ressources d'aide**.",
+      "competences_md": "**Programme de SNT — 2ⁿᵈᵉ (2019), thème « Les réseaux sociaux ».**\n\nNotions : identité numérique, e-réputation, identification, authentification ; modèle économique ; graphes de relations (rayon, diamètre, centre) ; petit monde et expérience de Milgram ; cyberviolence, harcèlement (article 222-33-2-2 du code pénal).\n\nCapacités : paramétrer la confidentialité, analyser des CGU, représenter un graphe de relations et identifier des communautés.",
+      "intro_md": "Depuis le premier réseau social en 1995, ces plateformes ont transformé la façon dont nous communiquons : en 2018, on estimait à **3,2 milliards** le nombre d'utilisateurs actifs dans le monde. Ce thème explique **comment fonctionnent les réseaux sociaux**, **comment ils gagnent de l'argent**, comment les mathématiques (les **graphes**) décrivent nos relations, et **comment se protéger** de la cyberviolence.",
+      "resources": [],
+      "pages": [
+        {
+          "slug": "seance-1",
+          "kind": "seance",
+          "num": 1,
+          "title": "Réseaux sociaux et identité numérique",
+          "shortTitle": "Séance 1",
+          "tagline": "Repères historiques, identité numérique, e-réputation, identification et authentification.",
+          "objectifs_md": "",
+          "content_md": "## Quelques repères historiques\n\nLes réseaux sociaux se sont succédé rapidement :\n\n| Année | Réseau |\n| --- | --- |\n| 1995 | Classmates |\n| 2003 | MySpace, LinkedIn |\n| 2004 | Facebook |\n| 2006 | Twitter |\n| 2009 | WhatsApp |\n| 2010 | Instagram |\n| 2011 | Snapchat |\n\nEn 2018, environ **3,2 milliards** de personnes utilisent au moins un réseau social.\n\n## Activité 1 — L'identité numérique\n\nTon **identité numérique**, c'est l'ensemble des **traces** que tu laisses en ligne : ton profil, tes photos, tes commentaires, tes « j'aime », mais aussi ce que **les autres** publient sur toi.\n\nL'**e-réputation**, c'est l'**image** que ces traces donnent de toi sur internet.\n\n**a.** Cite **trois types de traces** qui composent ton identité numérique.\n\n……………………………………………………\n\n**b.** Un recruteur ou un professeur peut-il consulter ce que tu publies ? Quelle conséquence cela peut-il avoir plus tard ?\n\n……………………………………………………\n\n## Activité 2 — Identification et authentification\n\nDeux mots proches mais différents :\n\n- **S'identifier**, c'est **dire qui l'on est** (donner son identifiant ou son nom d'utilisateur).\n- **S'authentifier**, c'est **prouver que c'est bien nous** (mot de passe, code reçu par SMS, empreinte…).\n\n**a.** Quand tu tapes ton **nom d'utilisateur**, tu t'… ……………………\n\n**b.** Quand tu tapes ton **mot de passe**, tu t'… ……………………\n\n**c.** Pourquoi l'**authentification à deux facteurs** (mot de passe + code SMS) est-elle plus sûre ?\n\n……………………………………………………\n\n## Ce que je retiens\n\nL'**identité numérique** est l'ensemble des traces que l'on laisse en ligne ; elles construisent notre **e-réputation**, qui peut avoir des conséquences durables. **S'identifier** (dire qui on est) est différent de **s'authentifier** (prouver que c'est bien nous).",
+          "resources": [],
+          "quiz": [
+            {
+              "q": "Qu'est-ce que l'e-réputation ?",
+              "options": [
+                "Le nombre d'amis sur un réseau",
+                "L'image qu'on donne de soi sur internet à travers ses traces",
+                "Le mot de passe d'un compte"
+              ],
+              "answer": 1,
+              "explain": "L'e-réputation est l'image renvoyée par l'ensemble des traces numériques d'une personne."
+            },
+            {
+              "q": "S'authentifier, c'est :",
+              "options": [
+                "Dire son nom d'utilisateur",
+                "Prouver que l'on est bien la bonne personne (mot de passe, code…)",
+                "Créer un compte"
+              ],
+              "answer": 1,
+              "explain": "L'authentification prouve l'identité, par exemple avec un mot de passe ou un code."
+            },
+            {
+              "q": "Le premier réseau social, Classmates, date de :",
+              "options": [
+                "1985",
+                "1995",
+                "2010"
+              ],
+              "answer": 1,
+              "explain": "Classmates est apparu en 1995."
+            },
+            {
+              "q": "Pourquoi l'authentification à deux facteurs est-elle plus sûre ?",
+              "options": [
+                "Elle est plus rapide",
+                "Elle demande deux preuves d'identité, plus difficiles à voler ensemble",
+                "Elle supprime le mot de passe"
+              ],
+              "answer": 1,
+              "explain": "Deux facteurs (mot de passe + code) sont bien plus durs à obtenir tous les deux pour un pirate."
+            }
+          ]
+        },
+        {
+          "slug": "seance-2",
+          "kind": "seance",
+          "num": 2,
+          "title": "Modèle économique et vie privée",
+          "shortTitle": "Séance 2",
+          "tagline": "Comment les réseaux gratuits gagnent de l'argent, et comment protéger sa vie privée.",
+          "objectifs_md": "",
+          "content_md": "## La situation de départ\n\nLa plupart des réseaux sociaux sont **gratuits**. Pourtant, ce sont des entreprises qui emploient des milliers de personnes et gagnent des milliards. **D'où vient leur argent ?**\n\n## Activité 1 — « Quand c'est gratuit, c'est vous le produit »\n\nLes réseaux sociaux gagnent surtout de l'argent grâce à la **publicité ciblée**. Pour cela, ils **collectent tes données** (âge, centres d'intérêt, position, temps passé sur chaque contenu) et les utilisent pour te montrer des **publicités personnalisées**. Les annonceurs paient pour cela.\n\n**a.** Selon la formule « quand c'est gratuit, c'est vous le produit », qu'est-ce qui est réellement **vendu** aux annonceurs ?\n\n……………………………………………………\n\n**b.** Pourquoi une application gratuite a-t-elle intérêt à ce que tu y passes **le plus de temps possible** ?\n\n……………………………………………………\n\n## Activité 2 — Les paramètres de confidentialité\n\nChaque réseau propose des **réglages de confidentialité** : qui peut voir tes publications, ta liste d'amis, ta position ? Beaucoup d'utilisateurs ne les modifient jamais.\n\n**a.** Cite **deux réglages** de confidentialité que tu peux modifier pour mieux te protéger.\n\n……………………………………………………\n\n**b.** Avant d'installer une application, on peut lire les **CGU** (Conditions Générales d'Utilisation) et les **autorisations** demandées. Pourquoi une application de retouche photo qui demande l'accès à tes **contacts** et à ton **micro** doit-elle t'alerter ?\n\n……………………………………………………\n\n## Ce que je retiens\n\nLes réseaux sociaux « gratuits » se financent par la **publicité ciblée**, en exploitant les **données personnelles** des utilisateurs. Pour se protéger, il faut **régler la confidentialité** de son compte, **limiter les autorisations** des applications et **lire les CGU**.",
+          "resources": [],
+          "quiz": [
+            {
+              "q": "Comment un réseau social gratuit gagne-t-il principalement de l'argent ?",
+              "options": [
+                "En vendant des abonnements",
+                "Grâce à la publicité ciblée fondée sur les données des utilisateurs",
+                "En faisant payer chaque message"
+              ],
+              "answer": 1,
+              "explain": "Le modèle repose sur la publicité ciblée à partir des données collectées."
+            },
+            {
+              "q": "« Quand c'est gratuit, c'est vous le produit » signifie que :",
+              "options": [
+                "Le service est de mauvaise qualité",
+                "Ce sont vos données et votre attention qui sont vendues aux annonceurs",
+                "Vous gagnez de l'argent"
+              ],
+              "answer": 1,
+              "explain": "L'utilisateur et ses données constituent le produit vendu aux annonceurs."
+            },
+            {
+              "q": "Que peut-on faire pour protéger sa vie privée sur un réseau social ?",
+              "options": [
+                "Régler les paramètres de confidentialité",
+                "Accepter toutes les autorisations",
+                "Publier son adresse"
+              ],
+              "answer": 0,
+              "explain": "Régler la confidentialité et limiter les autorisations protège la vie privée."
+            },
+            {
+              "q": "Une appli de photo qui exige l'accès à tes contacts et à ton micro :",
+              "options": [
+                "C'est normal, il faut accepter",
+                "Doit t'alerter : ces accès ne sont pas nécessaires pour retoucher une photo",
+                "Rend l'appli plus rapide"
+              ],
+              "answer": 1,
+              "explain": "Des autorisations sans rapport avec la fonction de l'appli doivent éveiller la méfiance."
+            }
+          ]
+        },
+        {
+          "slug": "seance-3",
+          "kind": "seance",
+          "num": 3,
+          "title": "Graphes, petit monde et cyberviolence",
+          "shortTitle": "Séance 3",
+          "tagline": "Représenter les relations par un graphe et agir contre le harcèlement.",
+          "objectifs_md": "",
+          "content_md": "## Activité 1 — Un graphe de relations\n\nEn mathématiques, on représente un réseau d'« amis » par un **graphe** : chaque personne est un **sommet** (un point), chaque relation d'amitié une **arête** (un trait).\n\nExemple : *Alice est amie avec Bob et Chloé. Bob est ami avec Chloé et David. David est ami avec Emma.*\n\n**a.** Combien de **sommets** compte ce graphe ? Combien d'**arêtes** ?\n\n……………………………………………………\n\nOn définit aussi :\n\n- la **distance** entre deux personnes = le **nombre minimal d'amitiés** à traverser pour aller de l'une à l'autre ;\n- le **diamètre** du graphe = la **plus grande** distance entre deux personnes ;\n- le **centre** = la (ou les) personne(s) les plus « proches de tout le monde ».\n\n**b.** Quelle est la distance entre **Alice** et **Emma** dans l'exemple ?\n\n……………………………………………………\n\n## Activité 2 — Le phénomène du « petit monde »\n\nEn 1967, le chercheur **Stanley Milgram** a mené une expérience : il a demandé à des personnes de faire parvenir une lettre à un inconnu, uniquement via des connaissances. En moyenne, **six intermédiaires** suffisaient. C'est l'idée des **« six degrés de séparation »** : sur Terre, chacun serait relié à n'importe qui par une courte chaîne de relations.\n\n**a.** Avec tes mots, explique ce que veut dire « six degrés de séparation ».\n\n……………………………………………………\n\n**b.** Sur les réseaux sociaux, ces chaînes sont encore **plus courtes**. Selon toi, pourquoi ?\n\n……………………………………………………\n\n## Activité 3 — Agir contre la cyberviolence\n\nLes réseaux facilitent aussi le **harcèlement** et la **cyberviolence** (insultes, rumeurs, diffusion d'images sans accord). En France, le **harcèlement en ligne est puni par la loi** (article 222-33-2-2 du code pénal).\n\nSi tu es **victime ou témoin** :\n\n1. **Ne réponds pas** à la personne malveillante.\n2. **Conserve les preuves** (captures d'écran).\n3. **Signale** le contenu à la plateforme.\n4. **Parle-en** à un adulte de confiance ; tu peux appeler le **3018** (numéro national gratuit contre les violences numériques).\n\n**a.** Pourquoi vaut-il mieux **ne pas répondre** à un harceleur ?\n\n……………………………………………………\n\n**b.** À quoi servent les **captures d'écran** dans ce cas ?\n\n……………………………………………………\n\n::embed[3018 — non au harcèlement (Éducation nationale)](https://www.nonauharcelement.education.gouv.fr/)\n\n## Ce que je retiens\n\nUn **graphe** (sommets = personnes, arêtes = relations) décrit un réseau d'amis ; on y mesure des **distances**, un **diamètre** et un **centre**. Le phénomène du **petit monde** (Milgram, 1967) montre que nous sommes tous reliés par de courtes chaînes. Enfin, la **cyberviolence est un délit** : en cas de problème, on garde les preuves, on signale et on en parle (**3018**).",
+          "resources": [
+            {
+              "kind": "external",
+              "title": "3018 — Non au harcèlement",
+              "url": "https://www.nonauharcelement.education.gouv.fr/"
+            }
+          ],
+          "quiz": [
+            {
+              "q": "Dans un graphe de relations, une arête représente :",
+              "options": [
+                "Une personne",
+                "Une relation entre deux personnes",
+                "Un message"
+              ],
+              "answer": 1,
+              "explain": "Un sommet est une personne ; une arête relie deux personnes en relation."
+            },
+            {
+              "q": "L'expérience de Milgram (1967) a donné naissance à l'idée :",
+              "options": [
+                "Des « six degrés de séparation »",
+                "Du cloud",
+                "Du chiffrement"
+              ],
+              "answer": 0,
+              "explain": "Milgram a montré qu'en moyenne six intermédiaires relient deux inconnus : les six degrés de séparation."
+            },
+            {
+              "q": "Le diamètre d'un graphe, c'est :",
+              "options": [
+                "Le nombre de sommets",
+                "La plus grande distance entre deux personnes du graphe",
+                "Le nombre d'arêtes"
+              ],
+              "answer": 1,
+              "explain": "Le diamètre est la plus grande des distances entre deux sommets."
+            },
+            {
+              "q": "Si tu es victime de cyberharcèlement, il faut d'abord :",
+              "options": [
+                "Répondre pour te défendre",
+                "Conserver les preuves, signaler et en parler à un adulte (3018)",
+                "Supprimer ton compte sans rien dire"
+              ],
+              "answer": 1,
+              "explain": "On ne répond pas ; on garde les preuves, on signale et on demande de l'aide (3018)."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "theme-donnees-structurees",
+      "eyebrow": "Thème",
+      "year": "",
+      "title": "Les données structurées et leur traitement",
+      "shortTitle": "Les données structurées et leur traitement",
+      "tagline": "Données, tables et fichiers CSV, traitement au tableur et en Python, cloud et RGPD.",
+      "objectifs_md": "À la fin de ce thème, je suis capable de :\n\n- distinguer **donnée**, **donnée personnelle**, **descripteur** et **collection** ;\n- lire un fichier **CSV** organisé en **table** ;\n- **trier**, **filtrer** et **calculer** sur des données (tableur ou Python) et **croiser deux tables** ;\n- expliquer ce que sont les **métadonnées**, le **cloud**, le **Big Data**, l'**open data** et le **RGPD** ;\n- comprendre l'**impact énergétique** du stockage des données.",
+      "competences_md": "**Programme de SNT — 2ⁿᵈᵉ (2019), thème « Les données structurées et leur traitement ».**\n\nNotions : donnée, donnée personnelle, descripteurs, collections et tables, formats (CSV, vCard) ; traitement (recherche, tri, filtre, calcul, croisement de tables) ; métadonnées ; cloud, centres de données et consommation énergétique ; Big Data, open data, RGPD.\n\nCapacités : consulter des métadonnées, lire un CSV (tableur ou Python), trier/filtrer/calculer, croiser deux tables.",
+      "intro_md": "Nous produisons chaque jour d'énormes quantités de **données**. Pour être utiles, elles doivent être **structurées**, c'est-à-dire organisées de façon claire, puis **traitées** (triées, filtrées, croisées). Ce thème te fait manipuler des **données réelles**, découvrir le format **CSV**, le **tableur** et un peu de **Python**, puis réfléchir à la **protection des données** (RGPD) et à l'**empreinte écologique** de leur stockage.",
+      "resources": [],
+      "pages": [
+        {
+          "slug": "seance-1",
+          "kind": "seance",
+          "num": 1,
+          "title": "Données, descripteurs et tables",
+          "shortTitle": "Séance 1",
+          "tagline": "Organiser des données : collections, descripteurs et fichiers CSV.",
+          "objectifs_md": "",
+          "content_md": "## Quelques repères historiques\n\nStocker et organiser des données est un vieux défi : **cartes perforées** (1930), premier **disque dur** (1956), **modèle relationnel** des bases de données (1970), premier **tableur** VisiCalc (1979), mouvement de l'**open data** (années 2010).\n\n## Activité 1 — Donnée et donnée personnelle\n\nUne **donnée** est une information élémentaire (un nom, un âge, une température). Une **donnée personnelle** est une donnée qui permet d'**identifier une personne** (nom, adresse, numéro de téléphone, photo…). Elle est **protégée par la loi**.\n\n**a.** Parmi ces éléments, lesquels sont des **données personnelles** ? *(numéro de téléphone, température extérieure, adresse e-mail, prix d'un livre, date de naissance)*\n\n……………………………………………………\n\n## Activité 2 — Organiser en table\n\nQuand on décrit plusieurs objets qui se ressemblent, on les range dans une **table** (comme un tableau). Chaque **ligne** est un objet de la **collection** ; chaque **colonne** est un **descripteur** (une caractéristique).\n\n| titre | auteur | annee | pages |\n| --- | --- | --- | --- |\n| Le Petit Prince | Saint-Exupéry | 1943 | 96 |\n| Vingt mille lieues sous les mers | Verne | 1870 | 432 |\n| Harry Potter à l'école des sorciers | Rowling | 1997 | 320 |\n\n**a.** Dans cette table, quels sont les **descripteurs** ?\n\n……………………………………………………\n\n**b.** Combien d'**objets** (livres) contient cette **collection** ?\n\n……………………………………………………\n\n## Activité 3 — Le format CSV\n\nPour échanger des tables entre logiciels, on utilise souvent le format **CSV** (*Comma-Separated Values* : valeurs séparées par des virgules). C'est un simple fichier texte : la première ligne donne les **descripteurs**, chaque ligne suivante est un objet, les valeurs sont séparées par des **virgules** (ou des points-virgules).\n\n```\ntitre,auteur,annee,pages\nLe Petit Prince,Saint-Exupéry,1943,96\nVingt mille lieues sous les mers,Verne,1870,432\n```\n\n**a.** Dans un fichier CSV, à quoi sert la **première ligne** ?\n\n……………………………………………………\n\n**b.** Un fichier CSV peut s'ouvrir avec un **tableur** (comme LibreOffice Calc). Cite un autre logiciel ou langage capable de le lire.\n\n……………………………………………………\n\n## Ce que je retiens\n\nUne **donnée personnelle** identifie une personne et est protégée par la loi. On organise des données en **table** : chaque **ligne** est un objet d'une **collection**, chaque **colonne** est un **descripteur**. Le format **CSV** est un fichier texte qui stocke une table, lisible par un **tableur** ou en **Python**.",
+          "resources": [],
+          "quiz": [
+            {
+              "q": "Dans une table de données, un « descripteur » est :",
+              "options": [
+                "Une ligne (un objet)",
+                "Une colonne (une caractéristique)",
+                "Le nom du fichier"
+              ],
+              "answer": 1,
+              "explain": "Un descripteur est une colonne : une caractéristique commune à tous les objets de la collection."
+            },
+            {
+              "q": "Que signifie CSV ?",
+              "options": [
+                "Valeurs séparées par des virgules",
+                "Créateur de Sites Web",
+                "Code Secret Vérifié"
+              ],
+              "answer": 0,
+              "explain": "CSV signifie Comma-Separated Values : des valeurs séparées par des virgules."
+            },
+            {
+              "q": "Laquelle est une donnée personnelle ?",
+              "options": [
+                "La température extérieure",
+                "Une adresse e-mail",
+                "Le prix d'un livre"
+              ],
+              "answer": 1,
+              "explain": "Une adresse e-mail permet d'identifier une personne : c'est une donnée personnelle."
+            },
+            {
+              "q": "Dans un fichier CSV, la première ligne contient en général :",
+              "options": [
+                "Les descripteurs (noms des colonnes)",
+                "Le premier objet",
+                "La date du jour"
+              ],
+              "answer": 0,
+              "explain": "La première ligne donne les descripteurs, c'est-à-dire les noms des colonnes."
+            }
+          ]
+        },
+        {
+          "slug": "seance-2",
+          "kind": "seance",
+          "num": 2,
+          "title": "Traiter les données : trier, filtrer, croiser",
+          "shortTitle": "Séance 2",
+          "tagline": "Rechercher, trier, filtrer et calculer sur des données, au tableur et en Python.",
+          "objectifs_md": "",
+          "content_md": "## Activité 1 — Rechercher, trier, filtrer\n\nUne fois les données rangées en table, on peut les **traiter** :\n\n- **Rechercher** : retrouver un objet précis.\n- **Trier** : ranger les objets dans l'ordre (croissant ou décroissant) selon un descripteur.\n- **Filtrer** : ne garder que les objets qui respectent une condition.\n- **Calculer** : par exemple faire une somme ou une moyenne.\n\nReprenons la table des livres (titre, auteur, annee, pages).\n\n**a.** Si je **trie** par `annee` croissante, quel livre apparaît en premier ?\n\n……………………………………………………\n\n**b.** Si je **filtre** les livres de plus de **300 pages**, lesquels sont gardés ?\n\n……………………………………………………\n\n## Activité 2 — Au tableur\n\nDans un tableur (LibreOffice Calc, Excel), on ouvre le CSV, puis on utilise les fonctions de **tri**, de **filtre automatique** et de calcul (`=SOMME(...)`, `=MOYENNE(...)`).\n\n**a.** Quelle fonction du tableur calcule la **moyenne** d'une colonne ?\n\n……………………………………………………\n\n## Activité 3 — Un aperçu en Python\n\nOn peut aussi lire un CSV avec **Python**, grâce au module `csv` :\n\n```python\nimport csv\nwith open(\"livres.csv\", newline=\"\", encoding=\"utf-8\") as f:\n    table = list(csv.DictReader(f))\n\n# Afficher le titre de chaque livre\nfor livre in table:\n    print(livre[\"titre\"], \"-\", livre[\"annee\"])\n```\n\nChaque `livre` est un dictionnaire : `livre[\"titre\"]` donne la valeur du descripteur `titre`.\n\n**a.** Que va afficher la boucle `for` de l'exemple ?\n\n……………………………………………………\n\n**b.** Dans cette table, `table[0]` est le premier livre. Quelle expression Python donne son **année** de parution ?\n\n……………………………………………………\n\n## Activité 4 — Croiser deux tables\n\nQuand deux tables partagent un **descripteur commun**, on peut les **croiser**. Exemple : une table `eleves(nom, classe)` et une table `notes(nom, note)` partagent le descripteur `nom` : on peut ainsi associer chaque élève à sa note.\n\n**a.** Pour croiser une table `villes(ville, pays)` et une table `population(ville, habitants)`, quel est le **descripteur commun** ?\n\n……………………………………………………\n\n## Ce que je retiens\n\nTraiter des données, c'est **rechercher, trier, filtrer et calculer**. On le fait facilement avec un **tableur** ou en **Python** (module `csv`). Lorsque deux tables partagent un **descripteur commun**, on peut les **croiser** pour combiner leurs informations.",
+          "resources": [],
+          "quiz": [
+            {
+              "q": "« Filtrer » des données, c'est :",
+              "options": [
+                "Les ranger dans l'ordre",
+                "Ne garder que celles qui respectent une condition",
+                "Les supprimer toutes"
+              ],
+              "answer": 1,
+              "explain": "Filtrer, c'est sélectionner uniquement les objets qui vérifient une condition."
+            },
+            {
+              "q": "Pour croiser deux tables, il faut :",
+              "options": [
+                "Qu'elles partagent un descripteur commun",
+                "Qu'elles aient le même nombre de lignes",
+                "Qu'elles soient au format image"
+              ],
+              "answer": 0,
+              "explain": "Le croisement s'appuie sur un descripteur commun aux deux tables."
+            },
+            {
+              "q": "Quel module Python permet de lire un fichier CSV ?",
+              "options": [
+                "Le module csv",
+                "Le module image",
+                "Le module html"
+              ],
+              "answer": 0,
+              "explain": "Le module csv (par exemple csv.DictReader) lit les fichiers CSV."
+            },
+            {
+              "q": "« Trier » une table par année croissante, c'est :",
+              "options": [
+                "Ne garder que certaines lignes",
+                "Ranger les objets de la plus petite année à la plus grande",
+                "Calculer une moyenne"
+              ],
+              "answer": 1,
+              "explain": "Trier, c'est ranger les objets dans l'ordre selon un descripteur."
+            }
+          ]
+        },
+        {
+          "slug": "seance-3",
+          "kind": "seance",
+          "num": 3,
+          "title": "Métadonnées, cloud et protection des données",
+          "shortTitle": "Séance 3",
+          "tagline": "Métadonnées, données dans le cloud, empreinte énergétique, open data et RGPD.",
+          "objectifs_md": "",
+          "content_md": "## Activité 1 — Les métadonnées\n\nUne **métadonnée** est une **donnée sur une donnée**. Par exemple, une photo (la donnée) contient aussi des informations cachées (les métadonnées **EXIF**) : date et heure de la prise de vue, modèle d'appareil, et parfois la **position GPS**.\n\n**a.** Sur un ordinateur, on peut voir certaines métadonnées d'une photo dans ses **propriétés**. Cite **deux métadonnées** possibles d'une photo.\n\n……………………………………………………\n\n**b.** Pourquoi la métadonnée de **position GPS** d'une photo peut-elle poser un **problème de vie privée** si on la publie ?\n\n……………………………………………………\n\n## Activité 2 — Les données dans le cloud\n\nQuand tu sauvegardes une photo « dans le **cloud** », elle n'est pas « dans les nuages » : elle est stockée sur des **serveurs**, dans d'immenses bâtiments appelés **centres de données** (*data centers*). Ces centres fonctionnent **jour et nuit** et **consomment beaucoup d'électricité** (pour les machines et pour les refroidir).\n\n**a.** Où sont réellement stockées les données que l'on met « dans le cloud » ?\n\n……………………………………………………\n\n**b.** Cite une conséquence **écologique** du stockage massif de données.\n\n……………………………………………………\n\n## Activité 3 — Big Data, open data et RGPD\n\n- Le **Big Data** désigne les **quantités gigantesques de données** produites aujourd'hui, trop grandes pour être traitées à la main.\n- L'**open data** (données ouvertes) : des données **publiques mises à disposition de tous** gratuitement (horaires de transports, résultats d'élections, qualité de l'air…).\n- Le **RGPD** (Règlement Général sur la Protection des Données) est la **loi européenne** qui protège les **données personnelles** : une entreprise doit demander ton **consentement**, expliquer à quoi serviront tes données, et tu peux demander à les **consulter ou les effacer**.\n\n**a.** Donne un exemple de données que l'on pourrait trouver en **open data**.\n\n……………………………………………………\n\n**b.** Cite **un droit** que le RGPD te donne sur tes données personnelles.\n\n……………………………………………………\n\n## Ce que je retiens\n\nUne **métadonnée** est une donnée sur une donnée (ex. les infos EXIF d'une photo). Le **cloud** stocke nos données dans des **centres de données** qui consomment beaucoup d'**énergie**. Le **Big Data** désigne les masses de données ; l'**open data** les données publiques ouvertes ; le **RGPD** est la loi européenne qui **protège nos données personnelles**.",
+          "resources": [
+            {
+              "kind": "external",
+              "title": "Le RGPD expliqué (CNIL)",
+              "url": "https://www.cnil.fr/fr/reglement-europeen-protection-donnees"
+            },
+            {
+              "kind": "external",
+              "title": "Plateforme française d'open data — data.gouv.fr",
+              "url": "https://www.data.gouv.fr/"
+            }
+          ],
+          "quiz": [
+            {
+              "q": "Une métadonnée, c'est :",
+              "options": [
+                "Une donnée sur une donnée (ex. la date d'une photo)",
+                "Une très grande donnée",
+                "Une donnée fausse"
+              ],
+              "answer": 0,
+              "explain": "Une métadonnée décrit une autre donnée : par exemple la date ou le lieu d'une photo."
+            },
+            {
+              "q": "Les données stockées « dans le cloud » sont en réalité :",
+              "options": [
+                "Dans les nuages",
+                "Sur des serveurs, dans des centres de données",
+                "Uniquement sur ton téléphone"
+              ],
+              "answer": 1,
+              "explain": "Le cloud, ce sont des serveurs situés dans des centres de données bien réels."
+            },
+            {
+              "q": "Le RGPD sert à :",
+              "options": [
+                "Protéger les données personnelles en Europe",
+                "Accélérer internet",
+                "Créer des réseaux sociaux"
+              ],
+              "answer": 0,
+              "explain": "Le RGPD est la loi européenne de protection des données personnelles."
+            },
+            {
+              "q": "L'open data désigne :",
+              "options": [
+                "Des données personnelles secrètes",
+                "Des données publiques mises gratuitement à disposition de tous",
+                "Des données effacées"
+              ],
+              "answer": 1,
+              "explain": "L'open data, ce sont des données publiques ouvertes et réutilisables librement."
+            }
+          ]
         }
       ]
     },
