@@ -1,0 +1,23 @@
+{
+  "name": "lmtechno",
+  "version": "1.0.0",
+  "description": "Site des cours de Technologie et SNT — M. Eddy Bachaalany, Lycée Montaigne Beit Chabab",
+  "author": "Eddy Bachaalany",
+  "license": "MIT",
+  "type": "commonjs",
+  "scripts": {
+    "build": "node src/build.js",
+    "serve": "node src/serve.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ebechalani/techno.git"
+  },
+  "homepage": "https://ebechalani.github.io/techno/",
+  "dependencies": {
+    "marked": "^18.0.6"
+  },
+  "devDependencies": {
+    "cheerio": "^1.2.0"
+  }
+}
