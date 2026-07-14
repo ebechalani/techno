@@ -658,12 +658,54 @@
           "slug": "seance-1",
           "kind": "seance",
           "num": 1,
-          "title": "Séance 1: réseau du collège",
+          "title": "Séance 1 : Le réseau du collège",
           "shortTitle": "Séance 1",
-          "tagline": "",
-          "content_md": "![](assets/img/4eme__sequence-1-le-reseau-informatique__seance-1-reseau-du-college/01.png)\n\n![](assets/img/4eme__sequence-1-le-reseau-informatique__seance-1-reseau-du-college/02.png)",
+          "tagline": "Découvrir les équipements du réseau informatique de l'établissement.",
+          "objectifs_md": "",
+          "content_md": "## Observer le réseau de l'établissement\n\nLe schéma ci-dessous représente le **réseau informatique** du lycée. Observe-le et repère les différents équipements et les salles reliées.\n\n![Réseau informatique du collège](assets/img/4eme__sequence-1-le-reseau-informatique__seance-1-reseau-du-college/01.png)\n\n## Les équipements du réseau\n\n- **① Le routeur** relie le réseau de l'établissement à **Internet**.\n- **② Le commutateur (switch)** est le point central : il relie entre eux tous les appareils du réseau local.\n- **③ Le photocopieur-scanner** partagé.\n- **④ Le serveur pédagogique** stocke les fichiers et gère les comptes des utilisateurs.\n- **⑤ Le point d'accès Wifi** connecte les appareils sans fil (ordinateurs portables, tablettes).\n- **⑥ et ⑦ Les imprimantes** partagées.\n\nLe réseau relie notamment : la **salle des professeurs** (4 ordinateurs fixes), la **salle de technologie** (15 ordinateurs fixes), une **salle de classe** (25 ordinateurs portables), des **tablettes** et le **CDI** (8 ordinateurs fixes).\n\n## Activité\n\n**a.** Quel équipement relie le réseau du collège à Internet ?\n\n……………………………………………………\n\n**b.** Quel équipement relie entre eux tous les appareils du réseau local ?\n\n……………………………………………………\n\n**c.** À quoi sert le serveur pédagogique ?\n\n……………………………………………………\n\n## Ce que je retiens\n\nUn **réseau informatique** relie des équipements pour qu'ils **échangent des données** et **partagent des ressources** (fichiers, imprimantes, connexion Internet). Le **commutateur (switch)** relie les appareils d'un même réseau local ; le **routeur** relie ce réseau à **Internet** ; le **serveur** stocke les fichiers et gère les comptes.",
           "resources": [],
-          "srcUrl": "https://sites.google.com/view/lmtechno25/4ème/séquence-1-le-réseau-informatique/séance-1-réseau-du-collège"
+          "quiz": [
+            {
+              "q": "Quel équipement relie le réseau du collège à Internet ?",
+              "options": [
+                "Le routeur",
+                "Le photocopieur",
+                "La tablette"
+              ],
+              "answer": 0,
+              "explain": "Le routeur fait le lien entre le réseau local et Internet."
+            },
+            {
+              "q": "À quoi sert le commutateur (switch) ?",
+              "options": [
+                "À imprimer",
+                "À relier entre eux les appareils d'un même réseau local",
+                "À se connecter à Internet"
+              ],
+              "answer": 1,
+              "explain": "Le switch est le point central qui relie les appareils du réseau local."
+            },
+            {
+              "q": "Que fait le serveur pédagogique ?",
+              "options": [
+                "Il stocke les fichiers et gère les comptes des utilisateurs",
+                "Il fournit le Wifi",
+                "Il photocopie les documents"
+              ],
+              "answer": 0,
+              "explain": "Le serveur stocke les fichiers et gère l'authentification des comptes."
+            },
+            {
+              "q": "À quoi sert un réseau informatique ?",
+              "options": [
+                "À échanger des données et partager des ressources",
+                "À décorer la salle",
+                "À produire de l'électricité"
+              ],
+              "answer": 0,
+              "explain": "Un réseau relie les équipements pour échanger des données et partager fichiers, imprimantes et connexion."
+            }
+          ]
         },
         {
           "slug": "seance-2",

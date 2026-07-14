@@ -180,5 +180,99 @@
     "sequence-3-vivre-dans-une-boite": {
       "competences_md": "*Programme de Technologie du cycle 4 (2024)*\n\n- **T1.2** Décrire les interactions entre un objet technique, son environnement et les utilisateurs.\n- **T3.1** Imaginer, concevoir et réaliser une ou des solutions en réponse à un besoin."
     }
+  },
+  "replacePages": {
+    "sequence-2-eclairage-automatique/synthese-capteur-actionneur-interface": {
+      "title": "Synthèse : capteur, actionneur, interface",
+      "content_md": "## Structurer les connaissances — Capteur, actionneur, interface\n\nPour programmer un objet connecté, on utilise un système technique qui comporte des **capteurs**, des **actionneurs** et une **interface**.\n\n- Un **capteur** réalise l'**acquisition** d'une **grandeur physique** (température, luminosité, présence, distance…) et la transforme en **signal électrique**.\n- Un **actionneur** convertit l'**énergie** qu'il reçoit pour **réaliser une action**.\n- L'**interface programmable** traite les informations reçues des capteurs grâce à un **programme**, puis envoie des **ordres** pour piloter les actionneurs.\n\nPour que l'interface traite les données et envoie des ordres, il faut d'abord la **programmer**.\n\n![Capteur, actionneur, interface](assets/img/5eme__sequence-2-eclairage-automatique__seance-3-comment-est-constitue-un-systeme-automatique__synthese-capteur-actionneur-interface/01.jpg)\n\n![Exemple de programmation](assets/img/5eme__sequence-2-eclairage-automatique__seance-3-comment-est-constitue-un-systeme-automatique__synthese-capteur-actionneur-interface/02.jpg)\n\n## Ce que je retiens\n\nUn **capteur** acquiert une grandeur physique. Un **actionneur** réalise une action à partir de l'énergie qu'il reçoit. Une **interface** établit la **communication** entre tous les composants : elle reçoit les informations des capteurs (ou de l'utilisateur), effectue des **traitements** et envoie des **ordres** aux actionneurs.",
+      "quiz": [
+        {
+          "q": "Que fait un capteur ?",
+          "options": [
+            "Il réalise une action",
+            "Il acquiert une grandeur physique et la transforme en signal électrique",
+            "Il fournit l'énergie"
+          ],
+          "answer": 1,
+          "explain": "Un capteur mesure une grandeur physique (température, lumière…) et la transforme en signal électrique."
+        },
+        {
+          "q": "Que fait un actionneur ?",
+          "options": [
+            "Il mesure la température",
+            "Il réalise une action à partir de l'énergie qu'il reçoit",
+            "Il programme l'interface"
+          ],
+          "answer": 1,
+          "explain": "L'actionneur convertit l'énergie reçue pour réaliser une action (moteur, lampe, buzzer…)."
+        },
+        {
+          "q": "Quel est le rôle de l'interface programmable ?",
+          "options": [
+            "Traiter les informations des capteurs et envoyer des ordres aux actionneurs",
+            "Produire de la lumière",
+            "Mesurer une distance"
+          ],
+          "answer": 0,
+          "explain": "L'interface traite les informations reçues (grâce à son programme) et commande les actionneurs."
+        },
+        {
+          "q": "Pour que l'interface pilote les actionneurs, il faut :",
+          "options": [
+            "La peindre",
+            "La programmer",
+            "La débrancher"
+          ],
+          "answer": 1,
+          "explain": "Il faut programmer l'interface pour qu'elle envoie les bons ordres selon les informations des capteurs."
+        }
+      ]
+    },
+    "sequence-2-eclairage-automatique/synthese-systemes-embarques": {
+      "title": "Synthèse : les systèmes embarqués",
+      "content_md": "## Structurer les connaissances — Les systèmes embarqués\n\nUn **système embarqué** est un système **électronique et informatique autonome**, capable de **réagir souvent en temps réel** et de **réaliser des tâches précises**.\n\n**Exemples :** aspirateur robot, robot mBot, voiture autonome.\n\nLe système embarqué du robot **mBot** comprend des **capteurs**, des **actionneurs**, une **interface** et un **programme stocké** dans sa mémoire. Il assure un fonctionnement **autonome** qui réagit avec son environnement.\n\n![Exemples de systèmes embarqués](assets/img/5eme__sequence-2-eclairage-automatique__seance-3-comment-est-constitue-un-systeme-automatique__synthese-systemes-embarques/01.jpg)\n\n![Schéma du système embarqué du mBot](assets/img/5eme__sequence-2-eclairage-automatique__seance-3-comment-est-constitue-un-systeme-automatique__synthese-systemes-embarques/02.jpg)\n\nSur le schéma : les **capteurs** transmettent des **informations** à l'**interface** ; le **système informatique** les traite ; puis il envoie des **ordres** aux **actionneurs**, qui agissent sur l'**environnement**. Pour que le mBot soit autonome et évite les obstacles en temps réel, il utilise son **capteur à ultrasons** et son **programme téléchargé**.\n\n## Ce que je retiens\n\nUn **système embarqué** est autonome : il possède ses capteurs, ses actionneurs, une interface et un programme en mémoire, et réagit **en temps réel** avec son environnement pour réaliser une tâche précise.",
+      "quiz": [
+        {
+          "q": "Qu'est-ce qu'un système embarqué ?",
+          "options": [
+            "Un site internet",
+            "Un système électronique et informatique autonome réalisant une tâche précise",
+            "Un simple câble"
+          ],
+          "answer": 1,
+          "explain": "Un système embarqué est autonome, électronique et informatique, et réalise une tâche précise, souvent en temps réel."
+        },
+        {
+          "q": "Lequel est un exemple de système embarqué ?",
+          "options": [
+            "Un aspirateur robot",
+            "Une chaise",
+            "Un crayon"
+          ],
+          "answer": 0,
+          "explain": "L'aspirateur robot embarque capteurs, actionneurs et programme : c'est un système embarqué."
+        },
+        {
+          "q": "Que contient le système embarqué du mBot ?",
+          "options": [
+            "Seulement un moteur",
+            "Des capteurs, des actionneurs, une interface et un programme en mémoire",
+            "Rien de particulier"
+          ],
+          "answer": 1,
+          "explain": "Le mBot embarque capteurs, actionneurs, interface et programme stocké : il fonctionne de façon autonome."
+        },
+        {
+          "q": "Grâce à quel capteur le mBot évite-t-il les obstacles ?",
+          "options": [
+            "Un capteur à ultrasons",
+            "Un thermomètre",
+            "Un micro"
+          ],
+          "answer": 0,
+          "explain": "Le capteur à ultrasons mesure la distance aux obstacles pour que le robot les évite."
+        }
+      ]
+    }
   }
 }
