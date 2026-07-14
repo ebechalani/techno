@@ -376,6 +376,101 @@ function dedupeRes(arr) {
   });
 }
 
+/* ================= Overlay de contenu rédigé à la main =================
+ * content/authored/<sectionId>.json permet, de façon DURABLE (réappliqué à
+ * chaque régénération), de : retirer des séquences/pages, remplacer des
+ * pages, remplacer/ajouter des séquences, réordonner. Sert notamment à
+ * retirer des données personnelles et à ajouter des séquences neuves.
+ */
+const AUTHORED = path.join(OUT, "authored");
+
+function normalizePage(p) {
+  return {
+    slug: p.slug,
+    kind: p.kind || "seance",
+    num: p.num ?? null,
+    title: p.title || "",
+    shortTitle: p.shortTitle || (p.num != null ? `Séance ${p.num}` : p.title || ""),
+    tagline: p.tagline || "",
+    objectifs_md: p.objectifs_md || "",
+    content_md: p.content_md || "",
+    resources: p.resources || [],
+    quiz: p.quiz || undefined,
+  };
+}
+
+function normalizeSequence(s) {
+  return {
+    slug: s.slug,
+    eyebrow: s.eyebrow || "Séquence",
+    year: s.year || "",
+    title: s.title || "",
+    shortTitle: s.shortTitle || s.title || "",
+    tagline: s.tagline || "",
+    objectifs_md: s.objectifs_md || "",
+    competences_md: s.competences_md || "",
+    intro_md: s.intro_md || "",
+    resources: s.resources || [],
+    pages: (s.pages || []).map(normalizePage),
+  };
+}
+
+function applyOverlay(sectionId, data) {
+  const f = path.join(AUTHORED, `${sectionId}.json`);
+  if (!fs.existsSync(f)) return;
+  const ov = JSON.parse(fs.readFileSync(f, "utf8"));
+
+  if (ov.tagline) data.tagline = ov.tagline;
+  if (ov.intro_md != null) data.intro_md = ov.intro_md;
+
+  // Suppression de séquences entières
+  if (ov.dropSequences) data.sequences = data.sequences.filter((s) => !ov.dropSequences.includes(s.slug));
+
+  // Suppression de pages ("seqSlug/pageSlug")
+  if (ov.dropPages) {
+    for (const key of ov.dropPages) {
+      const [sq, pg] = key.split("/");
+      const seq = data.sequences.find((s) => s.slug === sq);
+      if (seq) seq.pages = seq.pages.filter((p) => p.slug !== pg);
+    }
+  }
+
+  // Remplacement / fusion de pages ("seqSlug/pageSlug")
+  if (ov.replacePages) {
+    for (const [key, patch] of Object.entries(ov.replacePages)) {
+      const [sq, pg] = key.split("/");
+      const seq = data.sequences.find((s) => s.slug === sq);
+      if (!seq) continue;
+      const i = seq.pages.findIndex((p) => p.slug === pg);
+      if (i >= 0) seq.pages[i] = normalizePage({ ...seq.pages[i], ...patch });
+    }
+  }
+
+  // Remplacement complet de séquences (par slug)
+  if (ov.replaceSequences) {
+    for (const [slug, seqDef] of Object.entries(ov.replaceSequences)) {
+      const i = data.sequences.findIndex((s) => s.slug === slug);
+      const norm = normalizeSequence({ slug, ...seqDef });
+      if (i >= 0) data.sequences[i] = norm;
+      else data.sequences.push(norm);
+    }
+  }
+
+  // Ajout de nouvelles séquences
+  if (ov.addSequences) {
+    for (const seqDef of ov.addSequences) data.sequences.push(normalizeSequence(seqDef));
+  }
+
+  // Réordonnancement final (slugs dans l'ordre voulu ; le reste conserve son ordre)
+  if (ov.sequenceOrder) {
+    const order = ov.sequenceOrder;
+    data.sequences.sort((a, b) => {
+      const ia = order.indexOf(a.slug), ib = order.indexOf(b.slug);
+      return (ia < 0 ? 999 : ia) - (ib < 0 ? 999 : ib);
+    });
+  }
+}
+
 /* ================= Chargement des pages analysées ================= */
 
 function loadParsed(p) {
@@ -460,6 +555,8 @@ for (const sec of SECTIONS) {
     }
     data.sequences.push(seq);
   }
+
+  applyOverlay(sec.id, data);
 
   fs.writeFileSync(path.join(OUT, "sections", sec.file), JSON.stringify(data, null, 2), "utf8");
 }

@@ -221,31 +221,45 @@
       "year": "",
       "title": "ASSR 2 · Pix",
       "shortTitle": "ASSR 2 · Pix",
-      "tagline": "Préparation aux certifications ASSR 2 et Pix.",
-      "intro_md": "",
+      "tagline": "Préparer l'attestation de sécurité routière de second niveau et la certification Pix.",
+      "objectifs_md": "",
+      "competences_md": "",
+      "intro_md": "En classe de 3ème, deux certifications se préparent : l'**ASSR 2** (sécurité routière, indispensable pour s'inscrire au permis de conduire) et **Pix** (certification des compétences numériques).",
       "resources": [],
       "pages": [
         {
-          "slug": "3eme-a",
-          "kind": "annexe",
+          "slug": "assr2",
+          "kind": "evaluation",
           "num": null,
-          "title": "3ème A",
-          "shortTitle": "3ème A",
-          "tagline": "",
-          "content_md": "**ASSR2**\n\nLien vers l'épreuve:\n\n**Candidat** **Code d'accès**\n\n**PIX**\n\n[**https://pix.fr/\\**](https://pix.fr/)\n\n**Numéro de la session:**\n\n**Code de la session:**\n\n**Nom de naissance** **Prénom** **Date de naissance (format : jj/mm/aaaa)**",
-          "resources": [],
-          "srcUrl": "https://sites.google.com/view/lmtechno25/3ème/assr2-pix/3ème-a"
+          "title": "ASSR 2 — sécurité routière",
+          "shortTitle": "ASSR 2",
+          "tagline": "L'attestation de second niveau, nécessaire pour le permis de conduire.",
+          "objectifs_md": "",
+          "content_md": "## Pourquoi l'ASSR 2 est importante\n\nL'**ASSR 2** est obligatoire pour pouvoir s'inscrire à l'épreuve du **permis de conduire** (et pour la conduite accompagnée). Comme l'ASSR 1, elle se passe **en ligne** à partir de courtes **vidéos** suivies de questions.\n\n> 🔑 **Codes d'accès :** ils sont personnels et remis **en classe le jour de l'épreuve**. Ils ne figurent pas sur ce site.\n\n## Ce qu'il faut réviser\n\n- **Le cyclomoteur et le scooter :** équipement (casque homologué attaché, gants), papiers obligatoires, où circuler.\n- **En tant que passager et futur conducteur :** alcool, vitesse, fatigue, distracteurs (téléphone), distances de sécurité et de freinage.\n- **Les usagers vulnérables :** piétons, cyclistes, deux-roues — anticiper et partager la route.\n- **Les premiers secours :** protéger, alerter (numéros d'urgence **112 / 15 / 18 / 17**), ne pas déplacer un blessé.\n- **Les panneaux et priorités** dans des situations plus complexes (intersections, giratoires).\n\n## S'entraîner en ligne\n\n::embed[Entraînement officiel ASSR](https://www.education-securite-routiere.fr/)",
+          "resources": [
+            {
+              "kind": "external",
+              "title": "Sécurité routière — entraînement ASSR",
+              "url": "https://www.education-securite-routiere.fr/"
+            }
+          ]
         },
         {
-          "slug": "3eme-b",
-          "kind": "annexe",
+          "slug": "pix",
+          "kind": "evaluation",
           "num": null,
-          "title": "3ème B",
-          "shortTitle": "3ème B",
-          "tagline": "",
-          "content_md": "**ASSR2**\n\nLien vers l'épreuve: [https://e-assr.education-securite-routiere.fr/eleve/acces/89582](https://e-assr.education-securite-routiere.fr/eleve/acces/89582)\n\n**Candidat** **Code d'accès**\n\nABDALLAH Maximilian VMvdK62\n\nABOU ABDALLAH Rhéa XSndK63\n\nABOU EL NASR Julia YjXdK64\n\nACHKAR M Alfred Yn7dK65\n\nACHKAR (EL) Onella VncdK66\n\nAWAD karl 7x4dK67\n\nAZAR Olivier yr5dK68\n\nFAKHOURY Georgio Kd1dK6d\n\nGHOUSSOUB Cynthia W97dK6f\n\nHADDAD Alex KYAdK610\n\nKAREH (EL) Lea rAXdK613\n\nMAALOUF Paul emRdK615\n\nMANSOUR Andréa PvwdK616\n\nMBARAK Camille GcSdK617\n\nMOKHBAT Karen 9QMdK618\n\nNAMMOUR Sienna vkMdK61c\n\nOJAIL (AL) Rosa Maria H92dK61d\n\nSELFANI (EL) Samir xcXdK61e\n\n**PIX**\n\n[**https://pix.fr/\\**](https://pix.fr/)\n\n**Numéro de la session:** **170353**\n\n**Code de la session:** **TYVK33**\n\n**Nom de naissance** **Prénom** **Date de naissance (format : jj/mm/aaaa)**\n\nABDALLAH Maximilian 16/05/2007\n\nABOU ABDALLAH Rhéa 01/10/2007\n\nABOU EL NASR Julia 30/10/2007\n\nACHKAR (EL) Alfred 27/04/2007\n\nACHKAR (EL) Onella 02/08/2007\n\nAWAD Karl 02/07/2007\n\nAZAR Olivier 10/09/2007\n\nFAKHOURY Georgio 01/07/2007\n\nGHOUSSOUB Cynthia 19/12/2007\n\nHADDAD Alex 12/07/2007\n\nKAREH (EL) Léa 26/09/2006\n\nMAALOUF Paul 10/08/2007\n\nMANSOUR Andréa 14/10/2007\n\nMBARAK Camille 23/06/2007\n\nMOKHBAT Karen 03/01/2007\n\nNAMMOUR Sienna 30/06/2007\n\nOJAIL (AL) Rosa Maria 27/03/2007\n\nSELFANI (EL) Samir 04/01/2007",
-          "resources": [],
-          "srcUrl": "https://sites.google.com/view/lmtechno25/3ème/assr2-pix/3ème-b"
+          "title": "Pix — compétences numériques",
+          "shortTitle": "Pix",
+          "tagline": "Certifier ses compétences numériques en fin de cycle 4.",
+          "objectifs_md": "",
+          "content_md": "## Qu'est-ce que Pix ?\n\n**Pix** est le service public en ligne d'évaluation et de **certification des compétences numériques**. Chaque élève progresse à son rythme sur des tests interactifs, puis passe une **certification** en 3ème.\n\n> 🔑 **Identifiants et codes de session :** ils sont personnels et communiqués **en classe**. Ils ne sont pas publiés ici.\n\n## Les 5 grands domaines évalués\n\n1. **Informations et données** — mener une recherche, gérer et traiter des données.\n2. **Communication et collaboration** — interagir, partager, collaborer, gérer son identité numérique.\n3. **Création de contenu** — documents, images, notions de programmation, droit d'auteur.\n4. **Protection et sécurité** — protéger ses données, son matériel, sa santé et l'environnement.\n5. **Environnement numérique** — matériel, logiciels, résolution de problèmes techniques.\n\n## S'entraîner\n\nConnecte-toi à ton parcours pour t'entraîner avant la certification.\n\n::embed[Accéder à Pix](https://pix.fr/)",
+          "resources": [
+            {
+              "kind": "external",
+              "title": "Pix — compétences numériques",
+              "url": "https://pix.fr/"
+            }
+          ]
         }
       ]
     },
