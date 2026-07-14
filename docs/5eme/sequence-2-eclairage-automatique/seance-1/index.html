@@ -138,6 +138,13 @@
     </div>
     
     
+<div class="student-bar">
+  <span class="sb-info">💾 Tes réponses sont enregistrées automatiquement sur cet appareil.</span>
+  <span class="sb-actions">
+    <button class="btn btn-ghost btn-sm" id="print-answers" type="button">🖨 Imprimer / PDF</button>
+    <button class="btn btn-ghost btn-sm" id="clear-answers" type="button">🗑 Tout effacer</button>
+  </span>
+</div>
     <div class="prose">
       <figure class="embed embed-video">
   <div class="embed-bar">
@@ -157,6 +164,23 @@
 
     </div>
     
+<section class="quiz" id="quiz">
+  <h2>🧠 Teste tes connaissances</h2>
+  <p class="quiz-hint">Réponds aux questions puis clique sur « Vérifier » — la correction s'affiche aussitôt.</p>
+  
+    <div class="quiz-q" data-ok="0" data-explain="La séance porte sur l'automatisation de l'éclairage public et une solution d'éclairage public intelligent.">
+      <p class="qq-text">1. D'après cette séance, quel est le thème abordé dans la vidéo ?</p>
+      <div class="qq-opts">
+        <label class="qq-opt"><input type="radio" name="q0" value="0"><span>L'éclairage public automatique et intelligent</span></label>
+        <label class="qq-opt"><input type="radio" name="q0" value="1"><span>Le tri des déchets ménagers</span></label>
+        <label class="qq-opt"><input type="radio" name="q0" value="2"><span>La production d'eau potable</span></label>
+        <label class="qq-opt"><input type="radio" name="q0" value="3"><span>Les transports en commun</span></label>
+      </div>
+      <button class="btn btn-ghost qq-check" type="button">Vérifier ma réponse</button>
+      <div class="qq-feedback" aria-live="polite"></div>
+    </div>
+  <div class="quiz-score" aria-live="polite"></div>
+</section>
     
     <nav class="pager">
       

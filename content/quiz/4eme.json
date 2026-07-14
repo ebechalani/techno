@@ -299,5 +299,373 @@
       "answer": 2,
       "explain": "Le bon usage attendu est de demander une explication ou un plan à l'IA, puis de le relire et de l'adapter soi-même."
     }
+  ],
+  "sequence-1-reseau-informatique/seance-2": [
+    {
+      "q": "Où est placée la sonde de l'alarme de piscine décrite dans la situation ?",
+      "options": [
+        "Immergée dans l'eau de la piscine",
+        "Fixée sur le toit de la maison",
+        "Installée dans la sirène"
+      ],
+      "answer": 0,
+      "explain": "Le texte précise qu'ils ont installé une alarme avec une sonde immergée dans l'eau."
+    },
+    {
+      "q": "Quel comportement de l'alarme pose problème à la famille ?",
+      "options": [
+        "Elle ne sonne jamais",
+        "Elle se déclenche de manière intempestive très régulièrement",
+        "Elle sonne seulement la nuit"
+      ],
+      "answer": 1,
+      "explain": "Le texte indique que l'alarme se déclenche de manière intempestive très régulièrement."
+    },
+    {
+      "q": "Selon le texte, quelle cause peut déclencher l'alarme sans réel danger ?",
+      "options": [
+        "La chute d'une feuille",
+        "L'arrivée du facteur",
+        "Un appel téléphonique"
+      ],
+      "answer": 0,
+      "explain": "Le texte cite le vent fort, la mise en route de la pompe de filtration et la chute de feuille comme causes de déclenchements intempestifs."
+    },
+    {
+      "q": "Que souhaite obtenir Etienne face à ce problème ?",
+      "options": [
+        "Retirer complètement l'alarme",
+        "Vider la piscine chaque soir",
+        "Un système pour vérifier facilement et rapidement la présence d'un réel danger"
+      ],
+      "answer": 2,
+      "explain": "Le texte dit qu'il souhaite un système pour vérifier facilement et rapidement la présence d'un réel danger pour ses enfants."
+    }
+  ],
+  "sequence-2-portail-automatise/seance-0": [
+    {
+      "q": "Pourquoi M. Durand ne peut-il parfois pas ranger sa voiture dans son garage le soir ?",
+      "options": [
+        "Parce que certaines voitures utilisent son allée comme lieu de stationnement",
+        "Parce que son garage est trop petit pour sa voiture",
+        "Parce que son portail est en panne"
+      ],
+      "answer": 0,
+      "explain": "Le texte précise que certaines voitures utilisent son allée comme lieu de stationnement."
+    },
+    {
+      "q": "À quoi sert l'allée de la maison de M. Durand ?",
+      "options": [
+        "À accéder à son garage",
+        "À stationner les voitures des voisins",
+        "À entreposer du matériel de jardin"
+      ],
+      "answer": 0,
+      "explain": "Le texte indique que l'allée permet d'accéder à son garage."
+    }
+  ],
+  "sequence-2-portail-automatise/seance-1": [
+    {
+      "q": "Quel est le thème principal de la séance 1 ?",
+      "options": [
+        "L'étude du besoin",
+        "Le choix des matériaux",
+        "Le montage du portail"
+      ],
+      "answer": 0,
+      "explain": "La séance 1 s'intitule « Étude du besoin »."
+    },
+    {
+      "q": "Que demande l'activité 2 (N3/N4) de cette séance ?",
+      "options": [
+        "Étudier le besoin de M. Durand",
+        "Fabriquer le portail automatisé",
+        "Calculer le prix du portail"
+      ],
+      "answer": 0,
+      "explain": "L'activité 2 est intitulée « Étudier le besoin » à partir de la situation de M. Durand."
+    }
+  ],
+  "sequence-2-portail-automatise/seance-2": [
+    {
+      "q": "Sur quelle notion porte la séance 2 ?",
+      "options": [
+        "Les contraintes",
+        "Le besoin",
+        "Le budget du projet"
+      ],
+      "answer": 0,
+      "explain": "La séance 2 s'intitule « Les contraintes »."
+    },
+    {
+      "q": "Que demande l'activité 2 (N3/N4) de la séance 2 ?",
+      "options": [
+        "Énoncer les contraintes du portail automatisé de M. Durand",
+        "Dessiner le plan du garage",
+        "Choisir la couleur du portail"
+      ],
+      "answer": 0,
+      "explain": "L'activité 2 consiste à « Énoncer les contraintes du portail automatisé de M. Durand »."
+    }
+  ],
+  "sequence-3-objets-connectes/seance-1": [
+    {
+      "q": "Selon la mise en situation, comment va évoluer le nombre d'objets connectés à Internet dans les prochaines années ?",
+      "options": [
+        "Il va rester stable",
+        "Il va augmenter de façon exponentielle",
+        "Il va diminuer progressivement"
+      ],
+      "answer": 1,
+      "explain": "Le texte indique que les prédictions des experts démontrent que le nombre d'objets connectés à Internet va augmenter de façon exponentielle les prochaines années."
+    },
+    {
+      "q": "Quel est le questionnement (problématique) de la séquence indiqué pour la diapositive 1 ?",
+      "options": [
+        "Comment fabriquer un smartphone ?",
+        "Comment piloter le robot « mbot » avec son smartphone ?",
+        "Comment réparer un robot cassé ?"
+      ],
+      "answer": 1,
+      "explain": "La diapositive 1 doit rappeler le questionnement de la séquence : comment piloter le robot « mbot » avec son smartphone ?"
+    },
+    {
+      "q": "D'après le plan du diaporama, quel principe la diapositive 3 doit-elle expliquer à propos du Bluetooth ?",
+      "options": [
+        "Le principe de l'appairage",
+        "Le principe du chargement de la batterie",
+        "Le principe du GPS"
+      ],
+      "answer": 0,
+      "explain": "La diapositive 3 (« Qu'est-ce qu'une connexion Bluetooth ? ») demande de réaliser un schéma expliquant le principe de l'appairage."
+    },
+    {
+      "q": "Sous quelle forme faut-il nommer le travail de chaque équipe enregistré sur le serveur ?",
+      "options": [
+        "« robot_final »",
+        "« OT_classe_groupe_équipeX »",
+        "« diaporama_2024 »"
+      ],
+      "answer": 1,
+      "explain": "Le travail doit être sauvegardé sur le serveur sous la forme « OT_classe_groupe_équipeX »."
+    }
+  ],
+  "sequence-3-objets-connectes/seance-2": [
+    {
+      "q": "D'après la mise en situation, qu'est-ce qu'un objet connecté ?",
+      "options": [
+        "Un objet relié uniquement par un câble à un ordinateur",
+        "Un objet électronique connecté sans fil qui partage des données avec d'autres appareils",
+        "Un objet mécanique sans aucune électronique"
+      ],
+      "answer": 1,
+      "explain": "Le cours définit l'objet connecté comme un objet électronique connecté sans fil qui partage des données avec d'autres appareils électroniques."
+    },
+    {
+      "q": "Quel logiciel est utilisé pour réaliser l'application Android qui commande le Mbot ?",
+      "options": [
+        "App Inventor (code.appinventor.mit.edu)",
+        "Microsoft Word",
+        "Scratch Junior"
+      ],
+      "answer": 0,
+      "explain": "L'application se réalise en se connectant à App Inventor sur code.appinventor.mit.edu."
+    },
+    {
+      "q": "Parmi ces fonctions, laquelle l'application doit-elle permettre selon le travail à effectuer ?",
+      "options": [
+        "Recharger le robot à distance",
+        "Piloter le robot selon 8 directions",
+        "Prendre des photos avec le robot"
+      ],
+      "answer": 1,
+      "explain": "L'application doit permettre de se connecter au robot en Bluetooth, de le piloter selon 8 directions, de l'arrêter et de quitter le mode connecté."
+    },
+    {
+      "q": "Dans App Inventor, quelle partie faut-il utiliser pour programmer les touches de l'interface ?",
+      "options": [
+        "La partie « design »",
+        "La partie « blocs »",
+        "La partie « impression »"
+      ],
+      "answer": 1,
+      "explain": "Pour réaliser la programmation des touches de l'interface, il faut utiliser la partie « blocs »."
+    },
+    {
+      "q": "Comment installe-t-on l'application générée sur le smartphone pour la tester ?",
+      "options": [
+        "En scannant un QR code avec un lecteur ou l'application « MIT AI2 Companion »",
+        "En l'envoyant par courrier électronique",
+        "En la copiant sur une clé USB"
+      ],
+      "answer": 0,
+      "explain": "AppInventor génère un QR code que l'on scanne avec un lecteur de QR code ou l'application « MIT AI2 Companion » pour installer l'application."
+    }
+  ],
+  "sequence-4-microbit/seance-1": [
+    {
+      "q": "Par qui et en quelle année la carte micro:bit a-t-elle été conçue ?",
+      "options": [
+        "Par Apple en 2007",
+        "Par la BBC en 2015",
+        "Par Arduino en 2005",
+        "Par la NASA en 2015"
+      ],
+      "answer": 1,
+      "explain": "Le cours indique que la carte à microcontrôleur a été conçue en 2015 par la BBC : le « micro:bit »."
+    },
+    {
+      "q": "Quelles sont approximativement les dimensions de la carte micro:bit ?",
+      "options": [
+        "5 cm sur 4",
+        "20 cm sur 15",
+        "1 cm sur 1",
+        "10 cm sur 8"
+      ],
+      "answer": 0,
+      "explain": "Le texte précise que cette carte électronique mesure seulement 5 cm sur 4."
+    },
+    {
+      "q": "Pourquoi le micro:bit peut-il être considéré comme un micro-ordinateur ?",
+      "options": [
+        "Parce qu'il est très cher",
+        "Parce qu'il comporte suffisamment de composants",
+        "Parce qu'il est aussi grand qu'un ordinateur",
+        "Parce qu'il fonctionne sans électricité"
+      ],
+      "answer": 1,
+      "explain": "Le cours dit qu'il comporte suffisamment de composants pour être considéré comme un micro-ordinateur et permettre de s'initier à la programmation."
+    },
+    {
+      "q": "D'après le texte, quel est un exemple d'ordinateur si petit qu'il tient dans la poche ?",
+      "options": [
+        "Le smartphone",
+        "L'imprimante",
+        "Le vidéoprojecteur",
+        "Le serveur"
+      ],
+      "answer": 0,
+      "explain": "Le texte cite les smartphones comme des ordinateurs si petits qu'ils tiennent dans la poche."
+    }
+  ],
+  "sequence-5-feu-tricolore-arduino/seance-1": [
+    {
+      "q": "Sur la LED (DEL), à quoi correspond le méplat que l'on voit en la regardant par-dessus ?",
+      "options": [
+        "À la patte positive (+)",
+        "À la patte négative (-)",
+        "À la résistance"
+      ],
+      "answer": 1,
+      "explain": "Le méplat de la LED repère la petite patte, qui correspond au négatif (-)."
+    },
+    {
+      "q": "Quel est le rôle de la résistance électrique placée sur le montage de la LED ?",
+      "options": [
+        "Adapter le courant pour protéger la LED",
+        "Augmenter la luminosité de la LED",
+        "Alimenter la carte Arduino"
+      ],
+      "answer": 0,
+      "explain": "Le cours indique que la résistance va adapter le courant pour protéger la LED."
+    },
+    {
+      "q": "À quoi sert la plaque d'essai ?",
+      "options": [
+        "À stocker le programme du système",
+        "À brancher les composants électroniques pour faire des tests",
+        "À produire l'électricité"
+      ],
+      "answer": 1,
+      "explain": "D'après la synthèse, la plaque d'essai sert à brancher les différents composants électroniques pour faire des tests."
+    },
+    {
+      "q": "Que gère la carte Arduino dans le système ?",
+      "options": [
+        "Uniquement l'affichage à l'écran",
+        "Le programme, l'alimentation et la gestion des entrées et des sorties",
+        "La fabrication de la LED"
+      ],
+      "answer": 1,
+      "explain": "La synthèse précise que l'Arduino gère le programme, l'alimentation et la gestion des entrées et des sorties."
+    }
+  ],
+  "sequence-5-feu-tricolore-arduino/seance-2": [
+    {
+      "q": "Qu'est-ce qu'un organigramme (algorigramme, logigramme) ?",
+      "options": [
+        "Un outil graphique pour analyser et décrire un processus ou une activité",
+        "Un composant électronique de la carte Arduino",
+        "Une source d'alimentation électrique"
+      ],
+      "answer": 0,
+      "explain": "La définition indique que c'est un outil graphique (visuel) pour analyser et décrire un processus ou une activité."
+    },
+    {
+      "q": "Combien de symboles normalisés utilise-t-on dans un organigramme ?",
+      "options": [
+        "Deux symboles",
+        "Trois symboles",
+        "Cinq symboles"
+      ],
+      "answer": 1,
+      "explain": "Le cours précise qu'il y a trois symboles normalisés qui respectent une règle."
+    },
+    {
+      "q": "Que permet de comprendre un organigramme de programmation ?",
+      "options": [
+        "Le prix des composants",
+        "Étape par étape ce qui se passe dans un système automatisé",
+        "La couleur des LED"
+      ],
+      "answer": 1,
+      "explain": "L'organigramme permet de comprendre étape par étape ce qui se passe dans un système automatisé."
+    }
+  ],
+  "sequence-6-serre-autonome/seance-0": [
+    {
+      "q": "Selon le projet, pourquoi le collège choisit-il d'acheter une serre non automatique plutôt qu'une serre déjà complète ?",
+      "options": [
+        "Parce qu'une serre complète est moins solide",
+        "Parce qu'une serre déjà complète ne présente aucun intérêt pédagogique et peut coûter plus cher",
+        "Parce qu'une serre complète ne protège pas du froid",
+        "Parce que les serres complètes dégagent trop de CO2"
+      ],
+      "answer": 1,
+      "explain": "Le texte indique qu'une serre déjà complète ne présente aucun intérêt pédagogique et peut présenter un coût supérieur."
+    },
+    {
+      "q": "D'après le cours, à quoi sert principalement une serre ?",
+      "options": [
+        "À stocker du matériel de jardinage",
+        "À protéger du froid les plantes non rustiques et favoriser la croissance des cultures",
+        "À produire de l'électricité pour le collège",
+        "À recycler l'eau de pluie uniquement"
+      ],
+      "answer": 1,
+      "explain": "Le texte précise qu'une serre est destinée à protéger du froid les plantes non rustiques et à favoriser la croissance des cultures."
+    },
+    {
+      "q": "Parmi les éléments naturels suivants, lequel la serre doit-elle gérer selon le cours ?",
+      "options": [
+        "La gestion du bruit ambiant",
+        "La gestion de la température",
+        "La gestion des insectes pollinisateurs",
+        "La gestion du réseau électrique du collège"
+      ],
+      "answer": 1,
+      "explain": "Le cours liste la gestion de la température parmi les éléments naturels que la serre permet de gérer."
+    },
+    {
+      "q": "Quelle contrainte importante le projet impose-t-il concernant les émissions de la serre ?",
+      "options": [
+        "Aucun dégagement de CO2 ne sera accepté",
+        "Un faible dégagement de CO2 est toléré",
+        "La serre doit produire du CO2 pour les plantes",
+        "Le CO2 doit être stocké dans des bâtonnets"
+      ],
+      "answer": 0,
+      "explain": "Le texte précise qu'aucun dégagement de CO2 ne sera accepté et que la serre doit fonctionner de façon autonome."
+    }
   ]
 }

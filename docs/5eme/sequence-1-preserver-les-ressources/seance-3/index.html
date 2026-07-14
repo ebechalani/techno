@@ -138,6 +138,13 @@
     </div>
     
     
+<div class="student-bar">
+  <span class="sb-info">💾 Tes réponses sont enregistrées automatiquement sur cet appareil.</span>
+  <span class="sb-actions">
+    <button class="btn btn-ghost btn-sm" id="print-answers" type="button">🖨 Imprimer / PDF</button>
+    <button class="btn btn-ghost btn-sm" id="clear-answers" type="button">🗑 Tout effacer</button>
+  </span>
+</div>
     <div class="prose">
       <p><strong>Accéder au logiciel AppInventor:</strong></p>
 <ol>
@@ -182,6 +189,47 @@
 
     </div>
     
+<section class="quiz" id="quiz">
+  <h2>🧠 Teste tes connaissances</h2>
+  <p class="quiz-hint">Réponds aux questions puis clique sur « Vérifier » — la correction s'affiche aussitôt.</p>
+  
+    <div class="quiz-q" data-ok="0" data-explain="La séance demande de se connecter à l'application App Inventor sur code.appinventor.mit.edu.">
+      <p class="qq-text">1. Quel logiciel est utilisé pour créer l'application smartphone dans cette séance ?</p>
+      <div class="qq-opts">
+        <label class="qq-opt"><input type="radio" name="q0" value="0"><span>App Inventor</span></label>
+        <label class="qq-opt"><input type="radio" name="q0" value="1"><span>Photoshop</span></label>
+        <label class="qq-opt"><input type="radio" name="q0" value="2"><span>Scratch</span></label>
+        <label class="qq-opt"><input type="radio" name="q0" value="3"><span>Word</span></label>
+      </div>
+      <button class="btn btn-ghost qq-check" type="button">Vérifier ma réponse</button>
+      <div class="qq-feedback" aria-live="polite"></div>
+    </div>
+
+    <div class="quiz-q" data-ok="0" data-explain="Le cours indique de connecter l'appareil à Micro:bit via Bluetooth (pair your devices).">
+      <p class="qq-text">2. Par quel moyen l'application se connecte-t-elle à la carte Micro:bit ?</p>
+      <div class="qq-opts">
+        <label class="qq-opt"><input type="radio" name="q1" value="0"><span>Par Bluetooth</span></label>
+        <label class="qq-opt"><input type="radio" name="q1" value="1"><span>Par câble HDMI</span></label>
+        <label class="qq-opt"><input type="radio" name="q1" value="2"><span>Par Wi-Fi uniquement</span></label>
+        <label class="qq-opt"><input type="radio" name="q1" value="3"><span>Par port USB obligatoire</span></label>
+      </div>
+      <button class="btn btn-ghost qq-check" type="button">Vérifier ma réponse</button>
+      <div class="qq-feedback" aria-live="polite"></div>
+    </div>
+
+    <div class="quiz-q" data-ok="0" data-explain="Lors de l'appairage, il faut maintenir enfoncés les boutons A, B et Reset jusqu'à ce que toutes les LED s'allument.">
+      <p class="qq-text">3. Lors de l'appairage de la carte Micro:bit, quels boutons faut-il maintenir enfoncés ?</p>
+      <div class="qq-opts">
+        <label class="qq-opt"><input type="radio" name="q2" value="0"><span>Les boutons A, B et Reset</span></label>
+        <label class="qq-opt"><input type="radio" name="q2" value="1"><span>Uniquement le bouton A</span></label>
+        <label class="qq-opt"><input type="radio" name="q2" value="2"><span>Les boutons A et B seulement</span></label>
+        <label class="qq-opt"><input type="radio" name="q2" value="3"><span>Aucun bouton</span></label>
+      </div>
+      <button class="btn btn-ghost qq-check" type="button">Vérifier ma réponse</button>
+      <div class="qq-feedback" aria-live="polite"></div>
+    </div>
+  <div class="quiz-score" aria-live="polite"></div>
+</section>
     <section class="resources"><h2>Liens et ressources</h2><div class="res-grid">
 <a class="res-card res-pdf" href="https://drive.google.com/file/d/1xqNeoUV5KYESFFm8RQ0BHTS5ILlNBuGT/view?usp=drive_link" target="_blank" rel="noopener">
   <span class="res-icon">📄</span>

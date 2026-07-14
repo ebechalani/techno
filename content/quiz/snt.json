@@ -1,0 +1,605 @@
+{
+  "theme-2-internet/tcpip": [
+    {
+      "q": "Lorsqu'un ordinateur A veut envoyer des données à un ordinateur B, quel protocole met d'abord en forme les données à envoyer ?",
+      "options": [
+        "Le protocole TCP",
+        "Le protocole IP",
+        "Le protocole DNS"
+      ],
+      "answer": 0,
+      "explain": "Le cours indique que l'ordinateur A utilise le protocole TCP pour mettre en forme les données à envoyer."
+    },
+    {
+      "q": "Quel est le rôle du protocole IP dans l'envoi des données ?",
+      "options": [
+        "Il encapsule les données TCP pour créer des paquets de données",
+        "Il affiche la page web",
+        "Il gère les accusés de réception"
+      ],
+      "answer": 0,
+      "explain": "Le protocole IP encapsule les données issues du protocole TCP afin de constituer des paquets de données."
+    },
+    {
+      "q": "Comment le protocole TCP s'assure-t-il qu'un paquet est bien arrivé à destination ?",
+      "options": [
+        "Grâce à un accusé de réception envoyé par l'ordinateur B",
+        "En coupant la connexion",
+        "En changeant l'adresse IP"
+      ],
+      "answer": 0,
+      "explain": "Quand B reçoit un paquet, il envoie un accusé de réception à A pour confirmer la bonne réception."
+    },
+    {
+      "q": "Que fait l'ordinateur A s'il ne reçoit pas l'accusé de réception après un temps prédéfini ?",
+      "options": [
+        "Il renvoie le paquet de données vers l'ordinateur B",
+        "Il supprime définitivement les données",
+        "Il change de protocole"
+      ],
+      "answer": 0,
+      "explain": "Si A ne reçoit pas l'accusé de réception, après un temps prédéfini il renverra le paquet de données vers B."
+    }
+  ],
+  "theme-2-internet/fiche-de-revision": [
+    {
+      "q": "Sur quels deux protocoles Internet est-il basé ?",
+      "options": [
+        "TCP et IP",
+        "HTTP et FTP",
+        "DNS et UDP"
+      ],
+      "answer": 0,
+      "explain": "La fiche précise qu'Internet est basé sur 2 protocoles : TCP et IP."
+    },
+    {
+      "q": "Quelle est la principale différence entre le protocole UDP et le protocole TCP ?",
+      "options": [
+        "UDP ne gère pas les accusés de réception",
+        "UDP ne peut pas envoyer d'images",
+        "UDP découpe les données autrement"
+      ],
+      "answer": 0,
+      "explain": "UDP ressemble beaucoup à TCP, seule différence notable : UDP ne gère pas les accusés de réception."
+    },
+    {
+      "q": "Comment sont transportées les données d'une photo lors d'un transfert entre deux ordinateurs ?",
+      "options": [
+        "Découpées en une multitude de petits paquets qui voyagent indépendamment",
+        "Envoyées en un seul bloc unique",
+        "Compressées puis envoyées sans découpage"
+      ],
+      "answer": 0,
+      "explain": "Les données de la photo sont découpées en petits paquets qui voyagent sur le réseau indépendamment les uns des autres."
+    }
+  ],
+  "theme-2-internet/exercices": [
+    {
+      "q": "À quoi sert un switch dans un réseau ?",
+      "options": [
+        "À relier entre eux les ordinateurs d'un même réseau local",
+        "À relier ensemble plusieurs réseaux différents",
+        "À stocker les adresses IP publiques"
+      ],
+      "answer": 0,
+      "explain": "Un switch relie entre eux tous les ordinateurs appartenant à un même réseau local."
+    },
+    {
+      "q": "Quel est le rôle d'un routeur ?",
+      "options": [
+        "Relier ensemble plusieurs réseaux",
+        "Relier les ordinateurs d'un seul réseau local",
+        "Attribuer les adresses MAC"
+      ],
+      "answer": 0,
+      "explain": "Un routeur permet de relier ensemble plusieurs réseaux et possède plusieurs interfaces réseau."
+    },
+    {
+      "q": "Quelle est la différence entre un LAN et un WAN ?",
+      "options": [
+        "LAN est un réseau local, WAN un réseau étendu",
+        "LAN est un réseau étendu, WAN un réseau local",
+        "Ce sont deux noms pour la même chose"
+      ],
+      "answer": 0,
+      "explain": "LAN (Local Access Network) est un réseau local, WAN (Wide Area Network) est un réseau étendu couvrant une grande zone géographique."
+    },
+    {
+      "q": "Sur combien d'octets une adresse MAC est-elle codée ?",
+      "options": [
+        "6 octets",
+        "4 octets",
+        "8 octets"
+      ],
+      "answer": 0,
+      "explain": "Le cours indique qu'une adresse MAC est codée sur 6 octets en hexadécimal."
+    },
+    {
+      "q": "Pour une adresse de la forme a.b.c.d/24, quelle partie identifie le réseau ?",
+      "options": [
+        "Les parties a, b et c",
+        "Seulement la partie a",
+        "Seulement la partie d"
+      ],
+      "answer": 0,
+      "explain": "Avec /24, les parties a, b et c sont consacrées à l'adresse réseau et la partie d à la machine."
+    },
+    {
+      "q": "Que devient un paquet de données lorsque son TTL (durée de vie) atteint 0 avant d'arriver à destination ?",
+      "options": [
+        "Il est détruit et un message est envoyé à l'émetteur",
+        "Il continue indéfiniment sur le réseau",
+        "Il est automatiquement dupliqué"
+      ],
+      "answer": 0,
+      "explain": "Lorsque le TTL vaut 0 sans être arrivé à destination, le paquet est détruit et un message avertit l'émetteur."
+    }
+  ],
+  "theme-2-internet/synthese": [
+    {
+      "q": "Deux ordinateurs d'un même réseau peuvent-ils avoir la même adresse IP ?",
+      "options": [
+        "Non, dans un réseau deux ordinateurs ne peuvent pas avoir la même adresse IP",
+        "Oui, cela n'a aucune importance",
+        "Oui, s'ils ont la même adresse MAC"
+      ],
+      "answer": 0,
+      "explain": "La fiche précise que dans un réseau, 2 ordinateurs ne peuvent pas avoir la même adresse IP."
+    },
+    {
+      "q": "Pour l'adresse 192.168.2.1/16, quelle est la partie réseau ?",
+      "options": [
+        "192.168",
+        "192",
+        "192.168.2"
+      ],
+      "answer": 0,
+      "explain": "Avec /16, la partie réseau est 192.168 et la partie machine est 2.1."
+    },
+    {
+      "q": "À quelle condition sur leurs adresses IP deux ordinateurs sont-ils sur le même réseau local ?",
+      "options": [
+        "Ils doivent avoir la même partie réseau",
+        "Ils doivent avoir la même partie machine",
+        "Ils doivent avoir la même adresse MAC"
+      ],
+      "answer": 0,
+      "explain": "Pour être sur le même réseau local, 2 ordinateurs doivent avoir la partie réseau de leurs adresses IP identique."
+    }
+  ],
+  "theme-2-internet/dns-et-reseaux-pair-a-pair": [
+    {
+      "q": "À quoi sert le système DNS (Domain Name System) ?",
+      "options": [
+        "À associer chaque adresse IP à un texte, comme un annuaire",
+        "À découper les données en paquets",
+        "À gérer les accusés de réception"
+      ],
+      "answer": 0,
+      "explain": "Le DNS associe chaque adresse IP à un texte, comme un annuaire associe numéros de téléphone et noms."
+    },
+    {
+      "q": "En quelle année le système DNS a-t-il été créé ?",
+      "options": [
+        "1983",
+        "1999",
+        "2003"
+      ],
+      "answer": 0,
+      "explain": "Le cours indique que ce système a été créé en 1983."
+    },
+    {
+      "q": "Dans un réseau pair-à-pair, quel est le rôle de chaque poste ?",
+      "options": [
+        "Il est à la fois client et serveur",
+        "Il est uniquement client",
+        "Il est uniquement serveur"
+      ],
+      "answer": 0,
+      "explain": "Chaque poste est à la fois client (lorsqu'il reçoit) et serveur (lorsqu'il envoie)."
+    },
+    {
+      "q": "Quel organisme contrôle les réseaux pair-à-pair utilisés pour échanger illégalement des fichiers ?",
+      "options": [
+        "L'ARCOM",
+        "L'INRIA",
+        "La CNIL"
+      ],
+      "answer": 0,
+      "explain": "Les réseaux pair-à-pair sont contrôlés par l'ARCOM (Autorité de Régulation de la COMmunication audiovisuelle et numérique)."
+    }
+  ],
+  "theme-3-web/1-histoire-du-web": [
+    {
+      "q": "D'après le bilan du cours, quelle affirmation est correcte ?",
+      "options": [
+        "Internet et le Web sont exactement la même chose",
+        "Internet et le Web sont deux choses complètement différentes",
+        "Le Web contient Internet",
+        "Internet est un logiciel du Web"
+      ],
+      "answer": 1,
+      "explain": "Le cours indique : « Internet et le Web sont deux choses complètement différentes. »"
+    },
+    {
+      "q": "Dans l'image de la plomberie utilisée pour mémoriser, que représentent les tuyaux ?",
+      "options": [
+        "Le Web",
+        "Les emails",
+        "Internet",
+        "La téléphonie"
+      ],
+      "answer": 2,
+      "explain": "Le cours précise : « Les tuyaux, c'est Internet. L'eau chaude, c'est le Web. »"
+    },
+    {
+      "q": "Qu'est-ce qu'un lien hypertexte selon le cours ?",
+      "options": [
+        "Un lien inclus dans un texte ou une image d'une page web qui cible une autre page ou ressource",
+        "Un logiciel qui affiche les pages web",
+        "Un câble reliant deux ordinateurs",
+        "Un fichier stocké sur le serveur"
+      ],
+      "answer": 0,
+      "explain": "Le cours définit le lien hypertexte comme « un lien inclus dans un texte ou une image d'une page web qui cible une autre page ou une autre ressource »."
+    },
+    {
+      "q": "Le réseau d'informations tissé par les liens hypertextes s'appelle :",
+      "options": [
+        "Internet",
+        "Le World Wide Web",
+        "Le protocole HTTP",
+        "Le navigateur"
+      ],
+      "answer": 1,
+      "explain": "Le cours indique que ces liens « tissent un réseau d'informations : le World Wide Web »."
+    }
+  ],
+  "theme-3-web/2-fonctionnement-du-web": [
+    {
+      "q": "De combien de grandes parties se compose une URL selon le cours ?",
+      "options": [
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "answer": 2,
+      "explain": "Une URL « se compose de 4 grandes parties : le protocole HTTP (ou HTTPS), le nom de domaine, le chemin vers la ressource et le nom du fichier »."
+    },
+    {
+      "q": "Que signifie le sigle HTTP ?",
+      "options": [
+        "HyperText Transfert Protocol",
+        "High Transfer Text Protocol",
+        "Home Text Transfer Program",
+        "HyperText Transfer Page"
+      ],
+      "answer": 0,
+      "explain": "Le cours indique que les requêtes HTTP correspondent au « HyperText Transfert Protocol »."
+    },
+    {
+      "q": "Quel protocole s'ajoute à HTTP pour crypter les informations entre le serveur et le client ?",
+      "options": [
+        "Le protocole HTML",
+        "Le protocole SSL",
+        "Le protocole URL",
+        "Le protocole CSS"
+      ],
+      "answer": 1,
+      "explain": "« le protocole de sécurité SSL (Secure Socket Layer) va s'ajouter au protocole HTTP et crypter les informations », HTTP devenant HTTPS."
+    },
+    {
+      "q": "Que garantit le protocole HTTPS d'après la remarque du cours ?",
+      "options": [
+        "Que le site visité est un site sûr et fiable",
+        "Que la communication est sécurisée, mais pas que le site soit sûr",
+        "Que le site ne contient aucune erreur",
+        "Que la connexion est plus rapide"
+      ],
+      "answer": 1,
+      "explain": "Le cours avertit : « HTTPS ne garantit en rien que le site soit un site sûr, seule la communication est sécurisée ! »"
+    },
+    {
+      "q": "Dans un échange client-serveur, qui met en forme la réponse pour l'afficher ?",
+      "options": [
+        "Le serveur",
+        "Le navigateur du client",
+        "Le protocole SSL",
+        "Le nom de domaine"
+      ],
+      "answer": 1,
+      "explain": "Le cours indique : « Le navigateur du client met en forme la réponse pour l'afficher. »"
+    }
+  ],
+  "theme-3-web/3-lecriture-dune-page-web": [
+    {
+      "q": "Que signifie le sigle HTML ?",
+      "options": [
+        "HyperText Markup Language",
+        "High Text Modern Language",
+        "Home Tool Markup Language",
+        "HyperText Machine Language"
+      ],
+      "answer": 0,
+      "explain": "Le cours indique que HTML signifie « HyperText Markup Language »."
+    },
+    {
+      "q": "À quoi servent les balises en HTML ?",
+      "options": [
+        "À colorer le texte de la page",
+        "À délimiter le début et la fin de chaque instruction lue par le navigateur",
+        "À enregistrer la page sur le serveur",
+        "À sécuriser la connexion"
+      ],
+      "answer": 1,
+      "explain": "« Le langage HTML utilise des balises pour délimiter le début et la fin de chaque instruction lue par le navigateur. »"
+    },
+    {
+      "q": "Par quelle balise commence une liste ordonnée ?",
+      "options": [
+        "<ul>",
+        "<li>",
+        "<ol>",
+        "<h1>"
+      ],
+      "answer": 2,
+      "explain": "Le cours indique : « une liste ordonnée commence par la balise <ol> »."
+    },
+    {
+      "q": "Quel argument de la balise <ol> permet d'obtenir une liste numérotée par des majuscules (A, B, C) ?",
+      "options": [
+        "type=\"1\"",
+        "type=\"A\"",
+        "type=\"a\"",
+        "type=\"i\""
+      ],
+      "answer": 1,
+      "explain": "Le cours précise : « type=\"A\" la liste sera lettré par des majuscules »."
+    }
+  ],
+  "theme-3-web/4-le-langage-htmlcss-2": [
+    {
+      "q": "Que permet de définir le langage CSS ?",
+      "options": [
+        "La structure des données du serveur",
+        "Le style graphique d'une page Web (arrière-plan, police, taille...)",
+        "Le protocole de communication",
+        "L'adresse URL de la page"
+      ],
+      "answer": 1,
+      "explain": "« Le langage CSS (Cascading Style Sheets) permet de définir le style graphique d'une page Web (arrière-plan, type et taille des polices...). »"
+    },
+    {
+      "q": "Quelle balise HTML utilise-t-on pour insérer une image ?",
+      "options": [
+        "<a>",
+        "<p>",
+        "<img>",
+        "<link>"
+      ],
+      "answer": 2,
+      "explain": "Le cours indique : « Utiliser la balise <img> pour insérer une image. »"
+    },
+    {
+      "q": "Que crée la balise <a href=\"page2.html\">Next</a> ?",
+      "options": [
+        "Un tableau de deux colonnes",
+        "Un bouton Next qui mène vers la page 2",
+        "Une image nommée Next",
+        "Un titre de niveau 1"
+      ],
+      "answer": 1,
+      "explain": "Le cours indique que cette balise « crée un bouton Next sur la page qui nous mène vers la page 2 »."
+    },
+    {
+      "q": "Quel argument de la balise <p> permet d'aligner un paragraphe au centre ?",
+      "options": [
+        "align=\"center\"",
+        "href=\"center\"",
+        "src=\"center\"",
+        "width=\"center\""
+      ],
+      "answer": 0,
+      "explain": "« Pour aligner un paragraphe, on utilise la balise <p> qui prend comme argument l'option align=\"center\"/\"left\"/\"right\". »"
+    }
+  ],
+  "theme-4-photographie/parite-1-loeil-et-le-capteur-numerique": [
+    {
+      "q": "Dans l'oeil humain, quelles cellules de la rétine sont sensibles à la lumière et transforment l'énergie lumineuse en impulsion électrique ?",
+      "options": [
+        "Les cônes",
+        "Le cristallin",
+        "Le nerf optique",
+        "Les photosites"
+      ],
+      "answer": 0,
+      "explain": "Le cours indique que la rétine comprend des cellules sensibles à la lumière, les cônes, qui transforment l'énergie lumineuse en impulsion électrique."
+    },
+    {
+      "q": "Sur un capteur photographique, comment les photosites parviennent-ils à distinguer les couleurs ?",
+      "options": [
+        "Chaque photosite est placé derrière un filtre ne laissant passer qu'une seule couleur (rouge, vert ou bleu)",
+        "Chaque photosite mesure directement les trois couleurs à la fois",
+        "Les photosites changent de forme selon la couleur reçue",
+        "Le processeur colore les photosites après la prise de vue"
+      ],
+      "answer": 0,
+      "explain": "Le cours précise que chaque photosite est placé derrière un filtre qui ne laisse passer que les rayons d'une seule couleur : rouge, vert ou bleu."
+    },
+    {
+      "q": "Pourquoi place-t-on sur un capteur deux fois plus de photosites verts ?",
+      "options": [
+        "Parce que les cônes sensibles au vert sont les plus présents chez l'être humain",
+        "Parce que le vert est plus facile à filtrer",
+        "Parce que le vert consomme moins d'électricité",
+        "Parce que le vert occupe moins de mémoire"
+      ],
+      "answer": 0,
+      "explain": "Le cours indique que les cônes sensibles au vert sont les plus présents chez l'être humain, ce qui justifie les 2 verts par carré (2 verts, 1 rouge, 1 bleu)."
+    },
+    {
+      "q": "Que représente la définition d'une image numérique ?",
+      "options": [
+        "Le nombre total de pixels (largeur × hauteur)",
+        "Le poids de l'image en octets",
+        "Le nombre de couleurs possibles par pixel",
+        "La taille de l'image en centimètres"
+      ],
+      "answer": 0,
+      "explain": "Le cours donne l'exemple d'une image de 300 × 200 pixels dont la définition est de 60 000 pixels, soit le produit largeur × hauteur."
+    }
+  ],
+  "theme-4-photographie/partie-2-formats-des-images": [
+    {
+      "q": "Dans une image en noir et blanc, quelles sont les deux valeurs possibles d'un pixel ?",
+      "options": [
+        "1 pour le noir et 0 pour le blanc",
+        "0 pour le noir et 1 pour le blanc",
+        "255 pour le noir et 0 pour le blanc",
+        "R, V et B"
+      ],
+      "answer": 0,
+      "explain": "Le cours précise que dans une image noir et blanc, les deux valeurs possibles des pixels sont 1 pour le noir et 0 pour le blanc."
+    },
+    {
+      "q": "Dans une image en niveaux de gris, entre quelles valeurs varie l'intensité de luminosité d'un pixel ?",
+      "options": [
+        "Entre 0 (noir) et 255 (blanc)",
+        "Entre 0 (blanc) et 255 (noir)",
+        "Entre 0 et 1",
+        "Entre 1 et 100"
+      ],
+      "answer": 0,
+      "explain": "Le cours indique que les valeurs sont entières entre 0 pour le noir et 255 pour le blanc."
+    },
+    {
+      "q": "Comment un pixel d'une image en couleurs est-il représenté ?",
+      "options": [
+        "Par trois valeurs d'intensité : rouge (R), vert (V) et bleu (B)",
+        "Par une seule valeur entre 0 et 255",
+        "Par les valeurs 0 et 1 uniquement",
+        "Par un mot de 4 bits"
+      ],
+      "answer": 0,
+      "explain": "Le cours indique qu'une image en couleurs est composée de pixels représentés par trois valeurs : intensité du rouge, du vert et du bleu."
+    },
+    {
+      "q": "Combien de bits sont nécessaires pour coder un nombre compris entre 0 et 255 (une intensité de couleur) ?",
+      "options": [
+        "8 bits (soit 1 octet)",
+        "4 bits",
+        "16 bits",
+        "255 bits"
+      ],
+      "answer": 0,
+      "explain": "Le cours indique que chaque nombre entre 0 et 255 est associé à un mot de 8 bits, et que 1 octet = 8 bits."
+    }
+  ],
+  "theme-5-geolocalisation/seance-1": [
+    {
+      "q": "Que représente la cartographie selon la définition du cours ?",
+      "options": [
+        "La représentation graphique des territoires et de leur relief",
+        "L'étude des satellites GPS",
+        "Le calcul de la vitesse des ondes radio"
+      ],
+      "answer": 0,
+      "explain": "Le cours définit la cartographie comme la représentation graphique des territoires et de leur relief."
+    },
+    {
+      "q": "Sur une carte à l'échelle 1/1 000 000, à quelle distance réelle correspond 1 cm sur la carte ?",
+      "options": [
+        "1 km",
+        "10 km",
+        "100 km"
+      ],
+      "answer": 1,
+      "explain": "Le cours indique que 1 cm représente 1 000 000 cm, soit 10 km."
+    },
+    {
+      "q": "Qu'est-ce qui caractérise une carte vectorielle ?",
+      "options": [
+        "C'est une image point par point dessinée par un cartographe",
+        "Elle comporte des objets positionnés selon leurs coordonnées",
+        "Elle ne permet aucun zoom"
+      ],
+      "answer": 1,
+      "explain": "Le cours précise qu'une carte vectorielle comporte des objets positionnés selon leurs coordonnées."
+    },
+    {
+      "q": "Une latitude négative indique quelle direction ?",
+      "options": [
+        "Nord",
+        "Sud",
+        "Est"
+      ],
+      "answer": 1,
+      "explain": "Le cours indique qu'une latitude positive donne le Nord et une latitude négative donne le Sud."
+    }
+  ],
+  "theme-5-geolocalisation/la-geolocalisation-par-satellite": [
+    {
+      "q": "À quelle vitesse le son se propage-t-il dans l'air selon l'exercice de trilatération ?",
+      "options": [
+        "300 m/s",
+        "340 m/s",
+        "3400 m/s"
+      ],
+      "answer": 1,
+      "explain": "L'énoncé précise que le son se propage dans l'air à la vitesse de 340 m/s."
+    },
+    {
+      "q": "En géométrie, l'ensemble des points situés à une même distance d'un point donné forme :",
+      "options": [
+        "Une droite",
+        "Un cercle",
+        "Un triangle"
+      ],
+      "answer": 1,
+      "explain": "L'indice 3 rappelle que l'ensemble des points situés à une même distance d'un autre point est un cercle."
+    }
+  ],
+  "theme-5-geolocalisation/le-protocole-nmea": [
+    {
+      "q": "Que signifie le sigle NMEA du protocole NMEA 0183 ?",
+      "options": [
+        "National Marine Electronics Association",
+        "Norme Mondiale d'Échange Automatique",
+        "Network Marine Electronic Access"
+      ],
+      "answer": 0,
+      "explain": "Le cours indique que NMEA désigne la National Marine Electronics Association."
+    },
+    {
+      "q": "Par quel caractère commence toujours une trame NMEA ?",
+      "options": [
+        "Le caractère #",
+        "Le caractère $",
+        "Le caractère *"
+      ],
+      "answer": 1,
+      "explain": "Le cours précise qu'une trame commence toujours par le caractère $."
+    },
+    {
+      "q": "Dans une trame NMEA, comment sont séparés les champs entre eux ?",
+      "options": [
+        "Par des points-virgules",
+        "Par des virgules",
+        "Par des espaces"
+      ],
+      "answer": 1,
+      "explain": "Le cours indique que les champs sont séparés entre eux par des virgules, et que la virgule reste obligatoire même pour un champ vide."
+    },
+    {
+      "q": "Que permet de vérifier la clé de contrôle (checksum) à la fin d'une trame ?",
+      "options": [
+        "Que le message reçu est conforme à celui envoyé",
+        "La vitesse du satellite",
+        "Le nombre de virgules dans la trame"
+      ],
+      "answer": 0,
+      "explain": "Le cours explique que la clé de contrôle permet de vérifier que le message reçu est conforme à celui envoyé."
+    }
+  ]
+}

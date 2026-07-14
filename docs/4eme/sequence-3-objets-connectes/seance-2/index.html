@@ -168,6 +168,13 @@
     </div>
     
     
+<div class="student-bar">
+  <span class="sb-info">💾 Tes réponses sont enregistrées automatiquement sur cet appareil.</span>
+  <span class="sb-actions">
+    <button class="btn btn-ghost btn-sm" id="print-answers" type="button">🖨 Imprimer / PDF</button>
+    <button class="btn btn-ghost btn-sm" id="clear-answers" type="button">🗑 Tout effacer</button>
+  </span>
+</div>
     <div class="prose">
       <p><strong>Séquence XX : Comment piloter un objet technique avec un smartphone ?</strong></p>
 <p><strong>Séance 2 : Créer une IHM</strong></p>
@@ -243,6 +250,66 @@
 
     </div>
     
+<section class="quiz" id="quiz">
+  <h2>🧠 Teste tes connaissances</h2>
+  <p class="quiz-hint">Réponds aux questions puis clique sur « Vérifier » — la correction s'affiche aussitôt.</p>
+  
+    <div class="quiz-q" data-ok="1" data-explain="Le cours définit l'objet connecté comme un objet électronique connecté sans fil qui partage des données avec d'autres appareils électroniques.">
+      <p class="qq-text">1. D'après la mise en situation, qu'est-ce qu'un objet connecté ?</p>
+      <div class="qq-opts">
+        <label class="qq-opt"><input type="radio" name="q0" value="0"><span>Un objet relié uniquement par un câble à un ordinateur</span></label>
+        <label class="qq-opt"><input type="radio" name="q0" value="1"><span>Un objet électronique connecté sans fil qui partage des données avec d'autres appareils</span></label>
+        <label class="qq-opt"><input type="radio" name="q0" value="2"><span>Un objet mécanique sans aucune électronique</span></label>
+      </div>
+      <button class="btn btn-ghost qq-check" type="button">Vérifier ma réponse</button>
+      <div class="qq-feedback" aria-live="polite"></div>
+    </div>
+
+    <div class="quiz-q" data-ok="0" data-explain="L'application se réalise en se connectant à App Inventor sur code.appinventor.mit.edu.">
+      <p class="qq-text">2. Quel logiciel est utilisé pour réaliser l'application Android qui commande le Mbot ?</p>
+      <div class="qq-opts">
+        <label class="qq-opt"><input type="radio" name="q1" value="0"><span>App Inventor (code.appinventor.mit.edu)</span></label>
+        <label class="qq-opt"><input type="radio" name="q1" value="1"><span>Microsoft Word</span></label>
+        <label class="qq-opt"><input type="radio" name="q1" value="2"><span>Scratch Junior</span></label>
+      </div>
+      <button class="btn btn-ghost qq-check" type="button">Vérifier ma réponse</button>
+      <div class="qq-feedback" aria-live="polite"></div>
+    </div>
+
+    <div class="quiz-q" data-ok="1" data-explain="L'application doit permettre de se connecter au robot en Bluetooth, de le piloter selon 8 directions, de l'arrêter et de quitter le mode connecté.">
+      <p class="qq-text">3. Parmi ces fonctions, laquelle l'application doit-elle permettre selon le travail à effectuer ?</p>
+      <div class="qq-opts">
+        <label class="qq-opt"><input type="radio" name="q2" value="0"><span>Recharger le robot à distance</span></label>
+        <label class="qq-opt"><input type="radio" name="q2" value="1"><span>Piloter le robot selon 8 directions</span></label>
+        <label class="qq-opt"><input type="radio" name="q2" value="2"><span>Prendre des photos avec le robot</span></label>
+      </div>
+      <button class="btn btn-ghost qq-check" type="button">Vérifier ma réponse</button>
+      <div class="qq-feedback" aria-live="polite"></div>
+    </div>
+
+    <div class="quiz-q" data-ok="1" data-explain="Pour réaliser la programmation des touches de l'interface, il faut utiliser la partie « blocs ».">
+      <p class="qq-text">4. Dans App Inventor, quelle partie faut-il utiliser pour programmer les touches de l'interface ?</p>
+      <div class="qq-opts">
+        <label class="qq-opt"><input type="radio" name="q3" value="0"><span>La partie « design »</span></label>
+        <label class="qq-opt"><input type="radio" name="q3" value="1"><span>La partie « blocs »</span></label>
+        <label class="qq-opt"><input type="radio" name="q3" value="2"><span>La partie « impression »</span></label>
+      </div>
+      <button class="btn btn-ghost qq-check" type="button">Vérifier ma réponse</button>
+      <div class="qq-feedback" aria-live="polite"></div>
+    </div>
+
+    <div class="quiz-q" data-ok="0" data-explain="AppInventor génère un QR code que l'on scanne avec un lecteur de QR code ou l'application « MIT AI2 Companion » pour installer l'application.">
+      <p class="qq-text">5. Comment installe-t-on l'application générée sur le smartphone pour la tester ?</p>
+      <div class="qq-opts">
+        <label class="qq-opt"><input type="radio" name="q4" value="0"><span>En scannant un QR code avec un lecteur ou l'application « MIT AI2 Companion »</span></label>
+        <label class="qq-opt"><input type="radio" name="q4" value="1"><span>En l'envoyant par courrier électronique</span></label>
+        <label class="qq-opt"><input type="radio" name="q4" value="2"><span>En la copiant sur une clé USB</span></label>
+      </div>
+      <button class="btn btn-ghost qq-check" type="button">Vérifier ma réponse</button>
+      <div class="qq-feedback" aria-live="polite"></div>
+    </div>
+  <div class="quiz-score" aria-live="polite"></div>
+</section>
     <section class="resources"><h2>Liens et ressources</h2><div class="res-grid">
 <a class="res-card res-app" href="http://code.appinventor.mit.edu" target="_blank" rel="noopener">
   <span class="res-icon">🧩</span>

@@ -130,6 +130,13 @@
     </div>
     
     
+<div class="student-bar">
+  <span class="sb-info">💾 Tes réponses sont enregistrées automatiquement sur cet appareil.</span>
+  <span class="sb-actions">
+    <button class="btn btn-ghost btn-sm" id="print-answers" type="button">🖨 Imprimer / PDF</button>
+    <button class="btn btn-ghost btn-sm" id="clear-answers" type="button">🗑 Tout effacer</button>
+  </span>
+</div>
     <div class="prose">
       <h3>Introduction</h3>
 <p>Pour un ordinateur, une image est un ensemble de pixels arrangés sous la forme d&#39;un tableau à deux dimensions.</p>
@@ -172,6 +179,59 @@
 
     </div>
     
+<section class="quiz" id="quiz">
+  <h2>🧠 Teste tes connaissances</h2>
+  <p class="quiz-hint">Réponds aux questions puis clique sur « Vérifier » — la correction s'affiche aussitôt.</p>
+  
+    <div class="quiz-q" data-ok="0" data-explain="Le cours précise que dans une image noir et blanc, les deux valeurs possibles des pixels sont 1 pour le noir et 0 pour le blanc.">
+      <p class="qq-text">1. Dans une image en noir et blanc, quelles sont les deux valeurs possibles d'un pixel ?</p>
+      <div class="qq-opts">
+        <label class="qq-opt"><input type="radio" name="q0" value="0"><span>1 pour le noir et 0 pour le blanc</span></label>
+        <label class="qq-opt"><input type="radio" name="q0" value="1"><span>0 pour le noir et 1 pour le blanc</span></label>
+        <label class="qq-opt"><input type="radio" name="q0" value="2"><span>255 pour le noir et 0 pour le blanc</span></label>
+        <label class="qq-opt"><input type="radio" name="q0" value="3"><span>R, V et B</span></label>
+      </div>
+      <button class="btn btn-ghost qq-check" type="button">Vérifier ma réponse</button>
+      <div class="qq-feedback" aria-live="polite"></div>
+    </div>
+
+    <div class="quiz-q" data-ok="0" data-explain="Le cours indique que les valeurs sont entières entre 0 pour le noir et 255 pour le blanc.">
+      <p class="qq-text">2. Dans une image en niveaux de gris, entre quelles valeurs varie l'intensité de luminosité d'un pixel ?</p>
+      <div class="qq-opts">
+        <label class="qq-opt"><input type="radio" name="q1" value="0"><span>Entre 0 (noir) et 255 (blanc)</span></label>
+        <label class="qq-opt"><input type="radio" name="q1" value="1"><span>Entre 0 (blanc) et 255 (noir)</span></label>
+        <label class="qq-opt"><input type="radio" name="q1" value="2"><span>Entre 0 et 1</span></label>
+        <label class="qq-opt"><input type="radio" name="q1" value="3"><span>Entre 1 et 100</span></label>
+      </div>
+      <button class="btn btn-ghost qq-check" type="button">Vérifier ma réponse</button>
+      <div class="qq-feedback" aria-live="polite"></div>
+    </div>
+
+    <div class="quiz-q" data-ok="0" data-explain="Le cours indique qu'une image en couleurs est composée de pixels représentés par trois valeurs : intensité du rouge, du vert et du bleu.">
+      <p class="qq-text">3. Comment un pixel d'une image en couleurs est-il représenté ?</p>
+      <div class="qq-opts">
+        <label class="qq-opt"><input type="radio" name="q2" value="0"><span>Par trois valeurs d'intensité : rouge (R), vert (V) et bleu (B)</span></label>
+        <label class="qq-opt"><input type="radio" name="q2" value="1"><span>Par une seule valeur entre 0 et 255</span></label>
+        <label class="qq-opt"><input type="radio" name="q2" value="2"><span>Par les valeurs 0 et 1 uniquement</span></label>
+        <label class="qq-opt"><input type="radio" name="q2" value="3"><span>Par un mot de 4 bits</span></label>
+      </div>
+      <button class="btn btn-ghost qq-check" type="button">Vérifier ma réponse</button>
+      <div class="qq-feedback" aria-live="polite"></div>
+    </div>
+
+    <div class="quiz-q" data-ok="0" data-explain="Le cours indique que chaque nombre entre 0 et 255 est associé à un mot de 8 bits, et que 1 octet = 8 bits.">
+      <p class="qq-text">4. Combien de bits sont nécessaires pour coder un nombre compris entre 0 et 255 (une intensité de couleur) ?</p>
+      <div class="qq-opts">
+        <label class="qq-opt"><input type="radio" name="q3" value="0"><span>8 bits (soit 1 octet)</span></label>
+        <label class="qq-opt"><input type="radio" name="q3" value="1"><span>4 bits</span></label>
+        <label class="qq-opt"><input type="radio" name="q3" value="2"><span>16 bits</span></label>
+        <label class="qq-opt"><input type="radio" name="q3" value="3"><span>255 bits</span></label>
+      </div>
+      <button class="btn btn-ghost qq-check" type="button">Vérifier ma réponse</button>
+      <div class="qq-feedback" aria-live="polite"></div>
+    </div>
+  <div class="quiz-score" aria-live="polite"></div>
+</section>
     
     <nav class="pager">
       <a class="pg-prev" href="../parite-1-loeil-et-le-capteur-numerique/"><span class="pg-label">← Précédent</span><span class="pg-title">partie 1: L'oeil et le capteur numérique</span></a>

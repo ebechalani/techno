@@ -218,5 +218,403 @@
       "answer": 2,
       "explain": "Les droits d'accès sont les permissions accordées à un utilisateur : elles indiquent s'il peut lire, modifier ou supprimer un fichier."
     }
+  ],
+  "sequence-1-preserver-les-ressources/seance-1": [
+    {
+      "q": "D'après la vidéo, quelle part de nos déchets recyclons-nous en France ?",
+      "options": [
+        "23 %",
+        "50 %",
+        "20 %",
+        "80 %"
+      ],
+      "answer": 0,
+      "explain": "Le cours indique qu'en France, nous ne recyclons que 23 % de nos déchets."
+    },
+    {
+      "q": "Quelle proportion des déchets récupérés est constituée par les erreurs de tri ?",
+      "options": [
+        "jusqu'à 20 %",
+        "jusqu'à 23 %",
+        "jusqu'à 5 %",
+        "jusqu'à 50 %"
+      ],
+      "answer": 0,
+      "explain": "Le cours précise que les erreurs de tri constituent jusqu'à 20 % des déchets récupérés."
+    },
+    {
+      "q": "À quoi sert le tri des déchets ?",
+      "options": [
+        "À permettre aux objets en fin de vie d'être réutilisés dans un nouveau cycle de production",
+        "À produire de l'électricité directement",
+        "À fabriquer de la nourriture",
+        "À supprimer définitivement tous les déchets"
+      ],
+      "answer": 0,
+      "explain": "Le tri des déchets permet aux objets en fin de vie d'être réutilisés dans un nouveau cycle de production."
+    }
+  ],
+  "sequence-1-preserver-les-ressources/seance-2": [
+    {
+      "q": "Quel constat font les centres de tri des déchets au déchargement des camions poubelles ?",
+      "options": [
+        "De plus en plus d'erreurs de tri",
+        "Une baisse du volume de déchets",
+        "Une absence totale de déchets recyclables",
+        "Un tri parfait des usagers"
+      ],
+      "answer": 0,
+      "explain": "Le cours indique que les centres de tri constatent de plus en plus d'erreurs de tri au déchargement des camions poubelles."
+    },
+    {
+      "q": "À quoi sert le diagramme du besoin ?",
+      "options": [
+        "À exprimer le besoin auquel répond l'application",
+        "À dessiner les écrans de l'application",
+        "À lister les composants électroniques",
+        "À mesurer le poids des déchets"
+      ],
+      "answer": 0,
+      "explain": "Le diagramme du besoin permet d'exprimer le besoin auquel répond l'application."
+    },
+    {
+      "q": "Dans le cahier des charges fonctionnel, que désigne l'abréviation FP ?",
+      "options": [
+        "Les fonctions principales attendues de l'objet",
+        "Les fonctions contraintes",
+        "Les fiches de production",
+        "Les fonctions payantes"
+      ],
+      "answer": 0,
+      "explain": "Le cahier des charges fonctionnel regroupe les fonctions principales notées FP et les fonctions contraintes notées FC."
+    },
+    {
+      "q": "Que représentent les fonctions contraintes (FC) dans le cahier des charges fonctionnel ?",
+      "options": [
+        "Les exigences à respecter",
+        "Les fonctions principales de l'objet",
+        "Le nombre d'écrans de l'application",
+        "Le budget du projet"
+      ],
+      "answer": 0,
+      "explain": "Les fonctions contraintes (FC) sont les exigences à respecter."
+    }
+  ],
+  "sequence-1-preserver-les-ressources/seance-3": [
+    {
+      "q": "Quel logiciel est utilisé pour créer l'application smartphone dans cette séance ?",
+      "options": [
+        "App Inventor",
+        "Photoshop",
+        "Scratch",
+        "Word"
+      ],
+      "answer": 0,
+      "explain": "La séance demande de se connecter à l'application App Inventor sur code.appinventor.mit.edu."
+    },
+    {
+      "q": "Par quel moyen l'application se connecte-t-elle à la carte Micro:bit ?",
+      "options": [
+        "Par Bluetooth",
+        "Par câble HDMI",
+        "Par Wi-Fi uniquement",
+        "Par port USB obligatoire"
+      ],
+      "answer": 0,
+      "explain": "Le cours indique de connecter l'appareil à Micro:bit via Bluetooth (pair your devices)."
+    },
+    {
+      "q": "Lors de l'appairage de la carte Micro:bit, quels boutons faut-il maintenir enfoncés ?",
+      "options": [
+        "Les boutons A, B et Reset",
+        "Uniquement le bouton A",
+        "Les boutons A et B seulement",
+        "Aucun bouton"
+      ],
+      "answer": 0,
+      "explain": "Lors de l'appairage, il faut maintenir enfoncés les boutons A, B et Reset jusqu'à ce que toutes les LED s'allument."
+    }
+  ],
+  "sequence-2-eclairage-automatique/seance-1": [
+    {
+      "q": "D'après cette séance, quel est le thème abordé dans la vidéo ?",
+      "options": [
+        "L'éclairage public automatique et intelligent",
+        "Le tri des déchets ménagers",
+        "La production d'eau potable",
+        "Les transports en commun"
+      ],
+      "answer": 0,
+      "explain": "La séance porte sur l'automatisation de l'éclairage public et une solution d'éclairage public intelligent."
+    }
+  ],
+  "sequence-2-eclairage-automatique/seance-2": [
+    {
+      "q": "Quel est le sujet de la vidéo présentée dans cette séance ?",
+      "options": [
+        "Le cahier des charges fonctionnel",
+        "Le montage d'un circuit électrique",
+        "La programmation en Scratch",
+        "Le recyclage des matériaux"
+      ],
+      "answer": 0,
+      "explain": "La vidéo intégrée s'intitule « Le cahier des charges fonctionnel »."
+    },
+    {
+      "q": "Quel outil est demandé en exercice pour représenter le besoin du système d'éclairage automatique ?",
+      "options": [
+        "La bête à cornes",
+        "Le diagramme de Gantt",
+        "La carte mentale",
+        "Le diagramme circulaire"
+      ],
+      "answer": 0,
+      "explain": "L'exercice 1 demande de réaliser la bête à cornes du système d'éclairage automatique."
+    },
+    {
+      "q": "Quel diagramme faut-il compléter parmi les exercices de la séance ?",
+      "options": [
+        "Le diagramme pieuvre",
+        "Le diagramme de Venn",
+        "L'organigramme de programmation",
+        "Le diagramme en bâtons"
+      ],
+      "answer": 0,
+      "explain": "L'exercice 2 demande de compléter le diagramme pieuvre."
+    }
+  ],
+  "sequence-3-vivre-dans-une-boite/seance-1": [
+    {
+      "q": "Dans quelle région l'équipe d'architectes de la situation déclenchante est-elle réputée ?",
+      "options": [
+        "En Bretagne",
+        "En Aquitaine",
+        "En Provence"
+      ],
+      "answer": 1,
+      "explain": "Le texte indique : « Nous sommes une équipe d'architectes réputée dans toute l'Aquitaine. »"
+    },
+    {
+      "q": "Quel est le problème à résoudre retenu dans cette séance ?",
+      "options": [
+        "Comment améliorer le logement des étudiants ?",
+        "Comment réduire le prix des transports ?",
+        "Comment construire des bureaux d'entreprise ?"
+      ],
+      "answer": 0,
+      "explain": "La réponse retenue est : « Comment améliorer le logement des étudiants ? »"
+    },
+    {
+      "q": "Selon les hypothèses retenues, quel type de logement faut-il créer pour un étudiant ?",
+      "options": [
+        "Un grand logement collectif de luxe",
+        "Un logement individuel, de petite taille et à prix abordable",
+        "Une maison familiale en périphérie"
+      ],
+      "answer": 1,
+      "explain": "Une hypothèse retenue est de « créer un logement individuel, de petite taille adapté à un étudiant et à un prix abordable »."
+    }
+  ],
+  "sequence-3-vivre-dans-une-boite/cahier-des-charges": [
+    {
+      "q": "En quel matériau est le conteneur qui servira de base au logement ?",
+      "options": [
+        "En bois",
+        "En acier",
+        "En béton"
+      ],
+      "answer": 1,
+      "explain": "Le cours précise : « Le conteneur est en acier. »"
+    },
+    {
+      "q": "Quelles sont les dimensions du conteneur données dans le cahier des charges ?",
+      "options": [
+        "L = 12 m, l = 2,5 m, H = 2,6 m",
+        "L = 6 m, l = 2 m, H = 2 m",
+        "L = 10 m, l = 3 m, H = 3 m"
+      ],
+      "answer": 0,
+      "explain": "Le texte indique : « Ses dimensions sont : L = 12 m l = 2,5 m H = 2,6 m »."
+    },
+    {
+      "q": "À quoi correspond la fonction principale (FP) d'un objet technique ?",
+      "options": [
+        "À sa couleur",
+        "À sa fonction d'usage",
+        "À son prix de vente"
+      ],
+      "answer": 1,
+      "explain": "Le cours précise : « La fonction principale (FP) d'un objet technique correspond à sa fonction d'usage. »"
+    },
+    {
+      "q": "Quel outil graphique utilise-t-on pour lister les fonctions et les contraintes de l'objet ?",
+      "options": [
+        "La « Pieuvre »",
+        "L'« Araignée »",
+        "Le « Papillon »"
+      ],
+      "answer": 0,
+      "explain": "Le cours indique : « on utilise un outil graphique appelé Pieuvre »."
+    }
+  ],
+  "sequence-3-vivre-dans-une-boite/seance-3": [
+    {
+      "q": "Quelle est la fonction principale (fonction d'usage) du conteneur ?",
+      "options": [
+        "Stocker des marchandises",
+        "Permettre de loger un étudiant dans de bonnes conditions",
+        "Transporter des matériaux sur un bateau"
+      ],
+      "answer": 1,
+      "explain": "Le cours rappelle que la fonction principale est de « permettre de loger un étudiant dans de bonnes conditions »."
+    },
+    {
+      "q": "Comment appelle-t-on les 4 fonctions retenues qui satisfont la fonction principale ?",
+      "options": [
+        "Des fonctions de service",
+        "Des fonctions décoratives",
+        "Des fonctions commerciales"
+      ],
+      "answer": 0,
+      "explain": "Le cours précise : « Ces 4 fonctions sont appelées des fonctions de service. »"
+    },
+    {
+      "q": "Par quoi une fonction commence-t-elle toujours ?",
+      "options": [
+        "Par un nom",
+        "Par un adjectif",
+        "Par un verbe à l'infinitif"
+      ],
+      "answer": 2,
+      "explain": "Le cours rappelle : « Une fonction commence toujours par un verbe à l'infinitif : permettre de... »"
+    },
+    {
+      "q": "Parmi ces propositions, laquelle est une des 4 fonctions de service retenues ?",
+      "options": [
+        "Avoir une bonne luminosité quelque soit l'heure",
+        "Augmenter le prix du loyer",
+        "Réduire la taille du terrain"
+      ],
+      "answer": 0,
+      "explain": "L'une des 4 fonctions retenues est : « Avoir une bonne luminosité quelque soit l'heure. »"
+    }
+  ],
+  "sequence-3-vivre-dans-une-boite/seance-4": [
+    {
+      "q": "Comment appelle-t-on les obligations qui limitent les choix de solutions techniques ?",
+      "options": [
+        "Des contraintes",
+        "Des options",
+        "Des hypothèses"
+      ],
+      "answer": 0,
+      "explain": "Le cours parle des « contraintes qui limitent vos choix », notées dans le cahier des charges."
+    },
+    {
+      "q": "Quel type de logiciel est proposé pour organiser et présenter les solutions techniques ?",
+      "options": [
+        "Un tableur",
+        "Un logiciel de carte mentale (heuristique)",
+        "Un logiciel de retouche photo"
+      ],
+      "answer": 1,
+      "explain": "Le cours demande de présenter les résultats avec « un logiciel de carte mentale (heuristique) », comme mindmup."
+    },
+    {
+      "q": "Pour la fonction FS3 « Se protéger des éléments extérieurs », que faut-il choisir ?",
+      "options": [
+        "Un type de lampe",
+        "Un matériau isolant",
+        "Un réseau internet"
+      ],
+      "answer": 1,
+      "explain": "Pour FS3, le cours renvoie au document sur les matériaux isolants pour en choisir un qui respecte les contraintes."
+    }
+  ],
+  "sequence-3-vivre-dans-une-boite/seance-5": [
+    {
+      "q": "Quel est le problème à résoudre dans cette séance sur le bruit ?",
+      "options": [
+        "Comment isoler le conteneur des bruits extérieurs et entre les pièces ?",
+        "Comment chauffer le conteneur en hiver ?",
+        "Comment éclairer le conteneur la nuit ?"
+      ],
+      "answer": 0,
+      "explain": "La problématique retenue est : « Comment isoler le conteneur des bruits extérieurs, des bruits entre les différentes pièces ? »"
+    },
+    {
+      "q": "Parmi ces hypothèses retenues, laquelle permet d'isoler du bruit ?",
+      "options": [
+        "Installer de la laine de verre et des doubles vitrages",
+        "Ajouter des fenêtres plus grandes",
+        "Peindre les murs en blanc"
+      ],
+      "answer": 0,
+      "explain": "Les hypothèses retenues sont d'utiliser des matériaux isolants et d'« installer de la laine de verre, des doubles vitrages »."
+    }
+  ],
+  "sequence-3-vivre-dans-une-boite/seance-6": [
+    {
+      "q": "Quel logiciel est utilisé pour réaliser la modélisation du conteneur ?",
+      "options": [
+        "Tinkercad",
+        "Photoshop",
+        "Excel"
+      ],
+      "answer": 0,
+      "explain": "Le cours demande de « lancer Tinkercad » pour réaliser la modélisation."
+    },
+    {
+      "q": "Dans Tinkercad, à quoi correspondent 16 mm ?",
+      "options": [
+        "À 1 cm en réalité",
+        "À 1 m en réalité",
+        "À 16 m en réalité"
+      ],
+      "answer": 1,
+      "explain": "Le cours indique l'échelle : « 16 mm dans Tinkercad correspondent à 1 m en réalité »."
+    },
+    {
+      "q": "Quelles touches faut-il utiliser pour dupliquer un objet dans Tinkercad ?",
+      "options": [
+        "Ctrl et D en même temps",
+        "Ctrl et S en même temps",
+        "Alt et F4 en même temps"
+      ],
+      "answer": 0,
+      "explain": "La note précise : « pour dupliquer un objet appuyez sur la touche ctrl avec la touche D en même temps »."
+    }
+  ],
+  "sequence-3-vivre-dans-une-boite/seance-7": [
+    {
+      "q": "Combien de conteneurs chaque groupe doit-il implanter sur le terrain ?",
+      "options": [
+        "3 conteneurs",
+        "6 conteneurs",
+        "12 conteneurs"
+      ],
+      "answer": 1,
+      "explain": "L'activité 2 demande de « chercher comment implanter 6 conteneurs sur le terrain »."
+    },
+    {
+      "q": "Quel espace minimum faut-il prévoir entre chaque conteneur ?",
+      "options": [
+        "Au moins 1 mètre",
+        "Au moins 5 mètres",
+        "Au moins 10 centimètres"
+      ],
+      "answer": 0,
+      "explain": "Le cahier des charges impose « un espace d'au moins 1 mètre entre chaque conteneur »."
+    },
+    {
+      "q": "Pourquoi faut-il bien orienter les conteneurs sur le terrain ?",
+      "options": [
+        "Pour profiter de la lumière naturelle et gérer la chaleur",
+        "Pour les cacher des voisins",
+        "Pour réduire leur poids"
+      ],
+      "answer": 0,
+      "explain": "Le cahier des charges précise d'orienter les conteneurs pour « profiter de la lumière naturelle et minimiser les gains de chaleur en été et les pertes de chaleur en hiver »."
+    }
   ]
 }

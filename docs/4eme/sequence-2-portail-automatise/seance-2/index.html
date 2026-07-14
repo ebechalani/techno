@@ -168,6 +168,13 @@
     </div>
     
     
+<div class="student-bar">
+  <span class="sb-info">💾 Tes réponses sont enregistrées automatiquement sur cet appareil.</span>
+  <span class="sb-actions">
+    <button class="btn btn-ghost btn-sm" id="print-answers" type="button">🖨 Imprimer / PDF</button>
+    <button class="btn btn-ghost btn-sm" id="clear-answers" type="button">🗑 Tout effacer</button>
+  </span>
+</div>
     <div class="prose">
       <p><strong>Mise en situation sur trois problèmes à résoudre :</strong> <em>(Durée 5&#39;)</em>
 <em>Monsieur Durand a exprimé to**utes ses attentes.</em></p>
@@ -212,6 +219,33 @@
 
     </div>
     
+<section class="quiz" id="quiz">
+  <h2>🧠 Teste tes connaissances</h2>
+  <p class="quiz-hint">Réponds aux questions puis clique sur « Vérifier » — la correction s'affiche aussitôt.</p>
+  
+    <div class="quiz-q" data-ok="0" data-explain="La séance 2 s'intitule « Les contraintes ».">
+      <p class="qq-text">1. Sur quelle notion porte la séance 2 ?</p>
+      <div class="qq-opts">
+        <label class="qq-opt"><input type="radio" name="q0" value="0"><span>Les contraintes</span></label>
+        <label class="qq-opt"><input type="radio" name="q0" value="1"><span>Le besoin</span></label>
+        <label class="qq-opt"><input type="radio" name="q0" value="2"><span>Le budget du projet</span></label>
+      </div>
+      <button class="btn btn-ghost qq-check" type="button">Vérifier ma réponse</button>
+      <div class="qq-feedback" aria-live="polite"></div>
+    </div>
+
+    <div class="quiz-q" data-ok="0" data-explain="L'activité 2 consiste à « Énoncer les contraintes du portail automatisé de M. Durand ».">
+      <p class="qq-text">2. Que demande l'activité 2 (N3/N4) de la séance 2 ?</p>
+      <div class="qq-opts">
+        <label class="qq-opt"><input type="radio" name="q1" value="0"><span>Énoncer les contraintes du portail automatisé de M. Durand</span></label>
+        <label class="qq-opt"><input type="radio" name="q1" value="1"><span>Dessiner le plan du garage</span></label>
+        <label class="qq-opt"><input type="radio" name="q1" value="2"><span>Choisir la couleur du portail</span></label>
+      </div>
+      <button class="btn btn-ghost qq-check" type="button">Vérifier ma réponse</button>
+      <div class="qq-feedback" aria-live="polite"></div>
+    </div>
+  <div class="quiz-score" aria-live="polite"></div>
+</section>
     
     <nav class="pager">
       <a class="pg-prev" href="../seance-1-corr/"><span class="pg-label">← Précédent</span><span class="pg-title">Correction — Étude du besoin</span></a>

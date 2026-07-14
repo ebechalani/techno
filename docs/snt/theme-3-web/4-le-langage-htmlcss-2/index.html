@@ -130,6 +130,13 @@
     </div>
     
     
+<div class="student-bar">
+  <span class="sb-info">💾 Tes réponses sont enregistrées automatiquement sur cet appareil.</span>
+  <span class="sb-actions">
+    <button class="btn btn-ghost btn-sm" id="print-answers" type="button">🖨 Imprimer / PDF</button>
+    <button class="btn btn-ghost btn-sm" id="clear-answers" type="button">🗑 Tout effacer</button>
+  </span>
+</div>
     <div class="prose">
       <p><strong>CSS</strong></p>
 <p>Le langage CSS (pour Cascading Style Sheets) permet de définir le style graphique d’une page Web (arrière-plan, type et taille des polices de caractères, etc.). La modification du style d’un élément dans une feuille de style se répercute automatiquement à toutes les pages HTML qui y font appel.</p>
@@ -185,6 +192,59 @@
 
     </div>
     
+<section class="quiz" id="quiz">
+  <h2>🧠 Teste tes connaissances</h2>
+  <p class="quiz-hint">Réponds aux questions puis clique sur « Vérifier » — la correction s'affiche aussitôt.</p>
+  
+    <div class="quiz-q" data-ok="1" data-explain="« Le langage CSS (Cascading Style Sheets) permet de définir le style graphique d'une page Web (arrière-plan, type et taille des polices...). »">
+      <p class="qq-text">1. Que permet de définir le langage CSS ?</p>
+      <div class="qq-opts">
+        <label class="qq-opt"><input type="radio" name="q0" value="0"><span>La structure des données du serveur</span></label>
+        <label class="qq-opt"><input type="radio" name="q0" value="1"><span>Le style graphique d'une page Web (arrière-plan, police, taille...)</span></label>
+        <label class="qq-opt"><input type="radio" name="q0" value="2"><span>Le protocole de communication</span></label>
+        <label class="qq-opt"><input type="radio" name="q0" value="3"><span>L'adresse URL de la page</span></label>
+      </div>
+      <button class="btn btn-ghost qq-check" type="button">Vérifier ma réponse</button>
+      <div class="qq-feedback" aria-live="polite"></div>
+    </div>
+
+    <div class="quiz-q" data-ok="2" data-explain="Le cours indique : « Utiliser la balise &lt;img&gt; pour insérer une image. »">
+      <p class="qq-text">2. Quelle balise HTML utilise-t-on pour insérer une image ?</p>
+      <div class="qq-opts">
+        <label class="qq-opt"><input type="radio" name="q1" value="0"><span>&lt;a&gt;</span></label>
+        <label class="qq-opt"><input type="radio" name="q1" value="1"><span>&lt;p&gt;</span></label>
+        <label class="qq-opt"><input type="radio" name="q1" value="2"><span>&lt;img&gt;</span></label>
+        <label class="qq-opt"><input type="radio" name="q1" value="3"><span>&lt;link&gt;</span></label>
+      </div>
+      <button class="btn btn-ghost qq-check" type="button">Vérifier ma réponse</button>
+      <div class="qq-feedback" aria-live="polite"></div>
+    </div>
+
+    <div class="quiz-q" data-ok="1" data-explain="Le cours indique que cette balise « crée un bouton Next sur la page qui nous mène vers la page 2 ».">
+      <p class="qq-text">3. Que crée la balise &lt;a href=&quot;page2.html&quot;&gt;Next&lt;/a&gt; ?</p>
+      <div class="qq-opts">
+        <label class="qq-opt"><input type="radio" name="q2" value="0"><span>Un tableau de deux colonnes</span></label>
+        <label class="qq-opt"><input type="radio" name="q2" value="1"><span>Un bouton Next qui mène vers la page 2</span></label>
+        <label class="qq-opt"><input type="radio" name="q2" value="2"><span>Une image nommée Next</span></label>
+        <label class="qq-opt"><input type="radio" name="q2" value="3"><span>Un titre de niveau 1</span></label>
+      </div>
+      <button class="btn btn-ghost qq-check" type="button">Vérifier ma réponse</button>
+      <div class="qq-feedback" aria-live="polite"></div>
+    </div>
+
+    <div class="quiz-q" data-ok="0" data-explain="« Pour aligner un paragraphe, on utilise la balise &lt;p&gt; qui prend comme argument l'option align=&quot;center&quot;/&quot;left&quot;/&quot;right&quot;. »">
+      <p class="qq-text">4. Quel argument de la balise &lt;p&gt; permet d'aligner un paragraphe au centre ?</p>
+      <div class="qq-opts">
+        <label class="qq-opt"><input type="radio" name="q3" value="0"><span>align=&quot;center&quot;</span></label>
+        <label class="qq-opt"><input type="radio" name="q3" value="1"><span>href=&quot;center&quot;</span></label>
+        <label class="qq-opt"><input type="radio" name="q3" value="2"><span>src=&quot;center&quot;</span></label>
+        <label class="qq-opt"><input type="radio" name="q3" value="3"><span>width=&quot;center&quot;</span></label>
+      </div>
+      <button class="btn btn-ghost qq-check" type="button">Vérifier ma réponse</button>
+      <div class="qq-feedback" aria-live="polite"></div>
+    </div>
+  <div class="quiz-score" aria-live="polite"></div>
+</section>
     
     <nav class="pager">
       <a class="pg-prev" href="../3-lecriture-dune-page-web/"><span class="pg-label">← Précédent</span><span class="pg-title">3. L'écriture d'une page Web</span></a>

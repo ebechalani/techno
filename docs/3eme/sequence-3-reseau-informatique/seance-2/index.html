@@ -127,6 +127,13 @@
     </div>
     
     
+<div class="student-bar">
+  <span class="sb-info">💾 Tes réponses sont enregistrées automatiquement sur cet appareil.</span>
+  <span class="sb-actions">
+    <button class="btn btn-ghost btn-sm" id="print-answers" type="button">🖨 Imprimer / PDF</button>
+    <button class="btn btn-ghost btn-sm" id="clear-answers" type="button">🗑 Tout effacer</button>
+  </span>
+</div>
     <div class="prose">
       <h2>Application : Architecture des réseaux.</h2>
 <p><strong>Réalisez les manipulations ci-dessous pour créer une partie de l&#39;architecture du réseau du collège.</strong></p>
@@ -150,6 +157,55 @@
 
     </div>
     
+<section class="quiz" id="quiz">
+  <h2>🧠 Teste tes connaissances</h2>
+  <p class="quiz-hint">Réponds aux questions puis clique sur « Vérifier » — la correction s'affiche aussitôt.</p>
+  
+    <div class="quiz-q" data-ok="0" data-explain="La séance demande d'ouvrir et d'utiliser le logiciel Filius pour créer l'architecture du réseau.">
+      <p class="qq-text">1. Quel logiciel est utilisé dans cette séance pour créer l'architecture du réseau du collège ?</p>
+      <div class="qq-opts">
+        <label class="qq-opt"><input type="radio" name="q0" value="0"><span>Filius</span></label>
+        <label class="qq-opt"><input type="radio" name="q0" value="1"><span>Scratch</span></label>
+        <label class="qq-opt"><input type="radio" name="q0" value="2"><span>Word</span></label>
+      </div>
+      <button class="btn btn-ghost qq-check" type="button">Vérifier ma réponse</button>
+      <div class="qq-feedback" aria-live="polite"></div>
+    </div>
+
+    <div class="quiz-q" data-ok="1" data-explain="Le réseau doit contenir une deuxième salle de technologie Techno2 contenant 3 ordinateurs.">
+      <p class="qq-text">2. Combien d'ordinateurs la salle de technologie Techno2 doit-elle contenir ?</p>
+      <div class="qq-opts">
+        <label class="qq-opt"><input type="radio" name="q1" value="0"><span>2</span></label>
+        <label class="qq-opt"><input type="radio" name="q1" value="1"><span>3</span></label>
+        <label class="qq-opt"><input type="radio" name="q1" value="2"><span>5</span></label>
+      </div>
+      <button class="btn btn-ghost qq-check" type="button">Vérifier ma réponse</button>
+      <div class="qq-feedback" aria-live="polite"></div>
+    </div>
+
+    <div class="quiz-q" data-ok="2" data-explain="Le cours précise qu'il faut un switch par salle de technologie (ex : switch-techno1).">
+      <p class="qq-text">3. Quel équipement faut-il placer dans chaque salle de technologie ?</p>
+      <div class="qq-opts">
+        <label class="qq-opt"><input type="radio" name="q2" value="0"><span>Un routeur</span></label>
+        <label class="qq-opt"><input type="radio" name="q2" value="1"><span>Un serveur</span></label>
+        <label class="qq-opt"><input type="radio" name="q2" value="2"><span>Un switch</span></label>
+      </div>
+      <button class="btn btn-ghost qq-check" type="button">Vérifier ma réponse</button>
+      <div class="qq-feedback" aria-live="polite"></div>
+    </div>
+
+    <div class="quiz-q" data-ok="0" data-explain="Le réseau doit contenir un serveur de fichiers et d'authentification.">
+      <p class="qq-text">4. Quel type de serveur doit être ajouté au réseau du collège ?</p>
+      <div class="qq-opts">
+        <label class="qq-opt"><input type="radio" name="q3" value="0"><span>Un serveur de fichiers et d'authentification</span></label>
+        <label class="qq-opt"><input type="radio" name="q3" value="1"><span>Un serveur de jeux</span></label>
+        <label class="qq-opt"><input type="radio" name="q3" value="2"><span>Un serveur de messagerie</span></label>
+      </div>
+      <button class="btn btn-ghost qq-check" type="button">Vérifier ma réponse</button>
+      <div class="qq-feedback" aria-live="polite"></div>
+    </div>
+  <div class="quiz-score" aria-live="polite"></div>
+</section>
     
     <nav class="pager">
       <a class="pg-prev" href="../seance-1/"><span class="pg-label">← Précédent</span><span class="pg-title">Séance 1</span></a>

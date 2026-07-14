@@ -130,6 +130,13 @@
     </div>
     
     
+<div class="student-bar">
+  <span class="sb-info">💾 Tes réponses sont enregistrées automatiquement sur cet appareil.</span>
+  <span class="sb-actions">
+    <button class="btn btn-ghost btn-sm" id="print-answers" type="button">🖨 Imprimer / PDF</button>
+    <button class="btn btn-ghost btn-sm" id="clear-answers" type="button">🗑 Tout effacer</button>
+  </span>
+</div>
     <div class="prose">
       <figure class="embed embed-video">
   <div class="embed-bar">
@@ -200,6 +207,55 @@
 
     </div>
     
+<section class="quiz" id="quiz">
+  <h2>🧠 Teste tes connaissances</h2>
+  <p class="quiz-hint">Réponds aux questions puis clique sur « Vérifier » — la correction s'affiche aussitôt.</p>
+  
+    <div class="quiz-q" data-ok="0" data-explain="Le cours indique que l'ordinateur A utilise le protocole TCP pour mettre en forme les données à envoyer.">
+      <p class="qq-text">1. Lorsqu'un ordinateur A veut envoyer des données à un ordinateur B, quel protocole met d'abord en forme les données à envoyer ?</p>
+      <div class="qq-opts">
+        <label class="qq-opt"><input type="radio" name="q0" value="0"><span>Le protocole TCP</span></label>
+        <label class="qq-opt"><input type="radio" name="q0" value="1"><span>Le protocole IP</span></label>
+        <label class="qq-opt"><input type="radio" name="q0" value="2"><span>Le protocole DNS</span></label>
+      </div>
+      <button class="btn btn-ghost qq-check" type="button">Vérifier ma réponse</button>
+      <div class="qq-feedback" aria-live="polite"></div>
+    </div>
+
+    <div class="quiz-q" data-ok="0" data-explain="Le protocole IP encapsule les données issues du protocole TCP afin de constituer des paquets de données.">
+      <p class="qq-text">2. Quel est le rôle du protocole IP dans l'envoi des données ?</p>
+      <div class="qq-opts">
+        <label class="qq-opt"><input type="radio" name="q1" value="0"><span>Il encapsule les données TCP pour créer des paquets de données</span></label>
+        <label class="qq-opt"><input type="radio" name="q1" value="1"><span>Il affiche la page web</span></label>
+        <label class="qq-opt"><input type="radio" name="q1" value="2"><span>Il gère les accusés de réception</span></label>
+      </div>
+      <button class="btn btn-ghost qq-check" type="button">Vérifier ma réponse</button>
+      <div class="qq-feedback" aria-live="polite"></div>
+    </div>
+
+    <div class="quiz-q" data-ok="0" data-explain="Quand B reçoit un paquet, il envoie un accusé de réception à A pour confirmer la bonne réception.">
+      <p class="qq-text">3. Comment le protocole TCP s'assure-t-il qu'un paquet est bien arrivé à destination ?</p>
+      <div class="qq-opts">
+        <label class="qq-opt"><input type="radio" name="q2" value="0"><span>Grâce à un accusé de réception envoyé par l'ordinateur B</span></label>
+        <label class="qq-opt"><input type="radio" name="q2" value="1"><span>En coupant la connexion</span></label>
+        <label class="qq-opt"><input type="radio" name="q2" value="2"><span>En changeant l'adresse IP</span></label>
+      </div>
+      <button class="btn btn-ghost qq-check" type="button">Vérifier ma réponse</button>
+      <div class="qq-feedback" aria-live="polite"></div>
+    </div>
+
+    <div class="quiz-q" data-ok="0" data-explain="Si A ne reçoit pas l'accusé de réception, après un temps prédéfini il renverra le paquet de données vers B.">
+      <p class="qq-text">4. Que fait l'ordinateur A s'il ne reçoit pas l'accusé de réception après un temps prédéfini ?</p>
+      <div class="qq-opts">
+        <label class="qq-opt"><input type="radio" name="q3" value="0"><span>Il renvoie le paquet de données vers l'ordinateur B</span></label>
+        <label class="qq-opt"><input type="radio" name="q3" value="1"><span>Il supprime définitivement les données</span></label>
+        <label class="qq-opt"><input type="radio" name="q3" value="2"><span>Il change de protocole</span></label>
+      </div>
+      <button class="btn btn-ghost qq-check" type="button">Vérifier ma réponse</button>
+      <div class="qq-feedback" aria-live="polite"></div>
+    </div>
+  <div class="quiz-score" aria-live="polite"></div>
+</section>
     
     <nav class="pager">
       

@@ -130,6 +130,13 @@
     </div>
     
     
+<div class="student-bar">
+  <span class="sb-info">💾 Tes réponses sont enregistrées automatiquement sur cet appareil.</span>
+  <span class="sb-actions">
+    <button class="btn btn-ghost btn-sm" id="print-answers" type="button">🖨 Imprimer / PDF</button>
+    <button class="btn btn-ghost btn-sm" id="clear-answers" type="button">🗑 Tout effacer</button>
+  </span>
+</div>
     <div class="prose">
       <h2>Exercice 1 : Trilatération dans le plan</h2>
 <p>En vacances chez sa grand-mère dans le petit village de Bougon dans les Deux-Sèvres, Léa s&#39;en va faire une balade dans la campagne en emportant une carte au 1/25 000 de la région. Au bout d&#39;un certain temps, elle ne sait plus vraiment où elle est</p>
@@ -209,6 +216,33 @@
 
     </div>
     
+<section class="quiz" id="quiz">
+  <h2>🧠 Teste tes connaissances</h2>
+  <p class="quiz-hint">Réponds aux questions puis clique sur « Vérifier » — la correction s'affiche aussitôt.</p>
+  
+    <div class="quiz-q" data-ok="1" data-explain="L'énoncé précise que le son se propage dans l'air à la vitesse de 340 m/s.">
+      <p class="qq-text">1. À quelle vitesse le son se propage-t-il dans l'air selon l'exercice de trilatération ?</p>
+      <div class="qq-opts">
+        <label class="qq-opt"><input type="radio" name="q0" value="0"><span>300 m/s</span></label>
+        <label class="qq-opt"><input type="radio" name="q0" value="1"><span>340 m/s</span></label>
+        <label class="qq-opt"><input type="radio" name="q0" value="2"><span>3400 m/s</span></label>
+      </div>
+      <button class="btn btn-ghost qq-check" type="button">Vérifier ma réponse</button>
+      <div class="qq-feedback" aria-live="polite"></div>
+    </div>
+
+    <div class="quiz-q" data-ok="1" data-explain="L'indice 3 rappelle que l'ensemble des points situés à une même distance d'un autre point est un cercle.">
+      <p class="qq-text">2. En géométrie, l'ensemble des points situés à une même distance d'un point donné forme :</p>
+      <div class="qq-opts">
+        <label class="qq-opt"><input type="radio" name="q1" value="0"><span>Une droite</span></label>
+        <label class="qq-opt"><input type="radio" name="q1" value="1"><span>Un cercle</span></label>
+        <label class="qq-opt"><input type="radio" name="q1" value="2"><span>Un triangle</span></label>
+      </div>
+      <button class="btn btn-ghost qq-check" type="button">Vérifier ma réponse</button>
+      <div class="qq-feedback" aria-live="polite"></div>
+    </div>
+  <div class="quiz-score" aria-live="polite"></div>
+</section>
     
     <nav class="pager">
       <a class="pg-prev" href="../seance-1/"><span class="pg-label">← Précédent</span><span class="pg-title">Séance 1 - Les bases de la cartographie</span></a>

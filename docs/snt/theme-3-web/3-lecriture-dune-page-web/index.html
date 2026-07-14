@@ -130,6 +130,13 @@
     </div>
     
     
+<div class="student-bar">
+  <span class="sb-info">💾 Tes réponses sont enregistrées automatiquement sur cet appareil.</span>
+  <span class="sb-actions">
+    <button class="btn btn-ghost btn-sm" id="print-answers" type="button">🖨 Imprimer / PDF</button>
+    <button class="btn btn-ghost btn-sm" id="clear-answers" type="button">🗑 Tout effacer</button>
+  </span>
+</div>
     <div class="prose">
       <h3>4.1.Le langage HTML</h3>
 <p>La programmation d’une page Web repose sur l’utilisation d’un langage de description appelé HTML pour (HyperText Markup Language).</p>
@@ -199,6 +206,59 @@
 
     </div>
     
+<section class="quiz" id="quiz">
+  <h2>🧠 Teste tes connaissances</h2>
+  <p class="quiz-hint">Réponds aux questions puis clique sur « Vérifier » — la correction s'affiche aussitôt.</p>
+  
+    <div class="quiz-q" data-ok="0" data-explain="Le cours indique que HTML signifie « HyperText Markup Language ».">
+      <p class="qq-text">1. Que signifie le sigle HTML ?</p>
+      <div class="qq-opts">
+        <label class="qq-opt"><input type="radio" name="q0" value="0"><span>HyperText Markup Language</span></label>
+        <label class="qq-opt"><input type="radio" name="q0" value="1"><span>High Text Modern Language</span></label>
+        <label class="qq-opt"><input type="radio" name="q0" value="2"><span>Home Tool Markup Language</span></label>
+        <label class="qq-opt"><input type="radio" name="q0" value="3"><span>HyperText Machine Language</span></label>
+      </div>
+      <button class="btn btn-ghost qq-check" type="button">Vérifier ma réponse</button>
+      <div class="qq-feedback" aria-live="polite"></div>
+    </div>
+
+    <div class="quiz-q" data-ok="1" data-explain="« Le langage HTML utilise des balises pour délimiter le début et la fin de chaque instruction lue par le navigateur. »">
+      <p class="qq-text">2. À quoi servent les balises en HTML ?</p>
+      <div class="qq-opts">
+        <label class="qq-opt"><input type="radio" name="q1" value="0"><span>À colorer le texte de la page</span></label>
+        <label class="qq-opt"><input type="radio" name="q1" value="1"><span>À délimiter le début et la fin de chaque instruction lue par le navigateur</span></label>
+        <label class="qq-opt"><input type="radio" name="q1" value="2"><span>À enregistrer la page sur le serveur</span></label>
+        <label class="qq-opt"><input type="radio" name="q1" value="3"><span>À sécuriser la connexion</span></label>
+      </div>
+      <button class="btn btn-ghost qq-check" type="button">Vérifier ma réponse</button>
+      <div class="qq-feedback" aria-live="polite"></div>
+    </div>
+
+    <div class="quiz-q" data-ok="2" data-explain="Le cours indique : « une liste ordonnée commence par la balise &lt;ol&gt; ».">
+      <p class="qq-text">3. Par quelle balise commence une liste ordonnée ?</p>
+      <div class="qq-opts">
+        <label class="qq-opt"><input type="radio" name="q2" value="0"><span>&lt;ul&gt;</span></label>
+        <label class="qq-opt"><input type="radio" name="q2" value="1"><span>&lt;li&gt;</span></label>
+        <label class="qq-opt"><input type="radio" name="q2" value="2"><span>&lt;ol&gt;</span></label>
+        <label class="qq-opt"><input type="radio" name="q2" value="3"><span>&lt;h1&gt;</span></label>
+      </div>
+      <button class="btn btn-ghost qq-check" type="button">Vérifier ma réponse</button>
+      <div class="qq-feedback" aria-live="polite"></div>
+    </div>
+
+    <div class="quiz-q" data-ok="1" data-explain="Le cours précise : « type=&quot;A&quot; la liste sera lettré par des majuscules ».">
+      <p class="qq-text">4. Quel argument de la balise &lt;ol&gt; permet d'obtenir une liste numérotée par des majuscules (A, B, C) ?</p>
+      <div class="qq-opts">
+        <label class="qq-opt"><input type="radio" name="q3" value="0"><span>type=&quot;1&quot;</span></label>
+        <label class="qq-opt"><input type="radio" name="q3" value="1"><span>type=&quot;A&quot;</span></label>
+        <label class="qq-opt"><input type="radio" name="q3" value="2"><span>type=&quot;a&quot;</span></label>
+        <label class="qq-opt"><input type="radio" name="q3" value="3"><span>type=&quot;i&quot;</span></label>
+      </div>
+      <button class="btn btn-ghost qq-check" type="button">Vérifier ma réponse</button>
+      <div class="qq-feedback" aria-live="polite"></div>
+    </div>
+  <div class="quiz-score" aria-live="polite"></div>
+</section>
     
     <nav class="pager">
       <a class="pg-prev" href="../2-fonctionnement-du-web/"><span class="pg-label">← Précédent</span><span class="pg-title">2.Fonctionnement du web</span></a>

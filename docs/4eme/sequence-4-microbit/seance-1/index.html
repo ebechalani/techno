@@ -168,6 +168,13 @@
     </div>
     
     
+<div class="student-bar">
+  <span class="sb-info">💾 Tes réponses sont enregistrées automatiquement sur cet appareil.</span>
+  <span class="sb-actions">
+    <button class="btn btn-ghost btn-sm" id="print-answers" type="button">🖨 Imprimer / PDF</button>
+    <button class="btn btn-ghost btn-sm" id="clear-answers" type="button">🗑 Tout effacer</button>
+  </span>
+</div>
     <div class="prose">
       <h2>Peut-on programmer un micro-ordinateur de poche ?</h2>
 <p>Il existe des ordinateurs si petits qu&#39;ils tiennent dans la poche, les smartphones, mais aussi des micro-ordinateurs plus simples et beaucoup moins coûteux que l&#39;on peut s&#39;amuser à programmer pour créer des tas d&#39;applications. Nous allons en tester un.</p>
@@ -192,6 +199,59 @@
 
     </div>
     
+<section class="quiz" id="quiz">
+  <h2>🧠 Teste tes connaissances</h2>
+  <p class="quiz-hint">Réponds aux questions puis clique sur « Vérifier » — la correction s'affiche aussitôt.</p>
+  
+    <div class="quiz-q" data-ok="1" data-explain="Le cours indique que la carte à microcontrôleur a été conçue en 2015 par la BBC : le « micro:bit ».">
+      <p class="qq-text">1. Par qui et en quelle année la carte micro:bit a-t-elle été conçue ?</p>
+      <div class="qq-opts">
+        <label class="qq-opt"><input type="radio" name="q0" value="0"><span>Par Apple en 2007</span></label>
+        <label class="qq-opt"><input type="radio" name="q0" value="1"><span>Par la BBC en 2015</span></label>
+        <label class="qq-opt"><input type="radio" name="q0" value="2"><span>Par Arduino en 2005</span></label>
+        <label class="qq-opt"><input type="radio" name="q0" value="3"><span>Par la NASA en 2015</span></label>
+      </div>
+      <button class="btn btn-ghost qq-check" type="button">Vérifier ma réponse</button>
+      <div class="qq-feedback" aria-live="polite"></div>
+    </div>
+
+    <div class="quiz-q" data-ok="0" data-explain="Le texte précise que cette carte électronique mesure seulement 5 cm sur 4.">
+      <p class="qq-text">2. Quelles sont approximativement les dimensions de la carte micro:bit ?</p>
+      <div class="qq-opts">
+        <label class="qq-opt"><input type="radio" name="q1" value="0"><span>5 cm sur 4</span></label>
+        <label class="qq-opt"><input type="radio" name="q1" value="1"><span>20 cm sur 15</span></label>
+        <label class="qq-opt"><input type="radio" name="q1" value="2"><span>1 cm sur 1</span></label>
+        <label class="qq-opt"><input type="radio" name="q1" value="3"><span>10 cm sur 8</span></label>
+      </div>
+      <button class="btn btn-ghost qq-check" type="button">Vérifier ma réponse</button>
+      <div class="qq-feedback" aria-live="polite"></div>
+    </div>
+
+    <div class="quiz-q" data-ok="1" data-explain="Le cours dit qu'il comporte suffisamment de composants pour être considéré comme un micro-ordinateur et permettre de s'initier à la programmation.">
+      <p class="qq-text">3. Pourquoi le micro:bit peut-il être considéré comme un micro-ordinateur ?</p>
+      <div class="qq-opts">
+        <label class="qq-opt"><input type="radio" name="q2" value="0"><span>Parce qu'il est très cher</span></label>
+        <label class="qq-opt"><input type="radio" name="q2" value="1"><span>Parce qu'il comporte suffisamment de composants</span></label>
+        <label class="qq-opt"><input type="radio" name="q2" value="2"><span>Parce qu'il est aussi grand qu'un ordinateur</span></label>
+        <label class="qq-opt"><input type="radio" name="q2" value="3"><span>Parce qu'il fonctionne sans électricité</span></label>
+      </div>
+      <button class="btn btn-ghost qq-check" type="button">Vérifier ma réponse</button>
+      <div class="qq-feedback" aria-live="polite"></div>
+    </div>
+
+    <div class="quiz-q" data-ok="0" data-explain="Le texte cite les smartphones comme des ordinateurs si petits qu'ils tiennent dans la poche.">
+      <p class="qq-text">4. D'après le texte, quel est un exemple d'ordinateur si petit qu'il tient dans la poche ?</p>
+      <div class="qq-opts">
+        <label class="qq-opt"><input type="radio" name="q3" value="0"><span>Le smartphone</span></label>
+        <label class="qq-opt"><input type="radio" name="q3" value="1"><span>L'imprimante</span></label>
+        <label class="qq-opt"><input type="radio" name="q3" value="2"><span>Le vidéoprojecteur</span></label>
+        <label class="qq-opt"><input type="radio" name="q3" value="3"><span>Le serveur</span></label>
+      </div>
+      <button class="btn btn-ghost qq-check" type="button">Vérifier ma réponse</button>
+      <div class="qq-feedback" aria-live="polite"></div>
+    </div>
+  <div class="quiz-score" aria-live="polite"></div>
+</section>
     
     <nav class="pager">
       

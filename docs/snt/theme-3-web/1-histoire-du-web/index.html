@@ -130,6 +130,13 @@
     </div>
     
     
+<div class="student-bar">
+  <span class="sb-info">💾 Tes réponses sont enregistrées automatiquement sur cet appareil.</span>
+  <span class="sb-actions">
+    <button class="btn btn-ghost btn-sm" id="print-answers" type="button">🖨 Imprimer / PDF</button>
+    <button class="btn btn-ghost btn-sm" id="clear-answers" type="button">🗑 Tout effacer</button>
+  </span>
+</div>
     <div class="prose">
       <h2>1.Une histoire du web.</h2>
 <p>Regardez la vidéo suivante:</p>
@@ -169,6 +176,59 @@
 
     </div>
     
+<section class="quiz" id="quiz">
+  <h2>🧠 Teste tes connaissances</h2>
+  <p class="quiz-hint">Réponds aux questions puis clique sur « Vérifier » — la correction s'affiche aussitôt.</p>
+  
+    <div class="quiz-q" data-ok="1" data-explain="Le cours indique : « Internet et le Web sont deux choses complètement différentes. »">
+      <p class="qq-text">1. D'après le bilan du cours, quelle affirmation est correcte ?</p>
+      <div class="qq-opts">
+        <label class="qq-opt"><input type="radio" name="q0" value="0"><span>Internet et le Web sont exactement la même chose</span></label>
+        <label class="qq-opt"><input type="radio" name="q0" value="1"><span>Internet et le Web sont deux choses complètement différentes</span></label>
+        <label class="qq-opt"><input type="radio" name="q0" value="2"><span>Le Web contient Internet</span></label>
+        <label class="qq-opt"><input type="radio" name="q0" value="3"><span>Internet est un logiciel du Web</span></label>
+      </div>
+      <button class="btn btn-ghost qq-check" type="button">Vérifier ma réponse</button>
+      <div class="qq-feedback" aria-live="polite"></div>
+    </div>
+
+    <div class="quiz-q" data-ok="2" data-explain="Le cours précise : « Les tuyaux, c'est Internet. L'eau chaude, c'est le Web. »">
+      <p class="qq-text">2. Dans l'image de la plomberie utilisée pour mémoriser, que représentent les tuyaux ?</p>
+      <div class="qq-opts">
+        <label class="qq-opt"><input type="radio" name="q1" value="0"><span>Le Web</span></label>
+        <label class="qq-opt"><input type="radio" name="q1" value="1"><span>Les emails</span></label>
+        <label class="qq-opt"><input type="radio" name="q1" value="2"><span>Internet</span></label>
+        <label class="qq-opt"><input type="radio" name="q1" value="3"><span>La téléphonie</span></label>
+      </div>
+      <button class="btn btn-ghost qq-check" type="button">Vérifier ma réponse</button>
+      <div class="qq-feedback" aria-live="polite"></div>
+    </div>
+
+    <div class="quiz-q" data-ok="0" data-explain="Le cours définit le lien hypertexte comme « un lien inclus dans un texte ou une image d'une page web qui cible une autre page ou une autre ressource ».">
+      <p class="qq-text">3. Qu'est-ce qu'un lien hypertexte selon le cours ?</p>
+      <div class="qq-opts">
+        <label class="qq-opt"><input type="radio" name="q2" value="0"><span>Un lien inclus dans un texte ou une image d'une page web qui cible une autre page ou ressource</span></label>
+        <label class="qq-opt"><input type="radio" name="q2" value="1"><span>Un logiciel qui affiche les pages web</span></label>
+        <label class="qq-opt"><input type="radio" name="q2" value="2"><span>Un câble reliant deux ordinateurs</span></label>
+        <label class="qq-opt"><input type="radio" name="q2" value="3"><span>Un fichier stocké sur le serveur</span></label>
+      </div>
+      <button class="btn btn-ghost qq-check" type="button">Vérifier ma réponse</button>
+      <div class="qq-feedback" aria-live="polite"></div>
+    </div>
+
+    <div class="quiz-q" data-ok="1" data-explain="Le cours indique que ces liens « tissent un réseau d'informations : le World Wide Web ».">
+      <p class="qq-text">4. Le réseau d'informations tissé par les liens hypertextes s'appelle :</p>
+      <div class="qq-opts">
+        <label class="qq-opt"><input type="radio" name="q3" value="0"><span>Internet</span></label>
+        <label class="qq-opt"><input type="radio" name="q3" value="1"><span>Le World Wide Web</span></label>
+        <label class="qq-opt"><input type="radio" name="q3" value="2"><span>Le protocole HTTP</span></label>
+        <label class="qq-opt"><input type="radio" name="q3" value="3"><span>Le navigateur</span></label>
+      </div>
+      <button class="btn btn-ghost qq-check" type="button">Vérifier ma réponse</button>
+      <div class="qq-feedback" aria-live="polite"></div>
+    </div>
+  <div class="quiz-score" aria-live="polite"></div>
+</section>
     
     <nav class="pager">
       

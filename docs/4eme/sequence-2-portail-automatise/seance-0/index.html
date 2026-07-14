@@ -168,6 +168,13 @@
     </div>
     
     
+<div class="student-bar">
+  <span class="sb-info">💾 Tes réponses sont enregistrées automatiquement sur cet appareil.</span>
+  <span class="sb-actions">
+    <button class="btn btn-ghost btn-sm" id="print-answers" type="button">🖨 Imprimer / PDF</button>
+    <button class="btn btn-ghost btn-sm" id="clear-answers" type="button">🗑 Tout effacer</button>
+  </span>
+</div>
     <div class="prose">
       <p>Monsieur DURAND possède une maison avec une allée qui permet d’accéder à son garage. Parfois, il ne peut pas ranger sa voiture dans son garage le soir, car certaines voitures utilisent son allée comme lieu de stationnement.</p>
 <p><img src="../../../assets/img/4eme__sequence-2-portail-automatise__seance-0-situation-declenchante/01.png" alt=""></p>
@@ -179,6 +186,33 @@
 
     </div>
     
+<section class="quiz" id="quiz">
+  <h2>🧠 Teste tes connaissances</h2>
+  <p class="quiz-hint">Réponds aux questions puis clique sur « Vérifier » — la correction s'affiche aussitôt.</p>
+  
+    <div class="quiz-q" data-ok="0" data-explain="Le texte précise que certaines voitures utilisent son allée comme lieu de stationnement.">
+      <p class="qq-text">1. Pourquoi M. Durand ne peut-il parfois pas ranger sa voiture dans son garage le soir ?</p>
+      <div class="qq-opts">
+        <label class="qq-opt"><input type="radio" name="q0" value="0"><span>Parce que certaines voitures utilisent son allée comme lieu de stationnement</span></label>
+        <label class="qq-opt"><input type="radio" name="q0" value="1"><span>Parce que son garage est trop petit pour sa voiture</span></label>
+        <label class="qq-opt"><input type="radio" name="q0" value="2"><span>Parce que son portail est en panne</span></label>
+      </div>
+      <button class="btn btn-ghost qq-check" type="button">Vérifier ma réponse</button>
+      <div class="qq-feedback" aria-live="polite"></div>
+    </div>
+
+    <div class="quiz-q" data-ok="0" data-explain="Le texte indique que l'allée permet d'accéder à son garage.">
+      <p class="qq-text">2. À quoi sert l'allée de la maison de M. Durand ?</p>
+      <div class="qq-opts">
+        <label class="qq-opt"><input type="radio" name="q1" value="0"><span>À accéder à son garage</span></label>
+        <label class="qq-opt"><input type="radio" name="q1" value="1"><span>À stationner les voitures des voisins</span></label>
+        <label class="qq-opt"><input type="radio" name="q1" value="2"><span>À entreposer du matériel de jardin</span></label>
+      </div>
+      <button class="btn btn-ghost qq-check" type="button">Vérifier ma réponse</button>
+      <div class="qq-feedback" aria-live="polite"></div>
+    </div>
+  <div class="quiz-score" aria-live="polite"></div>
+</section>
     
     <nav class="pager">
       

@@ -130,6 +130,13 @@
     </div>
     
     
+<div class="student-bar">
+  <span class="sb-info">💾 Tes réponses sont enregistrées automatiquement sur cet appareil.</span>
+  <span class="sb-actions">
+    <button class="btn btn-ghost btn-sm" id="print-answers" type="button">🖨 Imprimer / PDF</button>
+    <button class="btn btn-ghost btn-sm" id="clear-answers" type="button">🗑 Tout effacer</button>
+  </span>
+</div>
     <div class="prose">
       <h3>1. L&#39;oeil et le capteur photographique</h3>
 <p><strong>La vision humaine</strong></p>
@@ -255,6 +262,59 @@
 
     </div>
     
+<section class="quiz" id="quiz">
+  <h2>🧠 Teste tes connaissances</h2>
+  <p class="quiz-hint">Réponds aux questions puis clique sur « Vérifier » — la correction s'affiche aussitôt.</p>
+  
+    <div class="quiz-q" data-ok="0" data-explain="Le cours indique que la rétine comprend des cellules sensibles à la lumière, les cônes, qui transforment l'énergie lumineuse en impulsion électrique.">
+      <p class="qq-text">1. Dans l'oeil humain, quelles cellules de la rétine sont sensibles à la lumière et transforment l'énergie lumineuse en impulsion électrique ?</p>
+      <div class="qq-opts">
+        <label class="qq-opt"><input type="radio" name="q0" value="0"><span>Les cônes</span></label>
+        <label class="qq-opt"><input type="radio" name="q0" value="1"><span>Le cristallin</span></label>
+        <label class="qq-opt"><input type="radio" name="q0" value="2"><span>Le nerf optique</span></label>
+        <label class="qq-opt"><input type="radio" name="q0" value="3"><span>Les photosites</span></label>
+      </div>
+      <button class="btn btn-ghost qq-check" type="button">Vérifier ma réponse</button>
+      <div class="qq-feedback" aria-live="polite"></div>
+    </div>
+
+    <div class="quiz-q" data-ok="0" data-explain="Le cours précise que chaque photosite est placé derrière un filtre qui ne laisse passer que les rayons d'une seule couleur : rouge, vert ou bleu.">
+      <p class="qq-text">2. Sur un capteur photographique, comment les photosites parviennent-ils à distinguer les couleurs ?</p>
+      <div class="qq-opts">
+        <label class="qq-opt"><input type="radio" name="q1" value="0"><span>Chaque photosite est placé derrière un filtre ne laissant passer qu'une seule couleur (rouge, vert ou bleu)</span></label>
+        <label class="qq-opt"><input type="radio" name="q1" value="1"><span>Chaque photosite mesure directement les trois couleurs à la fois</span></label>
+        <label class="qq-opt"><input type="radio" name="q1" value="2"><span>Les photosites changent de forme selon la couleur reçue</span></label>
+        <label class="qq-opt"><input type="radio" name="q1" value="3"><span>Le processeur colore les photosites après la prise de vue</span></label>
+      </div>
+      <button class="btn btn-ghost qq-check" type="button">Vérifier ma réponse</button>
+      <div class="qq-feedback" aria-live="polite"></div>
+    </div>
+
+    <div class="quiz-q" data-ok="0" data-explain="Le cours indique que les cônes sensibles au vert sont les plus présents chez l'être humain, ce qui justifie les 2 verts par carré (2 verts, 1 rouge, 1 bleu).">
+      <p class="qq-text">3. Pourquoi place-t-on sur un capteur deux fois plus de photosites verts ?</p>
+      <div class="qq-opts">
+        <label class="qq-opt"><input type="radio" name="q2" value="0"><span>Parce que les cônes sensibles au vert sont les plus présents chez l'être humain</span></label>
+        <label class="qq-opt"><input type="radio" name="q2" value="1"><span>Parce que le vert est plus facile à filtrer</span></label>
+        <label class="qq-opt"><input type="radio" name="q2" value="2"><span>Parce que le vert consomme moins d'électricité</span></label>
+        <label class="qq-opt"><input type="radio" name="q2" value="3"><span>Parce que le vert occupe moins de mémoire</span></label>
+      </div>
+      <button class="btn btn-ghost qq-check" type="button">Vérifier ma réponse</button>
+      <div class="qq-feedback" aria-live="polite"></div>
+    </div>
+
+    <div class="quiz-q" data-ok="0" data-explain="Le cours donne l'exemple d'une image de 300 × 200 pixels dont la définition est de 60 000 pixels, soit le produit largeur × hauteur.">
+      <p class="qq-text">4. Que représente la définition d'une image numérique ?</p>
+      <div class="qq-opts">
+        <label class="qq-opt"><input type="radio" name="q3" value="0"><span>Le nombre total de pixels (largeur × hauteur)</span></label>
+        <label class="qq-opt"><input type="radio" name="q3" value="1"><span>Le poids de l'image en octets</span></label>
+        <label class="qq-opt"><input type="radio" name="q3" value="2"><span>Le nombre de couleurs possibles par pixel</span></label>
+        <label class="qq-opt"><input type="radio" name="q3" value="3"><span>La taille de l'image en centimètres</span></label>
+      </div>
+      <button class="btn btn-ghost qq-check" type="button">Vérifier ma réponse</button>
+      <div class="qq-feedback" aria-live="polite"></div>
+    </div>
+  <div class="quiz-score" aria-live="polite"></div>
+</section>
     
     <nav class="pager">
       

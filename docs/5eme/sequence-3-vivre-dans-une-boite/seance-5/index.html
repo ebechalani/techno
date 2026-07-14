@@ -138,6 +138,13 @@
     </div>
     
     
+<div class="student-bar">
+  <span class="sb-info">💾 Tes réponses sont enregistrées automatiquement sur cet appareil.</span>
+  <span class="sb-actions">
+    <button class="btn btn-ghost btn-sm" id="print-answers" type="button">🖨 Imprimer / PDF</button>
+    <button class="btn btn-ghost btn-sm" id="clear-answers" type="button">🗑 Tout effacer</button>
+  </span>
+</div>
     <div class="prose">
       <figure class="embed embed-video">
   <div class="embed-bar">
@@ -168,6 +175,33 @@
 
     </div>
     
+<section class="quiz" id="quiz">
+  <h2>🧠 Teste tes connaissances</h2>
+  <p class="quiz-hint">Réponds aux questions puis clique sur « Vérifier » — la correction s'affiche aussitôt.</p>
+  
+    <div class="quiz-q" data-ok="0" data-explain="La problématique retenue est : « Comment isoler le conteneur des bruits extérieurs, des bruits entre les différentes pièces ? »">
+      <p class="qq-text">1. Quel est le problème à résoudre dans cette séance sur le bruit ?</p>
+      <div class="qq-opts">
+        <label class="qq-opt"><input type="radio" name="q0" value="0"><span>Comment isoler le conteneur des bruits extérieurs et entre les pièces ?</span></label>
+        <label class="qq-opt"><input type="radio" name="q0" value="1"><span>Comment chauffer le conteneur en hiver ?</span></label>
+        <label class="qq-opt"><input type="radio" name="q0" value="2"><span>Comment éclairer le conteneur la nuit ?</span></label>
+      </div>
+      <button class="btn btn-ghost qq-check" type="button">Vérifier ma réponse</button>
+      <div class="qq-feedback" aria-live="polite"></div>
+    </div>
+
+    <div class="quiz-q" data-ok="0" data-explain="Les hypothèses retenues sont d'utiliser des matériaux isolants et d'« installer de la laine de verre, des doubles vitrages ».">
+      <p class="qq-text">2. Parmi ces hypothèses retenues, laquelle permet d'isoler du bruit ?</p>
+      <div class="qq-opts">
+        <label class="qq-opt"><input type="radio" name="q1" value="0"><span>Installer de la laine de verre et des doubles vitrages</span></label>
+        <label class="qq-opt"><input type="radio" name="q1" value="1"><span>Ajouter des fenêtres plus grandes</span></label>
+        <label class="qq-opt"><input type="radio" name="q1" value="2"><span>Peindre les murs en blanc</span></label>
+      </div>
+      <button class="btn btn-ghost qq-check" type="button">Vérifier ma réponse</button>
+      <div class="qq-feedback" aria-live="polite"></div>
+    </div>
+  <div class="quiz-score" aria-live="polite"></div>
+</section>
     
     <nav class="pager">
       <a class="pg-prev" href="../synthese/"><span class="pg-label">← Précédent</span><span class="pg-title">Synthèse</span></a>

@@ -130,6 +130,13 @@
     </div>
     
     
+<div class="student-bar">
+  <span class="sb-info">💾 Tes réponses sont enregistrées automatiquement sur cet appareil.</span>
+  <span class="sb-actions">
+    <button class="btn btn-ghost btn-sm" id="print-answers" type="button">🖨 Imprimer / PDF</button>
+    <button class="btn btn-ghost btn-sm" id="clear-answers" type="button">🗑 Tout effacer</button>
+  </span>
+</div>
     <div class="prose">
       <h2>Les bases de la cartographie</h2>
 <h2>Présentation du thème : Localisation, cartographie et mobilité</h2>
@@ -250,6 +257,55 @@
 
     </div>
     
+<section class="quiz" id="quiz">
+  <h2>🧠 Teste tes connaissances</h2>
+  <p class="quiz-hint">Réponds aux questions puis clique sur « Vérifier » — la correction s'affiche aussitôt.</p>
+  
+    <div class="quiz-q" data-ok="0" data-explain="Le cours définit la cartographie comme la représentation graphique des territoires et de leur relief.">
+      <p class="qq-text">1. Que représente la cartographie selon la définition du cours ?</p>
+      <div class="qq-opts">
+        <label class="qq-opt"><input type="radio" name="q0" value="0"><span>La représentation graphique des territoires et de leur relief</span></label>
+        <label class="qq-opt"><input type="radio" name="q0" value="1"><span>L'étude des satellites GPS</span></label>
+        <label class="qq-opt"><input type="radio" name="q0" value="2"><span>Le calcul de la vitesse des ondes radio</span></label>
+      </div>
+      <button class="btn btn-ghost qq-check" type="button">Vérifier ma réponse</button>
+      <div class="qq-feedback" aria-live="polite"></div>
+    </div>
+
+    <div class="quiz-q" data-ok="1" data-explain="Le cours indique que 1 cm représente 1 000 000 cm, soit 10 km.">
+      <p class="qq-text">2. Sur une carte à l'échelle 1/1 000 000, à quelle distance réelle correspond 1 cm sur la carte ?</p>
+      <div class="qq-opts">
+        <label class="qq-opt"><input type="radio" name="q1" value="0"><span>1 km</span></label>
+        <label class="qq-opt"><input type="radio" name="q1" value="1"><span>10 km</span></label>
+        <label class="qq-opt"><input type="radio" name="q1" value="2"><span>100 km</span></label>
+      </div>
+      <button class="btn btn-ghost qq-check" type="button">Vérifier ma réponse</button>
+      <div class="qq-feedback" aria-live="polite"></div>
+    </div>
+
+    <div class="quiz-q" data-ok="1" data-explain="Le cours précise qu'une carte vectorielle comporte des objets positionnés selon leurs coordonnées.">
+      <p class="qq-text">3. Qu'est-ce qui caractérise une carte vectorielle ?</p>
+      <div class="qq-opts">
+        <label class="qq-opt"><input type="radio" name="q2" value="0"><span>C'est une image point par point dessinée par un cartographe</span></label>
+        <label class="qq-opt"><input type="radio" name="q2" value="1"><span>Elle comporte des objets positionnés selon leurs coordonnées</span></label>
+        <label class="qq-opt"><input type="radio" name="q2" value="2"><span>Elle ne permet aucun zoom</span></label>
+      </div>
+      <button class="btn btn-ghost qq-check" type="button">Vérifier ma réponse</button>
+      <div class="qq-feedback" aria-live="polite"></div>
+    </div>
+
+    <div class="quiz-q" data-ok="1" data-explain="Le cours indique qu'une latitude positive donne le Nord et une latitude négative donne le Sud.">
+      <p class="qq-text">4. Une latitude négative indique quelle direction ?</p>
+      <div class="qq-opts">
+        <label class="qq-opt"><input type="radio" name="q3" value="0"><span>Nord</span></label>
+        <label class="qq-opt"><input type="radio" name="q3" value="1"><span>Sud</span></label>
+        <label class="qq-opt"><input type="radio" name="q3" value="2"><span>Est</span></label>
+      </div>
+      <button class="btn btn-ghost qq-check" type="button">Vérifier ma réponse</button>
+      <div class="qq-feedback" aria-live="polite"></div>
+    </div>
+  <div class="quiz-score" aria-live="polite"></div>
+</section>
     
     <nav class="pager">
       

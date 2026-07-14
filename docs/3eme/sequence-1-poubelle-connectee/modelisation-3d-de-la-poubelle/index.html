@@ -127,6 +127,13 @@
     </div>
     
     
+<div class="student-bar">
+  <span class="sb-info">💾 Tes réponses sont enregistrées automatiquement sur cet appareil.</span>
+  <span class="sb-actions">
+    <button class="btn btn-ghost btn-sm" id="print-answers" type="button">🖨 Imprimer / PDF</button>
+    <button class="btn btn-ghost btn-sm" id="clear-answers" type="button">🗑 Tout effacer</button>
+  </span>
+</div>
     <div class="prose">
       <p>Connectez vous à : lm-administration pour regarder les vidéos ci-dessous</p>
 <p>id: labo.eval</p>
@@ -157,6 +164,33 @@
 
     </div>
     
+<section class="quiz" id="quiz">
+  <h2>🧠 Teste tes connaissances</h2>
+  <p class="quiz-hint">Réponds aux questions puis clique sur « Vérifier » — la correction s'affiche aussitôt.</p>
+  
+    <div class="quiz-q" data-ok="0" data-explain="La consigne demande de « lancer Tinkercad » pour la modélisation 3D.">
+      <p class="qq-text">1. Quel logiciel est utilisé pour réaliser la modélisation 3D de la poubelle ?</p>
+      <div class="qq-opts">
+        <label class="qq-opt"><input type="radio" name="q0" value="0"><span>Tinkercad</span></label>
+        <label class="qq-opt"><input type="radio" name="q0" value="1"><span>Excel</span></label>
+        <label class="qq-opt"><input type="radio" name="q0" value="2"><span>Photoshop</span></label>
+      </div>
+      <button class="btn btn-ghost qq-check" type="button">Vérifier ma réponse</button>
+      <div class="qq-feedback" aria-live="polite"></div>
+    </div>
+
+    <div class="quiz-q" data-ok="1" data-explain="Le cours indique de « saisir le code de la classe : 1LT3GM14K6FY » pour accéder à Tinkercad.">
+      <p class="qq-text">2. Comment rejoindre la classe de modélisation 3D dans Tinkercad ?</p>
+      <div class="qq-opts">
+        <label class="qq-opt"><input type="radio" name="q1" value="0"><span>En créant un nouveau compte administrateur</span></label>
+        <label class="qq-opt"><input type="radio" name="q1" value="1"><span>En saisissant le code de la classe 1LT3GM14K6FY</span></label>
+        <label class="qq-opt"><input type="radio" name="q1" value="2"><span>En envoyant un e-mail au professeur</span></label>
+      </div>
+      <button class="btn btn-ghost qq-check" type="button">Vérifier ma réponse</button>
+      <div class="qq-feedback" aria-live="polite"></div>
+    </div>
+  <div class="quiz-score" aria-live="polite"></div>
+</section>
     <section class="resources"><h2>Liens et ressources</h2><div class="res-grid">
 <a class="res-card res-app" href="https://www.tinkercad.com/joinclass/1LT3GM14K6FY" target="_blank" rel="noopener">
   <span class="res-icon">🧩</span>

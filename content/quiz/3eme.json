@@ -1,0 +1,150 @@
+{
+  "sequence-1-poubelle-connectee/seance-1": [
+    {
+      "q": "Combien de fonctions techniques de la poubelle connectée l'élève doit-il trouver ?",
+      "options": [
+        "3 fonctions",
+        "5 fonctions",
+        "10 fonctions"
+      ],
+      "answer": 1,
+      "explain": "Le critère de réussite indique : « J'ai trouvé 5 fonctions techniques de la poubelle connectée »."
+    },
+    {
+      "q": "Sous quelle forme faut-il décrire le fonctionnement général du système ?",
+      "options": [
+        "Sous forme de chaîne d'information et d'énergie",
+        "Sous forme de dessin technique coté",
+        "Sous forme de tableau de prix"
+      ],
+      "answer": 0,
+      "explain": "Le travail demande de « décrire le fonctionnement général sous forme de chaîne d'information et d'énergie »."
+    },
+    {
+      "q": "Sous quelle forme faut-il proposer une description du fonctionnement du système par étapes logiques ?",
+      "options": [
+        "Un algorigramme",
+        "Une facture",
+        "Une photographie"
+      ],
+      "answer": 0,
+      "explain": "Il faut « proposer une description du fonctionnement du système sous forme d'un algorigramme »."
+    },
+    {
+      "q": "Pour chaque fonction technique trouvée, que doit-on associer ?",
+      "options": [
+        "Le prix de fabrication",
+        "La solution proposée par le concepteur",
+        "Le nom du fournisseur"
+      ],
+      "answer": 1,
+      "explain": "Le critère précise : « J'ai associé pour chacune des fonctions trouvées la solution proposée par le concepteur »."
+    }
+  ],
+  "sequence-1-poubelle-connectee/modelisation-3d-de-la-poubelle": [
+    {
+      "q": "Quel logiciel est utilisé pour réaliser la modélisation 3D de la poubelle ?",
+      "options": [
+        "Tinkercad",
+        "Excel",
+        "Photoshop"
+      ],
+      "answer": 0,
+      "explain": "La consigne demande de « lancer Tinkercad » pour la modélisation 3D."
+    },
+    {
+      "q": "Comment rejoindre la classe de modélisation 3D dans Tinkercad ?",
+      "options": [
+        "En créant un nouveau compte administrateur",
+        "En saisissant le code de la classe 1LT3GM14K6FY",
+        "En envoyant un e-mail au professeur"
+      ],
+      "answer": 1,
+      "explain": "Le cours indique de « saisir le code de la classe : 1LT3GM14K6FY » pour accéder à Tinkercad."
+    }
+  ],
+  "sequence-3-reseau-informatique/seance-2": [
+    {
+      "q": "Quel logiciel est utilisé dans cette séance pour créer l'architecture du réseau du collège ?",
+      "options": [
+        "Filius",
+        "Scratch",
+        "Word"
+      ],
+      "answer": 0,
+      "explain": "La séance demande d'ouvrir et d'utiliser le logiciel Filius pour créer l'architecture du réseau."
+    },
+    {
+      "q": "Combien d'ordinateurs la salle de technologie Techno2 doit-elle contenir ?",
+      "options": [
+        "2",
+        "3",
+        "5"
+      ],
+      "answer": 1,
+      "explain": "Le réseau doit contenir une deuxième salle de technologie Techno2 contenant 3 ordinateurs."
+    },
+    {
+      "q": "Quel équipement faut-il placer dans chaque salle de technologie ?",
+      "options": [
+        "Un routeur",
+        "Un serveur",
+        "Un switch"
+      ],
+      "answer": 2,
+      "explain": "Le cours précise qu'il faut un switch par salle de technologie (ex : switch-techno1)."
+    },
+    {
+      "q": "Quel type de serveur doit être ajouté au réseau du collège ?",
+      "options": [
+        "Un serveur de fichiers et d'authentification",
+        "Un serveur de jeux",
+        "Un serveur de messagerie"
+      ],
+      "answer": 0,
+      "explain": "Le réseau doit contenir un serveur de fichiers et d'authentification."
+    }
+  ],
+  "sequence-3-reseau-informatique/seance-3": [
+    {
+      "q": "Quelle commande permet de vérifier l'adresse IP d'un ordinateur du réseau ?",
+      "options": [
+        "ping",
+        "ipconfig",
+        "ifup"
+      ],
+      "answer": 1,
+      "explain": "Le cours demande de réaliser un ipconfig sur l'ordinateur 1 de la salle techno 1 pour vérifier son adresse IP."
+    },
+    {
+      "q": "Quelle commande sert à tester la connexion vers une autre machine du réseau ?",
+      "options": [
+        "ping",
+        "ipconfig",
+        "config"
+      ],
+      "answer": 0,
+      "explain": "Le cours demande de faire un ping de la passerelle, du serveur et d'un ordinateur de techno 2 pour tester les connexions."
+    },
+    {
+      "q": "Quelle est l'adresse IP de l'ordinateur 1 de la salle de technologie 1 ?",
+      "options": [
+        "10.124.34.1",
+        "192.168.0.245",
+        "192.168.0.1"
+      ],
+      "answer": 2,
+      "explain": "L'ipconfig sur l'ordinateur 1 de la salle techno 1 doit donner l'adresse IP 192.168.0.1."
+    },
+    {
+      "q": "Dans l'exemple donné, comment reconnaît-on qu'un ping a réussi ?",
+      "options": [
+        "Les 4 paquets transmis ont tous été reçus",
+        "Aucun paquet n'est transmis",
+        "L'adresse IP change"
+      ],
+      "answer": 0,
+      "explain": "Dans l'exemple, 4 paquets ont été transmis et 4 ont été reçus, ce qui indique une réponse positive."
+    }
+  ]
+}

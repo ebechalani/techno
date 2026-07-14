@@ -130,6 +130,13 @@
     </div>
     
     
+<div class="student-bar">
+  <span class="sb-info">💾 Tes réponses sont enregistrées automatiquement sur cet appareil.</span>
+  <span class="sb-actions">
+    <button class="btn btn-ghost btn-sm" id="print-answers" type="button">🖨 Imprimer / PDF</button>
+    <button class="btn btn-ghost btn-sm" id="clear-answers" type="button">🗑 Tout effacer</button>
+  </span>
+</div>
     <div class="prose">
       <p>Les récepteurs GPS fournissent la localisation sous une forme normalisée facilement décodable. Le <strong>protocole NMEA 0183</strong> est une norme applicable dans les communications en marine définie et contrôlée par la <strong>National Marine Electronics Association</strong> (NMEA), association américaine de fabricants d&#39;appareils électroniques maritimes.</p>
 <p>Dans ce qui suit, le Standard NMEA est défini simplement et uniquement comme étant le protocole de transmission des données entre les instruments et équipements électroniques liés au GPS.</p>
@@ -224,6 +231,55 @@
 
     </div>
     
+<section class="quiz" id="quiz">
+  <h2>🧠 Teste tes connaissances</h2>
+  <p class="quiz-hint">Réponds aux questions puis clique sur « Vérifier » — la correction s'affiche aussitôt.</p>
+  
+    <div class="quiz-q" data-ok="0" data-explain="Le cours indique que NMEA désigne la National Marine Electronics Association.">
+      <p class="qq-text">1. Que signifie le sigle NMEA du protocole NMEA 0183 ?</p>
+      <div class="qq-opts">
+        <label class="qq-opt"><input type="radio" name="q0" value="0"><span>National Marine Electronics Association</span></label>
+        <label class="qq-opt"><input type="radio" name="q0" value="1"><span>Norme Mondiale d'Échange Automatique</span></label>
+        <label class="qq-opt"><input type="radio" name="q0" value="2"><span>Network Marine Electronic Access</span></label>
+      </div>
+      <button class="btn btn-ghost qq-check" type="button">Vérifier ma réponse</button>
+      <div class="qq-feedback" aria-live="polite"></div>
+    </div>
+
+    <div class="quiz-q" data-ok="1" data-explain="Le cours précise qu'une trame commence toujours par le caractère $.">
+      <p class="qq-text">2. Par quel caractère commence toujours une trame NMEA ?</p>
+      <div class="qq-opts">
+        <label class="qq-opt"><input type="radio" name="q1" value="0"><span>Le caractère #</span></label>
+        <label class="qq-opt"><input type="radio" name="q1" value="1"><span>Le caractère $</span></label>
+        <label class="qq-opt"><input type="radio" name="q1" value="2"><span>Le caractère *</span></label>
+      </div>
+      <button class="btn btn-ghost qq-check" type="button">Vérifier ma réponse</button>
+      <div class="qq-feedback" aria-live="polite"></div>
+    </div>
+
+    <div class="quiz-q" data-ok="1" data-explain="Le cours indique que les champs sont séparés entre eux par des virgules, et que la virgule reste obligatoire même pour un champ vide.">
+      <p class="qq-text">3. Dans une trame NMEA, comment sont séparés les champs entre eux ?</p>
+      <div class="qq-opts">
+        <label class="qq-opt"><input type="radio" name="q2" value="0"><span>Par des points-virgules</span></label>
+        <label class="qq-opt"><input type="radio" name="q2" value="1"><span>Par des virgules</span></label>
+        <label class="qq-opt"><input type="radio" name="q2" value="2"><span>Par des espaces</span></label>
+      </div>
+      <button class="btn btn-ghost qq-check" type="button">Vérifier ma réponse</button>
+      <div class="qq-feedback" aria-live="polite"></div>
+    </div>
+
+    <div class="quiz-q" data-ok="0" data-explain="Le cours explique que la clé de contrôle permet de vérifier que le message reçu est conforme à celui envoyé.">
+      <p class="qq-text">4. Que permet de vérifier la clé de contrôle (checksum) à la fin d'une trame ?</p>
+      <div class="qq-opts">
+        <label class="qq-opt"><input type="radio" name="q3" value="0"><span>Que le message reçu est conforme à celui envoyé</span></label>
+        <label class="qq-opt"><input type="radio" name="q3" value="1"><span>La vitesse du satellite</span></label>
+        <label class="qq-opt"><input type="radio" name="q3" value="2"><span>Le nombre de virgules dans la trame</span></label>
+      </div>
+      <button class="btn btn-ghost qq-check" type="button">Vérifier ma réponse</button>
+      <div class="qq-feedback" aria-live="polite"></div>
+    </div>
+  <div class="quiz-score" aria-live="polite"></div>
+</section>
     
     <nav class="pager">
       <a class="pg-prev" href="../la-geolocalisation-par-satellite/"><span class="pg-label">← Précédent</span><span class="pg-title">La géolocalisation par satellite</span></a>

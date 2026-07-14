@@ -130,6 +130,13 @@
     </div>
     
     
+<div class="student-bar">
+  <span class="sb-info">💾 Tes réponses sont enregistrées automatiquement sur cet appareil.</span>
+  <span class="sb-actions">
+    <button class="btn btn-ghost btn-sm" id="print-answers" type="button">🖨 Imprimer / PDF</button>
+    <button class="btn btn-ghost btn-sm" id="clear-answers" type="button">🗑 Tout effacer</button>
+  </span>
+</div>
     <div class="prose">
       <h2>Routage</h2>
 <p><strong>1.</strong> <strong>Le routage pages 26 à 33 et fiche routage</strong></p>
@@ -262,6 +269,77 @@
 
     </div>
     
+<section class="quiz" id="quiz">
+  <h2>🧠 Teste tes connaissances</h2>
+  <p class="quiz-hint">Réponds aux questions puis clique sur « Vérifier » — la correction s'affiche aussitôt.</p>
+  
+    <div class="quiz-q" data-ok="0" data-explain="Un switch relie entre eux tous les ordinateurs appartenant à un même réseau local.">
+      <p class="qq-text">1. À quoi sert un switch dans un réseau ?</p>
+      <div class="qq-opts">
+        <label class="qq-opt"><input type="radio" name="q0" value="0"><span>À relier entre eux les ordinateurs d'un même réseau local</span></label>
+        <label class="qq-opt"><input type="radio" name="q0" value="1"><span>À relier ensemble plusieurs réseaux différents</span></label>
+        <label class="qq-opt"><input type="radio" name="q0" value="2"><span>À stocker les adresses IP publiques</span></label>
+      </div>
+      <button class="btn btn-ghost qq-check" type="button">Vérifier ma réponse</button>
+      <div class="qq-feedback" aria-live="polite"></div>
+    </div>
+
+    <div class="quiz-q" data-ok="0" data-explain="Un routeur permet de relier ensemble plusieurs réseaux et possède plusieurs interfaces réseau.">
+      <p class="qq-text">2. Quel est le rôle d'un routeur ?</p>
+      <div class="qq-opts">
+        <label class="qq-opt"><input type="radio" name="q1" value="0"><span>Relier ensemble plusieurs réseaux</span></label>
+        <label class="qq-opt"><input type="radio" name="q1" value="1"><span>Relier les ordinateurs d'un seul réseau local</span></label>
+        <label class="qq-opt"><input type="radio" name="q1" value="2"><span>Attribuer les adresses MAC</span></label>
+      </div>
+      <button class="btn btn-ghost qq-check" type="button">Vérifier ma réponse</button>
+      <div class="qq-feedback" aria-live="polite"></div>
+    </div>
+
+    <div class="quiz-q" data-ok="0" data-explain="LAN (Local Access Network) est un réseau local, WAN (Wide Area Network) est un réseau étendu couvrant une grande zone géographique.">
+      <p class="qq-text">3. Quelle est la différence entre un LAN et un WAN ?</p>
+      <div class="qq-opts">
+        <label class="qq-opt"><input type="radio" name="q2" value="0"><span>LAN est un réseau local, WAN un réseau étendu</span></label>
+        <label class="qq-opt"><input type="radio" name="q2" value="1"><span>LAN est un réseau étendu, WAN un réseau local</span></label>
+        <label class="qq-opt"><input type="radio" name="q2" value="2"><span>Ce sont deux noms pour la même chose</span></label>
+      </div>
+      <button class="btn btn-ghost qq-check" type="button">Vérifier ma réponse</button>
+      <div class="qq-feedback" aria-live="polite"></div>
+    </div>
+
+    <div class="quiz-q" data-ok="0" data-explain="Le cours indique qu'une adresse MAC est codée sur 6 octets en hexadécimal.">
+      <p class="qq-text">4. Sur combien d'octets une adresse MAC est-elle codée ?</p>
+      <div class="qq-opts">
+        <label class="qq-opt"><input type="radio" name="q3" value="0"><span>6 octets</span></label>
+        <label class="qq-opt"><input type="radio" name="q3" value="1"><span>4 octets</span></label>
+        <label class="qq-opt"><input type="radio" name="q3" value="2"><span>8 octets</span></label>
+      </div>
+      <button class="btn btn-ghost qq-check" type="button">Vérifier ma réponse</button>
+      <div class="qq-feedback" aria-live="polite"></div>
+    </div>
+
+    <div class="quiz-q" data-ok="0" data-explain="Avec /24, les parties a, b et c sont consacrées à l'adresse réseau et la partie d à la machine.">
+      <p class="qq-text">5. Pour une adresse de la forme a.b.c.d/24, quelle partie identifie le réseau ?</p>
+      <div class="qq-opts">
+        <label class="qq-opt"><input type="radio" name="q4" value="0"><span>Les parties a, b et c</span></label>
+        <label class="qq-opt"><input type="radio" name="q4" value="1"><span>Seulement la partie a</span></label>
+        <label class="qq-opt"><input type="radio" name="q4" value="2"><span>Seulement la partie d</span></label>
+      </div>
+      <button class="btn btn-ghost qq-check" type="button">Vérifier ma réponse</button>
+      <div class="qq-feedback" aria-live="polite"></div>
+    </div>
+
+    <div class="quiz-q" data-ok="0" data-explain="Lorsque le TTL vaut 0 sans être arrivé à destination, le paquet est détruit et un message avertit l'émetteur.">
+      <p class="qq-text">6. Que devient un paquet de données lorsque son TTL (durée de vie) atteint 0 avant d'arriver à destination ?</p>
+      <div class="qq-opts">
+        <label class="qq-opt"><input type="radio" name="q5" value="0"><span>Il est détruit et un message est envoyé à l'émetteur</span></label>
+        <label class="qq-opt"><input type="radio" name="q5" value="1"><span>Il continue indéfiniment sur le réseau</span></label>
+        <label class="qq-opt"><input type="radio" name="q5" value="2"><span>Il est automatiquement dupliqué</span></label>
+      </div>
+      <button class="btn btn-ghost qq-check" type="button">Vérifier ma réponse</button>
+      <div class="qq-feedback" aria-live="polite"></div>
+    </div>
+  <div class="quiz-score" aria-live="polite"></div>
+</section>
     
     <nav class="pager">
       <a class="pg-prev" href="../routage/"><span class="pg-label">← Précédent</span><span class="pg-title">Routage</span></a>

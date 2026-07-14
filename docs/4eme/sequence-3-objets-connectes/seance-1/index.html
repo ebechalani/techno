@@ -168,6 +168,13 @@
     </div>
     
     
+<div class="student-bar">
+  <span class="sb-info">💾 Tes réponses sont enregistrées automatiquement sur cet appareil.</span>
+  <span class="sb-actions">
+    <button class="btn btn-ghost btn-sm" id="print-answers" type="button">🖨 Imprimer / PDF</button>
+    <button class="btn btn-ghost btn-sm" id="clear-answers" type="button">🗑 Tout effacer</button>
+  </span>
+</div>
     <div class="prose">
       <p><strong>Mise en situation:</strong></p>
 <p>Les objets connectés ont envahi notre quotidien et les prédictions des experts démontrent que le nombre des objets connectés à Internet vont augmenter de façon exponentielle les prochaines années .</p>
@@ -234,6 +241,55 @@
 
     </div>
     
+<section class="quiz" id="quiz">
+  <h2>🧠 Teste tes connaissances</h2>
+  <p class="quiz-hint">Réponds aux questions puis clique sur « Vérifier » — la correction s'affiche aussitôt.</p>
+  
+    <div class="quiz-q" data-ok="1" data-explain="Le texte indique que les prédictions des experts démontrent que le nombre d'objets connectés à Internet va augmenter de façon exponentielle les prochaines années.">
+      <p class="qq-text">1. Selon la mise en situation, comment va évoluer le nombre d'objets connectés à Internet dans les prochaines années ?</p>
+      <div class="qq-opts">
+        <label class="qq-opt"><input type="radio" name="q0" value="0"><span>Il va rester stable</span></label>
+        <label class="qq-opt"><input type="radio" name="q0" value="1"><span>Il va augmenter de façon exponentielle</span></label>
+        <label class="qq-opt"><input type="radio" name="q0" value="2"><span>Il va diminuer progressivement</span></label>
+      </div>
+      <button class="btn btn-ghost qq-check" type="button">Vérifier ma réponse</button>
+      <div class="qq-feedback" aria-live="polite"></div>
+    </div>
+
+    <div class="quiz-q" data-ok="1" data-explain="La diapositive 1 doit rappeler le questionnement de la séquence : comment piloter le robot « mbot » avec son smartphone ?">
+      <p class="qq-text">2. Quel est le questionnement (problématique) de la séquence indiqué pour la diapositive 1 ?</p>
+      <div class="qq-opts">
+        <label class="qq-opt"><input type="radio" name="q1" value="0"><span>Comment fabriquer un smartphone ?</span></label>
+        <label class="qq-opt"><input type="radio" name="q1" value="1"><span>Comment piloter le robot « mbot » avec son smartphone ?</span></label>
+        <label class="qq-opt"><input type="radio" name="q1" value="2"><span>Comment réparer un robot cassé ?</span></label>
+      </div>
+      <button class="btn btn-ghost qq-check" type="button">Vérifier ma réponse</button>
+      <div class="qq-feedback" aria-live="polite"></div>
+    </div>
+
+    <div class="quiz-q" data-ok="0" data-explain="La diapositive 3 (« Qu'est-ce qu'une connexion Bluetooth ? ») demande de réaliser un schéma expliquant le principe de l'appairage.">
+      <p class="qq-text">3. D'après le plan du diaporama, quel principe la diapositive 3 doit-elle expliquer à propos du Bluetooth ?</p>
+      <div class="qq-opts">
+        <label class="qq-opt"><input type="radio" name="q2" value="0"><span>Le principe de l'appairage</span></label>
+        <label class="qq-opt"><input type="radio" name="q2" value="1"><span>Le principe du chargement de la batterie</span></label>
+        <label class="qq-opt"><input type="radio" name="q2" value="2"><span>Le principe du GPS</span></label>
+      </div>
+      <button class="btn btn-ghost qq-check" type="button">Vérifier ma réponse</button>
+      <div class="qq-feedback" aria-live="polite"></div>
+    </div>
+
+    <div class="quiz-q" data-ok="1" data-explain="Le travail doit être sauvegardé sur le serveur sous la forme « OT_classe_groupe_équipeX ».">
+      <p class="qq-text">4. Sous quelle forme faut-il nommer le travail de chaque équipe enregistré sur le serveur ?</p>
+      <div class="qq-opts">
+        <label class="qq-opt"><input type="radio" name="q3" value="0"><span>« robot_final »</span></label>
+        <label class="qq-opt"><input type="radio" name="q3" value="1"><span>« OT_classe_groupe_équipeX »</span></label>
+        <label class="qq-opt"><input type="radio" name="q3" value="2"><span>« diaporama_2024 »</span></label>
+      </div>
+      <button class="btn btn-ghost qq-check" type="button">Vérifier ma réponse</button>
+      <div class="qq-feedback" aria-live="polite"></div>
+    </div>
+  <div class="quiz-score" aria-live="polite"></div>
+</section>
     
     <nav class="pager">
       

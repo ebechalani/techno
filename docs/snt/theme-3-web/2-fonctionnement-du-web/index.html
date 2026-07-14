@@ -130,6 +130,13 @@
     </div>
     
     
+<div class="student-bar">
+  <span class="sb-info">💾 Tes réponses sont enregistrées automatiquement sur cet appareil.</span>
+  <span class="sb-actions">
+    <button class="btn btn-ghost btn-sm" id="print-answers" type="button">🖨 Imprimer / PDF</button>
+    <button class="btn btn-ghost btn-sm" id="clear-answers" type="button">🗑 Tout effacer</button>
+  </span>
+</div>
     <div class="prose">
       <h2>3. Fonctionnement du web</h2>
 <h3>3.1.Notion d&#39;URL</h3>
@@ -172,6 +179,71 @@
 
     </div>
     
+<section class="quiz" id="quiz">
+  <h2>🧠 Teste tes connaissances</h2>
+  <p class="quiz-hint">Réponds aux questions puis clique sur « Vérifier » — la correction s'affiche aussitôt.</p>
+  
+    <div class="quiz-q" data-ok="2" data-explain="Une URL « se compose de 4 grandes parties : le protocole HTTP (ou HTTPS), le nom de domaine, le chemin vers la ressource et le nom du fichier ».">
+      <p class="qq-text">1. De combien de grandes parties se compose une URL selon le cours ?</p>
+      <div class="qq-opts">
+        <label class="qq-opt"><input type="radio" name="q0" value="0"><span>2</span></label>
+        <label class="qq-opt"><input type="radio" name="q0" value="1"><span>3</span></label>
+        <label class="qq-opt"><input type="radio" name="q0" value="2"><span>4</span></label>
+        <label class="qq-opt"><input type="radio" name="q0" value="3"><span>5</span></label>
+      </div>
+      <button class="btn btn-ghost qq-check" type="button">Vérifier ma réponse</button>
+      <div class="qq-feedback" aria-live="polite"></div>
+    </div>
+
+    <div class="quiz-q" data-ok="0" data-explain="Le cours indique que les requêtes HTTP correspondent au « HyperText Transfert Protocol ».">
+      <p class="qq-text">2. Que signifie le sigle HTTP ?</p>
+      <div class="qq-opts">
+        <label class="qq-opt"><input type="radio" name="q1" value="0"><span>HyperText Transfert Protocol</span></label>
+        <label class="qq-opt"><input type="radio" name="q1" value="1"><span>High Transfer Text Protocol</span></label>
+        <label class="qq-opt"><input type="radio" name="q1" value="2"><span>Home Text Transfer Program</span></label>
+        <label class="qq-opt"><input type="radio" name="q1" value="3"><span>HyperText Transfer Page</span></label>
+      </div>
+      <button class="btn btn-ghost qq-check" type="button">Vérifier ma réponse</button>
+      <div class="qq-feedback" aria-live="polite"></div>
+    </div>
+
+    <div class="quiz-q" data-ok="1" data-explain="« le protocole de sécurité SSL (Secure Socket Layer) va s'ajouter au protocole HTTP et crypter les informations », HTTP devenant HTTPS.">
+      <p class="qq-text">3. Quel protocole s'ajoute à HTTP pour crypter les informations entre le serveur et le client ?</p>
+      <div class="qq-opts">
+        <label class="qq-opt"><input type="radio" name="q2" value="0"><span>Le protocole HTML</span></label>
+        <label class="qq-opt"><input type="radio" name="q2" value="1"><span>Le protocole SSL</span></label>
+        <label class="qq-opt"><input type="radio" name="q2" value="2"><span>Le protocole URL</span></label>
+        <label class="qq-opt"><input type="radio" name="q2" value="3"><span>Le protocole CSS</span></label>
+      </div>
+      <button class="btn btn-ghost qq-check" type="button">Vérifier ma réponse</button>
+      <div class="qq-feedback" aria-live="polite"></div>
+    </div>
+
+    <div class="quiz-q" data-ok="1" data-explain="Le cours avertit : « HTTPS ne garantit en rien que le site soit un site sûr, seule la communication est sécurisée ! »">
+      <p class="qq-text">4. Que garantit le protocole HTTPS d'après la remarque du cours ?</p>
+      <div class="qq-opts">
+        <label class="qq-opt"><input type="radio" name="q3" value="0"><span>Que le site visité est un site sûr et fiable</span></label>
+        <label class="qq-opt"><input type="radio" name="q3" value="1"><span>Que la communication est sécurisée, mais pas que le site soit sûr</span></label>
+        <label class="qq-opt"><input type="radio" name="q3" value="2"><span>Que le site ne contient aucune erreur</span></label>
+        <label class="qq-opt"><input type="radio" name="q3" value="3"><span>Que la connexion est plus rapide</span></label>
+      </div>
+      <button class="btn btn-ghost qq-check" type="button">Vérifier ma réponse</button>
+      <div class="qq-feedback" aria-live="polite"></div>
+    </div>
+
+    <div class="quiz-q" data-ok="1" data-explain="Le cours indique : « Le navigateur du client met en forme la réponse pour l'afficher. »">
+      <p class="qq-text">5. Dans un échange client-serveur, qui met en forme la réponse pour l'afficher ?</p>
+      <div class="qq-opts">
+        <label class="qq-opt"><input type="radio" name="q4" value="0"><span>Le serveur</span></label>
+        <label class="qq-opt"><input type="radio" name="q4" value="1"><span>Le navigateur du client</span></label>
+        <label class="qq-opt"><input type="radio" name="q4" value="2"><span>Le protocole SSL</span></label>
+        <label class="qq-opt"><input type="radio" name="q4" value="3"><span>Le nom de domaine</span></label>
+      </div>
+      <button class="btn btn-ghost qq-check" type="button">Vérifier ma réponse</button>
+      <div class="qq-feedback" aria-live="polite"></div>
+    </div>
+  <div class="quiz-score" aria-live="polite"></div>
+</section>
     
     <nav class="pager">
       <a class="pg-prev" href="../1-histoire-du-web/"><span class="pg-label">← Précédent</span><span class="pg-title">1.Histoire du web</span></a>

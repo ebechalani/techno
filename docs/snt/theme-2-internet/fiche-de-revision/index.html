@@ -130,6 +130,13 @@
     </div>
     
     
+<div class="student-bar">
+  <span class="sb-info">💾 Tes réponses sont enregistrées automatiquement sur cet appareil.</span>
+  <span class="sb-actions">
+    <button class="btn btn-ghost btn-sm" id="print-answers" type="button">🖨 Imprimer / PDF</button>
+    <button class="btn btn-ghost btn-sm" id="clear-answers" type="button">🗑 Tout effacer</button>
+  </span>
+</div>
     <div class="prose">
       <p><strong>Internet - Protocoles TCP et IP</strong></p>
 <p><em><strong>ATTENTION</strong></em> <em>: La lecture de cette fiche de révision ne remplace en rien l’étude approfondie du cours (lecture attentive). Cette fiche a uniquement pour but de vous donner des points de repère lors de vos révisions.</em></p>
@@ -144,6 +151,44 @@
 
     </div>
     
+<section class="quiz" id="quiz">
+  <h2>🧠 Teste tes connaissances</h2>
+  <p class="quiz-hint">Réponds aux questions puis clique sur « Vérifier » — la correction s'affiche aussitôt.</p>
+  
+    <div class="quiz-q" data-ok="0" data-explain="La fiche précise qu'Internet est basé sur 2 protocoles : TCP et IP.">
+      <p class="qq-text">1. Sur quels deux protocoles Internet est-il basé ?</p>
+      <div class="qq-opts">
+        <label class="qq-opt"><input type="radio" name="q0" value="0"><span>TCP et IP</span></label>
+        <label class="qq-opt"><input type="radio" name="q0" value="1"><span>HTTP et FTP</span></label>
+        <label class="qq-opt"><input type="radio" name="q0" value="2"><span>DNS et UDP</span></label>
+      </div>
+      <button class="btn btn-ghost qq-check" type="button">Vérifier ma réponse</button>
+      <div class="qq-feedback" aria-live="polite"></div>
+    </div>
+
+    <div class="quiz-q" data-ok="0" data-explain="UDP ressemble beaucoup à TCP, seule différence notable : UDP ne gère pas les accusés de réception.">
+      <p class="qq-text">2. Quelle est la principale différence entre le protocole UDP et le protocole TCP ?</p>
+      <div class="qq-opts">
+        <label class="qq-opt"><input type="radio" name="q1" value="0"><span>UDP ne gère pas les accusés de réception</span></label>
+        <label class="qq-opt"><input type="radio" name="q1" value="1"><span>UDP ne peut pas envoyer d'images</span></label>
+        <label class="qq-opt"><input type="radio" name="q1" value="2"><span>UDP découpe les données autrement</span></label>
+      </div>
+      <button class="btn btn-ghost qq-check" type="button">Vérifier ma réponse</button>
+      <div class="qq-feedback" aria-live="polite"></div>
+    </div>
+
+    <div class="quiz-q" data-ok="0" data-explain="Les données de la photo sont découpées en petits paquets qui voyagent sur le réseau indépendamment les uns des autres.">
+      <p class="qq-text">3. Comment sont transportées les données d'une photo lors d'un transfert entre deux ordinateurs ?</p>
+      <div class="qq-opts">
+        <label class="qq-opt"><input type="radio" name="q2" value="0"><span>Découpées en une multitude de petits paquets qui voyagent indépendamment</span></label>
+        <label class="qq-opt"><input type="radio" name="q2" value="1"><span>Envoyées en un seul bloc unique</span></label>
+        <label class="qq-opt"><input type="radio" name="q2" value="2"><span>Compressées puis envoyées sans découpage</span></label>
+      </div>
+      <button class="btn btn-ghost qq-check" type="button">Vérifier ma réponse</button>
+      <div class="qq-feedback" aria-live="polite"></div>
+    </div>
+  <div class="quiz-score" aria-live="polite"></div>
+</section>
     
     <nav class="pager">
       <a class="pg-prev" href="../tcpip/"><span class="pg-label">← Précédent</span><span class="pg-title">TCP/IP</span></a>

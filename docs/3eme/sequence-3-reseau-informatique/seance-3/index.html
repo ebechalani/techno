@@ -127,6 +127,13 @@
     </div>
     
     
+<div class="student-bar">
+  <span class="sb-info">💾 Tes réponses sont enregistrées automatiquement sur cet appareil.</span>
+  <span class="sb-actions">
+    <button class="btn btn-ghost btn-sm" id="print-answers" type="button">🖨 Imprimer / PDF</button>
+    <button class="btn btn-ghost btn-sm" id="clear-answers" type="button">🗑 Tout effacer</button>
+  </span>
+</div>
     <div class="prose">
       <h2>Notion de protocole -</h2>
 <h2>Adresse IP</h2>
@@ -184,6 +191,55 @@
 
     </div>
     
+<section class="quiz" id="quiz">
+  <h2>🧠 Teste tes connaissances</h2>
+  <p class="quiz-hint">Réponds aux questions puis clique sur « Vérifier » — la correction s'affiche aussitôt.</p>
+  
+    <div class="quiz-q" data-ok="1" data-explain="Le cours demande de réaliser un ipconfig sur l'ordinateur 1 de la salle techno 1 pour vérifier son adresse IP.">
+      <p class="qq-text">1. Quelle commande permet de vérifier l'adresse IP d'un ordinateur du réseau ?</p>
+      <div class="qq-opts">
+        <label class="qq-opt"><input type="radio" name="q0" value="0"><span>ping</span></label>
+        <label class="qq-opt"><input type="radio" name="q0" value="1"><span>ipconfig</span></label>
+        <label class="qq-opt"><input type="radio" name="q0" value="2"><span>ifup</span></label>
+      </div>
+      <button class="btn btn-ghost qq-check" type="button">Vérifier ma réponse</button>
+      <div class="qq-feedback" aria-live="polite"></div>
+    </div>
+
+    <div class="quiz-q" data-ok="0" data-explain="Le cours demande de faire un ping de la passerelle, du serveur et d'un ordinateur de techno 2 pour tester les connexions.">
+      <p class="qq-text">2. Quelle commande sert à tester la connexion vers une autre machine du réseau ?</p>
+      <div class="qq-opts">
+        <label class="qq-opt"><input type="radio" name="q1" value="0"><span>ping</span></label>
+        <label class="qq-opt"><input type="radio" name="q1" value="1"><span>ipconfig</span></label>
+        <label class="qq-opt"><input type="radio" name="q1" value="2"><span>config</span></label>
+      </div>
+      <button class="btn btn-ghost qq-check" type="button">Vérifier ma réponse</button>
+      <div class="qq-feedback" aria-live="polite"></div>
+    </div>
+
+    <div class="quiz-q" data-ok="2" data-explain="L'ipconfig sur l'ordinateur 1 de la salle techno 1 doit donner l'adresse IP 192.168.0.1.">
+      <p class="qq-text">3. Quelle est l'adresse IP de l'ordinateur 1 de la salle de technologie 1 ?</p>
+      <div class="qq-opts">
+        <label class="qq-opt"><input type="radio" name="q2" value="0"><span>10.124.34.1</span></label>
+        <label class="qq-opt"><input type="radio" name="q2" value="1"><span>192.168.0.245</span></label>
+        <label class="qq-opt"><input type="radio" name="q2" value="2"><span>192.168.0.1</span></label>
+      </div>
+      <button class="btn btn-ghost qq-check" type="button">Vérifier ma réponse</button>
+      <div class="qq-feedback" aria-live="polite"></div>
+    </div>
+
+    <div class="quiz-q" data-ok="0" data-explain="Dans l'exemple, 4 paquets ont été transmis et 4 ont été reçus, ce qui indique une réponse positive.">
+      <p class="qq-text">4. Dans l'exemple donné, comment reconnaît-on qu'un ping a réussi ?</p>
+      <div class="qq-opts">
+        <label class="qq-opt"><input type="radio" name="q3" value="0"><span>Les 4 paquets transmis ont tous été reçus</span></label>
+        <label class="qq-opt"><input type="radio" name="q3" value="1"><span>Aucun paquet n'est transmis</span></label>
+        <label class="qq-opt"><input type="radio" name="q3" value="2"><span>L'adresse IP change</span></label>
+      </div>
+      <button class="btn btn-ghost qq-check" type="button">Vérifier ma réponse</button>
+      <div class="qq-feedback" aria-live="polite"></div>
+    </div>
+  <div class="quiz-score" aria-live="polite"></div>
+</section>
     
     <nav class="pager">
       <a class="pg-prev" href="../seance-2/"><span class="pg-label">← Précédent</span><span class="pg-title">Séance 2</span></a>

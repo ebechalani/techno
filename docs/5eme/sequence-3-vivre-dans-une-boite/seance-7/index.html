@@ -138,6 +138,13 @@
     </div>
     
     
+<div class="student-bar">
+  <span class="sb-info">💾 Tes réponses sont enregistrées automatiquement sur cet appareil.</span>
+  <span class="sb-actions">
+    <button class="btn btn-ghost btn-sm" id="print-answers" type="button">🖨 Imprimer / PDF</button>
+    <button class="btn btn-ghost btn-sm" id="clear-answers" type="button">🗑 Tout effacer</button>
+  </span>
+</div>
     <div class="prose">
       <h2>Activité 1: Accéder au terrain</h2>
 <p>Le terrain se situe à l&#39;adresse suivante : <a target="_blank" rel="noopener" href="https://www.google.fr/maps/place/Espl.+des+Arts+et+M%C3%A9tiers,+33400+Talence/@44.8047611,-0.6017739,348m/data=%213m1%211e3%214m5%213m4%211s0xd55277d895b55ab:0x348fd12770c85297%218m2%213d44.8050123%214d-0.6011402"><strong>Esplanade des Arts et Métiers à Talence</strong></a> (Campus Universitaire de Bordeaux)</p>
@@ -176,6 +183,44 @@
 
     </div>
     
+<section class="quiz" id="quiz">
+  <h2>🧠 Teste tes connaissances</h2>
+  <p class="quiz-hint">Réponds aux questions puis clique sur « Vérifier » — la correction s'affiche aussitôt.</p>
+  
+    <div class="quiz-q" data-ok="1" data-explain="L'activité 2 demande de « chercher comment implanter 6 conteneurs sur le terrain ».">
+      <p class="qq-text">1. Combien de conteneurs chaque groupe doit-il implanter sur le terrain ?</p>
+      <div class="qq-opts">
+        <label class="qq-opt"><input type="radio" name="q0" value="0"><span>3 conteneurs</span></label>
+        <label class="qq-opt"><input type="radio" name="q0" value="1"><span>6 conteneurs</span></label>
+        <label class="qq-opt"><input type="radio" name="q0" value="2"><span>12 conteneurs</span></label>
+      </div>
+      <button class="btn btn-ghost qq-check" type="button">Vérifier ma réponse</button>
+      <div class="qq-feedback" aria-live="polite"></div>
+    </div>
+
+    <div class="quiz-q" data-ok="0" data-explain="Le cahier des charges impose « un espace d'au moins 1 mètre entre chaque conteneur ».">
+      <p class="qq-text">2. Quel espace minimum faut-il prévoir entre chaque conteneur ?</p>
+      <div class="qq-opts">
+        <label class="qq-opt"><input type="radio" name="q1" value="0"><span>Au moins 1 mètre</span></label>
+        <label class="qq-opt"><input type="radio" name="q1" value="1"><span>Au moins 5 mètres</span></label>
+        <label class="qq-opt"><input type="radio" name="q1" value="2"><span>Au moins 10 centimètres</span></label>
+      </div>
+      <button class="btn btn-ghost qq-check" type="button">Vérifier ma réponse</button>
+      <div class="qq-feedback" aria-live="polite"></div>
+    </div>
+
+    <div class="quiz-q" data-ok="0" data-explain="Le cahier des charges précise d'orienter les conteneurs pour « profiter de la lumière naturelle et minimiser les gains de chaleur en été et les pertes de chaleur en hiver ».">
+      <p class="qq-text">3. Pourquoi faut-il bien orienter les conteneurs sur le terrain ?</p>
+      <div class="qq-opts">
+        <label class="qq-opt"><input type="radio" name="q2" value="0"><span>Pour profiter de la lumière naturelle et gérer la chaleur</span></label>
+        <label class="qq-opt"><input type="radio" name="q2" value="1"><span>Pour les cacher des voisins</span></label>
+        <label class="qq-opt"><input type="radio" name="q2" value="2"><span>Pour réduire leur poids</span></label>
+      </div>
+      <button class="btn btn-ghost qq-check" type="button">Vérifier ma réponse</button>
+      <div class="qq-feedback" aria-live="polite"></div>
+    </div>
+  <div class="quiz-score" aria-live="polite"></div>
+</section>
     
     <nav class="pager">
       <a class="pg-prev" href="../seance-6/"><span class="pg-label">← Précédent</span><span class="pg-title">Séance 6: la modélisation du conteneur</span></a>

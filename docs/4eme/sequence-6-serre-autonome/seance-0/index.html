@@ -168,6 +168,13 @@
     </div>
     
     
+<div class="student-bar">
+  <span class="sb-info">💾 Tes réponses sont enregistrées automatiquement sur cet appareil.</span>
+  <span class="sb-actions">
+    <button class="btn btn-ghost btn-sm" id="print-answers" type="button">🖨 Imprimer / PDF</button>
+    <button class="btn btn-ghost btn-sm" id="clear-answers" type="button">🗑 Tout effacer</button>
+  </span>
+</div>
     <div class="prose">
       <p>Présentation</p>
 <p><strong>Dans le cadre d&#39;un projet jardin que le collège aimerait réalisé, nous souhaitons équiper le collège d&#39;une serre entièrement autonome sans dégagement de CO2. Nous ne souhaitons pas faire l&#39;acquisition d&#39;une serre déjà complète ce qui ne présente aucun intérêt pédagogique et qui peut présenter également un coût supérieur mais plutôt d&#39;une serre non automatique que nous équiperons de tous les éléments nécessaires à la réalisation de l&#39;automatisation.</strong></p>
@@ -210,6 +217,59 @@
 
     </div>
     
+<section class="quiz" id="quiz">
+  <h2>🧠 Teste tes connaissances</h2>
+  <p class="quiz-hint">Réponds aux questions puis clique sur « Vérifier » — la correction s'affiche aussitôt.</p>
+  
+    <div class="quiz-q" data-ok="1" data-explain="Le texte indique qu'une serre déjà complète ne présente aucun intérêt pédagogique et peut présenter un coût supérieur.">
+      <p class="qq-text">1. Selon le projet, pourquoi le collège choisit-il d'acheter une serre non automatique plutôt qu'une serre déjà complète ?</p>
+      <div class="qq-opts">
+        <label class="qq-opt"><input type="radio" name="q0" value="0"><span>Parce qu'une serre complète est moins solide</span></label>
+        <label class="qq-opt"><input type="radio" name="q0" value="1"><span>Parce qu'une serre déjà complète ne présente aucun intérêt pédagogique et peut coûter plus cher</span></label>
+        <label class="qq-opt"><input type="radio" name="q0" value="2"><span>Parce qu'une serre complète ne protège pas du froid</span></label>
+        <label class="qq-opt"><input type="radio" name="q0" value="3"><span>Parce que les serres complètes dégagent trop de CO2</span></label>
+      </div>
+      <button class="btn btn-ghost qq-check" type="button">Vérifier ma réponse</button>
+      <div class="qq-feedback" aria-live="polite"></div>
+    </div>
+
+    <div class="quiz-q" data-ok="1" data-explain="Le texte précise qu'une serre est destinée à protéger du froid les plantes non rustiques et à favoriser la croissance des cultures.">
+      <p class="qq-text">2. D'après le cours, à quoi sert principalement une serre ?</p>
+      <div class="qq-opts">
+        <label class="qq-opt"><input type="radio" name="q1" value="0"><span>À stocker du matériel de jardinage</span></label>
+        <label class="qq-opt"><input type="radio" name="q1" value="1"><span>À protéger du froid les plantes non rustiques et favoriser la croissance des cultures</span></label>
+        <label class="qq-opt"><input type="radio" name="q1" value="2"><span>À produire de l'électricité pour le collège</span></label>
+        <label class="qq-opt"><input type="radio" name="q1" value="3"><span>À recycler l'eau de pluie uniquement</span></label>
+      </div>
+      <button class="btn btn-ghost qq-check" type="button">Vérifier ma réponse</button>
+      <div class="qq-feedback" aria-live="polite"></div>
+    </div>
+
+    <div class="quiz-q" data-ok="1" data-explain="Le cours liste la gestion de la température parmi les éléments naturels que la serre permet de gérer.">
+      <p class="qq-text">3. Parmi les éléments naturels suivants, lequel la serre doit-elle gérer selon le cours ?</p>
+      <div class="qq-opts">
+        <label class="qq-opt"><input type="radio" name="q2" value="0"><span>La gestion du bruit ambiant</span></label>
+        <label class="qq-opt"><input type="radio" name="q2" value="1"><span>La gestion de la température</span></label>
+        <label class="qq-opt"><input type="radio" name="q2" value="2"><span>La gestion des insectes pollinisateurs</span></label>
+        <label class="qq-opt"><input type="radio" name="q2" value="3"><span>La gestion du réseau électrique du collège</span></label>
+      </div>
+      <button class="btn btn-ghost qq-check" type="button">Vérifier ma réponse</button>
+      <div class="qq-feedback" aria-live="polite"></div>
+    </div>
+
+    <div class="quiz-q" data-ok="0" data-explain="Le texte précise qu'aucun dégagement de CO2 ne sera accepté et que la serre doit fonctionner de façon autonome.">
+      <p class="qq-text">4. Quelle contrainte importante le projet impose-t-il concernant les émissions de la serre ?</p>
+      <div class="qq-opts">
+        <label class="qq-opt"><input type="radio" name="q3" value="0"><span>Aucun dégagement de CO2 ne sera accepté</span></label>
+        <label class="qq-opt"><input type="radio" name="q3" value="1"><span>Un faible dégagement de CO2 est toléré</span></label>
+        <label class="qq-opt"><input type="radio" name="q3" value="2"><span>La serre doit produire du CO2 pour les plantes</span></label>
+        <label class="qq-opt"><input type="radio" name="q3" value="3"><span>Le CO2 doit être stocké dans des bâtonnets</span></label>
+      </div>
+      <button class="btn btn-ghost qq-check" type="button">Vérifier ma réponse</button>
+      <div class="qq-feedback" aria-live="polite"></div>
+    </div>
+  <div class="quiz-score" aria-live="polite"></div>
+</section>
     
     <nav class="pager">
       

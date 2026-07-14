@@ -130,6 +130,13 @@
     </div>
     
     
+<div class="student-bar">
+  <span class="sb-info">💾 Tes réponses sont enregistrées automatiquement sur cet appareil.</span>
+  <span class="sb-actions">
+    <button class="btn btn-ghost btn-sm" id="print-answers" type="button">🖨 Imprimer / PDF</button>
+    <button class="btn btn-ghost btn-sm" id="clear-answers" type="button">🗑 Tout effacer</button>
+  </span>
+</div>
     <div class="prose">
       <p><strong>FICHE DE REVISION</strong></p>
 <p><strong>Internet - Routage</strong></p>
@@ -148,6 +155,44 @@
 
     </div>
     
+<section class="quiz" id="quiz">
+  <h2>🧠 Teste tes connaissances</h2>
+  <p class="quiz-hint">Réponds aux questions puis clique sur « Vérifier » — la correction s'affiche aussitôt.</p>
+  
+    <div class="quiz-q" data-ok="0" data-explain="La fiche précise que dans un réseau, 2 ordinateurs ne peuvent pas avoir la même adresse IP.">
+      <p class="qq-text">1. Deux ordinateurs d'un même réseau peuvent-ils avoir la même adresse IP ?</p>
+      <div class="qq-opts">
+        <label class="qq-opt"><input type="radio" name="q0" value="0"><span>Non, dans un réseau deux ordinateurs ne peuvent pas avoir la même adresse IP</span></label>
+        <label class="qq-opt"><input type="radio" name="q0" value="1"><span>Oui, cela n'a aucune importance</span></label>
+        <label class="qq-opt"><input type="radio" name="q0" value="2"><span>Oui, s'ils ont la même adresse MAC</span></label>
+      </div>
+      <button class="btn btn-ghost qq-check" type="button">Vérifier ma réponse</button>
+      <div class="qq-feedback" aria-live="polite"></div>
+    </div>
+
+    <div class="quiz-q" data-ok="0" data-explain="Avec /16, la partie réseau est 192.168 et la partie machine est 2.1.">
+      <p class="qq-text">2. Pour l'adresse 192.168.2.1/16, quelle est la partie réseau ?</p>
+      <div class="qq-opts">
+        <label class="qq-opt"><input type="radio" name="q1" value="0"><span>192.168</span></label>
+        <label class="qq-opt"><input type="radio" name="q1" value="1"><span>192</span></label>
+        <label class="qq-opt"><input type="radio" name="q1" value="2"><span>192.168.2</span></label>
+      </div>
+      <button class="btn btn-ghost qq-check" type="button">Vérifier ma réponse</button>
+      <div class="qq-feedback" aria-live="polite"></div>
+    </div>
+
+    <div class="quiz-q" data-ok="0" data-explain="Pour être sur le même réseau local, 2 ordinateurs doivent avoir la partie réseau de leurs adresses IP identique.">
+      <p class="qq-text">3. À quelle condition sur leurs adresses IP deux ordinateurs sont-ils sur le même réseau local ?</p>
+      <div class="qq-opts">
+        <label class="qq-opt"><input type="radio" name="q2" value="0"><span>Ils doivent avoir la même partie réseau</span></label>
+        <label class="qq-opt"><input type="radio" name="q2" value="1"><span>Ils doivent avoir la même partie machine</span></label>
+        <label class="qq-opt"><input type="radio" name="q2" value="2"><span>Ils doivent avoir la même adresse MAC</span></label>
+      </div>
+      <button class="btn btn-ghost qq-check" type="button">Vérifier ma réponse</button>
+      <div class="qq-feedback" aria-live="polite"></div>
+    </div>
+  <div class="quiz-score" aria-live="polite"></div>
+</section>
     
     <nav class="pager">
       <a class="pg-prev" href="../exercices/"><span class="pg-label">← Précédent</span><span class="pg-title">Exercices</span></a>

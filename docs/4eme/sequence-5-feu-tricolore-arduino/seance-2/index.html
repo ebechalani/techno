@@ -168,6 +168,13 @@
     </div>
     
     
+<div class="student-bar">
+  <span class="sb-info">💾 Tes réponses sont enregistrées automatiquement sur cet appareil.</span>
+  <span class="sb-actions">
+    <button class="btn btn-ghost btn-sm" id="print-answers" type="button">🖨 Imprimer / PDF</button>
+    <button class="btn btn-ghost btn-sm" id="clear-answers" type="button">🗑 Tout effacer</button>
+  </span>
+</div>
     <div class="prose">
       <p><strong>Le Logigramme :</strong></p>
 <p><strong>DEFINITION</strong></p>
@@ -188,6 +195,44 @@
 
     </div>
     
+<section class="quiz" id="quiz">
+  <h2>🧠 Teste tes connaissances</h2>
+  <p class="quiz-hint">Réponds aux questions puis clique sur « Vérifier » — la correction s'affiche aussitôt.</p>
+  
+    <div class="quiz-q" data-ok="0" data-explain="La définition indique que c'est un outil graphique (visuel) pour analyser et décrire un processus ou une activité.">
+      <p class="qq-text">1. Qu'est-ce qu'un organigramme (algorigramme, logigramme) ?</p>
+      <div class="qq-opts">
+        <label class="qq-opt"><input type="radio" name="q0" value="0"><span>Un outil graphique pour analyser et décrire un processus ou une activité</span></label>
+        <label class="qq-opt"><input type="radio" name="q0" value="1"><span>Un composant électronique de la carte Arduino</span></label>
+        <label class="qq-opt"><input type="radio" name="q0" value="2"><span>Une source d'alimentation électrique</span></label>
+      </div>
+      <button class="btn btn-ghost qq-check" type="button">Vérifier ma réponse</button>
+      <div class="qq-feedback" aria-live="polite"></div>
+    </div>
+
+    <div class="quiz-q" data-ok="1" data-explain="Le cours précise qu'il y a trois symboles normalisés qui respectent une règle.">
+      <p class="qq-text">2. Combien de symboles normalisés utilise-t-on dans un organigramme ?</p>
+      <div class="qq-opts">
+        <label class="qq-opt"><input type="radio" name="q1" value="0"><span>Deux symboles</span></label>
+        <label class="qq-opt"><input type="radio" name="q1" value="1"><span>Trois symboles</span></label>
+        <label class="qq-opt"><input type="radio" name="q1" value="2"><span>Cinq symboles</span></label>
+      </div>
+      <button class="btn btn-ghost qq-check" type="button">Vérifier ma réponse</button>
+      <div class="qq-feedback" aria-live="polite"></div>
+    </div>
+
+    <div class="quiz-q" data-ok="1" data-explain="L'organigramme permet de comprendre étape par étape ce qui se passe dans un système automatisé.">
+      <p class="qq-text">3. Que permet de comprendre un organigramme de programmation ?</p>
+      <div class="qq-opts">
+        <label class="qq-opt"><input type="radio" name="q2" value="0"><span>Le prix des composants</span></label>
+        <label class="qq-opt"><input type="radio" name="q2" value="1"><span>Étape par étape ce qui se passe dans un système automatisé</span></label>
+        <label class="qq-opt"><input type="radio" name="q2" value="2"><span>La couleur des LED</span></label>
+      </div>
+      <button class="btn btn-ghost qq-check" type="button">Vérifier ma réponse</button>
+      <div class="qq-feedback" aria-live="polite"></div>
+    </div>
+  <div class="quiz-score" aria-live="polite"></div>
+</section>
     
     <nav class="pager">
       <a class="pg-prev" href="../seance-1/"><span class="pg-label">← Précédent</span><span class="pg-title">Séance 1: observer et décrire la structure d'un objet</span></a>

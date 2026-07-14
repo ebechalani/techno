@@ -168,6 +168,13 @@
     </div>
     
     
+<div class="student-bar">
+  <span class="sb-info">💾 Tes réponses sont enregistrées automatiquement sur cet appareil.</span>
+  <span class="sb-actions">
+    <button class="btn btn-ghost btn-sm" id="print-answers" type="button">🖨 Imprimer / PDF</button>
+    <button class="btn btn-ghost btn-sm" id="clear-answers" type="button">🗑 Tout effacer</button>
+  </span>
+</div>
     <div class="prose">
       <p>Mise en situation : On a une Del, on veut la programmer…</p>
 <p>Problématique :</p>
@@ -197,6 +204,55 @@
 
     </div>
     
+<section class="quiz" id="quiz">
+  <h2>🧠 Teste tes connaissances</h2>
+  <p class="quiz-hint">Réponds aux questions puis clique sur « Vérifier » — la correction s'affiche aussitôt.</p>
+  
+    <div class="quiz-q" data-ok="1" data-explain="Le méplat de la LED repère la petite patte, qui correspond au négatif (-).">
+      <p class="qq-text">1. Sur la LED (DEL), à quoi correspond le méplat que l'on voit en la regardant par-dessus ?</p>
+      <div class="qq-opts">
+        <label class="qq-opt"><input type="radio" name="q0" value="0"><span>À la patte positive (+)</span></label>
+        <label class="qq-opt"><input type="radio" name="q0" value="1"><span>À la patte négative (-)</span></label>
+        <label class="qq-opt"><input type="radio" name="q0" value="2"><span>À la résistance</span></label>
+      </div>
+      <button class="btn btn-ghost qq-check" type="button">Vérifier ma réponse</button>
+      <div class="qq-feedback" aria-live="polite"></div>
+    </div>
+
+    <div class="quiz-q" data-ok="0" data-explain="Le cours indique que la résistance va adapter le courant pour protéger la LED.">
+      <p class="qq-text">2. Quel est le rôle de la résistance électrique placée sur le montage de la LED ?</p>
+      <div class="qq-opts">
+        <label class="qq-opt"><input type="radio" name="q1" value="0"><span>Adapter le courant pour protéger la LED</span></label>
+        <label class="qq-opt"><input type="radio" name="q1" value="1"><span>Augmenter la luminosité de la LED</span></label>
+        <label class="qq-opt"><input type="radio" name="q1" value="2"><span>Alimenter la carte Arduino</span></label>
+      </div>
+      <button class="btn btn-ghost qq-check" type="button">Vérifier ma réponse</button>
+      <div class="qq-feedback" aria-live="polite"></div>
+    </div>
+
+    <div class="quiz-q" data-ok="1" data-explain="D'après la synthèse, la plaque d'essai sert à brancher les différents composants électroniques pour faire des tests.">
+      <p class="qq-text">3. À quoi sert la plaque d'essai ?</p>
+      <div class="qq-opts">
+        <label class="qq-opt"><input type="radio" name="q2" value="0"><span>À stocker le programme du système</span></label>
+        <label class="qq-opt"><input type="radio" name="q2" value="1"><span>À brancher les composants électroniques pour faire des tests</span></label>
+        <label class="qq-opt"><input type="radio" name="q2" value="2"><span>À produire l'électricité</span></label>
+      </div>
+      <button class="btn btn-ghost qq-check" type="button">Vérifier ma réponse</button>
+      <div class="qq-feedback" aria-live="polite"></div>
+    </div>
+
+    <div class="quiz-q" data-ok="1" data-explain="La synthèse précise que l'Arduino gère le programme, l'alimentation et la gestion des entrées et des sorties.">
+      <p class="qq-text">4. Que gère la carte Arduino dans le système ?</p>
+      <div class="qq-opts">
+        <label class="qq-opt"><input type="radio" name="q3" value="0"><span>Uniquement l'affichage à l'écran</span></label>
+        <label class="qq-opt"><input type="radio" name="q3" value="1"><span>Le programme, l'alimentation et la gestion des entrées et des sorties</span></label>
+        <label class="qq-opt"><input type="radio" name="q3" value="2"><span>La fabrication de la LED</span></label>
+      </div>
+      <button class="btn btn-ghost qq-check" type="button">Vérifier ma réponse</button>
+      <div class="qq-feedback" aria-live="polite"></div>
+    </div>
+  <div class="quiz-score" aria-live="polite"></div>
+</section>
     
     <nav class="pager">
       
