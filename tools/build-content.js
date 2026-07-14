@@ -446,6 +446,15 @@ function applyOverlay(sectionId, data) {
     }
   }
 
+  // Fusion de champs dans une séquence existante (sans toucher aux pages)
+  // Sert à requalifier les anciennes séquences sur le programme 2024.
+  if (ov.patchSequences) {
+    for (const [slug, patch] of Object.entries(ov.patchSequences)) {
+      const seq = data.sequences.find((s) => s.slug === slug);
+      if (seq) Object.assign(seq, patch);
+    }
+  }
+
   // Remplacement complet de séquences (par slug)
   if (ov.replaceSequences) {
     for (const [slug, seqDef] of Object.entries(ov.replaceSequences)) {

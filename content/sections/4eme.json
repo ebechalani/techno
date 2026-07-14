@@ -572,7 +572,8 @@
           "resources": [],
           "srcUrl": "https://sites.google.com/view/lmtechno25/4ème/séquence-1-le-réseau-informatique/séance-4-adresse-ip"
         }
-      ]
+      ],
+      "competences_md": "*Programme de Technologie du cycle 4 (2024)*\n\n- **T2.1** Décrire et caractériser l'organisation interne d'un objet technique et ses échanges avec son environnement (énergies, données)."
     },
     {
       "slug": "sequence-2-portail-automatise",
@@ -628,7 +629,8 @@
           "resources": [],
           "srcUrl": "https://sites.google.com/view/lmtechno25/4ème/séquence-2-portail-automatisé/séance-2-les-contraintes"
         }
-      ]
+      ],
+      "competences_md": "*Programme de Technologie du cycle 4 (2024)*\n\n- **T1.2** Décrire les interactions entre un objet technique, son environnement et les utilisateurs.\n- **T3.1** Imaginer, concevoir et réaliser une ou des solutions en réponse à un besoin."
     },
     {
       "slug": "sequence-3-objets-connectes",
@@ -675,7 +677,8 @@
           ],
           "srcUrl": "https://sites.google.com/view/lmtechno25/4ème/séquence-3-les-objets-connectés/séance-2-comment-piloter-un-objet-technique-avec-un-smartphone"
         }
-      ]
+      ],
+      "competences_md": "*Programme de Technologie du cycle 4 (2024)*\n\n- **T3.1** Imaginer, concevoir et réaliser une ou des solutions en réponse à un besoin.\n- **T2.3** Comprendre et modifier un programme associé à une fonctionnalité d'un objet technique."
     },
     {
       "slug": "sequence-4-microbit",
@@ -750,7 +753,8 @@
           "resources": [],
           "srcUrl": "https://sites.google.com/view/lmtechno25/4ème/séquence-4-programmer-un-ordinateur-de-poche/programmer-une-boussolle"
         }
-      ]
+      ],
+      "competences_md": "*Programme de Technologie du cycle 4 (2024)*\n\n- **T2.3** Comprendre et modifier un programme associé à une fonctionnalité d'un objet technique.\n- **T3.3** Concevoir, écrire, tester et mettre au point un programme."
     },
     {
       "slug": "sequence-5-feu-tricolore-arduino",
@@ -784,7 +788,8 @@
           "resources": [],
           "srcUrl": "https://sites.google.com/view/lmtechno25/4ème/séquence-5-comment-simuler-le-fonctionnement-dun-feu-tricolore-arduino/séance-2-algorithme-et-programmation"
         }
-      ]
+      ],
+      "competences_md": "*Programme de Technologie du cycle 4 (2024)*\n\n- **T2.1** Décrire et caractériser l'organisation interne d'un objet technique et ses échanges avec son environnement (énergies, données).\n- **T3.3** Concevoir, écrire, tester et mettre au point un programme."
     },
     {
       "slug": "sequence-6-serre-autonome",
@@ -882,7 +887,8 @@
             }
           ]
         }
-      ]
+      ],
+      "competences_md": "*Programme de Technologie du cycle 4 (2024)*\n\n- **T3.1** Imaginer, concevoir et réaliser une ou des solutions en réponse à un besoin.\n- **T3.3** Concevoir, écrire, tester et mettre au point un programme."
     },
     {
       "slug": "chaines-fonctionnelles",
@@ -916,7 +922,8 @@
           "resources": [],
           "srcUrl": "https://sites.google.com/view/lmtechno25/4ème/chaines-fonctionnelles/correction"
         }
-      ]
+      ],
+      "competences_md": "*Programme de Technologie du cycle 4 (2024)*\n\n- **T2.1** Décrire et caractériser l'organisation interne d'un objet technique et ses échanges avec son environnement (énergies, données)."
     },
     {
       "slug": "olympiades-informatique",

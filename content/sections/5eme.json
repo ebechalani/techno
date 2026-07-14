@@ -396,7 +396,8 @@
           ],
           "srcUrl": "https://sites.google.com/view/lmtechno25/5ème/séquence-1-préserver-les-ressources/séance-3-créer-une-application-smartphone"
         }
-      ]
+      ],
+      "competences_md": "*Programme de Technologie du cycle 4 (2024)*\n\n- **T1.3** Caractériser et choisir un objet technique selon différents critères (dont le développement durable).\n- **T3.1** Imaginer, concevoir et réaliser une ou des solutions en réponse à un besoin.\n- **T2.3** Comprendre et modifier un programme associé à une fonctionnalité d'un objet technique."
     },
     {
       "slug": "sequence-2-eclairage-automatique",
@@ -474,7 +475,8 @@
           "resources": [],
           "srcUrl": "https://sites.google.com/view/lmtechno25/5ème/séquence-2-éclairage-automatique/séance-4la-programmation-dun-système-automatique"
         }
-      ]
+      ],
+      "competences_md": "*Programme de Technologie du cycle 4 (2024)*\n\n- **T2.1** Décrire et caractériser l'organisation interne d'un objet technique et ses échanges avec son environnement (énergies, données).\n- **T2.3** Comprendre et modifier un programme associé à une fonctionnalité d'un objet technique."
     },
     {
       "slug": "sequence-3-vivre-dans-une-boite",
@@ -585,7 +587,8 @@
           "resources": [],
           "srcUrl": "https://sites.google.com/view/lmtechno25/5ème/séquence-3-vivre-dans-une-boite/séance-7-modéliser-lagencement-extérieur"
         }
-      ]
+      ],
+      "competences_md": "*Programme de Technologie du cycle 4 (2024)*\n\n- **T1.2** Décrire les interactions entre un objet technique, son environnement et les utilisateurs.\n- **T3.1** Imaginer, concevoir et réaliser une ou des solutions en réponse à un besoin."
     },
     {
       "slug": "sequence-4-animal-sounds",

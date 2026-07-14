@@ -346,5 +346,28 @@
     "sequence-6-serre-autonome",
     "chaines-fonctionnelles",
     "olympiades-informatique"
-  ]
+  ],
+  "patchSequences": {
+    "sequence-1-reseau-informatique": {
+      "competences_md": "*Programme de Technologie du cycle 4 (2024)*\n\n- **T2.1** Décrire et caractériser l'organisation interne d'un objet technique et ses échanges avec son environnement (énergies, données)."
+    },
+    "sequence-2-portail-automatise": {
+      "competences_md": "*Programme de Technologie du cycle 4 (2024)*\n\n- **T1.2** Décrire les interactions entre un objet technique, son environnement et les utilisateurs.\n- **T3.1** Imaginer, concevoir et réaliser une ou des solutions en réponse à un besoin."
+    },
+    "sequence-3-objets-connectes": {
+      "competences_md": "*Programme de Technologie du cycle 4 (2024)*\n\n- **T3.1** Imaginer, concevoir et réaliser une ou des solutions en réponse à un besoin.\n- **T2.3** Comprendre et modifier un programme associé à une fonctionnalité d'un objet technique."
+    },
+    "sequence-4-microbit": {
+      "competences_md": "*Programme de Technologie du cycle 4 (2024)*\n\n- **T2.3** Comprendre et modifier un programme associé à une fonctionnalité d'un objet technique.\n- **T3.3** Concevoir, écrire, tester et mettre au point un programme."
+    },
+    "sequence-5-feu-tricolore-arduino": {
+      "competences_md": "*Programme de Technologie du cycle 4 (2024)*\n\n- **T2.1** Décrire et caractériser l'organisation interne d'un objet technique et ses échanges avec son environnement (énergies, données).\n- **T3.3** Concevoir, écrire, tester et mettre au point un programme."
+    },
+    "sequence-6-serre-autonome": {
+      "competences_md": "*Programme de Technologie du cycle 4 (2024)*\n\n- **T3.1** Imaginer, concevoir et réaliser une ou des solutions en réponse à un besoin.\n- **T3.3** Concevoir, écrire, tester et mettre au point un programme."
+    },
+    "chaines-fonctionnelles": {
+      "competences_md": "*Programme de Technologie du cycle 4 (2024)*\n\n- **T2.1** Décrire et caractériser l'organisation interne d'un objet technique et ses échanges avec son environnement (énergies, données)."
+    }
+  }
 }
