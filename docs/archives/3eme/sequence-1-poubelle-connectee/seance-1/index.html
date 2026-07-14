@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="fr" data-base="../../../../">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Séance 1: Comment décrire le fonctionnement? · La poubelle connectée — Technologie &amp; SNT</title>
+<meta name="description" content="Fonctionnement, modélisation 3D, prototype Arduino et simulation Tinkercad.">
+<meta property="og:title" content="Séance 1: Comment décrire le fonctionnement? · La poubelle connectée — Technologie &amp; SNT">
+<meta property="og:description" content="Fonctionnement, modélisation 3D, prototype Arduino et simulation Tinkercad.">
+<meta property="og:type" content="website">
+<link rel="icon" href="../../../../assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lexend:wght@500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../../../assets/styles.css">
+<script>
+(function(){try{var t=localStorage.getItem("lmtechno-theme");if(!t)t=window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light";document.documentElement.setAttribute("data-theme",t);}catch(e){}})();
+</script>
+
+</head>
+<body>
+<a class="skip-link" href="#contenu">Aller au contenu</a>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="../../../../index.html">
+      <span class="brand-logo">T</span>
+      <span>Technologie <span style="color:var(--muted);font-weight:500">&amp;</span> SNT
+        <small>Lycée Montaigne, Beit Chabab</small>
+      </span>
+    </a>
+    
+<nav class="main-nav" id="main-nav" aria-label="Navigation principale">
+  <a href="../../../../index.html">Accueil</a>
+  <a href="../../../../5eme-2025/" style="--dot:#0d9268">5ème <small>· 2025-2026</small></a>
+  <a href="../../../../4eme-2025/" style="--dot:#2050d0">4ème <small>· 2025-2026</small></a>
+  <a href="../../../../snt/" style="--dot:#d9640f">2nde SNT</a>
+  <a href="../../../../sicit/" style="--dot:#0d8e9c">SI · CIT</a>
+  <div class="nav-group">
+    <button type="button" aria-expanded="false">Archives</button>
+    <div class="nav-menu">
+      <div class="nav-menu-label">Programmes 2020-2024</div>
+      <a href="../../../../archives/5eme/"><span class="dot" style="background:#0d9268"></span>5ème</a>
+      <a href="../../../../archives/4eme/"><span class="dot" style="background:#2050d0"></span>4ème</a>
+      <a href="../../../../archives/3eme/"><span class="dot" style="background:#7c3aed"></span>3ème</a>
+    </div>
+  </div>
+</nav>
+    <div class="header-actions">
+      <button class="search-btn" id="search-open" type="button" aria-label="Rechercher">
+        <span>🔍</span><span class="label">Rechercher</span><kbd>Ctrl K</kbd>
+      </button>
+      <button class="icon-btn" id="theme-toggle" type="button" aria-label="Changer de thème">🌙</button>
+      <button class="icon-btn nav-toggle" id="nav-toggle" type="button" aria-label="Menu" aria-expanded="false">☰</button>
+    </div>
+  </div>
+</header>
+<main id="contenu">
+
+<nav class="breadcrumbs wrap" aria-label="Fil d'Ariane">
+    <a href="../../../../index.html">Accueil</a><span class="sep">›</span>
+    <a href="../../">3ème · 2020-2024</a><span class="sep">›</span>
+    <a href="../">La poubelle connectée</a><span class="sep">›</span>
+    <span class="current">Séance 1: Comment décrire le fonctionnement?</span>
+  </nav>
+<div class="wrap course-layout">
+  <aside class="sidebar" style="--accent:undefined;--accent-soft:undefined;">
+    <div class="sb-title"><span class="dot"></span>3ème · 2020-2024</div>
+    <nav>
+    <details open>
+      <summary><a href="../../sequence-1-poubelle-connectee/" style="all:unset;cursor:pointer">La poubelle connectée</a></summary>
+      <div class="sb-pages">
+        <a href="../../sequence-1-poubelle-connectee/seance-1/" aria-current="true">Séance 1</a>
+        <a href="../../sequence-1-poubelle-connectee/correction/">Correction</a>
+        <a href="../../sequence-1-poubelle-connectee/modelisation-3d-de-la-poubelle/">Modélisation 3d de la poubelle</a>
+        <a href="../../sequence-1-poubelle-connectee/prototype-arduino/">prototype Arduino</a>
+        <a href="../../sequence-1-poubelle-connectee/simulation-tinkercad/">Simulation Tinkercad</a>
+      </div>
+    </details>
+    <details>
+      <summary><a href="../../sequence-2-intelligence-artificielle/" style="all:unset;cursor:pointer">Intelligence artificielle</a></summary>
+      <div class="sb-pages">
+        <a href="../../sequence-2-intelligence-artificielle/seance-1/">Séance 1</a>
+        <a href="../../sequence-2-intelligence-artificielle/seance-2/">Séance 2</a>
+        <a href="../../sequence-2-intelligence-artificielle/tuto-videos-teachable-maching/">Tuto vidéos Teachable machine</a>
+        <a href="../../sequence-2-intelligence-artificielle/seance-3/">Séance 3</a>
+        <a href="../../sequence-2-intelligence-artificielle/seance-4/">Séance 4</a>
+        <a href="../../sequence-2-intelligence-artificielle/fiche-de-connaissance/">Fiche de connaissance</a>
+      </div>
+    </details>
+    <details>
+      <summary><a href="../../sequence-3-reseau-informatique/" style="all:unset;cursor:pointer">Réseau informatique</a></summary>
+      <div class="sb-pages">
+        <a href="../../sequence-3-reseau-informatique/seance-1/">Séance 1</a>
+        <a href="../../sequence-3-reseau-informatique/seance-2/">Séance 2</a>
+        <a href="../../sequence-3-reseau-informatique/seance-3/">Séance 3</a>
+        <a href="../../sequence-3-reseau-informatique/tp/">TP</a>
+      </div>
+    </details>
+    <details>
+      <summary><a href="../../assr-2-pix/" style="all:unset;cursor:pointer">ASSR 2 · Pix</a></summary>
+      <div class="sb-pages">
+        <a href="../../assr-2-pix/3eme-a/">3ème A</a>
+        <a href="../../assr-2-pix/3eme-b/">3ème B</a>
+      </div>
+    </details>
+    <details>
+      <summary><a href="../../sessions-dnb/" style="all:unset;cursor:pointer">Sessions DNB</a></summary>
+      <div class="sb-pages">
+        
+      </div>
+    </details>
+    <details>
+      <summary><a href="../../chaines-fonctionnelles/" style="all:unset;cursor:pointer">Chaînes fonctionnelles</a></summary>
+      <div class="sb-pages">
+        
+      </div>
+    </details>
+    <details>
+      <summary><a href="../../fonctions-solutions-techniques/" style="all:unset;cursor:pointer">Fonctions et solutions techniques</a></summary>
+      <div class="sb-pages">
+        
+      </div>
+    </details>
+    </nav>
+  </aside>
+  <article>
+    <div class="page-head">
+      <div class="kicker">
+        <span class="badge" style="--badge-bg:#f1e9fe;--badge-fg:#7c3aed">3e</span>
+        <span class="badge">La poubelle connectée</span>
+        <span class="badge badge-arch">🗄 Archive</span>
+      </div>
+      <h1>Séance 1: Comment décrire le fonctionnement?</h1>
+      
+    </div>
+    
+    <div class="prose">
+      <p><img src="../../../../assets/img/3eme__sequence-1-la-poubelle-connectee__seance-1-comment-decrire-le-fonctionnement/01.png" alt=""></p>
+<figure class="embed embed-video">
+  <div class="embed-bar">
+    <span class="embed-kind">Vidéo</span>
+    <span class="embed-title">eCube (version sous-titrée)</span>
+    <a class="embed-open" href="https://www.youtube.com/embed/WryPkp6-kas?embed_config=%7B%22enc%22:%22AXH1ezm9s3xtFNCZZfFAxMzcZSE-s5O2-udPfOhk_98lBCnwGV-OBo7nETxQt7t9eC2-ClljWJ_t00dQSqppm5YiYV4kCTgx9DKQ78YyL8CqNzKZZc01bZ2KxdSq_GYE5FbLv1hfV_7xwH_a2FTkOr7GuxUU6Gt2uEaECqmMsw6y51A_TZQEYyS8VlEih1ObOnCpA4cXevxNhAFjPg24X24gU_XkqNMD8q1aqMMNTJwdQ8T6JKXfrIYE9ALaB9zyYWz3xunpQhfakxa5DDqRy7j7qGZ8BIJxaqxF2rNwxtYGy38pBI3wi4mPOgjEHmYwNLcFZk1m55yIQIlDPyJ4sngQ6T_fHykIx-S_N_n_-S6ASA6k%22%7D&amp;enablejsapi=1&amp;errorlinks=1&amp;origin=https://sites.google.com&amp;vl=1" target="_blank" rel="noopener">Ouvrir ↗</a>
+  </div>
+  <div class="embed-frame"><iframe data-src="https://www.youtube-nocookie.com/embed/WryPkp6-kas" loading="lazy" allowfullscreen allow="autoplay; fullscreen" title="eCube (version sous-titrée)"></iframe></div>
+</figure><p><strong>T****ravail à faire:</strong></p>
+<p><strong>Répondre à ces questions :</strong></p>
+<p><strong>A quoi sert le système?</strong></p>
+<p><strong>Détermine le besoin du système.</strong></p>
+<p><strong>Comment fonctionne t-il?</strong></p>
+<p><strong>Y a t-il plusieurs versions de système? Quelles sont les différences?</strong></p>
+<p><strong>A</strong> <strong>l&#39;aide de la vidéo:</strong></p>
+<ol>
+<li><p>Déterminer la mission du système ainsi que les cas d&#39;utilisations.</p>
+</li>
+<li><p>Dans un tableau , indiquer les fonctions techniques que doit réaliser la poubelle connectée; associer les solutions proposées par l&#39;entreprise à cahque fonction dans le tableau.</p>
+</li>
+<li><p>Décrire le fonctionnement général sous forme de chaîne d&#39;information et d&#39;énergie</p>
+</li>
+<li><p>Proposer une description du fonctionnement du système sous forme d&#39;un algorigramme.</p>
+</li>
+</ol>
+<p><strong>J&#39;ai réussi mon travail si...</strong></p>
+<ul>
+<li><p>J’ai identifié la mission du système</p>
+</li>
+<li><p>J&#39;ai trouvé 5 fonctions techniques de la poubelle connectée ;</p>
+</li>
+<li><p>J&#39;ai associé pour chacune des fonctions trouvées la solution proposée par le concepteur.</p>
+</li>
+<li><p>J&#39;ai associé les solutions techniques dans les bons blocs fonctionnels ;</p>
+</li>
+<li><p>J&#39;ai identifié la transformation de l&#39;information ;</p>
+</li>
+<li><p>J’ai respecté les règles de présentation d’un algorigramme ;</p>
+</li>
+<li><p>Mon algorigramme répond au problème donné.</p>
+</li>
+</ul>
+<p><strong>Ressources</strong></p>
+<p>Fiche Algorigramme:</p>
+<figure class="embed embed-doc">
+  <div class="embed-bar">
+    <span class="embed-kind">Document PDF</span>
+    <span class="embed-title">Fiche-Algorigramme.pdf</span>
+    <a class="embed-open" href="https://drive.google.com/file/d/16op18yefq_HvnJYdeQP1pyqLpVOeoSkW/preview" target="_blank" rel="noopener">Ouvrir ↗</a>
+  </div>
+  <div class="embed-frame"><iframe data-src="https://drive.google.com/file/d/16op18yefq_HvnJYdeQP1pyqLpVOeoSkW/preview" loading="lazy" allowfullscreen allow="autoplay; fullscreen" title="Fiche-Algorigramme.pdf"></iframe></div>
+</figure><p><strong>Fonctions et solutions</strong></p>
+<figure class="embed embed-doc">
+  <div class="embed-bar">
+    <span class="embed-kind">Document PDF</span>
+    <span class="embed-title">recherche-solution-ecouteur.pdf</span>
+    <a class="embed-open" href="https://drive.google.com/file/d/1HqZo-5c6U7RkrG_NNOikksSXeeYRHq8_/preview" target="_blank" rel="noopener">Ouvrir ↗</a>
+  </div>
+  <div class="embed-frame"><iframe data-src="https://drive.google.com/file/d/1HqZo-5c6U7RkrG_NNOikksSXeeYRHq8_/preview" loading="lazy" allowfullscreen allow="autoplay; fullscreen" title="recherche-solution-ecouteur.pdf"></iframe></div>
+</figure><figure class="embed embed-doc">
+  <div class="embed-bar">
+    <span class="embed-kind">Document PDF</span>
+    <span class="embed-title">recherche-solution-velo.pdf</span>
+    <a class="embed-open" href="https://drive.google.com/file/d/1a8ZTDaIDG8UiNQ-BjOLrApfP9bLyTw5B/preview" target="_blank" rel="noopener">Ouvrir ↗</a>
+  </div>
+  <div class="embed-frame"><iframe data-src="https://drive.google.com/file/d/1a8ZTDaIDG8UiNQ-BjOLrApfP9bLyTw5B/preview" loading="lazy" allowfullscreen allow="autoplay; fullscreen" title="recherche-solution-velo.pdf"></iframe></div>
+</figure><figure class="embed embed-doc">
+  <div class="embed-bar">
+    <span class="embed-kind">Document PDF</span>
+    <span class="embed-title">recherche-solution-ipad.pdf</span>
+    <a class="embed-open" href="https://drive.google.com/file/d/15j-WvHmwauHJL_ngdj68ydRF7lGBNvaN/preview" target="_blank" rel="noopener">Ouvrir ↗</a>
+  </div>
+  <div class="embed-frame"><iframe data-src="https://drive.google.com/file/d/15j-WvHmwauHJL_ngdj68ydRF7lGBNvaN/preview" loading="lazy" allowfullscreen allow="autoplay; fullscreen" title="recherche-solution-ipad.pdf"></iframe></div>
+</figure><figure class="embed embed-doc">
+  <div class="embed-bar">
+    <span class="embed-kind">Document PDF</span>
+    <span class="embed-title">Ressource fonctions et solutions.pdf</span>
+    <a class="embed-open" href="https://drive.google.com/file/d/104YaFcR7C4dzR1PIpSfh5qGPQx7FlBhr/preview" target="_blank" rel="noopener">Ouvrir ↗</a>
+  </div>
+  <div class="embed-frame"><iframe data-src="https://drive.google.com/file/d/104YaFcR7C4dzR1PIpSfh5qGPQx7FlBhr/preview" loading="lazy" allowfullscreen allow="autoplay; fullscreen" title="Ressource fonctions et solutions.pdf"></iframe></div>
+</figure><p><strong>Chaine d&#39;énergie Chaine d&#39;information</strong></p>
+<figure class="embed embed-doc">
+  <div class="embed-bar">
+    <span class="embed-kind">Document PDF</span>
+    <span class="embed-title">Systeme-Embarque-AlarmeCO2.pdf</span>
+    <a class="embed-open" href="https://drive.google.com/file/d/10uzErcIZXd5DjuW7hYc0UP4eoiPkJ3ZS/preview" target="_blank" rel="noopener">Ouvrir ↗</a>
+  </div>
+  <div class="embed-frame"><iframe data-src="https://drive.google.com/file/d/10uzErcIZXd5DjuW7hYc0UP4eoiPkJ3ZS/preview" loading="lazy" allowfullscreen allow="autoplay; fullscreen" title="Systeme-Embarque-AlarmeCO2.pdf"></iframe></div>
+</figure><figure class="embed embed-doc">
+  <div class="embed-bar">
+    <span class="embed-kind">Document PDF</span>
+    <span class="embed-title">Systeme-Embarque-Eclairage.pdf</span>
+    <a class="embed-open" href="https://drive.google.com/file/d/176i_egjRqslV8Tj_mONj639940OKKwVw/preview" target="_blank" rel="noopener">Ouvrir ↗</a>
+  </div>
+  <div class="embed-frame"><iframe data-src="https://drive.google.com/file/d/176i_egjRqslV8Tj_mONj639940OKKwVw/preview" loading="lazy" allowfullscreen allow="autoplay; fullscreen" title="Systeme-Embarque-Eclairage.pdf"></iframe></div>
+</figure><figure class="embed embed-doc">
+  <div class="embed-bar">
+    <span class="embed-kind">Document PDF</span>
+    <span class="embed-title">Systeme-Embarque-Store.pdf</span>
+    <a class="embed-open" href="https://drive.google.com/file/d/1dz8OkwNDPjwkkZKcploXdy8AzX5P3F8X/preview" target="_blank" rel="noopener">Ouvrir ↗</a>
+  </div>
+  <div class="embed-frame"><iframe data-src="https://drive.google.com/file/d/1dz8OkwNDPjwkkZKcploXdy8AzX5P3F8X/preview" loading="lazy" allowfullscreen allow="autoplay; fullscreen" title="Systeme-Embarque-Store.pdf"></iframe></div>
+</figure><p><strong>Fiches de connaissances</strong></p>
+<figure class="embed embed-doc">
+  <div class="embed-bar">
+    <span class="embed-kind">Document PDF</span>
+    <span class="embed-title">dic15-4-otscis21-ip23_algorithme.pdf</span>
+    <a class="embed-open" href="https://drive.google.com/file/d/1S2PeMTbwVphnw6jDsKBi_RxJ0nzAaiW4/preview" target="_blank" rel="noopener">Ouvrir ↗</a>
+  </div>
+  <div class="embed-frame"><iframe data-src="https://drive.google.com/file/d/1S2PeMTbwVphnw6jDsKBi_RxJ0nzAaiW4/preview" loading="lazy" allowfullscreen allow="autoplay; fullscreen" title="dic15-4-otscis21-ip23_algorithme.pdf"></iframe></div>
+</figure><figure class="embed embed-doc">
+  <div class="embed-bar">
+    <span class="embed-kind">Document PDF</span>
+    <span class="embed-title">msost14-4-ip23_systemes-embarques.pdf</span>
+    <a class="embed-open" href="https://drive.google.com/file/d/1zBJ9mixLnnKilhCvs4HA088RZ6NoI9xW/preview" target="_blank" rel="noopener">Ouvrir ↗</a>
+  </div>
+  <div class="embed-frame"><iframe data-src="https://drive.google.com/file/d/1zBJ9mixLnnKilhCvs4HA088RZ6NoI9xW/preview" loading="lazy" allowfullscreen allow="autoplay; fullscreen" title="msost14-4-ip23_systemes-embarques.pdf"></iframe></div>
+</figure><figure class="embed embed-doc">
+  <div class="embed-bar">
+    <span class="embed-kind">Document PDF</span>
+    <span class="embed-title">ip23-5_transmission-signal.pdf</span>
+    <a class="embed-open" href="https://drive.google.com/file/d/1rxS-NsoFs1UgK_PX41Or7bNllJmCsErb/preview" target="_blank" rel="noopener">Ouvrir ↗</a>
+  </div>
+  <div class="embed-frame"><iframe data-src="https://drive.google.com/file/d/1rxS-NsoFs1UgK_PX41Or7bNllJmCsErb/preview" loading="lazy" allowfullscreen allow="autoplay; fullscreen" title="ip23-5_transmission-signal.pdf"></iframe></div>
+</figure><figure class="embed embed-doc">
+  <div class="embed-bar">
+    <span class="embed-kind">Document PDF</span>
+    <span class="embed-title">msost14-4-16-4_chaine-info-capteur-nature-info.pdf</span>
+    <a class="embed-open" href="https://drive.google.com/file/d/1BMU_lDnU3yiN0IvaYsZhyDV9UUJvGQud/preview" target="_blank" rel="noopener">Ouvrir ↗</a>
+  </div>
+  <div class="embed-frame"><iframe data-src="https://drive.google.com/file/d/1BMU_lDnU3yiN0IvaYsZhyDV9UUJvGQud/preview" loading="lazy" allowfullscreen allow="autoplay; fullscreen" title="msost14-4-16-4_chaine-info-capteur-nature-info.pdf"></iframe></div>
+</figure><figure class="embed embed-doc">
+  <div class="embed-bar">
+    <span class="embed-kind">Document PDF</span>
+    <span class="embed-title">dic11_besoin-contrainte-norme.pdf</span>
+    <a class="embed-open" href="https://drive.google.com/file/d/1P6t0IocnF23Dw5SGXFpNFFDpNGKJINcJ/preview" target="_blank" rel="noopener">Ouvrir ↗</a>
+  </div>
+  <div class="embed-frame"><iframe data-src="https://drive.google.com/file/d/1P6t0IocnF23Dw5SGXFpNFFDpNGKJINcJ/preview" loading="lazy" allowfullscreen allow="autoplay; fullscreen" title="dic11_besoin-contrainte-norme.pdf"></iframe></div>
+</figure>
+
+    </div>
+    
+    <nav class="pager">
+      
+      <a class="pg-next" href="../correction/"><span class="pg-label">Suivant →</span><span class="pg-title">Correction</span></a>
+    </nav>
+  </article>
+</div>
+</main>
+<footer class="site-footer">
+  <div class="wrap footer-grid">
+    <div>
+      <h4>Technologie &amp; SNT</h4>
+      <p>Site pédagogique regroupant les cours, activités et ressources de Technologie du collège et de SNT du lycée.</p>
+    </div>
+    <div>
+      <h4>Niveaux</h4>
+      <ul>
+        <li><a href="../../../../5eme-2025/">5ème · 2025-2026</a></li>
+        <li><a href="../../../../4eme-2025/">4ème · 2025-2026</a></li>
+        <li><a href="../../../../snt/">2nde SNT </a></li>
+        <li><a href="../../../../sicit/">SI · CIT </a></li>
+        <li><a href="../../../../archives/">Archives 2020-2024</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Références</h4>
+      <ul>
+        <li><a href="https://eduscol.education.fr/2098/technologie-au-cycle-4" target="_blank" rel="noopener">Programme de Technologie (Eduscol)</a></li>
+        <li><a href="https://eduscol.education.fr/3016/sciences-numeriques-et-technologie-au-lycee" target="_blank" rel="noopener">Programme SNT (Eduscol)</a></li>
+        <li><a href="https://pix.fr" target="_blank" rel="noopener">Pix — compétences numériques</a></li>
+        <li><a href="https://sites.google.com/view/lmtechno25" target="_blank" rel="noopener">Site d'origine (Google Sites)</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="wrap footer-bottom">
+    <span>© 2025-2026 M. Eddy Bachaalany · Lycée Montaigne, Beit Chabab</span>
+    <span>Cours de Technologie collège &amp; SNT lycée</span>
+  </div>
+</footer>
+<div class="search-overlay" id="search-overlay" role="dialog" aria-label="Recherche">
+  <div class="search-panel">
+    <div class="search-input-row">
+      <span>🔍</span>
+      <input id="search-input" type="search" placeholder="Rechercher une séquence, une séance, une notion…" autocomplete="off">
+      <kbd>Échap</kbd>
+    </div>
+    <div class="search-results" id="search-results"></div>
+  </div>
+</div>
+<button class="back-to-top" id="back-to-top" type="button" aria-label="Retour en haut">↑</button>
+<script src="../../../../assets/client.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,10 @@
+{
+  "id": "sicit",
+  "label": "SI · CIT",
+  "year": "",
+  "archived": false,
+  "tagline": "Sciences de l'Ingénieur & Création et Innovation Technologiques.",
+  "intro_md": "**Projet TP Arduino**\n\n**Titre du Projet :** **\"Alarme de Luminosité avec Indicateur Servo et LED\"**\n\n**Objectifs :**\n\n- Utiliser un photo-résistor (LDR) pour détecter les changements de luminosité.\n\n- Actionner un servo moteur pour indiquer quand un certain seuil de luminosité est atteint.\n\n- Utiliser une LED pour fournir un signal visuel en cas de changement de luminosité.\n\n- Intégrer un bouton-poussoir pour activer ou désactiver l'alarme.\n\n**Matériel Nécessaire :**\n\n- Arduino (Uno, Mega, etc.)\n\n- LDR (photo-résistor)\n\n- Servo moteur\n\n- Bouton poussoir\n\n- LED\n\n- Résistances\n\n- Fils de connexion\n\n- Breadboard\n\n**Déroulement du TP :**\n\n- Montage Électronique :Brancher la LED à une sortie numérique de l'Arduino.Connecter le LDR à une entrée analogique.Installer le servo moteur à une sortie numérique.Mettre en place le bouton-poussoir sur une entrée numérique avec une résistance de tirage.\n\n- **Programmation :**Écrire un code pour mesurer la lumière avec le LDR.Faire bouger le servo lorsque la lumière dépasse ou tombe en dessous d'un certain seuil.Allumer ou faire clignoter la LED lorsque le seuil de luminosité est atteint.Utiliser le bouton-poussoir pour activer/désactiver le système d'alarme.\n\n- **Tests et Validation :**Tester le système en changeant les conditions de luminosité.Vérifier le fonctionnement du bouton-poussoir pour activer/désactiver l'alarme.Observer la réaction du servo et de la LED lors des changements de luminosité.",
+  "resources": [],
+  "sequences": []
+}

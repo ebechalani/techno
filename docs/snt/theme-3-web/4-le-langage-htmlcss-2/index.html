@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="fr" data-base="../../../">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>4. Le langage HTML/CSS (2) · Le Web — Technologie &amp; SNT</title>
+<meta name="description" content="Histoire, fonctionnement et écriture des pages web en HTML/CSS.">
+<meta property="og:title" content="4. Le langage HTML/CSS (2) · Le Web — Technologie &amp; SNT">
+<meta property="og:description" content="Histoire, fonctionnement et écriture des pages web en HTML/CSS.">
+<meta property="og:type" content="website">
+<link rel="icon" href="../../../assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lexend:wght@500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../../assets/styles.css">
+<script>
+(function(){try{var t=localStorage.getItem("lmtechno-theme");if(!t)t=window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light";document.documentElement.setAttribute("data-theme",t);}catch(e){}})();
+</script>
+
+</head>
+<body>
+<a class="skip-link" href="#contenu">Aller au contenu</a>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="../../../index.html">
+      <span class="brand-logo">T</span>
+      <span>Technologie <span style="color:var(--muted);font-weight:500">&amp;</span> SNT
+        <small>Lycée Montaigne, Beit Chabab</small>
+      </span>
+    </a>
+    
+<nav class="main-nav" id="main-nav" aria-label="Navigation principale">
+  <a href="../../../index.html">Accueil</a>
+  <a href="../../../5eme-2025/" style="--dot:#0d9268">5ème <small>· 2025-2026</small></a>
+  <a href="../../../4eme-2025/" style="--dot:#2050d0">4ème <small>· 2025-2026</small></a>
+  <a href="../../../snt/" style="--dot:#d9640f" aria-current="true">2nde SNT</a>
+  <a href="../../../sicit/" style="--dot:#0d8e9c">SI · CIT</a>
+  <div class="nav-group">
+    <button type="button" aria-expanded="false">Archives</button>
+    <div class="nav-menu">
+      <div class="nav-menu-label">Programmes 2020-2024</div>
+      <a href="../../../archives/5eme/"><span class="dot" style="background:#0d9268"></span>5ème</a>
+      <a href="../../../archives/4eme/"><span class="dot" style="background:#2050d0"></span>4ème</a>
+      <a href="../../../archives/3eme/"><span class="dot" style="background:#7c3aed"></span>3ème</a>
+    </div>
+  </div>
+</nav>
+    <div class="header-actions">
+      <button class="search-btn" id="search-open" type="button" aria-label="Rechercher">
+        <span>🔍</span><span class="label">Rechercher</span><kbd>Ctrl K</kbd>
+      </button>
+      <button class="icon-btn" id="theme-toggle" type="button" aria-label="Changer de thème">🌙</button>
+      <button class="icon-btn nav-toggle" id="nav-toggle" type="button" aria-label="Menu" aria-expanded="false">☰</button>
+    </div>
+  </div>
+</header>
+<main id="contenu">
+
+<nav class="breadcrumbs wrap" aria-label="Fil d'Ariane">
+    <a href="../../../index.html">Accueil</a><span class="sep">›</span>
+    <a href="../../">2nde SNT</a><span class="sep">›</span>
+    <a href="../">Le Web</a><span class="sep">›</span>
+    <span class="current">4. Le langage HTML/CSS (2)</span>
+  </nav>
+<div class="wrap course-layout">
+  <aside class="sidebar" style="--accent:undefined;--accent-soft:undefined;">
+    <div class="sb-title"><span class="dot"></span>2nde SNT </div>
+    <nav>
+    <details>
+      <summary><a href="../../theme-2-internet/" style="all:unset;cursor:pointer">Internet</a></summary>
+      <div class="sb-pages">
+        <a href="../../theme-2-internet/tcpip/">TCP/IP</a>
+        <a href="../../theme-2-internet/fiche-de-revision/">Fiche de révision</a>
+        <a href="../../theme-2-internet/routage/">Routage</a>
+        <a href="../../theme-2-internet/exercices/">Exercices</a>
+        <a href="../../theme-2-internet/synthese/">Synthèse</a>
+        <a href="../../theme-2-internet/dns-et-reseaux-pair-a-pair/">DNS et réseaux pair-à-pair</a>
+        <a href="../../theme-2-internet/support-du-cours/">Support du cours</a>
+      </div>
+    </details>
+    <details open>
+      <summary><a href="../../theme-3-web/" style="all:unset;cursor:pointer">Le Web</a></summary>
+      <div class="sb-pages">
+        <a href="../../theme-3-web/1-histoire-du-web/">1.Histoire du web</a>
+        <a href="../../theme-3-web/2-fonctionnement-du-web/">2.Fonctionnement du web</a>
+        <a href="../../theme-3-web/3-lecriture-dune-page-web/">3. L'écriture d'une page Web</a>
+        <a href="../../theme-3-web/4-le-langage-htmlcss-2/" aria-current="true">4. Le langage HTML/CSS (2)</a>
+      </div>
+    </details>
+    <details>
+      <summary><a href="../../theme-4-photographie/" style="all:unset;cursor:pointer">La photographie numérique</a></summary>
+      <div class="sb-pages">
+        <a href="../../theme-4-photographie/parite-1-loeil-et-le-capteur-numerique/">partie 1: L'oeil et le capteur numérique</a>
+        <a href="../../theme-4-photographie/partie-2-formats-des-images/">Partie 2: Formats des images</a>
+      </div>
+    </details>
+    <details>
+      <summary><a href="../../theme-5-geolocalisation/" style="all:unset;cursor:pointer">Localisation et cartographie</a></summary>
+      <div class="sb-pages">
+        <a href="../../theme-5-geolocalisation/seance-1/">Séance 1</a>
+        <a href="../../theme-5-geolocalisation/la-geolocalisation-par-satellite/">La géolocalisation par satellite</a>
+        <a href="../../theme-5-geolocalisation/le-protocole-nmea/">Le protocole NMEA</a>
+      </div>
+    </details>
+    <details>
+      <summary><a href="../../tp-arduino/" style="all:unset;cursor:pointer">TP Arduino</a></summary>
+      <div class="sb-pages">
+        
+      </div>
+    </details>
+    </nav>
+  </aside>
+  <article>
+    <div class="page-head">
+      <div class="kicker">
+        <span class="badge" style="--badge-bg:#fdeede;--badge-fg:#d9640f">SNT</span>
+        <span class="badge">Le Web</span>
+        
+      </div>
+      <h1>4. Le langage HTML/CSS (2)</h1>
+      
+    </div>
+    
+    <div class="prose">
+      <p><strong>CSS</strong></p>
+<p>Le langage CSS (pour Cascading Style Sheets) permet de définir le style graphique d’une page Web (arrière-plan, type et taille des polices de caractères, etc.). La modification du style d’un élément dans une feuille de style se répercute automatiquement à toutes les pages HTML qui y font appel.</p>
+<p>Retournez sur le site de <a target="_blank" rel="noopener" href="https://jsfiddle.net/">jsfiddle</a>et copiez/collez le code suivant dans la case CSS. En ayant pris la peine de récupérer votre code html précédent. Appuyez sur Run.</p>
+<p>body{</p>
+<p>background-color: white;/<em>ligne 2</em>/</p>
+<p>font-family: &quot;OpenSans&quot;, sans-serif;</p>
+<p>padding: 5px 25px;</p>
+<p>font-size: 18px;/<em>ligne 5</em>/</p>
+<p>margin: 0;</p>
+<p>color: purple;</p>
+<p>}</p>
+<p>h1{</p>
+<p>font-family: &quot;Merryweather&quot;,serif;</p>
+<p>font-size: 32px;</p>
+<p>color: #FF0000;</p>
+<p>}</p>
+<p><strong>Créer un site Web dans Notepad++</strong></p>
+<p><strong>T****élecharger notepad++ en appuyant sur</strong> <a target="_blank" rel="noopener" href="https://notepad-plus-plus.org/downloads/v8.3.3/"><strong>ce lien</strong></a></p>
+<p><strong>Les étapes à suivre pour créer une page html dans notepad++:</strong></p>
+<p>1- File--&gt; New</p>
+<p>2- Appuyez sur l&#39;onglet Language--&gt;H--&gt;Html</p>
+<p>3- Sauvegardez votre page avec l&#39;extension .html; exemple: page1.html</p>
+<p><strong>Les étapes à suivre pour créer une</strong> <strong>fichier CSS</strong> <strong>dans notepad++:</strong></p>
+<p>1- File--&gt; New</p>
+<p>2- Appuyez sur l&#39;onglet Language--&gt;C--&gt;CSS</p>
+<p>3- Sauvegardez votre page avec l&#39;extension .CSS; exemple: style1.css</p>
+<p><strong>Pour appeler le css dans notepad++</strong></p>
+<p>Ajoutez la balise qui appelle le code css dans html
+&lt;link rel=&quot;stylesheet&quot; href=&quot;styles.css&quot;&gt;</p>
+<p>A noter que href est la référence du fichier css que vous avez créé, si je prends le cas précédent mon fichier css est nommé <strong>style1.css</strong> alors il faut modifier href ainsi:</p>
+<p>&lt;link rel=&quot;stylesheet&quot; href=&quot;style1.css&quot;&gt;</p>
+<h3>Insertion d&#39;image</h3>
+<p>Utiliser la balise &lt;img&gt; pour insérer une image .</p>
+<p>Supposons qu&#39;une image nommée html5.png soit stockée dans le même répertoire que votre fichier html de travail.</p>
+<p>Le code en langage html ci-dessous:</p>
+<p>&lt;img src=&quot;html5.png&quot;&gt;</p>
+<p>On peut également modifier la largeur et la hauteur de l&#39;image en ajoutant les arguments: Width et height.</p>
+<p>Exemple pou réduire la largeur et la hauteur de l&#39;image précédente à moitié:</p>
+<p>&lt;img src=&quot;html5.png&quot; width=&quot;50%&quot; height=&quot;50%&gt;</p>
+<h3>Insertion d&#39;un lien hypertexte</h3>
+<p>Un lien hypertexte nous permet d’accéder de nouvelles pages à partir de la page courante en se référant au lien de la nouvelle page .</p>
+<p>Avant d&#39;insérer un lien hypertexte vers une page, il faut que la page existe. Pour cela le lien hypertexte sera ajouté une fois que vous ayez terminer et sauvegarder toutes vos page html.</p>
+<p>La balise <strong>&lt;a href=&quot;page2.html&quot;&gt;Next&lt;/a&gt;</strong> crée un bouton Next sur la page qui nous mène vers la page 2.</p>
+<p><strong>Aligner un paragraphe</strong></p>
+<p>Pour aligner un paragraphe, on utilise la balise &lt;p&gt; qui prend comme argument l&#39; option align=&quot;center&quot; / &quot;left&quot;/&quot;right&quot; et qui doit se fermer une fois le paragraphe est terminé &lt;/p&gt;</p>
+<p>exemple: pour insérer la phrase &quot;bonjour tout le monde au miieu&quot; --&gt;</p>
+<p>&lt;p align=&quot;center&quot;&gt;</p>
+<p>bonjour tout le monde</p>
+<p>&lt;/p&gt;</p>
+<p><strong>N.B:</strong> vous pouvez également aligner une image en utilisant la balsie &lt;p align=&quot;...&quot;&gt; &lt;img src=...&quot;&gt; &lt;/p&gt;</p>
+<p><strong>Ajouter un tableau dans une page HTML</strong></p>
+
+    </div>
+    
+    <nav class="pager">
+      <a class="pg-prev" href="../3-lecriture-dune-page-web/"><span class="pg-label">← Précédent</span><span class="pg-title">3. L'écriture d'une page Web</span></a>
+      
+    </nav>
+  </article>
+</div>
+</main>
+<footer class="site-footer">
+  <div class="wrap footer-grid">
+    <div>
+      <h4>Technologie &amp; SNT</h4>
+      <p>Site pédagogique regroupant les cours, activités et ressources de Technologie du collège et de SNT du lycée.</p>
+    </div>
+    <div>
+      <h4>Niveaux</h4>
+      <ul>
+        <li><a href="../../../5eme-2025/">5ème · 2025-2026</a></li>
+        <li><a href="../../../4eme-2025/">4ème · 2025-2026</a></li>
+        <li><a href="../../../snt/">2nde SNT </a></li>
+        <li><a href="../../../sicit/">SI · CIT </a></li>
+        <li><a href="../../../archives/">Archives 2020-2024</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Références</h4>
+      <ul>
+        <li><a href="https://eduscol.education.fr/2098/technologie-au-cycle-4" target="_blank" rel="noopener">Programme de Technologie (Eduscol)</a></li>
+        <li><a href="https://eduscol.education.fr/3016/sciences-numeriques-et-technologie-au-lycee" target="_blank" rel="noopener">Programme SNT (Eduscol)</a></li>
+        <li><a href="https://pix.fr" target="_blank" rel="noopener">Pix — compétences numériques</a></li>
+        <li><a href="https://sites.google.com/view/lmtechno25" target="_blank" rel="noopener">Site d'origine (Google Sites)</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="wrap footer-bottom">
+    <span>© 2025-2026 M. Eddy Bachaalany · Lycée Montaigne, Beit Chabab</span>
+    <span>Cours de Technologie collège &amp; SNT lycée</span>
+  </div>
+</footer>
+<div class="search-overlay" id="search-overlay" role="dialog" aria-label="Recherche">
+  <div class="search-panel">
+    <div class="search-input-row">
+      <span>🔍</span>
+      <input id="search-input" type="search" placeholder="Rechercher une séquence, une séance, une notion…" autocomplete="off">
+      <kbd>Échap</kbd>
+    </div>
+    <div class="search-results" id="search-results"></div>
+  </div>
+</div>
+<button class="back-to-top" id="back-to-top" type="button" aria-label="Retour en haut">↑</button>
+<script src="../../../assets/client.js" defer></script>
+</body>
+</html>

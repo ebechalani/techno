@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="fr" data-base="../../../">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>La géolocalisation par satellite · Localisation et cartographie — Technologie &amp; SNT</title>
+<meta name="description" content="Bases de la cartographie, géolocalisation par satellite et protocole NMEA.">
+<meta property="og:title" content="La géolocalisation par satellite · Localisation et cartographie — Technologie &amp; SNT">
+<meta property="og:description" content="Bases de la cartographie, géolocalisation par satellite et protocole NMEA.">
+<meta property="og:type" content="website">
+<link rel="icon" href="../../../assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lexend:wght@500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../../assets/styles.css">
+<script>
+(function(){try{var t=localStorage.getItem("lmtechno-theme");if(!t)t=window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light";document.documentElement.setAttribute("data-theme",t);}catch(e){}})();
+</script>
+
+</head>
+<body>
+<a class="skip-link" href="#contenu">Aller au contenu</a>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="../../../index.html">
+      <span class="brand-logo">T</span>
+      <span>Technologie <span style="color:var(--muted);font-weight:500">&amp;</span> SNT
+        <small>Lycée Montaigne, Beit Chabab</small>
+      </span>
+    </a>
+    
+<nav class="main-nav" id="main-nav" aria-label="Navigation principale">
+  <a href="../../../index.html">Accueil</a>
+  <a href="../../../5eme-2025/" style="--dot:#0d9268">5ème <small>· 2025-2026</small></a>
+  <a href="../../../4eme-2025/" style="--dot:#2050d0">4ème <small>· 2025-2026</small></a>
+  <a href="../../../snt/" style="--dot:#d9640f" aria-current="true">2nde SNT</a>
+  <a href="../../../sicit/" style="--dot:#0d8e9c">SI · CIT</a>
+  <div class="nav-group">
+    <button type="button" aria-expanded="false">Archives</button>
+    <div class="nav-menu">
+      <div class="nav-menu-label">Programmes 2020-2024</div>
+      <a href="../../../archives/5eme/"><span class="dot" style="background:#0d9268"></span>5ème</a>
+      <a href="../../../archives/4eme/"><span class="dot" style="background:#2050d0"></span>4ème</a>
+      <a href="../../../archives/3eme/"><span class="dot" style="background:#7c3aed"></span>3ème</a>
+    </div>
+  </div>
+</nav>
+    <div class="header-actions">
+      <button class="search-btn" id="search-open" type="button" aria-label="Rechercher">
+        <span>🔍</span><span class="label">Rechercher</span><kbd>Ctrl K</kbd>
+      </button>
+      <button class="icon-btn" id="theme-toggle" type="button" aria-label="Changer de thème">🌙</button>
+      <button class="icon-btn nav-toggle" id="nav-toggle" type="button" aria-label="Menu" aria-expanded="false">☰</button>
+    </div>
+  </div>
+</header>
+<main id="contenu">
+
+<nav class="breadcrumbs wrap" aria-label="Fil d'Ariane">
+    <a href="../../../index.html">Accueil</a><span class="sep">›</span>
+    <a href="../../">2nde SNT</a><span class="sep">›</span>
+    <a href="../">Localisation et cartographie</a><span class="sep">›</span>
+    <span class="current">La géolocalisation par satellite</span>
+  </nav>
+<div class="wrap course-layout">
+  <aside class="sidebar" style="--accent:undefined;--accent-soft:undefined;">
+    <div class="sb-title"><span class="dot"></span>2nde SNT </div>
+    <nav>
+    <details>
+      <summary><a href="../../theme-2-internet/" style="all:unset;cursor:pointer">Internet</a></summary>
+      <div class="sb-pages">
+        <a href="../../theme-2-internet/tcpip/">TCP/IP</a>
+        <a href="../../theme-2-internet/fiche-de-revision/">Fiche de révision</a>
+        <a href="../../theme-2-internet/routage/">Routage</a>
+        <a href="../../theme-2-internet/exercices/">Exercices</a>
+        <a href="../../theme-2-internet/synthese/">Synthèse</a>
+        <a href="../../theme-2-internet/dns-et-reseaux-pair-a-pair/">DNS et réseaux pair-à-pair</a>
+        <a href="../../theme-2-internet/support-du-cours/">Support du cours</a>
+      </div>
+    </details>
+    <details>
+      <summary><a href="../../theme-3-web/" style="all:unset;cursor:pointer">Le Web</a></summary>
+      <div class="sb-pages">
+        <a href="../../theme-3-web/1-histoire-du-web/">1.Histoire du web</a>
+        <a href="../../theme-3-web/2-fonctionnement-du-web/">2.Fonctionnement du web</a>
+        <a href="../../theme-3-web/3-lecriture-dune-page-web/">3. L'écriture d'une page Web</a>
+        <a href="../../theme-3-web/4-le-langage-htmlcss-2/">4. Le langage HTML/CSS (2)</a>
+      </div>
+    </details>
+    <details>
+      <summary><a href="../../theme-4-photographie/" style="all:unset;cursor:pointer">La photographie numérique</a></summary>
+      <div class="sb-pages">
+        <a href="../../theme-4-photographie/parite-1-loeil-et-le-capteur-numerique/">partie 1: L'oeil et le capteur numérique</a>
+        <a href="../../theme-4-photographie/partie-2-formats-des-images/">Partie 2: Formats des images</a>
+      </div>
+    </details>
+    <details open>
+      <summary><a href="../../theme-5-geolocalisation/" style="all:unset;cursor:pointer">Localisation et cartographie</a></summary>
+      <div class="sb-pages">
+        <a href="../../theme-5-geolocalisation/seance-1/">Séance 1</a>
+        <a href="../../theme-5-geolocalisation/la-geolocalisation-par-satellite/" aria-current="true">La géolocalisation par satellite</a>
+        <a href="../../theme-5-geolocalisation/le-protocole-nmea/">Le protocole NMEA</a>
+      </div>
+    </details>
+    <details>
+      <summary><a href="../../tp-arduino/" style="all:unset;cursor:pointer">TP Arduino</a></summary>
+      <div class="sb-pages">
+        
+      </div>
+    </details>
+    </nav>
+  </aside>
+  <article>
+    <div class="page-head">
+      <div class="kicker">
+        <span class="badge" style="--badge-bg:#fdeede;--badge-fg:#d9640f">SNT</span>
+        <span class="badge">Localisation et cartographie</span>
+        
+      </div>
+      <h1>La géolocalisation par satellite</h1>
+      
+    </div>
+    
+    <div class="prose">
+      <h2>Exercice 1 : Trilatération dans le plan</h2>
+<p>En vacances chez sa grand-mère dans le petit village de Bougon dans les Deux-Sèvres, Léa s&#39;en va faire une balade dans la campagne en emportant une carte au 1/25 000 de la région. Au bout d&#39;un certain temps, elle ne sait plus vraiment où elle est</p>
+<p><img src="../../../assets/img/2nde-snt__theme-5-geolocalisation__la-geolocalisation-par-satellite/01.png" alt=""></p>
+<p>Elle sait juste qu&#39;elle est située dans un triangle formé par Bougon, La Mothe-Saint-Héray et Exoudun. Elle entend midi sonner aux différentes églises environnantes et elle a le réflexe de regarder à quelle heure précise elle entend sonner chacune des églises :</p>
+<ul>
+<li><p>elle entend sonner l&#39;église Saint-Édouard d&#39;Exoudun à 12 h 00 min et 3 s ;</p>
+</li>
+<li><p>elle entend sonner l&#39;église Saint-Héray à 12 h 00 min et 6 s ;</p>
+</li>
+<li><p>elle entend sonner l&#39;église Saint-Pierre de Bougon à 12 h 00 min et 7 s.</p>
+</li>
+</ul>
+<h3>Question</h3>
+<p>Sachant que ces trois églises sont synchronisées, que Léa a réglé sa montre sur l&#39;heure donnée par l&#39;église Saint-Pierre de Bougon en arrivant chez sa grand-mère et que le son se propage dans l&#39;air à la vitesse de 340 m/s, déterminer l&#39;emplacement approximatif de Léa sur la carte.</p>
+<p>Pour vous aider, vous avez à disposition un fichier GéoGebra pour les constructions :</p>
+<p>copier-coller le url suivant dans la barre de recherche popur télécharger le fichier Trilateration_depart.ggb: <a target="_blank" rel="noopener" href="http://sciences-ingenieur.genevoix-signoret-vinci.fr/SNT/6-cartographie/res/trilateration_depart.ggb">http://sciences-ingenieur.genevoix-signoret-vinci.fr/SNT/6-cartographie/res/trilateration_depart.ggb</a></p>
+<p><strong>Geogebra 6 en ligne:</strong></p>
+<p><a target="_blank" rel="noopener" href="https://www.geogebra.org/classic">www.geogebra.org/classic</a></p>
+<h2>Indice 1</h2>
+<p>Déterminer la distance entre Léa et chacune des 3 églises.</p>
+<h2>Indice 2</h2>
+<p>Avec l&#39;échelle de la carte sur GéoGebra, convertir les distances.</p>
+<h2>Indice 3</h2>
+<p><img src="../../../assets/img/2nde-snt__theme-5-geolocalisation__la-geolocalisation-par-satellite/02.png" alt=""></p>
+<p>L&#39;ensemble des points situés à une même distance d&#39;un autre point est un cercle.</p>
+<p>Sur GéoGebra, utiliser l&#39;outil Cercle (centre-rayon) pour dessiner un cercle dont on connaît le centre et le rayon.</p>
+<h2>Fonctionnement d&#39;un GPS</h2>
+<h3>Comment fonctionne un GPS ? (Source : chaîne YouTube du CNES, Centre National d&#39;Études Spatiales )</h3>
+<figure class="embed embed-doc">
+  <div class="embed-bar">
+    <span class="embed-kind">Document PDF</span>
+    <span class="embed-title">fonctionnementGPS.mp4</span>
+    <a class="embed-open" href="https://drive.google.com/file/d/10oPa3zZuuXDod77RGy3p3pq6-4Z-MTlp/preview" target="_blank" rel="noopener">Ouvrir ↗</a>
+  </div>
+  <div class="embed-frame"><iframe data-src="https://drive.google.com/file/d/10oPa3zZuuXDod77RGy3p3pq6-4Z-MTlp/preview" loading="lazy" allowfullscreen allow="autoplay; fullscreen" title="fonctionnementGPS.mp4"></iframe></div>
+</figure><h3>Galiléo : fonctionnement du GPS européen (Source : chaîne YouTube UNISCIEL, Groupement d&#39;Intérêt Scientifique pour l&#39;enseignement des Sciences)</h3>
+<figure class="embed embed-doc">
+  <div class="embed-bar">
+    <span class="embed-kind">Document PDF</span>
+    <span class="embed-title">Galileo.mp4</span>
+    <a class="embed-open" href="https://drive.google.com/file/d/1XY3Bep6OU_dxBwnzg37va4jsUcmUhKrP/preview" target="_blank" rel="noopener">Ouvrir ↗</a>
+  </div>
+  <div class="embed-frame"><iframe data-src="https://drive.google.com/file/d/1XY3Bep6OU_dxBwnzg37va4jsUcmUhKrP/preview" loading="lazy" allowfullscreen allow="autoplay; fullscreen" title="Galileo.mp4"></iframe></div>
+</figure><h3>La localisation par satellite : principe de fonctionnement</h3>
+<figure class="embed embed-doc">
+  <div class="embed-bar">
+    <span class="embed-kind">Document PDF</span>
+    <span class="embed-title">satellites.png</span>
+    <a class="embed-open" href="https://drive.google.com/file/d/1jiigvnLhV-fVmsXvqBROv8yaJkKF9yy2/preview" target="_blank" rel="noopener">Ouvrir ↗</a>
+  </div>
+  <div class="embed-frame"><iframe data-src="https://drive.google.com/file/d/1jiigvnLhV-fVmsXvqBROv8yaJkKF9yy2/preview" loading="lazy" allowfullscreen allow="autoplay; fullscreen" title="satellites.png"></iframe></div>
+</figure><h3>Bilan</h3>
+<figure class="embed embed-doc">
+  <div class="embed-bar">
+    <span class="embed-kind">Document PDF</span>
+    <span class="embed-title">bilan-geolocalisation.png</span>
+    <a class="embed-open" href="https://drive.google.com/file/d/1d4ZXzGua2hffdzqxGy9NM1Ecc6jPeY3M/preview" target="_blank" rel="noopener">Ouvrir ↗</a>
+  </div>
+  <div class="embed-frame"><iframe data-src="https://drive.google.com/file/d/1d4ZXzGua2hffdzqxGy9NM1Ecc6jPeY3M/preview" loading="lazy" allowfullscreen allow="autoplay; fullscreen" title="bilan-geolocalisation.png"></iframe></div>
+</figure><h2>Exercice 2 : notions à retenir</h2>
+<ol>
+<li><p>Par combien de satellites faut-il être visible pour pouvoir être localiser?</p>
+</li>
+<li><p>Quelles informations sont envoyées par les 3 satellites gérant la trilatération?</p>
+</li>
+</ol>
+<p>3.Quelle information est envoyée par le satellite gérant la synchronisation des horloges?</p>
+<ol start="4">
+<li><p>A quelle vitesse se déplacent les ondes radios émises par un satellite?</p>
+</li>
+<li><p>Combien de satellites constituent le système Galiléo?</p>
+</li>
+<li><p>Quel est le rôle des centres de contrôles et des stations au sol?</p>
+</li>
+</ol>
+
+    </div>
+    
+    <nav class="pager">
+      <a class="pg-prev" href="../seance-1/"><span class="pg-label">← Précédent</span><span class="pg-title">Séance 1 - Les bases de la cartographie</span></a>
+      <a class="pg-next" href="../le-protocole-nmea/"><span class="pg-label">Suivant →</span><span class="pg-title">Le protocole NMEA</span></a>
+    </nav>
+  </article>
+</div>
+</main>
+<footer class="site-footer">
+  <div class="wrap footer-grid">
+    <div>
+      <h4>Technologie &amp; SNT</h4>
+      <p>Site pédagogique regroupant les cours, activités et ressources de Technologie du collège et de SNT du lycée.</p>
+    </div>
+    <div>
+      <h4>Niveaux</h4>
+      <ul>
+        <li><a href="../../../5eme-2025/">5ème · 2025-2026</a></li>
+        <li><a href="../../../4eme-2025/">4ème · 2025-2026</a></li>
+        <li><a href="../../../snt/">2nde SNT </a></li>
+        <li><a href="../../../sicit/">SI · CIT </a></li>
+        <li><a href="../../../archives/">Archives 2020-2024</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Références</h4>
+      <ul>
+        <li><a href="https://eduscol.education.fr/2098/technologie-au-cycle-4" target="_blank" rel="noopener">Programme de Technologie (Eduscol)</a></li>
+        <li><a href="https://eduscol.education.fr/3016/sciences-numeriques-et-technologie-au-lycee" target="_blank" rel="noopener">Programme SNT (Eduscol)</a></li>
+        <li><a href="https://pix.fr" target="_blank" rel="noopener">Pix — compétences numériques</a></li>
+        <li><a href="https://sites.google.com/view/lmtechno25" target="_blank" rel="noopener">Site d'origine (Google Sites)</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="wrap footer-bottom">
+    <span>© 2025-2026 M. Eddy Bachaalany · Lycée Montaigne, Beit Chabab</span>
+    <span>Cours de Technologie collège &amp; SNT lycée</span>
+  </div>
+</footer>
+<div class="search-overlay" id="search-overlay" role="dialog" aria-label="Recherche">
+  <div class="search-panel">
+    <div class="search-input-row">
+      <span>🔍</span>
+      <input id="search-input" type="search" placeholder="Rechercher une séquence, une séance, une notion…" autocomplete="off">
+      <kbd>Échap</kbd>
+    </div>
+    <div class="search-results" id="search-results"></div>
+  </div>
+</div>
+<button class="back-to-top" id="back-to-top" type="button" aria-label="Retour en haut">↑</button>
+<script src="../../../assets/client.js" defer></script>
+</body>
+</html>

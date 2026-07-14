@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="fr" data-base="../">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SI · CIT — Technologie &amp; SNT</title>
+<meta name="description" content="Sciences de l'Ingénieur &amp; Création et Innovation Technologiques.">
+<meta property="og:title" content="SI · CIT — Technologie &amp; SNT">
+<meta property="og:description" content="Sciences de l'Ingénieur &amp; Création et Innovation Technologiques.">
+<meta property="og:type" content="website">
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lexend:wght@500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/styles.css">
+<script>
+(function(){try{var t=localStorage.getItem("lmtechno-theme");if(!t)t=window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light";document.documentElement.setAttribute("data-theme",t);}catch(e){}})();
+</script>
+
+</head>
+<body>
+<a class="skip-link" href="#contenu">Aller au contenu</a>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="../index.html">
+      <span class="brand-logo">T</span>
+      <span>Technologie <span style="color:var(--muted);font-weight:500">&amp;</span> SNT
+        <small>Lycée Montaigne, Beit Chabab</small>
+      </span>
+    </a>
+    
+<nav class="main-nav" id="main-nav" aria-label="Navigation principale">
+  <a href="../index.html">Accueil</a>
+  <a href="../5eme-2025/" style="--dot:#0d9268">5ème <small>· 2025-2026</small></a>
+  <a href="../4eme-2025/" style="--dot:#2050d0">4ème <small>· 2025-2026</small></a>
+  <a href="../snt/" style="--dot:#d9640f">2nde SNT</a>
+  <a href="../sicit/" style="--dot:#0d8e9c" aria-current="true">SI · CIT</a>
+  <div class="nav-group">
+    <button type="button" aria-expanded="false">Archives</button>
+    <div class="nav-menu">
+      <div class="nav-menu-label">Programmes 2020-2024</div>
+      <a href="../archives/5eme/"><span class="dot" style="background:#0d9268"></span>5ème</a>
+      <a href="../archives/4eme/"><span class="dot" style="background:#2050d0"></span>4ème</a>
+      <a href="../archives/3eme/"><span class="dot" style="background:#7c3aed"></span>3ème</a>
+    </div>
+  </div>
+</nav>
+    <div class="header-actions">
+      <button class="search-btn" id="search-open" type="button" aria-label="Rechercher">
+        <span>🔍</span><span class="label">Rechercher</span><kbd>Ctrl K</kbd>
+      </button>
+      <button class="icon-btn" id="theme-toggle" type="button" aria-label="Changer de thème">🌙</button>
+      <button class="icon-btn nav-toggle" id="nav-toggle" type="button" aria-label="Menu" aria-expanded="false">☰</button>
+    </div>
+  </div>
+</header>
+<main id="contenu">
+
+<nav class="breadcrumbs wrap" aria-label="Fil d'Ariane">
+    <a href="../index.html">Accueil</a><span class="sep">›</span>
+    <span class="current">SI · CIT</span>
+  </nav>
+<div class="wrap">
+  <div class="page-head">
+    <div class="kicker">
+      <span class="badge" style="--badge-bg:#e0f5f7;--badge-fg:#0d8e9c">SI</span>
+      <span class="badge">Année 2025-2026</span>
+    </div>
+    <h1>SI · CIT</h1>
+    <p class="desc">Sciences de l'Ingénieur &amp; Création et Innovation Technologiques.</p>
+  </div>
+  <div class="prose"><p><strong>Projet TP Arduino</strong></p>
+<p><strong>Titre du Projet :</strong> <strong>&quot;Alarme de Luminosité avec Indicateur Servo et LED&quot;</strong></p>
+<p><strong>Objectifs :</strong></p>
+<ul>
+<li><p>Utiliser un photo-résistor (LDR) pour détecter les changements de luminosité.</p>
+</li>
+<li><p>Actionner un servo moteur pour indiquer quand un certain seuil de luminosité est atteint.</p>
+</li>
+<li><p>Utiliser une LED pour fournir un signal visuel en cas de changement de luminosité.</p>
+</li>
+<li><p>Intégrer un bouton-poussoir pour activer ou désactiver l&#39;alarme.</p>
+</li>
+</ul>
+<p><strong>Matériel Nécessaire :</strong></p>
+<ul>
+<li><p>Arduino (Uno, Mega, etc.)</p>
+</li>
+<li><p>LDR (photo-résistor)</p>
+</li>
+<li><p>Servo moteur</p>
+</li>
+<li><p>Bouton poussoir</p>
+</li>
+<li><p>LED</p>
+</li>
+<li><p>Résistances</p>
+</li>
+<li><p>Fils de connexion</p>
+</li>
+<li><p>Breadboard</p>
+</li>
+</ul>
+<p><strong>Déroulement du TP :</strong></p>
+<ul>
+<li><p>Montage Électronique :Brancher la LED à une sortie numérique de l&#39;Arduino.Connecter le LDR à une entrée analogique.Installer le servo moteur à une sortie numérique.Mettre en place le bouton-poussoir sur une entrée numérique avec une résistance de tirage.</p>
+</li>
+<li><p>**Programmation :**Écrire un code pour mesurer la lumière avec le LDR.Faire bouger le servo lorsque la lumière dépasse ou tombe en dessous d&#39;un certain seuil.Allumer ou faire clignoter la LED lorsque le seuil de luminosité est atteint.Utiliser le bouton-poussoir pour activer/désactiver le système d&#39;alarme.</p>
+</li>
+<li><p>**Tests et Validation :**Tester le système en changeant les conditions de luminosité.Vérifier le fonctionnement du bouton-poussoir pour activer/désactiver l&#39;alarme.Observer la réaction du servo et de la LED lors des changements de luminosité.</p>
+</li>
+</ul>
+</div>
+  
+  
+</div>
+</main>
+<footer class="site-footer">
+  <div class="wrap footer-grid">
+    <div>
+      <h4>Technologie &amp; SNT</h4>
+      <p>Site pédagogique regroupant les cours, activités et ressources de Technologie du collège et de SNT du lycée.</p>
+    </div>
+    <div>
+      <h4>Niveaux</h4>
+      <ul>
+        <li><a href="../5eme-2025/">5ème · 2025-2026</a></li>
+        <li><a href="../4eme-2025/">4ème · 2025-2026</a></li>
+        <li><a href="../snt/">2nde SNT </a></li>
+        <li><a href="../sicit/">SI · CIT </a></li>
+        <li><a href="../archives/">Archives 2020-2024</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Références</h4>
+      <ul>
+        <li><a href="https://eduscol.education.fr/2098/technologie-au-cycle-4" target="_blank" rel="noopener">Programme de Technologie (Eduscol)</a></li>
+        <li><a href="https://eduscol.education.fr/3016/sciences-numeriques-et-technologie-au-lycee" target="_blank" rel="noopener">Programme SNT (Eduscol)</a></li>
+        <li><a href="https://pix.fr" target="_blank" rel="noopener">Pix — compétences numériques</a></li>
+        <li><a href="https://sites.google.com/view/lmtechno25" target="_blank" rel="noopener">Site d'origine (Google Sites)</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="wrap footer-bottom">
+    <span>© 2025-2026 M. Eddy Bachaalany · Lycée Montaigne, Beit Chabab</span>
+    <span>Cours de Technologie collège &amp; SNT lycée</span>
+  </div>
+</footer>
+<div class="search-overlay" id="search-overlay" role="dialog" aria-label="Recherche">
+  <div class="search-panel">
+    <div class="search-input-row">
+      <span>🔍</span>
+      <input id="search-input" type="search" placeholder="Rechercher une séquence, une séance, une notion…" autocomplete="off">
+      <kbd>Échap</kbd>
+    </div>
+    <div class="search-results" id="search-results"></div>
+  </div>
+</div>
+<button class="back-to-top" id="back-to-top" type="button" aria-label="Retour en haut">↑</button>
+<script src="../assets/client.js" defer></script>
+</body>
+</html>

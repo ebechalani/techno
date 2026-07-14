@@ -1,0 +1,125 @@
+{
+  "title": "Technologie & SNT",
+  "teacher": "M. Eddy Bachaalany",
+  "school": "Lycée Montaigne, Beit Chabab",
+  "schoolYear": "2025-2026",
+  "year": "2025-2026",
+  "description": "Les cours de Technologie (collège) et de SNT (lycée) de M. Eddy Bachaalany — Lycée Montaigne, Beit Chabab. Séquences, séances, corrections et ressources.",
+  "heroText": "Toutes les séquences, séances, corrections et ressources pour le collège (5ème, 4ème, 3ème) et le lycée (2nde SNT) — organisées, consultables et imprimables.",
+  "footerText": "Site pédagogique regroupant les cours, activités et ressources de Technologie du collège et de SNT du lycée.",
+  "programmeIntro": "De **nouveaux programmes de Technologie** s'appliquent au cycle 4 depuis la rentrée 2024. Les documents ci-dessous présentent les thèmes et les compétences du nouveau programme.",
+  "programmeResources": [
+    {
+      "kind": "drive-file",
+      "title": "Programme techno C4 2024.pdf",
+      "url": "https://drive.google.com/file/d/1Zb3gazZNx4P78H73xkhxROOrXsFNntX3/preview"
+    },
+    {
+      "kind": "slides",
+      "title": "Theme et competences NVX programmes",
+      "url": "https://docs.google.com/presentation/d/1XCvaB2Dm6UMnDMRbSQo6e2thIvDmZiO7-Z6GjjDYAvA/embed"
+    },
+    {
+      "kind": "slides",
+      "title": "Résumé du nouveau programme de Technologie du Cycle 4",
+      "url": "https://docs.google.com/presentation/d/1IkrshyLVfrpg5pcWC5X-eDBDX9hbMDNX1Sd4wxRWwc0/embed"
+    }
+  ],
+  "footerLinks": [
+    {
+      "label": "Programme de Technologie (Eduscol)",
+      "url": "https://eduscol.education.fr/2098/technologie-au-cycle-4"
+    },
+    {
+      "label": "Programme SNT (Eduscol)",
+      "url": "https://eduscol.education.fr/3016/sciences-numeriques-et-technologie-au-lycee"
+    },
+    {
+      "label": "Pix — compétences numériques",
+      "url": "https://pix.fr"
+    },
+    {
+      "label": "Site d'origine (Google Sites)",
+      "url": "https://sites.google.com/view/lmtechno25"
+    }
+  ],
+  "sections": [
+    {
+      "id": "5eme-2025",
+      "slug": "5eme-2025",
+      "file": "5eme-2025.json",
+      "label": "5ème",
+      "short": "5e",
+      "year": "2025-2026",
+      "archived": false,
+      "color": "#0d9268",
+      "colorSoft": "#e2f6ee"
+    },
+    {
+      "id": "4eme-2025",
+      "slug": "4eme-2025",
+      "file": "4eme-2025.json",
+      "label": "4ème",
+      "short": "4e",
+      "year": "2025-2026",
+      "archived": false,
+      "color": "#2050d0",
+      "colorSoft": "#e7edfc"
+    },
+    {
+      "id": "snt",
+      "slug": "snt",
+      "file": "snt.json",
+      "label": "2nde SNT",
+      "short": "SNT",
+      "year": "",
+      "archived": false,
+      "color": "#d9640f",
+      "colorSoft": "#fdeede"
+    },
+    {
+      "id": "sicit",
+      "slug": "sicit",
+      "file": "sicit.json",
+      "label": "SI · CIT",
+      "short": "SI",
+      "year": "",
+      "archived": false,
+      "color": "#0d8e9c",
+      "colorSoft": "#e0f5f7"
+    },
+    {
+      "id": "arch-5eme",
+      "slug": "archives/5eme",
+      "file": "arch-5eme.json",
+      "label": "5ème",
+      "short": "5e",
+      "year": "2020-2024",
+      "archived": true,
+      "color": "#0d9268",
+      "colorSoft": "#e2f6ee"
+    },
+    {
+      "id": "arch-4eme",
+      "slug": "archives/4eme",
+      "file": "arch-4eme.json",
+      "label": "4ème",
+      "short": "4e",
+      "year": "2020-2024",
+      "archived": true,
+      "color": "#2050d0",
+      "colorSoft": "#e7edfc"
+    },
+    {
+      "id": "arch-3eme",
+      "slug": "archives/3eme",
+      "file": "arch-3eme.json",
+      "label": "3ème",
+      "short": "3e",
+      "year": "2020-2024",
+      "archived": true,
+      "color": "#7c3aed",
+      "colorSoft": "#f1e9fe"
+    }
+  ]
+}

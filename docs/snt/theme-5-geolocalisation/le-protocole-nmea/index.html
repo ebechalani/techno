@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="fr" data-base="../../../">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Le protocole NMEA · Localisation et cartographie — Technologie &amp; SNT</title>
+<meta name="description" content="Bases de la cartographie, géolocalisation par satellite et protocole NMEA.">
+<meta property="og:title" content="Le protocole NMEA · Localisation et cartographie — Technologie &amp; SNT">
+<meta property="og:description" content="Bases de la cartographie, géolocalisation par satellite et protocole NMEA.">
+<meta property="og:type" content="website">
+<link rel="icon" href="../../../assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lexend:wght@500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../../assets/styles.css">
+<script>
+(function(){try{var t=localStorage.getItem("lmtechno-theme");if(!t)t=window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light";document.documentElement.setAttribute("data-theme",t);}catch(e){}})();
+</script>
+
+</head>
+<body>
+<a class="skip-link" href="#contenu">Aller au contenu</a>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="../../../index.html">
+      <span class="brand-logo">T</span>
+      <span>Technologie <span style="color:var(--muted);font-weight:500">&amp;</span> SNT
+        <small>Lycée Montaigne, Beit Chabab</small>
+      </span>
+    </a>
+    
+<nav class="main-nav" id="main-nav" aria-label="Navigation principale">
+  <a href="../../../index.html">Accueil</a>
+  <a href="../../../5eme-2025/" style="--dot:#0d9268">5ème <small>· 2025-2026</small></a>
+  <a href="../../../4eme-2025/" style="--dot:#2050d0">4ème <small>· 2025-2026</small></a>
+  <a href="../../../snt/" style="--dot:#d9640f" aria-current="true">2nde SNT</a>
+  <a href="../../../sicit/" style="--dot:#0d8e9c">SI · CIT</a>
+  <div class="nav-group">
+    <button type="button" aria-expanded="false">Archives</button>
+    <div class="nav-menu">
+      <div class="nav-menu-label">Programmes 2020-2024</div>
+      <a href="../../../archives/5eme/"><span class="dot" style="background:#0d9268"></span>5ème</a>
+      <a href="../../../archives/4eme/"><span class="dot" style="background:#2050d0"></span>4ème</a>
+      <a href="../../../archives/3eme/"><span class="dot" style="background:#7c3aed"></span>3ème</a>
+    </div>
+  </div>
+</nav>
+    <div class="header-actions">
+      <button class="search-btn" id="search-open" type="button" aria-label="Rechercher">
+        <span>🔍</span><span class="label">Rechercher</span><kbd>Ctrl K</kbd>
+      </button>
+      <button class="icon-btn" id="theme-toggle" type="button" aria-label="Changer de thème">🌙</button>
+      <button class="icon-btn nav-toggle" id="nav-toggle" type="button" aria-label="Menu" aria-expanded="false">☰</button>
+    </div>
+  </div>
+</header>
+<main id="contenu">
+
+<nav class="breadcrumbs wrap" aria-label="Fil d'Ariane">
+    <a href="../../../index.html">Accueil</a><span class="sep">›</span>
+    <a href="../../">2nde SNT</a><span class="sep">›</span>
+    <a href="../">Localisation et cartographie</a><span class="sep">›</span>
+    <span class="current">Le protocole NMEA</span>
+  </nav>
+<div class="wrap course-layout">
+  <aside class="sidebar" style="--accent:undefined;--accent-soft:undefined;">
+    <div class="sb-title"><span class="dot"></span>2nde SNT </div>
+    <nav>
+    <details>
+      <summary><a href="../../theme-2-internet/" style="all:unset;cursor:pointer">Internet</a></summary>
+      <div class="sb-pages">
+        <a href="../../theme-2-internet/tcpip/">TCP/IP</a>
+        <a href="../../theme-2-internet/fiche-de-revision/">Fiche de révision</a>
+        <a href="../../theme-2-internet/routage/">Routage</a>
+        <a href="../../theme-2-internet/exercices/">Exercices</a>
+        <a href="../../theme-2-internet/synthese/">Synthèse</a>
+        <a href="../../theme-2-internet/dns-et-reseaux-pair-a-pair/">DNS et réseaux pair-à-pair</a>
+        <a href="../../theme-2-internet/support-du-cours/">Support du cours</a>
+      </div>
+    </details>
+    <details>
+      <summary><a href="../../theme-3-web/" style="all:unset;cursor:pointer">Le Web</a></summary>
+      <div class="sb-pages">
+        <a href="../../theme-3-web/1-histoire-du-web/">1.Histoire du web</a>
+        <a href="../../theme-3-web/2-fonctionnement-du-web/">2.Fonctionnement du web</a>
+        <a href="../../theme-3-web/3-lecriture-dune-page-web/">3. L'écriture d'une page Web</a>
+        <a href="../../theme-3-web/4-le-langage-htmlcss-2/">4. Le langage HTML/CSS (2)</a>
+      </div>
+    </details>
+    <details>
+      <summary><a href="../../theme-4-photographie/" style="all:unset;cursor:pointer">La photographie numérique</a></summary>
+      <div class="sb-pages">
+        <a href="../../theme-4-photographie/parite-1-loeil-et-le-capteur-numerique/">partie 1: L'oeil et le capteur numérique</a>
+        <a href="../../theme-4-photographie/partie-2-formats-des-images/">Partie 2: Formats des images</a>
+      </div>
+    </details>
+    <details open>
+      <summary><a href="../../theme-5-geolocalisation/" style="all:unset;cursor:pointer">Localisation et cartographie</a></summary>
+      <div class="sb-pages">
+        <a href="../../theme-5-geolocalisation/seance-1/">Séance 1</a>
+        <a href="../../theme-5-geolocalisation/la-geolocalisation-par-satellite/">La géolocalisation par satellite</a>
+        <a href="../../theme-5-geolocalisation/le-protocole-nmea/" aria-current="true">Le protocole NMEA</a>
+      </div>
+    </details>
+    <details>
+      <summary><a href="../../tp-arduino/" style="all:unset;cursor:pointer">TP Arduino</a></summary>
+      <div class="sb-pages">
+        
+      </div>
+    </details>
+    </nav>
+  </aside>
+  <article>
+    <div class="page-head">
+      <div class="kicker">
+        <span class="badge" style="--badge-bg:#fdeede;--badge-fg:#d9640f">SNT</span>
+        <span class="badge">Localisation et cartographie</span>
+        
+      </div>
+      <h1>Le protocole NMEA</h1>
+      
+    </div>
+    
+    <div class="prose">
+      <p>Les récepteurs GPS fournissent la localisation sous une forme normalisée facilement décodable. Le <strong>protocole NMEA 0183</strong> est une norme applicable dans les communications en marine définie et contrôlée par la <strong>National Marine Electronics Association</strong> (NMEA), association américaine de fabricants d&#39;appareils électroniques maritimes.</p>
+<p>Dans ce qui suit, le Standard NMEA est défini simplement et uniquement comme étant le protocole de transmission des données entre les instruments et équipements électroniques liés au GPS.</p>
+<p>Les informations qui circulent, d&#39;un appareil vers un autre, doivent être structurées en phrase (sentence en anglais) ou trame dont le contenu est codifié.</p>
+<p>Une <strong>trame NMEA</strong> est donc une suite de caractères contenant des informations de géolocalisation comme : la latitude, la longitude, l&#39;altitude, le nombre de satellites employés, l&#39;heure...</p>
+<p>Une trame est constituée de <strong>champs</strong>. Les champs sont séparés entre eux par des virgules. Un champ peut être vide mais la présence de la virgule est obligatoire.</p>
+<ul>
+<li><p>Une trame commence toujours par le <strong>caractère $</strong> ;</p>
+</li>
+<li><p>Les deux lettres suivantes (champ &quot;type de trame&quot;) identifient l&#39;<strong>origine du signal : GP</strong> (pour le système GPS), <strong>GA</strong> (pour le système Galileo), . . .</p>
+</li>
+<li><p>Les 3 lettres qui terminent ce champ permettent d&#39;<strong>identifier la trame</strong> : il existe plus d&#39;une trentaine de trames. Nous nous limiterons à deux trames courantes : <strong>la trame GGA</strong> (Donnée de positionnement global du système) qui fait partie de celles qui sont utilisées pour connaître la position courante du récepteur GPS et <strong>la trame RMC</strong> (Information minimale recommandée).</p>
+</li>
+<li><p>Les informations contenues dans une trame varient selon le type de trame mais celles-ci se terminent généralement par une <strong>clé de contrôle</strong> (ou « checksum ») : c&#39;est un nombre ajouté au message qui permet au système de vérifier que le message reçu est conforme à celui envoyé.</p>
+</li>
+</ul>
+<p><strong>Trame GGA :</strong></p>
+<p><img src="../../../assets/img/2nde-snt__theme-5-geolocalisation__le-protocole-nmea/01.png" alt=""></p>
+<p><strong>Trame RMC :</strong></p>
+<p><img src="../../../assets/img/2nde-snt__theme-5-geolocalisation__le-protocole-nmea/02.png" alt=""></p>
+<h3>Format de la latitude et de la longitude</h3>
+<p>La latitude est au format <strong>DDMM.MMMM</strong> en dix millième de minutes (D = degré ; M = minutes)</p>
+<p>La longitude est au format <strong>DDDMM.MMMM</strong> en dix millième de minutes (D = degré ; M = minutes)</p>
+<p><strong>Exemple</strong></p>
+<p>Dans la première trame, on lit <strong>4619.088593,N</strong> ce qui correspond à 46°19&#39; et pour les secondes :</p>
+<p>0.088593 x 60 =5.31558 donc environ 5.3116&#39;&#39;. On a alors une latitude de <strong>46°19&#39;05.3116&#39;&#39; N</strong></p>
+<h2>Exercice 3 : Décoder une trame NMEA avec Python</h2>
+<h3>1. Décoder l&#39;heure affichée dans la trame</h3>
+<p>On considère la trame suivante : $GPRMC,180522.230,A,4329.127733,N,00128.75845,W,,,290220,000.0,W*64</p>
+<p>On souhaite créer un programme sur Python qui donne l&#39;heure, la latitude et la longitude de cette trame.</p>
+<p>Sur Python, on définit une trame NMEA comme une chaîne de caractère :</p>
+<ul>
+<li><strong>Trame</strong> = &quot;$GPRMC,180522.230,A,4329.127733,N,00128.75845,W,,,290220,000.0,W*64&quot;</li>
+</ul>
+<p>que l&#39;on va convertir en liste avec l&#39;instruction <strong>Liste=Trame.split(&#39;,&#39;)</strong> :</p>
+<ul>
+<li><strong>Liste</strong> = [&#39;$GPRMC&#39;, &#39;180522.230&#39;, &#39;A&#39;, &#39;4329.127733&#39;, &#39;N&#39;, &#39;00128.75845&#39;, &#39;W&#39;, &#39;&#39;, &#39;&#39;, &#39;290220&#39;, &#39;000.0&#39;, &#39;W*64&#39;]</li>
+</ul>
+<p>Chaque élément de cette liste est une chaîne de caractères.</p>
+<p>On applique la fonction suivante à notre exemple :</p>
+<p><img src="../../../assets/img/2nde-snt__theme-5-geolocalisation__le-protocole-nmea/03.png" alt=""></p>
+<p><strong>Explication détaillée de l&#39;instruction heure=int(liste[1][0 :2]) :</strong></p>
+<p>Liste[1] correspond au deuxième élément de la liste : c&#39;est la chaîne &#39;180522.230&#39; indiquant l&#39;heure.</p>
+<p>Liste[1][0 :2] correspond aux deux premiers éléments de cette chaîne : ‘18&#39;</p>
+<p>Int(liste[1][0 :2]) permet de convertir cette chaîne en nombre entier : 18 qui correspond au nombre d&#39;heures.</p>
+<p>La valeur stockée dans la variable heure est donc le nombre 18.</p>
+<h3>Question</h3>
+<p>Quelles vont les valeurs stockées dans les variables &quot;minute&quot; et &quot;seconde&quot; ?</p>
+<h3>2. Décoder la latitude et la longitude affichées dans la trame</h3>
+<p>Créer dans Python le fichier <strong>trame_NMEA.py</strong> :</p>
+<h1>fonction qui affiche l&#39;heure d&#39;envoi de la trame:</h1>
+<p>def heure(liste):</p>
+<p>heure=int(liste[1][0:2])</p>
+<p>minute=int(liste[1][2:4])</p>
+<p>seconde=float(liste[1][4:])</p>
+<p>print(&quot;heure d&#39;envoi : &quot;, heure,&quot;h&quot;,minute,&quot;min&quot;,seconde,&quot;s&quot;)</p>
+<p>#fonction qui affiche la lattitude:</p>
+<p>def latitude(liste):</p>
+<p>degre=int(liste[...][...])</p>
+<p>minute=int(liste[...][...])</p>
+<p>seconde=round(float(liste[...][...]) * ... ,4)</p>
+<p>print(&quot;latitude : &quot;, degre,&quot;°&quot;,minute,&quot;&#39;&quot;,seconde,&quot;&#39;&#39;,&quot;,liste[...])</p>
+<p>#fonction qui affiche la longitude:</p>
+<p>def longitude(liste):</p>
+<p>degre=int(liste[...][...])</p>
+<p>minute=int(liste[...][...])</p>
+<p>seconde=round(float(liste[...][...]) * ...,4)</p>
+<p>print(&quot;longitude : &quot;, degre,&quot;°&quot;,minute,&quot;&#39;&quot;,seconde,&quot;&#39;&#39;,&quot;,liste[...])</p>
+<p>#fonction qui regroupe l&#39;heure, l&#39;altitude et la longitude:</p>
+<p>def decodage(trame):</p>
+<p>liste=trame.split(&#39;,&#39;) #permet la conversion de la chaîne en liste</p>
+<p>heure(liste)</p>
+<p>latitude(liste)</p>
+<p>longitude(liste)</p>
+<h3>Question</h3>
+<p>En vous inspirant de la fonction heure, compléter les lignes 10, 11, 12, 13 de la fonction latitude et les lignes 16, 17, 18, 19 de la fonction longitude permettant d&#39;obtenir la latitude et la longitude de la trame au format DMS.</p>
+<p><strong>Indice:</strong> la fonction round(x,4) permet d&#39;obtenir un arrondi du nombre x avec 4 décimales.</p>
+<h3>3. Décoder une trame complète</h3>
+<p>La fonction <strong>decodage</strong> convertit la trame en liste et regroupe les autres fonctions précédentes.</p>
+<h3>Question</h3>
+<p>Utiliser cette fonction pour obtenir les informations cherchées de la trame.</p>
+<h3>4. Recherche du lieu présentée par la trame</h3>
+<p>Soit la trame <strong>$GPRMC,180522.230,A,4329.127733,N,00128.75845,W,,,290220,000.0,W*64</strong></p>
+<h3>Question</h3>
+<p>A quel lieu correspondent ces coordonnées ?</p>
+<p><strong>Indice:</strong> utiliser le site <a target="_blank" rel="noopener" href="https://www.coordonnees-gps.fr/">https://www.coordonnees-gps.fr/</a> pour obtenir la localisation.</p>
+<h3>5. Recherche de l&#39;événement correspondant à la trame</h3>
+<p>Pour aller plus loin : cette trame a été envoyée par le smartphone d&#39;un individu.</p>
+<h3>Question</h3>
+<p>A quel événement sportif a-t-il assisté ?</p>
+<p><strong>Indice:</strong> Repérer le site indiqué et en déduire le sport puis rechercher à l&#39;aide de la date et l&#39;heure de la trame l&#39;événement sportif qui a eu lieu.</p>
+
+    </div>
+    
+    <nav class="pager">
+      <a class="pg-prev" href="../la-geolocalisation-par-satellite/"><span class="pg-label">← Précédent</span><span class="pg-title">La géolocalisation par satellite</span></a>
+      
+    </nav>
+  </article>
+</div>
+</main>
+<footer class="site-footer">
+  <div class="wrap footer-grid">
+    <div>
+      <h4>Technologie &amp; SNT</h4>
+      <p>Site pédagogique regroupant les cours, activités et ressources de Technologie du collège et de SNT du lycée.</p>
+    </div>
+    <div>
+      <h4>Niveaux</h4>
+      <ul>
+        <li><a href="../../../5eme-2025/">5ème · 2025-2026</a></li>
+        <li><a href="../../../4eme-2025/">4ème · 2025-2026</a></li>
+        <li><a href="../../../snt/">2nde SNT </a></li>
+        <li><a href="../../../sicit/">SI · CIT </a></li>
+        <li><a href="../../../archives/">Archives 2020-2024</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Références</h4>
+      <ul>
+        <li><a href="https://eduscol.education.fr/2098/technologie-au-cycle-4" target="_blank" rel="noopener">Programme de Technologie (Eduscol)</a></li>
+        <li><a href="https://eduscol.education.fr/3016/sciences-numeriques-et-technologie-au-lycee" target="_blank" rel="noopener">Programme SNT (Eduscol)</a></li>
+        <li><a href="https://pix.fr" target="_blank" rel="noopener">Pix — compétences numériques</a></li>
+        <li><a href="https://sites.google.com/view/lmtechno25" target="_blank" rel="noopener">Site d'origine (Google Sites)</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="wrap footer-bottom">
+    <span>© 2025-2026 M. Eddy Bachaalany · Lycée Montaigne, Beit Chabab</span>
+    <span>Cours de Technologie collège &amp; SNT lycée</span>
+  </div>
+</footer>
+<div class="search-overlay" id="search-overlay" role="dialog" aria-label="Recherche">
+  <div class="search-panel">
+    <div class="search-input-row">
+      <span>🔍</span>
+      <input id="search-input" type="search" placeholder="Rechercher une séquence, une séance, une notion…" autocomplete="off">
+      <kbd>Échap</kbd>
+    </div>
+    <div class="search-results" id="search-results"></div>
+  </div>
+</div>
+<button class="back-to-top" id="back-to-top" type="button" aria-label="Retour en haut">↑</button>
+<script src="../../../assets/client.js" defer></script>
+</body>
+</html>

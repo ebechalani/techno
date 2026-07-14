@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="fr" data-base="../../../">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Séance 1 - Les bases de la cartographie · Localisation et cartographie — Technologie &amp; SNT</title>
+<meta name="description" content="Bases de la cartographie, géolocalisation par satellite et protocole NMEA.">
+<meta property="og:title" content="Séance 1 - Les bases de la cartographie · Localisation et cartographie — Technologie &amp; SNT">
+<meta property="og:description" content="Bases de la cartographie, géolocalisation par satellite et protocole NMEA.">
+<meta property="og:type" content="website">
+<link rel="icon" href="../../../assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lexend:wght@500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../../assets/styles.css">
+<script>
+(function(){try{var t=localStorage.getItem("lmtechno-theme");if(!t)t=window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light";document.documentElement.setAttribute("data-theme",t);}catch(e){}})();
+</script>
+
+</head>
+<body>
+<a class="skip-link" href="#contenu">Aller au contenu</a>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="../../../index.html">
+      <span class="brand-logo">T</span>
+      <span>Technologie <span style="color:var(--muted);font-weight:500">&amp;</span> SNT
+        <small>Lycée Montaigne, Beit Chabab</small>
+      </span>
+    </a>
+    
+<nav class="main-nav" id="main-nav" aria-label="Navigation principale">
+  <a href="../../../index.html">Accueil</a>
+  <a href="../../../5eme-2025/" style="--dot:#0d9268">5ème <small>· 2025-2026</small></a>
+  <a href="../../../4eme-2025/" style="--dot:#2050d0">4ème <small>· 2025-2026</small></a>
+  <a href="../../../snt/" style="--dot:#d9640f" aria-current="true">2nde SNT</a>
+  <a href="../../../sicit/" style="--dot:#0d8e9c">SI · CIT</a>
+  <div class="nav-group">
+    <button type="button" aria-expanded="false">Archives</button>
+    <div class="nav-menu">
+      <div class="nav-menu-label">Programmes 2020-2024</div>
+      <a href="../../../archives/5eme/"><span class="dot" style="background:#0d9268"></span>5ème</a>
+      <a href="../../../archives/4eme/"><span class="dot" style="background:#2050d0"></span>4ème</a>
+      <a href="../../../archives/3eme/"><span class="dot" style="background:#7c3aed"></span>3ème</a>
+    </div>
+  </div>
+</nav>
+    <div class="header-actions">
+      <button class="search-btn" id="search-open" type="button" aria-label="Rechercher">
+        <span>🔍</span><span class="label">Rechercher</span><kbd>Ctrl K</kbd>
+      </button>
+      <button class="icon-btn" id="theme-toggle" type="button" aria-label="Changer de thème">🌙</button>
+      <button class="icon-btn nav-toggle" id="nav-toggle" type="button" aria-label="Menu" aria-expanded="false">☰</button>
+    </div>
+  </div>
+</header>
+<main id="contenu">
+
+<nav class="breadcrumbs wrap" aria-label="Fil d'Ariane">
+    <a href="../../../index.html">Accueil</a><span class="sep">›</span>
+    <a href="../../">2nde SNT</a><span class="sep">›</span>
+    <a href="../">Localisation et cartographie</a><span class="sep">›</span>
+    <span class="current">Séance 1 - Les bases de la cartographie</span>
+  </nav>
+<div class="wrap course-layout">
+  <aside class="sidebar" style="--accent:undefined;--accent-soft:undefined;">
+    <div class="sb-title"><span class="dot"></span>2nde SNT </div>
+    <nav>
+    <details>
+      <summary><a href="../../theme-2-internet/" style="all:unset;cursor:pointer">Internet</a></summary>
+      <div class="sb-pages">
+        <a href="../../theme-2-internet/tcpip/">TCP/IP</a>
+        <a href="../../theme-2-internet/fiche-de-revision/">Fiche de révision</a>
+        <a href="../../theme-2-internet/routage/">Routage</a>
+        <a href="../../theme-2-internet/exercices/">Exercices</a>
+        <a href="../../theme-2-internet/synthese/">Synthèse</a>
+        <a href="../../theme-2-internet/dns-et-reseaux-pair-a-pair/">DNS et réseaux pair-à-pair</a>
+        <a href="../../theme-2-internet/support-du-cours/">Support du cours</a>
+      </div>
+    </details>
+    <details>
+      <summary><a href="../../theme-3-web/" style="all:unset;cursor:pointer">Le Web</a></summary>
+      <div class="sb-pages">
+        <a href="../../theme-3-web/1-histoire-du-web/">1.Histoire du web</a>
+        <a href="../../theme-3-web/2-fonctionnement-du-web/">2.Fonctionnement du web</a>
+        <a href="../../theme-3-web/3-lecriture-dune-page-web/">3. L'écriture d'une page Web</a>
+        <a href="../../theme-3-web/4-le-langage-htmlcss-2/">4. Le langage HTML/CSS (2)</a>
+      </div>
+    </details>
+    <details>
+      <summary><a href="../../theme-4-photographie/" style="all:unset;cursor:pointer">La photographie numérique</a></summary>
+      <div class="sb-pages">
+        <a href="../../theme-4-photographie/parite-1-loeil-et-le-capteur-numerique/">partie 1: L'oeil et le capteur numérique</a>
+        <a href="../../theme-4-photographie/partie-2-formats-des-images/">Partie 2: Formats des images</a>
+      </div>
+    </details>
+    <details open>
+      <summary><a href="../../theme-5-geolocalisation/" style="all:unset;cursor:pointer">Localisation et cartographie</a></summary>
+      <div class="sb-pages">
+        <a href="../../theme-5-geolocalisation/seance-1/" aria-current="true">Séance 1</a>
+        <a href="../../theme-5-geolocalisation/la-geolocalisation-par-satellite/">La géolocalisation par satellite</a>
+        <a href="../../theme-5-geolocalisation/le-protocole-nmea/">Le protocole NMEA</a>
+      </div>
+    </details>
+    <details>
+      <summary><a href="../../tp-arduino/" style="all:unset;cursor:pointer">TP Arduino</a></summary>
+      <div class="sb-pages">
+        
+      </div>
+    </details>
+    </nav>
+  </aside>
+  <article>
+    <div class="page-head">
+      <div class="kicker">
+        <span class="badge" style="--badge-bg:#fdeede;--badge-fg:#d9640f">SNT</span>
+        <span class="badge">Localisation et cartographie</span>
+        
+      </div>
+      <h1>Séance 1 - Les bases de la cartographie</h1>
+      
+    </div>
+    
+    <div class="prose">
+      <h2>Les bases de la cartographie</h2>
+<h2>Présentation du thème : Localisation, cartographie et mobilité</h2>
+<figure class="embed embed-doc">
+  <div class="embed-bar">
+    <span class="embed-kind">Document PDF</span>
+    <span class="embed-title">video-Hotline.mp4</span>
+    <a class="embed-open" href="https://drive.google.com/file/d/1sKP7xd196HF8BnAddF0cmE5aJf0Zgzlu/preview" target="_blank" rel="noopener">Ouvrir ↗</a>
+  </div>
+  <div class="embed-frame"><iframe data-src="https://drive.google.com/file/d/1sKP7xd196HF8BnAddF0cmE5aJf0Zgzlu/preview" loading="lazy" allowfullscreen allow="autoplay; fullscreen" title="video-Hotline.mp4"></iframe></div>
+</figure><h2>Exercice 1 : Les repères historiques à retenir</h2>
+<ol>
+<li><p>Le système américain GPS a été lancé en : ……………………………</p>
+</li>
+<li><p>Le premier récepteur GPS est commercialisé en : ……………………………</p>
+</li>
+<li><p>Le système européen Galiléo a été lancé en : ……………………………</p>
+</li>
+</ol>
+<h2>La cartographie</h2>
+<p><strong>Définition</strong><strong>:</strong></p>
+<p>La <strong>cartographie</strong> est la représentation graphique des territoires et de leur relief.</p>
+<p>La réalisation d&#39;une carte se fait en trois étapes majeures :</p>
+<ul>
+<li><p>la <strong>collecte d&#39;informations</strong> qui comprend le relevé de l&#39;espace à représenter (fond de carte) et le relevé des données statistiques qui constitue cet espace.</p>
+</li>
+<li><p>la <strong>sélection des informations et des conceptions graphiques</strong> (icônes, style).</p>
+</li>
+<li><p>l&#39;<strong>assemblage</strong> (création de la carte) avec le renseignement de la carte (légende, échelle, rose des vents).</p>
+</li>
+</ul>
+<p>La particularité des cartes numériques, utilisées dans un logiciel ou une application adaptée, est que l&#39;on peut passer d&#39;une échelle à l&#39;autre simplement en zoomant sur une partie de la carte.</p>
+<p><img src="../../../assets/img/2nde-snt__theme-5-geolocalisation__seance-1-les-bases-de-la-cartographie/01.jpg" alt=""></p>
+<h3>Echelle d&#39;une carte</h3>
+<p><strong>C&#39;est le rapport entre la représentation d&#39;une distance sur la carte et cette distance en réalité.</strong></p>
+<p>Exemple: Une carte à échelle au 1/1 000 000 signifie que 1 cm sur la carte représente en réalité 1 000 000 cm soit 10 km.</p>
+<h3>Cartes vectorielles et matricielles</h3>
+<p><strong>Définition:</strong></p>
+<p>On distingue deux grandes catégories de cartes numériques, selon la manière dont l&#39;information est enregistrée.</p>
+<p>Une carte vectorielle comporte des objets positionnés selon leurs coordonnées.</p>
+<p>Une carte matricielle est une image point par point qui a été dessinée par un cartographe.</p>
+<p><strong>Remarque:</strong> En zoomant sur une carte vectorielle, des détails apparaissent. Sur une carte matricielle, l&#39;image est simplement agrandie.</p>
+<h3>Les couches d&#39;informations géographiques</h3>
+<p>Les systèmes de cartographie numériques permettent d&#39;afficher un fond de carte – la carte de base – et d&#39;y superposer des informations regroupées en couches. C&#39;est comme un calque que l&#39;on superpose au fond de carte pour lui ajouter un ensemble d&#39;informations cohérentes.</p>
+<p>Les applications utilisant des cartes vectorielles (comme OpenStreetMap ou Géoportail que nous découvrirons à la séance 3) permettent généralement de sélectionner les catégories d&#39;informations que l&#39;on souhaite afficher (lignes de transport, établissements scolaires, ...)</p>
+<p><img src="../../../assets/img/2nde-snt__theme-5-geolocalisation__seance-1-les-bases-de-la-cartographie/02.png" alt=""></p>
+<h2>Exercice 2 : Les échelles</h2>
+<p>On donne ci-dessous des extraits de carte IGN à différentes échelles (source : Géoportail) :</p>
+<p><img src="../../../assets/img/2nde-snt__theme-5-geolocalisation__seance-1-les-bases-de-la-cartographie/03.jpg" alt=""></p>
+<p><strong>Les échelles de ces cartes sont dans le désordre : 1/25 000 , 1/50 000 , 1/150 000 et 1/1 000 000.</strong></p>
+<ol>
+<li><p>A quelle carte correspond l&#39;échelle <strong>1/25 000</strong> ? (donner seulement le numéro de la carte)</p>
+</li>
+<li><p>A quelle carte correspond l&#39;échelle <strong>1/50 000</strong> ?</p>
+</li>
+<li><p>A quelle carte correspond l&#39;échelle <strong>1/150 000</strong> ?</p>
+</li>
+<li><p>A quelle carte correspond l&#39;échelle <strong>1/1 000 000</strong> ?</p>
+</li>
+<li><p>Quelle distance, en km, représente en réalité 1 cm sur la carte 2 ?</p>
+</li>
+<li><p>Quelle distance, en m, représente en réalité 1 cm sur la carte 4 ?</p>
+</li>
+</ol>
+<h2>Les coordonnées géographiques</h2>
+<h3>Système géodésique WGS84</h3>
+<p>Tout point à la surface de la Terre est déterminé par ses coordonnées géographiques (la latitude et la longitude) et par son altitude (élévation par rapport au niveau de la mer).</p>
+<p>L&#39;ensemble de ces trois notions, auquel on ajoute le centre de la Terre, est le <strong>système géodésique WGS84</strong>. Il est utilisé comme système de référence mondial pour déterminer les positions sur la Terre par les systèmes GPS, dont nous parlerons dans la séance 2.</p>
+<p><img src="../../../assets/img/2nde-snt__theme-5-geolocalisation__seance-1-les-bases-de-la-cartographie/04.png" alt=""></p>
+<h3>Notation des angles</h3>
+<p>Il existe plusieurs notations de l&#39;écart par rapport à l&#39;équateur (pour la latitude) et par rapport au méridien de Greenwich (pour la longitude) :</p>
+<p><strong>La notation sexagésimale :</strong> angle en <strong>degrés (°), minutes (&#39;), secondes (&#39;&#39;) (DMS)</strong> mesuré à la surface d&#39;une sphère de référence. On a : 1° = 60&#39; = 3600&#39;&#39;.</p>
+<p><strong>La notation décimale :</strong> angle en <strong>degrés décimaux (°)</strong>.</p>
+<h3>Signe des angles</h3>
+<p><strong>Remarque:</strong> Une latitude positive donne la direction <strong>Nord</strong> et une latitude négative donne <strong>Sud</strong>.</p>
+<p>Une longitude positive donne la direction <strong>Est</strong> et une longitude négative donne <strong>Ouest</strong>.</p>
+<h3>Transfert de notation</h3>
+<p><strong>Passer des degrés sexagésimaux aux degrés décimaux :</strong></p>
+<p>Les coordonnées de l&#39;Hôtel de ville de Paris sont 48°51&#39;24&#39;&#39; nord, 2°21&#39;07&#39;&#39; est.</p>
+<p>60&#39; = 1° donc 51&#39;=51/60 ° et 3600&#39; = 1° donc 7&#39;&#39;=7/3600°</p>
+<p><strong>Latitude en degrés décimaux :</strong> 48 + 51/60 + 24/3600 = 48,856667°</p>
+<p><strong>Longitude en degrés décimaux :</strong> 2 + 21/60 + 07/3600 = 2,351944°</p>
+<p>Les coordonnées en degrés décimaux de l&#39;Hôtel de ville de Paris sont 48,856667°, 2,351944°</p>
+<p><strong>Passer des degrés décimaux aux degrés sexagésimaux :</strong></p>
+<p>Les coordonnées de la mairie de Bressuire sont 46,841801° et – 0,492966° en degrés décimaux.</p>
+<p><strong>Latitude en degrés sexagésimaux :</strong></p>
+<p>On garde 46 pour les degrés ;</p>
+<p>0,841801 x 60 = 50,50806 on garde 50 pour les minutes ;</p>
+<p>0,50806 x 60 = 30,4836 et on garde 30 pour les secondes -&gt; 46°50&#39;30&#39;&#39; nord</p>
+<p><strong>Longitude en degrés sexagésimaux :</strong></p>
+<p>Le signe négatif donne ouest et on garde 0 pour les degrés ;</p>
+<p>0,492966 x 60 = 29,57796 on garde 29 pour les minutes ;</p>
+<p>0,57796 x 60 = 34,6776 et on garde 34 pour les secondes -&gt; 0°29&#39;34&#39;&#39; ouest</p>
+<p>Les coordonnées en DMS de la mairie de Bressuire sont 46°50&#39;30&#39;&#39; N, 0°29&#39;34&#39;&#39; O</p>
+<h2>Exercice 3 : Indiquer des coordonnées géographiques à partir d&#39;une carte</h2>
+<p><img src="../../../assets/img/2nde-snt__theme-5-geolocalisation__seance-1-les-bases-de-la-cartographie/05.jpg" alt=""></p>
+<p><strong>A l&#39;aide de la carte ci-dessus, indiquer la latitude et la longitude des villes suivantes :</strong></p>
+<ol>
+<li><p>Quelles sont la latitude et la longitude de Sao Paulo ?</p>
+</li>
+<li><p>Quelles sont la latitude et la longitude de Shanghai ?</p>
+</li>
+<li><p>Quelles sont la latitude et la longitude de Saint-Pétersbourg ?</p>
+</li>
+<li><p>Quelles sont la latitude et la longitude de Londres ?</p>
+</li>
+</ol>
+<h2>Exercice 4 : Passer du système sexagésimal au système décimal et inversement</h2>
+<ol>
+<li>On donne les coordonnées suivantes en degrés décimaux : 40,689253° ; -74,044548°</li>
+</ol>
+<p>Convertir ces coordonnées en DMS puis indiquer le lieu désigné.</p>
+<ol>
+<li>On donne les coordonnées en DMS suivantes : 55°45&#39;13&#39;&#39; N, 37°37&#39;17&#39;&#39; E</li>
+</ol>
+<p>Convertir ces coordonnées en coordonnées décimales puis indiquer le lieu désigné.</p>
+<p>Accéder au site suivant pour indiquer le lieu désigné: <a target="_blank" rel="noopener" href="https://www.gps-coordinates.net/">https://www.gps-coordinates.net/</a></p>
+
+    </div>
+    
+    <nav class="pager">
+      
+      <a class="pg-next" href="../la-geolocalisation-par-satellite/"><span class="pg-label">Suivant →</span><span class="pg-title">La géolocalisation par satellite</span></a>
+    </nav>
+  </article>
+</div>
+</main>
+<footer class="site-footer">
+  <div class="wrap footer-grid">
+    <div>
+      <h4>Technologie &amp; SNT</h4>
+      <p>Site pédagogique regroupant les cours, activités et ressources de Technologie du collège et de SNT du lycée.</p>
+    </div>
+    <div>
+      <h4>Niveaux</h4>
+      <ul>
+        <li><a href="../../../5eme-2025/">5ème · 2025-2026</a></li>
+        <li><a href="../../../4eme-2025/">4ème · 2025-2026</a></li>
+        <li><a href="../../../snt/">2nde SNT </a></li>
+        <li><a href="../../../sicit/">SI · CIT </a></li>
+        <li><a href="../../../archives/">Archives 2020-2024</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Références</h4>
+      <ul>
+        <li><a href="https://eduscol.education.fr/2098/technologie-au-cycle-4" target="_blank" rel="noopener">Programme de Technologie (Eduscol)</a></li>
+        <li><a href="https://eduscol.education.fr/3016/sciences-numeriques-et-technologie-au-lycee" target="_blank" rel="noopener">Programme SNT (Eduscol)</a></li>
+        <li><a href="https://pix.fr" target="_blank" rel="noopener">Pix — compétences numériques</a></li>
+        <li><a href="https://sites.google.com/view/lmtechno25" target="_blank" rel="noopener">Site d'origine (Google Sites)</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="wrap footer-bottom">
+    <span>© 2025-2026 M. Eddy Bachaalany · Lycée Montaigne, Beit Chabab</span>
+    <span>Cours de Technologie collège &amp; SNT lycée</span>
+  </div>
+</footer>
+<div class="search-overlay" id="search-overlay" role="dialog" aria-label="Recherche">
+  <div class="search-panel">
+    <div class="search-input-row">
+      <span>🔍</span>
+      <input id="search-input" type="search" placeholder="Rechercher une séquence, une séance, une notion…" autocomplete="off">
+      <kbd>Échap</kbd>
+    </div>
+    <div class="search-results" id="search-results"></div>
+  </div>
+</div>
+<button class="back-to-top" id="back-to-top" type="button" aria-label="Retour en haut">↑</button>
+<script src="../../../assets/client.js" defer></script>
+</body>
+</html>

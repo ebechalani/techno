@@ -29,6 +29,11 @@ const esc = (s) =>
 
 function md(src) {
   if (!src) return "";
+  // directives ::embed[Titre](url) -> intégration (iframe) en place
+  src = src.replace(/^::embed\[([^\]]*)\]\(([^)]+)\)$/gm, (m, title, url) => {
+    const html = renderEmbed({ title, url });
+    return html ? `\n${html}\n` : `[${title || "Document"}](${url})`;
+  });
   const renderer = new marked.Renderer();
   const linkFn = renderer.link.bind(renderer);
   renderer.link = function (token) {
@@ -39,6 +44,15 @@ function md(src) {
     return html;
   };
   return marked.parse(src, { renderer, mangle: false, headerIds: false });
+}
+
+/** Résout les chemins internes (images auto-hébergées, liens ROOT/) selon la profondeur. */
+function relativize(html, rel) {
+  return html
+    .replace(/src="assets\//g, `src="${rel}assets/`)
+    .replace(/href="assets\//g, `href="${rel}assets/`)
+    .replace(/href="ROOT\//g, `href="${rel}`)
+    .replace(/\(ROOT\//g, `(${rel}`);
 }
 
 function readJSON(p) {
@@ -175,7 +189,7 @@ function navHTML(site, rel, currentSectionId) {
 
 function layout({ site, rel, title, description, body, sectionId, extraHead = "" }) {
   const fullTitle = title ? `${title} — ${site.title}` : `${site.title} · ${site.school}`;
-  return `<!DOCTYPE html>
+  const html = `<!DOCTYPE html>
 <html lang="fr" data-base="${rel}">
 <head>
 <meta charset="utf-8">
@@ -257,6 +271,7 @@ ${body}
 <script src="${rel}assets/client.js" defer></script>
 </body>
 </html>`;
+  return relativize(html, rel);
 }
 
 /* ---------------- Aides de rendu ---------------- */
@@ -339,7 +354,7 @@ function renderHome(site, sections) {
     <h1>Les cours de <span class="accent">Technologie</span> et de <span class="accent">SNT</span></h1>
     <p class="lead">${esc(site.heroText)}</p>
     <div class="hero-actions">
-      ${current.map((s) => `<a class="btn btn-primary" href="${rel}${s.meta.slug}/" style="background:${s.meta.color}">${esc(s.meta.label)} · ${esc(s.meta.year || "")}</a>`).join("\n      ")}
+      ${current.map((s) => `<a class="btn btn-primary" href="${rel}${s.meta.slug}/" style="background:${s.meta.color}">${esc(s.meta.label)}${s.meta.year ? " · " + esc(s.meta.year) : ""}</a>`).join("\n      ")}
       <a class="btn btn-ghost" href="#archives">Archives des cours</a>
     </div>
   </div>
@@ -418,9 +433,9 @@ ${breadcrumbs(rel, [{ label: `${meta.label}${meta.year ? " · " + meta.year : ""
     <p class="desc">${esc(section.tagline || "")}</p>
   </div>
   ${section.intro_md ? `<div class="prose">${md(section.intro_md)}</div>` : ""}
-  <div class="grid grid-seq" style="margin:1.8rem 0 3rem">
+  ${section.sequences.length ? `<div class="grid grid-seq" style="margin:1.8rem 0 3rem">
     ${section.sequences.map(seqCard).join("\n    ")}
-  </div>
+  </div>` : ""}
   ${renderResources(section.resources, { heading: "Documents du niveau" })}
 </div>`;
 
@@ -473,10 +488,10 @@ ${breadcrumbs(rel, [
     ${seq.objectifs_md ? `<div class="callout callout-objectif"><span class="co-icon">🎯</span><div class="co-body"><div class="co-title">Objectifs de la séquence</div>${md(seq.objectifs_md)}</div></div>` : ""}
     ${seq.competences_md ? `<div class="callout callout-competence"><span class="co-icon">🧭</span><div class="co-body"><div class="co-title">Compétences travaillées</div>${md(seq.competences_md)}</div></div>` : ""}
     ${seq.intro_md ? `<div class="prose">${md(seq.intro_md)}</div>` : ""}
-    <h2 style="margin-top:2rem">Déroulé de la séquence</h2>
+    ${seq.pages.length ? `<h2 style="margin-top:2rem">Déroulé de la séquence</h2>
     <div class="seance-list">
       ${seq.pages.map(item).join("\n      ")}
-    </div>
+    </div>` : ""}
     ${renderResources(seq.resources, { heading: "Documents de la séquence" })}
   </article>
 </div>`;
@@ -581,6 +596,37 @@ ${urls.map((u) => `  <url><loc>${u}</loc></url>`).join("\n")}
   write("robots.txt", `User-agent: *\nAllow: /\nSitemap: ${SITE_URL}sitemap.xml\n`);
 }
 
+function renderArchivesHub(site, sections) {
+  const rel = "../";
+  const archived = sections.filter((s) => s.meta.archived);
+  const card = (s) => {
+    const seqCount = s.data.sequences.length;
+    return `
+    <a class="level-card" href="${rel}${s.meta.slug}/" style="--card-accent:${s.meta.color};--card-accent-soft:${s.meta.colorSoft}">
+      <span class="lvl-badge">${esc(s.meta.short)}</span>
+      <h3>${esc(s.meta.label)}</h3>
+      <p>${esc(s.data.tagline || "")}</p>
+      <span class="meta">${seqCount} séquence${seqCount > 1 ? "s" : ""}</span>
+    </a>`;
+  };
+  const body = `
+${breadcrumbs(rel, [{ label: "Archives 2020-2024", href: "./" }])}
+<div class="wrap">
+  <div class="page-head">
+    <div class="kicker"><span class="badge badge-arch">🗄 Archives</span></div>
+    <h1>Archives des cours · 2020-2024</h1>
+    <p class="desc">Les séquences des années précédentes restent consultables : activités, corrections et ressources.</p>
+  </div>
+  <div class="grid grid-levels" style="margin:1.6rem 0 3rem">
+    ${archived.map(card).join("\n    ")}
+  </div>
+</div>`;
+  write(
+    "archives/index.html",
+    layout({ site, rel, title: "Archives 2020-2024", description: "Séquences des années 2020-2024.", body, sectionId: "archives" })
+  );
+}
+
 function render404(site) {
   const body = `
 <section class="section"><div class="wrap" style="text-align:center;padding:4rem 0">
@@ -618,7 +664,14 @@ function main() {
   fs.writeFileSync(path.join(OUT, "assets", "favicon.svg"), FAVICON, "utf8");
   fs.writeFileSync(path.join(OUT, ".nojekyll"), "", "utf8");
 
+  // images de contenu auto-hébergées
+  const imgSrc = path.join(CONTENT, "assets", "img");
+  if (fs.existsSync(imgSrc)) {
+    fs.cpSync(imgSrc, path.join(OUT, "assets", "img"), { recursive: true });
+  }
+
   renderHome(site, sections);
+  renderArchivesHub(site, sections);
   render404(site);
 
   let pageCount = 2;
