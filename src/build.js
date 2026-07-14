@@ -338,12 +338,15 @@ function renderHome(site, sections) {
   const levelCard = (s) => {
     const seqCount = s.data.sequences.length;
     const pageCount = s.data.sequences.reduce((n, q) => n + q.pages.length, 0);
+    const meta = seqCount
+      ? `${seqCount} séquence${seqCount > 1 ? "s" : ""} · ${pageCount} page${pageCount > 1 ? "s" : ""}`
+      : "Présentation";
     return `
     <a class="level-card" href="${rel}${s.meta.slug}/" style="--card-accent:${s.meta.color};--card-accent-soft:${s.meta.colorSoft}">
       <span class="lvl-badge">${esc(s.meta.short)}</span>
       <h3>${esc(s.meta.label)}</h3>
       <p>${esc(s.data.tagline || "")}</p>
-      <span class="meta">${seqCount} séquence${seqCount > 1 ? "s" : ""} · ${pageCount} page${pageCount > 1 ? "s" : ""}</span>
+      <span class="meta">${meta}</span>
     </a>`;
   };
 
