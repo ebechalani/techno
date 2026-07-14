@@ -201,7 +201,8 @@
             }
           ]
         }
-      ]
+      ],
+      "nouveau": true
     },
     {
       "slug": "sequence-objet-developpement-durable",
@@ -330,7 +331,8 @@
             }
           ]
         }
-      ]
+      ],
+      "nouveau": true
     }
   ],
   "sequenceOrder": [

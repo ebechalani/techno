@@ -174,7 +174,8 @@
             }
           ]
         }
-      ]
+      ],
+      "nouveau": true
     },
     {
       "slug": "theme-donnees-structurees",
@@ -353,7 +354,8 @@
             }
           ]
         }
-      ]
+      ],
+      "nouveau": true
     }
   ],
   "sequenceOrder": [

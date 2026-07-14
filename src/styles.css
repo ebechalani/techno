@@ -403,6 +403,13 @@ main { min-height: 60vh; }
 .badge-arch { --badge-bg: var(--c-arch-soft); --badge-fg: var(--c-arch); }
 .badge-corr { --badge-bg: var(--c-5eme-soft); --badge-fg: var(--c-5eme); }
 .badge-res  { --badge-bg: var(--c-snt-soft); --badge-fg: var(--c-snt); }
+.badge-new  { --badge-bg: var(--primary-soft); --badge-fg: var(--primary); }
+
+/* Marqueur « Nouveau » sur les cartes de séquence */
+.seq-new {
+  color: var(--primary); font-weight: 700; font-size: 0.72rem;
+  letter-spacing: 0.02em;
+}
 
 /* ---------- Mise en page cours (sidebar + contenu) ---------- */
 .course-layout {

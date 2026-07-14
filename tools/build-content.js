@@ -31,7 +31,7 @@ const SECTIONS = [
     sequences: [
       {
         src: "5ème-2025-2026/séquence-1-cybersécurité-2025-2026",
-        slug: "sequence-1-cybersecurite", eyebrow: "Séquence 1", year: "2025-2026",
+        slug: "sequence-1-cybersecurite", eyebrow: "Séquence 1", year: "2025-2026", nouveau: true,
         title: "Cybersécurité",
         tagline: "Exploiter les outils numériques, protéger ses données et agir face à la cyberviolence.",
       },
@@ -56,13 +56,13 @@ const SECTIONS = [
     sequences: [
       {
         src: "4ème-2025-2026/séquence-0lia-générative-comme-assistant-personnel",
-        slug: "sequence-0-ia-generative", eyebrow: "Séquence 0", year: "2025-2026",
+        slug: "sequence-0-ia-generative", eyebrow: "Séquence 0", year: "2025-2026", nouveau: true,
         title: "L'IA générative comme assistant personnel",
         tagline: "Découvrir l'IA générative et l'utiliser de façon pertinente et responsable.",
       },
       {
         src: "4ème-2025-2026/séquence-1-intelligence-artificielle-générative-la-sécurité-des-données",
-        slug: "sequence-1-ia-securite", eyebrow: "Séquence 1", year: "2025-2026",
+        slug: "sequence-1-ia-securite", eyebrow: "Séquence 1", year: "2025-2026", nouveau: true,
         title: "IA générative et sécurité des données",
         tagline: "Objets connectés, données personnelles et usage du numérique sans danger.",
       },
@@ -404,6 +404,7 @@ function normalizeSequence(s) {
     slug: s.slug,
     eyebrow: s.eyebrow || "Séquence",
     year: s.year || "",
+    nouveau: s.nouveau || false,
     title: s.title || "",
     shortTitle: s.shortTitle || s.title || "",
     tagline: s.tagline || "",
@@ -531,6 +532,7 @@ for (const sec of SECTIONS) {
       slug: seqDef.slug,
       eyebrow: seqDef.eyebrow,
       year: seqDef.year || "",
+      nouveau: seqDef.nouveau || false,
       title: seqDef.title,
       shortTitle: seqDef.title,
       tagline: seqDef.tagline,

@@ -302,7 +302,7 @@ ${body}
     </div>
   </div>
   <div class="wrap footer-bottom">
-    <span>© ${site.year} ${esc(site.teacher)} · ${esc(site.school)}</span>
+    <span>© ${esc(site.teacher)} · ${esc(site.school)}</span>
     <span>Cours de Technologie collège &amp; SNT lycée</span>
   </div>
 </footer>
@@ -449,7 +449,7 @@ function renderSection(site, meta, section) {
     const others = seq.pages.length - seances;
     return `
     <a class="seq-card" href="./${seq.slug}/" style="--accent:${meta.color}">
-      <span class="seq-num">${esc(seq.eyebrow || `Séquence ${i + 1}`)}${seq.year ? ` <span class="seq-year">· ${esc(seq.year)}</span>` : ""}</span>
+      <span class="seq-num">${esc(seq.eyebrow || `Séquence ${i + 1}`)}${seq.nouveau ? ` <span class="seq-new">✦ Nouveau</span>` : ""}</span>
       <h3>${esc(seq.title)}</h3>
       <p>${esc(seq.tagline || "")}</p>
       <span class="seq-foot">
@@ -517,7 +517,7 @@ ${breadcrumbs(rel, [
       <div class="kicker">
         <span class="badge" style="--badge-bg:${meta.colorSoft};--badge-fg:${meta.color}">${esc(meta.short)}</span>
         <span class="badge">${esc(seq.eyebrow || `Séquence ${seqIndex + 1}`)}</span>
-        ${seq.year ? `<span class="badge badge-arch">${esc(seq.year)}</span>` : ""}
+        ${seq.nouveau ? `<span class="badge badge-new">✦ Nouveau</span>` : ""}
       </div>
       <h1>${esc(seq.title)}</h1>
       ${seq.tagline ? `<p class="desc">${esc(seq.tagline)}</p>` : ""}
@@ -566,7 +566,7 @@ ${breadcrumbs(rel, [
       <div class="kicker">
         <span class="badge" style="--badge-bg:${meta.colorSoft};--badge-fg:${meta.color}">${esc(meta.short)}</span>
         ${pageKindBadge(page) || `<span class="badge">${esc(seq.shortTitle || "Séquence")}</span>`}
-        ${seq.year ? `<span class="badge badge-arch">${esc(seq.year)}</span>` : ""}
+        ${seq.nouveau ? `<span class="badge badge-new">✦ Nouveau</span>` : ""}
       </div>
       <h1>${esc(page.title)}</h1>
       ${page.tagline ? `<p class="desc">${esc(page.tagline)}</p>` : ""}
