@@ -3,10 +3,10 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Métadonnées, cloud et protection des données · Les données structurées et leur traitement — Technologie &amp; SNT</title>
-<meta name="description" content="Métadonnées, données dans le cloud, empreinte énergétique, open data et RGPD.">
-<meta property="og:title" content="Métadonnées, cloud et protection des données · Les données structurées et leur traitement — Technologie &amp; SNT">
-<meta property="og:description" content="Métadonnées, données dans le cloud, empreinte énergétique, open data et RGPD.">
+<title>Programmer : la popularité d'une page · Le Web — Technologie &amp; SNT</title>
+<meta name="description" content="Comment un moteur de recherche classe les pages, et comment le programmer en Python.">
+<meta property="og:title" content="Programmer : la popularité d'une page · Le Web — Technologie &amp; SNT">
+<meta property="og:description" content="Comment un moteur de recherche classe les pages, et comment le programmer en Python.">
 <meta property="og:type" content="website">
 <link rel="icon" href="../../../assets/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -51,8 +51,8 @@
 <nav class="breadcrumbs wrap" aria-label="Fil d'Ariane">
     <a href="../../../index.html">Accueil</a><span class="sep">›</span>
     <a href="../../">2nde SNT</a><span class="sep">›</span>
-    <a href="../">Les données structurées et leur traitement</a><span class="sep">›</span>
-    <span class="current">Métadonnées, cloud et protection des données</span>
+    <a href="../">Le Web</a><span class="sep">›</span>
+    <span class="current">Programmer : la popularité d'une page</span>
   </nav>
 <div class="wrap course-layout">
   <aside class="sidebar" style="--accent:undefined;--accent-soft:undefined;">
@@ -70,14 +70,14 @@
         <a href="../../theme-2-internet/support-du-cours/">Support du cours</a>
       </div>
     </details>
-    <details>
+    <details open>
       <summary><a href="../../theme-3-web/" style="all:unset;cursor:pointer">Le Web</a></summary>
       <div class="sb-pages">
         <a href="../../theme-3-web/1-histoire-du-web/">1.Histoire du web</a>
         <a href="../../theme-3-web/2-fonctionnement-du-web/">2.Fonctionnement du web</a>
         <a href="../../theme-3-web/3-lecriture-dune-page-web/">3. L'écriture d'une page Web</a>
         <a href="../../theme-3-web/4-le-langage-htmlcss-2/">4. Le langage HTML/CSS (2)</a>
-        <a href="../../theme-3-web/5-programmer-la-popularite-dune-page/">5. Programmer (Python)</a>
+        <a href="../../theme-3-web/5-programmer-la-popularite-dune-page/" aria-current="true">5. Programmer (Python)</a>
       </div>
     </details>
     <details>
@@ -88,12 +88,12 @@
         <a href="../../theme-reseaux-sociaux/seance-3/">Séance 3</a>
       </div>
     </details>
-    <details open>
+    <details>
       <summary><a href="../../theme-donnees-structurees/" style="all:unset;cursor:pointer">Les données structurées et leur traitement</a></summary>
       <div class="sb-pages">
         <a href="../../theme-donnees-structurees/seance-1/">Séance 1</a>
         <a href="../../theme-donnees-structurees/seance-2/">Séance 2</a>
-        <a href="../../theme-donnees-structurees/seance-3/" aria-current="true">Séance 3</a>
+        <a href="../../theme-donnees-structurees/seance-3/">Séance 3</a>
       </div>
     </details>
     <details>
@@ -124,11 +124,11 @@
     <div class="page-head">
       <div class="kicker">
         <span class="badge" style="--badge-bg:#fdeede;--badge-fg:#d9640f">SNT</span>
-        <span class="badge">Les données structurées et leur traitement</span>
+        <span class="badge">Le Web</span>
         
       </div>
-      <h1>Métadonnées, cloud et protection des données</h1>
-      <p class="desc">Métadonnées, données dans le cloud, empreinte énergétique, open data et RGPD.</p>
+      <h1>Programmer : la popularité d'une page</h1>
+      <p class="desc">Comment un moteur de recherche classe les pages, et comment le programmer en Python.</p>
     </div>
     
     
@@ -140,42 +140,54 @@
   </span>
 </div>
     <div class="prose">
-      <h2>Activité 1 — Les métadonnées</h2>
-<p>Une <strong>métadonnée</strong> est une <strong>donnée sur une donnée</strong>. Par exemple, une photo (la donnée) contient aussi des informations cachées (les métadonnées <strong>EXIF</strong>) : date et heure de la prise de vue, modèle d&#39;appareil, et parfois la <strong>position GPS</strong>.</p>
-<p><strong>a.</strong> Sur un ordinateur, on peut voir certaines métadonnées d&#39;une photo dans ses <strong>propriétés</strong>. Cite <strong>deux métadonnées</strong> possibles d&#39;une photo.</p>
+      <h2>Comment un moteur de recherche classe-t-il les pages ?</h2>
+<p>Quand tu fais une recherche, le moteur (Google, Qwant…) doit afficher <strong>en premier</strong> les pages les plus pertinentes. L&#39;un des critères historiques est la <strong>popularité</strong> : une page est jugée importante si <strong>beaucoup d&#39;autres pages pointent vers elle</strong> par des liens hypertextes. C&#39;est l&#39;idée de l&#39;algorithme <strong>PageRank</strong>.</p>
+<h2>Activité 1 — Compter les liens à la main</h2>
+<p>On représente un mini-web par les liens entre 4 pages :</p>
+<ul>
+<li>La page <strong>A</strong> pointe vers <strong>B</strong> et <strong>C</strong>.</li>
+<li>La page <strong>B</strong> pointe vers <strong>C</strong>.</li>
+<li>La page <strong>D</strong> pointe vers <strong>C</strong>.</li>
+</ul>
+<p><strong>a.</strong> Combien de pages pointent vers <strong>C</strong> ?</p>
 <div class="answer-field">
   <textarea rows="3" data-answer-idx="0" placeholder="✏️ Écris ta réponse ici…" aria-label="Zone de réponse de l'élève"></textarea>
 </div>
-<p><strong>b.</strong> Pourquoi la métadonnée de <strong>position GPS</strong> d&#39;une photo peut-elle poser un <strong>problème de vie privée</strong> si on la publie ?</p>
+<p><strong>b.</strong> Quelle est, selon ce critère, la page la plus « populaire » ?</p>
 <div class="answer-field">
   <textarea rows="3" data-answer-idx="1" placeholder="✏️ Écris ta réponse ici…" aria-label="Zone de réponse de l'élève"></textarea>
 </div>
-<h2>Activité 2 — Les données dans le cloud</h2>
-<p>Quand tu sauvegardes une photo « dans le <strong>cloud</strong> », elle n&#39;est pas « dans les nuages » : elle est stockée sur des <strong>serveurs</strong>, dans d&#39;immenses bâtiments appelés <strong>centres de données</strong> (<em>data centers</em>). Ces centres fonctionnent <strong>jour et nuit</strong> et <strong>consomment beaucoup d&#39;électricité</strong> (pour les machines et pour les refroidir).</p>
-<p><strong>a.</strong> Où sont réellement stockées les données que l&#39;on met « dans le cloud » ?</p>
+<h2>Activité 2 — Le programmer en Python</h2>
+<p>On stocke les liens dans un <strong>dictionnaire</strong> : à chaque page, la liste des pages vers lesquelles elle pointe.</p>
+<pre><code class="language-python">liens = {
+    &quot;A&quot;: [&quot;B&quot;, &quot;C&quot;],   # A pointe vers B et C
+    &quot;B&quot;: [&quot;C&quot;],        # B pointe vers C
+    &quot;D&quot;: [&quot;C&quot;],        # D pointe vers C
+}
+
+def popularite(page, liens):
+    total = 0
+    for source in liens:
+        if page in liens[source]:
+            total = total + 1
+    return total
+
+print(popularite(&quot;C&quot;, liens))
+</code></pre>
+<p><strong>a.</strong> Qu&#39;affiche <code>print(popularite(&quot;C&quot;, liens))</code> ?</p>
 <div class="answer-field">
   <textarea rows="3" data-answer-idx="2" placeholder="✏️ Écris ta réponse ici…" aria-label="Zone de réponse de l'élève"></textarea>
 </div>
-<p><strong>b.</strong> Cite une conséquence <strong>écologique</strong> du stockage massif de données.</p>
+<p><strong>b.</strong> Que renverrait <code>popularite(&quot;B&quot;, liens)</code> ?</p>
 <div class="answer-field">
   <textarea rows="3" data-answer-idx="3" placeholder="✏️ Écris ta réponse ici…" aria-label="Zone de réponse de l'élève"></textarea>
 </div>
-<h2>Activité 3 — Big Data, open data et RGPD</h2>
-<ul>
-<li>Le <strong>Big Data</strong> désigne les <strong>quantités gigantesques de données</strong> produites aujourd&#39;hui, trop grandes pour être traitées à la main.</li>
-<li>L&#39;<strong>open data</strong> (données ouvertes) : des données <strong>publiques mises à disposition de tous</strong> gratuitement (horaires de transports, résultats d&#39;élections, qualité de l&#39;air…).</li>
-<li>Le <strong>RGPD</strong> (Règlement Général sur la Protection des Données) est la <strong>loi européenne</strong> qui protège les <strong>données personnelles</strong> : une entreprise doit demander ton <strong>consentement</strong>, expliquer à quoi serviront tes données, et tu peux demander à les <strong>consulter ou les effacer</strong>.</li>
-</ul>
-<p><strong>a.</strong> Donne un exemple de données que l&#39;on pourrait trouver en <strong>open data</strong>.</p>
+<p><strong>c.</strong> À ton avis, pourquoi ce simple comptage ne suffit-il pas ? (Indice : un lien depuis une page <strong>très populaire</strong> vaut-il autant qu&#39;un lien depuis une page inconnue ?)</p>
 <div class="answer-field">
   <textarea rows="3" data-answer-idx="4" placeholder="✏️ Écris ta réponse ici…" aria-label="Zone de réponse de l'élève"></textarea>
 </div>
-<p><strong>b.</strong> Cite <strong>un droit</strong> que le RGPD te donne sur tes données personnelles.</p>
-<div class="answer-field">
-  <textarea rows="3" data-answer-idx="5" placeholder="✏️ Écris ta réponse ici…" aria-label="Zone de réponse de l'élève"></textarea>
-</div>
 <h2>Ce que je retiens</h2>
-<p>Une <strong>métadonnée</strong> est une donnée sur une donnée (ex. les infos EXIF d&#39;une photo). Le <strong>cloud</strong> stocke nos données dans des <strong>centres de données</strong> qui consomment beaucoup d&#39;<strong>énergie</strong>. Le <strong>Big Data</strong> désigne les masses de données ; l&#39;<strong>open data</strong> les données publiques ouvertes ; le <strong>RGPD</strong> est la loi européenne qui <strong>protège nos données personnelles</strong>.</p>
+<p>Un moteur de recherche classe les pages notamment par leur <strong>popularité</strong> : plus une page reçoit de <strong>liens</strong>, plus elle est jugée importante. On peut modéliser ce comptage par un <strong>dictionnaire</strong> en <strong>Python</strong> et une fonction qui parcourt les liens. Les vrais algorithmes (PageRank) tiennent aussi compte de l&#39;<strong>importance des pages qui pointent</strong>.</p>
 
     </div>
     
@@ -183,69 +195,54 @@
   <h2>🧠 Teste tes connaissances</h2>
   <p class="quiz-hint">Réponds aux questions puis clique sur « Vérifier » — la correction s'affiche aussitôt.</p>
   
-    <div class="quiz-q" data-ok="0" data-explain="Une métadonnée décrit une autre donnée : par exemple la date ou le lieu d'une photo.">
-      <p class="qq-text">1. Une métadonnée, c'est :</p>
+    <div class="quiz-q" data-ok="1" data-explain="Une page est jugée importante si beaucoup d'autres pages (et surtout des pages importantes) pointent vers elle.">
+      <p class="qq-text">1. Sur quel critère l'algorithme PageRank juge-t-il l'importance d'une page ?</p>
       <div class="qq-opts">
-        <label class="qq-opt"><input type="radio" name="q0" value="0"><span>Une donnée sur une donnée (ex. la date d'une photo)</span></label>
-        <label class="qq-opt"><input type="radio" name="q0" value="1"><span>Une très grande donnée</span></label>
-        <label class="qq-opt"><input type="radio" name="q0" value="2"><span>Une donnée fausse</span></label>
+        <label class="qq-opt"><input type="radio" name="q0" value="0"><span>Sa couleur</span></label>
+        <label class="qq-opt"><input type="radio" name="q0" value="1"><span>Le nombre et l'importance des pages qui pointent vers elle</span></label>
+        <label class="qq-opt"><input type="radio" name="q0" value="2"><span>Sa date de création</span></label>
       </div>
       <button class="btn btn-ghost qq-check" type="button">Vérifier ma réponse</button>
       <div class="qq-feedback" aria-live="polite"></div>
     </div>
 
-    <div class="quiz-q" data-ok="1" data-explain="Le cloud, ce sont des serveurs situés dans des centres de données bien réels.">
-      <p class="qq-text">2. Les données stockées « dans le cloud » sont en réalité :</p>
+    <div class="quiz-q" data-ok="0" data-explain="Les liens sont stockés dans un dictionnaire : à chaque page, la liste de ses liens sortants.">
+      <p class="qq-text">2. En Python, quelle structure est utilisée ici pour stocker les liens entre pages ?</p>
       <div class="qq-opts">
-        <label class="qq-opt"><input type="radio" name="q1" value="0"><span>Dans les nuages</span></label>
-        <label class="qq-opt"><input type="radio" name="q1" value="1"><span>Sur des serveurs, dans des centres de données</span></label>
-        <label class="qq-opt"><input type="radio" name="q1" value="2"><span>Uniquement sur ton téléphone</span></label>
+        <label class="qq-opt"><input type="radio" name="q1" value="0"><span>Un dictionnaire</span></label>
+        <label class="qq-opt"><input type="radio" name="q1" value="1"><span>Une image</span></label>
+        <label class="qq-opt"><input type="radio" name="q1" value="2"><span>Un nombre entier</span></label>
       </div>
       <button class="btn btn-ghost qq-check" type="button">Vérifier ma réponse</button>
       <div class="qq-feedback" aria-live="polite"></div>
     </div>
 
-    <div class="quiz-q" data-ok="0" data-explain="Le RGPD est la loi européenne de protection des données personnelles.">
-      <p class="qq-text">3. Le RGPD sert à :</p>
+    <div class="quiz-q" data-ok="2" data-explain="Trois pages (A, B et D) pointent vers C : la fonction renvoie 3.">
+      <p class="qq-text">3. Avec liens = {&quot;A&quot;:[&quot;B&quot;,&quot;C&quot;], &quot;B&quot;:[&quot;C&quot;], &quot;D&quot;:[&quot;C&quot;]}, que vaut popularite(&quot;C&quot;, liens) ?</p>
       <div class="qq-opts">
-        <label class="qq-opt"><input type="radio" name="q2" value="0"><span>Protéger les données personnelles en Europe</span></label>
-        <label class="qq-opt"><input type="radio" name="q2" value="1"><span>Accélérer internet</span></label>
-        <label class="qq-opt"><input type="radio" name="q2" value="2"><span>Créer des réseaux sociaux</span></label>
+        <label class="qq-opt"><input type="radio" name="q2" value="0"><span>1</span></label>
+        <label class="qq-opt"><input type="radio" name="q2" value="1"><span>2</span></label>
+        <label class="qq-opt"><input type="radio" name="q2" value="2"><span>3</span></label>
       </div>
       <button class="btn btn-ghost qq-check" type="button">Vérifier ma réponse</button>
       <div class="qq-feedback" aria-live="polite"></div>
     </div>
 
-    <div class="quiz-q" data-ok="1" data-explain="L'open data, ce sont des données publiques ouvertes et réutilisables librement.">
-      <p class="qq-text">4. L'open data désigne :</p>
+    <div class="quiz-q" data-ok="0" data-explain="Un lien venant d'une page importante a plus de valeur : PageRank en tient compte.">
+      <p class="qq-text">4. Pourquoi un simple comptage des liens ne suffit-il pas ?</p>
       <div class="qq-opts">
-        <label class="qq-opt"><input type="radio" name="q3" value="0"><span>Des données personnelles secrètes</span></label>
-        <label class="qq-opt"><input type="radio" name="q3" value="1"><span>Des données publiques mises gratuitement à disposition de tous</span></label>
-        <label class="qq-opt"><input type="radio" name="q3" value="2"><span>Des données effacées</span></label>
+        <label class="qq-opt"><input type="radio" name="q3" value="0"><span>Parce qu'un lien depuis une page très populaire devrait compter davantage</span></label>
+        <label class="qq-opt"><input type="radio" name="q3" value="1"><span>Parce que Python ne sait pas compter</span></label>
+        <label class="qq-opt"><input type="radio" name="q3" value="2"><span>Parce que les pages n'ont pas de liens</span></label>
       </div>
       <button class="btn btn-ghost qq-check" type="button">Vérifier ma réponse</button>
       <div class="qq-feedback" aria-live="polite"></div>
     </div>
   <div class="quiz-score" aria-live="polite"></div>
 </section>
-    <section class="resources"><h2>Liens et ressources</h2><div class="res-grid">
-<a class="res-card res-link" href="https://www.cnil.fr/fr/reglement-europeen-protection-donnees" target="_blank" rel="noopener">
-  <span class="res-icon">🔗</span>
-  <span class="res-info">
-    <span class="res-title">Le RGPD expliqué (CNIL)</span>
-    <span class="res-kind">Lien externe</span>
-  </span>
-</a>
-
-<a class="res-card res-link" href="https://www.data.gouv.fr/" target="_blank" rel="noopener">
-  <span class="res-icon">🔗</span>
-  <span class="res-info">
-    <span class="res-title">Plateforme française d'open data — data.gouv.fr</span>
-    <span class="res-kind">Lien externe</span>
-  </span>
-</a></div></section>
+    
     <nav class="pager">
-      <a class="pg-prev" href="../seance-2/"><span class="pg-label">← Précédent</span><span class="pg-title">Traiter les données : trier, filtrer, croiser</span></a>
+      <a class="pg-prev" href="../4-le-langage-htmlcss-2/"><span class="pg-label">← Précédent</span><span class="pg-title">4. Le langage HTML/CSS (2)</span></a>
       
     </nav>
   </article>

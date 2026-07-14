@@ -470,6 +470,14 @@ function applyOverlay(sectionId, data) {
     for (const seqDef of ov.addSequences) data.sequences.push(normalizeSequence(seqDef));
   }
 
+  // Ajout de pages à une séquence existante ("seqSlug": [pages])
+  if (ov.addPages) {
+    for (const [slug, pages] of Object.entries(ov.addPages)) {
+      const seq = data.sequences.find((s) => s.slug === slug);
+      if (seq) for (const p of pages) seq.pages.push(normalizePage(p));
+    }
+  }
+
   // Réordonnancement final (slugs dans l'ordre voulu ; le reste conserve son ordre)
   if (ov.sequenceOrder) {
     const order = ov.sequenceOrder;

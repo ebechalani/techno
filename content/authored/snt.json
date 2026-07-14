@@ -364,5 +364,125 @@
     "theme-4-photographie",
     "theme-5-geolocalisation",
     "tp-arduino"
-  ]
+  ],
+  "addPages": {
+    "theme-3-web": [
+      {
+        "slug": "5-programmer-la-popularite-dune-page",
+        "kind": "seance",
+        "num": 5,
+        "title": "Programmer : la popularité d'une page",
+        "shortTitle": "5. Programmer (Python)",
+        "tagline": "Comment un moteur de recherche classe les pages, et comment le programmer en Python.",
+        "content_md": "## Comment un moteur de recherche classe-t-il les pages ?\n\nQuand tu fais une recherche, le moteur (Google, Qwant…) doit afficher **en premier** les pages les plus pertinentes. L'un des critères historiques est la **popularité** : une page est jugée importante si **beaucoup d'autres pages pointent vers elle** par des liens hypertextes. C'est l'idée de l'algorithme **PageRank**.\n\n## Activité 1 — Compter les liens à la main\n\nOn représente un mini-web par les liens entre 4 pages :\n\n- La page **A** pointe vers **B** et **C**.\n- La page **B** pointe vers **C**.\n- La page **D** pointe vers **C**.\n\n**a.** Combien de pages pointent vers **C** ?\n\n……………………………………………………\n\n**b.** Quelle est, selon ce critère, la page la plus « populaire » ?\n\n……………………………………………………\n\n## Activité 2 — Le programmer en Python\n\nOn stocke les liens dans un **dictionnaire** : à chaque page, la liste des pages vers lesquelles elle pointe.\n\n```python\nliens = {\n    \"A\": [\"B\", \"C\"],   # A pointe vers B et C\n    \"B\": [\"C\"],        # B pointe vers C\n    \"D\": [\"C\"],        # D pointe vers C\n}\n\ndef popularite(page, liens):\n    total = 0\n    for source in liens:\n        if page in liens[source]:\n            total = total + 1\n    return total\n\nprint(popularite(\"C\", liens))\n```\n\n**a.** Qu'affiche `print(popularite(\"C\", liens))` ?\n\n……………………………………………………\n\n**b.** Que renverrait `popularite(\"B\", liens)` ?\n\n……………………………………………………\n\n**c.** À ton avis, pourquoi ce simple comptage ne suffit-il pas ? (Indice : un lien depuis une page **très populaire** vaut-il autant qu'un lien depuis une page inconnue ?)\n\n……………………………………………………\n\n## Ce que je retiens\n\nUn moteur de recherche classe les pages notamment par leur **popularité** : plus une page reçoit de **liens**, plus elle est jugée importante. On peut modéliser ce comptage par un **dictionnaire** en **Python** et une fonction qui parcourt les liens. Les vrais algorithmes (PageRank) tiennent aussi compte de l'**importance des pages qui pointent**.",
+        "quiz": [
+          {
+            "q": "Sur quel critère l'algorithme PageRank juge-t-il l'importance d'une page ?",
+            "options": [
+              "Sa couleur",
+              "Le nombre et l'importance des pages qui pointent vers elle",
+              "Sa date de création"
+            ],
+            "answer": 1,
+            "explain": "Une page est jugée importante si beaucoup d'autres pages (et surtout des pages importantes) pointent vers elle."
+          },
+          {
+            "q": "En Python, quelle structure est utilisée ici pour stocker les liens entre pages ?",
+            "options": [
+              "Un dictionnaire",
+              "Une image",
+              "Un nombre entier"
+            ],
+            "answer": 0,
+            "explain": "Les liens sont stockés dans un dictionnaire : à chaque page, la liste de ses liens sortants."
+          },
+          {
+            "q": "Avec liens = {\"A\":[\"B\",\"C\"], \"B\":[\"C\"], \"D\":[\"C\"]}, que vaut popularite(\"C\", liens) ?",
+            "options": [
+              "1",
+              "2",
+              "3"
+            ],
+            "answer": 2,
+            "explain": "Trois pages (A, B et D) pointent vers C : la fonction renvoie 3."
+          },
+          {
+            "q": "Pourquoi un simple comptage des liens ne suffit-il pas ?",
+            "options": [
+              "Parce qu'un lien depuis une page très populaire devrait compter davantage",
+              "Parce que Python ne sait pas compter",
+              "Parce que les pages n'ont pas de liens"
+            ],
+            "answer": 0,
+            "explain": "Un lien venant d'une page importante a plus de valeur : PageRank en tient compte."
+          }
+        ],
+        "resources": []
+      }
+    ],
+    "theme-4-photographie": [
+      {
+        "slug": "3-programmer-traiter-une-image",
+        "kind": "seance",
+        "num": 3,
+        "title": "Programmer : traiter une image",
+        "shortTitle": "3. Programmer (Python)",
+        "tagline": "Transformer une image pixel par pixel en Python : niveaux de gris et négatif.",
+        "content_md": "## Une image, ce sont des nombres\n\nUne image numérique est une grille de **pixels**. Chaque pixel a une couleur codée par trois nombres de 0 à 255 : la quantité de **Rouge**, de **Vert** et de **Bleu** (codage **RVB**). En Python, on peut représenter un pixel par un **triplet** : `(r, v, b)`.\n\nTransformer une image, c'est **appliquer un calcul à chaque pixel**.\n\n## Activité 1 — Passer en niveaux de gris\n\nPour obtenir un pixel gris, on remplace R, V et B par leur **moyenne**. Un pixel gris a ses trois composantes **égales**.\n\n```python\ndef niveau_de_gris(pixel):\n    r, v, b = pixel\n    moyenne = (r + v + b) // 3\n    return (moyenne, moyenne, moyenne)\n\nprint(niveau_de_gris((100, 150, 200)))\n```\n\n**a.** Calcule la moyenne de (100, 150, 200), puis donne le pixel gris obtenu.\n\n……………………………………………………\n\n**b.** Pourquoi les trois composantes d'un pixel gris sont-elles identiques ?\n\n……………………………………………………\n\n## Activité 2 — Le négatif d'une image\n\nPour obtenir le **négatif**, on remplace chaque composante par **255 moins sa valeur**.\n\n```python\ndef negatif(pixel):\n    r, v, b = pixel\n    return (255 - r, 255 - v, 255 - b)\n\nprint(negatif((0, 0, 0)))\nprint(negatif((255, 0, 0)))\n```\n\n**a.** Quel pixel obtient-on avec `negatif((0, 0, 0))` ? Quelle couleur est-ce ?\n\n……………………………………………………\n\n**b.** Le négatif du rouge pur `(255, 0, 0)` donne quel triplet ?\n\n……………………………………………………\n\n## Activité 3 — Traiter toute l'image\n\nPour traiter **toute** l'image, on applique la fonction à **chaque pixel**, à l'aide d'une **boucle**. C'est le principe des filtres des logiciels de retouche.\n\n**Quel outil de programmation permet de répéter le même calcul sur tous les pixels ?**\n\n……………………………………………………\n\n## Ce que je retiens\n\nUne image est une grille de **pixels RVB**, chaque composante allant de **0 à 255**. On **traite une image en Python** en appliquant un calcul à chaque pixel : la **moyenne** des composantes donne un **niveau de gris**, et **255 − valeur** donne le **négatif**. Une **boucle** permet d'appliquer le filtre à toute l'image.",
+        "quiz": [
+          {
+            "q": "Comment est codée la couleur d'un pixel en RVB ?",
+            "options": [
+              "Par un seul nombre de 0 à 9",
+              "Par trois nombres de 0 à 255 (rouge, vert, bleu)",
+              "Par une lettre"
+            ],
+            "answer": 1,
+            "explain": "Un pixel RVB est codé par trois valeurs de 0 à 255 : rouge, vert et bleu."
+          },
+          {
+            "q": "niveau_de_gris((100, 150, 200)) renvoie :",
+            "options": [
+              "(150, 150, 150)",
+              "(100, 150, 200)",
+              "(450, 450, 450)"
+            ],
+            "answer": 0,
+            "explain": "(100+150+200)//3 = 150 ; les trois composantes valent alors 150."
+          },
+          {
+            "q": "Comment calcule-t-on le négatif d'une composante de valeur v ?",
+            "options": [
+              "v + 255",
+              "255 - v",
+              "v // 2"
+            ],
+            "answer": 1,
+            "explain": "Le négatif inverse chaque composante : on remplace v par 255 - v."
+          },
+          {
+            "q": "negatif((0, 0, 0)) donne (255, 255, 255). De quelle transformation s'agit-il ?",
+            "options": [
+              "Le noir devient blanc",
+              "Le blanc reste blanc",
+              "L'image ne change pas"
+            ],
+            "answer": 0,
+            "explain": "Le négatif de (0,0,0) (noir) est (255,255,255) (blanc)."
+          },
+          {
+            "q": "Quel outil permet d'appliquer le même calcul à tous les pixels ?",
+            "options": [
+              "Une boucle",
+              "Une image",
+              "Un titre"
+            ],
+            "answer": 0,
+            "explain": "Une boucle répète l'opération sur chaque pixel de l'image."
+          }
+        ],
+        "resources": []
+      }
+    ]
+  }
 }
