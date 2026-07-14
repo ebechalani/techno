@@ -29,6 +29,8 @@ const esc = (s) =>
 
 function md(src) {
   if (!src) return "";
+  // directive ::rgbmixer -> mélangeur de couleurs interactif (synthèse additive)
+  src = src.replace(/^::rgbmixer$/gm, () => renderRgbMixer());
   // directives ::embed[Titre](url) -> intégration (iframe) en place
   src = src.replace(/^::embed\[([^\]]*)\]\(([^)]+)\)$/gm, (m, title, url) => {
     const html = renderEmbed({ title, url });
@@ -195,6 +197,13 @@ function renderEmbed(res) {
   </div>
   <div class="embed-frame"><iframe data-src="${esc(info.src)}" loading="lazy" allowfullscreen allow="autoplay; fullscreen" title="${esc(title)}"></iframe></div>
 </figure>`;
+}
+
+/** Mélangeur de couleurs RVB interactif (synthèse additive). Piloté par client.js. */
+function renderRgbMixer() {
+  const ch = (c, label, val) =>
+    `<label class="rgb-ch rgb-${c}"><span>${label}</span><input type="range" min="0" max="255" value="${val}" data-rgb="${c}"><output>${val}</output></label>`;
+  return `<div class="rgb-mixer" data-rgb-mixer><div class="rgb-preview" data-rgb-preview></div><div class="rgb-controls">${ch("r", "Rouge", 128)}${ch("v", "Vert", 128)}${ch("b", "Bleu", 128)}<div class="rgb-readout">Code RVB : <strong data-rgb-code>128, 128, 128</strong></div></div></div>`;
 }
 
 function renderResCard(res) {

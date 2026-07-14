@@ -745,6 +745,36 @@ main { min-height: 60vh; }
 .answer-field textarea::placeholder { color: var(--muted); font-family: var(--font-body); font-size: 0.95rem; }
 .answer-field.saved textarea { border-style: solid; border-color: color-mix(in srgb, var(--ok) 45%, transparent); }
 
+/* ---------- Mélangeur de couleurs RVB ---------- */
+.rgb-mixer {
+  display: grid;
+  grid-template-columns: 160px 1fr;
+  gap: 1.2rem;
+  align-items: center;
+  max-width: var(--content-w);
+  margin: 1.4rem 0;
+  padding: 1.1rem 1.2rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-1);
+}
+@media (max-width: 560px) { .rgb-mixer { grid-template-columns: 1fr; } }
+.rgb-preview {
+  width: 100%; aspect-ratio: 1 / 1; border-radius: var(--radius-sm);
+  border: 1px solid var(--border-2);
+  background: rgb(128, 128, 128);
+}
+.rgb-controls { display: flex; flex-direction: column; gap: 0.7rem; }
+.rgb-ch { display: grid; grid-template-columns: 56px 1fr 46px; align-items: center; gap: 0.7rem; font-family: var(--font-head); font-weight: 600; font-size: 0.9rem; }
+.rgb-ch output { font-variant-numeric: tabular-nums; text-align: right; color: var(--text-2); }
+.rgb-ch input[type="range"] { width: 100%; accent-color: #888; }
+.rgb-r input { accent-color: #e23b3b; } .rgb-r span { color: #d12f2f; }
+.rgb-v input { accent-color: #1ca54c; } .rgb-v span { color: #128a3e; }
+.rgb-b input { accent-color: #2f6be2; } .rgb-b span { color: #2158c8; }
+.rgb-readout { margin-top: 0.3rem; font-size: 0.9rem; color: var(--text-2); }
+.rgb-readout strong { font-family: var(--font-mono); color: var(--text); }
+
 /* ---------- Quiz ---------- */
 .quiz {
   max-width: var(--content-w);

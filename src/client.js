@@ -252,6 +252,25 @@
     }
   }
 
+  /* ---------- Mélangeur de couleurs RVB (synthèse additive) ---------- */
+  document.querySelectorAll("[data-rgb-mixer]").forEach(function (mix) {
+    var preview = mix.querySelector("[data-rgb-preview]");
+    var code = mix.querySelector("[data-rgb-code]");
+    var inputs = mix.querySelectorAll("input[data-rgb]");
+    function update() {
+      var v = { r: 0, v: 0, b: 0 };
+      inputs.forEach(function (inp) {
+        v[inp.getAttribute("data-rgb")] = inp.value;
+        var out = inp.nextElementSibling;
+        if (out) out.textContent = inp.value;
+      });
+      preview.style.background = "rgb(" + v.r + "," + v.v + "," + v.b + ")";
+      if (code) code.textContent = v.r + ", " + v.v + ", " + v.b;
+    }
+    inputs.forEach(function (inp) { inp.addEventListener("input", update); });
+    update();
+  });
+
   /* ---------- Tableaux défilants sur mobile ---------- */
   document.querySelectorAll(".prose table").forEach(function (t) {
     if (t.parentElement.classList.contains("table-scroll")) return;

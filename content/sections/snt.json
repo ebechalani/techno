@@ -598,12 +598,64 @@
           "slug": "partie-2-formats-des-images",
           "kind": "annexe",
           "num": null,
-          "title": "Partie 2: Formats des images",
+          "title": "Partie 2 : Formats et codage des images",
           "shortTitle": "Partie 2: Formats des images",
           "tagline": "",
-          "content_md": "### Introduction\n\nPour un ordinateur, une image est un ensemble de pixels arrangés sous la forme d'un tableau à deux dimensions.\n\nUne image dite en noir et blanc est composée de pixels noirs ou blancs ; les deux valeurs possibles des pixels sont 1 pour le noir et 0 pour le blanc.\n\n![](assets/img/2nde-snt__theme-4-photographie-numerique__partie-2-formats-des-images/01.png)\n\nUne image en niveaux de gris est composée de pixels de valeurs numériques représentant l'intensité de la luminosité, généralement les valeurs sont entières entre 0 (pour le noir) et 255 (pour le blanc).\n\n![](assets/img/2nde-snt__theme-4-photographie-numerique__partie-2-formats-des-images/02.jpg)\n\nUne image en couleurs est composée de pixels représentés par trois valeurs :\n\n- celle représentant l'intensité du rouge (R),\n\n- celle représentant l'intensité du vert (V),\n\n- et celle représentant l'intensité du bleu (B).\n\nChaque valeur est comprise entre 0 et 255.\n\n**Remarque:**\n\n- Pour chaque intensité de couleur, on parle ici d’un codage sur huit bits : en effet, chaque nombre compris entre 0 et 255 peut être associé à un « mot » de 8 bits (un tel mot est par exemple : 10010100 qui code la nuance 148).\n\n- Dans la suite, on parlera d'octet, 1 octet = 8 bits.\n\n**Exercice**\n\nCi dessous, modifier les valeurs associées aux intensités de Rouge, Vert et Bleu afin afin de faire apparaître la couleur correspondant au code RVB : 135 ; 56 ; 204. Quelle couleur obtient-on approximativement ?\n\n::embed[](https://www.gstatic.com/atari/embeds/8306a3600875750e6acc147fd93569bf/intermediate-frame-minified.html)\n\n**Exercice**\n\nChacun des projecteurs de couleur rouge, vert et bleu peuvent avoir désormais une intensité différente.\n\nJouer sur les curseurs colorés pour modifier les intensites respectives des projecteurs afin de répondre aux questions suivantes:\n\n1. Quelle couleur approche-t-on lorsque le lrègle l'intensité rouge à peu près au 3/4, celle verte à la moitié et celle bleue au quart ?\n\n2. Quelle couleur obtient-on lorsque les trois intensités sont égales au tiers ?\n\n3. Modifier les trois intensités de sorte quelles restent égales. Que pouvez-vous dire de la couleur obtenue ?\n\n::embed[](https://www.gstatic.com/atari/embeds/8306a3600875750e6acc147fd93569bf/intermediate-frame-minified.html)",
+          "objectifs_md": "",
+          "content_md": "## L'image, un tableau de pixels\n\nPour un ordinateur, une image est un ensemble de **pixels** rangés dans un **tableau à deux dimensions**.\n\n**Image en noir et blanc :** chaque pixel vaut **0** (blanc) ou **1** (noir) — un seul **bit** par pixel.\n\n![Image en noir et blanc](assets/img/2nde-snt__theme-4-photographie-numerique__partie-2-formats-des-images/01.png)\n\n**Image en niveaux de gris :** chaque pixel prend une valeur entière de **0** (noir) à **255** (blanc) qui représente l'intensité lumineuse.\n\n![Image en niveaux de gris](assets/img/2nde-snt__theme-4-photographie-numerique__partie-2-formats-des-images/02.jpg)\n\n**Image en couleurs (RVB) :** chaque pixel est représenté par **trois valeurs** de 0 à 255 : l'intensité de **rouge (R)**, de **vert (V)** et de **bleu (B)**.\n\n> **Codage sur 8 bits :** chaque nombre de 0 à 255 se code sur un « mot » de **8 bits** (exemple : 10010100 code la valeur 148). **1 octet = 8 bits.** Un pixel couleur occupe donc 3 octets (un par composante).\n\n## Exercice 1 — Obtenir une couleur précise\n\nUtilise le **mélangeur** ci-dessous. Règle les curseurs pour obtenir le code RVB **135 ; 56 ; 204**. Quelle couleur obtiens-tu approximativement ?\n\n::rgbmixer\n\n**Ma réponse :**\n\n……………………………………………………\n\n## Exercice 2 — La synthèse additive\n\nEn écran, on **additionne** de la lumière rouge, verte et bleue : c'est la **synthèse additive**. Joue sur les curseurs pour répondre :\n\n**a.** Rouge aux 3/4 (≈ 190), vert à la moitié (≈ 128), bleu au quart (≈ 64) : de quelle couleur s'approche-t-on ?\n\n……………………………………………………\n\n**b.** Les trois intensités égales au tiers (≈ 85) : quelle couleur obtient-on ?\n\n……………………………………………………\n\n**c.** Garde les trois intensités **égales** et fais-les varier de 0 à 255. Que remarques-tu sur la couleur obtenue ?\n\n……………………………………………………\n\n::rgbmixer\n\n## Ce que je retiens\n\nUne image est un tableau de **pixels**. En **noir et blanc**, 1 bit par pixel ; en **niveaux de gris**, une valeur de 0 à 255 ; en **couleur**, trois valeurs **RVB** de 0 à 255 (3 octets). Sur un écran, les couleurs sont obtenues par **synthèse additive** : quand R = V = B, on obtient un **gris** (noir si 0, blanc si 255).",
           "resources": [],
-          "srcUrl": "https://sites.google.com/view/lmtechno25/2nde-snt/thème-4-photographie-numérique/partie-2-formats-des-images"
+          "quiz": [
+            {
+              "q": "Combien de bits faut-il pour coder un pixel en noir et blanc (2 valeurs) ?",
+              "options": [
+                "1 bit",
+                "8 bits",
+                "24 bits"
+              ],
+              "answer": 0,
+              "explain": "Deux valeurs possibles (0 ou 1) se codent sur 1 seul bit."
+            },
+            {
+              "q": "Dans une image en niveaux de gris, la valeur 255 représente :",
+              "options": [
+                "Le noir",
+                "Le blanc",
+                "Le rouge"
+              ],
+              "answer": 1,
+              "explain": "L'échelle va de 0 (noir) à 255 (blanc) : 255 est le blanc."
+            },
+            {
+              "q": "Combien d'octets occupe un pixel en couleur RVB ?",
+              "options": [
+                "1 octet",
+                "3 octets (un par composante R, V, B)",
+                "8 octets"
+              ],
+              "answer": 1,
+              "explain": "Chaque composante (R, V, B) tient sur 1 octet (8 bits), soit 3 octets par pixel."
+            },
+            {
+              "q": "Sur un écran, quand les intensités R, V et B sont égales, on obtient :",
+              "options": [
+                "Un gris (du noir au blanc)",
+                "Toujours du rouge",
+                "Toujours du bleu"
+              ],
+              "answer": 0,
+              "explain": "R = V = B donne un gris : noir si 0, blanc si 255, gris intermédiaire sinon."
+            },
+            {
+              "q": "Comment un écran fabrique-t-il les couleurs ?",
+              "options": [
+                "Par synthèse additive (addition de lumière rouge, verte, bleue)",
+                "En mélangeant des peintures",
+                "En retirant de la lumière"
+              ],
+              "answer": 0,
+              "explain": "Un écran additionne des lumières rouge, verte et bleue : c'est la synthèse additive."
+            }
+          ]
         },
         {
           "slug": "3-programmer-traiter-une-image",

@@ -3,9 +3,9 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Partie 2: Formats des images · La photographie numérique — Technologie &amp; SNT</title>
+<title>Partie 2 : Formats et codage des images · La photographie numérique — Technologie &amp; SNT</title>
 <meta name="description" content="De l'œil au capteur numérique, formats et traitement des images.">
-<meta property="og:title" content="Partie 2: Formats des images · La photographie numérique — Technologie &amp; SNT">
+<meta property="og:title" content="Partie 2 : Formats et codage des images · La photographie numérique — Technologie &amp; SNT">
 <meta property="og:description" content="De l'œil au capteur numérique, formats et traitement des images.">
 <meta property="og:type" content="website">
 <link rel="icon" href="../../../assets/favicon.svg" type="image/svg+xml">
@@ -52,7 +52,7 @@
     <a href="../../../index.html">Accueil</a><span class="sep">›</span>
     <a href="../../">2nde SNT</a><span class="sep">›</span>
     <a href="../">La photographie numérique</a><span class="sep">›</span>
-    <span class="current">Partie 2: Formats des images</span>
+    <span class="current">Partie 2 : Formats et codage des images</span>
   </nav>
 <div class="wrap course-layout">
   <aside class="sidebar" style="--accent:undefined;--accent-soft:undefined;">
@@ -135,7 +135,7 @@
         <span class="badge">La photographie numérique</span>
         
       </div>
-      <h1>Partie 2: Formats des images</h1>
+      <h1>Partie 2 : Formats et codage des images</h1>
       
     </div>
     
@@ -148,44 +148,38 @@
   </span>
 </div>
     <div class="prose">
-      <h3>Introduction</h3>
-<p>Pour un ordinateur, une image est un ensemble de pixels arrangés sous la forme d&#39;un tableau à deux dimensions.</p>
-<p>Une image dite en noir et blanc est composée de pixels noirs ou blancs ; les deux valeurs possibles des pixels sont 1 pour le noir et 0 pour le blanc.</p>
-<p><img src="../../../assets/img/2nde-snt__theme-4-photographie-numerique__partie-2-formats-des-images/01.png" alt=""></p>
-<p>Une image en niveaux de gris est composée de pixels de valeurs numériques représentant l&#39;intensité de la luminosité, généralement les valeurs sont entières entre 0 (pour le noir) et 255 (pour le blanc).</p>
-<p><img src="../../../assets/img/2nde-snt__theme-4-photographie-numerique__partie-2-formats-des-images/02.jpg" alt=""></p>
-<p>Une image en couleurs est composée de pixels représentés par trois valeurs :</p>
-<ul>
-<li><p>celle représentant l&#39;intensité du rouge (R),</p>
-</li>
-<li><p>celle représentant l&#39;intensité du vert (V),</p>
-</li>
-<li><p>et celle représentant l&#39;intensité du bleu (B).</p>
-</li>
-</ul>
-<p>Chaque valeur est comprise entre 0 et 255.</p>
-<p><strong>Remarque:</strong></p>
-<ul>
-<li><p>Pour chaque intensité de couleur, on parle ici d’un codage sur huit bits : en effet, chaque nombre compris entre 0 et 255 peut être associé à un « mot » de 8 bits (un tel mot est par exemple : 10010100 qui code la nuance 148).</p>
-</li>
-<li><p>Dans la suite, on parlera d&#39;octet, 1 octet = 8 bits.</p>
-</li>
-</ul>
-<p><strong>Exercice</strong></p>
-<p>Ci dessous, modifier les valeurs associées aux intensités de Rouge, Vert et Bleu afin afin de faire apparaître la couleur correspondant au code RVB : 135 ; 56 ; 204. Quelle couleur obtient-on approximativement ?</p>
-<p><a target="_blank" rel="noopener" href="https://www.gstatic.com/atari/embeds/8306a3600875750e6acc147fd93569bf/intermediate-frame-minified.html">Document</a></p>
-<p><strong>Exercice</strong></p>
-<p>Chacun des projecteurs de couleur rouge, vert et bleu peuvent avoir désormais une intensité différente.</p>
-<p>Jouer sur les curseurs colorés pour modifier les intensites respectives des projecteurs afin de répondre aux questions suivantes:</p>
-<ol>
-<li><p>Quelle couleur approche-t-on lorsque le lrègle l&#39;intensité rouge à peu près au 3/4, celle verte à la moitié et celle bleue au quart ?</p>
-</li>
-<li><p>Quelle couleur obtient-on lorsque les trois intensités sont égales au tiers ?</p>
-</li>
-<li><p>Modifier les trois intensités de sorte quelles restent égales. Que pouvez-vous dire de la couleur obtenue ?</p>
-</li>
-</ol>
-<p><a target="_blank" rel="noopener" href="https://www.gstatic.com/atari/embeds/8306a3600875750e6acc147fd93569bf/intermediate-frame-minified.html">Document</a></p>
+      <h2>L&#39;image, un tableau de pixels</h2>
+<p>Pour un ordinateur, une image est un ensemble de <strong>pixels</strong> rangés dans un <strong>tableau à deux dimensions</strong>.</p>
+<p><strong>Image en noir et blanc :</strong> chaque pixel vaut <strong>0</strong> (blanc) ou <strong>1</strong> (noir) — un seul <strong>bit</strong> par pixel.</p>
+<p><img src="../../../assets/img/2nde-snt__theme-4-photographie-numerique__partie-2-formats-des-images/01.png" alt="Image en noir et blanc"></p>
+<p><strong>Image en niveaux de gris :</strong> chaque pixel prend une valeur entière de <strong>0</strong> (noir) à <strong>255</strong> (blanc) qui représente l&#39;intensité lumineuse.</p>
+<p><img src="../../../assets/img/2nde-snt__theme-4-photographie-numerique__partie-2-formats-des-images/02.jpg" alt="Image en niveaux de gris"></p>
+<p><strong>Image en couleurs (RVB) :</strong> chaque pixel est représenté par <strong>trois valeurs</strong> de 0 à 255 : l&#39;intensité de <strong>rouge (R)</strong>, de <strong>vert (V)</strong> et de <strong>bleu (B)</strong>.</p>
+<blockquote>
+<p><strong>Codage sur 8 bits :</strong> chaque nombre de 0 à 255 se code sur un « mot » de <strong>8 bits</strong> (exemple : 10010100 code la valeur 148). <strong>1 octet = 8 bits.</strong> Un pixel couleur occupe donc 3 octets (un par composante).</p>
+</blockquote>
+<h2>Exercice 1 — Obtenir une couleur précise</h2>
+<p>Utilise le <strong>mélangeur</strong> ci-dessous. Règle les curseurs pour obtenir le code RVB <strong>135 ; 56 ; 204</strong>. Quelle couleur obtiens-tu approximativement ?</p>
+<div class="rgb-mixer" data-rgb-mixer><div class="rgb-preview" data-rgb-preview></div><div class="rgb-controls"><label class="rgb-ch rgb-r"><span>Rouge</span><input type="range" min="0" max="255" value="128" data-rgb="r"><output>128</output></label><label class="rgb-ch rgb-v"><span>Vert</span><input type="range" min="0" max="255" value="128" data-rgb="v"><output>128</output></label><label class="rgb-ch rgb-b"><span>Bleu</span><input type="range" min="0" max="255" value="128" data-rgb="b"><output>128</output></label><div class="rgb-readout">Code RVB : <strong data-rgb-code>128, 128, 128</strong></div></div></div><p><strong>Ma réponse :</strong></p>
+<div class="answer-field">
+  <textarea rows="3" data-answer-idx="0" placeholder="✏️ Écris ta réponse ici…" aria-label="Zone de réponse de l'élève"></textarea>
+</div>
+<h2>Exercice 2 — La synthèse additive</h2>
+<p>En écran, on <strong>additionne</strong> de la lumière rouge, verte et bleue : c&#39;est la <strong>synthèse additive</strong>. Joue sur les curseurs pour répondre :</p>
+<p><strong>a.</strong> Rouge aux 3/4 (≈ 190), vert à la moitié (≈ 128), bleu au quart (≈ 64) : de quelle couleur s&#39;approche-t-on ?</p>
+<div class="answer-field">
+  <textarea rows="3" data-answer-idx="1" placeholder="✏️ Écris ta réponse ici…" aria-label="Zone de réponse de l'élève"></textarea>
+</div>
+<p><strong>b.</strong> Les trois intensités égales au tiers (≈ 85) : quelle couleur obtient-on ?</p>
+<div class="answer-field">
+  <textarea rows="3" data-answer-idx="2" placeholder="✏️ Écris ta réponse ici…" aria-label="Zone de réponse de l'élève"></textarea>
+</div>
+<p><strong>c.</strong> Garde les trois intensités <strong>égales</strong> et fais-les varier de 0 à 255. Que remarques-tu sur la couleur obtenue ?</p>
+<div class="answer-field">
+  <textarea rows="3" data-answer-idx="3" placeholder="✏️ Écris ta réponse ici…" aria-label="Zone de réponse de l'élève"></textarea>
+</div>
+<div class="rgb-mixer" data-rgb-mixer><div class="rgb-preview" data-rgb-preview></div><div class="rgb-controls"><label class="rgb-ch rgb-r"><span>Rouge</span><input type="range" min="0" max="255" value="128" data-rgb="r"><output>128</output></label><label class="rgb-ch rgb-v"><span>Vert</span><input type="range" min="0" max="255" value="128" data-rgb="v"><output>128</output></label><label class="rgb-ch rgb-b"><span>Bleu</span><input type="range" min="0" max="255" value="128" data-rgb="b"><output>128</output></label><div class="rgb-readout">Code RVB : <strong data-rgb-code>128, 128, 128</strong></div></div></div><h2>Ce que je retiens</h2>
+<p>Une image est un tableau de <strong>pixels</strong>. En <strong>noir et blanc</strong>, 1 bit par pixel ; en <strong>niveaux de gris</strong>, une valeur de 0 à 255 ; en <strong>couleur</strong>, trois valeurs <strong>RVB</strong> de 0 à 255 (3 octets). Sur un écran, les couleurs sont obtenues par <strong>synthèse additive</strong> : quand R = V = B, on obtient un <strong>gris</strong> (noir si 0, blanc si 255).</p>
 
     </div>
     
