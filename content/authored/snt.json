@@ -356,6 +356,175 @@
         }
       ],
       "nouveau": true
+    },
+    {
+      "slug": "theme-informatique-embarquee",
+      "eyebrow": "Thème",
+      "year": "",
+      "nouveau": true,
+      "title": "Informatique embarquée et objets connectés",
+      "tagline": "Systèmes embarqués, capteurs et actionneurs, interface homme-machine, sûreté et sécurité.",
+      "objectifs_md": "À la fin de ce thème, je suis capable de :\n\n- définir un **système embarqué** et en citer des exemples ;\n- distinguer **capteur** et **actionneur**, et décrire la commande d'un actionneur à partir d'un capteur ;\n- expliquer le rôle d'une **interface homme-machine (IHM)** ;\n- distinguer **sûreté** et **sécurité** d'un système embarqué.",
+      "competences_md": "**Programme de SNT — 2ⁿᵈᵉ (2019), thème « Informatique embarquée et objets connectés ».**\n\nNotions : systèmes informatiques embarqués, capteurs et actionneurs, contraintes temps-réel, interface homme-machine (IHM), commande d'un actionneur et acquisition des données d'un capteur, enjeux de sûreté et de sécurité.",
+      "intro_md": "Un ordinateur ne se trouve pas seulement sur ton bureau : il y en a **cachés dans des milliers d'objets** — voitures, avions, montres, machines à laver. Ce sont des **systèmes embarqués**. On estimait à environ **50 milliards** le nombre d'objets connectés dans le monde en 2020. Ce thème explique **comment ces objets perçoivent leur environnement, agissent dessus, dialoguent avec l'utilisateur**, et quels **risques** ils posent.",
+      "pages": [
+        {
+          "slug": "seance-1",
+          "kind": "seance",
+          "num": 1,
+          "title": "Qu'est-ce qu'un système embarqué ?",
+          "shortTitle": "Séance 1",
+          "tagline": "Définition, exemples et repères historiques.",
+          "content_md": "## Un ordinateur caché dans l'objet\n\nUn **système embarqué** est un **système informatique** intégré dans un objet, dédié à une **tâche précise**, avec des ressources limitées (mémoire, énergie). Contrairement à un ordinateur de bureau, il ne sert pas à « tout faire » : il pilote **une fonction** de l'objet.\n\n## Repères historiques\n\n- **1969** : système embarqué de guidage de la mission **Apollo 11** (aller sur la Lune).\n- **1971** : premier **microprocesseur** (Intel).\n- **1984** : l'**Airbus A320**, premier avion à commandes de vol électriques informatisées.\n- **1998** : le métro **Météor** (ligne 14 à Paris), entièrement automatique.\n- **1999** : l'expression **« Internet des objets »** apparaît.\n- Vers **2020** : environ **50 milliards** d'objets connectés dans le monde.\n\n## Activité 1 — Reconnaître les systèmes embarqués\n\n**a.** Parmi ces objets, lesquels contiennent un système embarqué ? *(une montre connectée, un marteau, un lave-linge programmable, une chaise, une voiture récente, un vélo à assistance électrique)*\n\n……………………………………………………\n\n**b.** Choisis un objet de la liste et indique **la tâche** que son système embarqué contrôle.\n\n……………………………………………………\n\n## Activité 2 — Pourquoi « embarqué » ?\n\n**a.** Cite **deux différences** entre un ordinateur de bureau et le système embarqué d'un lave-linge.\n\n……………………………………………………\n\n**b.** Beaucoup de systèmes embarqués ont des contraintes de **temps réel** : ils doivent réagir **très vite**, dans un délai garanti. Pourquoi est-ce vital pour le système qui déclenche l'**airbag** d'une voiture ?\n\n……………………………………………………\n\n## Ce que je retiens\n\nUn **système embarqué** est un ordinateur intégré à un objet pour accomplir une **tâche précise**, avec des ressources limitées. On en trouve partout (transports, électroménager, santé…). Beaucoup ont des contraintes de **temps réel** : ils doivent réagir dans un délai garanti.",
+          "quiz": [
+            {
+              "q": "Qu'est-ce qu'un système embarqué ?",
+              "options": [
+                "Un ordinateur portable puissant",
+                "Un système informatique intégré à un objet, dédié à une tâche précise",
+                "Un site internet"
+              ],
+              "answer": 1,
+              "explain": "Un système embarqué est un ordinateur intégré à un objet pour une tâche précise, avec des ressources limitées."
+            },
+            {
+              "q": "Lequel de ces objets contient un système embarqué ?",
+              "options": [
+                "Un marteau",
+                "Une chaise en bois",
+                "Une montre connectée"
+              ],
+              "answer": 2,
+              "explain": "La montre connectée intègre un système informatique ; le marteau et la chaise n'en ont pas."
+            },
+            {
+              "q": "Que signifie une contrainte de « temps réel » ?",
+              "options": [
+                "Le système doit réagir dans un délai garanti",
+                "Le système affiche l'heure",
+                "Le système fonctionne seulement la nuit"
+              ],
+              "answer": 0,
+              "explain": "Le temps réel impose une réaction dans un délai garanti, crucial par ex. pour un airbag."
+            },
+            {
+              "q": "En quelle année le métro automatique Météor (ligne 14) a-t-il été mis en service ?",
+              "options": [
+                "1969",
+                "1998",
+                "2015"
+              ],
+              "answer": 1,
+              "explain": "La ligne 14 (Météor), entièrement automatique, a été mise en service en 1998."
+            }
+          ],
+          "resources": []
+        },
+        {
+          "slug": "seance-2",
+          "kind": "seance",
+          "num": 2,
+          "title": "Capteurs, actionneurs et interface homme-machine",
+          "shortTitle": "Séance 2",
+          "tagline": "Percevoir, agir et dialoguer avec l'utilisateur.",
+          "content_md": "## Percevoir et agir\n\nPour interagir avec le monde, un système embarqué utilise :\n\n- des **capteurs** : ils **mesurent** une grandeur de l'environnement et la transforment en information (température, lumière, mouvement, présence…).\n- des **actionneurs** : ils **agissent** sur l'environnement à partir d'un ordre (moteur, chauffage, LED, haut-parleur…).\n\nEntre les deux, le **programme** décide : il **acquiert** la donnée du capteur, la **traite**, puis **commande** l'actionneur.\n\n## Activité 1 — Capteur ou actionneur ?\n\nClasse chaque élément en **capteur** ou **actionneur** :\n\n« un thermomètre » → ……………………\n\n« un moteur » → ……………………\n\n« un capteur de présence » → ……………………\n\n« une LED » → ……………………\n\n## Activité 2 — Commander un actionneur depuis un capteur\n\nDans une véranda connectée : si la **température** dépasse 26 °C, on ouvre la **fenêtre** (moteur).\n\n**a.** Quel est le **capteur** ? Quel est l'**actionneur** ?\n\n……………………………………………………\n\n**b.** Écris la règle sous la forme « Si … alors … ».\n\n……………………………………………………\n\n## Activité 3 — L'interface homme-machine (IHM)\n\nL'**IHM** est ce qui permet à l'**utilisateur** de dialoguer avec l'objet : écran, boutons, application sur smartphone, voix… Elle affiche des informations et reçoit les commandes.\n\nCertains systèmes reçoivent des commandes sous forme d'un **code**. Par exemple, un robot reçoit `\"A50\"` pour dire « moteur **A** à **50 %** ». On utilise un **tableau de correspondance** entre le code et l'action :\n\n| Code reçu | Action |\n| --- | --- |\n| A0 | Moteur A arrêté |\n| A50 | Moteur A à 50 % |\n| A100 | Moteur A à fond |\n\n**a.** Que fait le robot s'il reçoit `\"A100\"` ?\n\n……………………………………………………\n\n**b.** Quel code faut-il envoyer pour **arrêter** le moteur A ?\n\n……………………………………………………\n\n**c.** Cite **deux exemples** d'IHM que tu utilises au quotidien.\n\n……………………………………………………\n\n## Ce que je retiens\n\nUn système embarqué **acquiert** des informations par ses **capteurs**, les **traite**, puis **commande** ses **actionneurs**. L'**interface homme-machine (IHM)** permet à l'utilisateur de **dialoguer** avec l'objet (écran, boutons, application, voix). Les commandes peuvent passer par un **code** associé à chaque action.",
+          "quiz": [
+            {
+              "q": "Un capteur sert à :",
+              "options": [
+                "Agir sur l'environnement",
+                "Mesurer une grandeur de l'environnement",
+                "Afficher une image"
+              ],
+              "answer": 1,
+              "explain": "Un capteur mesure une grandeur (température, lumière…) et la transforme en information."
+            },
+            {
+              "q": "Un moteur électrique est :",
+              "options": [
+                "Un capteur",
+                "Un actionneur",
+                "Une IHM"
+              ],
+              "answer": 1,
+              "explain": "Le moteur agit sur l'environnement à partir d'un ordre : c'est un actionneur."
+            },
+            {
+              "q": "À quoi sert une interface homme-machine (IHM) ?",
+              "options": [
+                "À permettre à l'utilisateur de dialoguer avec l'objet",
+                "À fournir de l'électricité",
+                "À mesurer la température"
+              ],
+              "answer": 0,
+              "explain": "L'IHM (écran, boutons, appli, voix) permet le dialogue entre l'utilisateur et l'objet."
+            },
+            {
+              "q": "Avec le tableau de correspondance, que fait le robot s'il reçoit « A0 » ?",
+              "options": [
+                "Il met le moteur A à fond",
+                "Il arrête le moteur A",
+                "Il met le moteur A à 50 %"
+              ],
+              "answer": 1,
+              "explain": "D'après le tableau, « A0 » correspond à « Moteur A arrêté »."
+            }
+          ],
+          "resources": []
+        },
+        {
+          "slug": "seance-3",
+          "kind": "seance",
+          "num": 3,
+          "title": "Sûreté et sécurité des objets connectés",
+          "shortTitle": "Séance 3",
+          "tagline": "Deux enjeux à ne pas confondre : ne pas se tromper, et résister aux attaques.",
+          "content_md": "## Deux mots à ne pas confondre\n\nQuand un objet embarqué fonctionne mal, les conséquences peuvent être graves (voiture, avion, appareil médical). On distingue deux enjeux :\n\n- La **sûreté** : le système fonctionne **sans erreur**, même en cas de panne d'un élément. Objectif : **éviter les accidents**.\n- La **sécurité** : le système **résiste aux attaques** de personnes malveillantes (piratage). Objectif : **empêcher les intrusions**.\n\n## Activité 1 — Sûreté ou sécurité ?\n\nClasse chaque situation :\n\n« Un pirate prend le contrôle d'une caméra connectée. » → problème de ……………………\n\n« Le régulateur de vitesse d'une voiture ne doit jamais accélérer tout seul par erreur. » → problème de ……………………\n\n« Le mot de passe par défaut d'un objet connecté n'a jamais été changé. » → problème de ……………………\n\n## Activité 2 — Se protéger\n\nLes objets connectés collectent parfois des **données personnelles** (habitudes, position, images). Cite **deux précautions** pour utiliser un objet connecté plus en sécurité (aide : changer le mot de passe par défaut, faire les mises à jour, vérifier les autorisations…).\n\n……………………………………………………\n\n## Activité 3 — Un objet connecté utile mais risqué\n\nPrends l'exemple d'une **enceinte connectée** qui écoute les commandes vocales.\n\n**a.** Quel **service** rend-elle ?\n\n……………………………………………………\n\n**b.** Quel **risque** pour la vie privée peut-elle poser ?\n\n……………………………………………………\n\n## Ce que je retiens\n\nUn système embarqué doit être **sûr** (fonctionner sans erreur, éviter les accidents) et **sécurisé** (résister aux attaques). Les **objets connectés** rendent des services mais peuvent collecter des **données personnelles** : il faut changer les mots de passe par défaut, faire les mises à jour et surveiller les autorisations.",
+          "quiz": [
+            {
+              "q": "La « sûreté » d'un système embarqué, c'est :",
+              "options": [
+                "Sa résistance aux pirates",
+                "Son fonctionnement sans erreur, pour éviter les accidents",
+                "Sa vitesse de calcul"
+              ],
+              "answer": 1,
+              "explain": "La sûreté vise l'absence d'erreurs et d'accidents, même en cas de panne d'un élément."
+            },
+            {
+              "q": "Un pirate qui prend le contrôle d'une caméra connectée pose un problème de :",
+              "options": [
+                "Sûreté",
+                "Sécurité",
+                "Autonomie"
+              ],
+              "answer": 1,
+              "explain": "Résister aux attaques malveillantes relève de la sécurité."
+            },
+            {
+              "q": "Quelle est une bonne précaution pour un objet connecté ?",
+              "options": [
+                "Garder le mot de passe par défaut",
+                "Changer le mot de passe par défaut et faire les mises à jour",
+                "Le connecter à tous les réseaux ouverts"
+              ],
+              "answer": 1,
+              "explain": "Changer le mot de passe par défaut et mettre à jour réduit fortement les risques."
+            },
+            {
+              "q": "Pourquoi une enceinte connectée pose-t-elle un risque de vie privée ?",
+              "options": [
+                "Elle est trop lourde",
+                "Elle peut enregistrer et transmettre des données personnelles (voix, habitudes)",
+                "Elle consomme trop d'électricité"
+              ],
+              "answer": 1,
+              "explain": "En écoutant les commandes, elle peut capter et transmettre des données personnelles."
+            }
+          ],
+          "resources": []
+        }
+      ]
     }
   ],
   "sequenceOrder": [
@@ -365,6 +534,7 @@
     "theme-donnees-structurees",
     "theme-4-photographie",
     "theme-5-geolocalisation",
+    "theme-informatique-embarquee",
     "tp-arduino"
   ],
   "addPages": {

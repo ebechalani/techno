@@ -333,6 +333,123 @@
         }
       ],
       "nouveau": true
+    },
+    {
+      "slug": "sequence-materiaux-procedes",
+      "eyebrow": "Séquence",
+      "year": "2025-2026",
+      "nouveau": true,
+      "title": "Matériaux et procédés de fabrication",
+      "tagline": "Choisir un matériau selon ses propriétés et découvrir comment on fabrique une pièce.",
+      "objectifs_md": "À la fin de cette séquence, je suis capable de :\n\n- classer un matériau dans sa **famille** (métaux, plastiques, céramiques, composites, organiques) ;\n- relier un **matériau** à ses **propriétés** et à un **usage** ;\n- décrire les principaux **procédés d'obtention d'une pièce** (usinage, moulage, déformation, fabrication additive, découpe laser).",
+      "competences_md": "**Programme de Technologie — cycle 4 (2024), Thème 2 : « Matériaux et procédés ».**\n\n- **Compétence de fin de cycle :** « Décrire et caractériser l'organisation interne d'un objet technique. »\n- **Connaissances :** familles de matériaux et propriétés ; procédés d'obtention de pièces ; moyens de production (découpe laser, fabrication additive).",
+      "intro_md": "Chaque objet est fait de **matériaux** choisis pour leurs **propriétés**, puis mis en forme par un **procédé de fabrication**. Pourquoi une bouteille est-elle en plastique et une casserole en métal ? Comment passe-t-on d'un bloc de matière à une **pièce** précise ? Cette séquence répond à ces deux questions.",
+      "pages": [
+        {
+          "slug": "seance-1",
+          "kind": "seance",
+          "num": 1,
+          "title": "Les familles de matériaux",
+          "shortTitle": "Séance 1",
+          "tagline": "Reconnaître les grandes familles de matériaux et leurs propriétés.",
+          "content_md": "## La situation de départ\n\nPour concevoir un objet, l'ingénieur choisit un **matériau** adapté. Un casque de vélo doit être **léger et résistant aux chocs** ; une casserole doit **conduire la chaleur** ; une bouteille doit être **légère et étanche**. À chaque besoin, son matériau.\n\n## Activité 1 — Les cinq grandes familles\n\nOn classe les matériaux en grandes **familles** :\n\n- **Les métaux** (acier, aluminium, cuivre) : résistants, conducteurs de chaleur et d'électricité, souvent recyclables.\n- **Les plastiques (polymères)** (PET, PVC, PLA) : légers, faciles à mettre en forme, isolants, souvent issus du pétrole.\n- **Les céramiques et verres** (porcelaine, verre) : durs, résistants à la chaleur, mais fragiles (cassants).\n- **Les composites** (fibre de carbone, béton armé) : associent plusieurs matériaux pour cumuler leurs qualités (légers et très résistants).\n- **Les matériaux organiques / naturels** (bois, cuir, coton) : issus du vivant, renouvelables.\n\n**a.** Range ces objets dans la bonne famille : *une canette (…), une vitre (…), une planche (…), une bouteille d'eau (…), un cadre de vélo en carbone (…)*.\n\n……………………………………………………\n\n## Activité 2 — Matériau et propriétés\n\nOn choisit un matériau selon ses **propriétés** : résistance, masse (léger/lourd), conductivité, résistance à la chaleur, à l'eau, coût, recyclabilité…\n\n**a.** Pourquoi une **casserole** est-elle en métal et son **manche** souvent en plastique ou en bois ?\n\n……………………………………………………\n\n**b.** Pour un **casque de vélo**, cite **deux propriétés** importantes du matériau.\n\n……………………………………………………\n\n## Activité 3 — Matériaux et environnement\n\n**a.** Quelle famille de matériaux est **renouvelable** (issue du vivant) ?\n\n……………………………………………………\n\n**b.** Pourquoi vaut-il mieux choisir un matériau **recyclable** quand c'est possible ?\n\n……………………………………………………\n\n## Ce que je retiens\n\nLes matériaux se classent en grandes **familles** (métaux, plastiques, céramiques/verres, composites, organiques). On choisit un matériau selon ses **propriétés** (résistance, masse, conductivité, résistance à la chaleur, coût, recyclabilité) **et** selon son **impact sur l'environnement**.",
+          "quiz": [
+            {
+              "q": "À quelle famille appartient l'aluminium d'une canette ?",
+              "options": [
+                "Les métaux",
+                "Les plastiques",
+                "Les céramiques"
+              ],
+              "answer": 0,
+              "explain": "L'aluminium est un métal : résistant, léger et recyclable."
+            },
+            {
+              "q": "Quelle famille de matériaux est fragile (cassante) mais résiste à la chaleur ?",
+              "options": [
+                "Les plastiques",
+                "Les céramiques et verres",
+                "Les composites"
+              ],
+              "answer": 1,
+              "explain": "Les céramiques et verres sont durs et résistants à la chaleur, mais cassants."
+            },
+            {
+              "q": "Qu'est-ce qu'un matériau composite ?",
+              "options": [
+                "Un matériau 100 % recyclé",
+                "L'association de plusieurs matériaux pour cumuler leurs qualités",
+                "Un métal très pur"
+              ],
+              "answer": 1,
+              "explain": "Un composite (ex. fibre de carbone, béton armé) associe plusieurs matériaux pour être, par exemple, léger et résistant."
+            },
+            {
+              "q": "Pourquoi le manche d'une casserole est-il souvent en plastique ou en bois ?",
+              "options": [
+                "Parce que ces matériaux conduisent bien la chaleur",
+                "Parce que ce sont des isolants : le manche ne devient pas brûlant",
+                "Parce qu'ils sont plus lourds"
+              ],
+              "answer": 1,
+              "explain": "Le plastique et le bois sont isolants : ils ne transmettent pas la chaleur, le manche reste tenable."
+            }
+          ],
+          "resources": []
+        },
+        {
+          "slug": "seance-2",
+          "kind": "seance",
+          "num": 2,
+          "title": "Fabriquer une pièce : les procédés",
+          "shortTitle": "Séance 2",
+          "tagline": "De la matière à la pièce : usinage, moulage, déformation, impression 3D, découpe laser.",
+          "content_md": "## De la matière à la pièce\n\nUne fois le matériau choisi, il faut lui donner la **forme** de la pièce voulue : c'est le **procédé de fabrication**. Il en existe plusieurs grandes familles.\n\n## Activité 1 — Les grands procédés\n\n- **L'usinage (enlèvement de matière)** : on part d'un bloc et on **retire** de la matière (perçage, fraisage, découpe). *Comme un sculpteur qui enlève de la pierre.*\n- **Le moulage** : on verse une matière **liquide** (métal fondu, plastique) dans un **moule**, elle prend la forme du moule en durcissant.\n- **La déformation** : on **déforme** la matière sans l'enlever (pliage d'une tôle, emboutissage d'une carrosserie).\n- **La fabrication additive (impression 3D)** : on **ajoute** la matière couche par couche pour construire la pièce.\n- **La découpe laser** : un faisceau laser **découpe** précisément une plaque (bois, plastique, métal fin).\n\n**a.** Pour chaque procédé, indique si on **enlève**, on **ajoute** ou on **déforme** la matière :\n\nUsinage → ……………………  |  Impression 3D → ……………………  |  Emboutissage → ……………………\n\n## Activité 2 — Choisir le bon procédé\n\n**a.** Pour fabriquer **un seul** exemplaire d'une pièce prototype au collège, quel procédé est le plus pratique ?\n\n……………………………………………………\n\n**b.** Pour fabriquer **des milliers** de bouteilles identiques rapidement, le moulage est adapté. Pourquoi ?\n\n……………………………………………………\n\n## Activité 3 — Les moyens de production au collège\n\nAu laboratoire de technologie, on utilise souvent une **imprimante 3D** (fabrication additive) et parfois une **découpeuse laser**.\n\n**a.** Quel procédé utilise l'**imprimante 3D** ?\n\n……………………………………………………\n\n**b.** Cite un **avantage** de l'impression 3D pour réaliser un prototype.\n\n……………………………………………………\n\n## Ce que je retiens\n\nPour donner sa forme à une pièce, on utilise un **procédé de fabrication** : **usinage** (enlever de la matière), **moulage** (couler une matière liquide dans un moule), **déformation** (plier, emboutir), **fabrication additive / impression 3D** (ajouter couche par couche), **découpe laser**. Le choix dépend du **matériau**, de la **forme** et du **nombre de pièces** à produire.",
+          "quiz": [
+            {
+              "q": "L'usinage consiste à :",
+              "options": [
+                "Ajouter de la matière couche par couche",
+                "Enlever de la matière à partir d'un bloc",
+                "Verser un liquide dans un moule"
+              ],
+              "answer": 1,
+              "explain": "L'usinage retire de la matière (perçage, fraisage) à partir d'un bloc."
+            },
+            {
+              "q": "Quel procédé ajoute la matière couche par couche ?",
+              "options": [
+                "Le moulage",
+                "La fabrication additive (impression 3D)",
+                "La déformation"
+              ],
+              "answer": 1,
+              "explain": "La fabrication additive, ou impression 3D, construit la pièce en ajoutant la matière couche par couche."
+            },
+            {
+              "q": "Pour produire des milliers de bouteilles identiques, on choisit plutôt :",
+              "options": [
+                "Le moulage",
+                "L'usinage pièce par pièce",
+                "La découpe laser"
+              ],
+              "answer": 0,
+              "explain": "Le moulage permet de reproduire rapidement de nombreuses pièces identiques."
+            },
+            {
+              "q": "L'emboutissage d'une carrosserie de voiture est un procédé de :",
+              "options": [
+                "Enlèvement de matière",
+                "Déformation de la matière",
+                "Ajout de matière"
+              ],
+              "answer": 1,
+              "explain": "L'emboutissage déforme une tôle sans enlever ni ajouter de matière."
+            }
+          ],
+          "resources": []
+        }
+      ]
     }
   ],
   "sequenceOrder": [
@@ -340,6 +457,7 @@
     "sequence-1-ia-securite",
     "sequence-depanner-reparer",
     "sequence-objet-developpement-durable",
+    "sequence-materiaux-procedes",
     "sequence-1-reseau-informatique",
     "sequence-2-portail-automatise",
     "sequence-3-objets-connectes",
