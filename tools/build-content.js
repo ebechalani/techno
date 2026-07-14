@@ -249,6 +249,11 @@ function cleanParagraph(md) {
   // le contenu des cours peut contenir du code HTML littéral : ne pas
   // le laisser s'interpréter comme de vraies balises
   s = s.replace(/</g, "&lt;");
+  // gras adjacents fusionnés (**A****B**) et commentaires CSS /* … */
+  s = s.replace(/\*{4}/g, "");
+  s = s.replace(/\/\*/g, "/\\*").replace(/\*\//g, "\\*/");
+  // espace manquant après un lien collé au mot suivant
+  s = s.replace(/(\]\([^)]*\))(?=[^\s.,;:!?)\]])/g, "$1 ");
   // pointillés de réponse
   s = s.replace(/(\.\s?){6,}/g, " …………………………… ");
   s = s.replace(/\.{4,}/g, " …………………………… ");
