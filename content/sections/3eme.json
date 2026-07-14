@@ -1,0 +1,286 @@
+{
+  "id": "3eme",
+  "label": "3ème",
+  "year": "",
+  "archived": false,
+  "tagline": "Objets connectés, intelligence artificielle, réseaux et préparation au DNB.",
+  "intro_md": "",
+  "resources": [],
+  "sequences": [
+    {
+      "slug": "sequence-1-poubelle-connectee",
+      "eyebrow": "Séquence 1",
+      "year": "2020-2024",
+      "title": "La poubelle connectée",
+      "shortTitle": "La poubelle connectée",
+      "tagline": "Fonctionnement, modélisation 3D, prototype Arduino et simulation Tinkercad.",
+      "intro_md": "",
+      "resources": [],
+      "pages": [
+        {
+          "slug": "seance-1",
+          "kind": "seance",
+          "num": 1,
+          "title": "Séance 1: Comment décrire le fonctionnement?",
+          "shortTitle": "Séance 1",
+          "tagline": "",
+          "content_md": "![](assets/img/3eme__sequence-1-la-poubelle-connectee__seance-1-comment-decrire-le-fonctionnement/01.png)\n\n::embed[eCube (version sous-titrée)](https://www.youtube.com/embed/WryPkp6-kas?embed_config=%7B%22enc%22:%22AXH1ezm9s3xtFNCZZfFAxMzcZSE-s5O2-udPfOhk_98lBCnwGV-OBo7nETxQt7t9eC2-ClljWJ_t00dQSqppm5YiYV4kCTgx9DKQ78YyL8CqNzKZZc01bZ2KxdSq_GYE5FbLv1hfV_7xwH_a2FTkOr7GuxUU6Gt2uEaECqmMsw6y51A_TZQEYyS8VlEih1ObOnCpA4cXevxNhAFjPg24X24gU_XkqNMD8q1aqMMNTJwdQ8T6JKXfrIYE9ALaB9zyYWz3xunpQhfakxa5DDqRy7j7qGZ8BIJxaqxF2rNwxtYGy38pBI3wi4mPOgjEHmYwNLcFZk1m55yIQIlDPyJ4sngQ6T_fHykIx-S_N_n_-S6ASA6k%22%7D&enablejsapi=1&errorlinks=1&origin=https://sites.google.com&vl=1)\n\n**Travail à faire:**\n\n**Répondre à ces questions :**\n\n**A quoi sert le système?**\n\n**Détermine le besoin du système.**\n\n**Comment fonctionne t-il?**\n\n**Y a t-il plusieurs versions de système? Quelles sont les différences?**\n\n**A** **l'aide de la vidéo:**\n\n1. Déterminer la mission du système ainsi que les cas d'utilisations.\n\n2. Dans un tableau , indiquer les fonctions techniques que doit réaliser la poubelle connectée; associer les solutions proposées par l'entreprise à cahque fonction dans le tableau.\n\n3. Décrire le fonctionnement général sous forme de chaîne d'information et d'énergie\n\n4. Proposer une description du fonctionnement du système sous forme d'un algorigramme.\n\n**J'ai réussi mon travail si...**\n\n- J’ai identifié la mission du système\n\n- J'ai trouvé 5 fonctions techniques de la poubelle connectée ;\n\n- J'ai associé pour chacune des fonctions trouvées la solution proposée par le concepteur.\n\n- J'ai associé les solutions techniques dans les bons blocs fonctionnels ;\n\n- J'ai identifié la transformation de l'information ;\n\n- J’ai respecté les règles de présentation d’un algorigramme ;\n\n- Mon algorigramme répond au problème donné.\n\n**Ressources**\n\nFiche Algorigramme:\n\n::embed[Fiche-Algorigramme.pdf](https://drive.google.com/file/d/16op18yefq_HvnJYdeQP1pyqLpVOeoSkW/preview)\n\n**Fonctions et solutions**\n\n::embed[recherche-solution-ecouteur.pdf](https://drive.google.com/file/d/1HqZo-5c6U7RkrG_NNOikksSXeeYRHq8_/preview)\n\n::embed[recherche-solution-velo.pdf](https://drive.google.com/file/d/1a8ZTDaIDG8UiNQ-BjOLrApfP9bLyTw5B/preview)\n\n::embed[recherche-solution-ipad.pdf](https://drive.google.com/file/d/15j-WvHmwauHJL_ngdj68ydRF7lGBNvaN/preview)\n\n::embed[Ressource fonctions et solutions.pdf](https://drive.google.com/file/d/104YaFcR7C4dzR1PIpSfh5qGPQx7FlBhr/preview)\n\n**Chaine d'énergie Chaine d'information**\n\n::embed[Systeme-Embarque-AlarmeCO2.pdf](https://drive.google.com/file/d/10uzErcIZXd5DjuW7hYc0UP4eoiPkJ3ZS/preview)\n\n::embed[Systeme-Embarque-Eclairage.pdf](https://drive.google.com/file/d/176i_egjRqslV8Tj_mONj639940OKKwVw/preview)\n\n::embed[Systeme-Embarque-Store.pdf](https://drive.google.com/file/d/1dz8OkwNDPjwkkZKcploXdy8AzX5P3F8X/preview)\n\n**Fiches de connaissances**\n\n::embed[dic15-4-otscis21-ip23_algorithme.pdf](https://drive.google.com/file/d/1S2PeMTbwVphnw6jDsKBi_RxJ0nzAaiW4/preview)\n\n::embed[msost14-4-ip23_systemes-embarques.pdf](https://drive.google.com/file/d/1zBJ9mixLnnKilhCvs4HA088RZ6NoI9xW/preview)\n\n::embed[ip23-5_transmission-signal.pdf](https://drive.google.com/file/d/1rxS-NsoFs1UgK_PX41Or7bNllJmCsErb/preview)\n\n::embed[msost14-4-16-4_chaine-info-capteur-nature-info.pdf](https://drive.google.com/file/d/1BMU_lDnU3yiN0IvaYsZhyDV9UUJvGQud/preview)\n\n::embed[dic11_besoin-contrainte-norme.pdf](https://drive.google.com/file/d/1P6t0IocnF23Dw5SGXFpNFFDpNGKJINcJ/preview)",
+          "resources": [],
+          "srcUrl": "https://sites.google.com/view/lmtechno25/3ème/séquence-1-la-poubelle-connectée/séance-1-comment-décrire-le-fonctionnement"
+        },
+        {
+          "slug": "correction",
+          "kind": "correction",
+          "num": null,
+          "title": "Correction",
+          "shortTitle": "Correction",
+          "tagline": "",
+          "content_md": "![](assets/img/3eme__sequence-1-la-poubelle-connectee__correction/01.png)\n\n![](assets/img/3eme__sequence-1-la-poubelle-connectee__correction/02.png)\n\n![](assets/img/3eme__sequence-1-la-poubelle-connectee__correction/03.png)\n\n![](assets/img/3eme__sequence-1-la-poubelle-connectee__correction/04.png)\n\n![](assets/img/3eme__sequence-1-la-poubelle-connectee__correction/05.png)",
+          "resources": [],
+          "srcUrl": "https://sites.google.com/view/lmtechno25/3ème/séquence-1-la-poubelle-connectée/correction"
+        },
+        {
+          "slug": "modelisation-3d-de-la-poubelle",
+          "kind": "annexe",
+          "num": null,
+          "title": "Modélisation 3d de la poubelle",
+          "shortTitle": "Modélisation 3d de la poubelle",
+          "tagline": "",
+          "content_md": "Connectez vous à : lm-administration pour regarder les vidéos ci-dessous\n\nid: labo.eval\n\npass: le@2023\n\n**Lancez Tinkercad et saisissez le code de la classe: 1LT3GM14K6FY**\n\nou bien directement:\n\n[https://www.tinkercad.com/joinclass/1LT3GM14K6FY](https://www.tinkercad.com/joinclass/1LT3GM14K6FY)\n\n**Vous trouvez c-dessous vos identifiants pour accéder à la classe:**\n\n![](assets/img/3eme__sequence-1-la-poubelle-connectee__modelisation-3d-de-la-poubelle/01.png)\n\n![](assets/img/3eme__sequence-1-la-poubelle-connectee__modelisation-3d-de-la-poubelle/02.png)\n\n![](assets/img/3eme__sequence-1-la-poubelle-connectee__modelisation-3d-de-la-poubelle/03.png)\n\n![](assets/img/3eme__sequence-1-la-poubelle-connectee__modelisation-3d-de-la-poubelle/04.png)\n\n::embed[modélisation 3d de la poubelle](https://www.youtube.com/embed/ZXVxVg-FA3Q?embed_config=%7B%22enc%22:%22AXH1ezlCmNP6a0QlP6_Y7xbpSS9ThXu4ly8eyOhOGU9NTuVFHfqOdMf758r8KRRaXByrOxWAkGLXwp7yT0DH9M_Z3Zcobh5jGSs7aOZT8HOtif9ytlqtkhwxVRAS4R4zTvxRYRRgEGZF-eoJKLRiZcTmCA27caeWb3w4tRSGao_pVfJE%22%7D&enablejsapi=1&errorlinks=1&origin=https://sites.google.com&vl=1)\n\n::embed[modélisation 3d de la poubelle part 2](https://www.youtube.com/embed/Melq2Z5pD4E?embed_config=%7B%22enc%22:%22AXH1ezk7OHCxeuXiKoxPM9Bnzw7SPOZiqBvnUSBJrYe-Hy0BGemb_l6v1Dj6PK7HaGXSywQHLtfM87rTB_k3RNTg8-tb9iOXmbzxWnFokR3KKZZDiqLz5V_zUCw8pyPLMilLn2EFkBchRkCZCu3p8naP9krTuOijMxy3TcAHY3AOjLbC%22%7D&enablejsapi=1&errorlinks=1&origin=https://sites.google.com&vl=1)",
+          "resources": [
+            {
+              "kind": "interactive-app",
+              "title": "https://www.tinkercad.com/joinclass/1LT3GM14K6FY",
+              "url": "https://www.tinkercad.com/joinclass/1LT3GM14K6FY",
+              "embed": false
+            }
+          ],
+          "srcUrl": "https://sites.google.com/view/lmtechno25/3ème/séquence-1-la-poubelle-connectée/modélisation-3d-de-la-poubelle"
+        },
+        {
+          "slug": "prototype-arduino",
+          "kind": "annexe",
+          "num": null,
+          "title": "prototype Arduino",
+          "shortTitle": "prototype Arduino",
+          "tagline": "",
+          "content_md": "Le son que vous êtes en train d'écouter dans cette vidéo sont les ultrasons emis par le capteur ultrason qui sont captés par la caméra lors de l'enregistrement de la vidéo et qui sont inaudibles à l'oreille humaine.\n\n![](assets/img/3eme__sequence-1-la-poubelle-connectee__prototype-arduino/01.png)",
+          "resources": [],
+          "srcUrl": "https://sites.google.com/view/lmtechno25/3ème/séquence-1-la-poubelle-connectée/prototype-arduino"
+        },
+        {
+          "slug": "simulation-tinkercad",
+          "kind": "annexe",
+          "num": null,
+          "title": "Simulation Tinkercad",
+          "shortTitle": "Simulation Tinkercad",
+          "tagline": "",
+          "content_md": "![](assets/img/3eme__sequence-1-la-poubelle-connectee__simulation-tinkercad/01.png)\n\n![](assets/img/3eme__sequence-1-la-poubelle-connectee__simulation-tinkercad/02.png)",
+          "resources": [],
+          "srcUrl": "https://sites.google.com/view/lmtechno25/3ème/séquence-1-la-poubelle-connectée/simulation-tinkercad"
+        }
+      ]
+    },
+    {
+      "slug": "sequence-2-intelligence-artificielle",
+      "eyebrow": "Séquence 2",
+      "year": "2020-2024",
+      "title": "Intelligence artificielle",
+      "shortTitle": "Intelligence artificielle",
+      "tagline": "Comprendre l'IA et entraîner un modèle avec Teachable Machine.",
+      "intro_md": "",
+      "resources": [],
+      "pages": [
+        {
+          "slug": "seance-1",
+          "kind": "seance",
+          "num": 1,
+          "title": "Séance 1: C'est quoi l'intelligence artificielle",
+          "shortTitle": "Séance 1",
+          "tagline": "",
+          "content_md": "::embed[S1 - IA et Emotions - L_intelligence Artificielle, c_est quoi_.pdf](https://drive.google.com/file/d/1EJvaQXdVs8EedfxWJclQKQXXBsv-JoEC/preview)\n\n::embed[](https://www.gstatic.com/atari/embeds/8306a3600875750e6acc147fd93569bf/intermediate-frame-minified.html)\n\n::embed[Envoye_special_AI.mp4](https://drive.google.com/file/d/1xSqdMQJ6B4rxvzAbLwB2UhlMt0r2kDqa/preview)",
+          "resources": [],
+          "srcUrl": "https://sites.google.com/view/lmtechno25/3ème/séquence-2-intelligence-artificielle/séance-1-cest-quoi-lintelligence-artificielle"
+        },
+        {
+          "slug": "seance-2",
+          "kind": "seance",
+          "num": 2,
+          "title": "Séance 2:",
+          "shortTitle": "Séance 2",
+          "tagline": "",
+          "content_md": "::embed[S2 - IA et Emotions - Jeux de NIM.docx.pdf](https://drive.google.com/file/d/1GZ3uc5d58tXIDKDWrN_pfH4P_ZZZPhke/preview)\n\n::embed[Présentation-Jeu-de-Nim.mp4](https://drive.google.com/file/d/1tU0CfML8D3xWewi09_WGCkzQVOxGP1D2/preview)\n\n::embed[DEVFEST Toulouse 2019 Machine learning avec des allumettes et des cotillons](https://www.youtube.com/embed/RUb96dBTPHY?embed_config=%7B%22enc%22:%22AXH1eznNixrHvBuDpkNq1fDhk4nOCFvHJbhGEIN2i96-C9gUWK0e-8IdytmVRRkbTKM1rvaNGZWm-enAmX_cwWiiHm-8Y_qHEusaupPwT54Ma5Qci0WTMByIojVw6iCZY_l-JQ9he8ZbCVhwD2b_ScWekRPlezV_8IwiEbsuUhDDXje4%22%7D&enablejsapi=1&errorlinks=1&origin=https://sites.google.com&vl=1)",
+          "resources": [],
+          "srcUrl": "https://sites.google.com/view/lmtechno25/3ème/séquence-2-intelligence-artificielle/séance-2"
+        },
+        {
+          "slug": "tuto-videos-teachable-maching",
+          "kind": "annexe",
+          "num": null,
+          "title": "Tuto vidéos Teachable machine",
+          "shortTitle": "Tuto vidéos Teachable machine",
+          "tagline": "",
+          "content_md": "",
+          "resources": [],
+          "srcUrl": "https://sites.google.com/view/lmtechno25/3ème/séquence-2-intelligence-artificielle/tuto-vidéos-teachable-maching"
+        },
+        {
+          "slug": "seance-3",
+          "kind": "seance",
+          "num": 3,
+          "title": "Séance 3",
+          "shortTitle": "Séance 3",
+          "tagline": "",
+          "content_md": "::embed[S3 - IA et Emotions - Comment apprendre Ã  une machine Ã  reconnaitre ses Ã©motions_.docx.pdf](https://drive.google.com/file/d/11EjoLQaDfsqcUFBh3M-bN7DI90nlKTU0/preview)\n\n[https://fr.vittascience.com/adacraft/](https://fr.vittascience.com/adacraft/)\n\n::embed[IA 3ème.pdf](https://drive.google.com/file/d/1-jiPc8qFQyD-zmsERsOJ5YX0VesV8x7o/preview)",
+          "resources": [],
+          "srcUrl": "https://sites.google.com/view/lmtechno25/3ème/séquence-2-intelligence-artificielle/séance-3"
+        },
+        {
+          "slug": "seance-4",
+          "kind": "seance",
+          "num": 4,
+          "title": "Séance 4: zone de programmation",
+          "shortTitle": "Séance 4",
+          "tagline": "",
+          "content_md": "::embed[Zone de programmation (1).pdf](https://drive.google.com/file/d/1duBQ53f81cUIiJzD2-k1dVfdKEwmQIXU/preview)\n\n::embed[S4v2 - IA et Emotions - Comment créer un programme utilisant l'IA pour connaître l'état émotionnel de la classe _ (1).pdf](https://drive.google.com/file/d/1VXk8GBYFpvK4GCGlFWyOFpYP54ktfPMD/preview)",
+          "resources": [],
+          "srcUrl": "https://sites.google.com/view/lmtechno25/3ème/séquence-2-intelligence-artificielle/séance-4-zonde-de-programmation"
+        },
+        {
+          "slug": "fiche-de-connaissance",
+          "kind": "synthese",
+          "num": null,
+          "title": "Fiche de connaissance",
+          "shortTitle": "Fiche de connaissance",
+          "tagline": "",
+          "content_md": "::embed[FC_IntelligenceArtificielle.pdf](https://drive.google.com/file/d/1dCkLiMKnA64P671l2rXWhhthH7q4I_K7/preview)",
+          "resources": [],
+          "srcUrl": "https://sites.google.com/view/lmtechno25/3ème/séquence-2-intelligence-artificielle/fiche-de-connaissance"
+        }
+      ]
+    },
+    {
+      "slug": "sequence-3-reseau-informatique",
+      "eyebrow": "Séquence 3",
+      "year": "2020-2024",
+      "title": "Réseau informatique",
+      "shortTitle": "Réseau informatique",
+      "tagline": "Architecture des réseaux, du domicile à Internet.",
+      "intro_md": "",
+      "resources": [],
+      "pages": [
+        {
+          "slug": "seance-1",
+          "kind": "seance",
+          "num": 1,
+          "title": "Séance 1",
+          "shortTitle": "Séance 1",
+          "tagline": "",
+          "content_md": "**Composants d'un réseau, architecture d'un réseau local.**\n\n::embed[IP 1 DMF Composant dun reseau et architecture dun reseau local](https://www.youtube.com/embed/_9NU7zt8iBw?embed_config=%7B%22enc%22:%22AXH1ezlXtAQYjCKPiqihg3klKGXGFTWD0MHKI71ItCklQbL3I-O5KnG2mh5c8lYbFbT_34GAlhIwm9KdJkcdXltz3A5B8NBYRdnoOyc-eKVOH9QGPYLx-TnfWKIDEisBQ6TPCJ5hy2zwIQoPTZB6-3Mdn14TQ5Xuy9fJm0s9PIhaHr-d9wouZkdCyIwPLak52F7ARA-yPdbfObYBllM2DQE74C_ChQOi4O-iMYeCJgdgp_aRg3F1iAxKEyTy24BfGEHLpHcWZgpAQVK-sws9B0mUq44JBWF93eXtuUJAg5pV4J7W0itlhhXk69MCNcV5LtQLPL-IBDnNEvRmUTT9YCrM5Fg1cdZKL8vFGf8DAICjO5FtOg%3D%3D%22%7D&enablejsapi=1&errorlinks=1&origin=https://sites.google.com&vl=1)\n\n**Moyen de connexion d'un équipement informatique**\n\n::embed[IP 1 DMF Moyens de connexion au réseau](https://www.youtube.com/embed/wGcke3d7w0w?embed_config=%7B%22enc%22:%22AXH1eznVXV0RxHEAlIGyrV2enuLAM6vJGCuQtOxAxOb84NQOf6dbG1eAb6Dv2AqPxASUfqmiiBJobok64rn5XmmTqQyygW9rclIzgnMY227m8Hh3FfKH24QaW_C4iPZkJK3sbrFRTElB6_dGk_AB1RaLBfF9VvTl2pytQrGALs7UpG_f8q_wib-oaSLBhgQBv2hUuKdE6tQ0QwQsEcqE4qpUY2LsEVLBhJJClRZts7n44zNoQ_9laJ-3OHQ5rPhn-3S2LoBbpbmZd6fr3RIViM_i-hOmvA6gQGCyjg2-zJVezTUXdiJM5qaSAIgv0HzYWvPbiUhjw2fUoGWEZe5dKeglUMn7FR2BSPgHFMIzs7VLo-xdBQ%3D%3D%22%7D&enablejsapi=1&errorlinks=1&origin=https://sites.google.com&vl=1)\n\n::embed[connexion-reseau-college.pdf](https://drive.google.com/file/d/1o9BDpv88LvlGGF4lkmA0FhDR0CUp6YpF/preview)",
+          "resources": [],
+          "srcUrl": "https://sites.google.com/view/lmtechno25/3ème/séquence-3-réseau-informatique/séance-1"
+        },
+        {
+          "slug": "seance-2",
+          "kind": "seance",
+          "num": 2,
+          "title": "Séance 2",
+          "shortTitle": "Séance 2",
+          "tagline": "",
+          "content_md": "## Application : Architecture des réseaux.\n\n**Réalisez les manipulations ci-dessous pour créer une partie de l'architecture du réseau du collège.**\n\n**-1-** Ouvrir le fichier le logiciel **Filius.**\n\n![](assets/img/3eme__sequence-3-reseau-informatique__seance-2/01.png)\n\n**-2-** Complétez le réseau du collège en suivant la video de prise en main ci-dessous, créer un exemple d'**architecture de réseau du collège**. Le réseau devra contenir :\n\n- Une deuxième salle de technologie : **Techno2** contenant **3 ordinateurs.** (ex : Techno2-1…….)\n\n- Un switch par salle de technologie. (ex : switch-techno1….)\n\n- Un **serveurs de fichier et d'authentification.**\n\n- Un switch serveurs.\n\n- Un **routeur**\n\nTutoriel de prise en main du logiciel Filius : Créer l'architecture d'un réseau.\n\n**3-** Sauvegardez votre travail",
+          "resources": [],
+          "srcUrl": "https://sites.google.com/view/lmtechno25/3ème/séquence-3-réseau-informatique/séance-2"
+        },
+        {
+          "slug": "seance-3",
+          "kind": "seance",
+          "num": 3,
+          "title": "Séance 3",
+          "shortTitle": "Séance 3",
+          "tagline": "",
+          "content_md": "## Notion de protocole -\n\n## Adresse IP\n\n**Lire les questions de la fiche élève avant de regarder la vidéo et répondre aux questions sur votre cahier**\n\n**Fiche élève à imprimer et à coller**\n\n::embed[notion_de_protocole-3eme.pdf](https://drive.google.com/file/d/1ybe0I0PsWp6ExVxyhff3XXXn0RDdJmHQ/preview)\n\n## Application : Protocole TCP/IP avec filius\n\n**-1- Configurer les éléments du réseau et tester le paramétrage et les connexions. : -**\n\n- **2.1 -** Lancer le logiciel **Filius** et ouvrir votre fichier de travail sur l'architecture du réseau du collège.\n\n- **2.2 -** Aidez-vous de la vidéo ressource **configurer les adresses IP** ci-dessous pour configurer les adresses IP...des **ordinateurs** des salles de technologie 1 et 2,du **serveur**,des **passerelles du routeur.**\n\n**Attention : Arrêtez le tuto à** **25\"10**\n\n**Ressource :** **Configurer les adresses IP** (des ordinateurs et des passerelles du réseau du collège ).\n\n::embed[Filius : Configurer les adresses IP du  réseau du collège.](https://www.youtube.com/embed/AdQUzTM5d2c?embed_config=%7B%22enc%22:%22AXH1ezkOPapYXGdwGVchUFcI_nML1TTozK2lhsF-SPMj1CbDFcflsi7jXX3d7dneIXFl97NEvIx0KrjhGnSd6CnOaD3fpPcSeLIKnBGRj3xTW9co_nUEWUtUg2soZ-V9Amz3alnQuVczeiIHk5y2oij58Co5ucq_afEVFWa7xlKTHToj%22%7D&enablejsapi=1&errorlinks=1&origin=https://sites.google.com&vl=1)\n\n**-2.3-** **Tester** votre **configuration** en suivant la ressources : **Tester la configuration du réseau** ci-dessous.\n\n::embed[Filius : Configurer les adresses IP du  réseau du collège.](https://www.youtube.com/embed/AdQUzTM5d2c?embed_config=%7B%22enc%22:%22AXH1eznPZCGWyEzz59eBlivoBqk7BizDg3BbNZ5fvcc8p97MFjl6-grRgamcd0pGJ3IKIx4z166h-s7DI_tyNYqoDLaJ7cRggzNV2W5lLBzNMxVm1QbWW6ybC72hikHlmodSWtND2U9e4v0zeHC8C8JOgyf3iL1EzC0bi_NshGPjQFYI%22%7D&enablejsapi=1&errorlinks=1&origin=https://sites.google.com&vl=1)\n\nVous devez réalisez :\n\n- un **ipconfig** sur l'ordinateur 1 de la salle de technologie 1 et vérifier son adresse **IP : 192.168.0.1**\n\n- un **ping** de la passerelle du sous réseau techno1 : ping 192.168.0.245\n\n- un **ping** du serveur en **10.124.34.1**\n\n- un **ping** d'un des ordinateur de la salle de techno 2.\n\n- Attention les trois pings doivent vous donner des réponses positives comme par exemple :\n\n![](assets/img/3eme__sequence-3-reseau-informatique__seance-3/01.png)\n\nOn voit ici que **4 paquets ont été transmis et que 4 ont été reçus.**\n\n**2.4 -** **Complétez** votre fiche de trace écrite en réécrivant les adresse IP de tous les ordinateurs du réseau ainsi que leurs passerelles. Exemple :\n\n![](assets/img/3eme__sequence-3-reseau-informatique__seance-3/02.png)",
+          "resources": [],
+          "srcUrl": "https://sites.google.com/view/lmtechno25/3ème/séquence-3-réseau-informatique/séance-3"
+        },
+        {
+          "slug": "tp",
+          "kind": "annexe",
+          "num": null,
+          "title": "TP",
+          "shortTitle": "TP",
+          "tagline": "",
+          "content_md": "![](assets/img/3eme__sequence-3-reseau-informatique__tp/01.jpg)\n\n![](assets/img/3eme__sequence-3-reseau-informatique__tp/02.jpg)\n\n![](assets/img/3eme__sequence-3-reseau-informatique__tp/03.jpg)\n\n![](assets/img/3eme__sequence-3-reseau-informatique__tp/04.jpg)",
+          "resources": [],
+          "srcUrl": "https://sites.google.com/view/lmtechno25/3ème/séquence-3-réseau-informatique/tp"
+        }
+      ]
+    },
+    {
+      "slug": "assr-2-pix",
+      "eyebrow": "Évaluation",
+      "year": "",
+      "title": "ASSR 2 · Pix",
+      "shortTitle": "ASSR 2 · Pix",
+      "tagline": "Préparation aux certifications ASSR 2 et Pix.",
+      "intro_md": "",
+      "resources": [],
+      "pages": [
+        {
+          "slug": "3eme-a",
+          "kind": "annexe",
+          "num": null,
+          "title": "3ème A",
+          "shortTitle": "3ème A",
+          "tagline": "",
+          "content_md": "**ASSR2**\n\nLien vers l'épreuve:\n\n**Candidat** **Code d'accès**\n\n**PIX**\n\n[**https://pix.fr/\\**](https://pix.fr/)\n\n**Numéro de la session:**\n\n**Code de la session:**\n\n**Nom de naissance** **Prénom** **Date de naissance (format : jj/mm/aaaa)**",
+          "resources": [],
+          "srcUrl": "https://sites.google.com/view/lmtechno25/3ème/assr2-pix/3ème-a"
+        },
+        {
+          "slug": "3eme-b",
+          "kind": "annexe",
+          "num": null,
+          "title": "3ème B",
+          "shortTitle": "3ème B",
+          "tagline": "",
+          "content_md": "**ASSR2**\n\nLien vers l'épreuve: [https://e-assr.education-securite-routiere.fr/eleve/acces/89582](https://e-assr.education-securite-routiere.fr/eleve/acces/89582)\n\n**Candidat** **Code d'accès**\n\nABDALLAH Maximilian VMvdK62\n\nABOU ABDALLAH Rhéa XSndK63\n\nABOU EL NASR Julia YjXdK64\n\nACHKAR M Alfred Yn7dK65\n\nACHKAR (EL) Onella VncdK66\n\nAWAD karl 7x4dK67\n\nAZAR Olivier yr5dK68\n\nFAKHOURY Georgio Kd1dK6d\n\nGHOUSSOUB Cynthia W97dK6f\n\nHADDAD Alex KYAdK610\n\nKAREH (EL) Lea rAXdK613\n\nMAALOUF Paul emRdK615\n\nMANSOUR Andréa PvwdK616\n\nMBARAK Camille GcSdK617\n\nMOKHBAT Karen 9QMdK618\n\nNAMMOUR Sienna vkMdK61c\n\nOJAIL (AL) Rosa Maria H92dK61d\n\nSELFANI (EL) Samir xcXdK61e\n\n**PIX**\n\n[**https://pix.fr/\\**](https://pix.fr/)\n\n**Numéro de la session:** **170353**\n\n**Code de la session:** **TYVK33**\n\n**Nom de naissance** **Prénom** **Date de naissance (format : jj/mm/aaaa)**\n\nABDALLAH Maximilian 16/05/2007\n\nABOU ABDALLAH Rhéa 01/10/2007\n\nABOU EL NASR Julia 30/10/2007\n\nACHKAR (EL) Alfred 27/04/2007\n\nACHKAR (EL) Onella 02/08/2007\n\nAWAD Karl 02/07/2007\n\nAZAR Olivier 10/09/2007\n\nFAKHOURY Georgio 01/07/2007\n\nGHOUSSOUB Cynthia 19/12/2007\n\nHADDAD Alex 12/07/2007\n\nKAREH (EL) Léa 26/09/2006\n\nMAALOUF Paul 10/08/2007\n\nMANSOUR Andréa 14/10/2007\n\nMBARAK Camille 23/06/2007\n\nMOKHBAT Karen 03/01/2007\n\nNAMMOUR Sienna 30/06/2007\n\nOJAIL (AL) Rosa Maria 27/03/2007\n\nSELFANI (EL) Samir 04/01/2007",
+          "resources": [],
+          "srcUrl": "https://sites.google.com/view/lmtechno25/3ème/assr2-pix/3ème-b"
+        }
+      ]
+    },
+    {
+      "slug": "sessions-dnb",
+      "eyebrow": "DNB",
+      "year": "",
+      "title": "Sessions DNB",
+      "shortTitle": "Sessions DNB",
+      "tagline": "Préparation à l'épreuve de sciences du brevet.",
+      "intro_md": "[Session 10](https://lyceemontaigneedulb-my.sharepoint.com/:b:/g/personal/eddy_bachaalany_lycee-montaigne_edu_lb/EQOOM584FPBKnO6A35sEnDcBTom3bcLtY8R822r9D_rkDw?e=gc4vHb)\n\n::embed[DNB-station-lavage.pdf](https://drive.google.com/file/d/1cK16mxACZzgG8ow5WJF7mTNdZtCLwGEt/preview)\n\n::embed[DNB-velo-electrique-1.pdf](https://drive.google.com/file/d/1dE8GWLzHkQILt4n-h8NyjjJh32x2tqUe/preview)\n\n::embed[DNB-radar-recul.pdf](https://drive.google.com/file/d/1NYg6DVommZwgHORqzXj1uvn8QqUCxcPu/preview)\n\n::embed[DNB-aquaponie.pdf](https://drive.google.com/file/d/1exTcq-SPkvczmWlvH9dvkE0ZWG45txrZ/preview)",
+      "resources": [],
+      "pages": []
+    },
+    {
+      "slug": "chaines-fonctionnelles",
+      "eyebrow": "Compléments",
+      "year": "",
+      "title": "Chaînes fonctionnelles",
+      "shortTitle": "Chaînes fonctionnelles",
+      "tagline": "Synthèse sur les chaînes d'information et d'énergie.",
+      "intro_md": "## La chaine d'information\n\n### Présentation\n\nPour produire des **ordres**, un système automatique doit connaitre les informations provenant de l'utilisateur ainsi que les états du système lui-même et de son environnement.\n\nLes **états** et les **consignes** sont des grandeurs physiques détectées et mesurées par des **capteurs**.\n\nL'analyse de ces données est assurée par un **circuit électronique** qui ensuite envoie les **ordres** à exécuter.\n\n**La chaine d'information est l'ensemble des fonctions techniques et des solutions technologiques qui participent à la prise des décisions par le système automatique.**\n\n**Schéma fonctionnel**\n\n**Fonctions techniques :**\n\nLa chaine d'information est composée de 3 blocs fonctionnels :\n\n- **Acquérir :** les grandeurs physiques externes sont traduites en signaux électriques par les capteurs.\n\n- **Traiter :** le programme de l'unité de commande analyse les informations et prend les décisions.\n\n- **Communiquer :** les ordres sont envoyés à la chaine d'énergie et des signaux sont adressés à l'opérateur.\n\n![](assets/img/3eme__chaines-fonctionnelles/01.png)\n\n**Solutions technologiques :**\n\nPour assurer chacune de ces 3 fonctions techniques, il existe de nombreuses solutions technologiques :\n\n- **Acquérir :** capteur logique, analogique ou numérique (interrupteur, bouton-poussoir, clavier, anémomètre, cellule photoélectrique, détecteur infrarouge, thermistance...).\n\n- **Traiter :** circuit intégré, microprocesseur, microcontrôleur, calculateur, circuit de commande, module logique, automate programmable...\n\n- **Communiquer :** carte électronique, fil électrique, fibre optique, liaison sans fil, connexion réseau...\n\n**Exemple**: Dans une maison moderne, le thermostat régule la température de la pièce.\n\nL'utilisateur choisit une temp'rature de consigne...\n\n![](assets/img/3eme__chaines-fonctionnelles/02.png)\n\nComposition de la chaine d'information d'une régulation de température :\n\n- **Grandeurs physiques :** la **température souhaitée** (consigne) et la **température réelle** (état).\n\n- **Acquérir :** le **thermostat** est le capteur qui mesure la température de la maison.\n\n- **Traiter :** le **circuit intégré** compare la température mesurée à celle désirée.\n\n- **Communiquer :** la **carte électronique** envoie le bon ordre en fonction de la température.\n\n- **Ordres :** **déclencher** ou **arrêter** le chauffage.\n\n## La chaine d'énergie\n\n### Présentation\n\nPour effectuer des **actions**, un système automatique a besoin d'être alimenté par une **source d'énergie**.\n\nBien que les énergies intervenantes soient très variées (électrique, mécanique, thermique, hydraulique, pneumatique...), le principe est toujours le même. Les **ordres** provenant de la chaine d'information autorisent :\n\n- La distribution de la bonne quantité d'énergie dans le système.\n\n- La conversion de l'énergie par des **actionneurs**.\n\n- La transmission de l'énergie aux **effecteurs**.\n\nIdentifier les composants qui assurent ces différentes fonctions permet de comprendre le fonctionnement du système.\n\n**La chaine d'énergie est l'ensemble des fonctions techniques et des solutions technologiques qui participent à la réalisation des opérations par le système automatique.**\n\n### Schéma fonctionnel\n\n**Fonctions techniques :**\n\nLa chaine d'énergie est composée de 4 blocs fonctionnels :\n\n- **Alimenter :** l'énergie externe est adaptée pour le bon fonctionnement du système.\n\n- **Distribuer :** un distributeur fait varier la quantité d'énergie en fonction des ordres reçus.\n\n- **Convertir :** un actionneur transforme l'énergie en une autre.\n\n- **Transmettre :** un mécanisme transfère cette énergie vers l'effecteur afin de générer une action.\n\n![](assets/img/3eme__chaines-fonctionnelles/03.png)\n\n**Solutions technologiques :**\n\nPour assurer chacune de ces 4 fonctions techniques, il existe de nombreuses solutions technologiques :\n\n- **Alimenter :** bloc / boitier d'alimentation, coffret / tableau électrique, fils électriques, pile, coupleur de piles, batterie, accumulateur, transformateur, panneau photovoltaïque...\n\n- **Distribuer :** contacteur, relais, inverseur, variateur, régulateur, distributeur, vanne...\n\n- **Convertir :** actionneur (moteur, vérin, résistance, sirène, haut-parleur, électroaimant, voyant, écran...).\n\n- **Transmettre :** engrenage, réducteur, embrayage, bielle, bras, poulie / courroie, pignon / chaine, crémaillère / vis sans fin...\n\n**Exemple:** **Conversion des énergies:**\n\nPour se protéger du soleil, beaucoup de propriétaires équipent leur maison d'un store.\n\n![](assets/img/3eme__chaines-fonctionnelles/04.png)\n\nUn store électrique comporte:\n\n![](assets/img/3eme__chaines-fonctionnelles/05.png)\n\nqui entraîne en rotation\n\n![](assets/img/3eme__chaines-fonctionnelles/06.png)\n\nautour duquel s'enroule\n\n![](assets/img/3eme__chaines-fonctionnelles/07.png)\n\n![](assets/img/3eme__chaines-fonctionnelles/08.png)\n\nqui aliment ensuite\n\n![](assets/img/3eme__chaines-fonctionnelles/09.png)\n\nchargé de distribuer l'énergie vers\n\n![](assets/img/3eme__chaines-fonctionnelles/10.png)\n\net c'est finalement le bouton de commande qui pilote le moteur.\n\n![](assets/img/3eme__chaines-fonctionnelles/11.png)\n\nComposition de la chaine d'énergie d'un store automatique :\n\n- **Source d'énergie :** l'**électricité**.\n\n- **Alimenter :** le **boitier d'alimentation** fournit l'énergie électrique à tout le système (partie commande et partie opérative).\n\n- **Distribuer :** les **contacteurs** amènent l'électricité au moteur en fonction des ordres reçus.\n\n- **Convertir :** le **moteur** transforme l'énergie électrique en énergie mécanique.\n\n- **Transmettre :** les **engrenages** réduisent la vitesse de rotation du moteur et font tourner le tube d'enroulement de la toile.\n\n- **Action :** l'**ouverture** ou la **fermeture** du store.",
+      "resources": [],
+      "pages": []
+    },
+    {
+      "slug": "fonctions-solutions-techniques",
+      "eyebrow": "Compléments",
+      "year": "",
+      "title": "Fonctions et solutions techniques",
+      "shortTitle": "Fonctions et solutions techniques",
+      "tagline": "Distinguer fonction technique et solution technique.",
+      "intro_md": "![](assets/img/3eme__fonctions-techniques-solutions-techniques/01.png)\n\n![](assets/img/3eme__fonctions-techniques-solutions-techniques/02.png)\n\n![](assets/img/3eme__fonctions-techniques-solutions-techniques/03.png)\n\n![](assets/img/3eme__fonctions-techniques-solutions-techniques/04.png)\n\n![](assets/img/3eme__fonctions-techniques-solutions-techniques/05.png)",
+      "resources": [],
+      "pages": []
+    }
+  ]
+}

@@ -692,10 +692,96 @@ main { min-height: 60vh; }
 }
 .back-to-top.show { display: grid; }
 
+/* ---------- Interactivité élève ---------- */
+.btn-sm { padding: 0.4rem 0.85rem; font-size: 0.85rem; border-radius: 9px; }
+
+.student-bar {
+  display: flex; flex-wrap: wrap; align-items: center; gap: 0.7rem;
+  background: var(--primary-soft);
+  border: 1px solid color-mix(in srgb, var(--primary) 22%, transparent);
+  border-radius: var(--radius-sm);
+  padding: 0.65rem 1rem;
+  margin: 0 0 1.6rem;
+  font-size: 0.88rem;
+  color: var(--text-2);
+  max-width: var(--content-w);
+}
+.student-bar .sb-actions { margin-left: auto; display: flex; gap: 0.5rem; }
+
+.answer-field { margin: 0.9rem 0 1.3rem; max-width: var(--content-w); }
+.answer-field textarea {
+  width: 100%;
+  font-family: "Caveat", "Segoe Print", var(--font-body);
+  font-size: 1.25rem;
+  line-height: 1.9rem;
+  color: var(--primary-strong);
+  background:
+    repeating-linear-gradient(
+      transparent,
+      transparent calc(1.9rem - 1px),
+      var(--border-2) calc(1.9rem - 1px),
+      var(--border-2) 1.9rem
+    );
+  background-attachment: local;
+  border: 1.5px dashed var(--border-2);
+  border-radius: var(--radius-sm);
+  padding: 0.35rem 0.8rem 0.55rem;
+  resize: vertical;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+.answer-field textarea:focus {
+  outline: none;
+  border-color: var(--primary);
+  border-style: solid;
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--primary) 18%, transparent);
+}
+.answer-field textarea::placeholder { color: var(--muted); font-family: var(--font-body); font-size: 0.95rem; }
+.answer-field.saved textarea { border-style: solid; border-color: color-mix(in srgb, var(--ok) 45%, transparent); }
+
+/* ---------- Quiz ---------- */
+.quiz {
+  max-width: var(--content-w);
+  margin: 2.4rem 0;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.4rem 1.6rem 1.6rem;
+  box-shadow: var(--shadow-1);
+}
+.quiz h2 { margin-top: 0; }
+.quiz-hint { color: var(--muted); font-size: 0.9rem; margin-top: -0.4rem; }
+.quiz-q {
+  border-top: 1px solid var(--border);
+  padding: 1.1rem 0 1.2rem;
+}
+.quiz-q .qq-text { font-family: var(--font-head); font-weight: 600; margin-bottom: 0.6rem; }
+.qq-opts { display: flex; flex-direction: column; gap: 0.4rem; margin-bottom: 0.8rem; }
+.qq-opt {
+  display: flex; align-items: center; gap: 0.6rem;
+  padding: 0.5rem 0.8rem;
+  border: 1px solid var(--border);
+  border-radius: 9px;
+  cursor: pointer;
+  transition: border-color 0.12s ease, background 0.12s ease;
+}
+.qq-opt:hover { border-color: var(--primary); background: var(--surface-2); }
+.qq-opt input { accent-color: var(--primary); width: 17px; height: 17px; }
+.quiz-q.answered-ok .qq-opt input:checked + span { color: var(--ok); font-weight: 600; }
+.quiz-q.answered-ko .qq-opt input:checked + span { color: #c53030; font-weight: 600; }
+.qq-feedback { margin-top: 0.5rem; font-size: 0.92rem; display: none; border-radius: 9px; padding: 0.6rem 0.9rem; }
+.qq-feedback.show { display: block; }
+.qq-feedback.ok { background: var(--c-5eme-soft); color: var(--c-5eme); }
+.qq-feedback.ko { background: #fde8e8; color: #c53030; }
+[data-theme="dark"] .qq-feedback.ko { background: #3d1a1a; color: #f28b8b; }
+.quiz-score { margin-top: 1rem; font-family: var(--font-head); font-weight: 600; display: none; }
+.quiz-score.show { display: block; }
+
 /* ---------- Impression ---------- */
 @media print {
   .site-header, .sidebar, .pager, .site-footer, .back-to-top,
-  .breadcrumbs, .search-overlay, .hero-actions, .embed-bar a.embed-open { display: none !important; }
+  .breadcrumbs, .search-overlay, .hero-actions, .embed-bar a.embed-open,
+  .student-bar, .qq-check { display: none !important; }
+  .answer-field textarea { border: 1px solid #999; background: none; }
   body { background: #fff; color: #000; font-size: 12pt; }
   .course-layout { display: block; padding: 0; }
   .embed iframe { display: none; }

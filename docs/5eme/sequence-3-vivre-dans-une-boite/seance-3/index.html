@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="fr" data-base="../../../">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>séance 3: Fonctions et solutions techniques · Vivre dans une boîte — Technologie &amp; SNT</title>
+<meta name="description" content="Concevoir un habitat container : cahier des charges, solutions techniques, modélisation 3D.">
+<meta property="og:title" content="séance 3: Fonctions et solutions techniques · Vivre dans une boîte — Technologie &amp; SNT">
+<meta property="og:description" content="Concevoir un habitat container : cahier des charges, solutions techniques, modélisation 3D.">
+<meta property="og:type" content="website">
+<link rel="icon" href="../../../assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lexend:wght@500;600;700;800&family=Caveat:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../../assets/styles.css">
+<script>
+(function(){try{var t=localStorage.getItem("lmtechno-theme");if(!t)t=window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light";document.documentElement.setAttribute("data-theme",t);}catch(e){}})();
+</script>
+
+</head>
+<body>
+<a class="skip-link" href="#contenu">Aller au contenu</a>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="../../../index.html">
+      <span class="brand-logo">T</span>
+      <span>Technologie <span style="color:var(--muted);font-weight:500">&amp;</span> SNT
+        <small>Lycée Montaigne, Beit Chabab</small>
+      </span>
+    </a>
+    
+<nav class="main-nav" id="main-nav" aria-label="Navigation principale">
+  <a href="../../../index.html">Accueil</a>
+  <a href="../../../5eme/" style="--dot:#0d9268" aria-current="true">5ème</a>
+  <a href="../../../4eme/" style="--dot:#2050d0">4ème</a>
+  <a href="../../../3eme/" style="--dot:#7c3aed">3ème</a>
+  <a href="../../../snt/" style="--dot:#d9640f">2nde SNT</a>
+  <a href="../../../sicit/" style="--dot:#0d8e9c">SI · CIT</a>
+</nav>
+    <div class="header-actions">
+      <button class="search-btn" id="search-open" type="button" aria-label="Rechercher">
+        <span>🔍</span><span class="label">Rechercher</span><kbd>Ctrl K</kbd>
+      </button>
+      <button class="icon-btn" id="theme-toggle" type="button" aria-label="Changer de thème">🌙</button>
+      <button class="icon-btn nav-toggle" id="nav-toggle" type="button" aria-label="Menu" aria-expanded="false">☰</button>
+    </div>
+  </div>
+</header>
+<main id="contenu">
+
+<nav class="breadcrumbs wrap" aria-label="Fil d'Ariane">
+    <a href="../../../index.html">Accueil</a><span class="sep">›</span>
+    <a href="../../">5ème</a><span class="sep">›</span>
+    <a href="../">Vivre dans une boîte</a><span class="sep">›</span>
+    <span class="current">séance 3: Fonctions et solutions techniques</span>
+  </nav>
+<div class="wrap course-layout">
+  <aside class="sidebar" style="--accent:undefined;--accent-soft:undefined;">
+    <div class="sb-title"><span class="dot"></span>5ème </div>
+    <nav>
+    <details>
+      <summary><a href="../../sequence-1-cybersecurite/" style="all:unset;cursor:pointer">Cybersécurité</a></summary>
+      <div class="sb-pages">
+        <a href="../../sequence-1-cybersecurite/seance-1/">Séance 1</a>
+        <a href="../../sequence-1-cybersecurite/seance-1-corr/">Séance 1 — correction</a>
+        <a href="../../sequence-1-cybersecurite/seance-2/">Séance 2</a>
+        <a href="../../sequence-1-cybersecurite/seance-2-corr/">Séance 2 — correction</a>
+        <a href="../../sequence-1-cybersecurite/seance-3/">Séance 3</a>
+        <a href="../../sequence-1-cybersecurite/seance-3-corr/">Séance 3 — correction</a>
+        <a href="../../sequence-1-cybersecurite/seance-4/">Séance 4</a>
+        <a href="../../sequence-1-cybersecurite/seance-4-corr/">Séance 4 — correction</a>
+        <a href="../../sequence-1-cybersecurite/ressources/">Ressources</a>
+      </div>
+    </details>
+    <details>
+      <summary><a href="../../sequence-1-preserver-les-ressources/" style="all:unset;cursor:pointer">Préserver les ressources</a></summary>
+      <div class="sb-pages">
+        <a href="../../sequence-1-preserver-les-ressources/seance-1/">Séance 1</a>
+        <a href="../../sequence-1-preserver-les-ressources/seance-2/">Séance 2</a>
+        <a href="../../sequence-1-preserver-les-ressources/seance-3/">Séance 3</a>
+      </div>
+    </details>
+    <details>
+      <summary><a href="../../sequence-2-eclairage-automatique/" style="all:unset;cursor:pointer">Éclairage automatique</a></summary>
+      <div class="sb-pages">
+        <a href="../../sequence-2-eclairage-automatique/seance-1/">Séance 1</a>
+        <a href="../../sequence-2-eclairage-automatique/seance-2/">Séance 2</a>
+        <a href="../../sequence-2-eclairage-automatique/seance-3/">Séance 3</a>
+        <a href="../../sequence-2-eclairage-automatique/synthese-capteur-actionneur-interface/">Synthèse : Capteur, actionneur, interface</a>
+        <a href="../../sequence-2-eclairage-automatique/synthese-systemes-embarques/">Synthèse: Systèmes embarqués</a>
+        <a href="../../sequence-2-eclairage-automatique/seance-4/">Séance 4</a>
+      </div>
+    </details>
+    <details open>
+      <summary><a href="../../sequence-3-vivre-dans-une-boite/" style="all:unset;cursor:pointer">Vivre dans une boîte</a></summary>
+      <div class="sb-pages">
+        <a href="../../sequence-3-vivre-dans-une-boite/seance-1/">Séance 1</a>
+        <a href="../../sequence-3-vivre-dans-une-boite/cahier-des-charges/">Séance 2: Identifier le cahier des charges</a>
+        <a href="../../sequence-3-vivre-dans-une-boite/seance-3/" aria-current="true">Séance 3</a>
+        <a href="../../sequence-3-vivre-dans-une-boite/seance-4/">Séance 4</a>
+        <a href="../../sequence-3-vivre-dans-une-boite/synthese/">Synthèse</a>
+        <a href="../../sequence-3-vivre-dans-une-boite/seance-5/">Séance 5</a>
+        <a href="../../sequence-3-vivre-dans-une-boite/fiches-de-connaissance/">Fiches de connaissance</a>
+        <a href="../../sequence-3-vivre-dans-une-boite/seance-6/">Séance 6</a>
+        <a href="../../sequence-3-vivre-dans-une-boite/seance-7/">Séance 7</a>
+      </div>
+    </details>
+    <details>
+      <summary><a href="../../sequence-4-animal-sounds/" style="all:unset;cursor:pointer">Animal sounds for kids</a></summary>
+      <div class="sb-pages">
+        
+      </div>
+    </details>
+    <details>
+      <summary><a href="../../assr-1/" style="all:unset;cursor:pointer">ASSR 1</a></summary>
+      <div class="sb-pages">
+        <a href="../../assr-1/assr1/">ASSR1</a>
+        <a href="../../assr-1/5eme-a/">5ème A</a>
+        <a href="../../assr-1/5eme-b/">5ème B</a>
+        <a href="../../assr-1/5eme-c/">5ème C</a>
+      </div>
+    </details>
+    </nav>
+  </aside>
+  <article>
+    <div class="page-head">
+      <div class="kicker">
+        <span class="badge" style="--badge-bg:#e2f6ee;--badge-fg:#0d9268">5e</span>
+        <span class="badge">Vivre dans une boîte</span>
+        <span class="badge badge-arch">2020-2024</span>
+      </div>
+      <h1>séance 3: Fonctions et solutions techniques</h1>
+      
+    </div>
+    
+    
+<div class="student-bar">
+  <span class="sb-info">💾 Tes réponses sont enregistrées automatiquement sur cet appareil.</span>
+  <span class="sb-actions">
+    <button class="btn btn-ghost btn-sm" id="print-answers" type="button">🖨 Imprimer / PDF</button>
+    <button class="btn btn-ghost btn-sm" id="clear-answers" type="button">🗑 Tout effacer</button>
+  </span>
+</div>
+    <div class="prose">
+      <p>Nous venons de voir que la fonction principale du conteneur ( = sa fonction d&#39;usage) est :</p>
+<p><strong>Permettre de loger un étudiant dans de bonnes conditions.</strong></p>
+<p><strong>Que se passe-t-il ?</strong></p>
+<p>Observer cette image :</p>
+<p><img src="../../../assets/img/5eme__sequence-3-vivre-dans-une-boite__seance-3-fonctions-et-solutions-techniques/01.jpg" alt=""></p>
+<p><strong>Quel est le problème à résoudre ?</strong></p>
+<div class="answer-field">
+  <textarea rows="7" data-answer-idx="0" placeholder="✏️ Écris ta réponse ici…" aria-label="Zone de réponse de l'élève"></textarea>
+</div>
+<h2>problème retenu</h2>
+<p><strong>Comment rendre le conteneur habitable ?</strong></p>
+<p><strong>Quelles sont vos hypothèses pour résoudre ce problème ?</strong></p>
+<div class="answer-field">
+  <textarea rows="8" data-answer-idx="1" placeholder="✏️ Écris ta réponse ici…" aria-label="Zone de réponse de l'élève"></textarea>
+</div>
+<h2>Hypothèse retenu</h2>
+<p><strong>Le conteneur doit permettre à un étudiant de :</strong></p>
+<ul>
+<li><p><strong>se reposer</strong></p>
+</li>
+<li><p><strong>travailler</strong></p>
+</li>
+<li><p><strong>cuisiner</strong></p>
+</li>
+<li><p><strong>se laver</strong></p>
+</li>
+<li><p><strong>recevoir ses amis.</strong></p>
+</li>
+</ul>
+<h2>Activité 1 : Trouver les fonctions techniques</h2>
+<p>Votre équipe d&#39;architectes doit imaginer les fonctions techniques que va devoir posséder <strong>le conteneur pour devenir parfaitement habitable</strong>. Pour l&#39;instant, c&#39;est juste une boîte en métal !</p>
+<p><strong>TRAVAIL DU GROUPE</strong></p>
+<ol>
+<li>Faire une liste de toutes les fonctions techniques.</li>
+</ol>
+<p><em>ATTENTION : Une fonction commence toujours par un verbe : Permettre de …………………………… , Avoir …………………………… , S&#39;isoler</em></p>
+<ol start="2">
+<li><p>Essayer de regrouper les fonctions techniques que vous avez trouvées par thème ou par ressemblance.</p>
+</li>
+<li><p>Donner un titre au regroupement.</p>
+</li>
+</ol>
+<h2>Coup de pouce</h2>
+<p>Si vous avez besoin d&#39;aide ... Quelques idées de fonctions techniques...</p>
+<p>Avoir suffisamment de lumière.</p>
+<p>Pouvoir s&#39;isoler du bruit...</p>
+<p><strong>Restitution</strong></p>
+<p>Voici 4 fonctions que nous retenons qui permettent de satisfaire la fonction principale (fonction d&#39;usage) : Loger un étudiant dans de bonnes conditions.</p>
+<p>(Rappel : Une fonction commence toujours par un verbe à l&#39;infinitif : permettre de..)</p>
+<p><img src="../../../assets/img/5eme__sequence-3-vivre-dans-une-boite__seance-3-fonctions-et-solutions-techniques/02.png" alt=""></p>
+<p>Le conteneur doit :</p>
+<ul>
+<li><p><strong>Permettre l&#39;accès aux différents espaces de vie.</strong></p>
+</li>
+<li><p><strong>Avoir une bonne luminosité quelque soit l&#39;heure.</strong></p>
+</li>
+<li><p><strong>Se protéger des éléments extérieurs.</strong></p>
+</li>
+<li><p><strong>Etre raccordé à différents réseaux</strong>.</p>
+</li>
+</ul>
+<p>Ces 4 fonctions sont appelées des <strong>fonctions de service.</strong></p>
+<p><strong>L&#39;architecte les a trouvées en se posant la question : &quot;Comment rendre le container habitable ? Quels services doit-il rendre à l&#39;étudiant ?&quot;</strong></p>
+<p><strong>Ensuite, l&#39;architecte doit réfléchir précisément à l&#39;aménagement intérieur du conteneur. Pour bien comprendre ce qu&#39;il doit concevoir, il va détailler chacune des fonctions de services.</strong></p>
+<p><strong>Il imagine donc des</strong> <strong>fonctions plus précises</strong> <strong>qui sont les</strong> <strong>fonctions techniques.</strong></p>
+<p><img src="../../../assets/img/5eme__sequence-3-vivre-dans-une-boite__seance-3-fonctions-et-solutions-techniques/03.png" alt=""></p>
+
+    </div>
+    
+    
+    <nav class="pager">
+      <a class="pg-prev" href="../cahier-des-charges/"><span class="pg-label">← Précédent</span><span class="pg-title">Séance 2: Identifier le cahier des charges</span></a>
+      <a class="pg-next" href="../seance-4/"><span class="pg-label">Suivant →</span><span class="pg-title">Séance 4: Solutions techniques</span></a>
+    </nav>
+  </article>
+</div>
+</main>
+<footer class="site-footer">
+  <div class="wrap footer-grid">
+    <div>
+      <h4>Technologie &amp; SNT</h4>
+      <p>Site pédagogique regroupant les cours, activités et ressources de Technologie du collège et de SNT du lycée.</p>
+    </div>
+    <div>
+      <h4>Niveaux</h4>
+      <ul>
+        <li><a href="../../../5eme/">5ème</a></li>
+        <li><a href="../../../4eme/">4ème</a></li>
+        <li><a href="../../../3eme/">3ème</a></li>
+        <li><a href="../../../snt/">2nde SNT</a></li>
+        <li><a href="../../../sicit/">SI · CIT</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Références</h4>
+      <ul>
+        <li><a href="https://eduscol.education.fr/2098/technologie-au-cycle-4" target="_blank" rel="noopener">Programme de Technologie (Eduscol)</a></li>
+        <li><a href="https://eduscol.education.fr/3016/sciences-numeriques-et-technologie-au-lycee" target="_blank" rel="noopener">Programme SNT (Eduscol)</a></li>
+        <li><a href="https://pix.fr" target="_blank" rel="noopener">Pix — compétences numériques</a></li>
+        <li><a href="https://sites.google.com/view/lmtechno25" target="_blank" rel="noopener">Site d'origine (Google Sites)</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="wrap footer-bottom">
+    <span>© 2025-2026 M. Eddy Bachaalany · Lycée Montaigne, Beit Chabab</span>
+    <span>Cours de Technologie collège &amp; SNT lycée</span>
+  </div>
+</footer>
+<div class="search-overlay" id="search-overlay" role="dialog" aria-label="Recherche">
+  <div class="search-panel">
+    <div class="search-input-row">
+      <span>🔍</span>
+      <input id="search-input" type="search" placeholder="Rechercher une séquence, une séance, une notion…" autocomplete="off">
+      <kbd>Échap</kbd>
+    </div>
+    <div class="search-results" id="search-results"></div>
+  </div>
+</div>
+<button class="back-to-top" id="back-to-top" type="button" aria-label="Retour en haut">↑</button>
+<script src="../../../assets/client.js" defer></script>
+</body>
+</html>

@@ -5,21 +5,51 @@ Refonte professionnelle du site [Google Sites d'origine](https://sites.google.co
 
 **Site en ligne :** https://ebechalani.github.io/techno/
 
+## Interactivité pour les élèves
+
+- **Zones de réponse** : sur les fiches d'activité, les lignes de pointillés sont
+  devenues des champs où l'élève tape sa réponse. Les réponses sont enregistrées
+  automatiquement **dans son navigateur** (rien n'est envoyé sur Internet) et
+  peuvent être imprimées / exportées en PDF (bouton « Imprimer »).
+- **QCM auto-corrigés** : chaque séance peut avoir un quiz « Teste tes
+  connaissances » avec correction immédiate et score. Les questions se
+  définissent dans `content/quiz/<section>.json` :
+
+```json
+{
+  "sequence-1-cybersecurite/seance-2": [
+    {
+      "q": "Quelle est la couleur d'un mot de passe très fort ?",
+      "options": ["Rouge", "Orange", "Vert"],
+      "answer": 2,
+      "explain": "Le vérificateur de mots de passe affiche le vert pour un mot de passe très fort."
+    }
+  ]
+}
+```
+
+`answer` est l'index (à partir de 0) de la bonne réponse dans `options`.
+
 ## Organisation
 
 ```
 content/                  ← LE CONTENU DES COURS (à modifier ici)
   site.json               ← titres, textes d'accueil, liens de pied de page
-  sections/*.json         ← une section par fichier (5ème, 4ème, SNT, archives…)
+  sections/*.json         ← une section par fichier (5eme, 4eme, 3eme, snt, sicit)
+  quiz/*.json             ← QCM auto-corrigés par séance (facultatif)
   assets/img/…            ← images des cours (auto-hébergées)
 src/
   build.js                ← générateur du site (JSON → HTML)
   styles.css              ← feuille de style
-  client.js               ← recherche, thème sombre, menus
+  client.js               ← recherche, thème sombre, réponses élèves, quiz
   serve.js                ← petit serveur de prévisualisation locale
 tools/                    ← outils de migration depuis Google Sites (usage ponctuel)
 docs/                     ← site généré (ne pas modifier à la main)
 ```
+
+Chaque niveau (5ème, 4ème, 3ème) regroupe **toutes** ses séquences au même
+endroit ; une pastille d'année (2025-2026 ou 2020-2024) indique le programme
+d'origine de chaque séquence.
 
 ## Modifier le contenu
 

@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="fr" data-base="../../../">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Modélisation 3d de la poubelle · La poubelle connectée — Technologie &amp; SNT</title>
+<meta name="description" content="Fonctionnement, modélisation 3D, prototype Arduino et simulation Tinkercad.">
+<meta property="og:title" content="Modélisation 3d de la poubelle · La poubelle connectée — Technologie &amp; SNT">
+<meta property="og:description" content="Fonctionnement, modélisation 3D, prototype Arduino et simulation Tinkercad.">
+<meta property="og:type" content="website">
+<link rel="icon" href="../../../assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lexend:wght@500;600;700;800&family=Caveat:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../../assets/styles.css">
+<script>
+(function(){try{var t=localStorage.getItem("lmtechno-theme");if(!t)t=window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light";document.documentElement.setAttribute("data-theme",t);}catch(e){}})();
+</script>
+
+</head>
+<body>
+<a class="skip-link" href="#contenu">Aller au contenu</a>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="../../../index.html">
+      <span class="brand-logo">T</span>
+      <span>Technologie <span style="color:var(--muted);font-weight:500">&amp;</span> SNT
+        <small>Lycée Montaigne, Beit Chabab</small>
+      </span>
+    </a>
+    
+<nav class="main-nav" id="main-nav" aria-label="Navigation principale">
+  <a href="../../../index.html">Accueil</a>
+  <a href="../../../5eme/" style="--dot:#0d9268">5ème</a>
+  <a href="../../../4eme/" style="--dot:#2050d0">4ème</a>
+  <a href="../../../3eme/" style="--dot:#7c3aed" aria-current="true">3ème</a>
+  <a href="../../../snt/" style="--dot:#d9640f">2nde SNT</a>
+  <a href="../../../sicit/" style="--dot:#0d8e9c">SI · CIT</a>
+</nav>
+    <div class="header-actions">
+      <button class="search-btn" id="search-open" type="button" aria-label="Rechercher">
+        <span>🔍</span><span class="label">Rechercher</span><kbd>Ctrl K</kbd>
+      </button>
+      <button class="icon-btn" id="theme-toggle" type="button" aria-label="Changer de thème">🌙</button>
+      <button class="icon-btn nav-toggle" id="nav-toggle" type="button" aria-label="Menu" aria-expanded="false">☰</button>
+    </div>
+  </div>
+</header>
+<main id="contenu">
+
+<nav class="breadcrumbs wrap" aria-label="Fil d'Ariane">
+    <a href="../../../index.html">Accueil</a><span class="sep">›</span>
+    <a href="../../">3ème</a><span class="sep">›</span>
+    <a href="../">La poubelle connectée</a><span class="sep">›</span>
+    <span class="current">Modélisation 3d de la poubelle</span>
+  </nav>
+<div class="wrap course-layout">
+  <aside class="sidebar" style="--accent:undefined;--accent-soft:undefined;">
+    <div class="sb-title"><span class="dot"></span>3ème </div>
+    <nav>
+    <details open>
+      <summary><a href="../../sequence-1-poubelle-connectee/" style="all:unset;cursor:pointer">La poubelle connectée</a></summary>
+      <div class="sb-pages">
+        <a href="../../sequence-1-poubelle-connectee/seance-1/">Séance 1</a>
+        <a href="../../sequence-1-poubelle-connectee/correction/">Correction</a>
+        <a href="../../sequence-1-poubelle-connectee/modelisation-3d-de-la-poubelle/" aria-current="true">Modélisation 3d de la poubelle</a>
+        <a href="../../sequence-1-poubelle-connectee/prototype-arduino/">prototype Arduino</a>
+        <a href="../../sequence-1-poubelle-connectee/simulation-tinkercad/">Simulation Tinkercad</a>
+      </div>
+    </details>
+    <details>
+      <summary><a href="../../sequence-2-intelligence-artificielle/" style="all:unset;cursor:pointer">Intelligence artificielle</a></summary>
+      <div class="sb-pages">
+        <a href="../../sequence-2-intelligence-artificielle/seance-1/">Séance 1</a>
+        <a href="../../sequence-2-intelligence-artificielle/seance-2/">Séance 2</a>
+        <a href="../../sequence-2-intelligence-artificielle/tuto-videos-teachable-maching/">Tuto vidéos Teachable machine</a>
+        <a href="../../sequence-2-intelligence-artificielle/seance-3/">Séance 3</a>
+        <a href="../../sequence-2-intelligence-artificielle/seance-4/">Séance 4</a>
+        <a href="../../sequence-2-intelligence-artificielle/fiche-de-connaissance/">Fiche de connaissance</a>
+      </div>
+    </details>
+    <details>
+      <summary><a href="../../sequence-3-reseau-informatique/" style="all:unset;cursor:pointer">Réseau informatique</a></summary>
+      <div class="sb-pages">
+        <a href="../../sequence-3-reseau-informatique/seance-1/">Séance 1</a>
+        <a href="../../sequence-3-reseau-informatique/seance-2/">Séance 2</a>
+        <a href="../../sequence-3-reseau-informatique/seance-3/">Séance 3</a>
+        <a href="../../sequence-3-reseau-informatique/tp/">TP</a>
+      </div>
+    </details>
+    <details>
+      <summary><a href="../../assr-2-pix/" style="all:unset;cursor:pointer">ASSR 2 · Pix</a></summary>
+      <div class="sb-pages">
+        <a href="../../assr-2-pix/3eme-a/">3ème A</a>
+        <a href="../../assr-2-pix/3eme-b/">3ème B</a>
+      </div>
+    </details>
+    <details>
+      <summary><a href="../../sessions-dnb/" style="all:unset;cursor:pointer">Sessions DNB</a></summary>
+      <div class="sb-pages">
+        
+      </div>
+    </details>
+    <details>
+      <summary><a href="../../chaines-fonctionnelles/" style="all:unset;cursor:pointer">Chaînes fonctionnelles</a></summary>
+      <div class="sb-pages">
+        
+      </div>
+    </details>
+    <details>
+      <summary><a href="../../fonctions-solutions-techniques/" style="all:unset;cursor:pointer">Fonctions et solutions techniques</a></summary>
+      <div class="sb-pages">
+        
+      </div>
+    </details>
+    </nav>
+  </aside>
+  <article>
+    <div class="page-head">
+      <div class="kicker">
+        <span class="badge" style="--badge-bg:#f1e9fe;--badge-fg:#7c3aed">3e</span>
+        <span class="badge">La poubelle connectée</span>
+        <span class="badge badge-arch">2020-2024</span>
+      </div>
+      <h1>Modélisation 3d de la poubelle</h1>
+      
+    </div>
+    
+    
+    <div class="prose">
+      <p>Connectez vous à : lm-administration pour regarder les vidéos ci-dessous</p>
+<p>id: labo.eval</p>
+<p>pass: le@2023</p>
+<p><strong>Lancez Tinkercad et saisissez le code de la classe: 1LT3GM14K6FY</strong></p>
+<p>ou bien directement:</p>
+<p><a target="_blank" rel="noopener" href="https://www.tinkercad.com/joinclass/1LT3GM14K6FY">https://www.tinkercad.com/joinclass/1LT3GM14K6FY</a></p>
+<p><strong>Vous trouvez c-dessous vos identifiants pour accéder à la classe:</strong></p>
+<p><img src="../../../assets/img/3eme__sequence-1-la-poubelle-connectee__modelisation-3d-de-la-poubelle/01.png" alt=""></p>
+<p><img src="../../../assets/img/3eme__sequence-1-la-poubelle-connectee__modelisation-3d-de-la-poubelle/02.png" alt=""></p>
+<p><img src="../../../assets/img/3eme__sequence-1-la-poubelle-connectee__modelisation-3d-de-la-poubelle/03.png" alt=""></p>
+<p><img src="../../../assets/img/3eme__sequence-1-la-poubelle-connectee__modelisation-3d-de-la-poubelle/04.png" alt=""></p>
+<figure class="embed embed-video">
+  <div class="embed-bar">
+    <span class="embed-kind">Vidéo</span>
+    <span class="embed-title">modélisation 3d de la poubelle</span>
+    <a class="embed-open" href="https://www.youtube.com/embed/ZXVxVg-FA3Q?embed_config=%7B%22enc%22:%22AXH1ezlCmNP6a0QlP6_Y7xbpSS9ThXu4ly8eyOhOGU9NTuVFHfqOdMf758r8KRRaXByrOxWAkGLXwp7yT0DH9M_Z3Zcobh5jGSs7aOZT8HOtif9ytlqtkhwxVRAS4R4zTvxRYRRgEGZF-eoJKLRiZcTmCA27caeWb3w4tRSGao_pVfJE%22%7D&amp;enablejsapi=1&amp;errorlinks=1&amp;origin=https://sites.google.com&amp;vl=1" target="_blank" rel="noopener">Ouvrir ↗</a>
+  </div>
+  <div class="embed-frame"><iframe data-src="https://www.youtube-nocookie.com/embed/ZXVxVg-FA3Q" loading="lazy" allowfullscreen allow="autoplay; fullscreen" title="modélisation 3d de la poubelle"></iframe></div>
+</figure><figure class="embed embed-video">
+  <div class="embed-bar">
+    <span class="embed-kind">Vidéo</span>
+    <span class="embed-title">modélisation 3d de la poubelle part 2</span>
+    <a class="embed-open" href="https://www.youtube.com/embed/Melq2Z5pD4E?embed_config=%7B%22enc%22:%22AXH1ezk7OHCxeuXiKoxPM9Bnzw7SPOZiqBvnUSBJrYe-Hy0BGemb_l6v1Dj6PK7HaGXSywQHLtfM87rTB_k3RNTg8-tb9iOXmbzxWnFokR3KKZZDiqLz5V_zUCw8pyPLMilLn2EFkBchRkCZCu3p8naP9krTuOijMxy3TcAHY3AOjLbC%22%7D&amp;enablejsapi=1&amp;errorlinks=1&amp;origin=https://sites.google.com&amp;vl=1" target="_blank" rel="noopener">Ouvrir ↗</a>
+  </div>
+  <div class="embed-frame"><iframe data-src="https://www.youtube-nocookie.com/embed/Melq2Z5pD4E" loading="lazy" allowfullscreen allow="autoplay; fullscreen" title="modélisation 3d de la poubelle part 2"></iframe></div>
+</figure>
+
+    </div>
+    
+    <section class="resources"><h2>Liens et ressources</h2><div class="res-grid">
+<a class="res-card res-app" href="https://www.tinkercad.com/joinclass/1LT3GM14K6FY" target="_blank" rel="noopener">
+  <span class="res-icon">🧩</span>
+  <span class="res-info">
+    <span class="res-title">https://www.tinkercad.com/joinclass/1LT3GM14K6FY</span>
+    <span class="res-kind">Application interactive</span>
+  </span>
+</a></div></section>
+    <nav class="pager">
+      <a class="pg-prev" href="../correction/"><span class="pg-label">← Précédent</span><span class="pg-title">Correction</span></a>
+      <a class="pg-next" href="../prototype-arduino/"><span class="pg-label">Suivant →</span><span class="pg-title">prototype Arduino</span></a>
+    </nav>
+  </article>
+</div>
+</main>
+<footer class="site-footer">
+  <div class="wrap footer-grid">
+    <div>
+      <h4>Technologie &amp; SNT</h4>
+      <p>Site pédagogique regroupant les cours, activités et ressources de Technologie du collège et de SNT du lycée.</p>
+    </div>
+    <div>
+      <h4>Niveaux</h4>
+      <ul>
+        <li><a href="../../../5eme/">5ème</a></li>
+        <li><a href="../../../4eme/">4ème</a></li>
+        <li><a href="../../../3eme/">3ème</a></li>
+        <li><a href="../../../snt/">2nde SNT</a></li>
+        <li><a href="../../../sicit/">SI · CIT</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Références</h4>
+      <ul>
+        <li><a href="https://eduscol.education.fr/2098/technologie-au-cycle-4" target="_blank" rel="noopener">Programme de Technologie (Eduscol)</a></li>
+        <li><a href="https://eduscol.education.fr/3016/sciences-numeriques-et-technologie-au-lycee" target="_blank" rel="noopener">Programme SNT (Eduscol)</a></li>
+        <li><a href="https://pix.fr" target="_blank" rel="noopener">Pix — compétences numériques</a></li>
+        <li><a href="https://sites.google.com/view/lmtechno25" target="_blank" rel="noopener">Site d'origine (Google Sites)</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="wrap footer-bottom">
+    <span>© 2025-2026 M. Eddy Bachaalany · Lycée Montaigne, Beit Chabab</span>
+    <span>Cours de Technologie collège &amp; SNT lycée</span>
+  </div>
+</footer>
+<div class="search-overlay" id="search-overlay" role="dialog" aria-label="Recherche">
+  <div class="search-panel">
+    <div class="search-input-row">
+      <span>🔍</span>
+      <input id="search-input" type="search" placeholder="Rechercher une séquence, une séance, une notion…" autocomplete="off">
+      <kbd>Échap</kbd>
+    </div>
+    <div class="search-results" id="search-results"></div>
+  </div>
+</div>
+<button class="back-to-top" id="back-to-top" type="button" aria-label="Retour en haut">↑</button>
+<script src="../../../assets/client.js" defer></script>
+</body>
+</html>

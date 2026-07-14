@@ -23,36 +23,88 @@ const SITE_PREFIX = /^Les cours de technologie et de SNT par M\.?\s?Eddy Bachaal
 
 const SECTIONS = [
   {
-    id: "5eme-2025", slug: "5eme-2025", file: "5eme-2025.json",
-    label: "5ème", short: "5e", year: "2025-2026", archived: false,
+    id: "5eme", slug: "5eme", file: "5eme.json",
+    label: "5ème", short: "5e", year: "", archived: false,
     color: "#0d9268", colorSoft: "#e2f6ee",
-    tagline: "Programme 2025-2026 — cybersécurité et culture numérique.",
+    tagline: "Cybersécurité, systèmes automatiques, habitat, programmation et ASSR.",
     rootPath: "5ème-2025-2026",
     sequences: [
       {
         src: "5ème-2025-2026/séquence-1-cybersécurité-2025-2026",
-        slug: "sequence-1-cybersecurite", eyebrow: "Séquence 1", title: "Cybersécurité",
+        slug: "sequence-1-cybersecurite", eyebrow: "Séquence 1", year: "2025-2026",
+        title: "Cybersécurité",
         tagline: "Exploiter les outils numériques, protéger ses données et agir face à la cyberviolence.",
       },
+      { src: "5ème/séquence-1-préserver-les-ressources", slug: "sequence-1-preserver-les-ressources", eyebrow: "Séquence 1", year: "2020-2024", title: "Préserver les ressources",
+        tagline: "Le tri des déchets et une application smartphone pour aider les usagers." },
+      { src: "5ème/séquence-2-éclairage-automatique", slug: "sequence-2-eclairage-automatique", eyebrow: "Séquence 2", year: "2020-2024", title: "Éclairage automatique",
+        tagline: "Capteurs, actionneurs et programmation d'un système automatique." },
+      { src: "5ème/séquence-3-vivre-dans-une-boite", slug: "sequence-3-vivre-dans-une-boite", eyebrow: "Séquence 3", year: "2020-2024", title: "Vivre dans une boîte",
+        tagline: "Concevoir un habitat container : cahier des charges, solutions techniques, modélisation 3D." },
+      { src: "5ème/séquence-4-animal-sounds-for-kids", slug: "sequence-4-animal-sounds", eyebrow: "Séquence 4", year: "2020-2024", title: "Animal sounds for kids",
+        tagline: "Projet de programmation d'une application sonore pour enfants." },
+      { src: "5ème/eval-assr1", slug: "assr-1", eyebrow: "Évaluation", year: "", title: "ASSR 1",
+        tagline: "Préparation et évaluations pour l'attestation scolaire de sécurité routière (niveau 1)." },
     ],
   },
   {
-    id: "4eme-2025", slug: "4eme-2025", file: "4eme-2025.json",
-    label: "4ème", short: "4e", year: "2025-2026", archived: false,
+    id: "4eme", slug: "4eme", file: "4eme.json",
+    label: "4ème", short: "4e", year: "", archived: false,
     color: "#2050d0", colorSoft: "#e7edfc",
-    tagline: "Programme 2025-2026 — intelligence artificielle générative et sécurité des données.",
+    tagline: "IA générative, réseaux, objets connectés, micro:bit et Arduino.",
     rootPath: "4ème-2025-2026",
     sequences: [
       {
         src: "4ème-2025-2026/séquence-0lia-générative-comme-assistant-personnel",
-        slug: "sequence-0-ia-generative", eyebrow: "Séquence 0", title: "L'IA générative comme assistant personnel",
+        slug: "sequence-0-ia-generative", eyebrow: "Séquence 0", year: "2025-2026",
+        title: "L'IA générative comme assistant personnel",
         tagline: "Découvrir l'IA générative et l'utiliser de façon pertinente et responsable.",
       },
       {
         src: "4ème-2025-2026/séquence-1-intelligence-artificielle-générative-la-sécurité-des-données",
-        slug: "sequence-1-ia-securite", eyebrow: "Séquence 1", title: "IA générative et sécurité des données",
+        slug: "sequence-1-ia-securite", eyebrow: "Séquence 1", year: "2025-2026",
+        title: "IA générative et sécurité des données",
         tagline: "Objets connectés, données personnelles et usage du numérique sans danger.",
       },
+      { src: "4ème/séquence-1-le-réseau-informatique", slug: "sequence-1-reseau-informatique", eyebrow: "Séquence 1", year: "2020-2024", title: "Le réseau informatique",
+        tagline: "Découvrir le réseau du collège, les adresses IP et le partage de ressources." },
+      { src: "4ème/séquence-2-portail-automatisé", slug: "sequence-2-portail-automatise", eyebrow: "Séquence 2", year: "2020-2024", title: "Portail automatisé",
+        tagline: "Étude du besoin et des contraintes d'un portail automatique." },
+      { src: "4ème/séquence-3-les-objets-connectés", slug: "sequence-3-objets-connectes", eyebrow: "Séquence 3", year: "2020-2024", title: "Les objets connectés",
+        tagline: "Piloter un objet technique avec un smartphone." },
+      { src: "4ème/séquence-4-programmer-un-ordinateur-de-poche", slug: "sequence-4-microbit", eyebrow: "Séquence 4", year: "2020-2024", title: "Programmer un ordinateur de poche",
+        tagline: "Défis de programmation avec la carte micro:bit." },
+      { src: "4ème/séquence-5-comment-simuler-le-fonctionnement-dun-feu-tricolore-arduino", slug: "sequence-5-feu-tricolore-arduino", eyebrow: "Séquence 5", year: "2020-2024", title: "Feu tricolore avec Arduino",
+        tagline: "Simuler le fonctionnement d'un feu tricolore : structure, algorithme et programmation." },
+      { src: "4ème/séquence-6-serre-autonome", slug: "sequence-6-serre-autonome", eyebrow: "Séquence 6", year: "2020-2024", title: "Serre autonome",
+        tagline: "Analyse fonctionnelle, modélisation 3D et programmation d'une serre autonome." },
+      { src: "4ème/chaines-fonctionnelles", slug: "chaines-fonctionnelles", eyebrow: "Compléments", year: "", title: "Chaînes fonctionnelles",
+        tagline: "Exercices et corrections sur les chaînes d'information et d'énergie." },
+      { src: "4ème/olympiades-informatique", slug: "olympiades-informatique", eyebrow: "Concours", year: "", title: "Olympiades d'informatique",
+        tagline: "S'entraîner avec les épreuves des olympiades d'informatique." },
+    ],
+  },
+  {
+    id: "3eme", slug: "3eme", file: "3eme.json",
+    label: "3ème", short: "3e", year: "", archived: false,
+    color: "#7c3aed", colorSoft: "#f1e9fe",
+    tagline: "Objets connectés, intelligence artificielle, réseaux et préparation au DNB.",
+    rootPath: "3ème",
+    sequences: [
+      { src: "3ème/séquence-1-la-poubelle-connectée", slug: "sequence-1-poubelle-connectee", eyebrow: "Séquence 1", year: "2020-2024", title: "La poubelle connectée",
+        tagline: "Fonctionnement, modélisation 3D, prototype Arduino et simulation Tinkercad." },
+      { src: "3ème/séquence-2-intelligence-artificielle", slug: "sequence-2-intelligence-artificielle", eyebrow: "Séquence 2", year: "2020-2024", title: "Intelligence artificielle",
+        tagline: "Comprendre l'IA et entraîner un modèle avec Teachable Machine." },
+      { src: "3ème/séquence-3-réseau-informatique", slug: "sequence-3-reseau-informatique", eyebrow: "Séquence 3", year: "2020-2024", title: "Réseau informatique",
+        tagline: "Architecture des réseaux, du domicile à Internet." },
+      { src: "3ème/assr2-pix", slug: "assr-2-pix", eyebrow: "Évaluation", year: "", title: "ASSR 2 · Pix",
+        tagline: "Préparation aux certifications ASSR 2 et Pix." },
+      { src: "3ème/sessions-dnb", slug: "sessions-dnb", eyebrow: "DNB", year: "", title: "Sessions DNB",
+        tagline: "Préparation à l'épreuve de sciences du brevet." },
+      { src: "3ème/chaines-fonctionnelles", slug: "chaines-fonctionnelles", eyebrow: "Compléments", year: "", title: "Chaînes fonctionnelles",
+        tagline: "Synthèse sur les chaînes d'information et d'énergie." },
+      { src: "3ème/fonctions-techniques-solutions-techniques", slug: "fonctions-solutions-techniques", eyebrow: "Compléments", year: "", title: "Fonctions et solutions techniques",
+        tagline: "Distinguer fonction technique et solution technique." },
     ],
   },
   {
@@ -82,73 +134,6 @@ const SECTIONS = [
     rootPath: "sicit",
     sequences: [],
   },
-  {
-    id: "arch-5eme", slug: "archives/5eme", file: "arch-5eme.json",
-    label: "5ème", short: "5e", year: "2020-2024", archived: true,
-    color: "#0d9268", colorSoft: "#e2f6ee",
-    tagline: "Séquences 2020-2024 : tri des déchets, systèmes automatiques, habitat et programmation.",
-    rootPath: "5ème",
-    sequences: [
-      { src: "5ème/séquence-1-préserver-les-ressources", slug: "sequence-1-preserver-les-ressources", eyebrow: "Séquence 1", title: "Préserver les ressources",
-        tagline: "Le tri des déchets et une application smartphone pour aider les usagers." },
-      { src: "5ème/séquence-2-éclairage-automatique", slug: "sequence-2-eclairage-automatique", eyebrow: "Séquence 2", title: "Éclairage automatique",
-        tagline: "Capteurs, actionneurs et programmation d'un système automatique." },
-      { src: "5ème/séquence-3-vivre-dans-une-boite", slug: "sequence-3-vivre-dans-une-boite", eyebrow: "Séquence 3", title: "Vivre dans une boîte",
-        tagline: "Concevoir un habitat container : cahier des charges, solutions techniques, modélisation 3D." },
-      { src: "5ème/séquence-4-animal-sounds-for-kids", slug: "sequence-4-animal-sounds", eyebrow: "Séquence 4", title: "Animal sounds for kids",
-        tagline: "Projet de programmation d'une application sonore pour enfants." },
-      { src: "5ème/eval-assr1", slug: "assr-1", eyebrow: "Évaluation", title: "ASSR 1",
-        tagline: "Préparation et évaluations pour l'attestation scolaire de sécurité routière (niveau 1)." },
-    ],
-  },
-  {
-    id: "arch-4eme", slug: "archives/4eme", file: "arch-4eme.json",
-    label: "4ème", short: "4e", year: "2020-2024", archived: true,
-    color: "#2050d0", colorSoft: "#e7edfc",
-    tagline: "Séquences 2020-2024 : réseaux, automatismes, micro:bit et Arduino.",
-    rootPath: "4ème",
-    sequences: [
-      { src: "4ème/séquence-1-le-réseau-informatique", slug: "sequence-1-reseau-informatique", eyebrow: "Séquence 1", title: "Le réseau informatique",
-        tagline: "Découvrir le réseau du collège, les adresses IP et le partage de ressources." },
-      { src: "4ème/séquence-2-portail-automatisé", slug: "sequence-2-portail-automatise", eyebrow: "Séquence 2", title: "Portail automatisé",
-        tagline: "Étude du besoin et des contraintes d'un portail automatique." },
-      { src: "4ème/séquence-3-les-objets-connectés", slug: "sequence-3-objets-connectes", eyebrow: "Séquence 3", title: "Les objets connectés",
-        tagline: "Piloter un objet technique avec un smartphone." },
-      { src: "4ème/séquence-4-programmer-un-ordinateur-de-poche", slug: "sequence-4-microbit", eyebrow: "Séquence 4", title: "Programmer un ordinateur de poche",
-        tagline: "Défis de programmation avec la carte micro:bit." },
-      { src: "4ème/séquence-5-comment-simuler-le-fonctionnement-dun-feu-tricolore-arduino", slug: "sequence-5-feu-tricolore-arduino", eyebrow: "Séquence 5", title: "Feu tricolore avec Arduino",
-        tagline: "Simuler le fonctionnement d'un feu tricolore : structure, algorithme et programmation." },
-      { src: "4ème/séquence-6-serre-autonome", slug: "sequence-6-serre-autonome", eyebrow: "Séquence 6", title: "Serre autonome",
-        tagline: "Analyse fonctionnelle, modélisation 3D et programmation d'une serre autonome." },
-      { src: "4ème/chaines-fonctionnelles", slug: "chaines-fonctionnelles", eyebrow: "Compléments", title: "Chaînes fonctionnelles",
-        tagline: "Exercices et corrections sur les chaînes d'information et d'énergie." },
-      { src: "4ème/olympiades-informatique", slug: "olympiades-informatique", eyebrow: "Concours", title: "Olympiades d'informatique",
-        tagline: "S'entraîner avec les épreuves des olympiades d'informatique." },
-    ],
-  },
-  {
-    id: "arch-3eme", slug: "archives/3eme", file: "arch-3eme.json",
-    label: "3ème", short: "3e", year: "2020-2024", archived: true,
-    color: "#7c3aed", colorSoft: "#f1e9fe",
-    tagline: "Séquences 2020-2024 : objets connectés, intelligence artificielle, réseaux et DNB.",
-    rootPath: "3ème",
-    sequences: [
-      { src: "3ème/séquence-1-la-poubelle-connectée", slug: "sequence-1-poubelle-connectee", eyebrow: "Séquence 1", title: "La poubelle connectée",
-        tagline: "Fonctionnement, modélisation 3D, prototype Arduino et simulation Tinkercad." },
-      { src: "3ème/séquence-2-intelligence-artificielle", slug: "sequence-2-intelligence-artificielle", eyebrow: "Séquence 2", title: "Intelligence artificielle",
-        tagline: "Comprendre l'IA et entraîner un modèle avec Teachable Machine." },
-      { src: "3ème/séquence-3-réseau-informatique", slug: "sequence-3-reseau-informatique", eyebrow: "Séquence 3", title: "Réseau informatique",
-        tagline: "Architecture des réseaux, du domicile à Internet." },
-      { src: "3ème/assr2-pix", slug: "assr-2-pix", eyebrow: "Évaluation", title: "ASSR 2 · Pix",
-        tagline: "Préparation aux certifications ASSR 2 et Pix." },
-      { src: "3ème/sessions-dnb", slug: "sessions-dnb", eyebrow: "DNB", title: "Sessions DNB",
-        tagline: "Préparation à l'épreuve de sciences du brevet." },
-      { src: "3ème/chaines-fonctionnelles", slug: "chaines-fonctionnelles", eyebrow: "Compléments", title: "Chaînes fonctionnelles",
-        tagline: "Synthèse sur les chaînes d'information et d'énergie." },
-      { src: "3ème/fonctions-techniques-solutions-techniques", slug: "fonctions-solutions-techniques", eyebrow: "Compléments", title: "Fonctions et solutions techniques",
-        tagline: "Distinguer fonction technique et solution technique." },
-    ],
-  },
 ];
 
 /* ================= Table de correspondance des URLs ================= */
@@ -169,6 +154,13 @@ function registerUrls() {
     }
   }
   urlMap.set("home", "");
+  // anciens chemins de niveaux -> nouvelles sections fusionnées
+  urlMap.set("5ème", "5eme/");
+  urlMap.set("5ème-2025-2026", "5eme/");
+  urlMap.set("4ème", "4eme/");
+  urlMap.set("4ème-2025-2026", "4eme/");
+  urlMap.set("3ème", "3eme/");
+  urlMap.set("2nde-snt", "snt/");
 }
 
 /* ================= Aides ================= */
@@ -426,6 +418,7 @@ for (const sec of SECTIONS) {
     const seq = {
       slug: seqDef.slug,
       eyebrow: seqDef.eyebrow,
+      year: seqDef.year || "",
       title: seqDef.title,
       shortTitle: seqDef.title,
       tagline: seqDef.tagline,

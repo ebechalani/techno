@@ -46,6 +46,65 @@ function md(src) {
   return marked.parse(src, { renderer, mangle: false, headerIds: false });
 }
 
+/**
+ * Rend une page interactive : les lignes de pointillés (zones de réponse
+ * des fiches d'activité) deviennent des champs de saisie que l'élève peut
+ * remplir ; ses réponses sont enregistrées dans son navigateur.
+ */
+function interactivize(html) {
+  let idx = 0;
+  const out = html.replace(/(?:<p>[\s…]*…[\s…]*<\/p>\s*)+/g, (m) => {
+    const count = (m.match(/<p>/g) || []).length;
+    const rows = Math.min(1 + count * 2, 8);
+    return `<div class="answer-field">
+  <textarea rows="${rows}" data-answer-idx="${idx++}" placeholder="✏️ Écris ta réponse ici…" aria-label="Zone de réponse de l'élève"></textarea>
+</div>\n`;
+  });
+  return { html: out, fields: idx };
+}
+
+/** QCM auto-corrigés d'une page (définis dans content/quiz/<section>.json). */
+function renderQuiz(quiz) {
+  if (!quiz || !quiz.length) return "";
+  const qHtml = quiz
+    .map((q, i) => {
+      const opts = q.options
+        .map(
+          (o, j) => `
+        <label class="qq-opt"><input type="radio" name="q${i}" value="${j}"><span>${esc(o)}</span></label>`
+        )
+        .join("");
+      return `
+    <div class="quiz-q" data-ok="${q.answer}"${q.explain ? ` data-explain="${esc(q.explain)}"` : ""}>
+      <p class="qq-text">${i + 1}. ${esc(q.q)}</p>
+      <div class="qq-opts">${opts}
+      </div>
+      <button class="btn btn-ghost qq-check" type="button">Vérifier ma réponse</button>
+      <div class="qq-feedback" aria-live="polite"></div>
+    </div>`;
+    })
+    .join("\n");
+  return `
+<section class="quiz" id="quiz">
+  <h2>🧠 Teste tes connaissances</h2>
+  <p class="quiz-hint">Réponds aux questions puis clique sur « Vérifier » — la correction s'affiche aussitôt.</p>
+  ${qHtml}
+  <div class="quiz-score" aria-live="polite"></div>
+</section>`;
+}
+
+/** Barre d'outils élève (pages avec zones de réponse ou quiz). */
+function studentBar() {
+  return `
+<div class="student-bar">
+  <span class="sb-info">💾 Tes réponses sont enregistrées automatiquement sur cet appareil.</span>
+  <span class="sb-actions">
+    <button class="btn btn-ghost btn-sm" id="print-answers" type="button">🖨 Imprimer / PDF</button>
+    <button class="btn btn-ghost btn-sm" id="clear-answers" type="button">🗑 Tout effacer</button>
+  </span>
+</div>`;
+}
+
 /** Résout les chemins internes (images auto-hébergées, liens ROOT/) selon la profondeur. */
 function relativize(html, rel) {
   return html
@@ -168,22 +227,13 @@ function renderResources(resources, { heading = "Documents de la séance" } = {}
 /* ---------------- Gabarit de page ---------------- */
 
 function navHTML(site, rel, currentSectionId) {
-  const cur = site.sections.filter((s) => !s.archived);
-  const arch = site.sections.filter((s) => s.archived);
   const link = (s) =>
     `<a href="${rel}${s.slug}/" style="--dot:${s.color}"${s.id === currentSectionId ? ' aria-current="true"' : ""}>${esc(s.label)}${s.year ? ` <small>· ${esc(s.year)}</small>` : ""}</a>`;
 
   return `
 <nav class="main-nav" id="main-nav" aria-label="Navigation principale">
   <a href="${rel}index.html"${currentSectionId === "home" ? ' aria-current="true"' : ""}>Accueil</a>
-  ${cur.map(link).join("\n  ")}
-  <div class="nav-group">
-    <button type="button" aria-expanded="false">Archives</button>
-    <div class="nav-menu">
-      <div class="nav-menu-label">Programmes 2020-2024</div>
-      ${arch.map((s) => `<a href="${rel}${s.slug}/"><span class="dot" style="background:${s.color}"></span>${esc(s.label)}</a>`).join("\n      ")}
-    </div>
-  </div>
+  ${site.sections.map(link).join("\n  ")}
 </nav>`;
 }
 
@@ -202,7 +252,7 @@ function layout({ site, rel, title, description, body, sectionId, extraHead = ""
 <link rel="icon" href="${rel}assets/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lexend:wght@500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lexend:wght@500;600;700;800&family=Caveat:wght@500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="${rel}assets/styles.css">
 <script>
 (function(){try{var t=localStorage.getItem("lmtechno-theme");if(!t)t=window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light";document.documentElement.setAttribute("data-theme",t);}catch(e){}})();
@@ -241,8 +291,7 @@ ${body}
     <div>
       <h4>Niveaux</h4>
       <ul>
-        ${site.sections.filter((s) => !s.archived).map((s) => `<li><a href="${rel}${s.slug}/">${esc(s.label)} ${s.year ? "· " + esc(s.year) : ""}</a></li>`).join("\n        ")}
-        <li><a href="${rel}${site.sections.find((s) => s.archived)?.slug.split("/")[0] || "archives"}/">Archives 2020-2024</a></li>
+        ${site.sections.map((s) => `<li><a href="${rel}${s.slug}/">${esc(s.label)}${s.year ? " · " + esc(s.year) : ""}</a></li>`).join("\n        ")}
       </ul>
     </div>
     <div>
@@ -332,8 +381,7 @@ function sidebarHTML(site, section, rel, sectionRel, activeSeq, activePage) {
 
 function renderHome(site, sections) {
   const rel = "./";
-  const current = sections.filter((s) => !s.meta.archived);
-  const archived = sections.filter((s) => s.meta.archived);
+  const current = sections;
 
   const levelCard = (s) => {
     const seqCount = s.data.sequences.length;
@@ -358,7 +406,6 @@ function renderHome(site, sections) {
     <p class="lead">${esc(site.heroText)}</p>
     <div class="hero-actions">
       ${current.map((s) => `<a class="btn btn-primary" href="${rel}${s.meta.slug}/" style="background:${s.meta.color}">${esc(s.meta.label)}${s.meta.year ? " · " + esc(s.meta.year) : ""}</a>`).join("\n      ")}
-      <a class="btn btn-ghost" href="#archives">Archives des cours</a>
     </div>
   </div>
 </section>
@@ -366,8 +413,8 @@ function renderHome(site, sections) {
 <section class="section">
   <div class="wrap">
     <div class="section-head">
-      <h2>Programmes en cours · ${esc(site.schoolYear)}</h2>
-      <span class="sub">Cliquez sur un niveau pour accéder aux séquences</span>
+      <h2>Les niveaux</h2>
+      <span class="sub">Cliquez sur un niveau pour accéder à toutes ses séquences</span>
     </div>
     <div class="grid grid-levels">
       ${current.map(levelCard).join("\n      ")}
@@ -386,18 +433,6 @@ function renderHome(site, sections) {
     </div>
     ${renderResources(site.programmeResources, { heading: "Documents officiels et présentations" })}
   </div>
-</section>
-
-<section class="section" id="archives" style="padding-top:0">
-  <div class="wrap">
-    <div class="section-head">
-      <h2>Archives des cours · 2020-2024</h2>
-      <span class="sub">Séquences des années précédentes, toujours consultables</span>
-    </div>
-    <div class="grid grid-levels">
-      ${archived.map(levelCard).join("\n      ")}
-    </div>
-  </div>
 </section>`;
 
   write(
@@ -414,7 +449,7 @@ function renderSection(site, meta, section) {
     const others = seq.pages.length - seances;
     return `
     <a class="seq-card" href="./${seq.slug}/" style="--accent:${meta.color}">
-      <span class="seq-num">${esc(seq.eyebrow || `Séquence ${i + 1}`)}</span>
+      <span class="seq-num">${esc(seq.eyebrow || `Séquence ${i + 1}`)}${seq.year ? ` <span class="seq-year">· ${esc(seq.year)}</span>` : ""}</span>
       <h3>${esc(seq.title)}</h3>
       <p>${esc(seq.tagline || "")}</p>
       <span class="seq-foot">
@@ -430,7 +465,6 @@ ${breadcrumbs(rel, [{ label: `${meta.label}${meta.year ? " · " + meta.year : ""
   <div class="page-head">
     <div class="kicker">
       <span class="badge" style="--badge-bg:${meta.colorSoft};--badge-fg:${meta.color}">${esc(meta.short)}</span>
-      ${meta.archived ? '<span class="badge badge-arch">🗄 Archive 2020-2024</span>' : `<span class="badge">Année ${esc(meta.year || site.schoolYear)}</span>`}
     </div>
     <h1>${esc(meta.label)}</h1>
     <p class="desc">${esc(section.tagline || "")}</p>
@@ -483,7 +517,7 @@ ${breadcrumbs(rel, [
       <div class="kicker">
         <span class="badge" style="--badge-bg:${meta.colorSoft};--badge-fg:${meta.color}">${esc(meta.short)}</span>
         <span class="badge">${esc(seq.eyebrow || `Séquence ${seqIndex + 1}`)}</span>
-        ${meta.archived ? '<span class="badge badge-arch">🗄 Archive</span>' : ""}
+        ${seq.year ? `<span class="badge badge-arch">${esc(seq.year)}</span>` : ""}
       </div>
       <h1>${esc(seq.title)}</h1>
       ${seq.tagline ? `<p class="desc">${esc(seq.tagline)}</p>` : ""}
@@ -509,6 +543,7 @@ function renderPage(site, meta, section, seq, page, prev, next) {
   const depth = meta.slug.split("/").length + 2;
   const rel = "../".repeat(depth);
   const sectionRel = "../../";
+  const interactive = interactivize(md(page.content_md));
 
   const pager =
     prev || next
@@ -531,15 +566,17 @@ ${breadcrumbs(rel, [
       <div class="kicker">
         <span class="badge" style="--badge-bg:${meta.colorSoft};--badge-fg:${meta.color}">${esc(meta.short)}</span>
         ${pageKindBadge(page) || `<span class="badge">${esc(seq.shortTitle || "Séquence")}</span>`}
-        ${meta.archived ? '<span class="badge badge-arch">🗄 Archive</span>' : ""}
+        ${seq.year ? `<span class="badge badge-arch">${esc(seq.year)}</span>` : ""}
       </div>
       <h1>${esc(page.title)}</h1>
       ${page.tagline ? `<p class="desc">${esc(page.tagline)}</p>` : ""}
     </div>
     ${page.objectifs_md ? `<div class="callout callout-objectif"><span class="co-icon">🎯</span><div class="co-body"><div class="co-title">Objectifs</div>${md(page.objectifs_md)}</div></div>` : ""}
+    ${interactive.fields || page.quiz?.length ? studentBar() : ""}
     <div class="prose">
-      ${md(page.content_md)}
+      ${interactive.html}
     </div>
+    ${renderQuiz(page.quiz)}
     ${renderResources(page.resources)}
     ${pager}
   </article>
@@ -558,7 +595,7 @@ function buildSearchIndex(site, sections) {
   for (const { meta, data } of sections) {
     items.push({
       title: `${meta.label} ${meta.year || ""}`.trim(),
-      path: meta.archived ? "Archives" : "Niveaux",
+      path: "Niveaux",
       url: `${meta.slug}/`,
       text: stripMd(data.tagline),
     });
@@ -599,37 +636,6 @@ ${urls.map((u) => `  <url><loc>${u}</loc></url>`).join("\n")}
   write("robots.txt", `User-agent: *\nAllow: /\nSitemap: ${SITE_URL}sitemap.xml\n`);
 }
 
-function renderArchivesHub(site, sections) {
-  const rel = "../";
-  const archived = sections.filter((s) => s.meta.archived);
-  const card = (s) => {
-    const seqCount = s.data.sequences.length;
-    return `
-    <a class="level-card" href="${rel}${s.meta.slug}/" style="--card-accent:${s.meta.color};--card-accent-soft:${s.meta.colorSoft}">
-      <span class="lvl-badge">${esc(s.meta.short)}</span>
-      <h3>${esc(s.meta.label)}</h3>
-      <p>${esc(s.data.tagline || "")}</p>
-      <span class="meta">${seqCount} séquence${seqCount > 1 ? "s" : ""}</span>
-    </a>`;
-  };
-  const body = `
-${breadcrumbs(rel, [{ label: "Archives 2020-2024", href: "./" }])}
-<div class="wrap">
-  <div class="page-head">
-    <div class="kicker"><span class="badge badge-arch">🗄 Archives</span></div>
-    <h1>Archives des cours · 2020-2024</h1>
-    <p class="desc">Les séquences des années précédentes restent consultables : activités, corrections et ressources.</p>
-  </div>
-  <div class="grid grid-levels" style="margin:1.6rem 0 3rem">
-    ${archived.map(card).join("\n    ")}
-  </div>
-</div>`;
-  write(
-    "archives/index.html",
-    layout({ site, rel, title: "Archives 2020-2024", description: "Séquences des années 2020-2024.", body, sectionId: "archives" })
-  );
-}
-
 function render404(site) {
   const body = `
 <section class="section"><div class="wrap" style="text-align:center;padding:4rem 0">
@@ -659,6 +665,20 @@ function main() {
     data: readJSON(path.join(CONTENT, "sections", meta.file)),
   }));
 
+  // Quiz : superposition facultative content/quiz/<id>.json
+  // { "<slug-sequence>/<slug-page>": [ { q, options: [...], answer: index, explain? } ] }
+  for (const { meta, data } of sections) {
+    const quizFile = path.join(CONTENT, "quiz", `${meta.id}.json`);
+    if (!fs.existsSync(quizFile)) continue;
+    const overlay = readJSON(quizFile);
+    for (const seq of data.sequences) {
+      for (const p of seq.pages) {
+        const q = overlay[`${seq.slug}/${p.slug}`];
+        if (q) p.quiz = q;
+      }
+    }
+  }
+
   fs.rmSync(OUT, { recursive: true, force: true });
   fs.mkdirSync(path.join(OUT, "assets"), { recursive: true });
 
@@ -674,7 +694,6 @@ function main() {
   }
 
   renderHome(site, sections);
-  renderArchivesHub(site, sections);
   render404(site);
 
   let pageCount = 2;

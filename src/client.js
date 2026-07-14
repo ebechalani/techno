@@ -166,6 +166,92 @@
     });
   }
 
+  /* ---------- Réponses des élèves (enregistrées dans le navigateur) ---------- */
+  var PAGE_KEY = "lmtechno-rep:" + location.pathname.replace(/\/index\.html$/, "/");
+
+  var answerFields = document.querySelectorAll(".answer-field textarea");
+  if (answerFields.length) {
+    var saved2 = {};
+    try { saved2 = JSON.parse(localStorage.getItem(PAGE_KEY) || "{}"); } catch (e) {}
+    answerFields.forEach(function (ta) {
+      var k = ta.getAttribute("data-answer-idx");
+      if (saved2[k]) {
+        ta.value = saved2[k];
+        ta.parentElement.classList.add("saved");
+        autoGrow(ta);
+      }
+      ta.addEventListener("input", function () {
+        autoGrow(ta);
+        saved2[k] = ta.value;
+        try { localStorage.setItem(PAGE_KEY, JSON.stringify(saved2)); } catch (e) {}
+        ta.parentElement.classList.toggle("saved", ta.value.trim().length > 0);
+      });
+    });
+  }
+
+  function autoGrow(ta) {
+    ta.style.height = "auto";
+    ta.style.height = Math.max(ta.scrollHeight + 4, 60) + "px";
+  }
+
+  var clearBtn = document.getElementById("clear-answers");
+  if (clearBtn) {
+    clearBtn.addEventListener("click", function () {
+      if (!confirm("Effacer toutes tes réponses de cette page ?")) return;
+      try { localStorage.removeItem(PAGE_KEY); } catch (e) {}
+      answerFields.forEach(function (ta) {
+        ta.value = "";
+        ta.parentElement.classList.remove("saved");
+      });
+      document.querySelectorAll(".quiz-q").forEach(function (q) {
+        q.classList.remove("answered-ok", "answered-ko");
+        q.querySelectorAll("input").forEach(function (r) { r.checked = false; });
+        var fb = q.querySelector(".qq-feedback");
+        if (fb) { fb.className = "qq-feedback"; fb.textContent = ""; }
+      });
+    });
+  }
+
+  var printBtn = document.getElementById("print-answers");
+  if (printBtn) printBtn.addEventListener("click", function () { window.print(); });
+
+  /* ---------- Quiz auto-corrigés ---------- */
+  var quizQs = document.querySelectorAll(".quiz-q");
+  quizQs.forEach(function (qEl) {
+    var btn = qEl.querySelector(".qq-check");
+    var fb = qEl.querySelector(".qq-feedback");
+    btn.addEventListener("click", function () {
+      var chosen = qEl.querySelector("input:checked");
+      if (!chosen) {
+        fb.className = "qq-feedback show ko";
+        fb.textContent = "Choisis d'abord une réponse 😉";
+        return;
+      }
+      var ok = Number(chosen.value) === Number(qEl.getAttribute("data-ok"));
+      qEl.classList.remove("answered-ok", "answered-ko");
+      qEl.classList.add(ok ? "answered-ok" : "answered-ko");
+      var explain = qEl.getAttribute("data-explain") || "";
+      fb.className = "qq-feedback show " + (ok ? "ok" : "ko");
+      fb.textContent = ok
+        ? "✅ Bonne réponse !" + (explain ? " " + explain : "")
+        : "❌ Ce n'est pas ça… réessaie !" + (explain ? " Indice : " + explain : "");
+      updateScore();
+    });
+  });
+
+  function updateScore() {
+    var scoreEl = document.querySelector(".quiz-score");
+    if (!scoreEl) return;
+    var total = quizQs.length;
+    var good = document.querySelectorAll(".quiz-q.answered-ok").length;
+    var done = document.querySelectorAll(".quiz-q.answered-ok, .quiz-q.answered-ko").length;
+    if (done === total) {
+      scoreEl.className = "quiz-score show";
+      scoreEl.textContent =
+        "Score : " + good + "/" + total + (good === total ? " 🎉 Excellent !" : good >= total / 2 ? " 👍 Pas mal, tu peux réessayer les questions ratées." : " 💪 Relis la séance et réessaie !");
+    }
+  }
+
   /* ---------- Tableaux défilants sur mobile ---------- */
   document.querySelectorAll(".prose table").forEach(function (t) {
     if (t.parentElement.classList.contains("table-scroll")) return;

@@ -10,6 +10,7 @@
     {
       "slug": "theme-2-internet",
       "eyebrow": "Thème 2",
+      "year": "",
       "title": "Internet",
       "shortTitle": "Internet",
       "tagline": "TCP/IP, routage, DNS et réseaux pair-à-pair.",
@@ -98,6 +99,7 @@
     {
       "slug": "theme-3-web",
       "eyebrow": "Thème 3",
+      "year": "",
       "title": "Le Web",
       "shortTitle": "Le Web",
       "tagline": "Histoire, fonctionnement et écriture des pages web en HTML/CSS.",
@@ -153,6 +155,7 @@
     {
       "slug": "theme-4-photographie",
       "eyebrow": "Thème 4",
+      "year": "",
       "title": "La photographie numérique",
       "shortTitle": "La photographie numérique",
       "tagline": "De l'œil au capteur numérique, formats et traitement des images.",
@@ -186,6 +189,7 @@
     {
       "slug": "theme-5-geolocalisation",
       "eyebrow": "Thème 5",
+      "year": "",
       "title": "Localisation et cartographie",
       "shortTitle": "Localisation et cartographie",
       "tagline": "Bases de la cartographie, géolocalisation par satellite et protocole NMEA.",
@@ -230,6 +234,7 @@
     {
       "slug": "tp-arduino",
       "eyebrow": "TP",
+      "year": "",
       "title": "TP Arduino",
       "shortTitle": "TP Arduino",
       "tagline": "Travaux pratiques d'électronique programmée avec Arduino.",

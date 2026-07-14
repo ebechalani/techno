@@ -45,26 +45,37 @@
   ],
   "sections": [
     {
-      "id": "5eme-2025",
-      "slug": "5eme-2025",
-      "file": "5eme-2025.json",
+      "id": "5eme",
+      "slug": "5eme",
+      "file": "5eme.json",
       "label": "5ème",
       "short": "5e",
-      "year": "2025-2026",
+      "year": "",
       "archived": false,
       "color": "#0d9268",
       "colorSoft": "#e2f6ee"
     },
     {
-      "id": "4eme-2025",
-      "slug": "4eme-2025",
-      "file": "4eme-2025.json",
+      "id": "4eme",
+      "slug": "4eme",
+      "file": "4eme.json",
       "label": "4ème",
       "short": "4e",
-      "year": "2025-2026",
+      "year": "",
       "archived": false,
       "color": "#2050d0",
       "colorSoft": "#e7edfc"
+    },
+    {
+      "id": "3eme",
+      "slug": "3eme",
+      "file": "3eme.json",
+      "label": "3ème",
+      "short": "3e",
+      "year": "",
+      "archived": false,
+      "color": "#7c3aed",
+      "colorSoft": "#f1e9fe"
     },
     {
       "id": "snt",
@@ -87,39 +98,6 @@
       "archived": false,
       "color": "#0d8e9c",
       "colorSoft": "#e0f5f7"
-    },
-    {
-      "id": "arch-5eme",
-      "slug": "archives/5eme",
-      "file": "arch-5eme.json",
-      "label": "5ème",
-      "short": "5e",
-      "year": "2020-2024",
-      "archived": true,
-      "color": "#0d9268",
-      "colorSoft": "#e2f6ee"
-    },
-    {
-      "id": "arch-4eme",
-      "slug": "archives/4eme",
-      "file": "arch-4eme.json",
-      "label": "4ème",
-      "short": "4e",
-      "year": "2020-2024",
-      "archived": true,
-      "color": "#2050d0",
-      "colorSoft": "#e7edfc"
-    },
-    {
-      "id": "arch-3eme",
-      "slug": "archives/3eme",
-      "file": "arch-3eme.json",
-      "label": "3ème",
-      "short": "3e",
-      "year": "2020-2024",
-      "archived": true,
-      "color": "#7c3aed",
-      "colorSoft": "#f1e9fe"
     }
   ]
 }

@@ -1,0 +1,615 @@
+{
+  "id": "4eme",
+  "label": "4ème",
+  "year": "",
+  "archived": false,
+  "tagline": "IA générative, réseaux, objets connectés, micro:bit et Arduino.",
+  "intro_md": "",
+  "resources": [],
+  "sequences": [
+    {
+      "slug": "sequence-0-ia-generative",
+      "eyebrow": "Séquence 0",
+      "year": "2025-2026",
+      "title": "L'IA générative comme assistant personnel",
+      "shortTitle": "L'IA générative comme assistant personnel",
+      "tagline": "Découvrir l'IA générative et l'utiliser de façon pertinente et responsable.",
+      "intro_md": "**Usage et impacts sociétaux du numérique**\n\n**Compétences et connaissances travaillées dans l’activité**\n\n**Thème abordé** **:** Thème 1 - OST Les objets et les systèmes techniques : leurs usages et leurs interactions à découvrir et à analyser\n\n**Attendu de fin de cycle** **:** OST1 - Décrire les liens entre usages et évolutions technologiques des objets et des systèmes techniques\n\n**Thématique** **:** T2-Usages et impacts sociétaux du numérique\n\n**Compétence:** OST10 - Identifier et appliquer des règles pour un usage raisonné des Intelligences Artificielles dans les environnements numériques (Hors programme)\n\n**Critères d’apprentissages**\n\n**N1** – Je sais définir ce qu’est une intelligence artificielle générative et reconnaître les principales limites de l’IA,\n\n**N2** – et je sais expliquer la différence entre une recherche classique sur Internet et une réponse d’une IAG et je sais expliquer pourquoi il est important de relire, vérifier ou reformuler ce que produit l’IA,\n\n**N3** – et je sais écrire un prompt clair pour obtenir une réponse utile en Technologie,\n\n**N4** – et je sais expliquer les risques liés à une mauvaise utilisation de l’IAG (désinformation, triche, dépendance, biais…) et proposer des solutions pour les éviter.",
+      "resources": [],
+      "pages": [
+        {
+          "slug": "seance-1",
+          "kind": "seance",
+          "num": 1,
+          "title": "Séance 1:Utiliser l’IA Générative comme assistant personnel",
+          "shortTitle": "Séance 1",
+          "tagline": "",
+          "content_md": "En salle de cours, deux élèves discutent avant de rendre leur travail.\n\n🗨 **Élève 1 :** \"*J’ai demandé à ChatGPT de me faire tout mon devoir sur l’évolution des téléphones. Il m’a tout rédigé, c’est magique !*\"\n\n🗨 **Élève 2 :** \"*Sérieux ? Moi, j’ai fait une recherche sur Google et j’ai comparé les infos. D’ailleurs, ton devoir parle d’un téléphone invisible… c’est pas un peu bizarre ?*\"\n\n🧑‍🏫 **Le professeur intervient :**\n\n\"*Et si on apprenait à bien utiliser ces nouveaux outils pour qu’ils nous aident vraiment à progresser en Technologie ?*\"\n\n![](assets/img/4eme-2025-2026__sequence-0lia-generative-comme-assistant-personnel__seance-1utiliser-lia-generative-comme-assistant-personnel/01.png)\n\n**Mes constats, mes observations :**\n\n……………………………\n\n……………………………\n\n……………………………\n\n**Mon problème à résoudre**\n\n……………………………\n\n……………………………\n\n……………………………\n\n**Mes idées pour le résoudre**\n\n……………………………\n\n……………………………\n\n……………………………\n\n**Activités** *(niveaux 1 et 2)*\n\n*Avant d’apprendre à écrire un bon prompt, il est essentiel de comprendre ce qu’est réellement une intelligence artificielle générative (IAG), ce qu’elle peut faire… et surtout ce qu’elle ne peut pas faire.*\n\n*Ces premières activités vont t’aider à distinguer l’IAG d’un moteur de recherche, à identifier ses limites, et à repérer les bons usages en Technologie.*\n\n*Tu vas aussi découvrir quelques notions-clés comme « hallucination », « algorithme » ou « prompt », pour mieux dialoguer avec ces outils.*\n\n**QCM/QCU / Associations**\n\n● **Quelle phrase définit le mieux une intelligence artificielle générative ?**\n\nUn moteur de recherche qui donne des liens\n\nUn programme qui fabrique des objets\n\nUn outil capable de créer du contenu (texte, image…) à partir d’une demande\n\nUn robot qui fait les devoirs à notre place\n\n● **Quelles sont les limites de l’IAG ?** *(Plusieurs réponses possibles)*\n\nElle peut donner des réponses fausses\n\nElle connaît tout et ne se trompe jamais\n\nElle consomme de l’énergie pour fonctionner\n\nElle est toujours plus rapide qu’un moteur de recherche\n\n● Associe chaque mot à sa définition : (*Relier les points*)\n\n![](assets/img/4eme-2025-2026__sequence-0lia-generative-comme-assistant-personnel__seance-1utiliser-lia-generative-comme-assistant-personnel/02.png)\n\n**Ressources:**\n\n![](assets/img/4eme-2025-2026__sequence-0lia-generative-comme-assistant-personnel__seance-1utiliser-lia-generative-comme-assistant-personnel/03.png)\n\n[Les grands types d’apprentissage des intelligences artificielles et leurs usages possibles](https://drive.google.com/file/d/1sv3WcEUZeNQ0jQZJGLY13dI6sy5MdMWH/view?usp=drive_link)\n\n![](assets/img/4eme-2025-2026__sequence-0lia-generative-comme-assistant-personnel__seance-1utiliser-lia-generative-comme-assistant-personnel/04.png)\n\n[Les incidences sociétales, notamment l’étude du biais et de l’effet de l’usage d’une intelligence artificielle (IA)](https://drive.google.com/file/d/16ocRYfo8JDrxqE5TcRBuXnNuBOnYk_mn/view?usp=drive_link)\n\n● Affirme si les phrases suivantes sont vraies ou fausses :\n\n*Une vidéo montre un élève qui pose la même question à Google et à une IAG comme ChatGPT.*\n\n![](assets/img/4eme-2025-2026__sequence-0lia-generative-comme-assistant-personnel__seance-1utiliser-lia-generative-comme-assistant-personnel/05.png)\n\n**Activités** *(niveaux* *3* *et* *4**)*\n\n*Maintenant que tu connais les avantages et les limites de l’IA Générative, il faut savoir formuler la bonne requête (Prompt) pour guider la production de l’Intelligence Artificielle.*\n\n**Application - Rédaction de prompt contextualisé**\n\n1. **A partir de la fiche “Créer un prompt efficace avec la méthode**[**ACTIF**](https://actif.numedu.org/) **”, complète le tableau suivant avec une consigne claire à l’IAG :**\n\n*Tu dois interroger une intelligence artificielle pour qu’elle t’aide à* **présenter l’évolution du smartphone** *dans le cadre d’une activité de Technologie.*\n\n![](assets/img/4eme-2025-2026__sequence-0lia-generative-comme-assistant-personnel__seance-1utiliser-lia-generative-comme-assistant-personnel/06.png)\n\n**Ressources:**\n\n![](assets/img/4eme-2025-2026__sequence-0lia-generative-comme-assistant-personnel__seance-1utiliser-lia-generative-comme-assistant-personnel/07.png)\n\n[Assistant d'instruction générative (Prompt)](https://actif.numedu.org/)\n\n![](assets/img/4eme-2025-2026__sequence-0lia-generative-comme-assistant-personnel__seance-1utiliser-lia-generative-comme-assistant-personnel/08.png)\n\n[Créer un prompt efficace avec la méthode ACTIF](https://drive.google.com/file/d/14yDCv_ObzDDmLnIzc2hdgSX61_0vn7Rv/view?usp=drive_link)\n\n**2.** **À partir de tes réponses dans le tableau précédent, rédige ici un prompt complet que tu pourrais entrer dans une IAG comme ChatGPT ou Mistral.**\n\n……………………………\n\n**Question d’analyse (justification)**\n\nUn élève utilise une IAG pour rédiger tout son devoir sur l’évolution des smartphones sans le lire ni le corriger.\n\n**Question :**\n\nQu’est-ce qui peut poser problème s’il ne lit pas la réponse de l’IA ? Que lui conseillerais-tu pour mieux s’en servir?\n\n**Réponse attendue :**\n\n……………………………\n\n**Conseils** **attendus** **:**\n\n……………………………\n\n**Ma synthèse**\n\n**1. Selon toi, en quoi une IAG peut-elle t’aider à mieux travailler en Technologie ?**\n\n→ ……………………………\n\n**2. Que dois-tu toujours faire après avoir utilisé une IAG ? Pourquoi ?**\n\n**→** ……………………………\n\n**Ressources:**\n\n[Les intelligences artificielles génératives (IAG), prompts, avantages et biais (Hors programme)](https://drive.google.com/file/d/1HDnBjgaOmtxlI8gPHPDL5NbjFC3stcNY/view?usp=drive_link)",
+          "resources": [
+            {
+              "kind": "drive-file",
+              "title": "Les grands types d’apprentissage des intelligences artificielles et leurs usages possibles",
+              "url": "https://drive.google.com/file/d/1sv3WcEUZeNQ0jQZJGLY13dI6sy5MdMWH/view?usp=drive_link",
+              "embed": false
+            },
+            {
+              "kind": "drive-file",
+              "title": "Les incidences sociétales, notamment l’étude du biais et de l’effet de l’usage d’une intelligence artificielle (IA)",
+              "url": "https://drive.google.com/file/d/16ocRYfo8JDrxqE5TcRBuXnNuBOnYk_mn/view?usp=drive_link",
+              "embed": false
+            },
+            {
+              "kind": "drive-file",
+              "title": "Créer un prompt efficace avec la méthode ACTIF",
+              "url": "https://drive.google.com/file/d/14yDCv_ObzDDmLnIzc2hdgSX61_0vn7Rv/view?usp=drive_link",
+              "embed": false
+            },
+            {
+              "kind": "drive-file",
+              "title": "Les intelligences artificielles génératives (IAG), prompts, avantages et biais (Hors programme)",
+              "url": "https://drive.google.com/file/d/1HDnBjgaOmtxlI8gPHPDL5NbjFC3stcNY/view?usp=drive_link",
+              "embed": false
+            }
+          ],
+          "srcUrl": "https://sites.google.com/view/lmtechno25/4ème-2025-2026/séquence-0lia-générative-comme-assistant-personnel/séance-1utiliser-lia-générative-comme-assistant-personnel"
+        },
+        {
+          "slug": "seance-1-corr",
+          "kind": "correction",
+          "num": 1,
+          "title": "Séance 1 (correction) : Utiliser l’IA Générative comme assistant personnel",
+          "shortTitle": "Séance 1 — correction",
+          "tagline": "",
+          "content_md": "## Séance 1:Utiliser l’IA Générative comme assistant personnel\n\nEn salle de cours, deux élèves discutent avant de rendre leur travail.\n\n🗨 **Élève 1 :** \"*J’ai demandé à ChatGPT de me faire tout mon devoir sur l’évolution des téléphones. Il m’a tout rédigé, c’est magique !*\"\n\n🗨 **Élève 2 :** \"*Sérieux ? Moi, j’ai fait une recherche sur Google et j’ai comparé les infos. D’ailleurs, ton devoir parle d’un téléphone invisible… c’est pas un peu bizarre ?*\"\n\n🧑‍🏫 **Le professeur intervient :**\n\n\"*Et si on apprenait à bien utiliser ces nouveaux outils pour qu’ils nous aident vraiment à progresser en Technologie ?*\"\n\n![](assets/img/4eme-2025-2026__sequence-0lia-generative-comme-assistant-personnel__seance-1corrutiliser-lia-generative-comme-assistant-personnel/01.png)\n\n**Mes constats, mes observations :**\n\n● Les élèves utilisent de plus en plus des IAG comme ChatGPT sans en comprendre les limites ni savoir s’en servir correctement.\n\n● Ils confondent souvent moteur de recherche et IA générative.\n\n● Certains croient que l’IAG dit toujours la vérité.\n\n● D’autres ne savent pas formuler une demande claire à l’IA …\n\n**Mon problème à résoudre**\n\n**Comment utiliser une intelligence artificielle générative en Technologie de manière efficace, éthique et utile ?**\n\n**Mes idées pour le résoudre**\n\n● On pourrait apprendre à écrire une bonne question (prompt) pour que l’IA comprenne bien ce qu’on cherche.\n\n● On devrait toujours vérifier les réponses de l’IA.\n\n● Il faut que l’IA nous aide, mais pas qu’elle fasse tout à notre place.\n\n● On pourrait comparer ce que dit l’IA avec le cours ou d’autres sources.\n\n● On peut apprendre à repérer quand elle se trompe\n\n…\n\n**Activités** *(niveaux 1 et 2)*\n\n*Avant d’apprendre à écrire un bon prompt, il est essentiel de comprendre ce qu’est réellement une intelligence artificielle générative (IAG), ce qu’elle peut faire… et surtout ce qu’elle ne peut pas faire.*\n\n*Ces premières activités vont t’aider à distinguer l’IAG d’un moteur de recherche, à identifier ses limites, et à repérer les bons usages en Technologie.*\n\n*Tu vas aussi découvrir quelques notions-clés comme « hallucination », « algorithme » ou « prompt », pour mieux dialoguer avec ces outils.*\n\n**QCM/QCU / Associations**\n\n● **Quelle phrase définit le mieux une intelligence artificielle générative ?**\n\nUn moteur de recherche qui donne des liens\n\nUn programme qui fabrique des objets\n\nUn outil capable de créer du contenu (texte, image…) à partir d’une demande\n\nUn robot qui fait les devoirs à notre place\n\n● **Quelles sont les limites de l’IAG ?** *(Plusieurs réponses possibles)*\n\nElle peut donner des réponses fausses\n\nElle connaît tout et ne se trompe jamais\n\nElle consomme de l’énergie pour fonctionner\n\nElle est toujours plus rapide qu’un moteur de recherche\n\n● Associe chaque mot à sa définition : (*Relier les points*)\n\n![](assets/img/4eme-2025-2026__sequence-0lia-generative-comme-assistant-personnel__seance-1corrutiliser-lia-generative-comme-assistant-personnel/02.png)\n\n**Ressources:**\n\n![](assets/img/4eme-2025-2026__sequence-0lia-generative-comme-assistant-personnel__seance-1corrutiliser-lia-generative-comme-assistant-personnel/03.png)\n\n[Les grands types d’apprentissage des intelligences artificielles et leurs usages possibles](https://drive.google.com/file/d/1sv3WcEUZeNQ0jQZJGLY13dI6sy5MdMWH/view?usp=drive_link)\n\n![](assets/img/4eme-2025-2026__sequence-0lia-generative-comme-assistant-personnel__seance-1corrutiliser-lia-generative-comme-assistant-personnel/04.png)\n\n[Les incidences sociétales, notamment l’étude du biais et de l’effet de l’usage d’une intelligence artificielle (IA)](https://drive.google.com/file/d/16ocRYfo8JDrxqE5TcRBuXnNuBOnYk_mn/view?usp=drive_link)\n\n● Affirme si les phrases suivantes sont vraies ou fausses :\n\n*Une vidéo montre un élève qui pose la même question à Google et à une IAG comme ChatGPT.*\n\n![](assets/img/4eme-2025-2026__sequence-0lia-generative-comme-assistant-personnel__seance-1corrutiliser-lia-generative-comme-assistant-personnel/05.png)\n\n**Activités** *(niveaux 3 et 4)*\n\n*Maintenant que tu connais les avantages et les limites de l’IA Générative, il faut savoir formuler la bonne requête (Prompt) pour guider la production de l’Intelligence Artificielle.*\n\n**Application - Rédaction de prompt contextualisé**\n\n1. **A partir de la fiche “Créer un prompt efficace avec la méthode**[**ACTIF**](https://actif.numedu.org/) **”, complète le tableau suivant avec une consigne claire à l’IAG :**\n\n*Tu dois interroger une intelligence artificielle pour qu’elle t’aide à* **présenter l’évolution du smartphone** *dans le cadre d’une activité de Technologie.*\n\n![](assets/img/4eme-2025-2026__sequence-0lia-generative-comme-assistant-personnel__seance-1corrutiliser-lia-generative-comme-assistant-personnel/06.png)\n\n**Ressources:**\n\n![](assets/img/4eme-2025-2026__sequence-0lia-generative-comme-assistant-personnel__seance-1corrutiliser-lia-generative-comme-assistant-personnel/07.png)\n\n[Assistant d'instruction générative (Prompt)](https://actif.numedu.org/)\n\n![](assets/img/4eme-2025-2026__sequence-0lia-generative-comme-assistant-personnel__seance-1corrutiliser-lia-generative-comme-assistant-personnel/08.png)\n\n[Créer un prompt efficace avec la méthode ACTIF](https://drive.google.com/file/d/14yDCv_ObzDDmLnIzc2hdgSX61_0vn7Rv/view?usp=drive_link)\n\n**2.** **À partir de tes réponses dans le tableau précédent, rédige ici un prompt complet que tu pourrais entrer dans une IAG comme ChatGPT ou Mistral.**\n\n✅ Réponse attendue :\n\n\"Tu es mon assistant en Technologie. Je prépare un exposé sur l’évolution du smartphone. Donne-moi les grandes étapes de cette évolution. Utilise un ton simple et clair. Réponds sous forme de liste à puces avec des exemples.\"\n\n**Question d’analyse (justification)**\n\nUn élève utilise une IAG pour rédiger tout son devoir sur l’évolution des smartphones sans le lire ni le corriger.\n\n**Question :**\n\nQu’est-ce qui peut poser problème s’il ne lit pas la réponse de l’IA ? Que lui conseillerais-tu pour mieux s’en servir?\n\n**Réponse attendue :**\n\n● Il peut y avoir des erreurs ou de fausses informations.\n\n● Le texte ne correspond peut-être pas aux attentes du professeur.\n\n● Il ne progresse pas lui-même en Technologie.\n\n**Conseils** **attendus** **:**\n\n● Toujours lire et reformuler la réponse de l’IA.\n\n● Vérifier avec ses connaissances et le cours.\n\n● Utiliser l’IAG comme une aide, pas pour faire tout à sa place.\n\n**Ma synthèse**\n\n**1. Selon toi, en quoi une IAG peut-elle t’aider à mieux travailler en Technologie ?**\n\n→Une IAG peut m’aider à résumer un cours, à reformuler une consigne, ou à m’organiser dans un travail en groupe. Elle me donne des idées, mais je dois toujours vérifier ce qu’elle dit.\n\n**2. Que dois-tu toujours faire après avoir utilisé une IAG ? Pourquoi ?**\n\n**→**Je dois relire, corriger ou reformuler ce que l’IA m’a donné, parce qu’elle peut se tromper ou inventer. Je dois aussi vérifier que c’est bien ce qu’on attend dans le cours.\n\n**Ressources:**\n\n[Les intelligences artificielles génératives (IAG), prompts, avantages et biais (Hors programme)](https://drive.google.com/file/d/1HDnBjgaOmtxlI8gPHPDL5NbjFC3stcNY/view?usp=drive_link)",
+          "resources": [
+            {
+              "kind": "drive-file",
+              "title": "Les grands types d’apprentissage des intelligences artificielles et leurs usages possibles",
+              "url": "https://drive.google.com/file/d/1sv3WcEUZeNQ0jQZJGLY13dI6sy5MdMWH/view?usp=drive_link",
+              "embed": false
+            },
+            {
+              "kind": "drive-file",
+              "title": "Les incidences sociétales, notamment l’étude du biais et de l’effet de l’usage d’une intelligence artificielle (IA)",
+              "url": "https://drive.google.com/file/d/16ocRYfo8JDrxqE5TcRBuXnNuBOnYk_mn/view?usp=drive_link",
+              "embed": false
+            },
+            {
+              "kind": "drive-file",
+              "title": "Créer un prompt efficace avec la méthode ACTIF",
+              "url": "https://drive.google.com/file/d/14yDCv_ObzDDmLnIzc2hdgSX61_0vn7Rv/view?usp=drive_link",
+              "embed": false
+            },
+            {
+              "kind": "drive-file",
+              "title": "Les intelligences artificielles génératives (IAG), prompts, avantages et biais (Hors programme)",
+              "url": "https://drive.google.com/file/d/1HDnBjgaOmtxlI8gPHPDL5NbjFC3stcNY/view?usp=drive_link",
+              "embed": false
+            }
+          ],
+          "srcUrl": "https://sites.google.com/view/lmtechno25/4ème-2025-2026/séquence-0lia-générative-comme-assistant-personnel/séance-1corrutiliser-lia-générative-comme-assistant-personnel"
+        },
+        {
+          "slug": "creer-un-prompt-efficace",
+          "kind": "annexe",
+          "num": null,
+          "title": "Créer un prompt efficace",
+          "shortTitle": "Créer un prompt efficace",
+          "tagline": "",
+          "content_md": "::embed[Créer un prompt efficace avec la méthode ACTIF.PDF](https://drive.google.com/file/d/14yDCv_ObzDDmLnIzc2hdgSX61_0vn7Rv/preview)",
+          "resources": [],
+          "srcUrl": "https://sites.google.com/view/lmtechno25/4ème-2025-2026/séquence-0lia-générative-comme-assistant-personnel/créer-un-prompt-efficace"
+        },
+        {
+          "slug": "prompts-avantages-et-biais",
+          "kind": "annexe",
+          "num": null,
+          "title": "Prompts, avantages et biais",
+          "shortTitle": "Prompts, avantages et biais",
+          "tagline": "",
+          "content_md": "::embed[OST1W-~1.PDF](https://drive.google.com/file/d/1HDnBjgaOmtxlI8gPHPDL5NbjFC3stcNY/preview)",
+          "resources": [],
+          "srcUrl": "https://sites.google.com/view/lmtechno25/4ème-2025-2026/séquence-0lia-générative-comme-assistant-personnel/prompts-avantages-et-biais"
+        }
+      ]
+    },
+    {
+      "slug": "sequence-1-ia-securite",
+      "eyebrow": "Séquence 1",
+      "year": "2025-2026",
+      "title": "IA générative et sécurité des données",
+      "shortTitle": "IA générative et sécurité des données",
+      "tagline": "Objets connectés, données personnelles et usage du numérique sans danger.",
+      "intro_md": "## Séquence 1: Intelligence artificielle générative, la sécurité des données\n\n**Faire un usage raisonné du numérique (Internet, IA Générative, objets communicants)**\n\nPrésentation de la séquence\n\nDans cette séquence, les élèves de 4e apprennent à adopter un usage raisonné des outils numériques du quotidien (Internet, IA générative, objets communicants) en identifiant les risques liés à la cybersécurité et à la cyberviolence, et en appliquant des règles pour protéger leurs données personnelles et leur identité numérique.)\n\nLa séquence sera déclinée en 2 activités :\n\n● Activité 1 : Un lancement de séquence pour faire émerger la problématique générale : « Comment rester en sécurité avec les outils numériques du quotidien ? »\n\n● Activité 2 : Identifier des règles pour utiliser correctement les outils numériques du quotidien : « Comment utiliser Internet, l’IA générative et les objets communicants de manière responsable et sécurisée ? »\n\n● Activité 4 : Evaluation de compétence sur 4 niveaux, associée à la thématique « … » et les compétences détaillées associées.\n\n**Thème abordé :**\n\nThème 1 - OST Les objets et les systèmes techniques : leurs usages et leurs interactions à découvrir et à analyser\n\n**Attendu de fin de cycle :**\n\nOST1 - Décrire les liens entre usages et évolutions technologiques des objets et des systèmes techniques\n\nThématique\n\n**T2-Usages et impacts sociétaux du numérique**\n\nCompétence détaillée\n\nOST14 - Identifier et appliquer les règles pour un usage raisonné des objets communicants et des environnements numériques (propriété intellectuelle, identité numérique, témoins de connexion, géolocalisation) .\n\nConnaissances\n\n[OST1l-Cybersécurité : protection des données personnelles, traces numériques (témoins de connexion, géolocalisation), identification, authentification, respect de la propriété intellectuelle ;](https://nuage01.apps.education.fr/index.php/s/4Xf3zgK2MDmLB2H)\n\n[OST1m-Cyberviolence : usurpation d’identité, usage détourné](https://nuage01.apps.education.fr/index.php/s/PzrdM7WTjLjPbEb)\n\nCritères d’apprentissages\n\nN1 – Je sais identifier, nommer, associer des éléments clés des trois dimensions : objets communicants, Internet, IA générative,\n\nN2 – et je sais expliquer des risques ou des usages, à partir de vidéos et d’exemples concrets,\n\nN3 – et je sais utiliser des connaissances dans une situation concrète liée à la vie des élèves,\n\nN4 – et je sais analyser une situation, justifier un comportement, proposer une amélioration.",
+      "resources": [],
+      "pages": [
+        {
+          "slug": "seance-1",
+          "kind": "seance",
+          "num": 1,
+          "title": "Séance 1:Une maison connectée... mais à quel prix",
+          "shortTitle": "Séance 1",
+          "tagline": "",
+          "content_md": "À la maison, Léo utilise une enceinte connectée pour écouter de la musique, contrôler les lumières et demander de l’aide à une IA générative pour ses devoirs. Il a aussi activé la géolocalisation sur son téléphone pour recevoir des recommandations personnalisées.\n\nUn jour, ses parents reçoivent un message étrange : une personne prétend connaître leur adresse, leurs habitudes, et même des extraits de discussions privées.\n\nLéo ne comprend pas ce qui a pu se passer. Il se souvient pourtant avoir cliqué sur \"Accepter\" lorsqu’on lui a demandé d’autoriser certains paramètres. Il pensait que c’était sans danger.\n\n![](assets/img/4eme-2025-2026__sequence-1-intelligence-artificielle-generative-la-securite-des-donnees__seance-1une-maison-connectee-mais-a-quel-prix/01.png)\n\n**Mes constats, mes observations :**\n\n……………………………\n\n……………………………\n\n……………………………\n\n**Mon problème à résoudre**\n\n……………………………\n\n……………………………\n\n……………………………\n\n**Mes idées pour le résoudre**\n\n……………………………\n\n……………………………\n\n……………………………\n\n**Les idées retenues pour résoudre le problème**\n\n……………………………\n\n……………………………\n\n……………………………",
+          "resources": [],
+          "srcUrl": "https://sites.google.com/view/lmtechno25/4ème-2025-2026/séquence-1-intelligence-artificielle-générative-la-sécurité-des-données/séance-1une-maison-connectée-mais-à-quel-prix"
+        },
+        {
+          "slug": "seance-1-corr",
+          "kind": "correction",
+          "num": 1,
+          "title": "Séance 1 (correction) : Une maison connectée... mais à quel prix",
+          "shortTitle": "Séance 1 — correction",
+          "tagline": "",
+          "content_md": "## Séance 1:Une maison connectée... mais à quel prix?\n\nÀ la maison, Léo utilise une enceinte connectée pour écouter de la musique, contrôler les lumières et demander de l’aide à une IA générative pour ses devoirs. Il a aussi activé la géolocalisation sur son téléphone pour recevoir des recommandations personnalisées.\n\nUn jour, ses parents reçoivent un message étrange : une personne prétend connaître leur adresse, leurs habitudes, et même des extraits de discussions privées.\n\nLéo ne comprend pas ce qui a pu se passer. Il se souvient pourtant avoir cliqué sur \"Accepter\" lorsqu’on lui a demandé d’autoriser certains paramètres. Il pensait que c’était sans danger.\n\n![](assets/img/4eme-2025-2026__sequence-1-intelligence-artificielle-generative-la-securite-des-donnees__seance-1corrune-maison-connectee-mais-a-quel-prix/01.png)\n\n**Mes constats, mes observations :**\n\nMon enceinte connectée m’écoute même quand je parle / On me demande souvent d’activer la géolocalisation / Parfois, je reçois des pubs sur des sujets dont j’ai parlé juste avant avec mes amis.\n\n**Mon problème à résoudre**\n\n**Comment rester en sécurité avec les outils numériques du quotidien ?**\n\n**Mes idées pour le résoudre**\n\nCréer des mots de passe compliqués, ne pas partager mes données, ne pas cliquer sur les pubs, désactiver sa géolocalisation quand je peux, se méfier des messages suspects …\n\n**Les idées retenues pour résoudre le problème**\n\nNe jamais partager d’informations personnelles sensibles (adresse, numéro de téléphone, photos privées) sur des sites ou applis qu’on ne connaît pas",
+          "resources": [],
+          "srcUrl": "https://sites.google.com/view/lmtechno25/4ème-2025-2026/séquence-1-intelligence-artificielle-générative-la-sécurité-des-données/séance-1corrune-maison-connectée-mais-à-quel-prix"
+        },
+        {
+          "slug": "seance-2",
+          "kind": "seance",
+          "num": 2,
+          "title": "Séance 2:Le numérique au quotidien : savoir l’utiliser sans danger.",
+          "shortTitle": "Séance 2",
+          "tagline": "",
+          "content_md": "Aujourd’hui, les collégiens utilisent au quotidien Internet, des assistants IA comme ChatGPT, ou des objets connectés à la maison. Mais que se passe-t-il réellement lorsqu’on accepte des cookies, quand on partage une requête vocale, ou quand on copie une réponse d’IA sans vérifier ?\n\n![](assets/img/4eme-2025-2026__sequence-1-intelligence-artificielle-generative-la-securite-des-donnees__seance-2le-numerique-au-quotidien-savoir-lutiliser-sans-danger/01.png)\n\n**Mes constats, mes observations :**\n\n……………………………\n\n……………………………\n\n……………………………\n\n**Mon problème à résoudre**\n\n……………………………\n\n……………………………\n\n……………………………\n\n**Mes idées pour le résoudre**\n\n……………………………\n\n……………………………\n\n……………………………\n\n**Activités** *(niveaux 1 et 2)*\n\n**QCM/QCU / Associations**\n\n● **Quel outil suivant est une IA générative ?**\n\nGoogle Home\n\nGoogle Translate\n\nChatGPT\n\nWikipédia\n\n● **Quels éléments sont des objets communicants ?**\n\nEnceinte connectée\n\nCalculatrice\n\nMontre connectée\n\nImprimante 3D\n\n● Associe chaque notion à sa définition (*Relier les points*) :\n\n![](assets/img/4eme-2025-2026__sequence-1-intelligence-artificielle-generative-la-securite-des-donnees__seance-2le-numerique-au-quotidien-savoir-lutiliser-sans-danger/02.png)\n\n![](assets/img/4eme-2025-2026__sequence-1-intelligence-artificielle-generative-la-securite-des-donnees__seance-2le-numerique-au-quotidien-savoir-lutiliser-sans-danger/03.png)\n\n![](assets/img/4eme-2025-2026__sequence-1-intelligence-artificielle-generative-la-securite-des-donnees__seance-2le-numerique-au-quotidien-savoir-lutiliser-sans-danger/04.png)\n\n**Ressources:**\n\n![](assets/img/4eme-2025-2026__sequence-1-intelligence-artificielle-generative-la-securite-des-donnees__seance-2le-numerique-au-quotidien-savoir-lutiliser-sans-danger/05.png)\n\n[OST1l-Cybersécurité : protection des données personnelles, traces numériques](https://drive.google.com/file/d/1t7dK2_Psh4RA38y3zOwkLuZg8-F1Mdz0/view?usp=drive_link)\n\n![](assets/img/4eme-2025-2026__sequence-1-intelligence-artificielle-generative-la-securite-des-donnees__seance-2le-numerique-au-quotidien-savoir-lutiliser-sans-danger/06.png)\n\n[OST1m-Cyberviolence : usurpation d’identité, usage détourné](https://drive.google.com/file/d/14fiWosEymgkM_2onqs6zYYx7523014EQ/view?usp=drive_link)\n\n![](assets/img/4eme-2025-2026__sequence-1-intelligence-artificielle-generative-la-securite-des-donnees__seance-2le-numerique-au-quotidien-savoir-lutiliser-sans-danger/07.png)\n\n[C'est quoi la cybersécurité ? Pourquoi c'est important ?](https://dai.ly/x9dvwgq)\n\n![](assets/img/4eme-2025-2026__sequence-1-intelligence-artificielle-generative-la-securite-des-donnees__seance-2le-numerique-au-quotidien-savoir-lutiliser-sans-danger/08.png)\n\n[Quels sont les comportements à adopter sur les réseaux sociaux ?](https://dai.ly/x9j1miq)\n\n**Activités** *(niveaux 3 et 4)*\n\n*Tu dois conseiller un camarade qui utilise une IA générative (comme ChatGPT) pour faire ses devoirs, une enceinte connectée pour piloter ses objets à la maison, et qui laisse son compte Google ouvert sur tous ses appareils.*\n\n**Questions :**\n\n1. **Que peux-tu lui recommander pour sécuriser ses usages ?** (choix multiple)\n\nChoisir un mot de passe long et unique\n\nUtiliser la navigation privée\n\nDemander à l’IA de faire tous les devoirs sans les lire\n\nLire les conditions d’utilisation d’un site ou d’une IA\n\nIgnorer les paramètres de confidentialité\n\n1. **Propose un bon usage d’une IA générative dans un travail scolaire.**\n\n……………………………\n\n1. **Paramètre conseillé à désactiver sur une enceinte connectée pour protéger sa vie privée ?** *(Ressource “Que Choisir” ci-contre)*\n ……………………………\n\n**Question d’analyse (scénario)**\n\nUn élève utilise une IA générative pour produire un texte qu’il remet tel quel au professeur, son enceinte connectée diffuse des informations personnelles à son insu, et il partage son mot de passe sur un jeu en ligne avec un camarade.\n\n**Question :**\n\nQuels sont les risques dans cette situation ? Quelles bonnes pratiques proposerais-tu pour adopter un usage raisonné du numérique dans ces trois cas ?\n\n**Réponse attendue :**\n\n…………………………… * …………………………… *\n\n**Ressources:**\n\n![](assets/img/4eme-2025-2026__sequence-1-intelligence-artificielle-generative-la-securite-des-donnees__seance-2le-numerique-au-quotidien-savoir-lutiliser-sans-danger/09.png)\n\n[Cyber Guide Famille](https://drive.google.com/file/d/1JwwTTe4ejONbrym1mKxd0Rw6v_yC0UA8/view?usp=drive_link)\n\n![](assets/img/4eme-2025-2026__sequence-1-intelligence-artificielle-generative-la-securite-des-donnees__seance-2le-numerique-au-quotidien-savoir-lutiliser-sans-danger/10.png)\n\n[Enceintes connectées, comment protéger sa vie privée ?](https://www.quechoisir.org/conseils-enceintes-connectees-comment-proteger-sa-vie-privee-n69363/?utm_source=chatgpt.com)\n\n**Ma synthèse**\n\n**1. Citer deux objets du quotidien que l’on peut classer comme “objets communicants” :**\n\n→ ……………………………\n\n→ ……………………………\n\n**2. Donner un risque lié à l’usage d’une IA générative sans vérification :**\n\n**→** ……………………………\n\n**3. Citer un paramètre à désactiver sur une enceinte connectée pour mieux protéger sa vie privée :**\n\n→ ……………………………\n\n**4. À ton avis, quelle est la règle la plus importante à retenir pour un usage raisonné du numérique ?**\n\n→ ……………………………\n\n**Ressources:**\n\n- [Cybersecurite-_-protection-des-donnees-personnelles-traces-numeriques-identification-authentification-respect-de-la-propriete-intellectuelle.pdf](https://drive.google.com/file/d/1Q34KIsR6oMlPs5iMaO9uRIHTcis7c-AY/view?usp=drive_link)\n\n- [Cyberviolence : usurpation d’identité, usage détourné](https://drive.google.com/file/d/1Pebl76zQWlpMyVS4xMOdUMeJhRJZWO9t/view?usp=drive_link)",
+          "resources": [
+            {
+              "kind": "drive-file",
+              "title": "OST1l-Cybersécurité : protection des données personnelles, traces numériques",
+              "url": "https://drive.google.com/file/d/1t7dK2_Psh4RA38y3zOwkLuZg8-F1Mdz0/view?usp=drive_link",
+              "embed": false
+            },
+            {
+              "kind": "drive-file",
+              "title": "OST1m-Cyberviolence : usurpation d’identité, usage détourné",
+              "url": "https://drive.google.com/file/d/14fiWosEymgkM_2onqs6zYYx7523014EQ/view?usp=drive_link",
+              "embed": false
+            },
+            {
+              "kind": "drive-file",
+              "title": "Cyber Guide Famille",
+              "url": "https://drive.google.com/file/d/1JwwTTe4ejONbrym1mKxd0Rw6v_yC0UA8/view?usp=drive_link",
+              "embed": false
+            },
+            {
+              "kind": "drive-file",
+              "title": "Cybersecurite-_-protection-des-donnees-personnelles-traces-numeriques-identification-authentification-respect-de-la-propriete-intellectuelle.pdf",
+              "url": "https://drive.google.com/file/d/1Q34KIsR6oMlPs5iMaO9uRIHTcis7c-AY/view?usp=drive_link",
+              "embed": false
+            },
+            {
+              "kind": "drive-file",
+              "title": "Cyberviolence : usurpation d’identité, usage détourné",
+              "url": "https://drive.google.com/file/d/1Pebl76zQWlpMyVS4xMOdUMeJhRJZWO9t/view?usp=drive_link",
+              "embed": false
+            }
+          ],
+          "srcUrl": "https://sites.google.com/view/lmtechno25/4ème-2025-2026/séquence-1-intelligence-artificielle-générative-la-sécurité-des-données/séance-2le-numérique-au-quotidien-savoir-lutiliser-sans-danger"
+        },
+        {
+          "slug": "seance-2-corr",
+          "kind": "correction",
+          "num": 2,
+          "title": "Séance 2 (correction) : Le numérique au quotidien : savoir l’utiliser sans danger.",
+          "shortTitle": "Séance 2 — correction",
+          "tagline": "",
+          "content_md": "## Séance 2:Le numérique au quotidien : savoir l’utiliser sans danger.\n\nAujourd’hui, les collégiens utilisent au quotidien Internet, des assistants IA comme ChatGPT, ou des objets connectés à la maison. Mais que se passe-t-il réellement lorsqu’on accepte des cookies, quand on partage une requête vocale, ou quand on copie une réponse d’IA sans vérifier ?\n\n![](assets/img/4eme-2025-2026__sequence-1-intelligence-artificielle-generative-la-securite-des-donnees__seance-2-corrle-numerique-au-quotidien-savoir-lutiliser-sans-danger/01.png)\n\n**Mes constats, mes observations :**\n\nJ’observe un enfant qui accepte les cookies pour utiliser son ordinateur portable, il a aussi une IA sur son ordinateur fixe et son téléphone semble écouter sa conversation.\n\n**Mon problème à résoudre**\n\n**Comment utiliser Internet, l’IA générative et les objets communicants de manière responsable et sécurisée ?**\n\n**Mes idées pour le résoudre**\n\nAvant d’utiliser un outil numérique, je vérifie les réglages de confidentialité et je me demande si les informations que je partage sont vraiment nécessaires.\n\n**Activités** *(niveaux 1 et 2)*\n\n**QCM/QCU / Associations**\n\n● **Quel outil suivant est une IA générative ?**\n\nGoogle Home\n\nGoogle Translate\n\nChatGPT\n\nWikipédia\n\n● **Quels éléments sont des objets communicants ?**\n\nEnceinte connectée\n\nCalculatrice\n\nMontre connectée\n\nImprimante 3D\n\n● Associe chaque notion à sa définition (*Relier les points*) :\n\n**QCM/QCU / Associations**\n\n● **Quel outil suivant est une IA générative ?**\n\nGoogle Home\n\nGoogle Translate\n\nChatGPT\n\nWikipédia\n\n● **Quels éléments sont des objets communicants ?**\n\nEnceinte connectée\n\nCalculatrice\n\nMontre connectée\n\nImprimante 3D\n\n● Associe chaque notion à sa définition (*Relier les points*) :\n\n![](assets/img/4eme-2025-2026__sequence-1-intelligence-artificielle-generative-la-securite-des-donnees__seance-2-corrle-numerique-au-quotidien-savoir-lutiliser-sans-danger/02.png)\n\n![](assets/img/4eme-2025-2026__sequence-1-intelligence-artificielle-generative-la-securite-des-donnees__seance-2-corrle-numerique-au-quotidien-savoir-lutiliser-sans-danger/03.png)\n\n![](assets/img/4eme-2025-2026__sequence-1-intelligence-artificielle-generative-la-securite-des-donnees__seance-2-corrle-numerique-au-quotidien-savoir-lutiliser-sans-danger/04.png)\n\n**Ressources:**\n\n![](assets/img/4eme-2025-2026__sequence-1-intelligence-artificielle-generative-la-securite-des-donnees__seance-2-corrle-numerique-au-quotidien-savoir-lutiliser-sans-danger/05.png)\n\n[OST1l-Cybersécurité : protection des données personnelles, traces numériques](https://drive.google.com/file/d/1t7dK2_Psh4RA38y3zOwkLuZg8-F1Mdz0/view?usp=drive_link)\n\n![](assets/img/4eme-2025-2026__sequence-1-intelligence-artificielle-generative-la-securite-des-donnees__seance-2-corrle-numerique-au-quotidien-savoir-lutiliser-sans-danger/06.png)\n\n[OST1m-Cyberviolence : usurpation d’identité, usage détourné](https://drive.google.com/file/d/14fiWosEymgkM_2onqs6zYYx7523014EQ/view?usp=drive_link)\n\n![](assets/img/4eme-2025-2026__sequence-1-intelligence-artificielle-generative-la-securite-des-donnees__seance-2-corrle-numerique-au-quotidien-savoir-lutiliser-sans-danger/07.png)\n\n[C'est quoi la cybersécurité ? Pourquoi c'est important ?](https://dai.ly/x9dvwgq)\n\n![](assets/img/4eme-2025-2026__sequence-1-intelligence-artificielle-generative-la-securite-des-donnees__seance-2-corrle-numerique-au-quotidien-savoir-lutiliser-sans-danger/08.png)\n\n[Quels sont les comportements à adopter sur les réseaux sociaux ?](https://dai.ly/x9j1miq)\n\n**Activités** *(niveaux 3 et 4)*\n\n*Tu dois conseiller un camarade qui utilise une IA générative (comme ChatGPT) pour faire ses devoirs, une enceinte connectée pour piloter ses objets à la maison, et qui laisse son compte Google ouvert sur tous ses appareils.*\n\n**Questions :**\n\n1. **Que peux-tu lui recommander pour sécuriser ses usages ?** (choix multiple)\n\nChoisir un mot de passe long et unique\n\nUtiliser la navigation privée\n\nDemander à l’IA de faire tous les devoirs sans les lire\n\nLire les conditions d’utilisation d’un site ou d’une IA\n\nIgnorer les paramètres de confidentialité\n\n1. **Propose un bon usage d’une IA générative dans un travail scolaire.**\n\nExemple attendu : demander une explication sur un sujet, vérifier une définition, générer un plan que je relis et adapte moi-même\n\n1. **Paramètre conseillé à désactiver sur une enceinte connectée pour protéger sa vie privée ?** *(Ressource “Que Choisir” ci-contre)*\n→ Exemple : l’enregistrement automatique des requêtes vocales\n\n**Question d’analyse (scénario)**\n\nUn élève utilise une IA générative pour produire un texte qu’il remet tel quel au professeur, son enceinte connectée diffuse des informations personnelles à son insu, et il partage son mot de passe sur un jeu en ligne avec un camarade.\n\n**Question :**\n\nQuels sont les risques dans cette situation ? Quelles bonnes pratiques proposerais-tu pour adopter un usage raisonné du numérique dans ces trois cas ?\n\n**Réponse attendue :**\n\n● Risques : triche, perte de confiance, exposition des données personnelles, piratage de compte\n\n● Bonnes pratiques : reformuler soi-même les contenus produits par l’IA, vérifier les paramètres de confidentialité, ne jamais partager ses mots de passe\n\n**Ressources:**\n\n![](assets/img/4eme-2025-2026__sequence-1-intelligence-artificielle-generative-la-securite-des-donnees__seance-2-corrle-numerique-au-quotidien-savoir-lutiliser-sans-danger/09.png)\n\n[Cyber Guide Famille](https://drive.google.com/file/d/1JwwTTe4ejONbrym1mKxd0Rw6v_yC0UA8/view?usp=drive_link)\n\n![](assets/img/4eme-2025-2026__sequence-1-intelligence-artificielle-generative-la-securite-des-donnees__seance-2-corrle-numerique-au-quotidien-savoir-lutiliser-sans-danger/10.png)\n\n[Enceintes connectées, comment protéger sa vie privée ?](https://www.quechoisir.org/conseils-enceintes-connectees-comment-proteger-sa-vie-privee-n69363/?utm_source=chatgpt.com)\n\n**Ma synthèse**\n\n**1. Citer deux objets du quotidien que l’on peut classer comme “objets communicants” :**\n\n→ Une enceinte connectée / Un assistant vocal\n\n→ Une montre connectée / Une ampoule intelligente / Un smartphone\n\n**2. Donner un risque lié à l’usage d’une IA générative sans vérification :**\n\n**→** L’IA peut donner une information fausse ou incomplète / On peut tricher en copiant sans comprendre.\n\n**3. Citer un paramètre à désactiver sur une enceinte connectée pour mieux protéger sa vie privée :**\n\n→ L’enregistrement automatique des requêtes vocales\n\n(ou : l’historique vocal, les suggestions personnalisées, etc.)\n\n**4. À ton avis, quelle est la règle la plus importante à retenir pour un usage raisonné du numérique ?**\n\n→ Toujours vérifier ce que je partage et à qui / Ne jamais donner mes mots de passe / Lire les paramètres de confidentialité / Vérifier les informations données par les IA / Ne pas autoriser tout sans réfléchir.\n\n**Ressources:**\n\n- [Cybersecurite-_-protection-des-donnees-personnelles-traces-numeriques-identification-authentification-respect-de-la-propriete-intellectuelle.pdf](https://drive.google.com/file/d/1Q34KIsR6oMlPs5iMaO9uRIHTcis7c-AY/view?usp=drive_link)\n\n- [Cyberviolence : usurpation d’identité, usage détourné](https://drive.google.com/file/d/1Pebl76zQWlpMyVS4xMOdUMeJhRJZWO9t/view?usp=drive_link)",
+          "resources": [
+            {
+              "kind": "drive-file",
+              "title": "OST1l-Cybersécurité : protection des données personnelles, traces numériques",
+              "url": "https://drive.google.com/file/d/1t7dK2_Psh4RA38y3zOwkLuZg8-F1Mdz0/view?usp=drive_link",
+              "embed": false
+            },
+            {
+              "kind": "drive-file",
+              "title": "OST1m-Cyberviolence : usurpation d’identité, usage détourné",
+              "url": "https://drive.google.com/file/d/14fiWosEymgkM_2onqs6zYYx7523014EQ/view?usp=drive_link",
+              "embed": false
+            },
+            {
+              "kind": "drive-file",
+              "title": "Cyber Guide Famille",
+              "url": "https://drive.google.com/file/d/1JwwTTe4ejONbrym1mKxd0Rw6v_yC0UA8/view?usp=drive_link",
+              "embed": false
+            },
+            {
+              "kind": "drive-file",
+              "title": "Cybersecurite-_-protection-des-donnees-personnelles-traces-numeriques-identification-authentification-respect-de-la-propriete-intellectuelle.pdf",
+              "url": "https://drive.google.com/file/d/1Q34KIsR6oMlPs5iMaO9uRIHTcis7c-AY/view?usp=drive_link",
+              "embed": false
+            },
+            {
+              "kind": "drive-file",
+              "title": "Cyberviolence : usurpation d’identité, usage détourné",
+              "url": "https://drive.google.com/file/d/1Pebl76zQWlpMyVS4xMOdUMeJhRJZWO9t/view?usp=drive_link",
+              "embed": false
+            }
+          ],
+          "srcUrl": "https://sites.google.com/view/lmtechno25/4ème-2025-2026/séquence-1-intelligence-artificielle-générative-la-sécurité-des-données/séance-2-corrle-numérique-au-quotidien-savoir-lutiliser-sans-danger"
+        },
+        {
+          "slug": "ressources",
+          "kind": "ressources",
+          "num": null,
+          "title": "Ressources",
+          "shortTitle": "Ressources",
+          "tagline": "",
+          "content_md": "**fiche 1:** Cybersecurite-_-protection-des-donnees-personnelles-traces-numeriques-identification-authentification-respect-de-la-propriete-intellectuelle\n\n::embed[OST1l-Cybersecurite-_-protection-des-donnees-personnelles-traces-numeriques-identification-authentification-respect-de-la-propriete-intellectuelle.pdf](https://drive.google.com/file/d/1Q34KIsR6oMlPs5iMaO9uRIHTcis7c-AY/preview)\n\n**fiche** **2:** Cyberviolence-_-usurpation-didentite-usage-detourne\n\n::embed[OST1m-Cyberviolence-_-usurpation-didentite-usage-detourne.pdf](https://drive.google.com/file/d/1Pebl76zQWlpMyVS4xMOdUMeJhRJZWO9t/preview)\n\n**Vidéo 1:** Cybersecurite-_-protection-des-donnees-personnelles-traces-numeriques-identification-authentification-respect-de-la-propriete-intellectuelle.mp4\n\n::embed[OST1l-Cybersecurite-_-protection-des-donnees-personnelles-traces-numeriques-identification-authentification-respect-de-la-propriete-intellectuelle.mp4](https://drive.google.com/file/d/1t7dK2_Psh4RA38y3zOwkLuZg8-F1Mdz0/preview)\n\n**Vidéo 2:** Cyberviolence-_-usurpation-didentite-usage-detourne.mp4\n\n::embed[OST1m-Cyberviolence-_-usurpation-didentite-usage-detourne.mp4](https://drive.google.com/file/d/14fiWosEymgkM_2onqs6zYYx7523014EQ/preview)",
+          "resources": [],
+          "srcUrl": "https://sites.google.com/view/lmtechno25/4ème-2025-2026/séquence-1-intelligence-artificielle-générative-la-sécurité-des-données/ressources"
+        }
+      ]
+    },
+    {
+      "slug": "sequence-1-reseau-informatique",
+      "eyebrow": "Séquence 1",
+      "year": "2020-2024",
+      "title": "Le réseau informatique",
+      "shortTitle": "Le réseau informatique",
+      "tagline": "Découvrir le réseau du collège, les adresses IP et le partage de ressources.",
+      "intro_md": "",
+      "resources": [],
+      "pages": [
+        {
+          "slug": "seance-1",
+          "kind": "seance",
+          "num": 1,
+          "title": "Séance 1: réseau du collège",
+          "shortTitle": "Séance 1",
+          "tagline": "",
+          "content_md": "![](assets/img/4eme__sequence-1-le-reseau-informatique__seance-1-reseau-du-college/01.png)\n\n![](assets/img/4eme__sequence-1-le-reseau-informatique__seance-1-reseau-du-college/02.png)",
+          "resources": [],
+          "srcUrl": "https://sites.google.com/view/lmtechno25/4ème/séquence-1-le-réseau-informatique/séance-1-réseau-du-collège"
+        },
+        {
+          "slug": "seance-2",
+          "kind": "seance",
+          "num": 2,
+          "title": "Séance 2: situation problème",
+          "shortTitle": "Séance 2",
+          "tagline": "",
+          "content_md": "![](assets/img/4eme__sequence-1-le-reseau-informatique__seance-2-situation-probleme/01.png)\n\n**Séance 2 : Détecter un danger rapidement**\n\nFarid et Yasmine ont deux enfants de 4 ans et 8 ans.\n\nIls ont la chance d’avoir une piscine dans leur jardin.\n\nComme l’oblige la loi, ils ont installé une alarme avec une sonde immergée dans l’eau. Une sirène sonne dans la maison dès qu’un mouvement est capté dans la piscine. Malheureusement, l’alarme se déclenche de manière intempestive très régulièrement (vent fort, mise en route de la pompe de filtration, chute de feuille, etc).\n\nEtienne, qui travaille souvent à la maison, en a assez de se déplacer pour rien. Il souhaite trouver un système pour pouvoir vérifier facilement et rapidement la présence d’un réel danger pour ses enfants.\n\n**Quel est le problème soulevé ? Proposer une ou des solutions afin de le résoudre.**\n\n……………………………\n\n……………………………\n\n……………………………\n\n……………………………\n\n……………………………\n\n……………………………\n\nØ **Appeler le professeur.**\n\n**La problématique est :**\n\n……………………………\n\n……………………………\n\n……………………………\n\n……………………………\n\n……………………………\n\n**Le Matériel :**\n\nEn se servant de la fiche ressource sur les réseaux (pages 1 et 2), rédiger la liste du matériel dont vous aurez besoin pour résoudre le problème :\n\n……………………………\n\n……………………………\n\n……………………………\n\n……………………………\n\n……………………………\n\n……………………………\n\n……………………………\n\n**Réalisez le schéma de votre solution en nommant les éléments.**\n\nØ **Appeler le professeur.**\n\n**Fiche Ressource**\n\n::embed[FICHE-RESSOURCE-ELEMENTS-MATERIELS-ET-RESEAU.pdf](https://drive.google.com/file/d/1pXW935ZErstW-yXp9j6ahNDb6lquhBhj/preview)",
+          "resources": [],
+          "srcUrl": "https://sites.google.com/view/lmtechno25/4ème/séquence-1-le-réseau-informatique/séance-2-situation-problème"
+        },
+        {
+          "slug": "seance-3",
+          "kind": "seance",
+          "num": 3,
+          "title": "Séance 3: Solution IpWebcam",
+          "shortTitle": "Séance 3",
+          "tagline": "",
+          "content_md": "![](assets/img/4eme__sequence-1-le-reseau-informatique__seance-3-solution-ipwebcam/01.png)\n\n![](assets/img/4eme__sequence-1-le-reseau-informatique__seance-3-solution-ipwebcam/02.png)\n\n![](assets/img/4eme__sequence-1-le-reseau-informatique__seance-3-solution-ipwebcam/03.png)\n\n::embed[document ressource IP webcam.pdf](https://drive.google.com/file/d/1Hr3OGnbi0Ge9MSzIR1xLE3M4PZJGJ8ll/preview)\n\n**videosurveillance_chez_soi.pdf**\n\n::embed[videosurveillance_chez_soi.pdf](https://drive.google.com/file/d/1qQBYv9ZLSZPi2yA1WCT71kROmGUUKoYm/preview)\n\n**Le respect de la vie privée.pdf**\n\n::embed[Le respect de la vie privée.pdf](https://drive.google.com/file/d/18JFAXeM000z4-CaRLg7W7U_IBId5Pg9V/preview)",
+          "resources": [],
+          "srcUrl": "https://sites.google.com/view/lmtechno25/4ème/séquence-1-le-réseau-informatique/séance-3-solution-ipwebcam"
+        },
+        {
+          "slug": "seance-4",
+          "kind": "seance",
+          "num": 4,
+          "title": "séance 4: adresse Ip",
+          "shortTitle": "Séance 4",
+          "tagline": "",
+          "content_md": "![](assets/img/4eme__sequence-1-le-reseau-informatique__seance-4-adresse-ip/01.png)\n\n**Exercices**\n\n::embed[exercices IP.pdf](https://drive.google.com/file/d/1LVn1-0L_sEdXnG13jiwzRguqE3qS8kak/preview)\n\n::embed[ip11-1_adressage-ip.pdf](https://drive.google.com/file/d/1g3L98HpSouY5gFs8C1-4wSS7TBoLttvn/preview)",
+          "resources": [],
+          "srcUrl": "https://sites.google.com/view/lmtechno25/4ème/séquence-1-le-réseau-informatique/séance-4-adresse-ip"
+        }
+      ]
+    },
+    {
+      "slug": "sequence-2-portail-automatise",
+      "eyebrow": "Séquence 2",
+      "year": "2020-2024",
+      "title": "Portail automatisé",
+      "shortTitle": "Portail automatisé",
+      "tagline": "Étude du besoin et des contraintes d'un portail automatique.",
+      "intro_md": "",
+      "resources": [],
+      "pages": [
+        {
+          "slug": "seance-0",
+          "kind": "seance",
+          "num": 0,
+          "title": "Séance 0: Situation déclenchante",
+          "shortTitle": "Séance 0",
+          "tagline": "",
+          "content_md": "Monsieur DURAND possède une maison avec une allée qui permet d’accéder à son garage. Parfois, il ne peut pas ranger sa voiture dans son garage le soir, car certaines voitures utilisent son allée comme lieu de stationnement.\n\n![](assets/img/4eme__sequence-2-portail-automatise__seance-0-situation-declenchante/01.png)\n\n**Mes constats :** *(Durée 5')* **Que se passe-t-il ? (De quoi parle-t-on ? Qui est concerné ? Combien ? Quand est-ce que cela passe ? Où cela se passe-t-il ? Comment cela se passe-t-il ? Pourquoi cela se passe-t-il comme cela ? …**\n\n**Mon problème technique à résoudre :** *(Durée 5')*\n**A partir des constats, rédiger la question que l'on se pose à propos du problème de société : Pourquoi … ? Comment … ?**\n\n**Mes idées pour y répondre :** *(Durée 5')*\n\n**Les propositions retenues pour répondre au problème technique :** *(Durée 5')*",
+          "resources": [],
+          "srcUrl": "https://sites.google.com/view/lmtechno25/4ème/séquence-2-portail-automatisé/séance-0-situation-déclenchante"
+        },
+        {
+          "slug": "seance-1",
+          "kind": "seance",
+          "num": 1,
+          "title": "Séance 1: Etude du besoin",
+          "shortTitle": "Séance 1",
+          "tagline": "",
+          "content_md": "**Mise en situation sur trois problèmes à résoudre :** *(Durée 5')*\n\n1. Visionner la vidéo suivante :\n\n1. **Mes constats :** *(Durée 10')*\n\n2. **Mon problème technologique à résoudre :** *(Durée 5')*\n\n3. **Mes idées pour y répondre :** *(Durée 30')*\n *(Recherche élève : Rédiger ses idées ou propositions pour résoudre le problème technologique)*\n\n::embed[PORTAI~1.MP4](https://drive.google.com/file/d/1CZvp0kgYFtN6UPUW88G2WZnBM7No0m6j/preview)\n\n**Activité 1 (N1/N2)** **:** **Identifier le besoin**\n\n1. Visionner la vidéo sur le besoin :\n\n::embed[DIC 1-1-DMF-Le besoin-720p.mp4](https://drive.google.com/file/d/1JoFXe1QU6TGQajIOBkz_sTQ07XD_yQSk/preview)\n\n1. Quelles sont les étapes pour identifier un besoin ?\n\n- ……………………………\n\n- ……………………………\n\n- ……………………………\n\n1. Comment procède-t-on pour retrouver chaque étape ?\n\n- étape 1 : on …………………………… .\n\n…………………………… .…………………………… .\n\n- étape 2 : on …………………………… .\n\n…………………………… .…………………………… .\n\n- étape 3 : on …………………………… .\n\n…………………………… .……………………………\n\n**Activité 2 (N3/N4) : Etudier le besoin**\n\n1. Etudier la situation de M. Durand :\n\n…………………………… .……………………………\n\n…………………………… .……………………………\n\n2. Quel est le problème de M. Durand ?\n\n…………………………… .……………………………\n\n3. Identifier le besoin de M. Durand ?\n\n…………………………… .……………………………\n\n4. Quel est l’objet qui peut répondre au besoin de M. Durand ?\n\n…………………………… .……………………………\n\n**Ma synthèse de la séance :**\n\nQuiz :\n\n[https://forms.gle/PsQFvdYRu9vSGVga7](https://forms.gle/PsQFvdYRu9vSGVga7)\n\n**Fiche de connaissance**\n\n::embed[DIC-1-1-C1-DMF-Besoin.docx-1.pdf](https://drive.google.com/file/d/1K2WyzvnEpT1WEWNo72NFXngLzCervG8I/preview)",
+          "resources": [],
+          "srcUrl": "https://sites.google.com/view/lmtechno25/4ème/séquence-2-portail-automatisé/séance-1-etude-du-besoin"
+        },
+        {
+          "slug": "seance-1-corr",
+          "kind": "correction",
+          "num": 1,
+          "title": "Correction séance 1",
+          "shortTitle": "Séance 1 — correction",
+          "tagline": "",
+          "content_md": "",
+          "resources": [],
+          "srcUrl": "https://sites.google.com/view/lmtechno25/4ème/séquence-2-portail-automatisé/séance-1-etude-du-besoin/correction-séance-1"
+        },
+        {
+          "slug": "seance-2",
+          "kind": "seance",
+          "num": 2,
+          "title": "Séance 2: Les contraintes",
+          "shortTitle": "Séance 2",
+          "tagline": "",
+          "content_md": "**Mise en situation sur trois problèmes à résoudre :** *(Durée 5')*\n*Monsieur Durand a exprimé to**utes ses attentes.*\n\n1. **La demande de M. Durand**\n\n1. **Mes constats :** *(Durée 10')*\n\n2. **Mon problème technologique à résoudre :** *(Durée 5')*\n\n3. **Mes idées pour y répondre :** *(Durée 30')*\n *(Recherche élève : Rédiger ses idées ou propositions pour résoudre le problème technologique)*\n\n1. **Mise en commun des idées retenues pour résoudre le problème**\n\n![](assets/img/4eme__sequence-2-portail-automatise__seance-2-les-contraintes/01.png)\n\n**Activité 1 (N1/N2)** **:** **Identifier et définir les contraintes**\n\n**Répondez aux questions à l’aide de la vidéo ressource.**\n\n1. Pourquoi un objet technique doit-il répondre à des contraintes ?\n\n…………………………… .……………………………\n\n1. Comment rédige-t-on une contrainte ?\n\n…………………………… .……………………………\n\n1. Quelles sont les types de contraintes ? Et qu’imposent- elles ?\n\n![](assets/img/4eme__sequence-2-portail-automatise__seance-2-les-contraintes/02.png)\n\n**Activité 2 (N3/N4) : Enoncer les contraintes du portail automatisé de M. Durand**\n\n1. D’après la demande de M. Durand, que devra respecter le portail ?\n\n![](assets/img/4eme__sequence-2-portail-automatise__seance-2-les-contraintes/03.png)\n\n![](assets/img/4eme__sequence-2-portail-automatise__seance-2-les-contraintes/04.png)\n\n**Ma synthèse de la séance :** *(Durée 5')*\n\n**Fiche de structuration des connaissances :**\n\n[**DIC-1-1-C1-DMF-Contraintes-Normalisation**](https://ent2d.ac-bordeaux.fr/disciplines/sti-college/wp-content/uploads/sites/63/2019/05/DIC-1-1-C1-DMF-Contraintes-Normalisation.pdf)\n\n::embed[](https://www.gstatic.com/atari/embeds/8306a3600875750e6acc147fd93569bf/intermediate-frame-minified.html)",
+          "resources": [],
+          "srcUrl": "https://sites.google.com/view/lmtechno25/4ème/séquence-2-portail-automatisé/séance-2-les-contraintes"
+        }
+      ]
+    },
+    {
+      "slug": "sequence-3-objets-connectes",
+      "eyebrow": "Séquence 3",
+      "year": "2020-2024",
+      "title": "Les objets connectés",
+      "shortTitle": "Les objets connectés",
+      "tagline": "Piloter un objet technique avec un smartphone.",
+      "intro_md": "## Les objets connectés",
+      "resources": [],
+      "pages": [
+        {
+          "slug": "seance-1",
+          "kind": "seance",
+          "num": 1,
+          "title": "Séance1: Les objets connectés",
+          "shortTitle": "Séance 1",
+          "tagline": "",
+          "content_md": "**Mise en situation:**\n\nLes objets connectés ont envahi notre quotidien et les prédictions des experts démontrent que le nombre des objets connectés à Internet vont augmenter de façon exponentielle les prochaines années .\n\n![](assets/img/4eme__sequence-3-les-objets-connectes__seance1-les-objets-connectes/01.jpg)\n\n**Problématique : Qu’est-ce qu’un objet connecté ?**\n\n**Hypothèses :**\n\n**Travail à effectuer :**\n\n**lien vidéos:** [**https://lyceemontaigneedulb-my.sharepoint.com/:f:/g/personal/eddy_bachaalany_lycee-montaigne_edu_lb/EuFUtSlpDKZNuXcgKN9c7rEBlfx5JxZUfEYa83wh62dRHg?e=NBJ9GX**](https://lyceemontaigneedulb-my.sharepoint.com/:f:/g/personal/eddy_bachaalany_lycee-montaigne_edu_lb/EuFUtSlpDKZNuXcgKN9c7rEBlfx5JxZUfEYa83wh62dRHg?e=NBJ9GX)\n\n1 / Vous allez réaliser un diaporama présentant le principe de la connexion de deux appareils en utilisant les vidéos sur le serveur et des recherches sur Internet.\n\nVous constiturez 2 équipes :\n\n**Equipe 1 :** réalise la diapositives 1\n\n**Equipe 2** : réalise la diapositives 2\n\n**Equipe** **3** **:** réalise la diapositives 3\n\n**Equipe** **4** : réalise la diapositives 4\n\n**Equipe** **5** **:** réalise la diapositives 5\n\n**Equipe** **6** : réalise la diapositives 1\n\n**Equipe** **7** **:** réalise la diapositives 2\n\n**Equipe** **8** : réalise la diapositives 3\n\nOrganisation du diaporama :\n\n**Diapositive 1 :**\n\n- Le nom des élèves, classe, groupe.\n\n- Le questionnement de la séquence : Comment piloter le robot « mbot » avec son smartphone ?\n\n- Une image du smartphone et du robot.\n\n**Diapositive 2 :**\n\n**Qu’est-ce qu’un objet connecté ?**\n\n- Réaliser un schéma expliquant le principe d’un objet connecté.\n\n- Rédiger une phrase expliquant ce qu’est un objet connecté.\n\n**Diapositive 3 :**\n\n**Qu’est-ce qu’une connexion Bluetooth ?**\n\n- Réaliser un schéma expliquant le principe de l’appairage.\n\n- Rédiger une phrase expliquant ce qu’est une connexion Bluetooth.\n\n**Diapositive** **4** **:**\n\n**Qu’est-ce qu’une connexion** **Wifi?**\n\n- Réaliser un schéma expliquant le principe de l’appairage.\n\n- Rédiger une phrase expliquant ce qu’est une connexion Wifi.\n\n**Diapositives** **5** **:**\n\n**Exemples d’objets connectés**\n\n- Insérer des images d’objets connectés, préciser leur fonction.\n\n2/ Sauvegarder votre travail sur le serveur « Groupes », « Classe » en utilisant la forme suivante : **« OT_classe_groupe_équipeX »** avec (équipe1 ou équipe2)\n\n**Mise en commun :**\n\n1/ Chaque équipe présente son travail.\n\n2/ Sur un poste informatique, réalisez l’assemblage du diaporama puis vérifier la mise en forme.\n\n3/ Enregisrez le diaporama final sous le nom **« OT_classe_groupe_final »**\n\n**Avertir le professeur lorsque le travail de groupe est terminé.**",
+          "resources": [],
+          "srcUrl": "https://sites.google.com/view/lmtechno25/4ème/séquence-3-les-objets-connectés/séance1-les-objets-connectés"
+        },
+        {
+          "slug": "seance-2",
+          "kind": "seance",
+          "num": 2,
+          "title": "Séance 2: Comment piloter un objet technique avec un smartphone ?",
+          "shortTitle": "Séance 2",
+          "tagline": "",
+          "content_md": "**Séquence XX : Comment piloter un objet technique avec un smartphone ?**\n\n**Séance 2 : Créer une IHM**\n\n**Mise en situation :**\n\nUn objet connecté est un objet électronique connecté sans fil, qui partage des données avec d’autres appareils électroniques tels que les ordinateurs, les tablettes électroniques, les Smartphones ou encore les phablettes.\n\n**Problématique : Comment réaliser une application pour smartphone?**\n\n**Hypothèses :**\n\n![](assets/img/4eme__sequence-3-les-objets-connectes__seance-2-comment-piloter-un-objet-technique-avec-un-smartphone/01.png)\n\n**Travail à effectuer :**\n\n1 / Vous allez réaliser une application pour Android qui permettra de commander un Mbot à distance.\n\nPour cela, l’application devra permettre :\n\n- De se connecter à un robot en mode Bluetooth\n\n- Piloter le robot selon 8 directions\n\n- D’arrêter le robot à tout moment\n\n- Quitter le mode connecté\n\nLa séance se décomposera en trois parties :\n\n· La réalisation de l’interface homme machine,\n\n· L’écriture du code du programme.\n\n· Le test de l’application\n\n**L’interface Homme Machine :**\n\nLes différentes étapes :\n\n1. Téléchargez le fichier [commande_mbot.aia](https://lyceemontaigneedulb-my.sharepoint.com/:u:/r/personal/eddy_bachaalany_lycee-montaigne_edu_lb/Documents/Ann%C3%A9e%202021-2022/Techno%204%C3%A8me/S%C3%A9quence%203%20Comment%20piloter%20un%20OT%20avec%20un%20smartphone/S%C3%A9quenceXX_Comment%20piloter%20un%20OT%20avec%20un%20smartphone/S2/Ressources/Commande_mbot(1).aia?csf=1&web=1&e=PHFyg0)\n\n2. Se connecter à l’application App Inventor : [code.appinventor.mit.edu](http://code.appinventor.mit.edu)\n\nOuvrir le fichier : commande_mbot.aia\n\n> Projets\n\n> Importer projet de mon ordinateur\n\n> Parcourir\n\n> Choisissez le fichier commande_mbot.aia de la destination correspondante\n\n**3.** **Réaliser la partie design de l’application**\n\nAprès avoir vu la vidéo [« App Inventor (Design)»](https://lyceemontaigneedulb-my.sharepoint.com/:v:/r/personal/eddy_bachaalany_lycee-montaigne_edu_lb/Documents/Ann%C3%A9e%202021-2022/Techno%204%C3%A8me/S%C3%A9quence%203%20Comment%20piloter%20un%20OT%20avec%20un%20smartphone/S%C3%A9quenceXX_Comment%20piloter%20un%20OT%20avec%20un%20smartphone/S2/Ressources/APPINVENTORDESIGN.m4v?csf=1&web=1&e=36FIRE), et en vous aidant du fichier [« Appinventor_design »](https://lyceemontaigneedulb-my.sharepoint.com/:w:/r/personal/eddy_bachaalany_lycee-montaigne_edu_lb/Documents/Ann%C3%A9e%202021-2022/Techno%204%C3%A8me/S%C3%A9quence%203%20Comment%20piloter%20un%20OT%20avec%20un%20smartphone/S%C3%A9quenceXX_Comment%20piloter%20un%20OT%20avec%20un%20smartphone/S2/Ressources/APP%20INVENTOR_REALISER%20UN%20DESIGN.docx?d=w093c78d68bc5472284f5b5d6e067fe3e&csf=1&web=1&e=Wwkcvu) vous réaliserez l’interface Homme Machine (IHM) suivante :\n\n![](assets/img/4eme__sequence-3-les-objets-connectes__seance-2-comment-piloter-un-objet-technique-avec-un-smartphone/02.jpg)\n\n**3.L’écriture du code :**\n\n**Réaliser la partie** ***blocs*** **de l’application**\n\nPour réaliser la programmation des touches de l’interface vous devez utiliser la partie « **blocs** »\n\n![](assets/img/4eme__sequence-3-les-objets-connectes__seance-2-comment-piloter-un-objet-technique-avec-un-smartphone/03.jpg)\n\n1 / Configurer la « **Connexion bluetooth** »\n\n![](assets/img/4eme__sequence-3-les-objets-connectes__seance-2-comment-piloter-un-objet-technique-avec-un-smartphone/04.png)\n\n2/ Configurer les 8 touches de déplacement, le bouton « **Stop** » et le bouton « **Sortie** » à l’aide des blocs correspondants :\n\nAidez du document ressource « **Déplacer le robot** »\n\n![](assets/img/4eme__sequence-3-les-objets-connectes__seance-2-comment-piloter-un-objet-technique-avec-un-smartphone/05.png)\n\n**4.Le test de l’application sur le smartphone :**\n\n**1. Générer le fichier à installer :**\n\n*Dans AppInventor, cliquer sur « Construire » puis « Donner le code QR pour fichier apk ».\n\n*L'application se construit et génère un QRCODE\n\n**2. Installer l’application sur le smartphone :**\n\nTélécharger et installer un lecteur de QR code sur le playstore ou l’application « MIT AI2 Companion »\n\nOuvrir l'application \"MIT AI2 Companion\" ou le lecteur de QR code de son Smartphone et scanner le QR code, autoriser l'installation de l'application et ouvrir.\n\n**3. Tester l’application :**\n\n1- Mettre en service le Mbot\n\n2- Cliquer sur ‘Sélectionner un robot’\n\n3- Lorsque la connexion est réalisée, utiliser les boutons pour diriger le Mbot selon les différentes directions.\n\n4- Valider le fonctionnement de votre application avec le professeur.\n\n**4. Validation des hypothèses**\n\n[S2](https://lyceemontaigneedulb-my.sharepoint.com/:f:/g/personal/eddy_bachaalany_lycee-montaigne_edu_lb/EkD3USHR-kFMlKHRzVmCTrQBVLxMacoJuBHewq2Jk9IxHQ?e=oabJGx)",
+          "resources": [
+            {
+              "kind": "interactive-app",
+              "title": "code.appinventor.mit.edu",
+              "url": "http://code.appinventor.mit.edu",
+              "embed": false
+            },
+            {
+              "kind": "interactive-app",
+              "title": "« App Inventor (Design)»",
+              "url": "https://lyceemontaigneedulb-my.sharepoint.com/:v:/r/personal/eddy_bachaalany_lycee-montaigne_edu_lb/Documents/Ann%C3%A9e%202021-2022/Techno%204%C3%A8me/S%C3%A9quence%203%20Comment%20piloter%20un%20OT%20avec%20un%20smartphone/S%C3%A9quenceXX_Comment%20piloter%20un%20OT%20avec%20un%20smartphone/S2/Ressources/APPINVENTORDESIGN.m4v?csf=1&web=1&e=36FIRE",
+              "embed": false
+            }
+          ],
+          "srcUrl": "https://sites.google.com/view/lmtechno25/4ème/séquence-3-les-objets-connectés/séance-2-comment-piloter-un-objet-technique-avec-un-smartphone"
+        }
+      ]
+    },
+    {
+      "slug": "sequence-4-microbit",
+      "eyebrow": "Séquence 4",
+      "year": "2020-2024",
+      "title": "Programmer un ordinateur de poche",
+      "shortTitle": "Programmer un ordinateur de poche",
+      "tagline": "Défis de programmation avec la carte micro:bit.",
+      "intro_md": "**Compétences travaillées et potentiellement évaluées durant la séquence :**\n\n- Appliquer les principes élémentaires de l’algorithmique et du codage à la résolution d’un problème simple.(Socle **D1.3_1.6**)\n\n- Associer des solutions techniques à des fonctions. (Disciplinaire **MSOST.1.2**)\n\n- Analyser le fonctionnement et la structure d’un objet, identifier les entrées et sorties. (Disciplinaire **MSOST.1.3**)\n\n- Identifier le(s) matériau(x), les flux d’énergie et d’information sur un objet et décrire les transformations qui s’opèrent. (Disciplinaire **MSOST.1.4**)\n\n- Décrire, en utilisant les outils et langages de descriptions adaptés, le fonctionnement, la structure et le comportement des objets. (Disciplinaire **MSOST.1.5** + Socle **D1.3_1.5**)\n\n- Écrire, mettre au point (tester, corriger) et exécuter un programme commandant un système réel et vérifier le comportement attendu. (Disciplinaire **Ip.2.2**)\n\n- Écrire un programme dans lequel des actions sont déclenchées par des événements extérieurs. (Disciplinaire **Ip.2.3**)",
+      "resources": [],
+      "pages": [
+        {
+          "slug": "seance-1",
+          "kind": "seance",
+          "num": 1,
+          "title": "Séance 1: La carte micro:bit",
+          "shortTitle": "Séance 1",
+          "tagline": "",
+          "content_md": "## Peut-on programmer un micro-ordinateur de poche ?\n\nIl existe des ordinateurs si petits qu'ils tiennent dans la poche, les smartphones, mais aussi des micro-ordinateurs plus simples et beaucoup moins coûteux que l'on peut s'amuser à programmer pour créer des tas d'applications. Nous allons en tester un.\n\n::embed[Qu'est ce que c'est le micro:bit?](https://www.youtube.com/embed/4l31LLKwPtk?embed_config=%7B%22enc%22:%22AXH1ezlpW3ZoXW5MYFOi1D8LXZCjgaRM58Cd2xD8Voy58eM0H9h1LInvfGUDF5536PD1J3u88xJ6Tc6a5RFa0sG4rbuyOKMsYokuOWdCfFh1wMo4S1ftNE7Oz_6aQlJ_zQNQRV9mV3-8bQZny5FO7B9RYT-KhlYVz2N2494J9mkz6U_z5fLcgUzDEUpYCz8_vbfDUnbrLH2rmB9v7ynHsteRr9DgsC4OEXXZxc106VGzelXvxMZmaKCEFB2V04EtHuCW21OGdgmx_2-KmftgNJd738CPsNwFbWk7gmb7_FfmtffWY1_hWDdaBApmwVmXe4EB4PCDt2-2-o-LaMGBwlS2_qyjmxy_eZn7r2iGzYa6S-WC%22%7D&enablejsapi=1&errorlinks=1&origin=https://sites.google.com&vl=1)\n\n**Introduction:**\n\nLa carte à microcontrôleur conçue en 2015 par la BBC : le « micro:bit ». Cette carte électronique de seulement 5 cm sur 4 et ne coûtant pas chère comporte suffisamment de composants pour être considérer comme un micro-ordinateur et pour permettre s’initier à la programmation.\n\n**Travail:**\n\n**1. De quoi est composé le micro:bit ?**\n\nEn vous aidant du site officiel ([https://archive.microbit.org/fr/guide/features/](https://archive.microbit.org/fr/guide/features/)), complétez le dessin ci-dessous en y notant les noms des composants du micro:bit en français.\n\n![](assets/img/4eme__sequence-4-programmer-un-ordinateur-de-poche__seance-1-la-carte-microbit/01.jpg)\n\n**2. A quoi servent ces composants ?**\n\nToujours en vous aidant du site officiel ([https://archive.microbit.org/fr/guide/features/](https://archive.microbit.org/fr/guide/features/)), tracez un tableau contenant les composants de la carte ainsi que la fonction (*acquérir, traiter, communiquer, alimenter, distribuer, convertir ou transmettre*) et le role de chacun des composants.\n\n![](assets/img/4eme__sequence-4-programmer-un-ordinateur-de-poche__seance-1-la-carte-microbit/02.jpg)\n\n## Correction\n\n![](assets/img/4eme__sequence-4-programmer-un-ordinateur-de-poche__seance-1-la-carte-microbit/03.jpg)",
+          "resources": [],
+          "srcUrl": "https://sites.google.com/view/lmtechno25/4ème/séquence-4-programmer-un-ordinateur-de-poche/séance-1-la-carte-microbit"
+        },
+        {
+          "slug": "seance-2",
+          "kind": "seance",
+          "num": 2,
+          "title": "Séance 2: ActivitésLes défis Micro:bit",
+          "shortTitle": "Séance 2",
+          "tagline": "",
+          "content_md": "[Activité 1](https://drive.google.com/file/d/1tlqW3XvpRAJ5yCL0kufBuQIlpaJVpIbt/view?usp=sharing)\n\n[Activité 2](https://drive.google.com/file/d/12lcBLH0DE6OeemCuBnARILKsE9SUrtDL/view?usp=sharing)\n\n[Activité 3](https://drive.google.com/file/d/1j4BuvlG_QffCI1EafXZncacLFEj9UxZ6/view?usp=drive_link)\n\n**Défi: Programmer un Shifumi**\n\n![](assets/img/4eme__sequence-4-programmer-un-ordinateur-de-poche__seance-2-activitesles-defis-microbit/01.png)",
+          "resources": [
+            {
+              "kind": "drive-file",
+              "title": "Activité 1",
+              "url": "https://drive.google.com/file/d/1tlqW3XvpRAJ5yCL0kufBuQIlpaJVpIbt/view?usp=sharing",
+              "embed": false
+            },
+            {
+              "kind": "drive-file",
+              "title": "Activité 2",
+              "url": "https://drive.google.com/file/d/12lcBLH0DE6OeemCuBnARILKsE9SUrtDL/view?usp=sharing",
+              "embed": false
+            },
+            {
+              "kind": "drive-file",
+              "title": "Activité 3",
+              "url": "https://drive.google.com/file/d/1j4BuvlG_QffCI1EafXZncacLFEj9UxZ6/view?usp=drive_link",
+              "embed": false
+            }
+          ],
+          "srcUrl": "https://sites.google.com/view/lmtechno25/4ème/séquence-4-programmer-un-ordinateur-de-poche/séance-2-activitésles-défis-microbit"
+        },
+        {
+          "slug": "correction",
+          "kind": "correction",
+          "num": null,
+          "title": "Correction",
+          "shortTitle": "Correction",
+          "tagline": "",
+          "content_md": "**Défi 1**\n\n![](assets/img/4eme__sequence-4-programmer-un-ordinateur-de-poche__seance-2-activitesles-defis-microbit__correction/01.png)\n\nDéfi 2\n\n![](assets/img/4eme__sequence-4-programmer-un-ordinateur-de-poche__seance-2-activitesles-defis-microbit__correction/02.png)\n\nDéfi 3\n\n![](assets/img/4eme__sequence-4-programmer-un-ordinateur-de-poche__seance-2-activitesles-defis-microbit__correction/03.png)",
+          "resources": [],
+          "srcUrl": "https://sites.google.com/view/lmtechno25/4ème/séquence-4-programmer-un-ordinateur-de-poche/séance-2-activitésles-défis-microbit/correction"
+        },
+        {
+          "slug": "programmer-une-boussolle",
+          "kind": "annexe",
+          "num": null,
+          "title": "Programmer une boussole",
+          "shortTitle": "Programmer une boussole",
+          "tagline": "",
+          "content_md": "![](assets/img/4eme__sequence-4-programmer-un-ordinateur-de-poche__programmer-une-boussolle/01.jpg)",
+          "resources": [],
+          "srcUrl": "https://sites.google.com/view/lmtechno25/4ème/séquence-4-programmer-un-ordinateur-de-poche/programmer-une-boussolle"
+        }
+      ]
+    },
+    {
+      "slug": "sequence-5-feu-tricolore-arduino",
+      "eyebrow": "Séquence 5",
+      "year": "2020-2024",
+      "title": "Feu tricolore avec Arduino",
+      "shortTitle": "Feu tricolore avec Arduino",
+      "tagline": "Simuler le fonctionnement d'un feu tricolore : structure, algorithme et programmation.",
+      "intro_md": "## Comment simuler le fonctionnement d'un feu tricolore? (Arduino)",
+      "resources": [],
+      "pages": [
+        {
+          "slug": "seance-1",
+          "kind": "seance",
+          "num": 1,
+          "title": "Séance 1: observer et décrire la structure d'un objet",
+          "shortTitle": "Séance 1",
+          "tagline": "",
+          "content_md": "Mise en situation : On a une Del, on veut la programmer…\n\nProblématique :\n\n![](assets/img/4eme__sequence-5-comment-simuler-le-fonctionnement-dun-feu-tricolore-arduino__seance-1-observer-et-decrire-la-structure-dun-objet/01.jpg)\n\n**PARTIE 1:** LED et plaque d’essai\n\n1- Dessinez la LED mise à disposition et indiquez la patte qui représente le positif et la patte du négatif.\n\n2- Regardez la Led par-dessus, que constatez vous ? A quelle patte correspond ce méplat ?\n\n3- Décrivez la plaque d’essai. Dessinez une plaque d’essai avec 14 points en colonnes et 4 points en lignes.\n\n4- Ouvrez le document « [plaque d essai vu de dessous.jpg](https://lyceemontaigneedulb-my.sharepoint.com/:i:/g/personal/eddy_bachaalany_lycee-montaigne_edu_lb/EUCXStk2mVVKtS57NAWSq2sBVO8q7vzZXIMAaXgDRB_dOQ?e=LaqLMf) ».\n\n5- Passez en bleu les liaisons des lignes et en rouge les liaisons des colonnes sur votre dessin.\n\n**PARTIE 2:**Carte Arduino\n\n1- Qu’est-ce qu’une carte Arduino ? Que peut-on faire avec une carte arduino?\n\n2- Qu’est-ce qui va passer dans la carte électronique ?\n\n3- Explorer la carte Arduino sur le lien suivant« [arduino, la carte électronique.pdf](https://lyceemontaigneedulb-my.sharepoint.com/:b:/g/personal/eddy_bachaalany_lycee-montaigne_edu_lb/ES9iNxBlEM9Pqbk8w6sVdmkBhL1ewKH7NAaku-5Zu9uZvg?e=SyQqSY) ».\n\n4- Repérez et indiquez sur votre document le +5V, les 3 GND et les entrées/sorties numériques.\n\n5- Il y a combien d’entrées et de sorties numériques ?\n\nMise en commun : Branchement de la LED\n\nOn va brancher la LED à la carte arduino à l’aide de fils et d’une résistance électrique (qui va adapter le courant pour protéger la LED).\n\n1- Branchez un fil de la sortie 5 de la carte arduino à une ligne quelconque de la plaque d’essai.\n\n2- Branchez une patte de la résistance sur la ligne précédente et l’autre patte sur autre une ligne quelconque.\n\n3- Reliez la grande patte (+) de la DEL sur la ligne de la résistance précédente et la petite patte (-) sur une autre ligne quelconque.\n\n4- Branchez un fil qui sort de la petite patte (-) de la DEL et reliez une colonne (–) d’alimentation.\n\n5- Branchez un fil qui sort de la colonne (-) d’alimentation au GND de la carte arduino.\n\n6- Faire contrôler par le professeur.\n\nSynthèse :\n\nSur un système, chaque élément a un rôle précis, on va utiliser de l’électricité, si le branchement n’est pas bon, il peut y avoir un court-circuit. La plaque d’essai va servir à brancher les différents composants électroniques pour faire des tests. La carte arduino va gérer le programme pour le fonctionnement des composants sur la plaque d’essai. Sur l’Arduino, on aura l’alimentation et la gestion des entrées et des sorties. Avec un programme fait sur ordinateur, on pourra contrôler chaque entrée et sortie (allumer ou éteindre).",
+          "resources": [],
+          "srcUrl": "https://sites.google.com/view/lmtechno25/4ème/séquence-5-comment-simuler-le-fonctionnement-dun-feu-tricolore-arduino/séance-1-observer-et-décrire-la-structure-dun-objet"
+        },
+        {
+          "slug": "seance-2",
+          "kind": "seance",
+          "num": 2,
+          "title": "Séance 2: Algorithme et programmation",
+          "shortTitle": "Séance 2",
+          "tagline": "",
+          "content_md": "**Le Logigramme :**\n\n**DEFINITION**\n\nL’organigramme ou algorigramme ou le logigramme est un outil graphique (visuel) pour analyser et décrire un processus ou une activité. Cela permet de comprendre étape par étape ce qui se passe dans un système automatisé. Il y a trois symboles normalisés (qui respectent une règle).\n\n![](assets/img/4eme__sequence-5-comment-simuler-le-fonctionnement-dun-feu-tricolore-arduino__seance-2-algorithme-et-programmation/01.png)\n\n![](assets/img/4eme__sequence-5-comment-simuler-le-fonctionnement-dun-feu-tricolore-arduino__seance-2-algorithme-et-programmation/02.png)\n\nMise en situation : On a la carte arduino, les différents matériels, on sait brancher le tout…\n\nProblématique :\n\n**PARTIE 1:**L’organigramme\n\n1- Qu’est-ce qu’un organigramme de programmation ?\n\n2- Quels sont les autres noms qu’on peut donner à un organigramme ?\n\n3- Quels sont les trois symboles utilisés dans un organigramme ?\n\n4- Pour chaque symbole, expliquez son rôle.\n\n5- Faire l’exercice suivant:\n\n![](assets/img/4eme__sequence-5-comment-simuler-le-fonctionnement-dun-feu-tricolore-arduino__seance-2-algorithme-et-programmation/03.png)\n\n![](assets/img/4eme__sequence-5-comment-simuler-le-fonctionnement-dun-feu-tricolore-arduino__seance-2-algorithme-et-programmation/04.png)\n\n![](assets/img/4eme__sequence-5-comment-simuler-le-fonctionnement-dun-feu-tricolore-arduino__seance-2-algorithme-et-programmation/05.png)",
+          "resources": [],
+          "srcUrl": "https://sites.google.com/view/lmtechno25/4ème/séquence-5-comment-simuler-le-fonctionnement-dun-feu-tricolore-arduino/séance-2-algorithme-et-programmation"
+        }
+      ]
+    },
+    {
+      "slug": "sequence-6-serre-autonome",
+      "eyebrow": "Séquence 6",
+      "year": "2020-2024",
+      "title": "Serre autonome",
+      "shortTitle": "Serre autonome",
+      "tagline": "Analyse fonctionnelle, modélisation 3D et programmation d'une serre autonome.",
+      "intro_md": "## Séquence 2 : Serre autonome\n\n## Introduction\n\nLa culture des végétaux se fait généralement en plein air dans des jardins potagers ou des jardins d'agréments sur des balcons. C'est une activité professionnelle pour certains ou de loisirs et de plaisirs pour d'autres. De nombreuses contraintes existent avant de permettre à une plante de se développer..\n\nLa **lumière** est un élément permettant la photosynthèse, c'est à dire la capacité par laquelle les plantes vertes synthétisent des matières organiques grâce à l'énergie lumineuse, en absorbant le gaz carbonique de l'air et en rejetant l'oxygène. Plus simplement, une plante a un besoin constant de lumière, aussi il est nécessaire et de lui apporter la quantité de lumière suffisante quelque soit l'éclairage extérieur (naturel ou artificiel).\n\nComme tout être vivant, une plante a besoin **d'eau**. Celle-ci déployant ses racines dans la terre, un certain taux d'humidité doit être respecté. Un niveau d' humidité dans l'air est également un facteur favorisant la croissance du végétal.\n\nLa **température** est également un élément important pour le développement d'une plante. Une température trop élevée conduit généralement à la destruction du végétal.\n\nL'apport de **nutriment organique** peut être fait grâce à des bâtonnets que nous insèrons dans la terre. De nombreux produits existent déjà et permettent une autonomie de plusieurs semaines pouvant aller à plusieurs mois.\n\nLe fait de pouvoir déplacer la plante et de l'installer successivement à plusieurs endroits doit être pris en compte et devra pouvoir se faire sans difficulté notamment en terme de manutention. La plante restera constamment visible par l'utilisateur.\n\nPour certains passionnés et autres horticulteurs le développement de la plante est un souci constant. Or, lors d'absences prolongées, il devient impossible pour ces personnes de suivre la bonne croissance des végétaux. Des solutions permettant de surveiller les paramètres vitaux précédents (lumière, humidité de la terre et de l'air, température) doivent donc pouvoir être mis en oeuvre afin de rassurer le jardinier.\n\nDe la même façon, mais cette fois lors de la présence de l'utilisateur les mêmes paramètres physiques doivent être visibles facilement par celui-ci.\n\nA partir de ces besoins, plusieurs questions apparaissent.\n\n**- Comment avoir un système permettant d’accueillir et de déplacer un ou plusieurs végétaux de taille moyenne ?**\n\n**- Comment avoir un système permettant de gérer de façon autonome tous les paramètres physiques nécessaires au développement d'une plante?**\n\n**- Comment informer directement l'utilisateur de l’état des paramètres physiques ?**\n\n**- Comment informer à distance l'utilisateur de l’état de ces mêmes paramètres ?**",
+      "resources": [],
+      "pages": [
+        {
+          "slug": "seance-0",
+          "kind": "seance",
+          "num": 0,
+          "title": "Séance 0: présentation du projet",
+          "shortTitle": "Séance 0",
+          "tagline": "",
+          "content_md": "Présentation\n\n**Dans le cadre d'un projet jardin que le collège aimerait réalisé, nous souhaitons équiper le collège d'une serre entièrement autonome sans dégagement de CO2. Nous ne souhaitons pas faire l'acquisition d'une serre déjà complète ce qui ne présente aucun intérêt pédagogique et qui peut présenter également un coût supérieur mais plutôt d'une serre non automatique que nous équiperons de tous les éléments nécessaires à la réalisation de l'automatisation.**\n\nUne serre est une structure généralement close. C'est un bâtiment industriel de production, préfabriqué et monté sur un soubassement bétonné. Il vise à soustraire aux éléments climatiques les cultures produites pour l'alimentation ou le plaisir de l'Homme pour une meilleure gestion des besoins des plantes et pour en accélérer la croissance ou les produire en toute saison. (Source serresdutouch.fr)\n\nUne serre est destinée à protéger du froid les plantes non rustiques et à favoriser la croissance des cultures (légumes, fleurs, etc.) en créant des conditions climatiques plus favorables que le climat local. (source wikipédia)\n\n**La serre permet de gérer plusieurs éléments naturels:**\n\n– gestion du climat\n\n– gestion de la température\n\n– gestion de l'eau et apport de l'alimentation minérale\n\n– gestion de l'air – qualité de l'air intérieur de la serre\n\n– gestion de la lumière\n\nCette serre sera utilisée aussi bien par les professeurs que les élèves du collège afin de faire pousser tout type de plantes, légumes ou fleurs quelque soit la saison. On mettra cette serre dans le collège et l'influence de notre climat ne doit pas être un problème.\n\nElle doit fonctionner toute l'année scolaire, et même pendant les vacances automatiquement.\n\nLa serre devra être capable de réguler la température aussi bien lorsque les températures sont trop élevées ou trop faibles. On doit également pouvoir arroser les plantes automatiquement sans apport d'eau extérieur. Il est également important de pouvoir oxygéner les plantes. On doit également agir sur la luminosité. Tout cela doit se faire de façon automatique et en fonction des plantes que l'on met dans la serre. Aucun dégagement de CO2 sera accepté et elle doit fonctionner de façon autonome.\n\nNotre serre nous permettra de faire pousser tout type de plante et éventuellement des légumes pour faire vivre notre projet jardin pendant toute l'année. Il sera important d'utiliser des éléments qui ne présentent aucun danger (électrocution, ne pas se couper, ne pas se pincer, ne pas se blesser, etc..).\n\nActivité 1: Prendre une feuille, mettre un titre et répondre aux question suivantes\n\n1. Que devons nous faire? Pourquoi réaliser une serre? Comment doit être cette serre? A quoi peut servir une serre? Que devons nous acheter? Que devons nous réaliser? Quels sont les éléments à mettre dans le dossier?\n\n1. Nous devons réaliser une serre pour notre projet jardin.\n\nQuels sont les éléments que je peux mettre dans un jardin?\n\n--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------\n\nLorsque je veux faire pousser des éléments dans un jardin, quelles sont les questions que je dois me poser?\n\n--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------\n\n1. Afin d'argumenter nos choix futurs, chaque groupe doit présenter des recherches sur chaque problème.\n\nMa situation problème?\n\n--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------\n\nMes hypothèses\n\n--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------\n\nNos recherches sur les solutions possibles (résumé)\n\n--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------\n\n1. Bilan en classe entière\n\n--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------",
+          "resources": [],
+          "srcUrl": "https://sites.google.com/view/lmtechno25/4ème/séquence-6-serre-autonome/séance-0-présentation-du-projet"
+        },
+        {
+          "slug": "seance-1",
+          "kind": "seance",
+          "num": 1,
+          "title": "Séance 1: Analyse fonctionnelle",
+          "shortTitle": "Séance 1",
+          "tagline": "",
+          "content_md": "::embed[serre_autonome analyse fonctionnelle.pdf](https://drive.google.com/file/d/1iGeYlLWYxxV-wRihtwlwLq4hqz_TLFbX/preview)\n\n**Correction**\n\n![](assets/img/4eme__sequence-6-serre-autonome__seance-1-analyse-fonctionnelle/01.png)\n\n![](assets/img/4eme__sequence-6-serre-autonome__seance-1-analyse-fonctionnelle/02.png)\n\n![](assets/img/4eme__sequence-6-serre-autonome__seance-1-analyse-fonctionnelle/03.png)\n\n![](assets/img/4eme__sequence-6-serre-autonome__seance-1-analyse-fonctionnelle/04.png)",
+          "resources": [],
+          "srcUrl": "https://sites.google.com/view/lmtechno25/4ème/séquence-6-serre-autonome/séance-1-analyse-fonctionnelle"
+        },
+        {
+          "slug": "seance-2",
+          "kind": "seance",
+          "num": 2,
+          "title": "Séance 2: modélisation 3D de la serre",
+          "shortTitle": "Séance 2",
+          "tagline": "",
+          "content_md": "::embed[dessin éclaté serre.pdf](https://drive.google.com/file/d/1v9eayZiIak4I5QdOnBtvtPJS_QQGJgJA/preview)\n\n**En se basant sur le dessin éclaté d'une serre ci-dessus, faites le croquis de votre serre puis ajoutez les bonnes dimnensions afin de faire la modélisation 3D dans tinkercad et l'imprimer.**",
+          "resources": [],
+          "srcUrl": "https://sites.google.com/view/lmtechno25/4ème/séquence-6-serre-autonome/séance-2-modélisation-3d-de-la-serre"
+        },
+        {
+          "slug": "seance-3",
+          "kind": "seance",
+          "num": 3,
+          "title": "Séance 3: programmer un système",
+          "shortTitle": "Séance 3",
+          "tagline": "",
+          "content_md": "",
+          "resources": [],
+          "srcUrl": "https://sites.google.com/view/lmtechno25/4ème/séquence-6-serre-autonome/séance-3-programmer-un-système"
+        }
+      ]
+    },
+    {
+      "slug": "chaines-fonctionnelles",
+      "eyebrow": "Compléments",
+      "year": "",
+      "title": "Chaînes fonctionnelles",
+      "shortTitle": "Chaînes fonctionnelles",
+      "tagline": "Exercices et corrections sur les chaînes d'information et d'énergie.",
+      "intro_md": "## La chaine d'information\n\n### Présentation\n\nPour produire des **ordres**, un système automatique doit connaitre les informations provenant de l'utilisateur ainsi que les états du système lui-même et de son environnement.\n\nLes **états** et les **consignes** sont des grandeurs physiques détectées et mesurées par des **capteurs**.\n\nL'analyse de ces données est assurée par un **circuit électronique** qui ensuite envoie les **ordres** à exécuter.\n\n**La chaine d'information est l'ensemble des fonctions techniques et des solutions technologiques qui participent à la prise des décisions par le système automatique.**\n\n**Schéma fonctionnel**\n\n**Fonctions techniques :**\n\nLa chaine d'information est composée de 3 blocs fonctionnels :\n\n- **Acquérir :** les grandeurs physiques externes sont traduites en signaux électriques par les capteurs.\n\n- **Traiter :** le programme de l'unité de commande analyse les informations et prend les décisions.\n\n- **Communiquer :** les ordres sont envoyés à la chaine d'énergie et des signaux sont adressés à l'opérateur.\n\n![](assets/img/4eme__chaines-fonctionnelles/01.png)\n\n**Solutions technologiques :**\n\nPour assurer chacune de ces 3 fonctions techniques, il existe de nombreuses solutions technologiques :\n\n- **Acquérir :** capteur logique, analogique ou numérique (interrupteur, bouton-poussoir, clavier, anémomètre, cellule photoélectrique, détecteur infrarouge, thermistance...).\n\n- **Traiter :** circuit intégré, microprocesseur, microcontrôleur, calculateur, circuit de commande, module logique, automate programmable...\n\n- **Communiquer :** carte électronique, fil électrique, fibre optique, liaison sans fil, connexion réseau...\n\n**Exemple**: Dans une maison moderne, le thermostat régule la température de la pièce.\n\nL'utilisateur choisit une temp'rature de consigne...\n\n![](assets/img/4eme__chaines-fonctionnelles/02.png)\n\nComposition de la chaine d'information d'une régulation de température :\n\n- **Grandeurs physiques :** la **température souhaitée** (consigne) et la **température réelle** (état).\n\n- **Acquérir :** le **thermostat** est le capteur qui mesure la température de la maison.\n\n- **Traiter :** le **circuit intégré** compare la température mesurée à celle désirée.\n\n- **Communiquer :** la **carte électronique** envoie le bon ordre en fonction de la température.\n\n- **Ordres :** **déclencher** ou **arrêter** le chauffage.\n\n## La chaine d'énergie\n\n### Présentation\n\nPour effectuer des **actions**, un système automatique a besoin d'être alimenté par une **source d'énergie**.\n\nBien que les énergies intervenantes soient très variées (électrique, mécanique, thermique, hydraulique, pneumatique...), le principe est toujours le même. Les **ordres** provenant de la chaine d'information autorisent :\n\n- La distribution de la bonne quantité d'énergie dans le système.\n\n- La conversion de l'énergie par des **actionneurs**.\n\n- La transmission de l'énergie aux **effecteurs**.\n\nIdentifier les composants qui assurent ces différentes fonctions permet de comprendre le fonctionnement du système.\n\n**La chaine d'énergie est l'ensemble des fonctions techniques et des solutions technologiques qui participent à la réalisation des opérations par le système automatique.**\n\n### Schéma fonctionnel\n\n**Fonctions techniques :**\n\nLa chaine d'énergie est composée de 4 blocs fonctionnels :\n\n- **Alimenter :** l'énergie externe est adaptée pour le bon fonctionnement du système.\n\n- **Distribuer :** un distributeur fait varier la quantité d'énergie en fonction des ordres reçus.\n\n- **Convertir :** un actionneur transforme l'énergie en une autre.\n\n- **Transmettre :** un mécanisme transfère cette énergie vers l'effecteur afin de générer une action.\n\n![](assets/img/4eme__chaines-fonctionnelles/03.png)\n\n**Solutions technologiques :**\n\nPour assurer chacune de ces 4 fonctions techniques, il existe de nombreuses solutions technologiques :\n\n- **Alimenter :** bloc / boitier d'alimentation, coffret / tableau électrique, fils électriques, pile, coupleur de piles, batterie, accumulateur, transformateur, panneau photovoltaïque...\n\n- **Distribuer :** contacteur, relais, inverseur, variateur, régulateur, distributeur, vanne...\n\n- **Convertir :** actionneur (moteur, vérin, résistance, sirène, haut-parleur, électroaimant, voyant, écran...).\n\n- **Transmettre :** engrenage, réducteur, embrayage, bielle, bras, poulie / courroie, pignon / chaine, crémaillère / vis sans fin...\n\n**Exemple:** **Conversion des énergies:**\n\nPour se protéger du soleil, beaucoup de propriétaires équipent leur maison d'un store.\n\n![](assets/img/4eme__chaines-fonctionnelles/04.png)\n\nUn store électrique comporte:\n\n![](assets/img/4eme__chaines-fonctionnelles/05.png)\n\nqui entraîne en rotation\n\n![](assets/img/4eme__chaines-fonctionnelles/06.png)\n\nautour duquel s'enroule\n\n![](assets/img/4eme__chaines-fonctionnelles/07.png)\n\n![](assets/img/4eme__chaines-fonctionnelles/08.png)\n\nqui aliment ensuite\n\n![](assets/img/4eme__chaines-fonctionnelles/09.png)\n\nchargé de distribuer l'énergie vers\n\n![](assets/img/4eme__chaines-fonctionnelles/10.png)\n\net c'est finalement le bouton de commande qui pilote le moteur.\n\n![](assets/img/4eme__chaines-fonctionnelles/11.png)\n\nComposition de la chaine d'énergie d'un store automatique :\n\n- **Source d'énergie :** l'**électricité**.\n\n- **Alimenter :** le **boitier d'alimentation** fournit l'énergie électrique à tout le système (partie commande et partie opérative).\n\n- **Distribuer :** les **contacteurs** amènent l'électricité au moteur en fonction des ordres reçus.\n\n- **Convertir :** le **moteur** transforme l'énergie électrique en énergie mécanique.\n\n- **Transmettre :** les **engrenages** réduisent la vitesse de rotation du moteur et font tourner le tube d'enroulement de la toile.\n\n- **Action :** l'**ouverture** ou la **fermeture** du store.",
+      "resources": [],
+      "pages": [
+        {
+          "slug": "exercices",
+          "kind": "annexe",
+          "num": null,
+          "title": "Exercices",
+          "shortTitle": "Exercices",
+          "tagline": "",
+          "content_md": "::embed[(exercice)chaine-d-information-energie-converted (1).pdf](https://drive.google.com/file/d/1MvrF5t-ClAs_7x4Ho6-0MoUabIn1XXOd/preview)",
+          "resources": [],
+          "srcUrl": "https://sites.google.com/view/lmtechno25/4ème/chaines-fonctionnelles/exercices"
+        },
+        {
+          "slug": "correction",
+          "kind": "correction",
+          "num": null,
+          "title": "Correction",
+          "shortTitle": "Correction",
+          "tagline": "",
+          "content_md": "::embed[(corrigée)chaine-d-information-energie-converted.pdf](https://drive.google.com/file/d/1OSfolGMptlQc9Do_BEg1wI7CaGm3eUl9/preview)",
+          "resources": [],
+          "srcUrl": "https://sites.google.com/view/lmtechno25/4ème/chaines-fonctionnelles/correction"
+        }
+      ]
+    },
+    {
+      "slug": "olympiades-informatique",
+      "eyebrow": "Concours",
+      "year": "",
+      "title": "Olympiades d'informatique",
+      "shortTitle": "Olympiades d'informatique",
+      "tagline": "S'entraîner avec les épreuves des olympiades d'informatique.",
+      "intro_md": "[https://drive.google.com/drive/folders/1pfQhyxQd-HrD3aTnyP896RoZR4q3aouK?usp=sharing](https://drive.google.com/drive/folders/1pfQhyxQd-HrD3aTnyP896RoZR4q3aouK?usp=sharing)\n\n::embed[](https://www.gstatic.com/atari/embeds/8306a3600875750e6acc147fd93569bf/intermediate-frame-minified.html)",
+      "resources": [],
+      "pages": []
+    }
+  ]
+}
