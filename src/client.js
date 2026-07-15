@@ -271,6 +271,15 @@
     update();
   });
 
+  /* ---------- Synchronisation cloud (si un élève est connecté) ---------- */
+  try {
+    var sess = localStorage.getItem("lmtechno-eleve");
+    var fb = window.LMTECHNO_FIREBASE;
+    if (sess && fb && fb.apiKey && String(fb.apiKey).indexOf("VOTRE_") === -1) {
+      import(BASE + "assets/sync.js").catch(function () {});
+    }
+  } catch (e) {}
+
   /* ---------- Tableaux défilants sur mobile ---------- */
   document.querySelectorAll(".prose table").forEach(function (t) {
     if (t.parentElement.classList.contains("table-scroll")) return;

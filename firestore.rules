@@ -1,0 +1,55 @@
+rules_version = '2';
+
+// Règles de sécurité Firestore pour les « espaces » Technologie & SNT.
+// À coller dans la console Firebase → Firestore Database → Règles → Publier.
+//
+// Modèle de confiance :
+//  - Le PROFESSEUR (compte e-mail/mot de passe) est propriétaire de ses classes
+//    et peut tout y lire/écrire.
+//  - L'ÉLÈVE se connecte de façon ANONYME avec le code de classe + son prénom.
+//    Il peut lire le code de classe, lire le roster et lire/écrire le travail
+//    à l'intérieur de la classe. C'est volontairement peu contraignant (le
+//    prénom n'est pas un secret) : n'y stockez rien de sensible.
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    function signedIn() { return request.auth != null; }
+    function ownsClass(classId) {
+      return signedIn()
+        && get(/databases/$(database)/documents/classes/$(classId)).data.teacherUid == request.auth.uid;
+    }
+
+    // Profil professeur : privé à son propriétaire.
+    match /teachers/{uid} {
+      allow read, write: if signedIn() && request.auth.uid == uid;
+    }
+
+    // Table de correspondance code -> classe (lecture par code, pas d'énumération).
+    match /classCodes/{code} {
+      allow get: if signedIn();
+      allow list: if false;
+      allow create: if signedIn() && request.resource.data.teacherUid == request.auth.uid;
+      allow delete: if signedIn() && resource.data.teacherUid == request.auth.uid;
+    }
+
+    // Classes.
+    match /classes/{classId} {
+      allow read: if signedIn();
+      allow create: if signedIn() && request.resource.data.teacherUid == request.auth.uid;
+      allow update, delete: if signedIn() && resource.data.teacherUid == request.auth.uid;
+
+      // Élèves (roster + résumé de progression).
+      match /students/{sid} {
+        allow read: if signedIn();
+        allow create, delete: if ownsClass(classId); // seul le prof inscrit/retire
+        allow update: if signedIn();                 // l'élève met à jour sa progression
+
+        // Travail détaillé (réponses + score de quiz par page).
+        match /work/{pageKey} {
+          allow read, write: if signedIn();
+        }
+      }
+    }
+  }
+}

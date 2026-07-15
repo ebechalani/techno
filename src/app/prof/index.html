@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="fr" data-base="../">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Espace professeur — Technologie &amp; SNT</title>
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lexend:wght@500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/styles.css">
+<script>(function(){try{var t=localStorage.getItem("lmtechno-theme");if(!t)t=window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light";document.documentElement.setAttribute("data-theme",t);}catch(e){}})();</script>
+<script src="../assets/firebase-config.js"></script>
+</head>
+<body>
+<header class="app-header">
+  <div class="wrap">
+    <a class="brand" href="../index.html"><span class="brand-logo">T</span><span>Espace professeur</span></a>
+    <span class="spacer"></span>
+    <span id="who" style="font-size:0.88rem;color:var(--muted)"></span>
+    <a class="btn btn-ghost btn-sm" href="../index.html">Site</a>
+    <button class="btn btn-ghost btn-sm" id="logout" type="button">Se déconnecter</button>
+  </div>
+</header>
+
+<main class="app-main">
+  <div id="loading" style="text-align:center;color:var(--muted);padding:3rem">Chargement…</div>
+
+  <div id="dash" style="display:none">
+    <div class="app-card">
+      <h2 style="margin-top:0">Créer une classe</h2>
+      <div class="inline-form">
+        <div class="field"><label for="c-name">Nom de la classe</label>
+          <input id="c-name" type="text" placeholder="5ème A"></div>
+        <button class="btn btn-primary" id="c-create" type="button">Créer la classe</button>
+      </div>
+      <div class="app-msg err" id="c-msg"></div>
+    </div>
+
+    <div id="classes"></div>
+  </div>
+</main>
+
+<script type="module">
+import { isConfigured, onAuth, logout, createClass, listMyClasses, deleteClass,
+  addStudent, removeStudent, listStudents, loadStudentWork } from "../assets/app.js";
+
+const $ = (id) => document.getElementById(id);
+if (!isConfigured()) { location.href = "../connexion/"; }
+
+$("logout").onclick = async () => { await logout(); location.href = "../connexion/"; };
+
+onAuth(async ({ role, user }) => {
+  if (role !== "prof") { location.href = "../connexion/"; return; }
+  $("who").textContent = user.displayName || user.email;
+  $("loading").style.display = "none";
+  $("dash").style.display = "block";
+  await refresh();
+});
+
+$("c-create").onclick = async () => {
+  const name = $("c-name").value.trim();
+  $("c-msg").className = "app-msg";
+  if (!name) { $("c-msg").textContent = "Donne un nom à la classe."; $("c-msg").className = "app-msg show err"; return; }
+  $("c-create").disabled = true;
+  try { await createClass(name); $("c-name").value = ""; await refresh(); }
+  catch (e) { $("c-msg").textContent = "Erreur : " + (e.message || e); $("c-msg").className = "app-msg show err"; }
+  $("c-create").disabled = false;
+};
+
+function esc(s) { return String(s == null ? "" : s).replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c])); }
+function scorePill(pct) {
+  if (pct == null) return '<span class="pill-score none">—</span>';
+  const cls = pct >= 80 ? "good" : pct >= 50 ? "mid" : "low";
+  return `<span class="pill-score ${cls}">${pct}%</span>`;
+}
+function studentStats(s) {
+  const prog = s.progress || {};
+  const keys = Object.keys(prog);
+  let quizzes = 0, sumPct = 0, answered = 0;
+  for (const k of keys) {
+    const p = prog[k] || {};
+    answered += p.answered || 0;
+    if (p.quiz && p.quiz.total) { quizzes++; sumPct += Math.round((p.quiz.score / p.quiz.total) * 100); }
+  }
+  return { pages: keys.length, quizzes, avg: quizzes ? Math.round(sumPct / quizzes) : null, answered };
+}
+
+async function refresh() {
+  const classes = await listMyClasses();
+  const box = $("classes");
+  if (!classes.length) { box.innerHTML = '<p style="color:var(--muted)">Aucune classe pour l’instant. Créez-en une ci-dessus.</p>'; return; }
+  box.innerHTML = "";
+  for (const cls of classes) {
+    const students = await listStudents(cls.id);
+    students.sort((a, b) => (a.firstName || "").localeCompare(b.firstName || ""));
+    const card = document.createElement("div");
+    card.className = "app-card class-card";
+    card.innerHTML = `
+      <div style="display:flex;flex-wrap:wrap;align-items:center;gap:0.8rem">
+        <h2 style="margin:0;flex:1">${esc(cls.name)}</h2>
+        <span>Code : <span class="class-code">${esc(cls.code)}</span></span>
+        <button class="btn btn-ghost btn-sm" data-del="${cls.id}" data-code="${esc(cls.code)}">🗑 Supprimer</button>
+      </div>
+      <p style="color:var(--muted);font-size:0.88rem;margin:0.6rem 0">Donnez ce code à vos élèves ; ils se connectent avec le code + leur prénom (tel qu'inscrit ci-dessous).</p>
+      <div class="inline-form" style="margin:0.6rem 0 0.4rem">
+        <div class="field"><label>Ajouter un élève (prénom)</label>
+          <input type="text" data-addname="${cls.id}" placeholder="Léa"></div>
+        <button class="btn btn-ghost btn-sm" data-add="${cls.id}">+ Ajouter</button>
+      </div>
+      <div class="chips" data-chips="${cls.id}">
+        ${students.map((s) => `<span class="chip-student">${esc(s.firstName)}<button title="Retirer" data-rm="${cls.id}" data-sid="${esc(s.id)}">×</button></span>`).join("") || '<span style="color:var(--muted);font-size:0.85rem">Aucun élève inscrit.</span>'}
+      </div>
+      <h3 style="margin:1.2rem 0 0.4rem;font-size:1rem">Progression</h3>
+      <div class="table-scroll">
+        <table class="dash-table">
+          <thead><tr><th>Élève</th><th class="num">Séances</th><th class="num">Quiz faits</th><th class="num">Moyenne quiz</th><th></th></tr></thead>
+          <tbody>
+            ${students.map((s) => { const st = studentStats(s); return `<tr>
+              <td>${esc(s.firstName)}</td>
+              <td class="num">${st.pages}</td>
+              <td class="num">${st.quizzes}</td>
+              <td class="num">${scorePill(st.avg)}</td>
+              <td class="num"><button class="btn btn-ghost btn-sm" data-detail="${cls.id}" data-sid="${esc(s.id)}" data-name="${esc(s.firstName)}">Détails</button></td>
+            </tr>`; }).join("") || '<tr><td colspan="5" style="color:var(--muted)">Aucun élève.</td></tr>'}
+          </tbody>
+        </table>
+      </div>
+      <div data-detailbox="${cls.id}"></div>`;
+    box.appendChild(card);
+  }
+  wire();
+}
+
+function wire() {
+  document.querySelectorAll("[data-add]").forEach((b) => b.onclick = async () => {
+    const cid = b.getAttribute("data-add");
+    const inp = document.querySelector(`[data-addname="${cid}"]`);
+    const name = inp.value.trim(); if (!name) return;
+    b.disabled = true; try { await addStudent(cid, name); await refresh(); } catch (e) { alert("Erreur : " + (e.message || e)); b.disabled = false; }
+  });
+  document.querySelectorAll("[data-rm]").forEach((b) => b.onclick = async () => {
+    if (!confirm("Retirer cet élève et ses réponses ?")) return;
+    try { await removeStudent(b.getAttribute("data-rm"), b.getAttribute("data-sid")); await refresh(); } catch (e) { alert("Erreur : " + (e.message || e)); }
+  });
+  document.querySelectorAll("[data-del]").forEach((b) => b.onclick = async () => {
+    if (!confirm("Supprimer définitivement cette classe, ses élèves et toutes leurs réponses ?")) return;
+    try { await deleteClass(b.getAttribute("data-del"), b.getAttribute("data-code")); await refresh(); } catch (e) { alert("Erreur : " + (e.message || e)); }
+  });
+  document.querySelectorAll("[data-detail]").forEach((b) => b.onclick = async () => {
+    const cid = b.getAttribute("data-detail"), sid = b.getAttribute("data-sid"), name = b.getAttribute("data-name");
+    const boxDet = document.querySelector(`[data-detailbox="${cid}"]`);
+    boxDet.innerHTML = '<p style="color:var(--muted)">Chargement…</p>';
+    const work = await loadStudentWork(cid, sid);
+    if (!work.length) { boxDet.innerHTML = `<div class="app-card" style="margin-top:0.6rem"><strong>${name}</strong> n'a pas encore de travail enregistré.</div>`; return; }
+    boxDet.innerHTML = `<div class="app-card" style="margin-top:0.6rem">
+      <div style="display:flex;align-items:center;gap:0.6rem"><strong>Détail — ${name}</strong><button class="btn btn-ghost btn-sm" data-closedet style="margin-left:auto">Fermer</button></div>
+      <div class="table-scroll"><table class="dash-table"><thead><tr><th>Page</th><th class="num">Quiz</th><th class="num">Réponses écrites</th></tr></thead><tbody>
+      ${work.map((w) => { const q = w.quiz && w.quiz.total ? Math.round(w.quiz.score / w.quiz.total * 100) : null; const nb = w.answers ? Object.keys(w.answers).length : 0; return `<tr><td>${esc((w.title || w.pageKey).replace(/_/g, " "))}</td><td class="num">${scorePill(q)}</td><td class="num">${nb}</td></tr>`; }).join("")}
+      </tbody></table></div></div>`;
+    boxDet.querySelector("[data-closedet]").onclick = () => boxDet.innerHTML = "";
+  });
+}
+</script>
+</body>
+</html>

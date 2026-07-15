@@ -243,6 +243,7 @@ function navHTML(site, rel, currentSectionId) {
 <nav class="main-nav" id="main-nav" aria-label="Navigation principale">
   <a href="${rel}index.html"${currentSectionId === "home" ? ' aria-current="true"' : ""}>Accueil</a>
   ${site.sections.map(link).join("\n  ")}
+  <a class="nav-account" href="${rel}connexion/">👤 Espace</a>
 </nav>`;
 }
 
@@ -266,6 +267,7 @@ function layout({ site, rel, title, description, body, sectionId, extraHead = ""
 <script>
 (function(){try{var t=localStorage.getItem("lmtechno-theme");if(!t)t=window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light";document.documentElement.setAttribute("data-theme",t);}catch(e){}})();
 </script>
+<script src="${rel}assets/firebase-config.js"></script>
 ${extraHead}
 </head>
 <body>
@@ -700,6 +702,12 @@ function main() {
   const imgSrc = path.join(CONTENT, "assets", "img");
   if (fs.existsSync(imgSrc)) {
     fs.cpSync(imgSrc, path.join(OUT, "assets", "img"), { recursive: true });
+  }
+
+  // application « espaces » (connexion, prof, élève) copiée telle quelle
+  const appSrc = path.join(__dirname, "app");
+  if (fs.existsSync(appSrc)) {
+    fs.cpSync(appSrc, OUT, { recursive: true });
   }
 
   renderHome(site, sections);

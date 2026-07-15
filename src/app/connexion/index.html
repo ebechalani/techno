@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="fr" data-base="../">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Connexion — Technologie &amp; SNT</title>
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lexend:wght@500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/styles.css">
+<script>(function(){try{var t=localStorage.getItem("lmtechno-theme");if(!t)t=window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light";document.documentElement.setAttribute("data-theme",t);}catch(e){}})();</script>
+<script src="../assets/firebase-config.js"></script>
+</head>
+<body>
+<header class="app-header">
+  <div class="wrap">
+    <a class="brand" href="../index.html"><span class="brand-logo">T</span><span>Technologie <span style="color:var(--muted);font-weight:500">&amp;</span> SNT</span></a>
+    <span class="spacer"></span>
+    <a class="btn btn-ghost btn-sm" href="../index.html">← Retour au site</a>
+  </div>
+</header>
+
+<main class="app-main app-narrow">
+  <div id="notconfig" style="display:none">
+    <div class="notice-config">
+      🔧 Les espaces ne sont pas encore activés : le professeur doit d'abord configurer Firebase.
+      Voir le guide <strong>FIREBASE-SETUP.md</strong> dans le dépôt.
+    </div>
+  </div>
+
+  <div id="app" style="display:none">
+    <h1 style="text-align:center;margin-bottom:1.2rem">Mon espace</h1>
+    <div class="app-tabs">
+      <button id="tab-prof" class="active" type="button">👩‍🏫 Professeur</button>
+      <button id="tab-eleve" type="button">🎒 Élève</button>
+    </div>
+
+    <!-- Professeur -->
+    <section id="pane-prof" class="app-card">
+      <h2 id="prof-title">Connexion professeur</h2>
+      <div class="field" id="f-name" style="display:none">
+        <label for="p-name">Nom affiché</label>
+        <input id="p-name" type="text" autocomplete="name" placeholder="M. Bachaalany">
+      </div>
+      <div class="field">
+        <label for="p-email">Adresse e-mail</label>
+        <input id="p-email" type="email" autocomplete="email" placeholder="prof@exemple.fr">
+      </div>
+      <div class="field">
+        <label for="p-pass">Mot de passe</label>
+        <input id="p-pass" type="password" autocomplete="current-password" placeholder="••••••••">
+        <span class="hint" id="pass-hint" style="display:none">Au moins 6 caractères.</span>
+      </div>
+      <div class="app-msg err" id="prof-msg"></div>
+      <button class="btn btn-primary btn-full" id="prof-submit" type="button">Se connecter</button>
+      <p class="app-switch" id="prof-switch">Pas encore de compte ? <a id="to-signup">Créer un compte professeur</a></p>
+    </section>
+
+    <!-- Élève -->
+    <section id="pane-eleve" class="app-card" style="display:none">
+      <h2>Connexion élève</h2>
+      <div class="field">
+        <label for="e-code">Code de la classe</label>
+        <input id="e-code" type="text" autocomplete="off" placeholder="ABC123" style="text-transform:uppercase;letter-spacing:0.1em;font-family:var(--font-mono)">
+        <span class="hint">Le code donné par ton professeur.</span>
+      </div>
+      <div class="field">
+        <label for="e-name">Ton prénom</label>
+        <input id="e-name" type="text" autocomplete="off" placeholder="Léa">
+        <span class="hint">Écris-le comme ton professeur l'a inscrit.</span>
+      </div>
+      <div class="app-msg err" id="eleve-msg"></div>
+      <button class="btn btn-primary btn-full" id="eleve-submit" type="button">Entrer dans mon espace</button>
+    </section>
+  </div>
+</main>
+
+<script type="module">
+import { isConfigured, onAuth, teacherSignIn, teacherSignUp, studentJoin } from "../assets/app.js";
+
+if (!isConfigured()) {
+  document.getElementById("notconfig").style.display = "block";
+} else {
+  document.getElementById("app").style.display = "block";
+}
+
+const $ = (id) => document.getElementById(id);
+function msg(el, text, ok) { el.textContent = text; el.className = "app-msg show " + (ok ? "ok" : "err"); }
+function clearMsg(el) { el.className = "app-msg"; }
+
+/* Onglets */
+let tab = "prof";
+function setTab(t) {
+  tab = t;
+  $("tab-prof").classList.toggle("active", t === "prof");
+  $("tab-eleve").classList.toggle("active", t === "eleve");
+  $("pane-prof").style.display = t === "prof" ? "" : "none";
+  $("pane-eleve").style.display = t === "eleve" ? "" : "none";
+}
+$("tab-prof").onclick = () => setTab("prof");
+$("tab-eleve").onclick = () => setTab("eleve");
+
+/* Bascule connexion / création de compte professeur */
+let signup = false;
+function setSignup(on) {
+  signup = on;
+  $("prof-title").textContent = on ? "Créer un compte professeur" : "Connexion professeur";
+  $("f-name").style.display = on ? "" : "none";
+  $("pass-hint").style.display = on ? "" : "none";
+  $("prof-submit").textContent = on ? "Créer mon compte" : "Se connecter";
+  $("p-pass").autocomplete = on ? "new-password" : "current-password";
+  $("prof-switch").innerHTML = on
+    ? 'Déjà un compte ? <a id="to-login">Se connecter</a>'
+    : 'Pas encore de compte ? <a id="to-signup">Créer un compte professeur</a>';
+  $(on ? "to-login" : "to-signup").onclick = () => setSignup(!on);
+}
+$("to-signup").onclick = () => setSignup(true);
+
+/* Soumission professeur */
+$("prof-submit").onclick = async () => {
+  clearMsg($("prof-msg"));
+  const email = $("p-email").value.trim(), pass = $("p-pass").value, name = $("p-name").value.trim();
+  if (!email || !pass) return msg($("prof-msg"), "Renseigne ton e-mail et ton mot de passe.");
+  $("prof-submit").disabled = true;
+  try {
+    if (signup) await teacherSignUp(email, pass, name);
+    else await teacherSignIn(email, pass);
+    location.href = "../prof/";
+  } catch (e) {
+    msg($("prof-msg"), traduire(e));
+    $("prof-submit").disabled = false;
+  }
+};
+
+/* Soumission élève */
+$("eleve-submit").onclick = async () => {
+  clearMsg($("eleve-msg"));
+  const code = $("e-code").value.trim(), name = $("e-name").value.trim();
+  if (!code || !name) return msg($("eleve-msg"), "Entre le code de la classe et ton prénom.");
+  $("eleve-submit").disabled = true;
+  try {
+    await studentJoin(code, name);
+    location.href = "../eleve/";
+  } catch (e) {
+    msg($("eleve-msg"), e.message || traduire(e));
+    $("eleve-submit").disabled = false;
+  }
+};
+
+/* Si déjà connecté, rediriger */
+onAuth(({ role }) => {
+  if (role === "prof") location.href = "../prof/";
+});
+
+function traduire(e) {
+  const c = (e && e.code) || "";
+  if (c.includes("invalid-credential") || c.includes("wrong-password") || c.includes("user-not-found"))
+    return "E-mail ou mot de passe incorrect.";
+  if (c.includes("email-already-in-use")) return "Un compte existe déjà avec cet e-mail.";
+  if (c.includes("weak-password")) return "Mot de passe trop court (6 caractères minimum).";
+  if (c.includes("invalid-email")) return "Adresse e-mail invalide.";
+  if (c.includes("network")) return "Problème de connexion réseau.";
+  return "Une erreur est survenue. Réessaie.";
+}
+</script>
+</body>
+</html>

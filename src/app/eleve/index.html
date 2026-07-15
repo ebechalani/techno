@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="fr" data-base="../">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mon espace élève — Technologie &amp; SNT</title>
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lexend:wght@500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/styles.css">
+<script>(function(){try{var t=localStorage.getItem("lmtechno-theme");if(!t)t=window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light";document.documentElement.setAttribute("data-theme",t);}catch(e){}})();</script>
+<script src="../assets/firebase-config.js"></script>
+</head>
+<body>
+<header class="app-header">
+  <div class="wrap">
+    <a class="brand" href="../index.html"><span class="brand-logo">T</span><span>Mon espace</span></a>
+    <span class="spacer"></span>
+    <span class="student-badge" id="badge"></span>
+    <button class="btn btn-ghost btn-sm" id="logout" type="button">Se déconnecter</button>
+  </div>
+</header>
+
+<main class="app-main app-narrow">
+  <div id="loading" style="text-align:center;color:var(--muted);padding:3rem">Chargement…</div>
+  <div id="space" style="display:none">
+    <div class="app-card">
+      <h1 style="margin-top:0">Bonjour <span id="hello"></span> 👋</h1>
+      <p style="color:var(--text-2)">Tes réponses et tes scores de quiz sont enregistrés ici : tu les retrouves sur n'importe quel appareil en te reconnectant.</p>
+      <a class="btn btn-primary" href="../index.html">📚 Continuer mes cours</a>
+    </div>
+    <div class="app-card">
+      <h2 style="margin-top:0">Ma progression</h2>
+      <div id="progress"></div>
+    </div>
+  </div>
+</main>
+
+<script type="module">
+import { isConfigured, currentStudent, logout, loadStudentWork } from "../assets/app.js";
+
+const $ = (id) => document.getElementById(id);
+if (!isConfigured()) { location.href = "../connexion/"; }
+const sess = currentStudent();
+if (!sess) { location.href = "../connexion/"; }
+
+$("logout").onclick = async () => { await logout(); location.href = "../connexion/"; };
+
+function esc(s) { return String(s == null ? "" : s).replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c])); }
+function scorePill(pct) {
+  if (pct == null) return '<span class="pill-score none">—</span>';
+  const cls = pct >= 80 ? "good" : pct >= 50 ? "mid" : "low";
+  return `<span class="pill-score ${cls}">${pct}%</span>`;
+}
+
+(async () => {
+  $("badge").textContent = "🎒 " + sess.firstName + (sess.className ? " · " + sess.className : "");
+  $("hello").textContent = sess.firstName;
+  try {
+    const work = await loadStudentWork(sess.classId, sess.sid);
+    $("loading").style.display = "none";
+    $("space").style.display = "block";
+    if (!work.length) {
+      $("progress").innerHTML = '<p style="color:var(--muted)">Tu n\'as pas encore commencé. Ouvre une séance et réponds : tout se sauvegarde ici automatiquement.</p>';
+      return;
+    }
+    work.sort((a, b) => (a.pageKey).localeCompare(b.pageKey));
+    $("progress").innerHTML = `<div class="table-scroll"><table class="dash-table">
+      <thead><tr><th>Séance</th><th class="num">Quiz</th><th class="num">Réponses</th></tr></thead>
+      <tbody>${work.map((w) => {
+        const q = w.quiz && w.quiz.total ? Math.round(w.quiz.score / w.quiz.total * 100) : null;
+        const nb = w.answers ? Object.keys(w.answers).length : 0;
+        return `<tr><td>${esc((w.title || w.pageKey).replace(/_/g, " "))}</td><td class="num">${scorePill(q)}</td><td class="num">${nb}</td></tr>`;
+      }).join("")}</tbody></table></div>`;
+  } catch (e) {
+    $("loading").textContent = "Impossible de charger ta progression. Reconnecte-toi.";
+  }
+})();
+</script>
+</body>
+</html>
