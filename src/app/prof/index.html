@@ -52,7 +52,7 @@
 </main>
 
 <script type="module">
-import { isConfigured, onAuth, logout, myTeacher, createClass, listMyClasses, deleteClass,
+import { isConfigured, onAuth, logout, ensureTeacher, createClass, listMyClasses, deleteClass,
   addStudent, removeStudent, listStudents, loadStudentWork,
   listPendingTeachers, approveTeacher, rejectTeacher } from "../assets/app.js";
 
@@ -65,7 +65,7 @@ onAuth(async ({ role, user }) => {
   if (role !== "prof") { location.href = "../connexion/"; return; }
   $("who").textContent = user.displayName || user.email;
   let me = null;
-  try { me = await myTeacher(); } catch (e) {}
+  try { me = await ensureTeacher(); } catch (e) {}
   $("loading").style.display = "none";
   if (!me || !me.approved) { $("pending").style.display = "block"; return; }
   if (me.isAdmin) { $("admin").style.display = "block"; refreshAdmin(); }

@@ -99,6 +99,28 @@ export async function myTeacher() {
   return s.exists() ? { id: auth.currentUser.uid, ...s.val() } : null;
 }
 
+// Crée le profil professeur s'il manque, et répare/promeut l'admin au besoin.
+// Corrige le cas où le compte Auth a été créé avant que la base ou les règles
+// ne soient prêtes (aucun profil écrit).
+export async function ensureTeacher() {
+  const u = auth.currentUser;
+  const mail = (u.email || "").trim().toLowerCase();
+  const admin = mail === ADMIN_EMAIL;
+  const r = ref(db, "teachers/" + u.uid);
+  const s = await get(r);
+  if (s.exists()) {
+    const v = s.val();
+    if (admin && (v.approved !== true || v.isAdmin !== true)) {
+      await update(r, { approved: true, isAdmin: true });
+      return { id: u.uid, ...v, approved: true, isAdmin: true };
+    }
+    return { id: u.uid, ...v };
+  }
+  const rec = { name: u.displayName || "", email: mail, approved: admin, isAdmin: admin, createdAt: serverTimestamp() };
+  await set(r, rec);
+  return { id: u.uid, ...rec };
+}
+
 /* ---------- Administration ---------- */
 
 export async function listPendingTeachers() {
