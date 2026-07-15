@@ -11,12 +11,13 @@
    assurée par les règles Firestore (firestore.rules), pas par ces clés.
    ============================================================================ */
 window.LMTECHNO_FIREBASE = {
-  apiKey: "VOTRE_API_KEY",
-  authDomain: "VOTRE_PROJET.firebaseapp.com",
-  projectId: "VOTRE_PROJET",
-  storageBucket: "VOTRE_PROJET.appspot.com",
-  messagingSenderId: "VOTRE_SENDER_ID",
-  appId: "VOTRE_APP_ID",
+  apiKey: "AIzaSyC5CmXZq9rckDHtMY_sXmnBRWPcGmGMwls",
+  authDomain: "techno-ea268.firebaseapp.com",
+  projectId: "techno-ea268",
+  storageBucket: "techno-ea268.firebasestorage.app",
+  messagingSenderId: "132439983873",
+  appId: "1:132439983873:web:620a4048a885d6a3d8fd00",
+  measurementId: "G-VV0RE8M40V",
 
   // Administrateur : ce professeur est approuvé d'office et peut valider les
   // autres comptes professeurs. Doit être IDENTIQUE à l'e-mail codé dans
