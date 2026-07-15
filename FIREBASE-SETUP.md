@@ -35,12 +35,21 @@ en ~10 minutes. Aucune carte bancaire n'est demandée (offre gratuite « Spark �
    - **E-mail/Mot de passe** (pour les professeurs),
    - **Anonyme** (pour les élèves).
 
-## 4. Créer la base de données et poser les règles
+## 4. Créer la base de données (Realtime Database — gratuite) et poser les règles
 
-1. Menu de gauche → **Build → Firestore Database → « Créer une base de données »**.
-2. Choisissez **mode production**, puis une région (ex. `europe-west`).
-3. Une fois créée, onglet **« Règles »** : effacez tout, collez le contenu du
-   fichier **`firestore.rules`** (à la racine de ce dépôt), puis **« Publier »**.
+> On utilise la **Realtime Database**, incluse dans l'offre **gratuite** (Spark),
+> **sans carte bancaire**. (Firestore, lui, réclame désormais souvent un plan
+> payant « Blaze ».)
+
+1. Menu de gauche → **Build → Realtime Database → « Créer une base de données »**.
+2. Choisissez une **région** (ex. *Belgium — europe-west1*), puis **« Démarrer
+   en mode verrouillé »**.
+3. En haut de la page s'affiche l'**URL de la base**, du type
+   `https://techno-ea268-default-rtdb.europe-west1.firebasedatabase.app`.
+   **Copiez-la** et collez-la dans `src/app/assets/firebase-config.js` à la ligne
+   **`databaseURL`** (à la place de `VOTRE_DATABASE_URL`).
+4. Onglet **« Règles »** : effacez tout, collez le contenu du fichier
+   **`database.rules.json`** (à la racine de ce dépôt), puis **« Publier »**.
 
 ## 5. Publier
 

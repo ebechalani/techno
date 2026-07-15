@@ -154,13 +154,21 @@ onAuth(({ role }) => {
 });
 
 function traduire(e) {
-  const c = (e && e.code) || "";
+  const c = ((e && e.code) || "") + " " + ((e && e.message) || "");
   if (c.includes("invalid-credential") || c.includes("wrong-password") || c.includes("user-not-found"))
     return "E-mail ou mot de passe incorrect.";
-  if (c.includes("email-already-in-use")) return "Un compte existe déjà avec cet e-mail.";
+  if (c.includes("email-already-in-use")) return "Un compte existe déjà avec cet e-mail. Utilisez « Se connecter ».";
   if (c.includes("weak-password")) return "Mot de passe trop court (6 caractères minimum).";
   if (c.includes("invalid-email")) return "Adresse e-mail invalide.";
-  if (c.includes("network")) return "Problème de connexion réseau.";
+  if (c.includes("operation-not-allowed"))
+    return "La connexion par e-mail n'est pas encore activée dans Firebase (Authentication → Sign-in method → Email/Password).";
+  if (c.includes("admin-restricted-operation"))
+    return "La connexion anonyme (élèves) n'est pas activée dans Firebase (Authentication → Anonymous).";
+  if (c.includes("PERMISSION_DENIED") || c.includes("permission-denied") || c.includes("Permission denied"))
+    return "Base de données non autorisée : vérifiez que les règles (database.rules.json) sont bien publiées.";
+  if (c.includes("Cannot parse Firebase url") || c.includes("databaseURL") || c.includes("can't determine Firebase Database URL"))
+    return "L'URL de la base (databaseURL) manque dans firebase-config.js.";
+  if (c.includes("network") || c.includes("unavailable")) return "Problème de connexion réseau, ou base de données pas encore créée.";
   return "Une erreur est survenue. Réessaie.";
 }
 </script>

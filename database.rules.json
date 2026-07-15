@@ -1,0 +1,41 @@
+{
+  "//": "Règles de sécurité Realtime Database — espaces Technologie & SNT.",
+  "//2": "À coller dans Firebase → Realtime Database → onglet Règles → Publier.",
+  "//admin": "L'e-mail admin ci-dessous doit être identique à adminEmail dans firebase-config.js.",
+  "rules": {
+    "teachers": {
+      ".read": "auth != null && auth.token.email == 'ebechalani@gmail.com'",
+      ".indexOn": ["approved"],
+      "$uid": {
+        ".read": "auth != null && (auth.uid == $uid || auth.token.email == 'ebechalani@gmail.com')",
+        ".write": "auth != null && (auth.token.email == 'ebechalani@gmail.com' || (auth.uid == $uid && (!data.exists() ? (newData.child('approved').val() == false && newData.child('isAdmin').val() == false) : (newData.child('approved').val() == data.child('approved').val() && newData.child('isAdmin').val() == data.child('isAdmin').val()))))"
+      }
+    },
+    "classCodes": {
+      "$code": {
+        ".read": "auth != null",
+        ".write": "auth != null && (!data.exists() ? (root.child('teachers').child(auth.uid).child('approved').val() == true && newData.child('teacherUid').val() == auth.uid) : data.child('teacherUid').val() == auth.uid)"
+      }
+    },
+    "classes": {
+      "$tuid": {
+        ".read": "auth != null",
+        "$cid": {
+          ".write": "auth != null && $tuid == auth.uid && root.child('teachers').child(auth.uid).child('approved').val() == true"
+        }
+      }
+    },
+    "students": {
+      "$cid": {
+        ".read": "auth != null",
+        ".write": "auth != null"
+      }
+    },
+    "work": {
+      "$cid": {
+        ".read": "auth != null",
+        ".write": "auth != null"
+      }
+    }
+  }
+}

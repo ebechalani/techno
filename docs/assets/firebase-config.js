@@ -19,6 +19,11 @@ window.LMTECHNO_FIREBASE = {
   appId: "1:132439983873:web:620a4048a885d6a3d8fd00",
   measurementId: "G-VV0RE8M40V",
 
+  // ⚠️ À COMPLÉTER : URL de la Realtime Database. Après avoir créé la base
+  // (Build → Realtime Database → Créer), copiez l'URL affichée en haut, du type
+  // https://techno-ea268-default-rtdb.europe-west1.firebasedatabase.app
+  databaseURL: "VOTRE_DATABASE_URL",
+
   // Administrateur : ce professeur est approuvé d'office et peut valider les
   // autres comptes professeurs. Doit être IDENTIQUE à l'e-mail codé dans
   // firestore.rules (fonction isAdmin()).
