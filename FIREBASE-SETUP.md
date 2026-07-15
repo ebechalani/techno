@@ -49,15 +49,27 @@ Le site se reconstruit et se redéploie automatiquement. C'est prêt !
 
 ## 6. Premier usage
 
-1. Sur le site, cliquez **« 👤 Espace »** → onglet **Professeur** →
-   **« Créer un compte professeur »** (votre e-mail + un mot de passe).
-2. **Créez une classe** : un **code** est généré (ex. `ABC123`).
-3. **Ajoutez vos élèves** par leur **prénom** (mettez « Léa M. », « Léa B. » s'il
-   y a des homonymes — c'est l'identifiant que l'élève tapera).
-4. Donnez à chaque élève le **code de la classe** + son **prénom** exact.
-   Il se connecte via **« 👤 Espace » → Élève**, et dès lors ses réponses et ses
+1. **Créez d'abord le compte administrateur.** Sur le site, cliquez
+   **« 👤 Espace »** → onglet **Professeur** → **« Créer un compte professeur »**
+   en utilisant **l'e-mail administrateur** (`ebechalani@gmail.com`) + un mot de
+   passe. Ce compte est **approuvé automatiquement** et peut **valider les autres
+   professeurs**.
+2. **Les autres professeurs** créent leur compte de la même façon : il reste
+   **« en attente »** jusqu'à ce que l'administrateur l'approuve depuis son
+   tableau de bord (encart **👑 Administration**).
+3. Une fois approuvé, un professeur **crée une classe** : un **code** est généré
+   (ex. `ABC123`).
+4. Il **ajoute ses élèves** par un **pseudo** ; le système attribue à chacun un
+   **numéro unique** (ex. « Léa 3 »). C'est l'identifiant, sans nom réel — mieux
+   pour la vie privée, et pas de doublon entre deux « Léa ».
+5. Donnez à chaque élève le **code de la classe** + son **pseudo** (ex. `ABC123`
+   et « Léa 3 »). Il se connecte via **« 👤 Espace » → Élève** ; ses réponses et
    scores de quiz se sauvegardent et le suivent sur tous ses appareils.
-5. Vous suivez tout depuis votre **tableau de bord** (séances travaillées, scores).
+6. Vous suivez tout depuis votre **tableau de bord** (séances travaillées, scores).
+
+> 🔑 **Changer d'administrateur ?** Modifiez `adminEmail` dans
+> `src/app/assets/firebase-config.js` **et** l'e-mail dans `firestore.rules`
+> (fonction `isAdmin`) — les deux doivent rester identiques.
 
 ## Vie privée (RGPD)
 

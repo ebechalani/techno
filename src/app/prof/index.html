@@ -26,6 +26,16 @@
 <main class="app-main">
   <div id="loading" style="text-align:center;color:var(--muted);padding:3rem">Chargement…</div>
 
+  <div id="pending" class="app-card" style="display:none">
+    <h2 style="margin-top:0">Compte en attente de validation ⏳</h2>
+    <p style="color:var(--text-2)">Votre compte professeur a bien été créé. Il doit d'abord être <strong>validé par l'administrateur</strong> avant que vous puissiez créer des classes. Reconnectez-vous un peu plus tard.</p>
+  </div>
+
+  <div id="admin" class="app-card" style="display:none;border-left:4px solid var(--c-3eme)">
+    <h2 style="margin-top:0">👑 Administration — nouveaux professeurs</h2>
+    <div id="admin-list"></div>
+  </div>
+
   <div id="dash" style="display:none">
     <div class="app-card">
       <h2 style="margin-top:0">Créer une classe</h2>
@@ -42,8 +52,9 @@
 </main>
 
 <script type="module">
-import { isConfigured, onAuth, logout, createClass, listMyClasses, deleteClass,
-  addStudent, removeStudent, listStudents, loadStudentWork } from "../assets/app.js";
+import { isConfigured, onAuth, logout, myTeacher, createClass, listMyClasses, deleteClass,
+  addStudent, removeStudent, listStudents, loadStudentWork,
+  listPendingTeachers, approveTeacher, rejectTeacher } from "../assets/app.js";
 
 const $ = (id) => document.getElementById(id);
 if (!isConfigured()) { location.href = "../connexion/"; }
@@ -53,10 +64,33 @@ $("logout").onclick = async () => { await logout(); location.href = "../connexio
 onAuth(async ({ role, user }) => {
   if (role !== "prof") { location.href = "../connexion/"; return; }
   $("who").textContent = user.displayName || user.email;
+  let me = null;
+  try { me = await myTeacher(); } catch (e) {}
   $("loading").style.display = "none";
+  if (!me || !me.approved) { $("pending").style.display = "block"; return; }
+  if (me.isAdmin) { $("admin").style.display = "block"; refreshAdmin(); }
   $("dash").style.display = "block";
   await refresh();
 });
+
+async function refreshAdmin() {
+  const box = $("admin-list");
+  let pend = [];
+  try { pend = await listPendingTeachers(); } catch (e) { box.innerHTML = '<p style="color:var(--muted)">Impossible de charger les demandes.</p>'; return; }
+  if (!pend.length) { box.innerHTML = '<p style="color:var(--muted)">Aucune demande en attente. 🎉</p>'; return; }
+  box.innerHTML = `<div class="table-scroll"><table class="dash-table"><thead><tr><th>Professeur</th><th>E-mail</th><th></th></tr></thead><tbody>${
+    pend.map((t) => `<tr><td>${esc(t.name || "—")}</td><td>${esc(t.email)}</td><td style="white-space:nowrap">
+      <button class="btn btn-primary btn-sm" data-approve="${t.id}">✓ Approuver</button>
+      <button class="btn btn-ghost btn-sm" data-reject="${t.id}">Refuser</button></td></tr>`).join("")
+  }</tbody></table></div>`;
+  box.querySelectorAll("[data-approve]").forEach((b) => b.onclick = async () => {
+    b.disabled = true; try { await approveTeacher(b.getAttribute("data-approve")); await refreshAdmin(); } catch (e) { alert("Erreur : " + (e.message || e)); b.disabled = false; }
+  });
+  box.querySelectorAll("[data-reject]").forEach((b) => b.onclick = async () => {
+    if (!confirm("Refuser et supprimer cette demande de compte ?")) return;
+    try { await rejectTeacher(b.getAttribute("data-reject")); await refreshAdmin(); } catch (e) { alert("Erreur : " + (e.message || e)); }
+  });
+}
 
 $("c-create").onclick = async () => {
   const name = $("c-name").value.trim();
@@ -102,9 +136,9 @@ async function refresh() {
         <span>Code : <span class="class-code">${esc(cls.code)}</span></span>
         <button class="btn btn-ghost btn-sm" data-del="${cls.id}" data-code="${esc(cls.code)}">🗑 Supprimer</button>
       </div>
-      <p style="color:var(--muted);font-size:0.88rem;margin:0.6rem 0">Donnez ce code à vos élèves ; ils se connectent avec le code + leur prénom (tel qu'inscrit ci-dessous).</p>
+      <p style="color:var(--muted);font-size:0.88rem;margin:0.6rem 0">Chaque élève reçoit un <strong>pseudo + numéro unique</strong> (ci-dessous). Donnez-lui le <strong>code de la classe</strong> et son <strong>pseudo</strong> : il se connecte avec les deux.</p>
       <div class="inline-form" style="margin:0.6rem 0 0.4rem">
-        <div class="field"><label>Ajouter un élève (prénom)</label>
+        <div class="field"><label>Ajouter un élève (pseudo)</label>
           <input type="text" data-addname="${cls.id}" placeholder="Léa"></div>
         <button class="btn btn-ghost btn-sm" data-add="${cls.id}">+ Ajouter</button>
       </div>

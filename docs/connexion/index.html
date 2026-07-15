@@ -66,9 +66,9 @@
         <span class="hint">Le code donné par ton professeur.</span>
       </div>
       <div class="field">
-        <label for="e-name">Ton prénom</label>
-        <input id="e-name" type="text" autocomplete="off" placeholder="Léa">
-        <span class="hint">Écris-le comme ton professeur l'a inscrit.</span>
+        <label for="e-name">Ton pseudo</label>
+        <input id="e-name" type="text" autocomplete="off" placeholder="Léa 3">
+        <span class="hint">Le pseudo + numéro donné par ton professeur (ex. « Léa 3 »).</span>
       </div>
       <div class="app-msg err" id="eleve-msg"></div>
       <button class="btn btn-primary btn-full" id="eleve-submit" type="button">Entrer dans mon espace</button>
@@ -111,7 +111,7 @@ function setSignup(on) {
   $("prof-submit").textContent = on ? "Créer mon compte" : "Se connecter";
   $("p-pass").autocomplete = on ? "new-password" : "current-password";
   $("prof-switch").innerHTML = on
-    ? 'Déjà un compte ? <a id="to-login">Se connecter</a>'
+    ? '<span style="display:block;color:var(--muted);font-size:0.82rem;margin-bottom:0.4rem">Les nouveaux comptes sont validés par l’administrateur avant l’accès au tableau de bord.</span>Déjà un compte ? <a id="to-login">Se connecter</a>'
     : 'Pas encore de compte ? <a id="to-signup">Créer un compte professeur</a>';
   $(on ? "to-login" : "to-signup").onclick = () => setSignup(!on);
 }

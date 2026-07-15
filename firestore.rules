@@ -15,28 +15,47 @@ service cloud.firestore {
   match /databases/{database}/documents {
 
     function signedIn() { return request.auth != null; }
+
+    // ⚠️ Doit être identique à adminEmail dans src/app/assets/firebase-config.js
+    function isAdmin() {
+      return signedIn() && request.auth.token.email == 'ebechalani@gmail.com';
+    }
+    function isApproved() {
+      return signedIn()
+        && get(/databases/$(database)/documents/teachers/$(request.auth.uid)).data.approved == true;
+    }
     function ownsClass(classId) {
       return signedIn()
         && get(/databases/$(database)/documents/classes/$(classId)).data.teacherUid == request.auth.uid;
     }
 
-    // Profil professeur : privé à son propriétaire.
+    // Profils professeurs.
     match /teachers/{uid} {
-      allow read, write: if signedIn() && request.auth.uid == uid;
+      allow get: if (signedIn() && request.auth.uid == uid) || isAdmin();
+      allow list: if isAdmin();                          // l'admin voit les demandes
+      // À la création, un prof ne peut PAS s'auto-approuver (sauf l'admin).
+      allow create: if request.auth.uid == uid
+        && (isAdmin() || (request.resource.data.approved == false && request.resource.data.isAdmin == false));
+      // L'admin peut tout modifier ; un prof modifie son profil mais pas ses droits.
+      allow update: if isAdmin()
+        || (request.auth.uid == uid
+            && request.resource.data.approved == resource.data.approved
+            && request.resource.data.isAdmin == resource.data.isAdmin);
+      allow delete: if isAdmin();
     }
 
     // Table de correspondance code -> classe (lecture par code, pas d'énumération).
     match /classCodes/{code} {
       allow get: if signedIn();
       allow list: if false;
-      allow create: if signedIn() && request.resource.data.teacherUid == request.auth.uid;
+      allow create: if isApproved() && request.resource.data.teacherUid == request.auth.uid;
       allow delete: if signedIn() && resource.data.teacherUid == request.auth.uid;
     }
 
     // Classes.
     match /classes/{classId} {
       allow read: if signedIn();
-      allow create: if signedIn() && request.resource.data.teacherUid == request.auth.uid;
+      allow create: if isApproved() && request.resource.data.teacherUid == request.auth.uid;
       allow update, delete: if signedIn() && resource.data.teacherUid == request.auth.uid;
 
       // Élèves (roster + résumé de progression).

@@ -18,6 +18,10 @@ import {
 
 const cfg = window.LMTECHNO_FIREBASE || {};
 
+// Adresse de l'administrateur (prof qui approuve les nouveaux comptes profs).
+// Doit correspondre à la valeur codée dans firestore.rules.
+export const ADMIN_EMAIL = String(cfg.adminEmail || "ebechalani@gmail.com").trim().toLowerCase();
+
 export function isConfigured() {
   return !!(cfg.apiKey && cfg.projectId && !String(cfg.apiKey).includes("VOTRE_"));
 }
@@ -58,12 +62,36 @@ export function pageKeyFromPath(pathname) {
 /* ---------- Authentification professeur ---------- */
 
 export async function teacherSignUp(email, password, name) {
+  const mail = email.trim().toLowerCase();
   const cred = await createUserWithEmailAndPassword(auth, email, password);
   if (name) await updateProfile(cred.user, { displayName: name });
+  const admin = mail === ADMIN_EMAIL;
   await setDoc(doc(db, "teachers", cred.user.uid), {
-    name: name || "", email, createdAt: serverTimestamp(),
+    name: name || "", email: mail,
+    approved: admin,   // l'admin est approuvé d'office ; les autres attendent
+    isAdmin: admin,
+    createdAt: serverTimestamp(),
   });
   return cred.user;
+}
+
+// Profil du professeur connecté (dont approved / isAdmin).
+export async function myTeacher() {
+  const d = await getDoc(doc(db, "teachers", auth.currentUser.uid));
+  return d.exists() ? { id: d.id, ...d.data() } : null;
+}
+
+/* ---------- Administration (approbation des professeurs) ---------- */
+
+export async function listPendingTeachers() {
+  const snap = await getDocs(query(collection(db, "teachers"), where("approved", "==", false)));
+  return snap.docs.map((d) => ({ id: d.id, ...d.data() }));
+}
+export async function approveTeacher(uid) {
+  await setDoc(doc(db, "teachers", uid), { approved: true }, { merge: true });
+}
+export async function rejectTeacher(uid) {
+  await deleteDoc(doc(db, "teachers", uid));
 }
 
 export function teacherSignIn(email, password) {
@@ -116,13 +144,24 @@ export async function deleteClass(classId, code) {
   await deleteDoc(doc(db, "classes", classId));
 }
 
-export async function addStudent(classId, identifier) {
-  const sid = normId(identifier);
-  if (!sid) throw new Error("Prénom invalide.");
+// Ajoute un élève avec un identifiant = pseudo + NUMÉRO UNIQUE dans la classe.
+// Retourne { sid, label } ; `label` (ex. « Léa 3 ») est le code à donner à l'élève.
+export async function addStudent(classId, pseudo) {
+  const base = normId(pseudo);
+  if (!base) throw new Error("Pseudo invalide.");
+  let n = 1, sid;
+  // eslint-disable-next-line no-constant-condition
+  while (true) {
+    sid = base + "-" + n;
+    const ex = await getDoc(doc(db, "classes", classId, "students", sid));
+    if (!ex.exists()) break;
+    n++;
+  }
+  const label = pseudo.trim() + " " + n;
   await setDoc(doc(db, "classes", classId, "students", sid), {
-    firstName: identifier.trim(), createdAt: serverTimestamp(),
+    firstName: label, pseudo: pseudo.trim(), number: n, createdAt: serverTimestamp(),
   }, { merge: true });
-  return sid;
+  return { sid, label };
 }
 
 export async function removeStudent(classId, sid) {
@@ -155,7 +194,7 @@ export async function studentJoin(code, firstName) {
   const sref = doc(db, "classes", classId, "students", sid);
   const sdoc = await getDoc(sref);
   if (!sdoc.exists()) {
-    throw new Error("Prénom non reconnu dans cette classe. Vérifie l'orthographe ou demande à ton professeur.");
+    throw new Error("Pseudo non reconnu dans cette classe. Écris-le exactement comme ton professeur te l'a donné (avec le numéro).");
   }
   const cls = await getDoc(doc(db, "classes", classId));
   const session = {

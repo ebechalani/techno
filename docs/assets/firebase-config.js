@@ -17,4 +17,9 @@ window.LMTECHNO_FIREBASE = {
   storageBucket: "VOTRE_PROJET.appspot.com",
   messagingSenderId: "VOTRE_SENDER_ID",
   appId: "VOTRE_APP_ID",
+
+  // Administrateur : ce professeur est approuvé d'office et peut valider les
+  // autres comptes professeurs. Doit être IDENTIQUE à l'e-mail codé dans
+  // firestore.rules (fonction isAdmin()).
+  adminEmail: "ebechalani@gmail.com",
 };
