@@ -836,12 +836,12 @@ main { min-height: 60vh; }
 
 .field { display: flex; flex-direction: column; gap: 0.35rem; margin-bottom: 1rem; }
 .field label { font-family: var(--font-head); font-weight: 600; font-size: 0.88rem; }
-.field input {
+.field input, .field select {
   font-family: var(--font-body); font-size: 1rem; color: var(--text);
   background: var(--surface-2); border: 1px solid var(--border-2);
   border-radius: 9px; padding: 0.6rem 0.8rem;
 }
-.field input:focus { outline: none; border-color: var(--primary); box-shadow: 0 0 0 3px var(--primary-soft); }
+.field input:focus, .field select:focus { outline: none; border-color: var(--primary); box-shadow: 0 0 0 3px var(--primary-soft); }
 .field .hint { font-size: 0.8rem; color: var(--muted); }
 
 .btn-full { width: 100%; justify-content: center; }

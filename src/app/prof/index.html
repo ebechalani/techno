@@ -42,8 +42,17 @@
       <div class="inline-form">
         <div class="field"><label for="c-name">Nom de la classe</label>
           <input id="c-name" type="text" placeholder="5ème A"></div>
+        <div class="field" style="flex:0 0 auto"><label for="c-section">Niveau</label>
+          <select id="c-section">
+            <option value="5eme">5ème</option>
+            <option value="4eme">4ème</option>
+            <option value="3eme">3ème</option>
+            <option value="snt">2nde SNT</option>
+            <option value="sicit">SI · CIT</option>
+          </select></div>
         <button class="btn btn-primary" id="c-create" type="button">Créer la classe</button>
       </div>
+      <p style="color:var(--muted);font-size:0.84rem;margin:0.5rem 0 0">Les élèves de cette classe n'auront accès qu'au niveau choisi.</p>
       <div class="app-msg err" id="c-msg"></div>
     </div>
 
@@ -97,11 +106,12 @@ $("c-create").onclick = async () => {
   $("c-msg").className = "app-msg";
   if (!name) { $("c-msg").textContent = "Donne un nom à la classe."; $("c-msg").className = "app-msg show err"; return; }
   $("c-create").disabled = true;
-  try { await createClass(name); $("c-name").value = ""; await refresh(); }
+  try { await createClass(name, $("c-section").value); $("c-name").value = ""; await refresh(); }
   catch (e) { $("c-msg").textContent = "Erreur : " + (e.message || e); $("c-msg").className = "app-msg show err"; }
   $("c-create").disabled = false;
 };
 
+const SECTION_LABELS = { "5eme": "5ème", "4eme": "4ème", "3eme": "3ème", "snt": "2nde SNT", "sicit": "SI · CIT" };
 function esc(s) { return String(s == null ? "" : s).replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c])); }
 function scorePill(pct) {
   if (pct == null) return '<span class="pill-score none">—</span>';
@@ -132,7 +142,9 @@ async function refresh() {
     card.className = "app-card class-card";
     card.innerHTML = `
       <div style="display:flex;flex-wrap:wrap;align-items:center;gap:0.8rem">
-        <h2 style="margin:0;flex:1">${esc(cls.name)}</h2>
+        <h2 style="margin:0">${esc(cls.name)}</h2>
+        <span class="badge" style="--badge-bg:var(--primary-soft);--badge-fg:var(--primary)">${esc(SECTION_LABELS[cls.section] || "Niveau ?")}</span>
+        <span style="flex:1"></span>
         <span>Code : <span class="class-code">${esc(cls.code)}</span></span>
         <button class="btn btn-ghost btn-sm" data-del="${cls.id}" data-code="${esc(cls.code)}">🗑 Supprimer</button>
       </div>

@@ -250,7 +250,7 @@ function navHTML(site, rel, currentSectionId) {
 function layout({ site, rel, title, description, body, sectionId, extraHead = "" }) {
   const fullTitle = title ? `${title} — ${site.title}` : `${site.title} · ${site.school}`;
   const html = `<!DOCTYPE html>
-<html lang="fr" data-base="${rel}">
+<html lang="fr" data-base="${rel}" data-section="${esc(sectionId || "")}">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -266,6 +266,7 @@ function layout({ site, rel, title, description, body, sectionId, extraHead = ""
 <link rel="stylesheet" href="${rel}assets/styles.css">
 <script>
 (function(){try{var t=localStorage.getItem("lmtechno-theme");if(!t)t=window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light";document.documentElement.setAttribute("data-theme",t);}catch(e){}})();
+(function(){try{var s=JSON.parse(localStorage.getItem("lmtechno-eleve")||"null");if(!s||!s.section)return;var d=document.documentElement,cur=d.getAttribute("data-section")||"",base=d.getAttribute("data-base")||"./";if(cur==="home"||(cur&&cur!==s.section))location.replace(base+s.section+"/");}catch(e){}})();
 </script>
 <script src="${rel}assets/firebase-config.js"></script>
 ${extraHead}

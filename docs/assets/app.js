@@ -136,16 +136,16 @@ export async function rejectTeacher(uid) {
 
 /* ---------- Classes (côté professeur) ---------- */
 
-export async function createClass(name) {
+export async function createClass(name, section) {
   const uid = auth.currentUser.uid;
   let code, taken = true, tries = 0;
   do { code = makeCode(); taken = (await get(ref(db, "classCodes/" + code))).exists(); }
   while (taken && ++tries < 8);
   const newRef = push(ref(db, "classes/" + uid));
   const id = newRef.key;
-  await set(newRef, { name, teacherUid: uid, code, createdAt: serverTimestamp() });
+  await set(newRef, { name, section: section || "", teacherUid: uid, code, createdAt: serverTimestamp() });
   await set(ref(db, "classCodes/" + code), { classId: id, teacherUid: uid });
-  return { id, code, name };
+  return { id, code, name, section: section || "" };
 }
 
 export async function listMyClasses() {
@@ -216,6 +216,7 @@ export async function studentJoin(code, firstName) {
     classId, sid,
     firstName: (sdoc.val().firstName || firstName).trim(),
     className: cls.exists() ? cls.val().name : "",
+    section: cls.exists() ? (cls.val().section || "") : "",
   };
   try { localStorage.setItem("lmtechno-eleve", JSON.stringify(session)); } catch (e) {}
   return session;

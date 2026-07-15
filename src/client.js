@@ -271,6 +271,19 @@
     update();
   });
 
+  /* ---------- Restreindre l'élève connecté à son niveau ---------- */
+  try {
+    var escope = JSON.parse(localStorage.getItem("lmtechno-eleve") || "null");
+    if (escope && escope.section) {
+      document.querySelectorAll(".main-nav > a").forEach(function (a) {
+        if (a.classList.contains("nav-account")) return; // garde « Espace »
+        var m = (a.getAttribute("href") || "").match(/(5eme|4eme|3eme|snt|sicit)\/$/);
+        if (m && m[1] === escope.section) return;         // garde son niveau
+        a.style.display = "none";                          // masque Accueil + autres niveaux
+      });
+    }
+  } catch (e) {}
+
   /* ---------- Synchronisation cloud (si un élève est connecté) ---------- */
   try {
     var sess = localStorage.getItem("lmtechno-eleve");
