@@ -290,7 +290,10 @@
     var fb = window.LMTECHNO_FIREBASE;
     if (sess && fb && fb.apiKey && String(fb.apiKey).indexOf("VOTRE_") === -1) {
       var V = root.getAttribute("data-v") || "";
-      import(BASE + "assets/sync.js" + (V ? "?v=" + V : "")).catch(function (e) {
+      // client.js est un script classique : import() relatif se résout par
+      // rapport au script, pas à la page — on construit donc une URL absolue.
+      var syncUrl = new URL(BASE + "assets/sync.js" + (V ? "?v=" + V : ""), document.baseURI).href;
+      import(syncUrl).catch(function (e) {
         try { console.warn("sync.js non chargé :", e); } catch (x) {}
       });
     }
