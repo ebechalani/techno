@@ -471,11 +471,17 @@ function applyOverlay(sectionId, data) {
     for (const seqDef of ov.addSequences) data.sequences.push(normalizeSequence(seqDef));
   }
 
-  // Ajout de pages à une séquence existante ("seqSlug": [pages])
+  // Ajout de pages à une séquence existante ("seqSlug": [pages]).
+  // Une page avec "first": true est insérée EN TÊTE (ex. jeu d'introduction).
   if (ov.addPages) {
     for (const [slug, pages] of Object.entries(ov.addPages)) {
       const seq = data.sequences.find((s) => s.slug === slug);
-      if (seq) for (const p of pages) seq.pages.push(normalizePage(p));
+      if (!seq) continue;
+      for (const p of pages) {
+        const norm = normalizePage(p);
+        if (p.first) seq.pages.unshift(norm);
+        else seq.pages.push(norm);
+      }
     }
   }
 

@@ -19,6 +19,59 @@
       "resources": [],
       "pages": [
         {
+          "slug": "jeu-intro",
+          "kind": "jeu",
+          "num": 0,
+          "title": "🎮 Bluff ou génie ? — Démasquez l'assistant mystère",
+          "shortTitle": "🎮 Jeu d'intro",
+          "tagline": "Il répond à tout en dix secondes... mais dit-il toujours vrai ? À vous de le tester.",
+          "objectifs_md": "",
+          "content_md": "## 🎯 Le défi\n\nUn candidat un peu spécial passe un entretien d'embauche au collège. Il s'appelle « l'Assistant ». Il écrit des poèmes en dix secondes, résume des livres entiers, répond à toutes les questions sans jamais hésiter. Le principal est impressionné... mais un détail le chiffonne : hier, l'Assistant a affirmé une chose complètement fausse, avec un aplomb parfait. Et il n'a même pas eu l'air gêné.\n\nAvant de lui confier les élèves, le principal exige un test grandeur nature. C'est vous, les agences de détection, qui allez le lui faire passer : quand l'Assistant dit-il vrai ? Quand bluffe-t-il ? Et comment faut-il lui parler pour obtenir le meilleur de lui ?\n\n## 🧰 Matériel et organisation\n\n- **Durée** : 40 à 45 minutes.\n- **Équipes** : un îlot = une équipe de 4. Chaque équipe choisit un nom d'agence de détection (ex. « Les Radars », « Œil de Lynx »).\n- **Rôles** à répartir dès le début :\n  - **rapporteur** : annonce les réponses de l'équipe à voix haute ;\n  - **coureur PC** : seul membre autorisé à se lever vers les ordinateurs en U ;\n  - **gardien du temps** : surveille le chrono de chaque manche ;\n  - **secrétaire** : remplit les zones de réponse.\n- **Le professeur prépare** : les colonnes de score au tableau (une par agence) et une paire de ciseaux par îlot pour découper les cartes du bas de page. C'est tout.\n\n## 🕹️ Déroulé\n\n### Manche 1 — « Info ou intox ? » (10 min, à l'îlot)\n\nDécoupez les 8 cartes en bas de page : ce sont des réponses données par l'Assistant. À l'îlot, classez-les en deux piles : **VRAI** ou **INVENTÉ**. Le secrétaire note le verdict de l'équipe pour chaque carte. **Attention : la correction n'aura lieu qu'après la manche 2 !**\n\n**Question d'équipe** — Quels indices vous ont mis la puce à l'oreille pour repérer les réponses douteuses ?\n\n……………………………………\n\n……………………………………\n\n**Barème (annoncé après la manche 2)** : +2 points par carte bien classée (16 points possibles).\n\n### Manche 2 — « Vérification express » (12 min, PC en U)\n\nChaque équipe a droit à **3 passages** aux ordinateurs, de 3 minutes maximum chacun, avec un coureur différent à chaque passage si possible. Choisissez les 3 cartes qui vous font le plus douter : le coureur file vérifier l'information sur un moteur de recherche et revient avec le verdict **et le nom du site ou de la source** consultée. L'équipe peut alors modifier ses réponses de la manche 1.\n\nCartes vérifiées et sources trouvées :\n\n……………………………………\n\n……………………………………\n\n……………………………………\n\n**Correction générale** : le professeur révèle les bonnes réponses *(clé de correction : quatre cartes sont VRAIES — l'Everest, Victor Hugo, l'eau à 100 °C, le cœur de la baleine bleue ; les quatre autres sont INVENTÉES)*. +2 points par carte bien classée, **+1 point bonus** par carte vérifiée avec une source nommée (3 points bonus possibles).\n\n### Manche 3 — « La question parfaite » (12 min, à l'îlot puis à l'oral)\n\nL'Assistant est puissant, mais il répond exactement à ce qu'on lui demande... Voici la question d'un élève déçu : **« Parle-moi de l'espace. »** Résultat : une réponse interminable et inutilisable.\n\nMission : réécrivez cette question pour obtenir **exactement** ceci : de quoi préparer un exposé de 5 minutes sur les planètes du système solaire, destiné à des élèves de CM2, avec un plan en 3 parties.\n\nVotre question améliorée :\n\n……………………………………\n\n……………………………………\n\nLe rapporteur lit la question de l'équipe. **Barème** (grille du professeur) : +1 point si la question donne un **rôle** à l'Assistant (« Tu es un professeur... »), +1 si elle précise le **contexte ou l'objectif**, +1 si elle précise le **public**, +1 si elle demande un **format** (plan, liste, nombre de parties). +2 points bonus pour la question élue la plus efficace par la classe (interdit de voter pour soi).\n\n## 🏆 Score et débrief\n\nAdditionnez les points des trois manches au tableau. L'agence gagnante reçoit le titre officiel de « Détecteurs de bluff du collège ».\n\nQuestions de débrief à l'oral :\n\n1. L'Assistant s'est trompé plusieurs fois **sans jamais avoir l'air d'hésiter**. Pourquoi est-ce un piège pour nous ? (Vous venez de rencontrer ce qu'on appelle une *hallucination* d'IA : on y reviendra dès la prochaine séance.)\n2. Comment avez-vous fait, vous, pour savoir si une information était vraie ? L'IA peut-elle le faire toute seule ?\n3. Qu'est-ce qui a changé entre « Parle-moi de l'espace » et votre question améliorée ? Que faut-il donner à une IA pour qu'elle réponde bien ?\n\nTerminez par le **Défi éclair** en bas de page, en équipe ou en relais sur les PC.\n\n---\n\n### ✂️ À découper — les 8 cartes « réponses de l'Assistant » (manche 1)\n\n| 🃏 « La Grande Muraille de Chine est visible à l'œil nu depuis la Lune. » | 🃏 « Le mont Everest est le plus haut sommet du monde au-dessus du niveau de la mer. » |\n| --- | --- |\n| 🃏 « Napoléon a inventé le croissant pour fêter sa victoire d'Austerlitz. » | 🃏 « Victor Hugo est l'auteur des *Misérables*. » |\n| 🃏 « Les chauves-souris sont aveugles. » | 🃏 « Au niveau de la mer, l'eau bout à 100 °C. » |\n| 🃏 « Le premier smartphone a été inventé en 1954 par un ingénieur belge. » | 🃏 « Le cœur d'une baleine bleue peut peser plus de 100 kg. » |",
+          "resources": [],
+          "quiz": [
+            {
+              "q": "Quand une IA générative affirme avec assurance une information fausse, on dit qu'elle...",
+              "options": [
+                "fait une hallucination",
+                "tombe en panne",
+                "fait exprès de mentir"
+              ],
+              "answer": 0,
+              "explain": "L'IA produit un texte plausible sans « savoir » s'il est vrai : c'est ce qu'on appelle une hallucination."
+            },
+            {
+              "q": "Dans le jeu, quel a été le meilleur moyen de savoir si une réponse de l'Assistant était vraie ?",
+              "options": [
+                "Relire la réponse plusieurs fois",
+                "Vérifier l'information avec une autre source fiable",
+                "Choisir la réponse la plus longue"
+              ],
+              "answer": 1,
+              "explain": "Seule une vérification dans une source extérieure fiable permet de confirmer ou de démentir une réponse d'IA."
+            },
+            {
+              "q": "Quelle question donnera la réponse la plus utile ?",
+              "options": [
+                "« Parle-moi du sport. »",
+                "« C'est quoi le foot ? »",
+                "« Explique les règles du futsal à un débutant, en 5 points. »"
+              ],
+              "answer": 2,
+              "explain": "Plus la question précise le sujet, le public et le format, plus la réponse de l'IA est utile."
+            },
+            {
+              "q": "Une IA générative fabrique ses réponses en...",
+              "options": [
+                "recopiant une page d'encyclopédie",
+                "prédisant la suite de mots la plus probable",
+                "demandant à un humain caché"
+              ],
+              "answer": 1,
+              "explain": "Elle calcule la suite de mots la plus probable d'après ses données d'entraînement, sans comprendre comme un humain."
+            }
+          ]
+        },
+        {
           "slug": "seance-1",
           "kind": "seance",
           "num": 1,
@@ -125,6 +178,59 @@
       "intro_md": "## Séquence 1: Intelligence artificielle générative, la sécurité des données\n\n**Faire un usage raisonné du numérique (Internet, IA Générative, objets communicants)**\n\nPrésentation de la séquence\n\nDans cette séquence, les élèves de 4e apprennent à adopter un usage raisonné des outils numériques du quotidien (Internet, IA générative, objets communicants) en identifiant les risques liés à la cybersécurité et à la cyberviolence, et en appliquant des règles pour protéger leurs données personnelles et leur identité numérique.)\n\nLa séquence sera déclinée en 2 activités :\n\n● Activité 1 : Un lancement de séquence pour faire émerger la problématique générale : « Comment rester en sécurité avec les outils numériques du quotidien ? »\n\n● Activité 2 : Identifier des règles pour utiliser correctement les outils numériques du quotidien : « Comment utiliser Internet, l’IA générative et les objets communicants de manière responsable et sécurisée ? »\n\n● Activité 4 : Evaluation de compétence sur 4 niveaux, associée à la thématique « … » et les compétences détaillées associées.\n\n**Thème abordé :**\n\nThème 1 - OST Les objets et les systèmes techniques : leurs usages et leurs interactions à découvrir et à analyser\n\n**Attendu de fin de cycle :**\n\nOST1 - Décrire les liens entre usages et évolutions technologiques des objets et des systèmes techniques\n\nThématique\n\n**T2-Usages et impacts sociétaux du numérique**\n\nCompétence détaillée\n\nOST14 - Identifier et appliquer les règles pour un usage raisonné des objets communicants et des environnements numériques (propriété intellectuelle, identité numérique, témoins de connexion, géolocalisation) .\n\nConnaissances\n\n[OST1l-Cybersécurité : protection des données personnelles, traces numériques (témoins de connexion, géolocalisation), identification, authentification, respect de la propriété intellectuelle ;](https://nuage01.apps.education.fr/index.php/s/4Xf3zgK2MDmLB2H)\n\n[OST1m-Cyberviolence : usurpation d’identité, usage détourné](https://nuage01.apps.education.fr/index.php/s/PzrdM7WTjLjPbEb)\n\nCritères d’apprentissages\n\nN1 – Je sais identifier, nommer, associer des éléments clés des trois dimensions : objets communicants, Internet, IA générative,\n\nN2 – et je sais expliquer des risques ou des usages, à partir de vidéos et d’exemples concrets,\n\nN3 – et je sais utiliser des connaissances dans une situation concrète liée à la vie des élèves,\n\nN4 – et je sais analyser une situation, justifier un comportement, proposer une amélioration.",
       "resources": [],
       "pages": [
+        {
+          "slug": "jeu-intro",
+          "kind": "jeu",
+          "num": 0,
+          "title": "🎮 La maison qui parle trop — Enquête chez les objets connectés",
+          "shortTitle": "🎮 Jeu d'intro",
+          "tagline": "Personne n'a rien piraté... et pourtant la maison raconte tout. Saurez-vous découvrir à qui ?",
+          "objectifs_md": "",
+          "content_md": "## 🎯 Le défi\n\nLa famille Nour vient d'emménager dans une maison ultra-moderne : enceinte qui obéit à la voix, montre qui compte les pas, aspirateur robot, sonnette à caméra, console dernier cri. Le rêve... jusqu'à ce soir-là. Sur le téléphone des parents, une publicité propose *exactement* les céréales que la petite dernière a réclamées à voix haute au petit-déjeuner. Une autre annonce semble connaître leurs horaires, leur quartier, leurs nuits.\n\nPersonne n'a rien piraté. Et pourtant, la maison parle. À qui ? Pour dire quoi ? Vous êtes les brigades cyber appelées en renfort : découvrez ce que chaque objet collecte, où partent ces informations, et comment protéger la famille **sans tout débrancher**.\n\n## 🧰 Matériel et organisation\n\n- **Durée** : 40 à 45 minutes.\n- **Équipes** : un îlot = une brigade de 4, avec un nom de code (ex. « Brigade Pare-feu », « Les Sentinelles »).\n- **Rôles** : **rapporteur** (porte-parole), **coureur PC** (missions aux ordinateurs en U — dans cette partie, le coureur change à chaque mission), **gardien du temps**, **secrétaire**.\n- **Le professeur prépare** : le tableau des scores et une paire de ciseaux par îlot pour les cartes du bas de page. Rien d'autre.\n\n## 🕹️ Déroulé\n\n### Manche 1 — « Qui collecte quoi ? » (12 min, à l'îlot)\n\nDécoupez les deux séries de cartes en bas de page : 6 cartes **OBJET** et 8 cartes **DONNÉE**. Disposez les objets sur la table, puis placez chaque carte donnée sous un objet capable de la collecter. Certaines données peuvent convenir à plusieurs objets : toute réponse que vous savez défendre est acceptée.\n\n**Barème** : +1 point par carte donnée placée de façon défendable (8 points possibles).\n\n**Question d'équipe** — Quelle association vous a le plus étonnés, et pourquoi ?\n\n……………………………………\n\n……………………………………\n\n### Manche 2 — « Le relais des cyber-enquêteurs » (12 min, PC en U)\n\nQuatre missions de recherche chronométrées. Pour chaque mission, un **coureur différent** part aux ordinateurs : tout le monde court une fois ! Le coureur revient dicter la réponse au secrétaire. **Barème : +3 points par réponse correcte et rédigée.**\n\n**Mission 1** — Qu'est-ce qu'une « donnée personnelle » ? Donnez deux exemples.\n\n……………………………………\n\n**Mission 2** — Quand les données d'un objet connecté quittent la maison, où vont-elles ?\n\n……………………………………\n\n**Mission 3** — Que signifient les quatre lettres « RGPD », et à quoi sert ce règlement ?\n\n……………………………………\n\n**Mission 4** — Trouvez deux réglages d'un smartphone qui limitent ce qu'il partage.\n\n……………………………………\n\n### Manche 3 — « Le procès de l'enceinte » (10 min, débat éclair à l'îlot)\n\nL'enceinte connectée de la famille Nour passe en jugement ! Le professeur désigne la moitié des brigades pour la **défense** (« elle rend la vie plus facile ») et l'autre moitié pour l'**accusation** (« elle en sait beaucoup trop »). Chaque brigade prépare **2 arguments** en 6 minutes, puis le rapporteur plaide en 1 minute chrono.\n\nVos deux arguments :\n\n……………………………………\n\n……………………………………\n\n**Barème** : +2 points par argument précis (4 points max), +2 points bonus si un argument s'appuie sur une donnée réellement découverte en manche 1. Le professeur, juge suprême, accorde +2 points à la brigade la plus convaincante de chaque camp.\n\n## 🏆 Score et débrief\n\nTotal des trois manches au tableau : la meilleure brigade devient « Cyber-garde officielle de la famille Nour ».\n\nQuestions de débrief à l'oral :\n\n1. Faut-il jeter tous les objets connectés ? Sinon, qu'est-ce qu'on peut faire, concrètement ?\n2. Une donnée qui semble banale (l'heure à laquelle on se couche, par exemple) peut-elle devenir sensible ? Combinée à quoi ?\n3. À votre avis, qui est intéressé par toutes ces données, et pourquoi ?\n\nCes trois questions sont exactement la problématique de notre nouvelle séquence : comment profiter des objets connectés tout en protégeant ses données personnelles ? Finissez par le **Défi éclair** ci-dessous.\n\n---\n\n### ✂️ À découper — cartes OBJET (manche 1)\n\n| 🔊 Enceinte connectée | ⌚ Montre connectée | 🤖 Aspirateur robot |\n| --- | --- | --- |\n| 🔔 Sonnette à caméra | 🎮 Console de jeux | 📱 Smartphone |\n\n### ✂️ À découper — cartes DONNÉE (manche 1)\n\n| 🗣️ Ta voix | 📍 Ta position GPS | 🗺️ Le plan de ton salon | ❤️ Ton rythme cardiaque |\n| --- | --- | --- | --- |\n| 😴 Tes heures de sommeil | 🏠 Tes heures de présence à la maison | 🎥 Les images devant ta porte | 💬 Tes pseudos et messages de jeu |",
+          "resources": [],
+          "quiz": [
+            {
+              "q": "Une donnée personnelle, c'est une information qui...",
+              "options": [
+                "permet de t'identifier, directement ou non",
+                "est forcément un secret",
+                "ne concerne que les adultes"
+              ],
+              "answer": 0,
+              "explain": "Nom, voix, position, habitudes : tout ce qui permet de remonter jusqu'à une personne est une donnée personnelle."
+            },
+            {
+              "q": "Quand une enceinte connectée répond à une question, la réponse est fabriquée...",
+              "options": [
+                "entièrement à l'intérieur de l'enceinte",
+                "sur des serveurs distants, via Internet",
+                "par la radio la plus proche"
+              ],
+              "answer": 1,
+              "explain": "La voix est envoyée par Internet vers des serveurs qui la traitent : c'est pour cela que les données quittent la maison."
+            },
+            {
+              "q": "Quel est le meilleur réflexe avant d'installer une application ?",
+              "options": [
+                "Regarder les autorisations qu'elle demande",
+                "L'installer vite pour l'essayer",
+                "Choisir la plus téléchargée"
+              ],
+              "answer": 0,
+              "explain": "Les autorisations (micro, position, contacts...) révèlent ce que l'application pourra collecter sur toi."
+            },
+            {
+              "q": "Dans le jeu, l'aspirateur robot pouvait collecter...",
+              "options": [
+                "ton rythme cardiaque",
+                "le plan de ton salon",
+                "tes messages de jeu"
+              ],
+              "answer": 1,
+              "explain": "Pour se déplacer, il cartographie la maison : ce plan est une donnée qui peut être envoyée au fabricant."
+            }
+          ]
+        },
         {
           "slug": "seance-1",
           "kind": "seance",
@@ -257,6 +363,59 @@
       "intro_md": "Nos objets techniques tombent parfois en panne. Faut-il les **jeter** et en racheter un neuf ? Pas forcément : beaucoup peuvent être **réparés**. Encore faut-il savoir **trouver l'origine de la panne**, car les objets ne sont presque jamais accompagnés d'une notice de dépannage.\n\nDans cette séquence, tu apprends à jouer au **technicien de maintenance** : observer un symptôme, émettre des hypothèses, tester les différents **maillons** de l'objet (grâce aux **chaînes d'énergie et d'information**), **localiser** la pièce défectueuse et la **remplacer** — le tout **sans protocole fourni**.\n\nTu découvres aussi pourquoi réparer est un **geste écologique et économique** : fiabilité, durabilité, **indice de réparabilité** et lutte contre le **gaspillage**.",
       "resources": [],
       "pages": [
+        {
+          "slug": "jeu-intro",
+          "kind": "jeu",
+          "num": 0,
+          "title": "🎮 Urgences Techno — L'atelier des objets en panne",
+          "shortTitle": "🎮 Jeu d'intro",
+          "tagline": "Observer, supposer, tester : reprenez l'atelier de réparation et sauvez les objets sans notice.",
+          "objectifs_md": "",
+          "content_md": "## 🎯 Le défi\n\nL'atelier de réparation du quartier est débordé. Le vieux réparateur part à la retraite et laisse tout derrière lui : une lampe de poche qui n'éclaire plus, un vélo qui freine mal, une enceinte muette, une trottinette qui refuse de s'allumer... Aucune notice, aucun mode d'emploi. Juste un mot épinglé sur l'établi :\n\n> « Un bon réparateur ne devine pas : il **observe**, il **suppose**, il **teste**. »\n\nVos équipes reprennent l'atelier aujourd'hui. Les clients attendent. Saurez-vous retrouver les pannes... sans rien casser de plus ?\n\n## 🧰 Matériel et organisation\n\n- **Durée** : 40 à 45 minutes.\n- **Équipes** : un îlot = un atelier de 4, avec une enseigne (ex. « SOS Machines », « Les Rebrancheurs »).\n- **Rôles** : **rapporteur**, **coureur PC** (change à chaque défi de la manche 3), **gardien du temps**, **secrétaire**.\n- **Le professeur prépare** : le tableau des scores, des ciseaux par îlot pour les cartes du bas de page. En option : une lampe de poche ou tout petit objet démontable posé au bureau, pour l'ambiance.\n\n## 🕹️ Déroulé\n\n### Manche 1 — « Symptôme, hypothèse, test » (12 min, à l'îlot)\n\nDécoupez les 12 cartes de la série A. Elles se combinent en **4 chaînes de réparation** de 3 cartes chacune : un **SYMPTÔME** (ce qu'on observe), une **HYPOTHÈSE** (la cause possible) et un **TEST** (comment vérifier). Reconstituez les 4 chaînes sur la table. Chaque carte ne sert qu'une seule fois.\n\n**Barème** : +3 points par chaîne complète et correcte (12 points possibles). *Correction pour le professeur : lampe → piles vides → piles neuves ; vélo → patins usés → épaisseur des patins ; enceinte → câble audio débranché → vérifier le branchement ; trottinette → batterie déchargée → chargeur et voyant.*\n\n**Question d'équipe** — Pour la lampe de poche qui n'éclaire plus, trouvez une **deuxième** hypothèse possible et le test qui va avec. (+2 points si la paire est cohérente.)\n\n……………………………………\n\n……………………………………\n\n### Manche 2 — « Le malade imaginaire » (10 min, à l'îlot)\n\nUn membre de l'équipe pioche **en secret** une carte de la série B : il devient l'objet en panne et ne peut répondre que par **oui** ou **non**. Les trois autres l'interrogent pour trouver **l'objet ET sa panne**. Le gardien du temps compte les questions posées.\n\n**Barème** : panne trouvée en 5 questions ou moins : +4 points ; en 6 à 8 questions : +3 ; en 9 à 12 : +2 ; au-delà : +1 si elle est trouvée. Faites **deux tours** avec deux « malades » différents (8 points possibles).\n\n### Manche 3 — « La pièce mystère » (12 min, PC en U)\n\nDes clients arrivent avec des appareils **sans notice**. Trois défis de recherche chronométrés, avec un **coureur différent** à chaque défi. **Barème : +3 points par réponse correcte et rédigée.**\n\n**Défi 1** — Dans beaucoup d'appareils, une petite pièce protège le circuit en « se sacrifiant » quand le courant est trop fort. Comment s'appelle-t-elle ?\n\n……………………………………\n\n**Défi 2** — Quel appareil de mesure permet de vérifier si le courant passe dans un fil ou si une pile est encore bonne ?\n\n……………………………………\n\n**Défi 3** — La notice est perdue ! Citez deux types de ressources en ligne qui peuvent la remplacer pour réparer soi-même.\n\n……………………………………\n\n## 🏆 Score et débrief\n\nAdditionnez les points des trois manches : l'atelier gagnant reçoit l'enseigne dorée du quartier.\n\nQuestions de débrief à l'oral :\n\n1. Quelle est la différence entre **deviner** une panne et la **diagnostiquer** ?\n2. Pourquoi vaut-il mieux tester **une seule hypothèse à la fois** ?\n3. Avant d'ouvrir un appareil électrique, quel geste de sécurité est obligatoire ? Et sans notice, comment s'en sortir ?\n\nVous venez d'utiliser, sans le savoir, la démarche complète du dépanneur : symptôme → hypothèses → tests → réparation. C'est tout le programme de la séquence qui commence ! Terminez par le **Défi éclair** ci-dessous.\n\n---\n\n### ✂️ À découper — série A : les 12 cartes « chaînes de réparation » (manche 1, cartes mélangées)\n\n| TEST — Regarder l'épaisseur des patins de frein | SYMPTÔME — La lampe de poche n'éclaire plus | HYPOTHÈSE — La batterie est déchargée |\n| --- | --- | --- |\n| SYMPTÔME — L'enceinte ne produit aucun son | TEST — Mettre des piles neuves et réessayer | HYPOTHÈSE — Les patins de frein sont usés |\n| HYPOTHÈSE — Les piles sont vides | SYMPTÔME — La trottinette électrique ne s'allume plus | TEST — Vérifier que le câble est bien branché des deux côtés |\n| SYMPTÔME — Le vélo freine mal | HYPOTHÈSE — Le câble audio est débranché | TEST — Brancher le chargeur et observer le voyant |\n\n### ✂️ À découper — série B : les cartes « objet malade » (manche 2)\n\n| 💨 Sèche-cheveux — il souffle mais ne chauffe plus | 🎮 Manette de console — le joystick gauche ne répond plus | 🚲 Vélo — la chaîne saute sans arrêt |\n| --- | --- | --- |\n| 💡 Lampe de chevet — elle clignote | 🎧 Casque audio — une seule oreille fonctionne | 🤖 Robot aspirateur — il tourne en rond |",
+          "resources": [],
+          "quiz": [
+            {
+              "q": "Par quoi commence toujours un bon dépannage ?",
+              "options": [
+                "Démonter entièrement l'appareil",
+                "Observer précisément le symptôme",
+                "Acheter une pièce neuve au hasard"
+              ],
+              "answer": 1,
+              "explain": "Le symptôme (ce qu'on voit, entend ou sent) est le point de départ de toute la démarche de diagnostic."
+            },
+            {
+              "q": "Une hypothèse de panne, c'est...",
+              "options": [
+                "une cause possible, qu'il faudra tester",
+                "la solution garantie à 100 %",
+                "le prix de la réparation"
+              ],
+              "answer": 0,
+              "explain": "Une hypothèse n'est qu'une supposition : seul un test permet de la confirmer ou de l'éliminer."
+            },
+            {
+              "q": "Le test montre que votre hypothèse était fausse. Que faites-vous ?",
+              "options": [
+                "On abandonne la réparation",
+                "On formule et on teste une autre hypothèse",
+                "On change toutes les pièces d'un coup"
+              ],
+              "answer": 1,
+              "explain": "On élimine les causes une par une : c'est comme cela que le diagnostic avance, sans gaspiller de pièces."
+            },
+            {
+              "q": "Avant d'ouvrir un appareil électrique, on doit d'abord...",
+              "options": [
+                "le débrancher",
+                "le secouer pour écouter",
+                "le poser sur un tapis"
+              ],
+              "answer": 0,
+              "explain": "Débrancher l'appareil supprime le risque de choc électrique : c'est la règle de sécurité numéro un."
+            }
+          ]
+        },
         {
           "slug": "seance-1",
           "kind": "seance",
@@ -404,6 +563,59 @@
       "resources": [],
       "pages": [
         {
+          "slug": "jeu-intro",
+          "kind": "jeu",
+          "num": 0,
+          "title": "🎮 Le Juste Objet — L'émission qui conseille sans gaspiller",
+          "shortTitle": "🎮 Jeu d'intro",
+          "tagline": "Réparer, reconditionner ou racheter ? Votre équipe conseille les familles... et la planète compte les points.",
+          "objectifs_md": "",
+          "content_md": "## 🎯 Le défi\n\nLumières, jingle, applaudissements : bienvenue dans « Le Juste Objet », l'émission où des familles hésitantes viennent chercher LE bon conseil. Réparer le téléphone à l'écran fissuré ? Racheter un lave-linge neuf ? Choisir du reconditionné ?\n\nMais attention : dans cette émission, on ne conseille pas au hasard. Car chaque objet cache une vie secrète. Ce smartphone posé sur la table ? Il est né dans une mine, a traversé trois continents et consommé des milliers de litres d'eau avant même d'être allumé. Les équipes qui découvriront cette vie cachée donneront les meilleurs conseils... et remporteront le trophée du Juste Objet.\n\n## 🧰 Matériel et organisation\n\n- **Durée** : 40 à 45 minutes.\n- **Équipes** : un îlot = une agence de conseil de 4, avec un nom d'agence (ex. « ConseilVert », « Les Éclaireurs »).\n- **Rôles** : **rapporteur** (il fera le pitch de la manche 3), **coureur PC** (change à chaque mission de la manche 2), **gardien du temps**, **secrétaire**.\n- **Le professeur prépare** : le tableau des scores et des ciseaux par îlot pour les cartes du bas de page. Rien d'autre.\n\n## 🕹️ Déroulé\n\n### Manche 1 — « La vie secrète du smartphone » (10 min, à l'îlot)\n\nDécoupez les 6 cartes ÉTAPE en bas de page et remettez dans l'ordre la vie complète d'un smartphone, de sa naissance à sa fin.\n\n**Barème** : ordre entièrement correct : +6 points ; deux cartes seulement inversées : +4 ; sinon : +2 si la première et la dernière étape sont justes. *Correction pour le professeur : extraction → fabrication → transport → distribution → utilisation → fin de vie.*\n\n**Question d'équipe** — À votre avis, quelle étape de cette vie pollue le plus, et pourquoi ? (+2 points si la justification tient la route.)\n\n……………………………………\n\n……………………………………\n\n### Manche 2 — « Enquête étiquettes » (12 min, PC en U)\n\nDans les magasins, des étiquettes et des indices aident à choisir... encore faut-il savoir les lire ! Trois missions de recherche chronométrées, avec un **coureur différent** à chaque mission. **Barème : +3 points par réponse correcte et rédigée.**\n\n**Mission 1** — L'indice de réparabilité : sur combien de points est-il noté, et que signifie une note élevée ?\n\n……………………………………\n\n**Mission 2** — L'étiquette énergie : quelles sont la meilleure et la moins bonne classe ?\n\n……………………………………\n\n**Mission 3** — Que veut dire « reconditionné » pour un téléphone ? Est-ce la même chose que « d'occasion » ?\n\n……………………………………\n\n### Manche 3 — « Le conseil en 60 secondes » (12 min, à l'îlot puis à l'oral)\n\nLes familles entrent sur le plateau ! Chaque agence pioche une carte SCÉNARIO (série du bas de page). En 6 minutes, préparez votre recommandation — **réparer, acheter reconditionné, acheter neuf ou ne rien acheter** — avec deux arguments solides.\n\nVotre décision et vos deux arguments :\n\n……………………………………\n\n……………………………………\n\nPuis le rapporteur monte sur scène : **60 secondes chrono** pour convaincre.\n\n**Barème** : +2 points si la décision est clairement justifiée ; +1 point par argument qui s'appuie sur le cycle de vie, un indice ou une étiquette (2 points max) ; la classe vote pour le conseil le plus convaincant (interdit de voter pour soi) : +3 points pour l'agence élue.\n\n## 🏆 Score et débrief\n\nTotal des trois manches : l'agence en tête remporte le trophée du Juste Objet.\n\nQuestions de débrief à l'oral :\n\n1. Pourquoi un objet « pas cher » peut-il coûter cher... à la planète ?\n2. À quoi servent les indices et les étiquettes que vous avez découverts ? À qui servent-ils ?\n3. Le choix le plus durable est-il toujours le même pour tout le monde ? De quoi dépend-il ?\n\nVous venez de poser toutes les questions de notre nouvelle séquence : comment les objets évoluent, et comment choisir un objet responsable. Terminez par le **Défi éclair** ci-dessous.\n\n---\n\n### ✂️ À découper — les 6 cartes ÉTAPE (manche 1, dans le désordre)\n\n| 🏭 Fabrication et assemblage en usine | 🗑️ Fin de vie : recyclage... ou déchet | ⛏️ Extraction des matières premières (métaux, pétrole...) |\n| --- | --- | --- |\n| 📱 Utilisation par son propriétaire | 🚢 Transport à travers le monde | 🏬 Distribution et vente en magasin |\n\n### ✂️ À découper — les cartes SCÉNARIO (manche 3)\n\n| 📱 L'écran du téléphone de Lina est fissuré ; tout le reste fonctionne. Elle rêve du dernier modèle. | 🫧 Le lave-linge de la famille Sader a 12 ans, tombe souvent en panne et ses pièces sont introuvables. |\n| --- | --- |\n| 💻 Karim veut un ordinateur portable pour le collège, avec un petit budget. | 🎮 La console de Théo ne lit plus les disques : réparation 60 €, console neuve 300 €. |\n| 🎧 Les écouteurs premier prix de Maya ont cassé au bout de 3 mois... pour la troisième fois. | ☕ La grand-mère de Sami hésite entre une bouilloire à 8 € et une à 25 € annoncée « réparable, pièces garanties 10 ans ». |",
+          "resources": [],
+          "quiz": [
+            {
+              "q": "La vie d'un objet commence...",
+              "options": [
+                "en magasin, sur l'étagère",
+                "dans une mine ou un champ, avec les matières premières",
+                "dans le camion de livraison"
+              ],
+              "answer": 1,
+              "explain": "Avant l'usine et le magasin, il faut extraire les matières premières : c'est la première étape du cycle de vie."
+            },
+            {
+              "q": "L'indice de réparabilité sert à savoir...",
+              "options": [
+                "si l'objet est à la mode",
+                "s'il est facile à réparer",
+                "s'il consomme peu d'électricité"
+              ],
+              "answer": 1,
+              "explain": "Plus la note est élevée, plus l'objet est facile à démonter et ses pièces détachées faciles à trouver."
+            },
+            {
+              "q": "Sur l'étiquette énergie, la meilleure classe est...",
+              "options": [
+                "A",
+                "G",
+                "Z"
+              ],
+              "answer": 0,
+              "explain": "L'échelle va de A (le plus économe) à G (le plus gourmand en énergie)."
+            },
+            {
+              "q": "Le téléphone de Lina a seulement l'écran fissuré. Le choix le plus durable est de...",
+              "options": [
+                "acheter le dernier modèle",
+                "faire réparer l'écran",
+                "le jeter et racheter le même"
+              ],
+              "answer": 1,
+              "explain": "Réparer évite de fabriquer un nouvel appareil, donc d'extraire et de transporter de nouvelles matières."
+            }
+          ]
+        },
+        {
           "slug": "seance-1",
           "kind": "seance",
           "num": 1,
@@ -536,6 +748,59 @@
       "resources": [],
       "pages": [
         {
+          "slug": "jeu-intro",
+          "kind": "jeu",
+          "num": 0,
+          "title": "🎮 Les Maîtres de la Matière — Une usine à remettre en marche",
+          "shortTitle": "🎮 Jeu d'intro",
+          "tagline": "Métal, plastique, bois ou céramique ? Identifiez, mimez, fabriquez : l'usine n'attend que vous.",
+          "objectifs_md": "",
+          "content_md": "## 🎯 Le défi\n\nSurprise : votre classe vient d'hériter d'une vieille usine ! En poussant la porte de l'atelier, vous découvrez des caisses remplies d'objets et de matériaux... dont toutes les étiquettes ont disparu. Au fond, des machines étranges dorment sous des bâches. Et sur le bureau du contremaître, une pile de commandes de clients impatients.\n\nPour relancer l'usine, il va falloir répondre à trois questions : **de quoi sont faits les objets ? avec quelles machines les fabrique-t-on ? et par quoi commencer ?** Les équipes qui y parviendront gagneront le titre de Maîtres de la Matière.\n\n## 🧰 Matériel et organisation\n\n- **Durée** : 40 à 45 minutes.\n- **Équipes** : un îlot = un atelier de 4, avec un nom d'usine (ex. « MétalloTech », « Atelier Fusion »).\n- **Rôles** : **rapporteur**, **coureur PC** (en manche 3, tout le monde passera au PC à tour de rôle), **gardien du temps**, **secrétaire**.\n- **Le professeur prépare** : le tableau des scores, des ciseaux par îlot pour les cartes du bas de page. En option : quelques objets à faire toucher (règle en plastique, clé en métal, cuillère en bois, tasse en céramique).\n\n## 🕹️ Déroulé\n\n### Manche 1 — « L'entrepôt sens dessus dessous » (10 min, à l'îlot)\n\nDécoupez les 13 cartes OBJET en bas de page et rangez-les en **4 caisses** : MÉTAUX / PLASTIQUES / BOIS ET MATIÈRES NATURELLES / CÉRAMIQUES ET VERRE. Attention : une carte est un piège et ne rentre bien dans aucune caisse...\n\n**Barème** : +1 point par carte bien rangée (12 points possibles) ; +2 points bonus si l'équipe repère la carte piège et explique pourquoi elle est à part (c'est un **mélange** de matériaux).\n\n**Question d'équipe** — Trouvez dans la salle un objet pour chaque famille de matériaux.\n\n……………………………………\n\n……………………………………\n\n### Manche 2 — « Mime la machine » (10 min, à l'îlot)\n\nDécoupez les 6 cartes PROCÉDÉ et posez-les face cachée. À tour de rôle, un membre pioche une carte et **mime** la fabrication (bruitages autorisés, paroles interdites !). L'équipe a 45 secondes pour deviner le procédé. Trois tours par équipe.\n\n**Barème** : +2 points par procédé deviné dans le temps (6 points possibles).\n\n### Manche 3 — « Premier prototype » (15 min, PC en U)\n\nPremière commande officielle de l'usine : un **porte-clés** aux couleurs de votre équipe ! Sur Tinkercad (l'outil de modélisation 3D que nous utilisons en classe), modélisez : une plaque arrondie, un trou pour l'anneau, et les initiales de l'équipe en relief.\n\nRègle du **relais** : un seul membre au PC à la fois, rotation **toutes les 3 minutes** au signal du professeur — tout le monde passe ! Les autres préparent la suite depuis l'îlot.\n\n**Barème** : plaque réalisée : +2 points ; trou réussi : +2 ; initiales en relief : +2 ; pièce terminée avant le gong : +2 (8 points possibles).\n\n*Variante sans Tinkercad* : recherche chronométrée en relais. Comment fabrique-t-on **une canette**, **un trombone**, **une bouteille en verre** ? +3 points par procédé principal correctement décrit en une phrase.\n\n……………………………………\n\n……………………………………\n\n## 🏆 Score et débrief\n\nTotal des trois manches : l'atelier vainqueur reçoit le titre de Maîtres de la Matière et la direction (symbolique) de l'usine.\n\nQuestions de débrief à l'oral :\n\n1. Pourquoi ne fabrique-t-on pas une casserole entièrement en plastique... ni une vitre en métal ? Qu'est-ce qui guide le choix d'un matériau ?\n2. Dans les mimes, il y avait trois grandes façons de donner forme à la matière : en **enlever**, la **déformer ou la mouler**, en **ajouter**. Classez les six cartes PROCÉDÉ dans ces trois familles. Une carte refuse de rentrer : laquelle, et pourquoi ?\n3. Pour fabriquer votre porte-clés en vrai, quel matériau et quel procédé choisiriez-vous ?\n\nCes trois questions sont exactement le programme de la séquence qui commence : quelles familles de matériaux pour quels usages, et comment fabrique-t-on une pièce. Terminez par le **Défi éclair** ci-dessous.\n\n---\n\n### ✂️ À découper — les 13 cartes OBJET (manche 1, dont une carte piège)\n\n| 🥤 Canette | 🔑 Clé | 🍳 Casserole en inox | 💧 Bouteille d'eau en plastique |\n| --- | --- | --- | --- |\n| 🧱 Brique de jeu de construction | 🛍️ Sac plastique | ✏️ Crayon à papier | 🥄 Cuillère en bois |\n| 🧶 Pull en laine | 🍽️ Assiette en porcelaine | 🪟 Vitre de fenêtre | 🚿 Carrelage |\n| 🚴 Cadre de vélo en fibre de carbone | | | |\n\n### ✂️ À découper — les 6 cartes PROCÉDÉ (manche 2)\n\n| 🫙 MOULER (verser la matière fondue dans une forme creuse) | 🔪 USINER (enlever de la matière en la coupant) | 🖨️ IMPRIMER EN 3D (déposer la matière couche par couche) |\n| --- | --- | --- |\n| 📐 PLIER (déformer une feuille ou un fil) | ✂️ DÉCOUPER (séparer la matière selon un tracé) | 🔩 ASSEMBLER (visser, coller ou souder des pièces) |",
+          "resources": [],
+          "quiz": [
+            {
+              "q": "Le manche d'une casserole est souvent en plastique parce que le plastique...",
+              "options": [
+                "est plus joli",
+                "conduit mal la chaleur",
+                "est plus lourd que le métal"
+              ],
+              "answer": 1,
+              "explain": "On choisit un matériau pour ses propriétés : ici, le plastique isole la main de la chaleur."
+            },
+            {
+              "q": "Verser de la matière fondue dans une forme creuse pour obtenir une pièce, c'est...",
+              "options": [
+                "l'usinage",
+                "le moulage",
+                "le pliage"
+              ],
+              "answer": 1,
+              "explain": "Le moulage donne sa forme à la pièce grâce à un moule, comme pour un gâteau."
+            },
+            {
+              "q": "L'impression 3D fabrique une pièce en...",
+              "options": [
+                "enlevant de la matière",
+                "ajoutant de la matière couche par couche",
+                "compressant la matière très fort"
+              ],
+              "answer": 1,
+              "explain": "Contrairement à l'usinage qui enlève de la matière, l'impression 3D en ajoute, couche après couche."
+            },
+            {
+              "q": "Canette, trombone, clé : ces objets appartiennent à la famille des...",
+              "options": [
+                "céramiques",
+                "plastiques",
+                "métaux"
+              ],
+              "answer": 2,
+              "explain": "Aluminium pour la canette, acier pour le trombone et la clé : ce sont tous des métaux."
+            }
+          ]
+        },
+        {
           "slug": "seance-1",
           "kind": "seance",
           "num": 1,
@@ -655,6 +920,59 @@
       "resources": [],
       "pages": [
         {
+          "slug": "jeu-intro",
+          "kind": "jeu",
+          "num": 0,
+          "title": "🎮 « Le Message Fantôme » — enquête au cœur du réseau du collège",
+          "shortTitle": "🎮 Jeu d'intro",
+          "tagline": "Un document s'est imprimé tout seul à l'autre bout du collège : remontez la piste des câbles avant la fin de l'heure.",
+          "objectifs_md": "",
+          "content_md": "## 🎯 Le défi\n\nCe matin, le documentaliste a lancé une impression depuis l'ordinateur du CDI. Le document n'est jamais sorti sur l'imprimante du CDI… mais il est apparu, à la seconde près, sur celle de la salle des professeurs, à l'autre bout du collège. Personne n'a transporté la moindre feuille : le document a voyagé **tout seul**, invisible, à travers les murs.\n\nPar où est-il passé ? Qui a décidé de sa route ? Et comment a-t-il « su » sur quelle imprimante sortir ? Votre agence de détectives est chargée de l'enquête : reconstituez le trajet du Message Fantôme.\n\n## 🧰 Matériel et organisation\n\n- **Durée :** 40 minutes\n- **Équipes :** un îlot de 4 = une agence de détectives. Trouvez-lui un nom (2 min, à écrire au tableau).\n- **Rôles dans l'équipe :** le **rapporteur** (seul à parler au nom de l'équipe), le **coureur PC** (seul autorisé à aller aux ordinateurs en U), le **gardien du temps**, le **secrétaire** (remplit cette fiche).\n- **Le professeur prépare :** le tableau des scores, une paire de ciseaux par îlot, les PC allumés avec un moteur de recherche. C'est tout.\n\n## 🕹️ Déroulé\n\n### Manche 1 — « La fouille des indices » (10 min, à l'îlot)\n\nLe secrétaire découpe les cartes-indices en bas de cette page. L'équipe les trie en **trois familles** posées sur la table :\n\n1. Les machines qui **utilisent** le réseau\n2. Le matériel qui **relie et transporte** les messages\n3. Ce qui **identifie** une machine sur le réseau\n\n**Barème :** +2 points par carte bien placée (correction collective à la fin de la manche). Une carte peut faire débat : préparez vos arguments !\n\nQuestion d'équipe : parmi ces cartes, laquelle vous semble jouer le rôle de « chef de gare » qui aiguille les messages vers la bonne machine ? Pourquoi ?\n\n……………………………………\n\n……………………………………\n\n### Manche 2 — « La course aux indices » (12 min, PC en U)\n\nLe coureur fait les allers-retours entre l'îlot et un PC : **2 minutes maximum par question**, une question à la fois, et c'est l'équipe entière qui rédige la réponse à l'îlot.\n\n1. À quoi ressemble un « switch » ? Décrivez-le en une phrase. **(+3)**\n\n……………………………………\n\n2. Que signifient les lettres « IP » dans « adresse IP » ? **(+3)**\n\n……………………………………\n\n3. Combien y a-t-il environ d'objets connectés à Internet dans le monde ? (un ordre de grandeur suffit) **(+3)**\n\n……………………………………\n\n4. Quel appareil permet au réseau du collège de communiquer avec Internet ? **(+3)**\n\n……………………………………\n\n**Bonus vitesse :** +2 pour la première équipe qui a répondu aux 4 questions.\n\n### Manche 3 — « Dessinez la route ! » (10 min, à l'îlot)\n\nPosez au moins **4 cartes** de la manche 1 dans l'ordre du trajet sur une grande feuille et reliez-les par des flèches : reconstituez ainsi la route du Message Fantôme entre l'ordinateur du CDI et l'imprimante de la salle des professeurs. Le rapporteur présente le trajet à la classe en **30 secondes chrono**.\n\n**Barème :** +2 par élément bien placé sur le trajet (maximum 8 points), +2 si l'explication du rapporteur est claire et tient dans les 30 secondes.\n\n## 🏆 Score et débrief\n\nLe professeur additionne les points des trois manches au tableau. L'agence gagnante reçoit le titre de **Détectives officiels du réseau** (et le privilège de choisir sa place aux PC à la prochaine séance).\n\nDébrief oral (3 questions pour toute la classe) :\n\n- Comment le document a-t-il « su » vers quelle machine aller ?\n- Que se passerait-il si deux machines du collège portaient exactement la même adresse ?\n- À votre avis, que cache le local technique du collège, et à quoi ressemble-t-il ?\n\nRéponses complètes à la séance 1 : on ouvre les coulisses du réseau du collège (switch, routeur, serveur, adresses IP).\n\n---\n\n### ✂️ À découper — les cartes-indices (manche 1)\n\n| | | |\n|---|---|---|\n| Ordinateur du CDI | Imprimante | Tablette de la classe |\n| Switch | Routeur | Serveur |\n| Câble Ethernet | Borne Wi-Fi | Adresse IP : 192.168.0.24 |",
+          "resources": [],
+          "quiz": [
+            {
+              "q": "Dans un réseau, chaque machine est reconnue grâce à…",
+              "options": [
+                "Sa couleur",
+                "Son adresse IP",
+                "Son mot de passe"
+              ],
+              "answer": 1,
+              "explain": "L'adresse IP est comme l'adresse postale d'une machine : elle permet d'envoyer les données au bon destinataire."
+            },
+            {
+              "q": "Quel appareil relie entre eux les ordinateurs d'une même salle ?",
+              "options": [
+                "L'écran",
+                "La clé USB",
+                "Le switch"
+              ],
+              "answer": 2,
+              "explain": "Le switch est la « multiprise » du réseau : tous les câbles des machines de la salle s'y branchent."
+            },
+            {
+              "q": "Pour sortir du collège et rejoindre Internet, les données passent par…",
+              "options": [
+                "Le routeur",
+                "Le clavier",
+                "La souris"
+              ],
+              "answer": 0,
+              "explain": "Le routeur fait le pont entre le réseau du collège et l'extérieur : c'est la porte de sortie vers Internet."
+            },
+            {
+              "q": "Au collège, le serveur sert surtout à…",
+              "options": [
+                "Servir les plateaux à la cantine",
+                "Stocker les fichiers et rendre des services aux autres machines",
+                "Recharger les tablettes"
+              ],
+              "answer": 1,
+              "explain": "Le serveur est un ordinateur toujours allumé qui garde les fichiers et les distribue aux machines qui les demandent."
+            }
+          ]
+        },
+        {
           "slug": "seance-1",
           "kind": "seance",
           "num": 1,
@@ -755,6 +1073,59 @@
       "resources": [],
       "pages": [
         {
+          "slug": "jeu-intro",
+          "kind": "jeu",
+          "num": 0,
+          "title": "🎮 « Le Contrat du Siècle » — un portail automatique pour le collège",
+          "shortTitle": "🎮 Jeu d'intro",
+          "tagline": "Le gardien démissionne, le collège lance un concours : quel bureau d'études décrochera le contrat du portail ?",
+          "objectifs_md": "",
+          "content_md": "## 🎯 Le défi\n\nChaque matin, le gardien du collège ouvre et referme le portail **47 fois** : le bus, les livreurs de la cantine, les parents pressés, le facteur… La semaine dernière, sous une pluie battante, il a rendu son trousseau de clés : « Trouvez-vous un portail qui s'ouvre tout seul ! »\n\nLe collège organise donc un concours entre bureaux d'études (vos îlots). Mais attention : un portail qui bouge tout seul peut coincer une main, laisser entrer n'importe qui, ou coûter une fortune. Avant de dessiner quoi que ce soit, il faut comprendre **ce qu'on lui demande vraiment**. Le meilleur bureau d'études remporte le Contrat du Siècle.\n\n## 🧰 Matériel et organisation\n\n- **Durée :** 45 minutes\n- **Équipes :** un îlot de 4 = un bureau d'études. Choisissez un nom d'entreprise sérieux… ou pas (2 min).\n- **Rôles :** le **rapporteur**, le **coureur PC**, le **gardien du temps**, le **secrétaire**.\n- **Le professeur prépare :** le tableau des scores, des ciseaux par îlot. Rien d'autre : le portail, c'est vous.\n\n## 🕹️ Déroulé\n\n### Manche 1 — « Le client mystère » (10 min, à l'îlot)\n\nLe secrétaire découpe les cartes en bas de page : ce sont des phrases entendues à la réunion entre le collège et les bureaux d'études. Triez-les en deux colonnes sur la table :\n\n- **Ce que le portail doit FAIRE** (le service rendu)\n- **Ce que le portail doit RESPECTER** (les limites imposées : sécurité, prix, solidité…)\n\n**Barème :** +2 points par carte bien placée.\n\nQuestion d'équipe : quelle carte est, selon vous, la plus importante de toutes ? Justifiez en une phrase.\n\n……………………………………\n\n……………………………………\n\n### Manche 2 — « Le portail aveugle » (12 min, à l'îlot puis devant la classe)\n\nDans chaque équipe : un élève joue **le portail** (debout, bras tendus devant lui pour figurer les battants fermés, **yeux fermés** ; il écarte les bras pour « ouvrir »), un autre joue **la voiture** qui approche. Problème : le portail a les yeux fermés, et il est interdit de lui toucher les bras ou de lui dire « ouvre-toi ».\n\nVous avez **3 minutes** pour inventer un moyen de prévenir le portail qu'une voiture **autorisée** arrive (un son codé, un signal frappé au sol, un « badge » à inventer…). Puis démonstration de 30 secondes devant la classe.\n\n**Barème :** +4 si le portail s'ouvre au bon moment sans tricher (le professeur arbitre), +3 pour l'équipe dont la solution est votée « la plus maligne » par les autres îlots (on ne vote pas pour soi).\n\nQuestion d'équipe : dans la vraie vie, quels « sens » pourrait-on donner à un portail pour qu'il détecte une voiture tout seul ?\n\n……………………………………\n\n……………………………………\n\n### Manche 3 — « Espionnage industriel » (12 min, PC en U)\n\nLe coureur enquête sur les portails des concurrents, une question à la fois, 3 minutes maximum par question :\n\n1. Il existe deux grandes familles de portails automatiques : l'une pivote comme une porte, l'autre glisse sur le côté. Trouvez leurs noms. **(+3)**\n\n……………………………………\n\n2. Trouvez le nom d'un dispositif de sécurité qui empêche un portail de se refermer sur un obstacle ou une personne. **(+3)**\n\n……………………………………\n\n3. Trouvez une fourchette de prix réaliste pour un portail automatique (pose comprise ou non, précisez-le). **(+3)**\n\n……………………………………\n\n**Bonus vitesse :** +2 pour le premier bureau d'études qui a ses trois réponses.\n\n## 🏆 Score et débrief\n\nAddition des trois manches au tableau : le bureau d'études gagnant signe symboliquement le Contrat du Siècle (et son nom reste affiché toute la séquence).\n\nDébrief oral :\n\n- À qui ce portail rend-il service, et sur quoi agit-il ?\n- Comment appelle-t-on toutes ces exigences « à respecter » qu'on ne peut pas ignorer, même si elles ne font pas rêver ?\n- Qu'est-ce qui manquait à notre portail-mime pour être vraiment automatique ?\n\nÀ la séance 1, on apprendra à écrire tout cela proprement : le besoin, les fonctions et les contraintes d'un objet technique.\n\n---\n\n### ✂️ À découper — les phrases de la réunion (manche 1)\n\n| | |\n|---|---|\n| S'ouvrir sans qu'on le pousse | Ne jamais se refermer sur un piéton |\n| Laisser passer le camion de livraison | Coûter moins de 3 000 € |\n| Se refermer tout seul après le passage | Résister à la pluie et au vent |\n| Pouvoir être ouvert à la main en cas de panne | Rester élégant devant l'entrée du collège |",
+          "resources": [],
+          "quiz": [
+            {
+              "q": "Un portail automatique rend d'abord service…",
+              "options": [
+                "Au fabricant de portails",
+                "Aux personnes qui entrent et sortent",
+                "À la pluie"
+              ],
+              "answer": 1,
+              "explain": "Un objet technique existe pour répondre au besoin de ses utilisateurs : ici, entrer et sortir sans effort."
+            },
+            {
+              "q": "« Le portail doit coûter moins de 3 000 € » : c'est…",
+              "options": [
+                "Une contrainte à respecter",
+                "Une décoration",
+                "Un mode d'emploi"
+              ],
+              "answer": 0,
+              "explain": "Le prix, la sécurité ou la solidité sont des contraintes : des limites imposées au concepteur."
+            },
+            {
+              "q": "Pour « voir » une voiture arriver, un portail utilise…",
+              "options": [
+                "Une paire de lunettes",
+                "Un rétroviseur",
+                "Un capteur"
+              ],
+              "answer": 2,
+              "explain": "Le capteur remplace les sens de l'humain : il détecte la voiture et prévient le système."
+            },
+            {
+              "q": "Que doit faire un portail bien conçu si quelqu'un se trouve sur son passage pendant la fermeture ?",
+              "options": [
+                "Continuer de se fermer",
+                "S'arrêter ou se rouvrir",
+                "Accélérer"
+              ],
+              "answer": 1,
+              "explain": "La sécurité des personnes passe avant tout : le portail doit détecter l'obstacle et stopper son mouvement."
+            }
+          ]
+        },
+        {
           "slug": "seance-0",
           "kind": "seance",
           "num": 0,
@@ -813,6 +1184,59 @@
       "resources": [],
       "pages": [
         {
+          "slug": "jeu-intro",
+          "kind": "jeu",
+          "num": 0,
+          "title": "🎮 « L'Enceinte Hantée » — qui contrôle les objets ?",
+          "shortTitle": "🎮 Jeu d'intro",
+          "tagline": "Une enceinte joue toute seule dans le labo : fantôme, ou smartphone caché ? Menez l'enquête et construisez votre télécommande.",
+          "objectifs_md": "",
+          "content_md": "## 🎯 Le défi\n\nHier soir, après la fermeture, l'enceinte du laboratoire s'est mise à jouer de la musique **toute seule**. Puis l'ampoule du bureau a clignoté trois fois. Le gardien parle d'un fantôme…\n\nLa vérité est ailleurs : quelque part, sans fil et sans bruit, **un smartphone donnait des ordres**. Votre équipe de chasseurs de fantômes doit percer le mystère : comment un simple téléphone peut-il « posséder »… pardon, **piloter** des objets à distance ? Et sauriez-vous concevoir votre propre télécommande ?\n\n## 🧰 Matériel et organisation\n\n- **Durée :** 40 minutes\n- **Équipes :** un îlot de 4 = une brigade de chasseurs de fantômes, avec un nom d'équipe (2 min).\n- **Rôles :** le **rapporteur**, le **coureur PC**, le **gardien du temps**, le **secrétaire**.\n- **Le professeur prépare :** le tableau des scores, des ciseaux et une feuille blanche par îlot.\n\n## 🕹️ Déroulé\n\n### Manche 1 — « Connecté ou pas ? » (8 min, à l'îlot)\n\nDécoupez les cartes-objets en bas de page et triez-les en deux colonnes sur la table :\n\n- **Objet connecté** (il peut communiquer avec d'autres appareils)\n- **Objet ordinaire** (il fait son travail, mais ne communique avec rien)\n\n**Barème :** +1 point par carte bien placée. Attention, certaines cartes feront débat : le rapporteur devra défendre le choix de l'équipe.\n\nQuestion d'équipe : qu'ont en commun **tous** les objets de votre colonne « connecté » ?\n\n……………………………………\n\n……………………………………\n\n### Manche 2 — « L'humain télécommandé » (12 min, à l'îlot)\n\nVotre brigade fabrique sur une feuille **la télécommande** d'un robot très spécial : un membre de votre équipe. Dessinez au maximum **6 boutons**, chacun avec un mot ou un symbole (avancer, tourner, saluer, s'arrêter…).\n\nPuis test croisé entre îlots voisins : l'équipe d'en face emprunte votre feuille et appuie sur vos boutons dessinés, sans aucune explication. Votre « robot » exécute ce qu'il comprend, sous l'arbitrage du professeur.\n\n**Barème :** +2 par bouton compris du premier coup par l'équipe adverse, −1 chaque fois que le robot doit demander « ça veut dire quoi, ce bouton ? ». Découverte du jour : une bonne interface se comprend **sans mode d'emploi**.\n\nQuestion d'équipe : quel bouton a été le mieux compris, et pourquoi à votre avis ?\n\n……………………………………\n\n……………………………………\n\n### Manche 3 — « La course Bluetooth » (10 min, PC en U)\n\nLe coureur file aux ordinateurs, une question à la fois, 3 minutes maximum par question :\n\n1. Le Bluetooth porte le nom d'un roi ayant vraiment existé. De quel pays était-il roi ? **(+3)**\n\n……………………………………\n\n2. Quelle est la portée approximative du Bluetooth d'un smartphone, en mètres ? **(+3)**\n\n……………………………………\n\n3. Trouvez le nom d'un outil en ligne qui permet de créer soi-même une application pour smartphone **sans savoir coder**, avec des blocs. **(+3)**\n\n……………………………………\n\n**Bonus vitesse :** +2 pour la première brigade qui a ses trois réponses.\n\n## 🏆 Score et débrief\n\nAddition des trois manches : la brigade gagnante reçoit le titre officiel de **Chasseurs de fantômes numériques**.\n\nDébrief oral :\n\n- Entre votre doigt qui touche l'écran et l'objet qui obéit, par où passe l'ordre ?\n- Pourquoi l'enceinte « hantée » cesserait-elle de fonctionner si le smartphone s'éloignait de 100 mètres ?\n- D'après la manche 2, qu'est-ce qui rend une application agréable et facile à utiliser ?\n\nÀ la séance 1, on découvrira le chemin complet de l'information (Bluetooth, application, interface) et on commencera à créer notre propre application de pilotage.\n\n---\n\n### ✂️ À découper — les cartes-objets (manche 1)\n\n| | |\n|---|---|\n| Montre qui affiche les messages du téléphone | Grille-pain |\n| Enceinte Bluetooth | Vélo |\n| Ampoule pilotable depuis une application | Livre de poche |\n| Trottinette de location débloquée par téléphone | Marteau |\n| Bracelet qui compte les pas et les envoie à une appli | Réfrigérateur qui signale qu'il est vide |",
+          "resources": [],
+          "quiz": [
+            {
+              "q": "Pour envoyer un ordre à une enceinte sans câble, un smartphone utilise souvent…",
+              "options": [
+                "Le Bluetooth",
+                "La poste",
+                "Un câble invisible"
+              ],
+              "answer": 0,
+              "explain": "Le Bluetooth est une liaison sans fil à courte portée, parfaite entre un téléphone et un objet proche."
+            },
+            {
+              "q": "L'écran avec les boutons que l'utilisateur touche s'appelle…",
+              "options": [
+                "Le moteur",
+                "L'interface",
+                "La batterie"
+              ],
+              "answer": 1,
+              "explain": "L'interface (ou IHM) est le point de rencontre entre l'humain et la machine : c'est elle qu'on touche et qu'on lit."
+            },
+            {
+              "q": "Si le téléphone s'éloigne trop de l'objet piloté en Bluetooth…",
+              "options": [
+                "Le son devient plus fort",
+                "L'objet explose",
+                "La connexion se coupe"
+              ],
+              "answer": 2,
+              "explain": "Le Bluetooth ne porte qu'à quelques dizaines de mètres : au-delà, plus de liaison, plus d'ordres."
+            },
+            {
+              "q": "Un objet « connecté » est un objet qui peut…",
+              "options": [
+                "Se recharger tout seul",
+                "Communiquer avec d'autres appareils",
+                "Voler"
+              ],
+              "answer": 1,
+              "explain": "C'est la définition clé : un objet connecté échange des informations avec d'autres machines."
+            }
+          ]
+        },
+        {
           "slug": "seance-1",
           "kind": "seance",
           "num": 1,
@@ -861,6 +1285,59 @@
       "intro_md": "**Compétences travaillées et potentiellement évaluées durant la séquence :**\n\n- Appliquer les principes élémentaires de l’algorithmique et du codage à la résolution d’un problème simple.(Socle **D1.3_1.6**)\n\n- Associer des solutions techniques à des fonctions. (Disciplinaire **MSOST.1.2**)\n\n- Analyser le fonctionnement et la structure d’un objet, identifier les entrées et sorties. (Disciplinaire **MSOST.1.3**)\n\n- Identifier le(s) matériau(x), les flux d’énergie et d’information sur un objet et décrire les transformations qui s’opèrent. (Disciplinaire **MSOST.1.4**)\n\n- Décrire, en utilisant les outils et langages de descriptions adaptés, le fonctionnement, la structure et le comportement des objets. (Disciplinaire **MSOST.1.5** + Socle **D1.3_1.5**)\n\n- Écrire, mettre au point (tester, corriger) et exécuter un programme commandant un système réel et vérifier le comportement attendu. (Disciplinaire **Ip.2.2**)\n\n- Écrire un programme dans lequel des actions sont déclenchées par des événements extérieurs. (Disciplinaire **Ip.2.3**)",
       "resources": [],
       "pages": [
+        {
+          "slug": "jeu-intro",
+          "kind": "jeu",
+          "num": 0,
+          "title": "🎮 « Micro Mystère » — l'ordinateur qui tient dans la poche",
+          "shortTitle": "🎮 Jeu d'intro",
+          "tagline": "Une carte plus petite qu'une carte de cantine qui compterait vos pas et jouerait à pierre-feuille-ciseaux : info ou intox ?",
+          "objectifs_md": "",
+          "content_md": "## 🎯 Le défi\n\nSur le bureau du professeur trône une carte électronique **plus petite qu'une carte de cantine**. La rumeur court dans les couloirs : elle aurait été distribuée à **un million d'élèves** au Royaume-Uni, elle saurait compter vos pas, afficher des messages lumineux, détecter qu'on la secoue et même jouer à pierre-feuille-ciseaux.\n\nInfo… ou intox ? Votre équipe doit démêler le vrai du faux, puis relever le vrai défi : **donner ses premiers ordres** à cette mystérieuse carte. Sans jamais écrire une seule ligne de code compliqué. Chiche ?\n\n## 🧰 Matériel et organisation\n\n- **Durée :** 40 minutes\n- **Équipes :** un îlot de 4, avec un nom d'équipe (2 min).\n- **Rôles :** le **rapporteur**, le **coureur PC**, le **gardien du temps**, le **secrétaire**.\n- **Le professeur prépare :** le tableau des scores, des ciseaux par îlot, les PC en U avec le **simulateur MakeCode** ouvert (celui de la séquence). S'il en a une, une vraie carte micro:bit circule d'îlot en îlot.\n\n## 🕹️ Déroulé\n\n### Manche 1 — « Info ou intox ? » (10 min, à l'îlot)\n\nLe secrétaire dessine deux grandes cases au centre de la table : **INFO** et **INTOX**. Découpez les cartes-affirmations en bas de page, discutez, puis pariez : posez chaque carte dans une case. Aucune vérification autorisée pour l'instant !\n\n**Barème :** +2 points par bon pari (le professeur révèle les réponses à la fin de la manche, avec le suspense qui s'impose).\n\nQuestion d'équipe : d'après vos paris, résumez en une phrase ce que cette carte sait faire.\n\n……………………………………\n\n……………………………………\n\n### Manche 2 — « Premiers ordres » (15 min, PC en U)\n\nLa carte simulée n'attend que vos ordres. Le coureur part au PC relever le défi A ; dès qu'il est validé (montrer l'écran au professeur), **un autre membre de l'équipe devient coureur** pour le défi suivant : chaque défi est ainsi programmé par un coéquipier différent.\n\n- **Défi A (+3) :** faire afficher un cœur sur l'écran de la carte simulée.\n- **Défi B (+3) :** faire défiler le nom de votre équipe.\n- **Défi C (+4) :** quand on appuie sur le bouton A, faire apparaître un smiley.\n\n**Bonus vitesse :** +2 pour la première équipe qui valide les trois défis.\n\n### Manche 3 — « Le programme humain » (8 min, à l'îlot)\n\nDécoupez la seconde série de cartes (les cartes-blocs). Le professeur annonce le comportement à obtenir : *« Au démarrage, la carte affiche un cœur ; quand on appuie sur le bouton A, elle affiche BONJOUR puis efface son écran. »* Remettez les cartes-blocs dans le bon ordre, en deux piles (une par événement).\n\n**Barème :** +2 par bloc bien placé (10 points maximum).\n\nQuestion d'équipe : pourquoi l'ordre des blocs est-il si important ?\n\n……………………………………\n\n……………………………………\n\n## 🏆 Score et débrief\n\nAddition des trois manches : l'équipe gagnante est nommée **Maître des micro-machines** pour toute la séquence.\n\nDébrief oral :\n\n- Qu'est-ce qui vous a le plus surpris dans ce que sait faire une carte aussi petite ?\n- Avez-vous eu besoin d'écrire du code compliqué pour lui donner des ordres ?\n- Comment la carte « sait-elle » qu'on appuie sur le bouton A ou qu'on la secoue ?\n\nÀ la séance 1, on découvrira la carte micro:bit en détail et la programmation par blocs, du simulateur jusqu'à la vraie carte.\n\n---\n\n### ✂️ À découper — série 1 : les affirmations (manche 1)\n\n| | |\n|---|---|\n| Elle peut afficher un cœur qui clignote | Elle peut mesurer la température |\n| Elle peut détecter qu'on la secoue | Elle peut faire cuire un œuf |\n| Elle possède une boussole | Son écran est fait de 25 petites lumières |\n| Elle ne fonctionne qu'en anglais | Il faut être ingénieur pour la programmer |\n\n### ✂️ À découper — série 2 : les cartes-blocs (manche 3)\n\n| | |\n|---|---|\n| au démarrage | afficher l'icône « cœur » |\n| quand le bouton A est pressé | afficher le texte « BONJOUR » |\n| effacer l'écran | |",
+          "resources": [],
+          "quiz": [
+            {
+              "q": "L'écran de la carte micro:bit est composé de…",
+              "options": [
+                "25 petites lumières (LED)",
+                "Un écran tactile géant",
+                "Une ampoule unique"
+              ],
+              "answer": 0,
+              "explain": "Ses 25 LED disposées en carré de 5 × 5 suffisent pour afficher icônes, chiffres et textes qui défilent."
+            },
+            {
+              "q": "Pour programmer la micro:bit en 4e, on utilise…",
+              "options": [
+                "Une télécommande de télévision",
+                "Des blocs que l'on assemble",
+                "Du code réservé aux ingénieurs"
+              ],
+              "answer": 1,
+              "explain": "La programmation par blocs permet de construire un programme en emboîtant des instructions, sans écrire de code."
+            },
+            {
+              "q": "La micro:bit peut détecter…",
+              "options": [
+                "Qu'on la secoue",
+                "L'odeur du chocolat",
+                "Les pensées de son propriétaire"
+              ],
+              "answer": 0,
+              "explain": "Grâce à son accéléromètre, la carte sent les mouvements et les secousses."
+            },
+            {
+              "q": "Avant d'envoyer le programme sur la vraie carte, on peut le tester…",
+              "options": [
+                "Dans le simulateur",
+                "Au micro-ondes",
+                "Sur la calculatrice"
+              ],
+              "answer": 0,
+              "explain": "Le simulateur affiche une carte virtuelle qui exécute le programme : pratique pour vérifier avant de transférer."
+            }
+          ]
+        },
         {
           "slug": "seance-1",
           "kind": "seance",
@@ -939,6 +1416,59 @@
       "resources": [],
       "pages": [
         {
+          "slug": "jeu-intro",
+          "kind": "jeu",
+          "num": 0,
+          "title": "🎮 « Panique au Carrefour » — réparez le feu avant l'heure de pointe",
+          "shortTitle": "🎮 Jeu d'intro",
+          "tagline": "Un orage a grillé le programme du feu tricolore : réécrivez sa logique et apprenez à câbler sans rien faire fumer.",
+          "objectifs_md": "",
+          "content_md": "## 🎯 Le défi\n\nCette nuit, un orage a grillé le programme du feu tricolore devant le collège. Résultat ce matin : **vert pour tout le monde, dans tous les sens**. Klaxons, embouteillage, agent de police débordé…\n\nLa mairie appelle vos équipes de dépanneurs. Mais règle d'or du métier : **avant de toucher au moindre fil**, on écrit noir sur blanc l'ordre exact des étapes. Ensuite seulement, on s'entraîne à câbler des lampes… sans rien faire griller. Le carrefour rouvre dans 45 minutes. Top chrono.\n\n## 🧰 Matériel et organisation\n\n- **Durée :** 45 minutes\n- **Équipes :** un îlot de 4 = une équipe de dépanneurs, avec un nom d'entreprise (2 min).\n- **Rôles :** le **rapporteur**, le **coureur PC**, le **gardien du temps**, le **secrétaire**.\n- **Le professeur prépare :** le tableau des scores, des ciseaux par îlot, les PC en U avec le **simulateur de circuits Tinkercad** ouvert (celui de la séquence). En option : trois feuilles rouge, orange et verte par îlot.\n\n## 🕹️ Déroulé\n\n### Manche 1 — « Le feu humain » (12 min, à l'îlot)\n\nDécoupez les cartes-étapes en bas de page et remettez-les dans l'ordre du cycle d'un feu tricolore français (indice : on part du vert allumé).\n\nPuis test grandeur nature : trois élèves de l'îlot deviennent **les trois lampes** (chacun lève sa feuille de couleur — ou la main — quand « sa » lampe est allumée), le quatrième lit les cartes dans l'ordre. Une équipe voisine joue les piétons et vérifie que personne ne se fait « écraser ».\n\n**Barème :** +1 point par carte bien placée (9 points maximum), +4 si la démonstration du feu humain est validée par l'équipe voisine.\n\nQuestion d'équipe : que se passerait-il au carrefour si on oubliait la carte « Éteindre le vert » ?\n\n……………………………………\n\n……………………………………\n\n### Manche 2 — « Ne grillez pas la LED ! » (15 min, PC en U)\n\nDirection le simulateur : ici, on a le droit de tout casser, ça ne coûte rien. Le coureur part relever le défi A ; à chaque défi validé par le professeur, un autre membre de l'équipe prend le relais.\n\n- **Défi A (+3) :** allumer une LED avec la pile **sans la faire exploser**. Indice : un petit composant doit se mettre en travers du courant pour le freiner.\n- **Défi B (+3) :** faire griller une LED **exprès** (sans le composant protecteur) et noter ce que le simulateur affiche. C'est le seul endroit au monde où c'est permis !\n- **Défi C (+4) :** montage final : une LED rouge et une LED verte allumées en même temps, toutes les deux protégées.\n\nQuestion d'équipe : quel composant a sauvé vos LED, et quel est son rôle à votre avis ?\n\n……………………………………\n\n……………………………………\n\n### Manche 3 — « Débat éclair : algorithme ou pas ? » (8 min, à l'îlot)\n\nLe professeur lit quatre situations, une par une. Après 30 secondes de discussion, chaque rapporteur annonce le verdict de son équipe : est-ce une **suite d'étapes précises dans un ordre précis**, oui ou non ? Et il justifie en une phrase.\n\nSituations : une recette de crêpes — une playlist en mode aléatoire — le cycle de notre feu tricolore — l'ordre « range ta chambre » sans plus de détails.\n\n**Barème :** +2 par verdict correct et justifié.\n\n## 🏆 Score et débrief\n\nAddition des trois manches : l'équipe gagnante reçoit le marché public de la mairie (et les félicitations de l'agent de police).\n\nDébrief oral :\n\n- Pourquoi fallait-il écrire les étapes AVANT de brancher quoi que ce soit ?\n- Sous quelle forme pourrait-on **dessiner** ce cycle pour le rendre lisible d'un seul coup d'œil ?\n- Dans la vraie vie, que risque une LED branchée sans protection ?\n\nÀ la séance 1, on apprendra à dessiner ce cycle proprement (l'organigramme) et à câbler nos LED sur une vraie carte Arduino, sans danger.\n\n---\n\n### ✂️ À découper — les cartes-étapes (manche 1)\n\n| | | |\n|---|---|---|\n| Allumer le vert | Attendre 8 secondes | Éteindre le vert |\n| Allumer l'orange | Attendre 3 secondes | Éteindre l'orange |\n| Allumer le rouge | Attendre 8 secondes | Éteindre le rouge, puis recommencer au début |",
+          "resources": [],
+          "quiz": [
+            {
+              "q": "Un algorithme, c'est…",
+              "options": [
+                "Une suite d'étapes dans un ordre précis",
+                "Un composant électronique",
+                "Une marque de feu tricolore"
+              ],
+              "answer": 0,
+              "explain": "Comme une recette de cuisine : des étapes claires, dans le bon ordre, qu'une machine peut suivre."
+            },
+            {
+              "q": "Pour éviter de griller une LED, on ajoute dans le circuit…",
+              "options": [
+                "Une deuxième pile",
+                "Une résistance",
+                "Un interrupteur en or"
+              ],
+              "answer": 1,
+              "explain": "La résistance freine le courant : sans elle, la LED reçoit trop de courant et grille."
+            },
+            {
+              "q": "Dans le cycle du feu tricolore français, après le vert vient…",
+              "options": [
+                "Le rouge",
+                "L'orange",
+                "Le clignotant"
+              ],
+              "answer": 1,
+              "explain": "L'orange prévient les conducteurs que le rouge arrive : c'est l'étape de transition du cycle."
+            },
+            {
+              "q": "Tester son circuit dans un simulateur comme Tinkercad permet…",
+              "options": [
+                "De faire des erreurs sans rien casser",
+                "De recharger la pile",
+                "De remplacer le professeur"
+              ],
+              "answer": 0,
+              "explain": "Dans le simulateur, une LED « grillée » se remplace d'un clic : on peut expérimenter sans risque ni dépense."
+            }
+          ]
+        },
+        {
           "slug": "seance-1",
           "kind": "seance",
           "num": 1,
@@ -974,6 +1504,59 @@
       "intro_md": "## Séquence 2 : Serre autonome\n\n## Introduction\n\nLa culture des végétaux se fait généralement en plein air dans des jardins potagers ou des jardins d'agréments sur des balcons. C'est une activité professionnelle pour certains ou de loisirs et de plaisirs pour d'autres. De nombreuses contraintes existent avant de permettre à une plante de se développer..\n\nLa **lumière** est un élément permettant la photosynthèse, c'est à dire la capacité par laquelle les plantes vertes synthétisent des matières organiques grâce à l'énergie lumineuse, en absorbant le gaz carbonique de l'air et en rejetant l'oxygène. Plus simplement, une plante a un besoin constant de lumière, aussi il est nécessaire et de lui apporter la quantité de lumière suffisante quelque soit l'éclairage extérieur (naturel ou artificiel).\n\nComme tout être vivant, une plante a besoin **d'eau**. Celle-ci déployant ses racines dans la terre, un certain taux d'humidité doit être respecté. Un niveau d' humidité dans l'air est également un facteur favorisant la croissance du végétal.\n\nLa **température** est également un élément important pour le développement d'une plante. Une température trop élevée conduit généralement à la destruction du végétal.\n\nL'apport de **nutriment organique** peut être fait grâce à des bâtonnets que nous insèrons dans la terre. De nombreux produits existent déjà et permettent une autonomie de plusieurs semaines pouvant aller à plusieurs mois.\n\nLe fait de pouvoir déplacer la plante et de l'installer successivement à plusieurs endroits doit être pris en compte et devra pouvoir se faire sans difficulté notamment en terme de manutention. La plante restera constamment visible par l'utilisateur.\n\nPour certains passionnés et autres horticulteurs le développement de la plante est un souci constant. Or, lors d'absences prolongées, il devient impossible pour ces personnes de suivre la bonne croissance des végétaux. Des solutions permettant de surveiller les paramètres vitaux précédents (lumière, humidité de la terre et de l'air, température) doivent donc pouvoir être mis en oeuvre afin de rassurer le jardinier.\n\nDe la même façon, mais cette fois lors de la présence de l'utilisateur les mêmes paramètres physiques doivent être visibles facilement par celui-ci.\n\nA partir de ces besoins, plusieurs questions apparaissent.\n\n**- Comment avoir un système permettant d’accueillir et de déplacer un ou plusieurs végétaux de taille moyenne ?**\n\n**- Comment avoir un système permettant de gérer de façon autonome tous les paramètres physiques nécessaires au développement d'une plante?**\n\n**- Comment informer directement l'utilisateur de l’état des paramètres physiques ?**\n\n**- Comment informer à distance l'utilisateur de l’état de ces mêmes paramètres ?**",
       "resources": [],
       "pages": [
+        {
+          "slug": "jeu-intro",
+          "kind": "jeu",
+          "num": 0,
+          "title": "🎮 « SOS Tomates » — la serre doit survivre sans vous",
+          "shortTitle": "🎮 Jeu d'intro",
+          "tagline": "Quinze jours de vacances, zéro humain pour arroser : apprenez à la serre à sentir, réfléchir et agir toute seule.",
+          "objectifs_md": "",
+          "content_md": "## 🎯 Le défi\n\nGrand départ : le club jardin du collège part en vacances **quinze jours**. Personne pour arroser les tomates, aérer quand il fait trop chaud, allumer la lampe des semis quand le ciel est gris. Au retour, deux scénarios possibles : la jungle luxuriante… ou le cimetière de tomates.\n\nIl existe pourtant une troisième voie : une serre qui se débrouille **toute seule**. Mais pour cela, il faudrait qu'elle puisse **sentir** ce qui se passe, **décider** quoi faire et **agir** sans aucun humain. Mission de vos équipes de jardiniers-ingénieurs : découvrir comment c'est possible, avant le départ du bus.\n\n## 🧰 Matériel et organisation\n\n- **Durée :** 40 minutes\n- **Équipes :** un îlot de 4 = une équipe de jardiniers-ingénieurs, avec un nom d'équipe (2 min).\n- **Rôles :** le **rapporteur**, le **coureur PC**, le **gardien du temps**, le **secrétaire**.\n- **Le professeur prépare :** le tableau des scores, des ciseaux par îlot. Rien d'autre : la serre, c'est vous.\n\n## 🕹️ Déroulé\n\n### Manche 1 — « Sentir ou agir ? » (10 min, à l'îlot)\n\nDécoupez les cartes-équipements en bas de page. Ce sont les organes d'une serre autonome. Triez-les en deux colonnes sur la table :\n\n- **Il MESURE quelque chose** (il « sent » son environnement)\n- **Il FAIT quelque chose** (il agit sur la serre)\n\n**Barème :** +2 points par carte bien placée.\n\nQuestion d'équipe : inventez un nom de famille pour chaque colonne (comment appelleriez-vous « ceux qui sentent » et « ceux qui agissent » ?).\n\n……………………………………\n\n……………………………………\n\n### Manche 2 — « La serre vivante » (12 min, à l'îlot)\n\nChaque îlot devient une serre : l'élève 1 est **l'organe qui mesure**, l'élève 2 est **le cerveau** (il décide), l'élève 3 est **l'organe qui agit** (il mime l'action), l'élève 4 est **le contrôleur qualité** (il note la règle sur la fiche). Les rôles tournent à chaque nouvelle situation.\n\nLe professeur annonce trois situations, une par une : *« le sol est tout sec »*, *« il fait 38 °C dans la serre »*, *« la nuit tombe sur les semis »*. À chaque situation, la chaîne se déclenche : l'élève 1 annonce ce qu'il mesure, l'élève 2 décide, l'élève 3 mime l'action. Puis le contrôleur écrit la règle sous la forme **SI … ALORS …**.\n\n**Barème :** +3 par chaîne correcte (bonne mesure → bonne décision → bonne action), +1 par règle bien écrite.\n\nRègle 1 : SI …………………………………… ALORS ……………………………………\n\nRègle 2 : SI …………………………………… ALORS ……………………………………\n\nRègle 3 : SI …………………………………… ALORS ……………………………………\n\n### Manche 3 — « Enquête aux quatre coins du monde » (10 min, PC en U)\n\nLe coureur part en reconnaissance, une question à la fois, 3 minutes maximum par question :\n\n1. Trouvez un exemple réel de serre ou de ferme automatisée quelque part dans le monde : notez le pays et ce qui y fonctionne tout seul. **(+4)**\n\n……………………………………\n\n2. Quelle température fait pousser les tomates au mieux dans une serre ? (une fourchette suffit) **(+3)**\n\n……………………………………\n\n3. Trouvez le nom d'un composant que l'on peut brancher sur une carte programmable pour mesurer l'humidité du sol. **(+3)**\n\n……………………………………\n\n**Bonus vitesse :** +2 pour la première équipe qui a ses trois réponses.\n\n## 🏆 Score et débrief\n\nAddition des trois manches : l'équipe gagnante reçoit le titre de **Gardiens des tomates** et le droit de baptiser la future serre de la classe.\n\nDébrief oral :\n\n- Dans votre « serre vivante », qui prenait vraiment la décision : celui qui mesure, le cerveau ou celui qui agit ?\n- Que se passerait-il si l'organe qui mesure se trompait ou tombait en panne ?\n- Quel objet de votre maison fonctionne déjà exactement comme ça, sans que vous y pensiez ?\n\nÀ la séance 1, on donnera leurs vrais noms aux maillons de cette chaîne (capteurs, programme, actionneurs) et on commencera à programmer notre propre serre autonome.\n\n---\n\n### ✂️ À découper — les organes de la serre (manche 1)\n\n| | |\n|---|---|\n| Sonde d'humidité plantée dans le sol | Pompe à eau |\n| Thermomètre électronique | Ventilateur |\n| Détecteur de luminosité | Lampe de croissance |\n| Détecteur de niveau d'eau de la réserve | Moteur qui ouvre la fenêtre du toit |",
+          "resources": [],
+          "quiz": [
+            {
+              "q": "Dans une serre autonome, la sonde qui mesure l'humidité du sol est…",
+              "options": [
+                "Un capteur",
+                "Un actionneur",
+                "Un arrosoir"
+              ],
+              "answer": 0,
+              "explain": "Un capteur mesure une grandeur (humidité, température, lumière) et transmet l'information."
+            },
+            {
+              "q": "La pompe qui envoie l'eau vers les tomates est…",
+              "options": [
+                "Un capteur",
+                "Un programme",
+                "Un actionneur"
+              ],
+              "answer": 2,
+              "explain": "Un actionneur agit concrètement sur la serre : pomper, ventiler, éclairer, ouvrir."
+            },
+            {
+              "q": "Qui prend la décision d'arroser dans une serre autonome ?",
+              "options": [
+                "Le programme",
+                "La tomate",
+                "La pompe"
+              ],
+              "answer": 0,
+              "explain": "Le programme est le cerveau : il lit les mesures des capteurs et commande les actionneurs."
+            },
+            {
+              "q": "« SI le sol est sec ALORS arroser », c'est…",
+              "options": [
+                "Un proverbe de jardinier",
+                "Une règle qu'un programme peut suivre",
+                "Une punition"
+              ],
+              "answer": 1,
+              "explain": "Les instructions « SI… ALORS… » sont la base des programmes qui décident tout seuls."
+            }
+          ]
+        },
         {
           "slug": "seance-0",
           "kind": "seance",

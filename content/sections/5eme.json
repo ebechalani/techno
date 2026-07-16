@@ -19,6 +19,59 @@
       "resources": [],
       "pages": [
         {
+          "slug": "jeu-intro",
+          "kind": "jeu",
+          "num": 0,
+          "title": "🎮 « Opération Coffre-Fort » — le jeu des agents anti-pirates",
+          "shortTitle": "🎮 Jeu d'intro",
+          "tagline": "Un pirate rôde sur le réseau du collège : devenez plus malins que lui avant qu'il ne frappe.",
+          "objectifs_md": "",
+          "content_md": "## 🎯 Le défi\n\nHier soir, le compte de messagerie d'un élève du collège a été piraté. Le pirate, qui signe « Le Fantôme du réseau », n'a pas forcé de porte ni cassé de vitre : il a simplement deviné un mot de passe et ramassé des informations laissées en libre-service sur Internet…\n\nAujourd'hui, votre îlot devient une agence de contre-espionnage. Votre mission : comprendre comment le Fantôme s'y prend… et devenir plus malins que lui. L'agence qui marque le plus de points remporte le titre de **Cyber-Gardiens du collège**.\n\n## 🧰 Matériel et organisation\n\n- **Durée :** 40 minutes environ.\n- **Équipes :** un îlot = une agence de 4 agents. Trouvez un nom d'agence en 30 secondes (soyez percutants !).\n- **Rôles :** un **rapporteur** (porte-parole officiel), un **coureur PC** (le seul autorisé à se lever vers les ordinateurs en U), un **gardien du temps**, un **secrétaire** (écrit toutes les réponses).\n- **Le professeur prépare :** le tableau pour les scores, une paire de ciseaux par îlot, un chronomètre. Les PC en U sont allumés avec un moteur de recherche ouvert. C'est tout !\n\n## 🕹️ Déroulé\n\n### Manche 1 — Secret ou public ? (10 min, à l'îlot)\n\nDécoupez les 12 cartes en bas de la page. À l'îlot, classez-les en deux tas :\n\n- **JE PEUX PARTAGER** : informations sans danger.\n- **JE PROTÈGE** : informations que le Fantôme adorerait récupérer.\n\nVous avez 5 minutes de discussion, puis correction en classe entière. **Barème : +2 points par carte bien placée** (24 points possibles).\n\nQuestion d'agence (à remplir par le secrétaire ; non notée, elle servira au débrief) :\n\n**Citez deux informations qu'il ne faut jamais publier sur Internet, et expliquez pourquoi en une phrase.**\n\n……………………………………\n\n……………………………………\n\n### Manche 2 — Les détectives du web (12 min, PC en U)\n\nLe **coureur PC** part en mission aux ordinateurs : il cherche les réponses avec le moteur de recherche, puis revient les dicter au secrétaire. Il peut faire autant d'allers-retours qu'il veut, mais **un seul agent aux PC par équipe**, et jamais plus de 2 minutes par aller-retour (le gardien du temps surveille !).\n\nLes 4 questions d'enquête :\n\n1. Que signifie le mot « phishing » (hameçonnage) ?\n\n……………………………………\n\n2. Qu'est-ce qu'une « donnée personnelle » ?\n\n……………………………………\n\n3. Quel numéro gratuit peut-on appeler en France quand on est victime de harcèlement en ligne ?\n\n……………………………………\n\n4. Que veut dire « usurpation d'identité » ?\n\n……………………………………\n\n**Barème : +3 points par réponse correcte** (12 points possibles). Correction en classe entière à la fin de la manche.\n\n**Défi bonus (+3 points)** : inventez un mot de passe de 12 caractères minimum, impossible à deviner mais que vous pourriez retenir sans le noter sur un post-it. Le professeur attribue le bonus aux mots de passe les plus solides. Attention : n'écrivez **jamais** un vrai mot de passe personnel !\n\n……………………………………\n\n### Manche 3 — Alerte cyberviolence (10 min, à l'îlot)\n\nLe professeur lit 3 situations à voix haute. Exemples : « Tu reçois des messages moqueurs répétés d'un inconnu » ; « Un camarade fait circuler une photo gênante de quelqu'un de la classe » ; « Quelqu'un te demande ton mot de passe pour soi-disant t'aider ».\n\nAprès chaque situation : **30 secondes de concertation** à l'îlot, puis chaque rapporteur annonce à tour de rôle la réaction de son agence.\n\n**Barème :** **+3 points** si la réaction protège vraiment (ne pas répondre à chaud, garder les preuves, bloquer, en parler à un adulte de confiance…), **+1 point** si elle protège à moitié, **0 point** si elle aggrave la situation. Le professeur est seul juge.\n\n## 🏆 Score et débrief\n\nLe professeur additionne les points des 3 manches au tableau (48 points possibles avec le bonus). L'agence gagnante reçoit le titre de **Cyber-Gardiens du collège**.\n\nDébrief oral (5 min) :\n\n- Qu'est-ce qui rend un mot de passe vraiment difficile à deviner ?\n- Pourquoi le Fantôme du réseau n'a-t-il presque pas eu besoin de « pirater » pour trouver ses informations ?\n- Face à la cyberviolence, quelle est la différence entre se venger et se protéger ?\n\nC'est exactement le programme de cette séquence : protéger ses données, ses mots de passe… et soi-même.\n\n---\n\n## ✂️ Cartes à découper (manche 1)\n\n| | | |\n|---|---|---|\n| Mon adresse de domicile | Ma couleur préférée | Mon mot de passe |\n| Mon plat préféré | Mon numéro de téléphone | Mon avis sur un film |\n| Ma date de naissance complète | Un dessin que j'ai fait | Ma géolocalisation en temps réel |\n| Le numéro de carte bancaire de mes parents | Mon animal préféré | Une photo de ma carte d'identité |",
+          "resources": [],
+          "quiz": [
+            {
+              "q": "Lequel de ces mots de passe est le plus difficile à deviner ?",
+              "options": [
+                "123456",
+                "azerty",
+                "Tulipe!39_velo"
+              ],
+              "answer": 2,
+              "explain": "Un bon mot de passe est long et mélange lettres, chiffres et caractères spéciaux."
+            },
+            {
+              "q": "Ton adresse et ton numéro de téléphone sont…",
+              "options": [
+                "des données personnelles à protéger",
+                "des informations sans importance",
+                "des infos à mettre sur les réseaux sociaux"
+              ],
+              "answer": 0,
+              "explain": "Ces informations permettent de t'identifier et de te localiser : on les protège."
+            },
+            {
+              "q": "Un camarade reçoit des messages méchants répétés en ligne. La bonne réaction ?",
+              "options": [
+                "Répondre encore plus méchamment",
+                "En parler à un adulte de confiance et garder les preuves",
+                "Supprimer son compte sans rien dire à personne"
+              ],
+              "answer": 1,
+              "explain": "Se protéger, c'est garder les preuves, bloquer et alerter un adulte, pas se venger."
+            },
+            {
+              "q": "Le « phishing » (hameçonnage), c'est…",
+              "options": [
+                "un jeu de pêche en ligne",
+                "un faux message qui cherche à voler tes informations",
+                "un logiciel antivirus"
+              ],
+              "answer": 1,
+              "explain": "Le pirate lance un faux message comme un hameçon pour attraper tes données."
+            }
+          ]
+        },
+        {
           "slug": "seance-1",
           "kind": "seance",
           "num": 1,
@@ -223,6 +276,59 @@
       "resources": [],
       "pages": [
         {
+          "slug": "jeu-intro",
+          "kind": "jeu",
+          "num": 0,
+          "title": "🎮 « La Clinique des objets » — réparer ou jeter, il faut choisir",
+          "shortTitle": "🎮 Jeu d'intro",
+          "tagline": "Quatre docteurs par îlot, un carton d'objets condamnés : qui sauvera le plus de patients ?",
+          "objectifs_md": "",
+          "content_md": "## 🎯 Le défi\n\nCe matin, un carton mystérieux attend devant la salle de techno. Dedans : un grille-pain muet, une lampe éteinte à jamais, un casque audio qui ne grésille même plus… Tous condamnés à la benne. Sauf si quelqu'un les sauve.\n\nVotre îlot devient une **clinique des objets**. Comme de vrais médecins, vous allez apprendre à examiner, diagnostiquer et soigner — sans jamais mettre le patient (ni vous !) en danger. La clinique qui marque le plus de points décroche le diplôme de **Chirurgiens des objets**.\n\n## 🧰 Matériel et organisation\n\n- **Durée :** 40 minutes environ.\n- **Équipes :** un îlot = une clinique de 4 docteurs. Choisissez un nom de clinique en 30 secondes.\n- **Rôles :** un **rapporteur**, un **coureur PC**, un **gardien du temps**, un **secrétaire**.\n- **Le professeur prépare :** le tableau pour les scores, une paire de ciseaux et une feuille de brouillon par îlot, un chronomètre, et son ordre de référence des 8 étapes (établi avant la séance) pour corriger la manche 1. Les PC en U sont allumés avec un moteur de recherche ouvert. En option pour l'ambiance : un vrai objet en panne posé sur le bureau.\n\n## 🕹️ Déroulé\n\n### Manche 1 — L'ordonnance en désordre (10 min, à l'îlot)\n\nDécoupez les 8 cartes-étapes en bas de la page : elles décrivent une réparation réussie, mais elles sont imprimées **dans le désordre**. À l'îlot, remettez-les dans le bon ordre, de la première à la dernière étape. Vous avez 5 minutes, puis correction en classe entière.\n\n**Barème : +2 points par carte placée à la bonne position dans l'ordre de référence du professeur** (16 points possibles).\n\nQuestion de clinique (non notée : la réponse sera discutée à la correction) :\n\n**Avant d'ouvrir un appareil électrique en panne, quelle précaution est absolument obligatoire ? Pourquoi ?**\n\n……………………………………\n\n### Manche 2 — Enquête réparabilité (12 min, PC en U)\n\nLe **coureur PC** part en mission aux ordinateurs (un seul docteur aux PC par équipe, allers-retours autorisés). Il rapporte les réponses au secrétaire.\n\n1. Qu'est-ce que « l'indice de réparabilité » affiché sur certains produits ?\n\n……………………………………\n\n2. Sur combien de points cet indice est-il noté ?\n\n……………………………………\n\n3. Que signifie « obsolescence programmée » ?\n\n……………………………………\n\n4. Citez un objet du quotidien qui porte cet indice en magasin.\n\n……………………………………\n\n**Barème : +3 points par réponse correcte** (12 points possibles). Correction en classe entière à la fin de la manche.\n\n### Manche 3 — Mime la panne (10 min, à l'îlot puis devant la classe)\n\nChaque clinique choisit **en secret** un objet en panne et sa panne. Exemples : un vélo dont la chaîne saute, une trottinette au frein bloqué, une manette dont un bouton reste coincé, un grille-pain qui ne chauffe plus. 1 minute de préparation, puis l'équipe mime devant la classe pendant 30 secondes maximum : **interdiction absolue de parler**.\n\nAprès chaque mime, les autres cliniques ont 20 secondes pour noter leur hypothèse (objet + panne) sur leur feuille de brouillon, puis tous les rapporteurs annoncent en même temps.\n\n**Barème :** pour chaque clinique qui devine juste : **+2 points** pour l'objet, **+2 points** pour la panne. L'équipe qui mime gagne **+2 points** si sa panne est devinée par au moins une clinique — un mime clair, c'est déjà un bon diagnostic !\n\n## 🏆 Score et débrief\n\nLe professeur additionne les points des 3 manches au tableau. La meilleure clinique reçoit le diplôme de **Chirurgiens des objets**.\n\nDébrief oral (5 min) :\n\n- Pourquoi a-t-on souvent le réflexe de jeter plutôt que de réparer ?\n- À quoi sert de suivre des étapes dans l'ordre au lieu de tout démonter au hasard ?\n- Que gagne la planète (et votre porte-monnaie) quand un objet est réparé au lieu d'être remplacé ?\n\nDans cette séquence, vous allez suivre un vrai protocole de réparation, comme les pros.\n\n---\n\n## ✂️ Cartes à découper (manche 1) — étapes imprimées dans le désordre\n\n| | |\n|---|---|\n| Je remonte l'objet complètement | J'observe les symptômes de la panne |\n| Je répare ou je remplace la pièce défectueuse | Je consulte la notice ou un tutoriel |\n| Je débranche l'appareil et je me mets en sécurité | Je teste l'objet en respectant les consignes de sécurité |\n| Je cherche la cause possible de la panne | Je démonte uniquement la partie concernée |",
+          "resources": [],
+          "quiz": [
+            {
+              "q": "Avant d'ouvrir un appareil électrique en panne, il faut d'abord…",
+              "options": [
+                "le secouer très fort",
+                "le débrancher",
+                "le passer sous l'eau"
+              ],
+              "answer": 1,
+              "explain": "On coupe toujours l'alimentation avant d'intervenir, pour travailler en sécurité."
+            },
+            {
+              "q": "L'indice de réparabilité affiché sur certains produits indique…",
+              "options": [
+                "le prix de l'objet",
+                "s'il est facile ou difficile à réparer",
+                "sa vitesse de fonctionnement"
+              ],
+              "answer": 1,
+              "explain": "Plus la note est haute, plus l'objet est facile à réparer (pièces, démontage, notice…)."
+            },
+            {
+              "q": "Réparer plutôt que jeter permet surtout…",
+              "options": [
+                "d'économiser des ressources et de réduire les déchets",
+                "d'avoir un objet plus à la mode",
+                "de remplir les magasins"
+              ],
+              "answer": 0,
+              "explain": "Chaque objet réparé évite d'extraire de nouvelles matières premières et de produire un déchet."
+            },
+            {
+              "q": "Un protocole de réparation, c'est…",
+              "options": [
+                "une liste d'étapes à suivre dans l'ordre",
+                "un outil pour dévisser",
+                "une garantie du magasin"
+              ],
+              "answer": 0,
+              "explain": "Comme une recette, le protocole donne les étapes dans le bon ordre pour réussir sans danger."
+            }
+          ]
+        },
+        {
           "slug": "seance-1",
           "kind": "seance",
           "num": 1,
@@ -354,6 +460,59 @@
       "resources": [],
       "pages": [
         {
+          "slug": "jeu-intro",
+          "kind": "jeu",
+          "num": 0,
+          "title": "🎮 « Les As du tri » — zéro erreur pour la poubelle jaune",
+          "shortTitle": "🎮 Jeu d'intro",
+          "tagline": "Un camion de tri entier refusé à cause de quelques erreurs : à votre classe de tout réparer.",
+          "objectifs_md": "",
+          "content_md": "## 🎯 Le défi\n\nCatastrophe au centre de tri ! Hier, un camion entier de poubelles jaunes a été **refusé** : trop d'erreurs dedans. Résultat : des tonnes d'emballages recyclables partis à l'incinérateur, à cause de quelques déchets mal placés par les habitants du quartier.\n\nVotre îlot devient une **brigade du tri**. Mission du jour : prouver que vous êtes incollables… puis imaginer comment aider les habitants à ne plus jamais se tromper. La meilleure brigade remporte le titre d'**As du tri**.\n\n## 🧰 Matériel et organisation\n\n- **Durée :** 40 à 45 minutes.\n- **Équipes :** un îlot = une brigade de 4 agents du tri. Trouvez un nom de brigade en 30 secondes.\n- **Rôles :** un **rapporteur**, un **coureur PC**, un **gardien du temps**, un **secrétaire**.\n- **Le professeur prépare :** le tableau pour les scores, une paire de ciseaux par îlot, une feuille blanche par îlot pour la manche 3, un chronomètre. Les PC en U sont allumés avec un moteur de recherche ouvert.\n\n## 🕹️ Déroulé\n\n### Manche 1 — Chaque déchet à sa place (12 min, à l'îlot)\n\nDécoupez les 15 cartes-déchets en bas de la page. Sur la table de l'îlot, écrivez sur des bouts de papier le nom des 5 zones et posez-les devant vous : **BAC JAUNE**, **BAC À VERRE**, **ORDURES MÉNAGÈRES**, **COMPOST**, **POINT DE COLLECTE SPÉCIAL**. Placez chaque carte dans la bonne zone. Vous avez 6 minutes, puis correction en classe entière.\n\n**Barème : +2 points par carte bien placée** (30 points possibles). Attention, il y a des cartes pièges : à la correction, le professeur tranche selon les consignes de tri locales.\n\nQuestion de brigade (non notée : gardez votre réponse pour le débrief) :\n\n**Quelle carte vous a fait le plus hésiter ? Pourquoi ?**\n\n……………………………………\n\n### Manche 2 — La seconde vie des déchets (10 min, PC en U)\n\nLe **coureur PC** file aux ordinateurs (un seul agent aux PC par équipe) et rapporte les réponses au secrétaire.\n\n1. Que peut devenir une bouteille en plastique une fois recyclée ?\n\n……………………………………\n\n2. Combien de fois le verre peut-il être recyclé ?\n\n……………………………………\n\n3. Que fabrique-t-on avec l'aluminium des canettes recyclées ?\n\n……………………………………\n\n4. Combien de temps un sac plastique met-il à se dégrader dans la nature ?\n\n……………………………………\n\n**Barème : +3 points par réponse correcte** (12 points possibles). Correction en classe entière à la fin de la manche.\n\n### Manche 3 — L'appli anti-erreurs (12 min, à l'îlot)\n\nLe centre de tri vous passe commande : imaginez **l'écran d'une application** qui aiderait les habitants à ne plus se tromper de poubelle. Dessinez cet écran sur la feuille blanche (boutons, images, textes… tout est permis). À la fin, le rapporteur « vend » son appli à la classe en 30 secondes chrono.\n\n**Barème :** chaque brigade distribue 3 étoiles, réparties comme elle le souhaite, aux applis des autres équipes (interdit de voter pour soi). **1 étoile = 2 points.**\n\nQuestion de brigade (le rapporteur doit l'annoncer pendant son pitch) :\n\n**Quelle est LA fonction principale de votre appli ?**\n\n……………………………………\n\n## 🏆 Score et débrief\n\nLe professeur additionne les points des 3 manches au tableau. La meilleure brigade est sacrée **As du tri**.\n\nDébrief oral (5 min) :\n\n- Pourquoi quelques erreurs de tri peuvent-elles gâcher tout un camion ?\n- D'après vous, quelles erreurs les habitants font-ils le plus souvent, et pourquoi ?\n- Une application peut-elle vraiment aider les usagers à mieux trier ? Bonne nouvelle : c'est exactement le projet de cette séquence… jusqu'à créer une véritable appli !\n\n---\n\n## ✂️ Cartes à découper (manche 1)\n\n| | | |\n|---|---|---|\n| Bouteille d'eau en plastique | Épluchures de légumes | Canette de soda |\n| Pot de yaourt vide | Bocal en verre vide | Verre à boire cassé |\n| Pile usagée | Carton de pizza très gras | Mouchoir en papier usagé |\n| Journal | Brique de lait | Restes de viande |\n| Coquilles d'œufs | Flacon de shampoing vide | Ampoule usagée |",
+          "resources": [],
+          "quiz": [
+            {
+              "q": "Une bouteille en plastique vide se jette…",
+              "options": [
+                "dans le bac jaune",
+                "dans le bac à verre",
+                "dans le compost"
+              ],
+              "answer": 0,
+              "explain": "Les emballages en plastique vont dans le bac de tri jaune pour être recyclés."
+            },
+            {
+              "q": "Un verre à boire cassé se jette…",
+              "options": [
+                "dans le bac à verre",
+                "avec les ordures ménagères, bien emballé",
+                "dans le bac jaune"
+              ],
+              "answer": 1,
+              "explain": "Le bac à verre n'accepte que le verre d'emballage (bouteilles, bocaux), pas la vaisselle."
+            },
+            {
+              "q": "Que risque une poubelle jaune qui contient trop d'erreurs de tri ?",
+              "options": [
+                "Rien, une machine corrige tout",
+                "Le chargement peut être refusé au centre de tri",
+                "Elle est ramassée plus souvent"
+              ],
+              "answer": 1,
+              "explain": "Trop d'erreurs et c'est tout le camion qui peut partir à l'incinérateur au lieu du recyclage."
+            },
+            {
+              "q": "Les épluchures de légumes peuvent devenir…",
+              "options": [
+                "du compost pour le jardin",
+                "du verre recyclé",
+                "du plastique neuf"
+              ],
+              "answer": 0,
+              "explain": "Les déchets alimentaires végétaux se décomposent et deviennent un engrais naturel : le compost."
+            }
+          ]
+        },
+        {
           "slug": "seance-1",
           "kind": "seance",
           "num": 1,
@@ -413,6 +572,59 @@
       "intro_md": "**Domaine du socle :** D1.3-Langages mathématiques, scientifiques et informatiques.\n\nD2-Les méthodes et outils pour apprendre.\n\nD4-Les systèmes naturels et les systèmes techniques.\n\n**Compétences :** IP2.3 - Écrire un programme dans lequel des actions sont déclenchées par des événements extérieurs\n\nIP1.6 - Mesurer des grandeurs de manière directe ou indirecte.\n\nIP1.5 - Analyser le fonctionnement et la structure d’un objet - Identifier les entrées et sorties\n\nIP4.2 - Appliquer les principes élémentaires de l’algorithmique et du codage à la résolution d’un problème simple.\n\n- Écrire un programme dans lequel des actions sont déclenchées par des événements extérieurs",
       "resources": [],
       "pages": [
+        {
+          "slug": "jeu-intro",
+          "kind": "jeu",
+          "num": 0,
+          "title": "🎮 « Le Couloir hanté » — enquête sur la lumière fantôme",
+          "shortTitle": "🎮 Jeu d'intro",
+          "tagline": "Vendredi soir, collège vide… et la lumière du couloir s'allume toute seule. Fantôme ou technologie ?",
+          "objectifs_md": "",
+          "content_md": "## 🎯 Le défi\n\nVendredi, 18 h 47. Le collège est vide, toutes les portes sont fermées. Pourtant, la caméra de surveillance montre la lumière du couloir qui s'allume… **toute seule**. Personne n'a touché l'interrupteur. Puis elle s'éteint. Puis elle se rallume au passage du chat du gardien.\n\nFantôme ? Votre îlot devient une **brigade d'enquêteurs scientifiques**. Mission : découvrir QUI (ou QUOI) allume cette lumière, comment il « voit » dans le noir, et qui lui donne l'ordre d'agir. La meilleure brigade remporte le titre de **Chasseurs de fantômes électriques**.\n\n## 🧰 Matériel et organisation\n\n- **Durée :** 40 à 45 minutes.\n- **Équipes :** un îlot = une brigade de 4 enquêteurs. Trouvez un nom de brigade en 30 secondes.\n- **Rôles :** un **rapporteur**, un **coureur PC**, un **gardien du temps**, un **secrétaire**.\n- **Le professeur prépare :** le tableau pour les scores, une paire de ciseaux et une feuille de brouillon par îlot, un chronomètre. Sur les PC en U : un simulateur de circuits en ligne (Tinkercad ou équivalent), ouvert avec une pile, une résistance et une DEL déjà posées sur le plan de travail. Si aucun simulateur n'est disponible, un moteur de recherche suffit (voir la variante de la manche 3).\n\n## 🕹️ Déroulé\n\n### Manche 1 — Il capte ou il agit ? (10 min, à l'îlot)\n\nDécoupez les 12 cartes en bas de la page. Classez-les en trois tas :\n\n- **IL DÉTECTE** : le composant sent quelque chose (présence, lumière, son, appui…).\n- **IL AGIT** : le composant fait quelque chose de visible ou d'audible.\n- **NI L'UN NI L'AUTRE**.\n\nVous avez 5 minutes, puis correction en classe entière. **Barème : +2 points par carte bien placée** (24 points possibles).\n\nQuestion de brigade (non notée : la réponse prépare le débrief) :\n\n**D'après vos cartes, de quoi le couloir a-t-il besoin, au minimum, pour s'allumer tout seul ?**\n\n……………………………………\n\n### Manche 2 — La machine humaine (12 min, à l'îlot puis au centre de la salle)\n\nChaque brigade invente une « machine humaine » avec trois rôles : un élève **détecteur** (il repère un signal : un geste, un passage…), un élève **cerveau** (il reçoit l'info et décide), un élève **action** (il exécute l'ordre : lever le bras, faire du bruit…). Le quatrième élève joue l'utilisateur qui déclenche la machine.\n\n2 minutes de préparation en secret, puis chaque brigade joue sa machine devant la classe **sans parler**, en 30 secondes maximum. Les systèmes à imiter : porte de supermarché, lampadaire, arrosage automatique, distributeur de savon, portail de parking…\n\nAprès chaque machine, les autres brigades ont 20 secondes pour noter sur leur brouillon le système imité, puis tous les rapporteurs annoncent en même temps.\n\n**Barème : +3 points** par brigade qui devine juste, **+2 points** pour la brigade dont la machine est reconnue par au moins une équipe.\n\n### Manche 3 — Le défi du circuit (12 min, PC en U)\n\nToutes les brigades lancent le défi en même temps : chaque **coureur PC** rejoint un ordinateur où le simulateur est ouvert. Mission : **câbler la pile, la résistance et la DEL déjà posées à l'écran pour allumer la lumière** (aucun risque, tout est simulé !). Le coureur peut revenir **une seule fois** à l'îlot demander conseil à sa brigade.\n\n**Barème : +8 points** si la DEL s'allume dans les 10 minutes. Bonus podium : **+3 / +2 / +1 points** pour les trois brigades les plus rapides.\n\n*Variante sans simulateur :* recherche chronométrée sur les PC — « Comment un détecteur de mouvement fait-il pour “voir” quelqu'un ? » (**+8 points** pour une explication correcte rapportée au secrétaire).\n\n……………………………………\n\n## 🏆 Score et débrief\n\nLe professeur additionne les points des 3 manches au tableau. La meilleure brigade est sacrée **Chasseurs de fantômes électriques**.\n\nDébrief oral (5 min) :\n\n- Alors, fantôme ou technologie ? Qui a « vu » le chat du gardien dans le couloir ?\n- Dans la lumière automatique, qui détecte, qui décide, qui agit ?\n- Pourquoi éclairer seulement quand quelqu'un passe, plutôt que toute la nuit ?\n\nCapteur, interface, actionneur : vous venez de rencontrer les trois héros de cette séquence.\n\n---\n\n## ✂️ Cartes à découper (manche 1)\n\n| | | |\n|---|---|---|\n| Détecteur de mouvement | Lampe (DEL) | Moteur électrique |\n| Capteur de lumière | Buzzer (sonnerie) | Thermomètre électronique |\n| Haut-parleur | Micro | Pile |\n| Fils électriques | Bouton-poussoir | Écran d'affichage |",
+          "resources": [],
+          "quiz": [
+            {
+              "q": "Dans un éclairage automatique, le capteur sert à…",
+              "options": [
+                "produire la lumière",
+                "détecter une présence ou l'obscurité",
+                "décorer le couloir"
+              ],
+              "answer": 1,
+              "explain": "Le capteur est l'organe qui « sent » : il détecte un passage ou la tombée de la nuit."
+            },
+            {
+              "q": "Dans un lampadaire automatique, l'actionneur, c'est…",
+              "options": [
+                "la lampe qui s'allume",
+                "le détecteur de mouvement",
+                "le poteau en métal"
+              ],
+              "answer": 0,
+              "explain": "L'actionneur est l'élément qui agit : ici, c'est la lampe qui produit la lumière."
+            },
+            {
+              "q": "Qui « décide » d'allumer quand le capteur détecte quelqu'un ?",
+              "options": [
+                "le hasard",
+                "l'interface de commande, le « cerveau » du système",
+                "l'ampoule elle-même"
+              ],
+              "answer": 1,
+              "explain": "Entre le capteur et l'actionneur, une interface reçoit l'information et donne l'ordre d'agir."
+            },
+            {
+              "q": "Un éclairage qui s'allume seulement au passage de quelqu'un sert surtout à…",
+              "options": [
+                "gaspiller de l'électricité",
+                "économiser l'énergie tout en gardant le confort",
+                "faire peur aux visiteurs"
+              ],
+              "answer": 1,
+              "explain": "Éclairer uniquement quand c'est utile évite de consommer de l'énergie pour rien."
+            }
+          ]
+        },
         {
           "slug": "seance-1",
           "kind": "seance",
@@ -577,6 +789,59 @@
       "intro_md": "",
       "resources": [],
       "pages": [
+        {
+          "slug": "jeu-intro",
+          "kind": "jeu",
+          "num": 0,
+          "title": "🎮 « Défi Conteneur » — une boîte d'acier à transformer en maison",
+          "shortTitle": "🎮 Jeu d'intro",
+          "tagline": "30 m² d'acier rouillé aujourd'hui, la maison d'une famille dans un an : chiche ?",
+          "objectifs_md": "",
+          "content_md": "## 🎯 Le défi\n\nUn cargo vient de débarquer au port une énorme boîte d'acier cabossée. Elle a fait dix fois le tour du monde remplie de marchandises, et votre agence d'architectes vient d'en hériter. Sombre, brûlante l'été, glaciale l'hiver, sans fenêtre ni prise électrique… et pourtant, dans un an, une famille doit y **vivre**. Vraiment y vivre.\n\nVotre îlot devient une **agence d'architectes**. Mission du jour : découvrir ce qu'il faut à des humains pour habiter une boîte, enquêter sur ces fameux conteneurs, puis dessiner votre premier projet. La meilleure agence remporte le concours **Défi Conteneur**.\n\n## 🧰 Matériel et organisation\n\n- **Durée :** 45 minutes.\n- **Équipes :** un îlot = une agence de 4 architectes. Trouvez un nom d'agence en 30 secondes.\n- **Rôles :** un **rapporteur**, un **coureur PC**, un **gardien du temps**, un **secrétaire** (qui sera aussi dessinateur en chef à la manche 3).\n- **Le professeur prépare :** le tableau pour les scores, une feuille blanche par îlot, un chronomètre, et les cartes contraintes du bas de page découpées et pliées dans une boîte. Les PC en U sont allumés avec un moteur de recherche ouvert.\n\n## 🕹️ Déroulé\n\n### Manche 1 — La liste de survie (10 min, à l'îlot)\n\nUne famille doit vivre dans votre boîte d'acier. Listez tout ce dont elle a **besoin** pour y vivre correctement — les vrais besoins, pas les envies de luxe (la piscine sur le toit attendra).\n\n**Barème : +1 point par besoin valable** (le professeur valide), **+2 points au lieu de 1** si aucune autre agence ne l'a trouvé. Le rapporteur lira la liste à la correction.\n\n……………………………………\n\n……………………………………\n\n……………………………………\n\n……………………………………\n\n### Manche 2 — Enquête au port (12 min, PC en U)\n\nLe **coureur PC** part enquêter aux ordinateurs (un seul architecte aux PC par équipe, allers-retours autorisés) et rapporte les réponses au secrétaire.\n\n1. Quelles sont les dimensions (longueur et largeur) d'un conteneur maritime de « 20 pieds » ?\n\n……………………………………\n\n2. Trouvez un exemple réel de maison ou de résidence construite avec des conteneurs (ville ou pays).\n\n……………………………………\n\n3. Combien de conteneurs un très grand porte-conteneurs peut-il transporter ?\n\n……………………………………\n\n4. Quel est le prix approximatif d'un conteneur d'occasion ?\n\n……………………………………\n\n**Barème : +3 points par réponse correcte** (12 points possibles). Correction en classe entière à la fin de la manche.\n\n### Manche 3 — Architectes sous contraintes (15 min, à l'îlot)\n\nChaque agence pioche **2 cartes contraintes** dans la boîte du professeur, qui remet chaque carte piochée dans la boîte : deux agences peuvent donc tomber sur la même contrainte. Sur la feuille blanche, dessinez le **plan vu de dessus** de votre conteneur aménagé : pièces, meubles, ouvertures… en respectant vos 2 contraintes. À la fin, le rapporteur présente le projet en 30 secondes et annonce ses contraintes.\n\n**Barème : +3 points par contrainte visiblement respectée** (la classe donne son avis à main levée, le professeur tranche), puis chaque agence distribue 3 étoiles, réparties comme elle le souhaite, aux projets des autres équipes (**1 étoile = 1 point**, interdit de voter pour soi).\n\n## 🏆 Score et débrief\n\nLe professeur additionne les points des 3 manches au tableau. La meilleure agence remporte le concours **Défi Conteneur**.\n\nDébrief oral (5 min) :\n\n- Par quoi faut-il commencer : le dessin du plan, ou la liste des besoins ? Pourquoi ?\n- À quoi ont servi les cartes contraintes ? Dans le métier, cette liste d'exigences porte un nom : le **cahier des charges**.\n- Quels problèmes techniques reste-t-il à résoudre pour que la boîte devienne vraiment habitable (chaleur, lumière, eau…) ?\n\nBesoin, cahier des charges, solutions techniques : voilà le chantier de toute cette séquence.\n\n---\n\n## ✂️ Cartes contraintes à découper (manche 3)\n\n| | |\n|---|---|\n| La famille a deux enfants | Le climat est très chaud l'été |\n| Un habitant se déplace en fauteuil roulant | Le budget est minuscule |\n| Aucun raccordement électrique : il faut être autonome | Le conteneur est posé sur un toit, en pleine ville |\n| Il pleut très souvent dans la région | Les habitants travaillent depuis la maison |",
+          "resources": [],
+          "quiz": [
+            {
+              "q": "Un conteneur maritime est fabriqué principalement…",
+              "options": [
+                "en acier",
+                "en carton renforcé",
+                "en bois"
+              ],
+              "answer": 0,
+              "explain": "L'acier le rend très solide et empilable, mais il conduit la chaleur : il faudra isoler."
+            },
+            {
+              "q": "Avant de dessiner les plans, l'architecte doit d'abord connaître…",
+              "options": [
+                "la couleur des rideaux",
+                "les besoins des futurs habitants",
+                "le nom du bateau qui a transporté le conteneur"
+              ],
+              "answer": 1,
+              "explain": "Un objet technique répond d'abord à un besoin : c'est le point de départ de tout projet."
+            },
+            {
+              "q": "Le document qui liste toutes les exigences à respecter (taille, budget, confort…) s'appelle…",
+              "options": [
+                "le mode d'emploi",
+                "le cahier des charges",
+                "le carnet de santé"
+              ],
+              "answer": 1,
+              "explain": "Le cahier des charges rassemble les contraintes que la solution technique devra respecter."
+            },
+            {
+              "q": "Pour rendre la boîte d'acier habitable, le plus urgent est d'ajouter…",
+              "options": [
+                "une piscine sur le toit",
+                "un cinéma privé",
+                "une isolation, des ouvertures, l'eau et l'électricité"
+              ],
+              "answer": 2,
+              "explain": "On répond d'abord aux besoins essentiels : confort thermique, lumière, eau, énergie."
+            }
+          ]
+        },
         {
           "slug": "seance-1",
           "kind": "seance",

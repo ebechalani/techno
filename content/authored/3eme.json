@@ -62,5 +62,172 @@
         }
       ]
     }
+  },
+  "addPages": {
+    "sequence-1-poubelle-connectee": [
+      {
+        "slug": "jeu-intro",
+        "kind": "jeu",
+        "num": 0,
+        "first": true,
+        "title": "🎮 Opération Boîte Noire — perce le secret de la poubelle connectée",
+        "shortTitle": "🎮 Jeu d'intro",
+        "tagline": "Un prototype scellé, trois manches, une seule équipe remportera le contrat de la ville.",
+        "content_md": "## 🎯 Le défi\n\nCe matin, un carton scellé attend sur le bureau du professeur. Étiquette : **« Prototype T-3 — NE PAS OUVRIR »**. La rumeur court : la ville testerait des poubelles capables d'ouvrir leur couvercle toutes seules, de mesurer leur remplissage et de prévenir le camion quand elles sont pleines.\n\nMais comment un simple bac à ordures peut-il « voir » une main, « décider » d'ouvrir et « prévenir » quelqu'un ? Votre équipe d'ingénieurs a 45 minutes pour percer le secret de la boîte noire… **sans jamais l'ouvrir**. À la fin de l'heure, l'équipe qui aura le mieux reconstitué son fonctionnement remporte le contrat de la ville.\n\n## 🧰 Matériel et organisation\n\n- **Durée :** 40 à 45 minutes.\n- **Équipes :** un îlot de 4 = une équipe. Première mission (1 minute) : choisir un nom d'équipe et l'annoncer.\n- **Rôles :** un **rapporteur** (annonce les réponses), un **coureur PC** (seul autorisé à se lever vers les PC en U), un **gardien du temps**, un **secrétaire** (remplit cette fiche).\n- **Le professeur prépare :** un tableau des scores (une colonne par équipe) et une paire de ciseaux par îlot pour découper les cartes en bas de page. C'est tout.\n\n## 🕹️ Déroulé\n\n### Manche 1 — Radar à objets connectés (8 min, à l'îlot)\n\nListez en 5 minutes le plus d'objets connectés possible (maison, sport, santé, ville…). Puis chaque rapporteur lit sa liste à voix haute.\n\n**Barème : +1 point par objet accepté, +3 points si aucune autre équipe ne l'a trouvé.**\n\nNotre liste :\n\n……………………………………\n\n……………………………………\n\n……………………………………\n\n### Manche 2 — La chaîne infernale (12 min, débranchée, à l'îlot)\n\nDécoupez les cartes en bas de page.\n\n1. **Le film de l'ouverture (5 min)** : remettez les 6 **cartes ÉTAPES** dans l'ordre, depuis l'approche de la main jusqu'au message sur le téléphone. **+2 points par carte bien placée.**\n2. **Les deux familles (5 min)** : triez les 6 **cartes MOTS** en deux familles de votre choix, puis écrivez votre critère de tri. **+1 point par famille cohérente, +4 points si votre critère ressemble à « ce qui transporte des informations » / « ce qui transporte de l'énergie ».**\n\nNotre critère de tri :\n\n……………………………………\n\nD'après vous, quelle carte joue le rôle du « cerveau » de la poubelle ? Pourquoi ?\n\n……………………………………\n\n### Manche 3 — Course aux composants (12 min, PC en U)\n\nLe professeur pose 3 questions, **une à la fois**. À chaque question, le **coureur** file vers un PC en U, ouvre la page « Simulation Tinkercad » de la séquence sur le site de la classe, observe le montage et revient avec la réponse. Les allers-retours sont autorisés, mais chaque équipe n'a droit qu'à une réponse par essai.\n\n- **Question A :** quel composant permet de détecter la main **sans la toucher** ? (Indice : les chauves-souris utilisent le même principe.)\n- **Question B :** quel composant fait **bouger** le couvercle ?\n- **Question C :** quel élément contient le **programme** ?\n\n**Barème : +3 points par bonne réponse du premier coup, +1 point au deuxième essai, +2 points bonus à l'équipe la plus rapide sur chaque question.**\n\nNos réponses :\n\n……………………………………\n\n……………………………………\n\n……………………………………\n\n## 🏆 Score et débrief\n\nLe secrétaire additionne les points des trois manches ; le professeur les reporte au tableau. L'équipe gagnante remporte le contrat de la ville (et le droit de choisir son poste au prochain TP).\n\n**Débrief oral (5 min) :**\n\n- Pour convaincre la ville, qu'avez-vous dû décrire exactement ? Des pièces ? Des actions ? Un ordre précis ?\n- Parmi vos cartes, lesquelles transportaient une **information**, et lesquelles de l'**énergie** ?\n- Comment pourrait-on décrire proprement, avec un schéma, le fonctionnement de n'importe quel objet connecté ? *C'est exactement ce que nous apprendrons dès la séance 1.*\n\n---\n\n## ✂️ Cartes à découper (bas de page)\n\n**Cartes ÉTAPES** (elles sont volontairement mélangées) :\n\n| Cartes ÉTAPES |\n|---|\n| Le moteur reçoit l'ordre et se met à tourner. |\n| Une main s'approche du couvercle. |\n| Le téléphone affiche : « Ouverture n° 42 — bac rempli à 80 % ». |\n| Le capteur détecte une présence. |\n| Le couvercle se soulève. |\n| La carte programmable décide : « il faut ouvrir ». |\n\n**Cartes MOTS** (à trier en deux familles) :\n\n| Cartes MOTS |\n|---|\n| LE CAPTEUR |\n| LA BATTERIE |\n| LE MOTEUR |\n| L'ANTENNE WI-FI |\n| LE PROGRAMME |\n| LE PANNEAU SOLAIRE |",
+        "quiz": [
+          {
+            "q": "Dans la poubelle connectée, quel élément « voit » la main s'approcher ?",
+            "options": [
+              "La batterie",
+              "Le capteur",
+              "Le couvercle"
+            ],
+            "answer": 1,
+            "explain": "C'est le capteur qui détecte la présence, un peu comme une chauve-souris avec ses ultrasons."
+          },
+          {
+            "q": "Que fournit la batterie aux autres composants ?",
+            "options": [
+              "Des informations",
+              "Des déchets",
+              "De l'énergie"
+            ],
+            "answer": 2,
+            "explain": "Sans énergie, ni le capteur, ni la carte, ni le moteur ne peuvent fonctionner."
+          },
+          {
+            "q": "Quel élément « décide » d'ouvrir le couvercle ?",
+            "options": [
+              "La carte programmable",
+              "Le moteur",
+              "L'antenne Wi-Fi"
+            ],
+            "answer": 0,
+            "explain": "La carte exécute le programme : c'est le « cerveau » de l'objet."
+          },
+          {
+            "q": "Un objet « connecté », c'est avant tout un objet qui…",
+            "options": [
+              "possède un écran",
+              "peut envoyer ou recevoir des informations",
+              "est branché sur une prise"
+            ],
+            "answer": 1,
+            "explain": "Être connecté, c'est échanger des informations avec d'autres machines, avec ou sans fil."
+          }
+        ],
+        "resources": []
+      }
+    ],
+    "sequence-2-intelligence-artificielle": [
+      {
+        "slug": "jeu-intro",
+        "kind": "jeu",
+        "num": 0,
+        "first": true,
+        "title": "🎮 Dresse ta machine ! — l'IA, c'est vous qui l'entraînez",
+        "shortTitle": "🎮 Jeu d'intro",
+        "tagline": "Une machine qui ne sait rien, des créatures inconnues, et des équipes qui vont échouer sans comprendre pourquoi… c'est prévu.",
+        "content_md": "## 🎯 Le défi\n\nLe laboratoire vient de recevoir **APPRENTI-1**, une machine flambant neuve qui ne sait strictement rien faire. Ni parler, ni trier, ni reconnaître quoi que ce soit. Son mode d'emploi tient en une ligne : *« Cette machine apprend uniquement par l'exemple. Ne lui expliquez jamais rien. »*\n\nVotre mission : dresser APPRENTI-1 pour qu'elle reconnaisse deux créatures inconnues, les **Zorgs** et les **Bloops**. Attention : à la fin, la machine sera testée sur des créatures qu'elle n'a **jamais vues**. Certaines équipes vont réussir… et d'autres vont échouer sans comprendre pourquoi. C'est prévu.\n\n## 🧰 Matériel et organisation\n\n- **Durée :** 40 à 45 minutes.\n- **Équipes :** un îlot de 4 = une équipe, avec un nom d'équipe (30 secondes).\n- **Rôles :** un élève joue **la machine APPRENTI-1** ; les trois autres se répartissent les rôles de **rapporteur**, **coureur PC** et **gardien du temps / secrétaire**.\n- **Le professeur prépare :** le tableau des scores et une paire de ciseaux par îlot. Discrètement, il attribue à la moitié des îlots le **paquet A** et à l'autre moitié le **paquet B** (en bas de page), **sans dire pourquoi**.\n\n## 🕹️ Déroulé\n\n### Manche 1 — Le dressage (15 min, débranchée, à l'îlot)\n\nDécoupez votre paquet de cartes (A ou B, selon le professeur) et séparez les cartes **ENTRAÎNEMENT** des cartes **TEST**.\n\n1. **Entraînement (5 min)** : montrez à la machine les 6 cartes ENTRAÎNEMENT, une par une, 15 secondes chacune, en lisant uniquement l'étiquette (« ZORG » ou « BLOOP »). **Interdiction absolue d'expliquer, de commenter ou de faire des gestes.** La machine observe en silence.\n2. **Test (5 min)** : donnez à la machine les 3 cartes TEST, sans étiquette. Elle annonce « Zorg » ou « Bloop » pour chacune, sans aide. Le professeur donne les bonnes réponses à la fin de la manche.\n\n**Barème : +3 points par carte TEST correctement classée (maximum 9 points).**\n\nQuelle règle votre machine pense-t-elle avoir découverte ?\n\n……………………………………\n\n### Manche 2 — Vrai ou fake ? (12 min, PC en U)\n\nLe professeur lit une affirmation. Le **coureur** file vers un PC en U et dispose de **3 minutes** pour vérifier avec un moteur de recherche, puis revient avec un verdict (VRAI ou FAUX) **et une preuve** (un fait précis ou le nom d'une source).\n\n1. « Une intelligence artificielle a déjà battu le champion du monde du jeu de go. »\n2. « Une machine peut apprendre toute seule, sans qu'on lui fournisse aucune donnée. »\n3. « Certaines IA de reconnaissance de visages se trompent plus souvent sur certains visages, à cause des photos utilisées pour leur entraînement. »\n\n**Barème : +3 points par verdict correct avec preuve, +1 point si le verdict est correct mais sans preuve.**\n\nNos verdicts et nos preuves :\n\n……………………………………\n\n……………………………………\n\n……………………………………\n\n### Manche 3 — Le procès de la machine (8 min, débat éclair, à l'îlot)\n\nUne IA de tri de photos confond les chiens blancs à poils frisés avec des moutons. Elle a été entraînée avec 10 000 photos de moutons… et 12 photos de chiens. **Qui est responsable de l'erreur : la machine, les données ou les humains ?**\n\nChaque îlot choisit un « accusé », prépare ses arguments pendant 2 minutes, puis le rapporteur plaide en 45 secondes maximum. Chaque équipe vote ensuite pour la meilleure plaidoirie (interdiction de voter pour soi).\n\n**Barème : +4 points pour la plaidoirie gagnante, +2 points pour la deuxième.**\n\n## 🏆 Score et débrief\n\nAdditionnez les trois manches. Avant d'annoncer le vainqueur, le professeur révèle enfin le secret des paquets A et B…\n\n**Débrief oral (5 min) :**\n\n- Les machines du paquet B se sont trompées au test. Étaient-elles moins « intelligentes »… ou leurs **exemples d'entraînement** étaient-ils mal choisis ?\n- Qu'aurait-il fallu changer dans l'entraînement pour éviter l'erreur ?\n- Un élève a appris « par l'exemple » en 5 minutes avec 6 cartes. Comment une **vraie machine** fait-elle, avec des millions d'exemples ? *C'est toute la question de la séquence — et nous entraînerons bientôt une vraie IA avec Teachable Machine.*\n\n---\n\n## ✂️ Cartes à découper (bas de page)\n\n**PAQUET A — cartes ENTRAÎNEMENT :**\n\n| Description de la créature | Étiquette |\n|---|---|\n| 3 yeux, corps rayé, grande taille | ZORG |\n| 3 yeux, sans rayures, petite taille | ZORG |\n| 3 yeux, corps rayé, petite taille | ZORG |\n| 2 yeux, sans rayures, grande taille | BLOOP |\n| 2 yeux, corps rayé, petite taille | BLOOP |\n| 2 yeux, sans rayures, petite taille | BLOOP |\n\n**PAQUET B — cartes ENTRAÎNEMENT :**\n\n| Description de la créature | Étiquette |\n|---|---|\n| 3 yeux, corps rayé, grande taille | ZORG |\n| 3 yeux, corps rayé, petite taille | ZORG |\n| 3 yeux, corps rayé, grande taille | ZORG |\n| 2 yeux, sans rayures, petite taille | BLOOP |\n| 2 yeux, sans rayures, grande taille | BLOOP |\n| 2 yeux, sans rayures, petite taille | BLOOP |\n\n**Cartes TEST (identiques pour tous les paquets) :**\n\n| Carte | Description de la créature | Étiquette |\n|---|---|---|\n| T1 | 3 yeux, sans rayures, grande taille | ? |\n| T2 | 2 yeux, corps rayé, grande taille | ? |\n| T3 | 3 yeux, corps rayé, petite taille | ? |\n\n*Ne lisez pas la ligne suivante avant la fin du test !* Réponses (professeur) : T1 = ZORG, T2 = BLOOP, T3 = ZORG. La règle secrète : **un Zorg a toujours 3 yeux** — les rayures ne comptent pas.",
+        "quiz": [
+          {
+            "q": "Comment APPRENTI-1 a-t-il appris à reconnaître les Zorgs ?",
+            "options": [
+              "On lui a expliqué la règle avec des mots",
+              "On lui a montré des exemples étiquetés",
+              "Il connaissait déjà les Zorgs"
+            ],
+            "answer": 1,
+            "explain": "La machine a déduit la règle toute seule à partir des cartes d'entraînement : c'est le principe de l'apprentissage machine."
+          },
+          {
+            "q": "Pourquoi certaines machines se sont-elles trompées au test ?",
+            "options": [
+              "Leurs exemples d'entraînement étaient mal choisis",
+              "Elles n'ont pas assez réfléchi",
+              "Les cartes de test étaient truquées"
+            ],
+            "answer": 0,
+            "explain": "Avec des exemples trompeurs, la machine apprend une mauvaise règle : c'est ce qu'on appelle un biais."
+          },
+          {
+            "q": "Pour qu'une machine apprenne mieux, il faut surtout…",
+            "options": [
+              "la faire fonctionner plus vite",
+              "lui donner des exemples nombreux et variés",
+              "lui montrer toujours la même carte"
+            ],
+            "answer": 1,
+            "explain": "Plus les exemples sont nombreux et variés, plus la règle apprise est fiable."
+          },
+          {
+            "q": "En manche 1, la phase où l'on montre les cartes étiquetées s'appelle…",
+            "options": [
+              "le test",
+              "la mise à jour",
+              "l'entraînement"
+            ],
+            "answer": 2,
+            "explain": "On entraîne d'abord la machine avec des exemples connus, puis on la teste sur des cas nouveaux."
+          }
+        ],
+        "resources": []
+      }
+    ],
+    "sequence-3-reseau-informatique": [
+      {
+        "slug": "jeu-intro",
+        "kind": "jeu",
+        "num": 0,
+        "first": true,
+        "title": "🎮 Les Facteurs du Réseau — mission colis perdus",
+        "shortTitle": "🎮 Jeu d'intro",
+        "tagline": "Un message découpé en paquets, des adresses égarées, de vrais PC à faire parler : à vous de remettre le réseau en service.",
+        "content_md": "## 🎯 Le défi\n\nCatastrophe au collège : hier, le message le plus attendu de l'année — *« Le code du Wi-Fi a enfin changé »* — n'est jamais arrivé à destination. Quelque part entre deux salles, le réseau l'a découpé en morceaux, a égaré des adresses et a livré des paquets chez les mauvais destinataires.\n\nLa direction fait appel à vos équipes de techniciens réseau. Votre mission : comprendre comment un message voyage de machine en machine, livrer les paquets perdus… et prouver que vous sauriez câbler la salle mieux que personne.\n\n## 🧰 Matériel et organisation\n\n- **Durée :** 40 à 45 minutes.\n- **Équipes :** un îlot de 4 = une équipe, avec un nom d'équipe digne d'un technicien (« Les Routeurs Masqués », « Les 100 % Ping »…).\n- **Rôles :** un **rapporteur**, un **coureur PC** (seul autorisé à se lever vers les PC en U), un **gardien du temps**, un **secrétaire**.\n- **Le professeur prépare :** le tableau des scores, une paire de ciseaux par îlot. Il se déclare officiellement « **LE ROUTEUR** » et dessine un grand rectangle au tableau : tout paquet déposé dedans est considéré comme « sorti de l'îlot ».\n\n## 🕹️ Déroulé\n\n### Manche 1 — Colis perdus (12 min, débranchée, en silence)\n\nDécoupez les cartes en bas de page. Chaque élève de l'îlot pose devant lui une **carte ADRESSE** : il devient une machine du réseau. Mélangez les 9 **cartes PAQUETS** face cachée au centre de la table.\n\n1. Chacun pioche à tour de rôle un paquet, lit l'en-tête et le livre **à la machine dont l'adresse correspond** — sans prononcer un mot : les machines ne parlent pas.\n2. Quand une machine a reçu tous ses paquets, elle les remet dans l'ordre des numéros pour reconstituer son message.\n3. Attention : un paquet porte une adresse qui **n'existe pas dans votre îlot**… À vous de décider quoi en faire.\n\n**Barème : +1 point par paquet livré à la bonne machine, +3 points par message reconstitué dans l'ordre, +3 points si le paquet égaré finit chez LE ROUTEUR (au tableau) plutôt que chez un mauvais destinataire.**\n\nQu'avez-vous fait du paquet dont l'adresse n'existait pas dans votre îlot ? Pourquoi ?\n\n……………………………………\n\n### Manche 2 — La carte d'identité des machines (13 min, PC en U)\n\nLes vrais PC de la salle ont, eux aussi, une adresse. Prouvez-le.\n\n1. **Course n° 1 (4 min)** : le coureur va à un PC en U, ouvre l'invite de commandes (menu Démarrer → taper `cmd`), tape `ipconfig` et revient avec l'**adresse IPv4** du PC, notée sans la moindre erreur.\n2. **Échange d'adresses (1 min)** : le rapporteur écrit cette adresse au tableau, sous le nom de l'équipe.\n3. **Course n° 2 (5 min)** : le coureur retourne au même PC et tape `ping` suivi de l'adresse d'une **autre** équipe. Il revient avec deux informations : la machine a-t-elle répondu, et en combien de millisecondes ?\n\n**Barème : +3 points pour une adresse IP exacte, +3 points pour un ping qui reçoit une réponse, +2 points pour le temps de réponse correctement noté.**\n\nAdresse IP de notre PC :\n\n……………………………………\n\nRéponse au ping (oui / non) et temps en ms :\n\n……………………………………\n\n### Manche 3 — Architecte express (10 min, dessin à l'îlot)\n\nSur une feuille, dessinez comment relier **les 12 PC de la salle, l'imprimante et la box Internet** pour que tout le monde puisse imprimer et aller sur Internet — avec **le moins de câbles possible**. 6 minutes de dessin, puis 30 secondes de présentation par le rapporteur.\n\n**Barème : +1 point par machine correctement reliée, +3 points si votre schéma invente une « boîte centrale » qui distribue les câbles, +2 points pour le schéma le plus clair (jugé par le professeur).**\n\n## 🏆 Score et débrief\n\nTotal des trois manches au tableau ; l'équipe gagnante reçoit le titre officiel d'« administrateur réseau de la salle ».\n\n**Débrief oral (5 min) :**\n\n- Pourquoi chaque paquet devait-il porter une **adresse** ? Que se passerait-il sans elle ?\n- Le paquet égaré devait sortir de l'îlot : qui a joué ce rôle de passage vers l'extérieur ? Comment s'appelle cette machine dans un vrai réseau, à votre avis ?\n- Beaucoup d'équipes ont inventé une « boîte centrale » en manche 3. Elle existe vraiment… Nous la découvrirons dès la séance 1, en construisant notre propre réseau avec le logiciel Filius.\n\n---\n\n## ✂️ Cartes à découper (bas de page)\n\n**Cartes ADRESSES** (une par élève de l'îlot) :\n\n| Cartes ADRESSES |\n|---|\n| MACHINE A — 192.168.1.11 |\n| MACHINE B — 192.168.1.12 |\n| MACHINE C — 192.168.1.13 |\n| MACHINE D — 192.168.1.14 |\n\n**Cartes PAQUETS** (à mélanger face cachée) :\n\n| Cartes PAQUETS |\n|---|\n| DEST : 192.168.1.13 — paquet 1/4 — « RENDEZ-VOUS » |\n| DEST : 192.168.1.13 — paquet 2/4 — « JEUDI » |\n| DEST : 192.168.1.13 — paquet 3/4 — « EN SALLE » |\n| DEST : 192.168.1.13 — paquet 4/4 — « DE TECHNO » |\n| DEST : 192.168.1.11 — paquet 1/4 — « LE CODE » |\n| DEST : 192.168.1.11 — paquet 2/4 — « DU WI-FI » |\n| DEST : 192.168.1.11 — paquet 3/4 — « A ENFIN » |\n| DEST : 192.168.1.11 — paquet 4/4 — « CHANGÉ » |\n| DEST : 192.168.2.20 — paquet 1/1 — « BRAVO : CE PAQUET DOIT SORTIR DE VOTRE RÉSEAU » |",
+        "quiz": [
+          {
+            "q": "À quoi sert l'adresse écrite sur chaque paquet ?",
+            "options": [
+              "À savoir à quelle machine le livrer",
+              "À décorer le paquet",
+              "À compter les points de l'équipe"
+            ],
+            "answer": 0,
+            "explain": "Sans adresse de destination, impossible de savoir à qui livrer le paquet : c'est le rôle de l'adresse IP."
+          },
+          {
+            "q": "Qu'avez-vous découvert avec la commande ipconfig ?",
+            "options": [
+              "Le mot de passe du PC",
+              "L'adresse IP du PC",
+              "La température du PC"
+            ],
+            "answer": 1,
+            "explain": "ipconfig affiche la « carte d'identité réseau » de la machine, dont son adresse IPv4."
+          },
+          {
+            "q": "La commande ping sert à…",
+            "options": [
+              "éteindre une machine à distance",
+              "imprimer une page de test",
+              "vérifier qu'une machine répond sur le réseau"
+            ],
+            "answer": 2,
+            "explain": "Le ping envoie un petit message et mesure le temps que met la machine à répondre."
+          },
+          {
+            "q": "Sur un réseau, un long message voyage…",
+            "options": [
+              "découpé en petits paquets numérotés",
+              "d'un seul gros bloc",
+              "transformé en musique"
+            ],
+            "answer": 0,
+            "explain": "Comme dans le jeu, les messages sont découpés en paquets, livrés séparément puis remis dans l'ordre."
+          }
+        ],
+        "resources": []
+      }
+    ]
   }
 }

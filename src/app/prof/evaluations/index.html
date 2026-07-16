@@ -1,0 +1,784 @@
+<!DOCTYPE html>
+<html lang="fr" data-base="../../">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Banque d'évaluations — Espace professeur</title>
+<link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lexend:wght@500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/styles.css">
+<script>(function(){try{var t=localStorage.getItem("lmtechno-theme");if(!t)t=window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light";document.documentElement.setAttribute("data-theme",t);}catch(e){}})();</script>
+<style>
+  .ev-level { margin: 2rem 0 0.8rem; padding-bottom: 0.3rem; border-bottom: 2px solid var(--border); }
+  .ev-note { color: var(--muted); font-size: 0.88rem; margin: 0.2rem 0 0.6rem; }
+  .ev-list { list-style: none; margin: 0.6rem 0; padding: 0; display: flex; flex-direction: column; gap: 0.45rem; }
+  .ev-list li { display: flex; flex-wrap: wrap; align-items: baseline; gap: 0.6rem; font-size: 0.93rem; padding: 0.45rem 0.6rem; background: var(--surface-2); border-radius: 8px; }
+  .ev-cat { color: var(--muted); font-size: 0.76rem; }
+  .ev-corr { margin-left: auto; font-weight: 600; font-size: 0.82rem; color: var(--ok); white-space: nowrap; }
+  .ev-cats { font-size: 0.85rem; color: var(--text-2); margin: 0.7rem 0 0; }
+  .ev-pill { display: inline-block; background: var(--primary-soft); color: var(--primary); border-radius: 999px; padding: 0.15rem 0.6rem; font-size: 0.78rem; font-weight: 600; margin: 0.1rem 0.15rem 0.1rem 0; }
+</style>
+</head>
+<body>
+<header class="app-header">
+  <div class="wrap">
+    <a class="brand" href="../../index.html"><span class="brand-logo">T</span><span>Banque d'évaluations</span></a>
+    <span class="spacer"></span>
+    <a class="btn btn-ghost btn-sm" href="../">← Tableau de bord</a>
+  </div>
+</header>
+<main class="app-main">
+  <div class="app-card" style="border-left:4px solid var(--primary)">
+    <h2 style="margin:0 0 0.4rem">Des sujets d'évaluation appariés à vos séquences</h2>
+    <p style="color:var(--text-2);margin:0 0 0.4rem">Pour chaque séquence, une sélection de <strong>sujets type DNB</strong> de la banque
+    <a href="https://www.techno-logique.com/PDG-sujets-preparation.shtml" target="_blank" rel="noopener">techno-logique.com</a>
+    (~300 sujets classés par notion, la plupart avec <strong>corrigé</strong>). Les liens ouvrent les PDF hébergés sur techno-logique.com.</p>
+    <p style="color:var(--muted);font-size:0.86rem;margin:0">💡 <strong>En classe :</strong> imprimez un sujet par îlot de 4 (travail d'équipe, corrigé en autonomie), ou projetez-le et faites répondre chaque îlot à tour de rôle. Les quiz intégrés du site servent d'évaluation formative individuelle sur les PC.</p>
+  </div>
+  
+  <h2 class="ev-level">5ème</h2>
+  
+    <div class="app-card">
+      <h3 style="margin:0 0 0.2rem"><a href="../../5eme/sequence-1-cybersecurite/" style="color:inherit">Cybersécurité</a></h3>
+      <p class="ev-note">La banque DNB porte sur des objets techniques : peu de sujets « cyber ». Utilisez les quiz intégrés du site et Pix pour évaluer cette séquence.</p>
+      <ul class="ev-list">
+      <li>
+        <a href="https://www.techno-logique.com/pdf/DNB-montre-connectee.pdf" target="_blank" rel="noopener">2024 - Montre connectée (Métropole, Antilles et Guyane - Sujet de rattrapage)</a>
+        <span class="ev-cat">Sujet officiel</span>
+        
+      </li>
+      <li>
+        <a href="https://www.techno-logique.com/pdf/DNB-maison-intelligente.pdf" target="_blank" rel="noopener">2024 - Maison intelligente (Métropole, Antilles et Guyane)</a>
+        <span class="ev-cat">Sujet officiel</span>
+        
+      </li>
+      <li>
+        <a href="https://www.techno-logique.com/pdf/DNB-systeme-surveillance.pdf" target="_blank" rel="noopener">2024 - Système de surveillance (Amérique du sud)</a>
+        <span class="ev-cat">Sujet officiel</span>
+        
+      </li></ul>
+      <p class="ev-cats"><strong>Pour aller plus loin :</strong> <span class="ev-pill">Electronique et informatique · 36 sujets</span> <a href="https://www.techno-logique.com/PDG-sujets-preparation.shtml" target="_blank" rel="noopener">(banque complète ↗)</a></p>
+    </div>
+
+    <div class="app-card">
+      <h3 style="margin:0 0 0.2rem"><a href="../../5eme/sequence-reparer-objet/" style="color:inherit">Réparer un objet technique</a></h3>
+      
+      <ul class="ev-list">
+      <li>
+        <a href="https://www.techno-logique.com/pdf/DNB-bracelet-smartphone.pdf" target="_blank" rel="noopener">Bracelet d'activité / Smartphone</a>
+        <span class="ev-cat">Graphe des prestations</span>
+        <a class="ev-corr" href="https://www.techno-logique.com/pdf/DNB-bracelet-smartphone-correction.pdf" target="_blank" rel="noopener">✓ corrigé</a>
+      </li>
+      <li>
+        <a href="https://www.techno-logique.com/pdf/DNB-support-smartphone.pdf" target="_blank" rel="noopener">Support de smartphone</a>
+        <span class="ev-cat">Graphe des prestations</span>
+        
+      </li>
+      <li>
+        <a href="https://www.techno-logique.com/pdf/DNB-smartphone-exosquelette.pdf" target="_blank" rel="noopener">Smartphone / Exosquelette</a>
+        <span class="ev-cat">Cycle de vie, évolution, écologie et environnement</span>
+        <a class="ev-corr" href="https://www.techno-logique.com/pdf/DNB-smartphone-exosquelette-correction.pdf" target="_blank" rel="noopener">✓ corrigé</a>
+      </li>
+      <li>
+        <a href="https://www.techno-logique.com/pdf/DNB-smartphone.pdf" target="_blank" rel="noopener">Smartphone</a>
+        <span class="ev-cat">Matériaux, esthétisme et ergonomie</span>
+        
+      </li>
+      <li>
+        <a href="https://www.techno-logique.com/pdf/DNB-imprimante-3D.pdf" target="_blank" rel="noopener">2021 - Imprimante 3D (Métropole, Antilles et Guyane - Sujet de rattrapage)</a>
+        <span class="ev-cat">Sujet officiel</span>
+        <a class="ev-corr" href="https://www.techno-logique.com/pdf/DNB-imprimante-3D-correction.pdf" target="_blank" rel="noopener">✓ corrigé</a>
+      </li></ul>
+      <p class="ev-cats"><strong>Pour aller plus loin :</strong> <span class="ev-pill">Cycle de vie, évolution, écologie et environnement · 10 sujets</span> <a href="https://www.techno-logique.com/PDG-sujets-preparation.shtml" target="_blank" rel="noopener">(banque complète ↗)</a></p>
+    </div>
+
+    <div class="app-card">
+      <h3 style="margin:0 0 0.2rem"><a href="../../5eme/sequence-1-preserver-les-ressources/" style="color:inherit">Préserver les ressources</a></h3>
+      
+      <ul class="ev-list">
+      <li>
+        <a href="https://www.techno-logique.com/pdf/DNB-collecteur-dechets.pdf" target="_blank" rel="noopener">2022 - Collecteur de déchets (Métropole, Antilles et Guyane - Sujet de secours)</a>
+        <span class="ev-cat">Sujet officiel</span>
+        <a class="ev-corr" href="https://www.techno-logique.com/pdf/DNB-collecteur-dechets-correction.pdf" target="_blank" rel="noopener">✓ corrigé</a>
+      </li>
+      <li>
+        <a href="https://www.techno-logique.com/pdf/DNB-velo-electrique-1.pdf" target="_blank" rel="noopener">2018 - Vélo à assistance électrique (Métropole, Antilles et Guyane)</a>
+        <span class="ev-cat">Sujet officiel</span>
+        <a class="ev-corr" href="https://www.techno-logique.com/pdf/DNB-velo-electrique-correction-1.pdf" target="_blank" rel="noopener">✓ corrigé</a>
+      </li>
+      <li>
+        <a href="https://www.techno-logique.com/pdf/DNB-trottinette-electrique.pdf" target="_blank" rel="noopener">2023 - Trottinette électrique (Polynésie française)</a>
+        <span class="ev-cat">Sujet officiel</span>
+        <a class="ev-corr" href="https://www.techno-logique.com/pdf/DNB-trottinette-electrique-correction.pdf" target="_blank" rel="noopener">✓ corrigé</a>
+      </li>
+      <li>
+        <a href="https://www.techno-logique.com/pdf/DNB-centrifugeuse-1.pdf" target="_blank" rel="noopener">Centrifugeuse (Sujet 1)</a>
+        <span class="ev-cat">Graphe des prestations</span>
+        
+      </li>
+      <li>
+        <a href="https://www.techno-logique.com/pdf/DNB-centrifugeuse-2.pdf" target="_blank" rel="noopener">Centrifugeuse (Sujet 2)</a>
+        <span class="ev-cat">Graphe des prestations</span>
+        
+      </li>
+      <li>
+        <a href="https://www.techno-logique.com/pdf/DNB-plateforme-elevatrice.pdf" target="_blank" rel="noopener">Plateforme élévatrice</a>
+        <span class="ev-cat">Graphe des prestations</span>
+        <a class="ev-corr" href="https://www.techno-logique.com/pdf/DNB-plateforme-elevatrice-correction.pdf" target="_blank" rel="noopener">✓ corrigé</a>
+      </li>
+      <li>
+        <a href="https://www.techno-logique.com/pdf/DNB-trieuse-pieces-2.pdf" target="_blank" rel="noopener">Trieuse de pièces (Sujet 2)</a>
+        <span class="ev-cat">Représentation graphique</span>
+        <a class="ev-corr" href="https://www.techno-logique.com/pdf/DNB-trieuse-pieces-correction-2.pdf" target="_blank" rel="noopener">✓ corrigé</a>
+      </li>
+      <li>
+        <a href="https://www.techno-logique.com/pdf/DNB-distributeur-savon.pdf" target="_blank" rel="noopener">Distributeur de savon</a>
+        <span class="ev-cat">Capteurs et actionneurs</span>
+        
+      </li></ul>
+      <p class="ev-cats"><strong>Pour aller plus loin :</strong> <span class="ev-pill">Cycle de vie, évolution, écologie et environnement · 10 sujets</span> <a href="https://www.techno-logique.com/PDG-sujets-preparation.shtml" target="_blank" rel="noopener">(banque complète ↗)</a></p>
+    </div>
+
+    <div class="app-card">
+      <h3 style="margin:0 0 0.2rem"><a href="../../5eme/sequence-2-eclairage-automatique/" style="color:inherit">Éclairage automatique</a></h3>
+      
+      <ul class="ev-list">
+      <li>
+        <a href="https://www.techno-logique.com/pdf/DNB-eclairage-escalier.pdf" target="_blank" rel="noopener">Eclairage d'escalier</a>
+        <span class="ev-cat">Chaines fonctionnelles, gestion des flux</span>
+        <a class="ev-corr" href="https://www.techno-logique.com/pdf/DNB-eclairage-escalier-correction.pdf" target="_blank" rel="noopener">✓ corrigé</a>
+      </li>
+      <li>
+        <a href="https://www.techno-logique.com/pdf/DNB-realite-dragster.pdf" target="_blank" rel="noopener">Réalité augmentée / Dragster / Eclairage</a>
+        <span class="ev-cat">Chaines fonctionnelles, gestion des flux</span>
+        
+      </li>
+      <li>
+        <a href="https://www.techno-logique.com/pdf/DNB-borne-escamotable.pdf" target="_blank" rel="noopener">Borne escamotable</a>
+        <span class="ev-cat">Capteurs et actionneurs</span>
+        <a class="ev-corr" href="https://www.techno-logique.com/pdf/DNB-borne-escamotable-correction.pdf" target="_blank" rel="noopener">✓ corrigé</a>
+      </li>
+      <li>
+        <a href="https://www.techno-logique.com/pdf/DNB-detecteur-infrarouge.pdf" target="_blank" rel="noopener">Détecteur infrarouge</a>
+        <span class="ev-cat">Cahier des charges fonctionnel</span>
+        <a class="ev-corr" href="https://www.techno-logique.com/pdf/DNB-detecteur-infrarouge-correction.pdf" target="_blank" rel="noopener">✓ corrigé</a>
+      </li>
+      <li>
+        <a href="https://www.techno-logique.com/pdf/DNB-store-enrouleur-2.pdf" target="_blank" rel="noopener">Store enrouleur (Sujet 2)</a>
+        <span class="ev-cat">Graphe des prestations</span>
+        
+      </li>
+      <li>
+        <a href="https://www.techno-logique.com/pdf/DNB-store-enrouleur-1.pdf" target="_blank" rel="noopener">Store enrouleur (Sujet 1)</a>
+        <span class="ev-cat">Capteurs et actionneurs</span>
+        
+      </li>
+      <li>
+        <a href="https://www.techno-logique.com/pdf/DNB-store-enrouleur-3.pdf" target="_blank" rel="noopener">Store enrouleur (Sujet 3)</a>
+        <span class="ev-cat">Description fonctionnelle</span>
+        
+      </li></ul>
+      <p class="ev-cats"><strong>Pour aller plus loin :</strong> <span class="ev-pill">Capteurs et actionneurs · 29 sujets</span> <span class="ev-pill">Chaines fonctionnelles · 115 sujets</span> <a href="https://www.techno-logique.com/PDG-sujets-preparation.shtml" target="_blank" rel="noopener">(banque complète ↗)</a></p>
+    </div>
+
+    <div class="app-card">
+      <h3 style="margin:0 0 0.2rem"><a href="../../5eme/sequence-3-vivre-dans-une-boite/" style="color:inherit">Vivre dans une boîte (habitat)</a></h3>
+      
+      <ul class="ev-list">
+      <li>
+        <a href="https://www.techno-logique.com/pdf/DNB-maison-container.pdf" target="_blank" rel="noopener">2018 - Maison container (Métropole, Antilles et Guyane - Sujet de rattrapage)</a>
+        <span class="ev-cat">Sujet officiel</span>
+        
+      </li>
+      <li>
+        <a href="https://www.techno-logique.com/pdf/DNB-maison-intelligente.pdf" target="_blank" rel="noopener">2024 - Maison intelligente (Métropole, Antilles et Guyane)</a>
+        <span class="ev-cat">Sujet officiel</span>
+        
+      </li>
+      <li>
+        <a href="https://www.techno-logique.com/pdf/DNB-domespace.pdf" target="_blank" rel="noopener">2024 - Domespace (Asie)</a>
+        <span class="ev-cat">Sujet officiel</span>
+        
+      </li>
+      <li>
+        <a href="https://www.techno-logique.com/pdf/DNB-baladeur.pdf" target="_blank" rel="noopener">Baladeur audio/vidéo</a>
+        <span class="ev-cat">Cahier des charges fonctionnel</span>
+        <a class="ev-corr" href="https://www.techno-logique.com/pdf/DNB-baladeur-correction.pdf" target="_blank" rel="noopener">✓ corrigé</a>
+      </li>
+      <li>
+        <a href="https://www.techno-logique.com/pdf/DNB-bracelet-activite-3.pdf" target="_blank" rel="noopener">Bracelet d'activité (Sujet 3 - Runamax)</a>
+        <span class="ev-cat">Cahier des charges fonctionnel</span>
+        <a class="ev-corr" href="https://www.techno-logique.com/pdf/DNB-bracelet-activite-correction-3.pdf" target="_blank" rel="noopener">✓ corrigé</a>
+      </li>
+      <li>
+        <a href="https://www.techno-logique.com/pdf/DNB-bracelet-smartphone.pdf" target="_blank" rel="noopener">Bracelet d'activité / Smartphone</a>
+        <span class="ev-cat">Cahier des charges fonctionnel</span>
+        <a class="ev-corr" href="https://www.techno-logique.com/pdf/DNB-bracelet-smartphone-correction.pdf" target="_blank" rel="noopener">✓ corrigé</a>
+      </li></ul>
+      <p class="ev-cats"><strong>Pour aller plus loin :</strong> <span class="ev-pill">Graphe des prestations · 42 sujets</span> <span class="ev-pill">Cahier des charges fonctionnel · 41 sujets</span> <a href="https://www.techno-logique.com/PDG-sujets-preparation.shtml" target="_blank" rel="noopener">(banque complète ↗)</a></p>
+    </div>
+
+  <h2 class="ev-level">4ème</h2>
+  
+    <div class="app-card">
+      <h3 style="margin:0 0 0.2rem"><a href="../../4eme/sequence-1-ia-securite/" style="color:inherit">IA générative / sécurité des données</a></h3>
+      <p class="ev-note">Sujets « objets connectés du quotidien » utilisables comme supports ; évaluez les notions IA avec les quiz intégrés.</p>
+      <ul class="ev-list">
+      <li>
+        <a href="https://www.techno-logique.com/pdf/DNB-maison-intelligente.pdf" target="_blank" rel="noopener">2024 - Maison intelligente (Métropole, Antilles et Guyane)</a>
+        <span class="ev-cat">Sujet officiel</span>
+        
+      </li>
+      <li>
+        <a href="https://www.techno-logique.com/pdf/DNB-montre-connectee.pdf" target="_blank" rel="noopener">2024 - Montre connectée (Métropole, Antilles et Guyane - Sujet de rattrapage)</a>
+        <span class="ev-cat">Sujet officiel</span>
+        
+      </li>
+      <li>
+        <a href="https://www.techno-logique.com/pdf/DNB-systeme-surveillance.pdf" target="_blank" rel="noopener">2024 - Système de surveillance (Amérique du sud)</a>
+        <span class="ev-cat">Sujet officiel</span>
+        
+      </li>
+      <li>
+        <a href="https://www.techno-logique.com/pdf/DNB-calculateur-enceinte.pdf" target="_blank" rel="noopener">Calculateur / Enceinte Bluetooth</a>
+        <span class="ev-cat">Graphe des prestations</span>
+        
+      </li></ul>
+      <p class="ev-cats"><strong>Pour aller plus loin :</strong> <span class="ev-pill">Electronique et informatique · 36 sujets</span> <a href="https://www.techno-logique.com/PDG-sujets-preparation.shtml" target="_blank" rel="noopener">(banque complète ↗)</a></p>
+    </div>
+
+    <div class="app-card">
+      <h3 style="margin:0 0 0.2rem"><a href="../../4eme/sequence-depanner-reparer/" style="color:inherit">Dépanner et réparer</a></h3>
+      
+      <ul class="ev-list">
+      <li>
+        <a href="https://www.techno-logique.com/pdf/DNB-panneau-solaire.pdf" target="_blank" rel="noopener">Panneau solaire</a>
+        <span class="ev-cat">Chaines fonctionnelles, gestion des flux</span>
+        
+      </li>
+      <li>
+        <a href="https://www.techno-logique.com/pdf/DNB-store-enrouleur-1.pdf" target="_blank" rel="noopener">Store enrouleur (Sujet 1)</a>
+        <span class="ev-cat">Chaines fonctionnelles, gestion des flux</span>
+        
+      </li>
+      <li>
+        <a href="https://www.techno-logique.com/pdf/DNB-store-enrouleur-2.pdf" target="_blank" rel="noopener">Store enrouleur (Sujet 2)</a>
+        <span class="ev-cat">Chaines fonctionnelles, gestion des flux</span>
+        
+      </li>
+      <li>
+        <a href="https://www.techno-logique.com/pdf/DNB-store-enrouleur-3.pdf" target="_blank" rel="noopener">Store enrouleur (Sujet 3)</a>
+        <span class="ev-cat">Chaines fonctionnelles, gestion des flux</span>
+        
+      </li>
+      <li>
+        <a href="https://www.techno-logique.com/pdf/DNB-portail-arrosage.pdf" target="_blank" rel="noopener">Portail, arrosage et volet</a>
+        <span class="ev-cat">Chaines fonctionnelles, gestion des flux</span>
+        
+      </li>
+      <li>
+        <a href="https://www.techno-logique.com/pdf/DNB-portail-2.pdf" target="_blank" rel="noopener">Portail (Sujet 2)</a>
+        <span class="ev-cat">Chaines fonctionnelles, gestion des flux</span>
+        
+      </li>
+      <li>
+        <a href="https://www.techno-logique.com/pdf/DNB-portail-4.pdf" target="_blank" rel="noopener">Portail (Sujet 4)</a>
+        <span class="ev-cat">Chaines fonctionnelles, gestion des flux</span>
+        
+      </li>
+      <li>
+        <a href="https://www.techno-logique.com/pdf/DNB-portail-5.pdf" target="_blank" rel="noopener">Portail (Sujet 5)</a>
+        <span class="ev-cat">Chaines fonctionnelles, gestion des flux</span>
+        <a class="ev-corr" href="https://www.techno-logique.com/pdf/DNB-portail-correction-5.pdf" target="_blank" rel="noopener">✓ corrigé</a>
+      </li></ul>
+      <p class="ev-cats"><strong>Pour aller plus loin :</strong> <span class="ev-pill">Chaines fonctionnelles, gestion des flux · 115 sujets</span> <span class="ev-pill">Capteurs et actionneurs · 29 sujets</span> <a href="https://www.techno-logique.com/PDG-sujets-preparation.shtml" target="_blank" rel="noopener">(banque complète ↗)</a></p>
+    </div>
+
+    <div class="app-card">
+      <h3 style="margin:0 0 0.2rem"><a href="../../4eme/sequence-objet-developpement-durable/" style="color:inherit">Choisir un objet — développement durable</a></h3>
+      
+      <ul class="ev-list">
+      <li>
+        <a href="https://www.techno-logique.com/pdf/DNB-eolienne-1.pdf" target="_blank" rel="noopener">2021 - Eolienne (Métropole, Antilles et Guyane)</a>
+        <span class="ev-cat">Sujet officiel</span>
+        
+      </li>
+      <li>
+        <a href="https://www.techno-logique.com/pdf/DNB-eolienne-domestique.pdf" target="_blank" rel="noopener">2022 - Eolienne domestique (Nouvelle-Calédonie)</a>
+        <span class="ev-cat">Sujet officiel</span>
+        
+      </li>
+      <li>
+        <a href="https://www.techno-logique.com/pdf/DNB-locomotive-eolienne.pdf" target="_blank" rel="noopener">Locomotive à vapeur / Eolienne</a>
+        <span class="ev-cat">Graphe des interactions</span>
+        
+      </li>
+      <li>
+        <a href="https://www.techno-logique.com/pdf/DNB-eolienne-2.pdf" target="_blank" rel="noopener">Eolienne (Sujet 2)</a>
+        <span class="ev-cat">Cahier des charges fonctionnel</span>
+        
+      </li>
+      <li>
+        <a href="https://www.techno-logique.com/pdf/DNB-eolienne-3.pdf" target="_blank" rel="noopener">Eolienne (Sujet 3)</a>
+        <span class="ev-cat">Capteurs et actionneurs</span>
+        
+      </li>
+      <li>
+        <a href="https://www.techno-logique.com/pdf/DNB-eolienne-4.pdf" target="_blank" rel="noopener">Eolienne (Sujet 4)</a>
+        <span class="ev-cat">Chaines fonctionnelles, gestion des flux</span>
+        
+      </li>
+      <li>
+        <a href="https://www.techno-logique.com/pdf/DNB-chauffe-eau-1.pdf" target="_blank" rel="noopener">2020 - Chauffe-eau solaire (Polynésie française)</a>
+        <span class="ev-cat">Sujet officiel</span>
+        
+      </li>
+      <li>
+        <a href="https://www.techno-logique.com/pdf/DNB-panneaux-solaires.pdf" target="_blank" rel="noopener">2024 - Panneaux solaires (Polynésie française)</a>
+        <span class="ev-cat">Sujet officiel</span>
+        
+      </li></ul>
+      <p class="ev-cats"><strong>Pour aller plus loin :</strong> <span class="ev-pill">Cycle de vie, évolution, écologie et environnement · 10 sujets</span> <a href="https://www.techno-logique.com/PDG-sujets-preparation.shtml" target="_blank" rel="noopener">(banque complète ↗)</a></p>
+    </div>
+
+    <div class="app-card">
+      <h3 style="margin:0 0 0.2rem"><a href="../../4eme/sequence-materiaux-procedes/" style="color:inherit">Matériaux et procédés</a></h3>
+      
+      <ul class="ev-list">
+      <li>
+        <a href="https://www.techno-logique.com/pdf/DNB-imprimante-3D.pdf" target="_blank" rel="noopener">2021 - Imprimante 3D (Métropole, Antilles et Guyane - Sujet de rattrapage)</a>
+        <span class="ev-cat">Sujet officiel</span>
+        <a class="ev-corr" href="https://www.techno-logique.com/pdf/DNB-imprimante-3D-correction.pdf" target="_blank" rel="noopener">✓ corrigé</a>
+      </li>
+      <li>
+        <a href="https://www.techno-logique.com/pdf/DNB-afficheur-score-1.pdf" target="_blank" rel="noopener">Afficheur de score (Sujet 1 - Hockey sur glace)</a>
+        <span class="ev-cat">Matériaux, esthétisme et ergonomie</span>
+        <a class="ev-corr" href="https://www.techno-logique.com/pdf/DNB-afficheur-score-correction-1.pdf" target="_blank" rel="noopener">✓ corrigé</a>
+      </li>
+      <li>
+        <a href="https://www.techno-logique.com/pdf/DNB-gel-energetique.pdf" target="_blank" rel="noopener">Gel énergétique</a>
+        <span class="ev-cat">Matériaux, esthétisme et ergonomie</span>
+        <a class="ev-corr" href="https://www.techno-logique.com/pdf/DNB-gel-energetique-correction.pdf" target="_blank" rel="noopener">✓ corrigé</a>
+      </li>
+      <li>
+        <a href="https://www.techno-logique.com/pdf/DNB-portail-5.pdf" target="_blank" rel="noopener">Portail (Sujet 5)</a>
+        <span class="ev-cat">Matériaux, esthétisme et ergonomie</span>
+        <a class="ev-corr" href="https://www.techno-logique.com/pdf/DNB-portail-correction-5.pdf" target="_blank" rel="noopener">✓ corrigé</a>
+      </li>
+      <li>
+        <a href="https://www.techno-logique.com/pdf/DNB-protection-auditive.pdf" target="_blank" rel="noopener">Protection auditive</a>
+        <span class="ev-cat">Matériaux, esthétisme et ergonomie</span>
+        <a class="ev-corr" href="https://www.techno-logique.com/pdf/DNB-protection-auditive-correction.pdf" target="_blank" rel="noopener">✓ corrigé</a>
+      </li>
+      <li>
+        <a href="https://www.techno-logique.com/pdf/DNB-prothese-sportive-2.pdf" target="_blank" rel="noopener">Prothèse sportive (Sujet 2 - Cheetah)</a>
+        <span class="ev-cat">Matériaux, esthétisme et ergonomie</span>
+        <a class="ev-corr" href="https://www.techno-logique.com/pdf/DNB-prothese-sportive-correction-2.pdf" target="_blank" rel="noopener">✓ corrigé</a>
+      </li></ul>
+      <p class="ev-cats"><strong>Pour aller plus loin :</strong> <span class="ev-pill">Matériaux, esthétisme et ergonomie · 18 sujets</span> <a href="https://www.techno-logique.com/PDG-sujets-preparation.shtml" target="_blank" rel="noopener">(banque complète ↗)</a></p>
+    </div>
+
+    <div class="app-card">
+      <h3 style="margin:0 0 0.2rem"><a href="../../4eme/sequence-1-reseau-informatique/" style="color:inherit">Le réseau informatique</a></h3>
+      
+      <ul class="ev-list">
+      <li>
+        <a href="https://www.techno-logique.com/pdf/DNB-echographe-reseau.pdf" target="_blank" rel="noopener">Echographe en réseau</a>
+        <span class="ev-cat">Electronique et informatique</span>
+        <a class="ev-corr" href="https://www.techno-logique.com/pdf/DNB-echographe-reseau-correction.pdf" target="_blank" rel="noopener">✓ corrigé</a>
+      </li>
+      <li>
+        <a href="https://www.techno-logique.com/pdf/DNB-imprimante-reseau.pdf" target="_blank" rel="noopener">Imprimante / Réseau informatique</a>
+        <span class="ev-cat">Electronique et informatique</span>
+        
+      </li>
+      <li>
+        <a href="https://www.techno-logique.com/pdf/DNB-reseau-informatique.pdf" target="_blank" rel="noopener">Réseau informatique</a>
+        <span class="ev-cat">Electronique et informatique</span>
+        <a class="ev-corr" href="https://www.techno-logique.com/pdf/DNB-reseau-informatique-correction.pdf" target="_blank" rel="noopener">✓ corrigé</a>
+      </li></ul>
+      <p class="ev-cats"><strong>Pour aller plus loin :</strong> <span class="ev-pill">Electronique et informatique · 36 sujets</span> <a href="https://www.techno-logique.com/PDG-sujets-preparation.shtml" target="_blank" rel="noopener">(banque complète ↗)</a></p>
+    </div>
+
+    <div class="app-card">
+      <h3 style="margin:0 0 0.2rem"><a href="../../4eme/sequence-2-portail-automatise/" style="color:inherit">Portail automatisé</a></h3>
+      
+      <ul class="ev-list">
+      <li>
+        <a href="https://www.techno-logique.com/pdf/DNB-portail-1.pdf" target="_blank" rel="noopener">Portail (Sujet 1)</a>
+        <span class="ev-cat">Cahier des charges fonctionnel</span>
+        <a class="ev-corr" href="https://www.techno-logique.com/pdf/DNB-portail-correction-1.pdf" target="_blank" rel="noopener">✓ corrigé</a>
+      </li>
+      <li>
+        <a href="https://www.techno-logique.com/pdf/DNB-portail-5.pdf" target="_blank" rel="noopener">Portail (Sujet 5)</a>
+        <span class="ev-cat">Cahier des charges fonctionnel</span>
+        <a class="ev-corr" href="https://www.techno-logique.com/pdf/DNB-portail-correction-5.pdf" target="_blank" rel="noopener">✓ corrigé</a>
+      </li>
+      <li>
+        <a href="https://www.techno-logique.com/pdf/DNB-portail-arrosage.pdf" target="_blank" rel="noopener">Portail, arrosage et volet</a>
+        <span class="ev-cat">Description fonctionnelle</span>
+        
+      </li>
+      <li>
+        <a href="https://www.techno-logique.com/pdf/DNB-portail-4.pdf" target="_blank" rel="noopener">Portail (Sujet 4)</a>
+        <span class="ev-cat">Description fonctionnelle</span>
+        
+      </li>
+      <li>
+        <a href="https://www.techno-logique.com/pdf/DNB-portail-2.pdf" target="_blank" rel="noopener">Portail (Sujet 2)</a>
+        <span class="ev-cat">Chaines fonctionnelles, gestion des flux</span>
+        
+      </li>
+      <li>
+        <a href="https://www.techno-logique.com/pdf/DNB-portail-3.pdf" target="_blank" rel="noopener">Portail (Sujet 3)</a>
+        <span class="ev-cat">Algorithmique et programmation</span>
+        
+      </li>
+      <li>
+        <a href="https://www.techno-logique.com/pdf/DNB-barriere-levante.pdf" target="_blank" rel="noopener">Barrière levante</a>
+        <span class="ev-cat">Chaines fonctionnelles, gestion des flux</span>
+        
+      </li>
+      <li>
+        <a href="https://www.techno-logique.com/pdf/DNB-borne-escamotable.pdf" target="_blank" rel="noopener">Borne escamotable</a>
+        <span class="ev-cat">Capteurs et actionneurs</span>
+        <a class="ev-corr" href="https://www.techno-logique.com/pdf/DNB-borne-escamotable-correction.pdf" target="_blank" rel="noopener">✓ corrigé</a>
+      </li></ul>
+      <p class="ev-cats"><strong>Pour aller plus loin :</strong> <span class="ev-pill">Graphe des prestations · 42 sujets</span> <span class="ev-pill">Graphe des interactions · 21 sujets</span> <span class="ev-pill">Cahier des charges fonctionnel · 41 sujets</span> <a href="https://www.techno-logique.com/PDG-sujets-preparation.shtml" target="_blank" rel="noopener">(banque complète ↗)</a></p>
+    </div>
+
+    <div class="app-card">
+      <h3 style="margin:0 0 0.2rem"><a href="../../4eme/sequence-3-objets-connectes/" style="color:inherit">Les objets connectés</a></h3>
+      
+      <ul class="ev-list">
+      <li>
+        <a href="https://www.techno-logique.com/pdf/DNB-bracelet-activite-2.pdf" target="_blank" rel="noopener">Bracelet d'activité (Sujet 2 - Runamax)</a>
+        <span class="ev-cat">Graphe des prestations</span>
+        
+      </li>
+      <li>
+        <a href="https://www.techno-logique.com/pdf/DNB-bracelet-activite-3.pdf" target="_blank" rel="noopener">Bracelet d'activité (Sujet 3 - Runamax)</a>
+        <span class="ev-cat">Graphe des prestations</span>
+        <a class="ev-corr" href="https://www.techno-logique.com/pdf/DNB-bracelet-activite-correction-3.pdf" target="_blank" rel="noopener">✓ corrigé</a>
+      </li>
+      <li>
+        <a href="https://www.techno-logique.com/pdf/DNB-bracelet-smartphone.pdf" target="_blank" rel="noopener">Bracelet d'activité / Smartphone</a>
+        <span class="ev-cat">Graphe des prestations</span>
+        <a class="ev-corr" href="https://www.techno-logique.com/pdf/DNB-bracelet-smartphone-correction.pdf" target="_blank" rel="noopener">✓ corrigé</a>
+      </li>
+      <li>
+        <a href="https://www.techno-logique.com/pdf/DNB-bracelet-activite-1.pdf" target="_blank" rel="noopener">Bracelet d'activité (Sujet 1 - AthlonMax)</a>
+        <span class="ev-cat">Graphe des interactions</span>
+        <a class="ev-corr" href="https://www.techno-logique.com/pdf/DNB-bracelet-activite-correction-1.pdf" target="_blank" rel="noopener">✓ corrigé</a>
+      </li>
+      <li>
+        <a href="https://www.techno-logique.com/pdf/DNB-montre-connectee.pdf" target="_blank" rel="noopener">2024 - Montre connectée (Métropole, Antilles et Guyane - Sujet de rattrapage)</a>
+        <span class="ev-cat">Sujet officiel</span>
+        
+      </li>
+      <li>
+        <a href="https://www.techno-logique.com/pdf/DNB-ruche-connectee-1.pdf" target="_blank" rel="noopener">2023 - Ruche connectée (Nouvelle-Calédonie)</a>
+        <span class="ev-cat">Sujet officiel</span>
+        
+      </li>
+      <li>
+        <a href="https://www.techno-logique.com/pdf/DNB-ruche-connectee-2.pdf" target="_blank" rel="noopener">Ruche connectée</a>
+        <span class="ev-cat">Représentation graphique</span>
+        <a class="ev-corr" href="https://www.techno-logique.com/pdf/DNB-ruche-connectee-correction-2.pdf" target="_blank" rel="noopener">✓ corrigé</a>
+      </li>
+      <li>
+        <a href="https://www.techno-logique.com/pdf/DNB-compacteur-connecte.pdf" target="_blank" rel="noopener">Compacteur connecté</a>
+        <span class="ev-cat">Matériaux, esthétisme et ergonomie</span>
+        
+      </li></ul>
+      <p class="ev-cats"><strong>Pour aller plus loin :</strong> <span class="ev-pill">Capteurs et actionneurs · 29 sujets</span> <span class="ev-pill">Modélisation SysML · 14 sujets</span> <a href="https://www.techno-logique.com/PDG-sujets-preparation.shtml" target="_blank" rel="noopener">(banque complète ↗)</a></p>
+    </div>
+
+    <div class="app-card">
+      <h3 style="margin:0 0 0.2rem"><a href="../../4eme/sequence-4-microbit/" style="color:inherit">Programmer un ordinateur de poche (micro:bit)</a></h3>
+      
+      <ul class="ev-list">
+      <li>
+        <a href="https://www.techno-logique.com/pdf/DNB-afficheur-score-1.pdf" target="_blank" rel="noopener">Afficheur de score (Sujet 1 - Hockey sur glace)</a>
+        <span class="ev-cat">Algorithmique et programmation</span>
+        <a class="ev-corr" href="https://www.techno-logique.com/pdf/DNB-afficheur-score-correction-1.pdf" target="_blank" rel="noopener">✓ corrigé</a>
+      </li>
+      <li>
+        <a href="https://www.techno-logique.com/pdf/DNB-afficheur-score-2.pdf" target="_blank" rel="noopener">Afficheur de score (Sujet 2 - Tennis de table)</a>
+        <span class="ev-cat">Algorithmique et programmation</span>
+        
+      </li>
+      <li>
+        <a href="https://www.techno-logique.com/pdf/DNB-bracelet-activite-1.pdf" target="_blank" rel="noopener">Bracelet d'activité (Sujet 1 - AthlonMax)</a>
+        <span class="ev-cat">Algorithmique et programmation</span>
+        <a class="ev-corr" href="https://www.techno-logique.com/pdf/DNB-bracelet-activite-correction-1.pdf" target="_blank" rel="noopener">✓ corrigé</a>
+      </li>
+      <li>
+        <a href="https://www.techno-logique.com/pdf/DNB-cardiofrequence.pdf" target="_blank" rel="noopener">Cardiofréquencemètre</a>
+        <span class="ev-cat">Algorithmique et programmation</span>
+        
+      </li></ul>
+      <p class="ev-cats"><strong>Pour aller plus loin :</strong> <span class="ev-pill">Algorithmique et programmation · 119 sujets</span> <a href="https://www.techno-logique.com/PDG-sujets-preparation.shtml" target="_blank" rel="noopener">(banque complète ↗)</a></p>
+    </div>
+
+    <div class="app-card">
+      <h3 style="margin:0 0 0.2rem"><a href="../../4eme/sequence-5-feu-tricolore-arduino/" style="color:inherit">Feu tricolore (Arduino)</a></h3>
+      
+      <ul class="ev-list">
+      <li>
+        <a href="https://www.techno-logique.com/pdf/DNB-radar-feu-rouge.pdf" target="_blank" rel="noopener">Radar de feu rouge</a>
+        <span class="ev-cat">Chaines fonctionnelles, gestion des flux</span>
+        
+      </li>
+      <li>
+        <a href="https://www.techno-logique.com/pdf/DNB-afficheur-score-1.pdf" target="_blank" rel="noopener">Afficheur de score (Sujet 1 - Hockey sur glace)</a>
+        <span class="ev-cat">Algorithmique et programmation</span>
+        <a class="ev-corr" href="https://www.techno-logique.com/pdf/DNB-afficheur-score-correction-1.pdf" target="_blank" rel="noopener">✓ corrigé</a>
+      </li>
+      <li>
+        <a href="https://www.techno-logique.com/pdf/DNB-analyseur-sanguin.pdf" target="_blank" rel="noopener">Analyseur sanguin (StarMax)</a>
+        <span class="ev-cat">Algorithmique et programmation</span>
+        <a class="ev-corr" href="https://www.techno-logique.com/pdf/DNB-analyseur-sanguin-correction.pdf" target="_blank" rel="noopener">✓ corrigé</a>
+      </li>
+      <li>
+        <a href="https://www.techno-logique.com/pdf/DNB-aquaponie.pdf" target="_blank" rel="noopener">Aquaponie</a>
+        <span class="ev-cat">Algorithmique et programmation</span>
+        <a class="ev-corr" href="https://www.techno-logique.com/pdf/DNB-aquaponie-correction.pdf" target="_blank" rel="noopener">✓ corrigé</a>
+      </li>
+      <li>
+        <a href="https://www.techno-logique.com/pdf/DNB-bassin-aeration.pdf" target="_blank" rel="noopener">Bassin d'aération des eaux usées</a>
+        <span class="ev-cat">Algorithmique et programmation</span>
+        <a class="ev-corr" href="https://www.techno-logique.com/pdf/DNB-bassin-aeration-correction.pdf" target="_blank" rel="noopener">✓ corrigé</a>
+      </li>
+      <li>
+        <a href="https://www.techno-logique.com/pdf/DNB-borne-escamotable.pdf" target="_blank" rel="noopener">Borne escamotable</a>
+        <span class="ev-cat">Algorithmique et programmation</span>
+        <a class="ev-corr" href="https://www.techno-logique.com/pdf/DNB-borne-escamotable-correction.pdf" target="_blank" rel="noopener">✓ corrigé</a>
+      </li></ul>
+      <p class="ev-cats"><strong>Pour aller plus loin :</strong> <span class="ev-pill">Algorithmique et programmation · 119 sujets</span> <a href="https://www.techno-logique.com/PDG-sujets-preparation.shtml" target="_blank" rel="noopener">(banque complète ↗)</a></p>
+    </div>
+
+    <div class="app-card">
+      <h3 style="margin:0 0 0.2rem"><a href="../../4eme/sequence-6-serre-autonome/" style="color:inherit">Serre autonome</a></h3>
+      
+      <ul class="ev-list">
+      <li>
+        <a href="https://www.techno-logique.com/pdf/DNB-serre-2.pdf" target="_blank" rel="noopener">Serre (Sujet 2 - Température et arrosage)</a>
+        <span class="ev-cat">Graphe des prestations</span>
+        
+      </li>
+      <li>
+        <a href="https://www.techno-logique.com/pdf/DNB-serre-1.pdf" target="_blank" rel="noopener">Serre (Sujet 1 - Dioxyde de carbone)</a>
+        <span class="ev-cat">Cahier des charges fonctionnel</span>
+        
+      </li>
+      <li>
+        <a href="https://www.techno-logique.com/pdf/DNB-serre-scooter.pdf" target="_blank" rel="noopener">Serre, scooter</a>
+        <span class="ev-cat">Capteurs et actionneurs</span>
+        <a class="ev-corr" href="https://www.techno-logique.com/pdf/DNB-serre-scooter-correction.pdf" target="_blank" rel="noopener">✓ corrigé</a>
+      </li>
+      <li>
+        <a href="https://www.techno-logique.com/pdf/DNB-serre-3.pdf" target="_blank" rel="noopener">Serre (Sujet 3 - Arrosage et engrais)</a>
+        <span class="ev-cat">Chaines fonctionnelles, gestion des flux</span>
+        
+      </li>
+      <li>
+        <a href="https://www.techno-logique.com/pdf/DNB-serre-4.pdf" target="_blank" rel="noopener">Serre (Sujet 4 - Arrosage)</a>
+        <span class="ev-cat">Chaines fonctionnelles, gestion des flux</span>
+        <a class="ev-corr" href="https://www.techno-logique.com/pdf/DNB-serre-correction-4.pdf" target="_blank" rel="noopener">✓ corrigé</a>
+      </li>
+      <li>
+        <a href="https://www.techno-logique.com/pdf/DNB-serre-5.pdf" target="_blank" rel="noopener">Serre (Sujet 5 - Arrosage)</a>
+        <span class="ev-cat">Chaines fonctionnelles, gestion des flux</span>
+        <a class="ev-corr" href="https://www.techno-logique.com/pdf/DNB-serre-correction-5.pdf" target="_blank" rel="noopener">✓ corrigé</a>
+      </li>
+      <li>
+        <a href="https://www.techno-logique.com/pdf/DNB-portail-arrosage.pdf" target="_blank" rel="noopener">Portail, arrosage et volet</a>
+        <span class="ev-cat">Description fonctionnelle</span>
+        
+      </li>
+      <li>
+        <a href="https://www.techno-logique.com/pdf/DNB-irrigation-autonome.pdf" target="_blank" rel="noopener">2017 - Irrigation autonome (Métropole, Antilles et Guyane - Sujet de rattrapage)</a>
+        <span class="ev-cat">Sujet officiel</span>
+        
+      </li></ul>
+      <p class="ev-cats"><strong>Pour aller plus loin :</strong> <span class="ev-pill">Algorithmique et programmation · 119 sujets</span> <span class="ev-pill">Capteurs et actionneurs · 29 sujets</span> <a href="https://www.techno-logique.com/PDG-sujets-preparation.shtml" target="_blank" rel="noopener">(banque complète ↗)</a></p>
+    </div>
+
+    <div class="app-card">
+      <h3 style="margin:0 0 0.2rem"><a href="../../4eme/chaines-fonctionnelles/" style="color:inherit">Chaînes fonctionnelles (compléments)</a></h3>
+      
+      <ul class="ev-list">
+      <li>
+        <a href="https://www.techno-logique.com/pdf/DNB-store-enrouleur-1.pdf" target="_blank" rel="noopener">Store enrouleur (Sujet 1)</a>
+        <span class="ev-cat">Chaines fonctionnelles, gestion des flux</span>
+        
+      </li>
+      <li>
+        <a href="https://www.techno-logique.com/pdf/DNB-store-enrouleur-2.pdf" target="_blank" rel="noopener">Store enrouleur (Sujet 2)</a>
+        <span class="ev-cat">Chaines fonctionnelles, gestion des flux</span>
+        
+      </li>
+      <li>
+        <a href="https://www.techno-logique.com/pdf/DNB-store-enrouleur-3.pdf" target="_blank" rel="noopener">Store enrouleur (Sujet 3)</a>
+        <span class="ev-cat">Chaines fonctionnelles, gestion des flux</span>
+        
+      </li>
+      <li>
+        <a href="https://www.techno-logique.com/pdf/DNB-portail-arrosage.pdf" target="_blank" rel="noopener">Portail, arrosage et volet</a>
+        <span class="ev-cat">Chaines fonctionnelles, gestion des flux</span>
+        
+      </li>
+      <li>
+        <a href="https://www.techno-logique.com/pdf/DNB-portail-2.pdf" target="_blank" rel="noopener">Portail (Sujet 2)</a>
+        <span class="ev-cat">Chaines fonctionnelles, gestion des flux</span>
+        
+      </li>
+      <li>
+        <a href="https://www.techno-logique.com/pdf/DNB-portail-4.pdf" target="_blank" rel="noopener">Portail (Sujet 4)</a>
+        <span class="ev-cat">Chaines fonctionnelles, gestion des flux</span>
+        
+      </li>
+      <li>
+        <a href="https://www.techno-logique.com/pdf/DNB-portail-5.pdf" target="_blank" rel="noopener">Portail (Sujet 5)</a>
+        <span class="ev-cat">Chaines fonctionnelles, gestion des flux</span>
+        <a class="ev-corr" href="https://www.techno-logique.com/pdf/DNB-portail-correction-5.pdf" target="_blank" rel="noopener">✓ corrigé</a>
+      </li>
+      <li>
+        <a href="https://www.techno-logique.com/pdf/DNB-robot-aspirateur-1.pdf" target="_blank" rel="noopener">Robot aspirateur (Sujet 1)</a>
+        <span class="ev-cat">Chaines fonctionnelles, gestion des flux</span>
+        <a class="ev-corr" href="https://www.techno-logique.com/pdf/DNB-robot-aspirateur-correction-1.pdf" target="_blank" rel="noopener">✓ corrigé</a>
+      </li></ul>
+      <p class="ev-cats"><strong>Pour aller plus loin :</strong> <span class="ev-pill">Chaines fonctionnelles, gestion des flux · 115 sujets</span> <a href="https://www.techno-logique.com/PDG-sujets-preparation.shtml" target="_blank" rel="noopener">(banque complète ↗)</a></p>
+    </div>
+
+  <h2 class="ev-level">3ème</h2>
+  
+    <div class="app-card">
+      <h3 style="margin:0 0 0.2rem"><a href="../../3eme/sequence-1-poubelle-connectee/" style="color:inherit">La poubelle connectée</a></h3>
+      
+      <ul class="ev-list">
+      <li>
+        <a href="https://www.techno-logique.com/pdf/DNB-compacteur-connecte.pdf" target="_blank" rel="noopener">Compacteur connecté</a>
+        <span class="ev-cat">Matériaux, esthétisme et ergonomie</span>
+        
+      </li>
+      <li>
+        <a href="https://www.techno-logique.com/pdf/DNB-collecteur-dechets.pdf" target="_blank" rel="noopener">2022 - Collecteur de déchets (Métropole, Antilles et Guyane - Sujet de secours)</a>
+        <span class="ev-cat">Sujet officiel</span>
+        <a class="ev-corr" href="https://www.techno-logique.com/pdf/DNB-collecteur-dechets-correction.pdf" target="_blank" rel="noopener">✓ corrigé</a>
+      </li>
+      <li>
+        <a href="https://www.techno-logique.com/pdf/DNB-velo-electrique-1.pdf" target="_blank" rel="noopener">2018 - Vélo à assistance électrique (Métropole, Antilles et Guyane)</a>
+        <span class="ev-cat">Sujet officiel</span>
+        <a class="ev-corr" href="https://www.techno-logique.com/pdf/DNB-velo-electrique-correction-1.pdf" target="_blank" rel="noopener">✓ corrigé</a>
+      </li>
+      <li>
+        <a href="https://www.techno-logique.com/pdf/DNB-trottinette-electrique.pdf" target="_blank" rel="noopener">2023 - Trottinette électrique (Polynésie française)</a>
+        <span class="ev-cat">Sujet officiel</span>
+        <a class="ev-corr" href="https://www.techno-logique.com/pdf/DNB-trottinette-electrique-correction.pdf" target="_blank" rel="noopener">✓ corrigé</a>
+      </li>
+      <li>
+        <a href="https://www.techno-logique.com/pdf/DNB-centrifugeuse-1.pdf" target="_blank" rel="noopener">Centrifugeuse (Sujet 1)</a>
+        <span class="ev-cat">Graphe des prestations</span>
+        
+      </li>
+      <li>
+        <a href="https://www.techno-logique.com/pdf/DNB-centrifugeuse-2.pdf" target="_blank" rel="noopener">Centrifugeuse (Sujet 2)</a>
+        <span class="ev-cat">Graphe des prestations</span>
+        
+      </li>
+      <li>
+        <a href="https://www.techno-logique.com/pdf/DNB-plateforme-elevatrice.pdf" target="_blank" rel="noopener">Plateforme élévatrice</a>
+        <span class="ev-cat">Graphe des prestations</span>
+        <a class="ev-corr" href="https://www.techno-logique.com/pdf/DNB-plateforme-elevatrice-correction.pdf" target="_blank" rel="noopener">✓ corrigé</a>
+      </li>
+      <li>
+        <a href="https://www.techno-logique.com/pdf/DNB-trieuse-pieces-2.pdf" target="_blank" rel="noopener">Trieuse de pièces (Sujet 2)</a>
+        <span class="ev-cat">Représentation graphique</span>
+        <a class="ev-corr" href="https://www.techno-logique.com/pdf/DNB-trieuse-pieces-correction-2.pdf" target="_blank" rel="noopener">✓ corrigé</a>
+      </li></ul>
+      <p class="ev-cats"><strong>Pour aller plus loin :</strong> <span class="ev-pill">Modélisation SysML · 14 sujets</span> <span class="ev-pill">Chaines fonctionnelles, gestion des flux · 115 sujets</span> <a href="https://www.techno-logique.com/PDG-sujets-preparation.shtml" target="_blank" rel="noopener">(banque complète ↗)</a></p>
+    </div>
+
+    <div class="app-card">
+      <h3 style="margin:0 0 0.2rem"><a href="../../3eme/sequence-2-intelligence-artificielle/" style="color:inherit">Intelligence artificielle</a></h3>
+      <p class="ev-note">Peu de sujets IA dans la banque DNB : utilisez des sujets « robots » comme supports d'algorithmique.</p>
+      <ul class="ev-list">
+      <li>
+        <a href="https://www.techno-logique.com/pdf/DNB-robot-aspirateur-1.pdf" target="_blank" rel="noopener">Robot aspirateur (Sujet 1)</a>
+        <span class="ev-cat">Algorithmique et programmation</span>
+        <a class="ev-corr" href="https://www.techno-logique.com/pdf/DNB-robot-aspirateur-correction-1.pdf" target="_blank" rel="noopener">✓ corrigé</a>
+      </li>
+      <li>
+        <a href="https://www.techno-logique.com/pdf/DNB-robot-aspirateur-2.pdf" target="_blank" rel="noopener">Robot aspirateur (Sujet 2)</a>
+        <span class="ev-cat">Algorithmique et programmation</span>
+        
+      </li>
+      <li>
+        <a href="https://www.techno-logique.com/pdf/DNB-robot-aspirateur-3.pdf" target="_blank" rel="noopener">Robot aspirateur (Sujet 3)</a>
+        <span class="ev-cat">Algorithmique et programmation</span>
+        
+      </li>
+      <li>
+        <a href="https://www.techno-logique.com/pdf/DNB-robot-aspirateur-4.pdf" target="_blank" rel="noopener">Robot aspirateur (Sujet 4 - Roobs)</a>
+        <span class="ev-cat">Algorithmique et programmation</span>
+        
+      </li>
+      <li>
+        <a href="https://www.techno-logique.com/pdf/DNB-robot-explorateur-4.pdf" target="_blank" rel="noopener">Robot d'exploration (Sujet 4 - Curiosity)</a>
+        <span class="ev-cat">Algorithmique et programmation</span>
+        <a class="ev-corr" href="https://www.techno-logique.com/pdf/DNB-robot-explorateur-correction-4.pdf" target="_blank" rel="noopener">✓ corrigé</a>
+      </li>
+      <li>
+        <a href="https://www.techno-logique.com/pdf/DNB-robot-explorateur-5.pdf" target="_blank" rel="noopener">Robot d'exploration (Sujet 5 - Muses)</a>
+        <span class="ev-cat">Algorithmique et programmation</span>
+        
+      </li>
+      <li>
+        <a href="https://www.techno-logique.com/pdf/DNB-robot-explorateur-7.pdf" target="_blank" rel="noopener">Robot d'exploration (Sujet 7 - Philae)</a>
+        <span class="ev-cat">Algorithmique et programmation</span>
+        
+      </li>
+      <li>
+        <a href="https://www.techno-logique.com/pdf/DNB-robot-explorateur-8.pdf" target="_blank" rel="noopener">Robot d'exploration (Sujet 8 - Yutu)</a>
+        <span class="ev-cat">Algorithmique et programmation</span>
+        <a class="ev-corr" href="https://www.techno-logique.com/pdf/DNB-robot-explorateur-correction-8.pdf" target="_blank" rel="noopener">✓ corrigé</a>
+      </li></ul>
+      <p class="ev-cats"><strong>Pour aller plus loin :</strong> <span class="ev-pill">Algorithmique et programmation · 119 sujets</span> <a href="https://www.techno-logique.com/PDG-sujets-preparation.shtml" target="_blank" rel="noopener">(banque complète ↗)</a></p>
+    </div>
+
+    <div class="app-card">
+      <h3 style="margin:0 0 0.2rem"><a href="../../3eme/sequence-3-reseau-informatique/" style="color:inherit">Réseau informatique</a></h3>
+      
+      <ul class="ev-list">
+      <li>
+        <a href="https://www.techno-logique.com/pdf/DNB-echographe-reseau.pdf" target="_blank" rel="noopener">Echographe en réseau</a>
+        <span class="ev-cat">Electronique et informatique</span>
+        <a class="ev-corr" href="https://www.techno-logique.com/pdf/DNB-echographe-reseau-correction.pdf" target="_blank" rel="noopener">✓ corrigé</a>
+      </li>
+      <li>
+        <a href="https://www.techno-logique.com/pdf/DNB-imprimante-reseau.pdf" target="_blank" rel="noopener">Imprimante / Réseau informatique</a>
+        <span class="ev-cat">Electronique et informatique</span>
+        
+      </li>
+      <li>
+        <a href="https://www.techno-logique.com/pdf/DNB-reseau-informatique.pdf" target="_blank" rel="noopener">Réseau informatique</a>
+        <span class="ev-cat">Electronique et informatique</span>
+        <a class="ev-corr" href="https://www.techno-logique.com/pdf/DNB-reseau-informatique-correction.pdf" target="_blank" rel="noopener">✓ corrigé</a>
+      </li></ul>
+      <p class="ev-cats"><strong>Pour aller plus loin :</strong> <span class="ev-pill">Electronique et informatique · 36 sujets</span> <a href="https://www.techno-logique.com/PDG-sujets-preparation.shtml" target="_blank" rel="noopener">(banque complète ↗)</a></p>
+    </div>
+
+    <div class="app-card">
+      <h3 style="margin:0 0 0.2rem"><a href="../../3eme/sessions-dnb/" style="color:inherit">Préparation au DNB (tous thèmes)</a></h3>
+      <p class="ev-note">La page « Préparation au DNB » du site liste déjà les 31 sujets officiels ; complétez avec les catégories par notion ci-dessous selon le chapitre à réviser.</p>
+      
+      <p class="ev-cats"><strong>Pour aller plus loin :</strong> <span class="ev-pill">Graphe des prestations · 42 sujets</span> <span class="ev-pill">Cahier des charges fonctionnel · 41 sujets</span> <span class="ev-pill">Chaines fonctionnelles, gestion des flux · 115 sujets</span> <span class="ev-pill">Algorithmique et programmation · 119 sujets</span> <span class="ev-pill">Gestion de projet · 6 sujets</span> <span class="ev-pill">Représentation graphique · 9 sujets</span> <a href="https://www.techno-logique.com/PDG-sujets-preparation.shtml" target="_blank" rel="noopener">(banque complète ↗)</a></p>
+    </div>
+  <p style="color:var(--muted);font-size:0.82rem;margin-top:1.6rem">Sujets et corrigés hébergés par techno-logique.com (ressource externe). La sélection est indicative : adaptez au niveau réel de vos classes.</p>
+</main>
+</body>
+</html>

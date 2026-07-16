@@ -3,6 +3,7 @@
   <url><loc>https://ebechalani.github.io/techno/</loc></url>
   <url><loc>https://ebechalani.github.io/techno/5eme/</loc></url>
   <url><loc>https://ebechalani.github.io/techno/5eme/sequence-1-cybersecurite/</loc></url>
+  <url><loc>https://ebechalani.github.io/techno/5eme/sequence-1-cybersecurite/jeu-intro/</loc></url>
   <url><loc>https://ebechalani.github.io/techno/5eme/sequence-1-cybersecurite/seance-1/</loc></url>
   <url><loc>https://ebechalani.github.io/techno/5eme/sequence-1-cybersecurite/seance-1-corr/</loc></url>
   <url><loc>https://ebechalani.github.io/techno/5eme/sequence-1-cybersecurite/seance-2/</loc></url>
@@ -13,13 +14,16 @@
   <url><loc>https://ebechalani.github.io/techno/5eme/sequence-1-cybersecurite/seance-4-corr/</loc></url>
   <url><loc>https://ebechalani.github.io/techno/5eme/sequence-1-cybersecurite/ressources/</loc></url>
   <url><loc>https://ebechalani.github.io/techno/5eme/sequence-reparer-objet/</loc></url>
+  <url><loc>https://ebechalani.github.io/techno/5eme/sequence-reparer-objet/jeu-intro/</loc></url>
   <url><loc>https://ebechalani.github.io/techno/5eme/sequence-reparer-objet/seance-1/</loc></url>
   <url><loc>https://ebechalani.github.io/techno/5eme/sequence-reparer-objet/seance-2/</loc></url>
   <url><loc>https://ebechalani.github.io/techno/5eme/sequence-1-preserver-les-ressources/</loc></url>
+  <url><loc>https://ebechalani.github.io/techno/5eme/sequence-1-preserver-les-ressources/jeu-intro/</loc></url>
   <url><loc>https://ebechalani.github.io/techno/5eme/sequence-1-preserver-les-ressources/seance-1/</loc></url>
   <url><loc>https://ebechalani.github.io/techno/5eme/sequence-1-preserver-les-ressources/seance-2/</loc></url>
   <url><loc>https://ebechalani.github.io/techno/5eme/sequence-1-preserver-les-ressources/seance-3/</loc></url>
   <url><loc>https://ebechalani.github.io/techno/5eme/sequence-2-eclairage-automatique/</loc></url>
+  <url><loc>https://ebechalani.github.io/techno/5eme/sequence-2-eclairage-automatique/jeu-intro/</loc></url>
   <url><loc>https://ebechalani.github.io/techno/5eme/sequence-2-eclairage-automatique/seance-1/</loc></url>
   <url><loc>https://ebechalani.github.io/techno/5eme/sequence-2-eclairage-automatique/seance-2/</loc></url>
   <url><loc>https://ebechalani.github.io/techno/5eme/sequence-2-eclairage-automatique/seance-3/</loc></url>
@@ -27,6 +31,7 @@
   <url><loc>https://ebechalani.github.io/techno/5eme/sequence-2-eclairage-automatique/synthese-systemes-embarques/</loc></url>
   <url><loc>https://ebechalani.github.io/techno/5eme/sequence-2-eclairage-automatique/seance-4/</loc></url>
   <url><loc>https://ebechalani.github.io/techno/5eme/sequence-3-vivre-dans-une-boite/</loc></url>
+  <url><loc>https://ebechalani.github.io/techno/5eme/sequence-3-vivre-dans-une-boite/jeu-intro/</loc></url>
   <url><loc>https://ebechalani.github.io/techno/5eme/sequence-3-vivre-dans-une-boite/seance-1/</loc></url>
   <url><loc>https://ebechalani.github.io/techno/5eme/sequence-3-vivre-dans-une-boite/cahier-des-charges/</loc></url>
   <url><loc>https://ebechalani.github.io/techno/5eme/sequence-3-vivre-dans-une-boite/seance-3/</loc></url>
@@ -41,47 +46,58 @@
   <url><loc>https://ebechalani.github.io/techno/5eme/assr-1/assr1/</loc></url>
   <url><loc>https://ebechalani.github.io/techno/4eme/</loc></url>
   <url><loc>https://ebechalani.github.io/techno/4eme/sequence-0-ia-generative/</loc></url>
+  <url><loc>https://ebechalani.github.io/techno/4eme/sequence-0-ia-generative/jeu-intro/</loc></url>
   <url><loc>https://ebechalani.github.io/techno/4eme/sequence-0-ia-generative/seance-1/</loc></url>
   <url><loc>https://ebechalani.github.io/techno/4eme/sequence-0-ia-generative/seance-1-corr/</loc></url>
   <url><loc>https://ebechalani.github.io/techno/4eme/sequence-0-ia-generative/creer-un-prompt-efficace/</loc></url>
   <url><loc>https://ebechalani.github.io/techno/4eme/sequence-0-ia-generative/prompts-avantages-et-biais/</loc></url>
   <url><loc>https://ebechalani.github.io/techno/4eme/sequence-1-ia-securite/</loc></url>
+  <url><loc>https://ebechalani.github.io/techno/4eme/sequence-1-ia-securite/jeu-intro/</loc></url>
   <url><loc>https://ebechalani.github.io/techno/4eme/sequence-1-ia-securite/seance-1/</loc></url>
   <url><loc>https://ebechalani.github.io/techno/4eme/sequence-1-ia-securite/seance-1-corr/</loc></url>
   <url><loc>https://ebechalani.github.io/techno/4eme/sequence-1-ia-securite/seance-2/</loc></url>
   <url><loc>https://ebechalani.github.io/techno/4eme/sequence-1-ia-securite/seance-2-corr/</loc></url>
   <url><loc>https://ebechalani.github.io/techno/4eme/sequence-1-ia-securite/ressources/</loc></url>
   <url><loc>https://ebechalani.github.io/techno/4eme/sequence-depanner-reparer/</loc></url>
+  <url><loc>https://ebechalani.github.io/techno/4eme/sequence-depanner-reparer/jeu-intro/</loc></url>
   <url><loc>https://ebechalani.github.io/techno/4eme/sequence-depanner-reparer/seance-1/</loc></url>
   <url><loc>https://ebechalani.github.io/techno/4eme/sequence-depanner-reparer/seance-2/</loc></url>
   <url><loc>https://ebechalani.github.io/techno/4eme/sequence-objet-developpement-durable/</loc></url>
+  <url><loc>https://ebechalani.github.io/techno/4eme/sequence-objet-developpement-durable/jeu-intro/</loc></url>
   <url><loc>https://ebechalani.github.io/techno/4eme/sequence-objet-developpement-durable/seance-1/</loc></url>
   <url><loc>https://ebechalani.github.io/techno/4eme/sequence-objet-developpement-durable/seance-2/</loc></url>
   <url><loc>https://ebechalani.github.io/techno/4eme/sequence-materiaux-procedes/</loc></url>
+  <url><loc>https://ebechalani.github.io/techno/4eme/sequence-materiaux-procedes/jeu-intro/</loc></url>
   <url><loc>https://ebechalani.github.io/techno/4eme/sequence-materiaux-procedes/seance-1/</loc></url>
   <url><loc>https://ebechalani.github.io/techno/4eme/sequence-materiaux-procedes/seance-2/</loc></url>
   <url><loc>https://ebechalani.github.io/techno/4eme/sequence-1-reseau-informatique/</loc></url>
+  <url><loc>https://ebechalani.github.io/techno/4eme/sequence-1-reseau-informatique/jeu-intro/</loc></url>
   <url><loc>https://ebechalani.github.io/techno/4eme/sequence-1-reseau-informatique/seance-1/</loc></url>
   <url><loc>https://ebechalani.github.io/techno/4eme/sequence-1-reseau-informatique/seance-2/</loc></url>
   <url><loc>https://ebechalani.github.io/techno/4eme/sequence-1-reseau-informatique/seance-3/</loc></url>
   <url><loc>https://ebechalani.github.io/techno/4eme/sequence-1-reseau-informatique/seance-4/</loc></url>
   <url><loc>https://ebechalani.github.io/techno/4eme/sequence-2-portail-automatise/</loc></url>
+  <url><loc>https://ebechalani.github.io/techno/4eme/sequence-2-portail-automatise/jeu-intro/</loc></url>
   <url><loc>https://ebechalani.github.io/techno/4eme/sequence-2-portail-automatise/seance-0/</loc></url>
   <url><loc>https://ebechalani.github.io/techno/4eme/sequence-2-portail-automatise/seance-1/</loc></url>
   <url><loc>https://ebechalani.github.io/techno/4eme/sequence-2-portail-automatise/seance-1-corr/</loc></url>
   <url><loc>https://ebechalani.github.io/techno/4eme/sequence-2-portail-automatise/seance-2/</loc></url>
   <url><loc>https://ebechalani.github.io/techno/4eme/sequence-3-objets-connectes/</loc></url>
+  <url><loc>https://ebechalani.github.io/techno/4eme/sequence-3-objets-connectes/jeu-intro/</loc></url>
   <url><loc>https://ebechalani.github.io/techno/4eme/sequence-3-objets-connectes/seance-1/</loc></url>
   <url><loc>https://ebechalani.github.io/techno/4eme/sequence-3-objets-connectes/seance-2/</loc></url>
   <url><loc>https://ebechalani.github.io/techno/4eme/sequence-4-microbit/</loc></url>
+  <url><loc>https://ebechalani.github.io/techno/4eme/sequence-4-microbit/jeu-intro/</loc></url>
   <url><loc>https://ebechalani.github.io/techno/4eme/sequence-4-microbit/seance-1/</loc></url>
   <url><loc>https://ebechalani.github.io/techno/4eme/sequence-4-microbit/seance-2/</loc></url>
   <url><loc>https://ebechalani.github.io/techno/4eme/sequence-4-microbit/correction/</loc></url>
   <url><loc>https://ebechalani.github.io/techno/4eme/sequence-4-microbit/programmer-une-boussolle/</loc></url>
   <url><loc>https://ebechalani.github.io/techno/4eme/sequence-5-feu-tricolore-arduino/</loc></url>
+  <url><loc>https://ebechalani.github.io/techno/4eme/sequence-5-feu-tricolore-arduino/jeu-intro/</loc></url>
   <url><loc>https://ebechalani.github.io/techno/4eme/sequence-5-feu-tricolore-arduino/seance-1/</loc></url>
   <url><loc>https://ebechalani.github.io/techno/4eme/sequence-5-feu-tricolore-arduino/seance-2/</loc></url>
   <url><loc>https://ebechalani.github.io/techno/4eme/sequence-6-serre-autonome/</loc></url>
+  <url><loc>https://ebechalani.github.io/techno/4eme/sequence-6-serre-autonome/jeu-intro/</loc></url>
   <url><loc>https://ebechalani.github.io/techno/4eme/sequence-6-serre-autonome/seance-0/</loc></url>
   <url><loc>https://ebechalani.github.io/techno/4eme/sequence-6-serre-autonome/seance-1/</loc></url>
   <url><loc>https://ebechalani.github.io/techno/4eme/sequence-6-serre-autonome/seance-2/</loc></url>
@@ -92,12 +108,14 @@
   <url><loc>https://ebechalani.github.io/techno/4eme/olympiades-informatique/</loc></url>
   <url><loc>https://ebechalani.github.io/techno/3eme/</loc></url>
   <url><loc>https://ebechalani.github.io/techno/3eme/sequence-1-poubelle-connectee/</loc></url>
+  <url><loc>https://ebechalani.github.io/techno/3eme/sequence-1-poubelle-connectee/jeu-intro/</loc></url>
   <url><loc>https://ebechalani.github.io/techno/3eme/sequence-1-poubelle-connectee/seance-1/</loc></url>
   <url><loc>https://ebechalani.github.io/techno/3eme/sequence-1-poubelle-connectee/correction/</loc></url>
   <url><loc>https://ebechalani.github.io/techno/3eme/sequence-1-poubelle-connectee/modelisation-3d-de-la-poubelle/</loc></url>
   <url><loc>https://ebechalani.github.io/techno/3eme/sequence-1-poubelle-connectee/prototype-arduino/</loc></url>
   <url><loc>https://ebechalani.github.io/techno/3eme/sequence-1-poubelle-connectee/simulation-tinkercad/</loc></url>
   <url><loc>https://ebechalani.github.io/techno/3eme/sequence-2-intelligence-artificielle/</loc></url>
+  <url><loc>https://ebechalani.github.io/techno/3eme/sequence-2-intelligence-artificielle/jeu-intro/</loc></url>
   <url><loc>https://ebechalani.github.io/techno/3eme/sequence-2-intelligence-artificielle/seance-1/</loc></url>
   <url><loc>https://ebechalani.github.io/techno/3eme/sequence-2-intelligence-artificielle/seance-2/</loc></url>
   <url><loc>https://ebechalani.github.io/techno/3eme/sequence-2-intelligence-artificielle/tuto-videos-teachable-maching/</loc></url>
@@ -105,6 +123,7 @@
   <url><loc>https://ebechalani.github.io/techno/3eme/sequence-2-intelligence-artificielle/seance-4/</loc></url>
   <url><loc>https://ebechalani.github.io/techno/3eme/sequence-2-intelligence-artificielle/fiche-de-connaissance/</loc></url>
   <url><loc>https://ebechalani.github.io/techno/3eme/sequence-3-reseau-informatique/</loc></url>
+  <url><loc>https://ebechalani.github.io/techno/3eme/sequence-3-reseau-informatique/jeu-intro/</loc></url>
   <url><loc>https://ebechalani.github.io/techno/3eme/sequence-3-reseau-informatique/seance-1/</loc></url>
   <url><loc>https://ebechalani.github.io/techno/3eme/sequence-3-reseau-informatique/seance-2/</loc></url>
   <url><loc>https://ebechalani.github.io/techno/3eme/sequence-3-reseau-informatique/seance-3/</loc></url>
@@ -118,6 +137,7 @@
   <url><loc>https://ebechalani.github.io/techno/3eme/fonctions-solutions-techniques/</loc></url>
   <url><loc>https://ebechalani.github.io/techno/snt/</loc></url>
   <url><loc>https://ebechalani.github.io/techno/snt/theme-2-internet/</loc></url>
+  <url><loc>https://ebechalani.github.io/techno/snt/theme-2-internet/jeu-intro/</loc></url>
   <url><loc>https://ebechalani.github.io/techno/snt/theme-2-internet/tcpip/</loc></url>
   <url><loc>https://ebechalani.github.io/techno/snt/theme-2-internet/fiche-de-revision/</loc></url>
   <url><loc>https://ebechalani.github.io/techno/snt/theme-2-internet/routage/</loc></url>
@@ -126,28 +146,34 @@
   <url><loc>https://ebechalani.github.io/techno/snt/theme-2-internet/dns-et-reseaux-pair-a-pair/</loc></url>
   <url><loc>https://ebechalani.github.io/techno/snt/theme-2-internet/support-du-cours/</loc></url>
   <url><loc>https://ebechalani.github.io/techno/snt/theme-3-web/</loc></url>
+  <url><loc>https://ebechalani.github.io/techno/snt/theme-3-web/jeu-intro/</loc></url>
   <url><loc>https://ebechalani.github.io/techno/snt/theme-3-web/1-histoire-du-web/</loc></url>
   <url><loc>https://ebechalani.github.io/techno/snt/theme-3-web/2-fonctionnement-du-web/</loc></url>
   <url><loc>https://ebechalani.github.io/techno/snt/theme-3-web/3-lecriture-dune-page-web/</loc></url>
   <url><loc>https://ebechalani.github.io/techno/snt/theme-3-web/4-le-langage-htmlcss-2/</loc></url>
   <url><loc>https://ebechalani.github.io/techno/snt/theme-3-web/5-programmer-la-popularite-dune-page/</loc></url>
   <url><loc>https://ebechalani.github.io/techno/snt/theme-reseaux-sociaux/</loc></url>
+  <url><loc>https://ebechalani.github.io/techno/snt/theme-reseaux-sociaux/jeu-intro/</loc></url>
   <url><loc>https://ebechalani.github.io/techno/snt/theme-reseaux-sociaux/seance-1/</loc></url>
   <url><loc>https://ebechalani.github.io/techno/snt/theme-reseaux-sociaux/seance-2/</loc></url>
   <url><loc>https://ebechalani.github.io/techno/snt/theme-reseaux-sociaux/seance-3/</loc></url>
   <url><loc>https://ebechalani.github.io/techno/snt/theme-donnees-structurees/</loc></url>
+  <url><loc>https://ebechalani.github.io/techno/snt/theme-donnees-structurees/jeu-intro/</loc></url>
   <url><loc>https://ebechalani.github.io/techno/snt/theme-donnees-structurees/seance-1/</loc></url>
   <url><loc>https://ebechalani.github.io/techno/snt/theme-donnees-structurees/seance-2/</loc></url>
   <url><loc>https://ebechalani.github.io/techno/snt/theme-donnees-structurees/seance-3/</loc></url>
   <url><loc>https://ebechalani.github.io/techno/snt/theme-4-photographie/</loc></url>
+  <url><loc>https://ebechalani.github.io/techno/snt/theme-4-photographie/jeu-intro/</loc></url>
   <url><loc>https://ebechalani.github.io/techno/snt/theme-4-photographie/parite-1-loeil-et-le-capteur-numerique/</loc></url>
   <url><loc>https://ebechalani.github.io/techno/snt/theme-4-photographie/partie-2-formats-des-images/</loc></url>
   <url><loc>https://ebechalani.github.io/techno/snt/theme-4-photographie/3-programmer-traiter-une-image/</loc></url>
   <url><loc>https://ebechalani.github.io/techno/snt/theme-5-geolocalisation/</loc></url>
+  <url><loc>https://ebechalani.github.io/techno/snt/theme-5-geolocalisation/jeu-intro/</loc></url>
   <url><loc>https://ebechalani.github.io/techno/snt/theme-5-geolocalisation/seance-1/</loc></url>
   <url><loc>https://ebechalani.github.io/techno/snt/theme-5-geolocalisation/la-geolocalisation-par-satellite/</loc></url>
   <url><loc>https://ebechalani.github.io/techno/snt/theme-5-geolocalisation/le-protocole-nmea/</loc></url>
   <url><loc>https://ebechalani.github.io/techno/snt/theme-informatique-embarquee/</loc></url>
+  <url><loc>https://ebechalani.github.io/techno/snt/theme-informatique-embarquee/jeu-intro/</loc></url>
   <url><loc>https://ebechalani.github.io/techno/snt/theme-informatique-embarquee/seance-1/</loc></url>
   <url><loc>https://ebechalani.github.io/techno/snt/theme-informatique-embarquee/seance-2/</loc></url>
   <url><loc>https://ebechalani.github.io/techno/snt/theme-informatique-embarquee/seance-3/</loc></url>

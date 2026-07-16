@@ -19,6 +19,59 @@
       "resources": [],
       "pages": [
         {
+          "slug": "jeu-intro",
+          "kind": "jeu",
+          "num": 0,
+          "title": "🎮 Opération Paquet Perdu",
+          "shortTitle": "🎮 Jeu d'intro",
+          "tagline": "Votre message a été découpé en morceaux et lâché dans le réseau… saurez-vous le faire arriver entier ?",
+          "objectifs_md": "",
+          "content_md": "## 🎯 Le défi\n\nCe matin, un message ultra-important devait arriver au lycée. Problème : en chemin, il a été découpé en petits morceaux, mélangé, et certains fragments sont passés par le Japon pendant que d'autres traversaient l'Atlantique. Panique ? Pas du tout : c'est exactement ainsi qu'Internet fonctionne, des milliards de fois par seconde. Votre mission : comprendre comment un message peut être découpé, expédié dans tous les sens… et arriver quand même intact.\n\n## 🧰 Matériel et organisation\n\n- **Durée** : 40 minutes\n- **Équipes** : un îlot de 4 = une équipe. Choisissez un nom d'équipe (ex. *Les Routeurs Masqués*, *Fibre Force*…).\n- **Rôles** : un **rapporteur** (annonce les réponses), un **coureur PC** (seul autorisé à aller aux ordinateurs en U), un **gardien du temps**, un **secrétaire** (remplit la feuille).\n- **Le professeur prépare** : le tableau pour les scores et une paire de ciseaux par îlot. C'est tout.\n\n## 🕹️ Déroulé\n\n### Manche 1 — Le message en morceaux (12 min, à l'îlot)\n\n1. Découpez les cartes-paquets en bas de cette page et mélangez-les soigneusement.\n2. Échangez votre tas de cartes avec l'îlot voisin, puis retournez cette feuille face cachée : pendant la reconstitution, seules les cartes comptent !\n3. Au top départ : reconstituez le message reçu. Attention, un intrus s'est glissé dans le tas !\n\n**Barème** : message reconstitué dans le bon ordre **+10 pts** ; intrus identifié et justifié **+3 pts** ; première équipe à terminer **+2 pts bonus**.\n\nQu'est-ce qui vous a permis de remettre les morceaux dans le bon ordre ?\n……………………………………\n\nÀ votre avis, pourquoi ne pas envoyer le message en un seul bloc ?\n……………………………………\n\n### Manche 2 — La course aux sigles (12 min, PC en U)\n\nInternet parle en sigles. Le coureur PC part chercher les réponses sur un ordinateur du U : une question à la fois, il revient dicter la réponse au secrétaire avant de repartir.\n\nQue signifie **IP** (dans « adresse IP ») ?\n……………………………………\n\nQue signifie **DNS**, et à quoi sert-il (une phrase) ?\n……………………………………\n\nQue signifie **FAI** ?\n……………………………………\n\nQue fait un **routeur** (une phrase) ?\n……………………………………\n\n**Barème** : **+2 pts** par réponse correcte, **+1 pt bonus** si l'équipe termine avant la fin du chrono.\n\n### Manche 3 — Dessinez la route (10 min, à l'îlot)\n\nLe secrétaire dessine, au dos de la feuille ou sur un brouillon, le voyage d'un message envoyé depuis un téléphone à Beyrouth vers un serveur à Paris. Soyez précis : que devient le message au départ ? Par où passe-t-il ? Que se passe-t-il si un câble est coupé en route ? Le rapporteur présente le dessin en 30 secondes.\n\n**Barème** : **+2 pts** par idée juste dessinée ou légendée (découpage en morceaux, machines intermédiaires, plusieurs chemins possibles, remise en ordre à l'arrivée…), maximum 10 pts.\n\n## 🏆 Score et débrief\n\nAdditionnez les points des trois manches au tableau : l'équipe gagnante reçoit le titre de **Maîtres du Routage**. Terminez par le Défi éclair en bas de page.\n\n**Débrief oral (5 min)** :\n- Pourquoi découper les messages en petits paquets plutôt que de les envoyer d'un seul bloc ?\n- Si un chemin est coupé, le message arrive quand même : qu'est-ce que cela nous apprend sur la solidité d'Internet ?\n- Qui remet le message en ordre : l'expéditeur, le réseau ou le destinataire ?\n\nCes questions sont exactement celles de la séquence qui commence : *comment les données voyagent-elles sur Internet ?*\n\n---\n\n### ✂️ À découper — les cartes-paquets (manche 1)\n\n| Carte | Contenu |\n|---|---|\n| Paquet **1/8** — destinataire : îlot voisin | LES DONNÉES |\n| Paquet **2/8** — destinataire : îlot voisin | VOYAGENT |\n| Paquet **3/8** — destinataire : îlot voisin | SUR INTERNET |\n| Paquet **4/8** — destinataire : îlot voisin | EN PETITS |\n| Paquet **5/8** — destinataire : îlot voisin | PAQUETS |\n| Paquet **6/8** — destinataire : îlot voisin | NUMÉROTÉS |\n| Paquet **7/8** — destinataire : îlot voisin | QUI PRENNENT |\n| Paquet **8/8** — destinataire : îlot voisin | DES CHEMINS DIFFÉRENTS |\n| Paquet **4/6** — destinataire : collège d'à côté | PIZZA QUATRE FROMAGES |",
+          "resources": [],
+          "quiz": [
+            {
+              "q": "Sur Internet, un long message est envoyé…",
+              "options": [
+                "en un seul gros bloc",
+                "découpé en petits paquets",
+                "uniquement la nuit, quand le réseau est libre"
+              ],
+              "answer": 1,
+              "explain": "Comme dans le jeu, chaque message est découpé en paquets numérotés qui voyagent séparément."
+            },
+            {
+              "q": "À quoi sert un routeur ?",
+              "options": [
+                "À imprimer les messages",
+                "À choisir le chemin des paquets",
+                "À stocker toutes les photos du monde"
+              ],
+              "answer": 1,
+              "explain": "Le routeur est l'aiguilleur du réseau : il oriente chaque paquet vers la suite de son trajet."
+            },
+            {
+              "q": "Le DNS sert à…",
+              "options": [
+                "traduire un nom de site en adresse IP",
+                "bloquer les virus",
+                "accélérer le Wi-Fi"
+              ],
+              "answer": 0,
+              "explain": "C'est l'annuaire d'Internet : il transforme un nom facile à retenir en adresse numérique."
+            },
+            {
+              "q": "Si une route est coupée sur Internet…",
+              "options": [
+                "tout le réseau s'arrête",
+                "il faut redémarrer sa box",
+                "les paquets prennent un autre chemin"
+              ],
+              "answer": 2,
+              "explain": "Le réseau est maillé : il existe presque toujours un chemin de secours pour les paquets."
+            }
+          ]
+        },
+        {
           "slug": "tcpip",
           "kind": "annexe",
           "num": null,
@@ -108,6 +161,59 @@
       "intro_md": "## L'organisation de la séquence sur le WEB\n\n### Le découpage de la séquence\n\n1. Histoire du web;\n\n2. Les mots du web;\n\n3. Fonctionnement du web : url/http;\n\n4. Écrire des sites web : html/css;\n\n5. Moteur de recherche;\n\n### Projet/minisite\n\nUn mini site sur un thème à choisir parmi une liste imposée\n\n### L'évaluation\n\nL'évaluation sur ce thème sera double:\n\n- Un socrative portant sur les savoirs de la séquence\n\n- Une note sur le mini site.",
       "resources": [],
       "pages": [
+        {
+          "slug": "jeu-intro",
+          "kind": "jeu",
+          "num": 0,
+          "title": "🎮 Les Coulisses du Web",
+          "shortTitle": "🎮 Jeu d'intro",
+          "tagline": "Derrière chaque page web se cache un code secret… aujourd'hui, vous passez côté coulisses.",
+          "objectifs_md": "",
+          "content_md": "## 🎯 Le défi\n\nVous regardez des pages web tous les jours. Mais vous êtes-vous déjà demandé ce qu'il y a *derrière* ? Qui écrit ce que vous voyez ? D'où vient la page quand vous tapez une adresse ? Et comment un moteur de recherche retrouve-t-il une page parmi des milliards ? Aujourd'hui, on soulève le rideau : bienvenue dans les coulisses du Web.\n\n## 🧰 Matériel et organisation\n\n- **Durée** : 40 minutes\n- **Équipes** : un îlot de 4 = une équipe, avec un nom d'équipe (ex. *Les Balises Rouges*, *Team 404*…).\n- **Rôles** : un **rapporteur**, un **coureur PC** (seul à aller aux ordinateurs en U), un **gardien du temps**, un **secrétaire**.\n- **Le professeur prépare** : le tableau pour les scores, des ciseaux par îlot, et il note au tableau le nom d'une page du site de la classe à ouvrir en manche 1.\n\n## 🕹️ Déroulé\n\n### Manche 1 — Sous le capot (12 min, PC en U)\n\nLe coureur PC ouvre la page du site de la classe indiquée au tableau, puis appuie sur **Ctrl + U** (ou clic droit → « Afficher le code source »). Surprise : voilà ce que reçoit réellement votre ordinateur ! Le coureur fait des allers-retours pour rapporter les réponses au secrétaire.\n\nRecopiez un mot ou un morceau de texte de la page que vous retrouvez aussi dans le code source :\n……………………………………\n\nRecopiez une « étiquette » du code écrite entre les signes < et > (on appelle cela une balise) :\n……………………………………\n\nÀ votre avis, qui a envoyé ce code à votre ordinateur ?\n……………………………………\n\n**Barème** : **+3 pts** par réponse correcte, **+2 pts bonus** si l'équipe repère la balise qui contient le titre de la page.\n\n### Manche 2 — Les paires du Web (12 min, à l'îlot)\n\nDécoupez les cartes en bas de page : 6 mots, 6 rôles. Retournez ensuite cette feuille face cachée, mélangez les cartes faces cachées au centre de l'îlot et jouez au memory : chacun retourne deux cartes à son tour ; si l'équipe estime que le mot et le rôle vont ensemble, la paire est gagnée ; sinon, on repose les cartes faces cachées. À la fin, recopiez vos associations ci-dessous : elles seront vérifiées lors de la correction en classe entière.\n\nVos associations :\n……………………………………\n\n**Barème** : **+2 pts** par paire correcte à la correction (maximum 12 pts).\n\n### Manche 3 — Le procès du Web (8 min, à l'îlot)\n\nDébat-éclair : « **Le Web et Internet, est-ce la même chose ?** » Chaque équipe écrit sa réponse (oui/non) et jusqu'à 3 arguments. Le rapporteur a 30 secondes pour plaider.\n\nVotre verdict et vos arguments :\n……………………………………\n\n**Barème** : **+1 pt** par argument recevable, **+3 pts** si le verdict est correct (indice : l'un des deux existait avant l'autre…).\n\n## 🏆 Score et débrief\n\nTotal des trois manches au tableau : l'équipe gagnante est nommée **Webmestre d'honneur**. Terminez par le Défi éclair en bas de page.\n\n**Débrief oral (5 min)** :\n- Une page web, c'est du texte, du code… mais qui l'envoie, et qui l'affiche ?\n- Que fait votre navigateur avec le code HTML qu'il reçoit ?\n- Et un moteur de recherche, comment fait-il pour connaître des milliards de pages ?\n\nAutant de mystères que la séquence « Le Web » va résoudre.\n\n---\n\n### ✂️ À découper — les paires du Web (manche 2)\n\n| Cartes MOT | Cartes RÔLE |\n|---|---|\n| HTML | Le langage qui décrit le contenu de la page (titres, textes, images) |\n| CSS | Le langage qui décore la page (couleurs, tailles, mise en page) |\n| Navigateur | Le programme qui reçoit le code et affiche la page à l'écran |\n| Serveur web | L'ordinateur distant qui envoie la page quand on la lui demande |\n| URL | L'adresse unique qui permet de trouver une page |\n| Moteur de recherche | Le service qui explore le Web et retrouve les pages pour vous |",
+          "resources": [],
+          "quiz": [
+            {
+              "q": "Pour afficher une page web, votre navigateur…",
+              "options": [
+                "fabrique la page tout seul",
+                "demande la page à un serveur qui la lui envoie",
+                "reçoit la page par SMS"
+              ],
+              "answer": 1,
+              "explain": "C'est le duo client-serveur : le navigateur demande, le serveur envoie."
+            },
+            {
+              "q": "Le langage qui décrit le contenu d'une page web s'appelle…",
+              "options": [
+                "USB",
+                "JPEG",
+                "HTML"
+              ],
+              "answer": 2,
+              "explain": "C'est le code que vous avez vu avec Ctrl + U : des balises HTML autour du contenu."
+            },
+            {
+              "q": "CSS sert surtout à…",
+              "options": [
+                "mettre en forme la page (couleurs, mise en page)",
+                "envoyer des e-mails",
+                "protéger l'ordinateur des virus"
+              ],
+              "answer": 0,
+              "explain": "HTML pose le squelette de la page, CSS s'occupe de la décoration."
+            },
+            {
+              "q": "Google est…",
+              "options": [
+                "le Web tout entier",
+                "un moteur de recherche parmi d'autres",
+                "un navigateur"
+              ],
+              "answer": 1,
+              "explain": "C'est un service qui retrouve des pages : le Web existe avec ou sans lui, et d'autres moteurs existent."
+            }
+          ]
+        },
         {
           "slug": "1-histoire-du-web",
           "kind": "annexe",
@@ -220,6 +326,59 @@
       "intro_md": "Depuis le premier réseau social en 1995, ces plateformes ont transformé la façon dont nous communiquons : en 2018, on estimait à **3,2 milliards** le nombre d'utilisateurs actifs dans le monde. Ce thème explique **comment fonctionnent les réseaux sociaux**, **comment ils gagnent de l'argent**, comment les mathématiques (les **graphes**) décrivent nos relations, et **comment se protéger** de la cyberviolence.",
       "resources": [],
       "pages": [
+        {
+          "slug": "jeu-intro",
+          "kind": "jeu",
+          "num": 0,
+          "title": "🎮 Le Prix du Gratuit",
+          "shortTitle": "🎮 Jeu d'intro",
+          "tagline": "Si c'est gratuit… qui paie ? Une enquête en trois manches sur les coulisses de vos applis préférées.",
+          "objectifs_md": "",
+          "content_md": "## 🎯 Le défi\n\nDes milliards de personnes utilisent chaque jour des applications qui ne leur coûtent pas un centime. Pourtant, ces entreprises comptent parmi les plus riches du monde. Étrange, non ? Et pendant ce temps, un mystérieux utilisateur, **Alex_2010**, publie tranquillement sa vie en ligne sans se douter de ce qu'il révèle… Trois enquêtes vous attendent pour percer le secret des réseaux sociaux.\n\n## 🧰 Matériel et organisation\n\n- **Durée** : 45 minutes\n- **Équipes** : un îlot de 4 = une équipe, avec un nom d'équipe (ex. *Les Followers Fantômes*, *Hashtag Force*…).\n- **Rôles** : un **rapporteur**, un **coureur PC** (seul à aller aux ordinateurs en U), un **gardien du temps**, un **secrétaire**.\n- **Le professeur prépare** : le tableau pour les scores et des ciseaux par îlot.\n\n## 🕹️ Déroulé\n\n### Manche 1 — Portrait-robot numérique (12 min, à l'îlot)\n\nVoici les cinq dernières publications d'Alex_2010 :\n\n> 1. « Premier jour en 2nde au lycée Jules-Verne, la cantine est pas mal 😋 » *(posté un 1er septembre à 12 h 47)*\n> 2. « Encore gagné 3-0 ! Fier de mon équipe 💪 » *(photo d'un maillot de handball, posté un mercredi à 18 h 30)*\n> 3. « Trop hâte de fêter mes 15 ans samedi 🎂 »\n> 4. « Le bus 12 encore en retard, j'habite trop loin 😤 » *(posté à 7 h 15)*\n> 5. « Ma sœur a eu son bac, bravo Léa ! »\n\nEn équipe, dressez le portrait-robot d'Alex_2010 : notez toutes les informations que l'on peut déduire de ses publications (et comment).\n\n……………………………………\n\n**Barème** : **+1 pt** par information exacte et justifiée (âge, classe, lycée, sport et jour d'entraînement, ligne de bus, prénom de sa sœur…), maximum 8 pts. **+2 pts bonus** si l'équipe explique en quoi ces informations pourraient être utilisées contre lui.\n\n### Manche 2 — La course aux chiffres (12 min, PC en U)\n\nLe coureur PC part vérifier ces informations sur un ordinateur du U, une question à la fois.\n\nCombien coûte l'inscription aux grands réseaux sociaux (Instagram, TikTok…) ?\n……………………………………\n\nQuel est l'âge minimum officiel pour s'y inscrire ?\n……………………………………\n\nD'où vient l'essentiel de l'argent gagné par ces entreprises ?\n……………………………………\n\nCombien d'utilisateurs compte le plus grand réseau social du monde (environ) ?\n……………………………………\n\n**Barème** : **+2 pts** par réponse correcte, **+1 pt bonus** si l'équipe termine dans le temps.\n\n### Manche 3 — Six poignées de main (12 min, à l'îlot)\n\nDécoupez les cartes-personnages en bas de page. Chaque carte indique un prénom et ses amis. Mission :\n\n1. Dessinez le réseau : un point par personne, un trait par lien d'amitié.\n2. Trouvez le chemin le plus court pour relier **Zoé** à **Karim** en passant d'ami en ami.\n\nChemin trouvé (liste des prénoms) et nombre de liens :\n……………………………………\n\n**Barème** : réseau dessiné sans erreur **+5 pts** ; chemin le plus court trouvé **+5 pts** ; **+2 pts bonus** si vous trouvez aussi un second chemin plus long et comparez.\n\n## 🏆 Score et débrief\n\nTotal des trois manches au tableau : l'équipe gagnante est sacrée **Agence d'enquête numérique de l'année**. Terminez par le Défi éclair en bas de page.\n\n**Débrief oral (5 min)** :\n- Alex_2010 n'a jamais donné son adresse : pourquoi a-t-on quand même appris autant de choses sur lui ?\n- Si l'inscription est gratuite mais que l'entreprise est milliardaire, que vend-elle exactement, et à qui ?\n- Sur votre dessin, combien de liens suffisent pour relier deux inconnus ? Que se passerait-il avec des milliards de personnes ?\n\nIdentité numérique, économie de la gratuité, petit monde : voilà tout le programme de la séquence.\n\n---\n\n### ✂️ À découper — les cartes-personnages (manche 3)\n\n| Personnage | Ses amis |\n|---|---|\n| **Anna** | Bilal, Chloé |\n| **Bilal** | Anna, Dina |\n| **Chloé** | Anna, Émile |\n| **Dina** | Bilal, Karim |\n| **Émile** | Chloé, Fatou |\n| **Fatou** | Émile, Gabriel, Zoé |\n| **Gabriel** | Fatou, Karim |\n| **Karim** | Dina, Gabriel |\n| **Zoé** | Fatou |",
+          "resources": [],
+          "quiz": [
+            {
+              "q": "Les réseaux sociaux gratuits gagnent surtout de l'argent grâce…",
+              "options": [
+                "aux dons des utilisateurs",
+                "à la publicité ciblée",
+                "aux abonnements obligatoires"
+              ],
+              "answer": 1,
+              "explain": "Votre attention et vos données servent à afficher des publicités très ciblées : c'est ça, le prix du gratuit."
+            },
+            {
+              "q": "L'âge minimum officiel pour s'inscrire sur la plupart des réseaux sociaux est…",
+              "options": [
+                "18 ans",
+                "aucun, c'est libre",
+                "13 ans"
+              ],
+              "answer": 2,
+              "explain": "Les conditions d'utilisation fixent presque toujours 13 ans, même si c'est peu vérifié."
+            },
+            {
+              "q": "D'après l'expérience du « petit monde », deux inconnus sur Terre sont reliés en moyenne par…",
+              "options": [
+                "environ 6 relations",
+                "environ 600 relations",
+                "rien du tout, c'est impossible"
+              ],
+              "answer": 0,
+              "explain": "Comme dans votre graphe, quelques poignées de main suffisent : c'est l'effet petit monde."
+            },
+            {
+              "q": "Une photo publiée puis supprimée d'un réseau social…",
+              "options": [
+                "disparaît partout et pour toujours",
+                "a pu être copiée et peut ressurgir",
+                "devient automatiquement payante"
+              ],
+              "answer": 1,
+              "explain": "Une fois publiée, une image peut être enregistrée ou repartagée : on perd le contrôle dessus."
+            }
+          ]
+        },
         {
           "slug": "seance-1",
           "kind": "seance",
@@ -400,6 +559,59 @@
       "intro_md": "Nous produisons chaque jour d'énormes quantités de **données**. Pour être utiles, elles doivent être **structurées**, c'est-à-dire organisées de façon claire, puis **traitées** (triées, filtrées, croisées). Ce thème te fait manipuler des **données réelles**, découvrir le format **CSV**, le **tableur** et un peu de **Python**, puis réfléchir à la **protection des données** (RGPD) et à l'**empreinte écologique** de leur stockage.",
       "resources": [],
       "pages": [
+        {
+          "slug": "jeu-intro",
+          "kind": "jeu",
+          "num": 0,
+          "title": "🎮 Opération Fichier Secret",
+          "shortTitle": "🎮 Jeu d'intro",
+          "tagline": "Des étiquettes en vrac, un nuage bien mystérieux… remettez de l'ordre dans les données avant qu'il ne soit trop tard.",
+          "objectifs_md": "",
+          "content_md": "## 🎯 Le défi\n\nCatastrophe au club multisports : le fichier des adhérents est tombé par terre et toutes les fiches se sont mélangées ! Pour ne rien arranger, on murmure que certaines informations n'auraient jamais dû se retrouver dans ce fichier… Votre mission : reconstruire les données proprement, découvrir où elles dorment vraiment quand on parle de « cloud », et décider qui a le droit de garder quoi.\n\n## 🧰 Matériel et organisation\n\n- **Durée** : 45 minutes\n- **Équipes** : un îlot de 4 = une équipe, avec un nom d'équipe (ex. *Les Archivistes de l'Ombre*, *Data Squad*…).\n- **Rôles** : un **rapporteur**, un **coureur PC** (seul à aller aux ordinateurs en U), un **gardien du temps**, un **secrétaire**.\n- **Le professeur prépare** : le tableau pour les scores et des ciseaux par îlot.\n\n## 🕹️ Déroulé\n\n### Manche 1 — Le grand désordre (14 min, à l'îlot)\n\nDécoupez les fiches en vrac en bas de page : chaque fiche décrit un adhérent, mais chacune est écrite n'importe comment. Mission : construire une **table propre** (un tableau) au dos de la feuille, avec une colonne par type d'information et une ligne par personne. À vous de choisir et de nommer les colonnes !\n\nPuis répondez grâce à votre table :\n\nQui a moins de 15 ans ?\n……………………………………\n\nClassez les adhérents du plus jeune au plus âgé (les ex æquo sont permis) :\n……………………………………\n\nQuel problème pose la fiche de Jade ?\n……………………………………\n\n**Barème** : table correcte avec colonnes nommées **+6 pts** ; **+2 pts** par question juste ; **+2 pts bonus** à la première équipe qui explique pourquoi la table est plus pratique que les fiches en vrac.\n\n### Manche 2 — Tête dans le nuage (12 min, PC en U)\n\nLe coureur PC part enquêter sur un ordinateur du U, une question à la fois.\n\nQue signifie le sigle **CSV**, et à quoi ressemble un tel fichier ?\n……………………………………\n\nQuand on enregistre une photo « dans le cloud », où est-elle stockée physiquement ?\n……………………………………\n\nQue signifie **RGPD**, et à quoi sert ce règlement (une phrase) ?\n……………………………………\n\n**Barème** : **+3 pts** par réponse correcte, **+1 pt bonus** si l'équipe termine dans le temps.\n\n### Manche 3 — Ont-ils le droit ? (10 min, à l'îlot)\n\nDébat-éclair. Le professeur lit trois situations ; pour chacune, l'équipe vote « acceptable » ou « pas acceptable » et le rapporteur donne une justification en une phrase.\n\n1. La cantine du lycée garde la liste des allergies alimentaires des élèves.\n2. Un club de sport publie les numéros de téléphone de ses membres sur son site public.\n3. Un jeu gratuit sur téléphone envoie la liste de tes contacts à des entreprises de publicité.\n\nVos votes et vos arguments :\n……………………………………\n\n**Barème** : **+2 pts** par justification claire (quel que soit le vote), **+1 pt bonus** par situation si l'équipe précise qui devrait donner son accord.\n\n## 🏆 Score et débrief\n\nTotal des trois manches au tableau : l'équipe gagnante reçoit le label **Gardiens des Données**. Terminez par le Défi éclair en bas de page.\n\n**Débrief oral (5 min)** :\n- Pourquoi ranger les données en table (lignes et colonnes) plutôt qu'en vrac ? Qu'est-ce que cela permet de faire très vite ?\n- Le « cloud » est-il vraiment un nuage ? Qui garde réellement vos photos ?\n- Toutes les données méritent-elles la même protection ? Qui décide ?\n\nTables, tri, filtres, cloud et RGPD : c'est tout le menu de la séquence « Les données structurées ».\n\n---\n\n### ✂️ À découper — les fiches en vrac (manche 1)\n\n| Fiche |\n|---|\n| « Nadia, basket, habite Beyrouth, 15 ans » |\n| « 14 ans — Omar — natation — Saïda » |\n| « escalade / Tripoli / Lily / 16 ans » |\n| « Marc habite Jounieh, il a 15 ans et joue au tennis » |\n| « Jade, 15 ans, ville : ??? , sport : ??? » |",
+          "resources": [],
+          "quiz": [
+            {
+              "q": "Dans une table de données, une ligne représente en général…",
+              "options": [
+                "une personne ou un objet",
+                "une couleur",
+                "un mot de passe"
+              ],
+              "answer": 0,
+              "explain": "Une ligne = un adhérent du club ; les colonnes décrivent ses caractéristiques."
+            },
+            {
+              "q": "Un fichier CSV contient…",
+              "options": [
+                "des vidéos compressées",
+                "des données séparées par des virgules",
+                "des jeux gratuits"
+              ],
+              "answer": 1,
+              "explain": "CSV signifie « Comma-Separated Values » : des valeurs séparées par des virgules, une ligne par fiche."
+            },
+            {
+              "q": "Le « cloud », c'est en réalité…",
+              "options": [
+                "un nuage au-dessus de nos têtes",
+                "l'air qui transporte le Wi-Fi",
+                "des serveurs bien réels installés quelque part sur Terre"
+              ],
+              "answer": 2,
+              "explain": "Vos fichiers sont stockés dans d'immenses centres de données, des bâtiments remplis de serveurs."
+            },
+            {
+              "q": "Le RGPD est…",
+              "options": [
+                "un format d'image",
+                "un règlement qui protège les données personnelles",
+                "un réseau social européen"
+              ],
+              "answer": 1,
+              "explain": "Ce règlement européen encadre la collecte et l'utilisation des données personnelles."
+            }
+          ]
+        },
         {
           "slug": "seance-1",
           "kind": "seance",
@@ -584,6 +796,59 @@
       "resources": [],
       "pages": [
         {
+          "slug": "jeu-intro",
+          "kind": "jeu",
+          "num": 0,
+          "title": "🎮 Enquête au Pixel Près",
+          "shortTitle": "🎮 Jeu d'intro",
+          "tagline": "Une image mystère, un zoom fatal et une photo trop bavarde : trois indices pour percer le secret des images numériques.",
+          "objectifs_md": "",
+          "content_md": "## 🎯 Le défi\n\nUn influenceur poste une simple photo de son petit-déjeuner. Deux heures plus tard, des inconnus sonnent à sa porte. Comment ont-ils trouvé son adresse ? Pour le découvrir, il va falloir comprendre de quoi une photo numérique est réellement faite… et ce qu'elle raconte dans notre dos. Ouvrez l'œil : l'enquête commence au pixel près.\n\n## 🧰 Matériel et organisation\n\n- **Durée** : 40 minutes\n- **Équipes** : un îlot de 4 = une équipe, avec un nom d'équipe (ex. *Les Pixels Masqués*, *Brigade RVB*…).\n- **Rôles** : un **rapporteur**, un **coureur PC** (seul à aller aux ordinateurs en U), un **gardien du temps**, un **secrétaire**.\n- **Le professeur prépare** : le tableau pour les scores, des ciseaux et un crayon bien noir (ou feutre) par îlot.\n\n## 🕹️ Déroulé\n\n### Manche 1 — L'image mystère (12 min, à l'îlot)\n\nDécoupez la grille vierge en bas de page. Le secrétaire noircit les cases selon le code ci-dessous : un **1** = case noircie, un **0** = case laissée blanche. Les autres membres dictent, ligne par ligne. Dès que l'équipe reconnaît l'image, le rapporteur lève la main et l'annonce à voix basse au professeur.\n\n- Ligne 1 : 0 1 1 0 0 1 1 0\n- Ligne 2 : 1 1 1 1 1 1 1 1\n- Ligne 3 : 1 1 1 1 1 1 1 1\n- Ligne 4 : 0 1 1 1 1 1 1 0\n- Ligne 5 : 0 0 1 1 1 1 0 0\n- Ligne 6 : 0 0 0 1 1 0 0 0\n\nCombien de cases (de « pixels ») contient votre grille ?\n……………………………………\n\nL'image est un peu grossière… Que faudrait-il changer pour obtenir un dessin plus fin et plus détaillé ?\n……………………………………\n\nAvec des 0 et des 1, on ne fait que du noir et blanc. Proposez une idée pour coder des cases en couleur :\n……………………………………\n\n**Barème** : image reconnue et grille exacte **+8 pts** ; **+2 pts** par question avec une réponse pertinente ; **+2 pts bonus** à la première équipe qui termine.\n\n### Manche 2 — Zoom fatal (12 min, PC en U)\n\nLe coureur PC file vers un ordinateur du U, une mission à la fois.\n\nMission 1 : ouvrez n'importe quelle image (fond d'écran, photo d'une page du site de la classe…) et zoomez au maximum. Que voyez-vous apparaître ?\n……………………………………\n\nMission 2 (recherche) : que signifie « 12 mégapixels » sur la fiche d'un smartphone ?\n……………………………………\n\nMission 3 (recherche) : quelles sont les trois couleurs de base qu'un écran mélange pour fabriquer toutes les autres ?\n……………………………………\n\n**Barème** : **+3 pts** par mission réussie, **+1 pt bonus** si tout est terminé dans le temps.\n\n### Manche 3 — La photo bavarde (10 min, à l'îlot)\n\nRetour à notre influenceur : sa photo de petit-déjeuner a suffi pour retrouver son adresse. En équipe, listez toutes les informations qu'une photo peut transporter **sans qu'on les voie à l'image**, et tout ce que l'image elle-même peut trahir.\n\nVos hypothèses :\n……………………………………\n\n**Barème** : **+2 pts** par idée plausible (lieu de prise de vue, date et heure, modèle d'appareil, reflets ou détails visibles à l'arrière-plan…), maximum 8 pts.\n\n## 🏆 Score et débrief\n\nTotal des trois manches au tableau : l'équipe gagnante reçoit le titre d'**Experts en image**. Terminez par le Défi éclair en bas de page.\n\n**Débrief oral (5 min)** :\n- Une photo numérique, au fond, c'est quoi ? Des couleurs… ou des nombres ?\n- Pourquoi une photo de 12 millions de pixels est-elle plus détaillée que votre grille de 48 cases ?\n- Que devrait-on vérifier avant de publier une photo en ligne ?\n\nPixels, codage RVB, résolution, métadonnées EXIF : la séquence « Photographie numérique » répondra à tout cela.\n\n---\n\n### ✂️ À découper — la grille de l'image mystère (manche 1)\n\n|   | A | B | C | D | E | F | G | H |\n|---|---|---|---|---|---|---|---|---|\n| **1** |  |  |  |  |  |  |  |  |\n| **2** |  |  |  |  |  |  |  |  |\n| **3** |  |  |  |  |  |  |  |  |\n| **4** |  |  |  |  |  |  |  |  |\n| **5** |  |  |  |  |  |  |  |  |\n| **6** |  |  |  |  |  |  |  |  |",
+          "resources": [],
+          "quiz": [
+            {
+              "q": "Une image numérique est composée…",
+              "options": [
+                "de petites cases appelées pixels",
+                "de gouttes d'encre",
+                "d'ondes lumineuses stockées dans le fichier"
+              ],
+              "answer": 0,
+              "explain": "Comme votre grille : une image est une mosaïque de pixels, chacun codé par des nombres."
+            },
+            {
+              "q": "Les trois couleurs de base des écrans (codage RVB) sont…",
+              "options": [
+                "rouge, jaune, bleu",
+                "rouge, vert, bleu",
+                "rose, violet, blanc"
+              ],
+              "answer": 1,
+              "explain": "RVB = Rouge, Vert, Bleu : leur mélange lumineux fabrique toutes les couleurs de l'écran."
+            },
+            {
+              "q": "Plus une image contient de pixels…",
+              "options": [
+                "plus elle est détaillée",
+                "plus elle est floue",
+                "moins elle a de couleurs"
+              ],
+              "answer": 0,
+              "explain": "C'est la résolution : votre grille de 48 pixels était grossière, 12 millions de pixels donnent une image fine."
+            },
+            {
+              "q": "Les métadonnées EXIF d'une photo peuvent révéler…",
+              "options": [
+                "vos mots de passe",
+                "votre moyenne en SNT",
+                "le lieu et la date de la prise de vue"
+              ],
+              "answer": 2,
+              "explain": "L'appareil enregistre discrètement ces informations dans le fichier : c'est ainsi qu'une photo devient bavarde."
+            }
+          ]
+        },
+        {
           "slug": "parite-1-loeil-et-le-capteur-numerique",
           "kind": "annexe",
           "num": null,
@@ -734,6 +999,59 @@
       "resources": [],
       "pages": [
         {
+          "slug": "jeu-intro",
+          "kind": "jeu",
+          "num": 0,
+          "title": "🎮 Opération Triangulation",
+          "shortTitle": "🎮 Jeu d'intro",
+          "tagline": "Un trésor, trois balises et zéro GPS : retrouvez une position exacte comme un satellite le ferait.",
+          "objectifs_md": "",
+          "content_md": "## 🎯 Le défi\n\nVotre téléphone sait où vous êtes, presque au mètre près, n'importe où sur la planète. Pourtant, il ne « voit » rien : pas de caméra pointée sur vous, personne qui vous suit. Alors comment fait-il ? Pour percer ce mystère, vous allez d'abord retrouver un trésor à l'ancienne, avec de simples distances… et découvrir que c'est exactement ce que font les satellites au-dessus de vos têtes.\n\n## 🧰 Matériel et organisation\n\n- **Durée** : 40 minutes\n- **Équipes** : un îlot de 4 = une équipe, avec un nom d'équipe (ex. *Les Boussoles Folles*, *Satellite Squad*…).\n- **Rôles** : un **rapporteur**, un **coureur PC** (seul à aller aux ordinateurs en U), un **gardien du temps**, un **secrétaire**.\n- **Le professeur prépare** : le tableau pour les scores et des ciseaux par îlot.\n\n## 🕹️ Déroulé\n\n### Manche 1 — Le trésor sans GPS (15 min, à l'îlot)\n\nDécoupez la carte quadrillée en bas de page. Trois balises y sont placées : le **Phare (P)** en B2, le **Moulin (M)** en I3 et la **Tour (T)** en E9. Les distances se comptent **en cases, en se déplaçant horizontalement et verticalement** (jamais en diagonale).\n\n**Temps 1 — deux indices seulement** :\n- Le trésor est à **6 cases du Phare**.\n- Le trésor est à **4 cases du Moulin**.\n\nTrouvez TOUTES les cases possibles :\n……………………………………\n\n**Temps 2 — l'indice décisif** :\n- Le trésor est à **6 cases de la Tour**.\n\nLa case du trésor est :\n……………………………………\n\nPourquoi deux balises ne suffisaient-elles pas ?\n……………………………………\n\n**Barème** : **+3 pts** par case correcte au temps 1 (il y en a deux !), **−1 pt** par case fausse ; **+5 pts** pour la case exacte du trésor au temps 2 ; **+2 pts** pour une explication claire.\n\n### Manche 2 — Les yeux du ciel (12 min, PC en U)\n\nLe coureur PC part enquêter sur un ordinateur du U, une question à la fois.\n\nCombien de satellites environ composent la constellation GPS ?\n……………………………………\n\nLe GPS est américain : comment s'appelle le système européen équivalent ?\n……………………………………\n\nQui dessine et met à jour les cartes du projet OpenStreetMap ?\n……………………………………\n\n**Barème** : **+3 pts** par réponse correcte, **+1 pt bonus** si l'équipe termine dans le temps.\n\n### Manche 3 — Téléphone espion ? (8 min, à l'îlot)\n\nDébat-éclair : « **Même avec le GPS désactivé, votre téléphone peut souvent savoir où vous êtes. Comment ?** » Chaque équipe écrit un maximum d'hypothèses, le rapporteur les défend en 30 secondes.\n\nVos hypothèses :\n……………………………………\n\n**Barème** : **+2 pts** par hypothèse plausible (antennes de téléphonie, réseaux Wi-Fi voisins, adresse IP…), maximum 6 pts.\n\n## 🏆 Score et débrief\n\nTotal des trois manches au tableau : l'équipe gagnante est promue au rang de **Grands Navigateurs**. Terminez par le Défi éclair en bas de page.\n\n**Débrief oral (5 min)** :\n- Dans la chasse au trésor, il fallait trois balises pour une position unique : quel rapport avec les satellites GPS ?\n- Personne ne mesure la distance à un satellite avec un mètre ruban : comment votre téléphone la connaît-il quand même ? (Indice : à quelle vitesse voyage le signal du satellite ?)\n- Une carte numérique qui affiche votre position : qui l'a dessinée, et comment reste-t-elle à jour ?\n\nSatellites, trilatération, cartes numériques : voilà la séquence « Localisation et cartographie » lancée.\n\n---\n\n### ✂️ À découper — la carte au trésor (manche 1)\n\n|   | A | B | C | D | E | F | G | H | I | J |\n|---|---|---|---|---|---|---|---|---|---|---|\n| **1** |  |  |  |  |  |  |  |  |  |  |\n| **2** |  | P |  |  |  |  |  |  |  |  |\n| **3** |  |  |  |  |  |  |  |  | M |  |\n| **4** |  |  |  |  |  |  |  |  |  |  |\n| **5** |  |  |  |  |  |  |  |  |  |  |\n| **6** |  |  |  |  |  |  |  |  |  |  |\n| **7** |  |  |  |  |  |  |  |  |  |  |\n| **8** |  |  |  |  |  |  |  |  |  |  |\n| **9** |  |  |  |  | T |  |  |  |  |  |\n| **10** |  |  |  |  |  |  |  |  |  |  |",
+          "resources": [],
+          "quiz": [
+            {
+              "q": "Pour connaître sa position précise, un récepteur GPS a besoin…",
+              "options": [
+                "d'un seul satellite",
+                "des signaux d'au moins 3 ou 4 satellites",
+                "d'une connexion Internet rapide"
+              ],
+              "answer": 1,
+              "explain": "Comme dans la chasse au trésor : avec une ou deux distances, plusieurs positions restent possibles."
+            },
+            {
+              "q": "Avec seulement 2 repères de distance, on trouve…",
+              "options": [
+                "toujours une seule position",
+                "plusieurs positions possibles",
+                "aucune position du tout"
+              ],
+              "answer": 1,
+              "explain": "Vous l'avez vécu au temps 1 : deux indices laissaient encore deux cases candidates."
+            },
+            {
+              "q": "Les satellites GPS envoient en permanence…",
+              "options": [
+                "des signaux contenant l'heure exacte et leur position",
+                "des photos de la Terre",
+                "du Wi-Fi gratuit"
+              ],
+              "answer": 0,
+              "explain": "Le récepteur mesure le temps de trajet du signal pour en déduire sa distance à chaque satellite."
+            },
+            {
+              "q": "Les cartes du projet OpenStreetMap sont réalisées…",
+              "options": [
+                "automatiquement par les satellites",
+                "par des contributeurs bénévoles du monde entier",
+                "à la main par chaque gouvernement"
+              ],
+              "answer": 1,
+              "explain": "C'est une carte collaborative, un peu comme une encyclopédie que chacun peut compléter."
+            }
+          ]
+        },
+        {
           "slug": "seance-1",
           "kind": "seance",
           "num": 1,
@@ -781,6 +1099,59 @@
       "intro_md": "Un ordinateur ne se trouve pas seulement sur ton bureau : il y en a **cachés dans des milliers d'objets** — voitures, avions, montres, machines à laver. Ce sont des **systèmes embarqués**. On estimait à environ **50 milliards** le nombre d'objets connectés dans le monde en 2020. Ce thème explique **comment ces objets perçoivent leur environnement, agissent dessus, dialoguent avec l'utilisateur**, et quels **risques** ils posent.",
       "resources": [],
       "pages": [
+        {
+          "slug": "jeu-intro",
+          "kind": "jeu",
+          "num": 0,
+          "title": "🎮 Mission : Machines Cachées",
+          "shortTitle": "🎮 Jeu d'intro",
+          "tagline": "Des ordinateurs se cachent partout autour de vous — dans la voiture, la cafetière, la trousse ? Débusquez-les.",
+          "objectifs_md": "",
+          "content_md": "## 🎯 Le défi\n\nOn vous a menti : vous ne possédez pas *un* ordinateur, vous en possédez des dizaines. Ils sont minuscules, silencieux, sans écran ni clavier, et ils travaillent en cachette dans les objets de votre quotidien. Certains vous écoutent, d'autres vous mesurent, d'autres agissent à votre place. Votre mission : les débusquer, comprendre comment ils perçoivent le monde… et vous demander ce qui se passerait si quelqu'un en prenait le contrôle.\n\n## 🧰 Matériel et organisation\n\n- **Durée** : 45 minutes\n- **Équipes** : un îlot de 4 = une équipe, avec un nom d'équipe (ex. *Les Chasseurs de Puces*, *Team Robot*…).\n- **Rôles** : un **rapporteur**, un **coureur PC** (seul à aller aux ordinateurs en U), un **gardien du temps**, un **secrétaire**.\n- **Le professeur prépare** : le tableau pour les scores, des ciseaux par îlot ; en option, les comptes Tinkercad si la version A de la manche 3 est choisie.\n\n## 🕹️ Déroulé\n\n### Manche 1 — La chasse aux ordinateurs cachés (10 min, à l'îlot)\n\nChrono : 5 minutes. Listez un maximum d'objets du quotidien qui contiennent un ordinateur caché (un objet qui « décide » quelque chose tout seul contient sûrement une puce…). Puis mise en commun : chaque rapporteur lit sa liste à tour de rôle.\n\nVotre liste :\n……………………………………\n\n**Barème** : **+1 pt** par objet valide (**+2 pts** au lieu de 1 si aucune autre équipe ne l'a trouvé). Le professeur tranche les cas litigieux (une fourchette ? non ; une brosse à dents connectée ? oui !).\n\n### Manche 2 — Capteur ou actionneur ? (12 min, à l'îlot)\n\nDécoupez les 12 cartes en bas de page. Triez-les en deux tas : **« il perçoit »** (l'objet mesure ou détecte quelque chose) et **« il agit »** (l'objet produit un mouvement, un son, de la lumière…). Attention, deux ou trois cartes sont piégeuses. Correction en classe entière.\n\n**Barème** : **+1 pt** par carte bien placée (maximum 12 pts).\n\n### Manche 3 — Le défi du coureur (15 min, PC en U)\n\n**Version A (si le professeur a préparé les comptes Tinkercad, le simulateur de circuits utilisé plus tard dans la séquence)** : le coureur PC ouvre le montage d'exemple indiqué par le professeur et doit faire **clignoter la LED**. L'équipe peut envoyer un conseiller différent toutes les 3 minutes pour l'aider. **+8 pts** si la LED clignote avant la fin du chrono, **+4 pts** si elle s'allume sans clignoter.\n\n**Version B (recherche chronométrée)** : le coureur PC rapporte les réponses une par une.\n\nCombien d'ordinateurs (calculateurs) contient une voiture récente, environ ?\n……………………………………\n\nQue signifie « objet connecté » (une phrase) ?\n……………………………………\n\nCitez un objet connecté qui pourrait devenir dangereux s'il était piraté, et pourquoi :\n……………………………………\n\n**Barème (version B)** : **+2 pts** par réponse correcte, **+2 pts bonus** si le danger cité est bien justifié.\n\n## 🏆 Score et débrief\n\nTotal des trois manches au tableau : l'équipe gagnante devient la **Brigade de l'embarqué**. Terminez par le Défi éclair en bas de page.\n\n**Débrief oral (5 min)** :\n- Ces ordinateurs cachés n'ont ni écran ni clavier : comment savent-ils ce qui se passe autour d'eux, et comment agissent-ils ?\n- Comment l'humain communique-t-il quand même avec eux (boutons, voyants, applications…) ?\n- Un objet qui décide tout seul, c'est pratique… mais que se passe-t-il s'il se trompe ou s'il est piraté ?\n\nSystèmes embarqués, capteurs, actionneurs, IHM, sûreté et sécurité : la séquence commence exactement là.\n\n---\n\n### ✂️ À découper — les cartes de la manche 2\n\n| Carte | Carte | Carte |\n|---|---|---|\n| Thermomètre électronique | Moteur | Micro |\n| Haut-parleur | Caméra | LED (petite lampe) |\n| Bouton-poussoir | Vibreur de téléphone | Capteur de luminosité |\n| Pompe à eau | Détecteur de mouvement | Écran |",
+          "resources": [],
+          "quiz": [
+            {
+              "q": "Un capteur sert à…",
+              "options": [
+                "mesurer ou détecter quelque chose",
+                "faire bouger quelque chose",
+                "afficher de la publicité"
+              ],
+              "answer": 0,
+              "explain": "Le capteur est le sens du système : il perçoit la température, la lumière, le mouvement…"
+            },
+            {
+              "q": "Un actionneur, c'est par exemple…",
+              "options": [
+                "un thermomètre",
+                "un moteur",
+                "un micro"
+              ],
+              "answer": 1,
+              "explain": "L'actionneur agit sur le monde : moteur, haut-parleur, LED, vibreur…"
+            },
+            {
+              "q": "Une voiture récente contient…",
+              "options": [
+                "aucun ordinateur, juste un moteur",
+                "un seul ordinateur, derrière l'autoradio",
+                "des dizaines d'ordinateurs cachés"
+              ],
+              "answer": 2,
+              "explain": "Freinage, airbags, moteur, aides à la conduite : chaque fonction a ses calculateurs embarqués."
+            },
+            {
+              "q": "IHM signifie…",
+              "options": [
+                "Interface Homme-Machine",
+                "Internet Haute Mémoire",
+                "Image Haute Netteté"
+              ],
+              "answer": 0,
+              "explain": "C'est tout ce qui permet à l'humain de communiquer avec la machine : boutons, écrans, voyants, applis."
+            }
+          ]
+        },
         {
           "slug": "seance-1",
           "kind": "seance",

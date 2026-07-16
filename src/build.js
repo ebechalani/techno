@@ -354,6 +354,7 @@ function pageKindBadge(page) {
     case "synthese": return '<span class="badge">📌 Synthèse</span>';
     case "ressources": return '<span class="badge badge-res">📚 Ressources</span>';
     case "evaluation": return '<span class="badge badge-res">📝 Évaluation</span>';
+    case "jeu": return '<span class="badge badge-new">🎮 Jeu d\'introduction</span>';
     default: return "";
   }
 }
@@ -505,6 +506,7 @@ function renderSequence(site, meta, section, seq, seqIndex) {
       p.kind === "ressources" ? "📚" :
       p.kind === "synthese" ? "📌" :
       p.kind === "evaluation" ? "📝" :
+      p.kind === "jeu" ? "🎮" :
       String(p.num ?? i + 1);
     return `
     <a class="seance-item" href="./${p.slug}/" style="--accent:${meta.color};--accent-soft:${meta.colorSoft}">

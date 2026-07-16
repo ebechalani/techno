@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="fr" data-base="../../../" data-section="4eme">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>🎮 « Panique au Carrefour » — réparez le feu avant l'heure de pointe · Feu tricolore avec Arduino — Technologie &amp; SNT</title>
+<meta name="description" content="Un orage a grillé le programme du feu tricolore : réécrivez sa logique et apprenez à câbler sans rien faire fumer.">
+<meta property="og:title" content="🎮 « Panique au Carrefour » — réparez le feu avant l'heure de pointe · Feu tricolore avec Arduino — Technologie &amp; SNT">
+<meta property="og:description" content="Un orage a grillé le programme du feu tricolore : réécrivez sa logique et apprenez à câbler sans rien faire fumer.">
+<meta property="og:type" content="website">
+<link rel="icon" href="../../../assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lexend:wght@500;600;700;800&family=Caveat:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../../assets/styles.css">
+<script>
+(function(){try{var t=localStorage.getItem("lmtechno-theme");if(!t)t=window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light";document.documentElement.setAttribute("data-theme",t);}catch(e){}})();
+(function(){try{var s=JSON.parse(localStorage.getItem("lmtechno-eleve")||"null");if(!s||!s.section)return;var d=document.documentElement,cur=d.getAttribute("data-section")||"",base=d.getAttribute("data-base")||"./";if(cur==="home"||(cur&&cur!==s.section))location.replace(base+s.section+"/");}catch(e){}})();
+</script>
+<script src="../../../assets/firebase-config.js"></script>
+
+</head>
+<body>
+<a class="skip-link" href="#contenu">Aller au contenu</a>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="../../../index.html">
+      <span class="brand-logo">T</span>
+      <span>Technologie <span style="color:var(--muted);font-weight:500">&amp;</span> SNT
+        <small>Lycée Montaigne, Beit Chabab</small>
+      </span>
+    </a>
+    
+<nav class="main-nav" id="main-nav" aria-label="Navigation principale">
+  <a href="../../../index.html">Accueil</a>
+  <a href="../../../5eme/" style="--dot:#0d9268">5ème</a>
+  <a href="../../../4eme/" style="--dot:#2050d0" aria-current="true">4ème</a>
+  <a href="../../../3eme/" style="--dot:#7c3aed">3ème</a>
+  <a href="../../../snt/" style="--dot:#d9640f">2nde SNT</a>
+  <a href="../../../sicit/" style="--dot:#0d8e9c">SI · CIT</a>
+  <a class="nav-account" href="../../../connexion/">👤 Espace</a>
+</nav>
+    <div class="header-actions">
+      <button class="search-btn" id="search-open" type="button" aria-label="Rechercher">
+        <span>🔍</span><span class="label">Rechercher</span><kbd>Ctrl K</kbd>
+      </button>
+      <button class="icon-btn" id="theme-toggle" type="button" aria-label="Changer de thème">🌙</button>
+      <button class="icon-btn nav-toggle" id="nav-toggle" type="button" aria-label="Menu" aria-expanded="false">☰</button>
+    </div>
+  </div>
+</header>
+<main id="contenu">
+
+<nav class="breadcrumbs wrap" aria-label="Fil d'Ariane">
+    <a href="../../../index.html">Accueil</a><span class="sep">›</span>
+    <a href="../../">4ème</a><span class="sep">›</span>
+    <a href="../">Feu tricolore avec Arduino</a><span class="sep">›</span>
+    <span class="current">🎮 « Panique au Carrefour » — réparez le feu avant l'heure de pointe</span>
+  </nav>
+<div class="wrap course-layout">
+  <aside class="sidebar" style="--accent:undefined;--accent-soft:undefined;">
+    <div class="sb-title"><span class="dot"></span>4ème </div>
+    <nav>
+    <details>
+      <summary><a href="../../sequence-0-ia-generative/" style="all:unset;cursor:pointer">L'IA générative comme assistant personnel</a></summary>
+      <div class="sb-pages">
+        <a href="../../sequence-0-ia-generative/jeu-intro/">🎮 Jeu d'intro</a>
+        <a href="../../sequence-0-ia-generative/seance-1/">Séance 1</a>
+        <a href="../../sequence-0-ia-generative/seance-1-corr/">Séance 1 — correction</a>
+        <a href="../../sequence-0-ia-generative/creer-un-prompt-efficace/">Créer un prompt efficace</a>
+        <a href="../../sequence-0-ia-generative/prompts-avantages-et-biais/">Prompts, avantages et biais</a>
+      </div>
+    </details>
+    <details>
+      <summary><a href="../../sequence-1-ia-securite/" style="all:unset;cursor:pointer">IA générative et sécurité des données</a></summary>
+      <div class="sb-pages">
+        <a href="../../sequence-1-ia-securite/jeu-intro/">🎮 Jeu d'intro</a>
+        <a href="../../sequence-1-ia-securite/seance-1/">Séance 1</a>
+        <a href="../../sequence-1-ia-securite/seance-1-corr/">Séance 1 — correction</a>
+        <a href="../../sequence-1-ia-securite/seance-2/">Séance 2</a>
+        <a href="../../sequence-1-ia-securite/seance-2-corr/">Séance 2 — correction</a>
+        <a href="../../sequence-1-ia-securite/ressources/">Ressources</a>
+      </div>
+    </details>
+    <details>
+      <summary><a href="../../sequence-depanner-reparer/" style="all:unset;cursor:pointer">Dépanner et réparer un objet technique</a></summary>
+      <div class="sb-pages">
+        <a href="../../sequence-depanner-reparer/jeu-intro/">🎮 Jeu d'intro</a>
+        <a href="../../sequence-depanner-reparer/seance-1/">Séance 1</a>
+        <a href="../../sequence-depanner-reparer/seance-2/">Séance 2</a>
+      </div>
+    </details>
+    <details>
+      <summary><a href="../../sequence-objet-developpement-durable/" style="all:unset;cursor:pointer">Choisir un objet dans un contexte de développement durable</a></summary>
+      <div class="sb-pages">
+        <a href="../../sequence-objet-developpement-durable/jeu-intro/">🎮 Jeu d'intro</a>
+        <a href="../../sequence-objet-developpement-durable/seance-1/">Séance 1</a>
+        <a href="../../sequence-objet-developpement-durable/seance-2/">Séance 2</a>
+      </div>
+    </details>
+    <details>
+      <summary><a href="../../sequence-materiaux-procedes/" style="all:unset;cursor:pointer">Matériaux et procédés de fabrication</a></summary>
+      <div class="sb-pages">
+        <a href="../../sequence-materiaux-procedes/jeu-intro/">🎮 Jeu d'intro</a>
+        <a href="../../sequence-materiaux-procedes/seance-1/">Séance 1</a>
+        <a href="../../sequence-materiaux-procedes/seance-2/">Séance 2</a>
+      </div>
+    </details>
+    <details>
+      <summary><a href="../../sequence-1-reseau-informatique/" style="all:unset;cursor:pointer">Le réseau informatique</a></summary>
+      <div class="sb-pages">
+        <a href="../../sequence-1-reseau-informatique/jeu-intro/">🎮 Jeu d'intro</a>
+        <a href="../../sequence-1-reseau-informatique/seance-1/">Séance 1</a>
+        <a href="../../sequence-1-reseau-informatique/seance-2/">Séance 2</a>
+        <a href="../../sequence-1-reseau-informatique/seance-3/">Séance 3</a>
+        <a href="../../sequence-1-reseau-informatique/seance-4/">Séance 4</a>
+      </div>
+    </details>
+    <details>
+      <summary><a href="../../sequence-2-portail-automatise/" style="all:unset;cursor:pointer">Portail automatisé</a></summary>
+      <div class="sb-pages">
+        <a href="../../sequence-2-portail-automatise/jeu-intro/">🎮 Jeu d'intro</a>
+        <a href="../../sequence-2-portail-automatise/seance-0/">Séance 0</a>
+        <a href="../../sequence-2-portail-automatise/seance-1/">Séance 1</a>
+        <a href="../../sequence-2-portail-automatise/seance-1-corr/">Séance 1 — correction</a>
+        <a href="../../sequence-2-portail-automatise/seance-2/">Séance 2</a>
+      </div>
+    </details>
+    <details>
+      <summary><a href="../../sequence-3-objets-connectes/" style="all:unset;cursor:pointer">Les objets connectés</a></summary>
+      <div class="sb-pages">
+        <a href="../../sequence-3-objets-connectes/jeu-intro/">🎮 Jeu d'intro</a>
+        <a href="../../sequence-3-objets-connectes/seance-1/">Séance 1</a>
+        <a href="../../sequence-3-objets-connectes/seance-2/">Séance 2</a>
+      </div>
+    </details>
+    <details>
+      <summary><a href="../../sequence-4-microbit/" style="all:unset;cursor:pointer">Programmer un ordinateur de poche</a></summary>
+      <div class="sb-pages">
+        <a href="../../sequence-4-microbit/jeu-intro/">🎮 Jeu d'intro</a>
+        <a href="../../sequence-4-microbit/seance-1/">Séance 1</a>
+        <a href="../../sequence-4-microbit/seance-2/">Séance 2</a>
+        <a href="../../sequence-4-microbit/correction/">Correction</a>
+        <a href="../../sequence-4-microbit/programmer-une-boussolle/">Programmer une boussole</a>
+      </div>
+    </details>
+    <details open>
+      <summary><a href="../../sequence-5-feu-tricolore-arduino/" style="all:unset;cursor:pointer">Feu tricolore avec Arduino</a></summary>
+      <div class="sb-pages">
+        <a href="../../sequence-5-feu-tricolore-arduino/jeu-intro/" aria-current="true">🎮 Jeu d'intro</a>
+        <a href="../../sequence-5-feu-tricolore-arduino/seance-1/">Séance 1</a>
+        <a href="../../sequence-5-feu-tricolore-arduino/seance-2/">Séance 2</a>
+      </div>
+    </details>
+    <details>
+      <summary><a href="../../sequence-6-serre-autonome/" style="all:unset;cursor:pointer">Serre autonome</a></summary>
+      <div class="sb-pages">
+        <a href="../../sequence-6-serre-autonome/jeu-intro/">🎮 Jeu d'intro</a>
+        <a href="../../sequence-6-serre-autonome/seance-0/">Séance 0</a>
+        <a href="../../sequence-6-serre-autonome/seance-1/">Séance 1</a>
+        <a href="../../sequence-6-serre-autonome/seance-2/">Séance 2</a>
+        <a href="../../sequence-6-serre-autonome/seance-3/">Séance 3</a>
+      </div>
+    </details>
+    <details>
+      <summary><a href="../../chaines-fonctionnelles/" style="all:unset;cursor:pointer">Chaînes fonctionnelles</a></summary>
+      <div class="sb-pages">
+        <a href="../../chaines-fonctionnelles/exercices/">Exercices</a>
+        <a href="../../chaines-fonctionnelles/correction/">Correction</a>
+      </div>
+    </details>
+    <details>
+      <summary><a href="../../olympiades-informatique/" style="all:unset;cursor:pointer">Olympiades d'informatique</a></summary>
+      <div class="sb-pages">
+        
+      </div>
+    </details>
+    </nav>
+  </aside>
+  <article>
+    <div class="page-head">
+      <div class="kicker">
+        <span class="badge" style="--badge-bg:#e7edfc;--badge-fg:#2050d0">4e</span>
+        <span class="badge badge-new">🎮 Jeu d'introduction</span>
+        
+      </div>
+      <h1>🎮 « Panique au Carrefour » — réparez le feu avant l'heure de pointe</h1>
+      <p class="desc">Un orage a grillé le programme du feu tricolore : réécrivez sa logique et apprenez à câbler sans rien faire fumer.</p>
+    </div>
+    
+    
+<div class="student-bar">
+  <span class="sb-info">💾 Tes réponses sont enregistrées automatiquement sur cet appareil.</span>
+  <span class="sb-actions">
+    <button class="btn btn-ghost btn-sm" id="print-answers" type="button">🖨 Imprimer / PDF</button>
+    <button class="btn btn-ghost btn-sm" id="clear-answers" type="button">🗑 Tout effacer</button>
+  </span>
+</div>
+    <div class="prose">
+      <h2>🎯 Le défi</h2>
+<p>Cette nuit, un orage a grillé le programme du feu tricolore devant le collège. Résultat ce matin : <strong>vert pour tout le monde, dans tous les sens</strong>. Klaxons, embouteillage, agent de police débordé…</p>
+<p>La mairie appelle vos équipes de dépanneurs. Mais règle d&#39;or du métier : <strong>avant de toucher au moindre fil</strong>, on écrit noir sur blanc l&#39;ordre exact des étapes. Ensuite seulement, on s&#39;entraîne à câbler des lampes… sans rien faire griller. Le carrefour rouvre dans 45 minutes. Top chrono.</p>
+<h2>🧰 Matériel et organisation</h2>
+<ul>
+<li><strong>Durée :</strong> 45 minutes</li>
+<li><strong>Équipes :</strong> un îlot de 4 = une équipe de dépanneurs, avec un nom d&#39;entreprise (2 min).</li>
+<li><strong>Rôles :</strong> le <strong>rapporteur</strong>, le <strong>coureur PC</strong>, le <strong>gardien du temps</strong>, le <strong>secrétaire</strong>.</li>
+<li><strong>Le professeur prépare :</strong> le tableau des scores, des ciseaux par îlot, les PC en U avec le <strong>simulateur de circuits Tinkercad</strong> ouvert (celui de la séquence). En option : trois feuilles rouge, orange et verte par îlot.</li>
+</ul>
+<h2>🕹️ Déroulé</h2>
+<h3>Manche 1 — « Le feu humain » (12 min, à l&#39;îlot)</h3>
+<p>Découpez les cartes-étapes en bas de page et remettez-les dans l&#39;ordre du cycle d&#39;un feu tricolore français (indice : on part du vert allumé).</p>
+<p>Puis test grandeur nature : trois élèves de l&#39;îlot deviennent <strong>les trois lampes</strong> (chacun lève sa feuille de couleur — ou la main — quand « sa » lampe est allumée), le quatrième lit les cartes dans l&#39;ordre. Une équipe voisine joue les piétons et vérifie que personne ne se fait « écraser ».</p>
+<p><strong>Barème :</strong> +1 point par carte bien placée (9 points maximum), +4 si la démonstration du feu humain est validée par l&#39;équipe voisine.</p>
+<p>Question d&#39;équipe : que se passerait-il au carrefour si on oubliait la carte « Éteindre le vert » ?</p>
+<div class="answer-field">
+  <textarea rows="5" data-answer-idx="0" placeholder="✏️ Écris ta réponse ici…" aria-label="Zone de réponse de l'élève"></textarea>
+</div>
+<h3>Manche 2 — « Ne grillez pas la LED ! » (15 min, PC en U)</h3>
+<p>Direction le simulateur : ici, on a le droit de tout casser, ça ne coûte rien. Le coureur part relever le défi A ; à chaque défi validé par le professeur, un autre membre de l&#39;équipe prend le relais.</p>
+<ul>
+<li><strong>Défi A (+3) :</strong> allumer une LED avec la pile <strong>sans la faire exploser</strong>. Indice : un petit composant doit se mettre en travers du courant pour le freiner.</li>
+<li><strong>Défi B (+3) :</strong> faire griller une LED <strong>exprès</strong> (sans le composant protecteur) et noter ce que le simulateur affiche. C&#39;est le seul endroit au monde où c&#39;est permis !</li>
+<li><strong>Défi C (+4) :</strong> montage final : une LED rouge et une LED verte allumées en même temps, toutes les deux protégées.</li>
+</ul>
+<p>Question d&#39;équipe : quel composant a sauvé vos LED, et quel est son rôle à votre avis ?</p>
+<div class="answer-field">
+  <textarea rows="5" data-answer-idx="1" placeholder="✏️ Écris ta réponse ici…" aria-label="Zone de réponse de l'élève"></textarea>
+</div>
+<h3>Manche 3 — « Débat éclair : algorithme ou pas ? » (8 min, à l&#39;îlot)</h3>
+<p>Le professeur lit quatre situations, une par une. Après 30 secondes de discussion, chaque rapporteur annonce le verdict de son équipe : est-ce une <strong>suite d&#39;étapes précises dans un ordre précis</strong>, oui ou non ? Et il justifie en une phrase.</p>
+<p>Situations : une recette de crêpes — une playlist en mode aléatoire — le cycle de notre feu tricolore — l&#39;ordre « range ta chambre » sans plus de détails.</p>
+<p><strong>Barème :</strong> +2 par verdict correct et justifié.</p>
+<h2>🏆 Score et débrief</h2>
+<p>Addition des trois manches : l&#39;équipe gagnante reçoit le marché public de la mairie (et les félicitations de l&#39;agent de police).</p>
+<p>Débrief oral :</p>
+<ul>
+<li>Pourquoi fallait-il écrire les étapes AVANT de brancher quoi que ce soit ?</li>
+<li>Sous quelle forme pourrait-on <strong>dessiner</strong> ce cycle pour le rendre lisible d&#39;un seul coup d&#39;œil ?</li>
+<li>Dans la vraie vie, que risque une LED branchée sans protection ?</li>
+</ul>
+<p>À la séance 1, on apprendra à dessiner ce cycle proprement (l&#39;organigramme) et à câbler nos LED sur une vraie carte Arduino, sans danger.</p>
+<hr>
+<h3>✂️ À découper — les cartes-étapes (manche 1)</h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Allumer le vert</td>
+<td>Attendre 8 secondes</td>
+<td>Éteindre le vert</td>
+</tr>
+<tr>
+<td>Allumer l&#39;orange</td>
+<td>Attendre 3 secondes</td>
+<td>Éteindre l&#39;orange</td>
+</tr>
+<tr>
+<td>Allumer le rouge</td>
+<td>Attendre 8 secondes</td>
+<td>Éteindre le rouge, puis recommencer au début</td>
+</tr>
+</tbody></table>
+
+    </div>
+    
+<section class="quiz" id="quiz">
+  <h2>🧠 Teste tes connaissances</h2>
+  <p class="quiz-hint">Réponds aux questions puis clique sur « Vérifier » — la correction s'affiche aussitôt.</p>
+  
+    <div class="quiz-q" data-ok="0" data-explain="Comme une recette de cuisine : des étapes claires, dans le bon ordre, qu'une machine peut suivre.">
+      <p class="qq-text">1. Un algorithme, c'est…</p>
+      <div class="qq-opts">
+        <label class="qq-opt"><input type="radio" name="q0" value="0"><span>Une suite d'étapes dans un ordre précis</span></label>
+        <label class="qq-opt"><input type="radio" name="q0" value="1"><span>Un composant électronique</span></label>
+        <label class="qq-opt"><input type="radio" name="q0" value="2"><span>Une marque de feu tricolore</span></label>
+      </div>
+      <button class="btn btn-ghost qq-check" type="button">Vérifier ma réponse</button>
+      <div class="qq-feedback" aria-live="polite"></div>
+    </div>
+
+    <div class="quiz-q" data-ok="1" data-explain="La résistance freine le courant : sans elle, la LED reçoit trop de courant et grille.">
+      <p class="qq-text">2. Pour éviter de griller une LED, on ajoute dans le circuit…</p>
+      <div class="qq-opts">
+        <label class="qq-opt"><input type="radio" name="q1" value="0"><span>Une deuxième pile</span></label>
+        <label class="qq-opt"><input type="radio" name="q1" value="1"><span>Une résistance</span></label>
+        <label class="qq-opt"><input type="radio" name="q1" value="2"><span>Un interrupteur en or</span></label>
+      </div>
+      <button class="btn btn-ghost qq-check" type="button">Vérifier ma réponse</button>
+      <div class="qq-feedback" aria-live="polite"></div>
+    </div>
+
+    <div class="quiz-q" data-ok="1" data-explain="L'orange prévient les conducteurs que le rouge arrive : c'est l'étape de transition du cycle.">
+      <p class="qq-text">3. Dans le cycle du feu tricolore français, après le vert vient…</p>
+      <div class="qq-opts">
+        <label class="qq-opt"><input type="radio" name="q2" value="0"><span>Le rouge</span></label>
+        <label class="qq-opt"><input type="radio" name="q2" value="1"><span>L'orange</span></label>
+        <label class="qq-opt"><input type="radio" name="q2" value="2"><span>Le clignotant</span></label>
+      </div>
+      <button class="btn btn-ghost qq-check" type="button">Vérifier ma réponse</button>
+      <div class="qq-feedback" aria-live="polite"></div>
+    </div>
+
+    <div class="quiz-q" data-ok="0" data-explain="Dans le simulateur, une LED « grillée » se remplace d'un clic : on peut expérimenter sans risque ni dépense.">
+      <p class="qq-text">4. Tester son circuit dans un simulateur comme Tinkercad permet…</p>
+      <div class="qq-opts">
+        <label class="qq-opt"><input type="radio" name="q3" value="0"><span>De faire des erreurs sans rien casser</span></label>
+        <label class="qq-opt"><input type="radio" name="q3" value="1"><span>De recharger la pile</span></label>
+        <label class="qq-opt"><input type="radio" name="q3" value="2"><span>De remplacer le professeur</span></label>
+      </div>
+      <button class="btn btn-ghost qq-check" type="button">Vérifier ma réponse</button>
+      <div class="qq-feedback" aria-live="polite"></div>
+    </div>
+  <div class="quiz-score" aria-live="polite"></div>
+</section>
+    
+    <nav class="pager">
+      
+      <a class="pg-next" href="../seance-1/"><span class="pg-label">Suivant →</span><span class="pg-title">Séance 1: observer et décrire la structure d'un objet</span></a>
+    </nav>
+  </article>
+</div>
+</main>
+<footer class="site-footer">
+  <div class="wrap footer-grid">
+    <div>
+      <h4>Technologie &amp; SNT</h4>
+      <p>Site pédagogique regroupant les cours, activités et ressources de Technologie du collège et de SNT du lycée.</p>
+    </div>
+    <div>
+      <h4>Niveaux</h4>
+      <ul>
+        <li><a href="../../../5eme/">5ème</a></li>
+        <li><a href="../../../4eme/">4ème</a></li>
+        <li><a href="../../../3eme/">3ème</a></li>
+        <li><a href="../../../snt/">2nde SNT</a></li>
+        <li><a href="../../../sicit/">SI · CIT</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Références</h4>
+      <ul>
+        <li><a href="https://eduscol.education.fr/2098/technologie-au-cycle-4" target="_blank" rel="noopener">Programme de Technologie (Eduscol)</a></li>
+        <li><a href="https://eduscol.education.fr/3016/sciences-numeriques-et-technologie-au-lycee" target="_blank" rel="noopener">Programme SNT (Eduscol)</a></li>
+        <li><a href="https://pix.fr" target="_blank" rel="noopener">Pix — compétences numériques</a></li>
+        <li><a href="https://sites.google.com/view/lmtechno25" target="_blank" rel="noopener">Site d'origine (Google Sites)</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="wrap footer-bottom">
+    <span>© M. Eddy Bachaalany · Lycée Montaigne, Beit Chabab</span>
+    <span>Cours de Technologie collège &amp; SNT lycée</span>
+  </div>
+</footer>
+<div class="search-overlay" id="search-overlay" role="dialog" aria-label="Recherche">
+  <div class="search-panel">
+    <div class="search-input-row">
+      <span>🔍</span>
+      <input id="search-input" type="search" placeholder="Rechercher une séquence, une séance, une notion…" autocomplete="off">
+      <kbd>Échap</kbd>
+    </div>
+    <div class="search-results" id="search-results"></div>
+  </div>
+</div>
+<button class="back-to-top" id="back-to-top" type="button" aria-label="Retour en haut">↑</button>
+<script src="../../../assets/client.js" defer></script>
+</body>
+</html>

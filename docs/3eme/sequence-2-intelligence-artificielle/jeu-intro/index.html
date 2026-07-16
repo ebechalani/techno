@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="fr" data-base="../../../" data-section="3eme">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>🎮 Dresse ta machine ! — l'IA, c'est vous qui l'entraînez · Intelligence artificielle — Technologie &amp; SNT</title>
+<meta name="description" content="Une machine qui ne sait rien, des créatures inconnues, et des équipes qui vont échouer sans comprendre pourquoi… c'est prévu.">
+<meta property="og:title" content="🎮 Dresse ta machine ! — l'IA, c'est vous qui l'entraînez · Intelligence artificielle — Technologie &amp; SNT">
+<meta property="og:description" content="Une machine qui ne sait rien, des créatures inconnues, et des équipes qui vont échouer sans comprendre pourquoi… c'est prévu.">
+<meta property="og:type" content="website">
+<link rel="icon" href="../../../assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lexend:wght@500;600;700;800&family=Caveat:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../../assets/styles.css">
+<script>
+(function(){try{var t=localStorage.getItem("lmtechno-theme");if(!t)t=window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light";document.documentElement.setAttribute("data-theme",t);}catch(e){}})();
+(function(){try{var s=JSON.parse(localStorage.getItem("lmtechno-eleve")||"null");if(!s||!s.section)return;var d=document.documentElement,cur=d.getAttribute("data-section")||"",base=d.getAttribute("data-base")||"./";if(cur==="home"||(cur&&cur!==s.section))location.replace(base+s.section+"/");}catch(e){}})();
+</script>
+<script src="../../../assets/firebase-config.js"></script>
+
+</head>
+<body>
+<a class="skip-link" href="#contenu">Aller au contenu</a>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="../../../index.html">
+      <span class="brand-logo">T</span>
+      <span>Technologie <span style="color:var(--muted);font-weight:500">&amp;</span> SNT
+        <small>Lycée Montaigne, Beit Chabab</small>
+      </span>
+    </a>
+    
+<nav class="main-nav" id="main-nav" aria-label="Navigation principale">
+  <a href="../../../index.html">Accueil</a>
+  <a href="../../../5eme/" style="--dot:#0d9268">5ème</a>
+  <a href="../../../4eme/" style="--dot:#2050d0">4ème</a>
+  <a href="../../../3eme/" style="--dot:#7c3aed" aria-current="true">3ème</a>
+  <a href="../../../snt/" style="--dot:#d9640f">2nde SNT</a>
+  <a href="../../../sicit/" style="--dot:#0d8e9c">SI · CIT</a>
+  <a class="nav-account" href="../../../connexion/">👤 Espace</a>
+</nav>
+    <div class="header-actions">
+      <button class="search-btn" id="search-open" type="button" aria-label="Rechercher">
+        <span>🔍</span><span class="label">Rechercher</span><kbd>Ctrl K</kbd>
+      </button>
+      <button class="icon-btn" id="theme-toggle" type="button" aria-label="Changer de thème">🌙</button>
+      <button class="icon-btn nav-toggle" id="nav-toggle" type="button" aria-label="Menu" aria-expanded="false">☰</button>
+    </div>
+  </div>
+</header>
+<main id="contenu">
+
+<nav class="breadcrumbs wrap" aria-label="Fil d'Ariane">
+    <a href="../../../index.html">Accueil</a><span class="sep">›</span>
+    <a href="../../">3ème</a><span class="sep">›</span>
+    <a href="../">Intelligence artificielle</a><span class="sep">›</span>
+    <span class="current">🎮 Dresse ta machine ! — l'IA, c'est vous qui l'entraînez</span>
+  </nav>
+<div class="wrap course-layout">
+  <aside class="sidebar" style="--accent:undefined;--accent-soft:undefined;">
+    <div class="sb-title"><span class="dot"></span>3ème </div>
+    <nav>
+    <details>
+      <summary><a href="../../sequence-1-poubelle-connectee/" style="all:unset;cursor:pointer">La poubelle connectée</a></summary>
+      <div class="sb-pages">
+        <a href="../../sequence-1-poubelle-connectee/jeu-intro/">🎮 Jeu d'intro</a>
+        <a href="../../sequence-1-poubelle-connectee/seance-1/">Séance 1</a>
+        <a href="../../sequence-1-poubelle-connectee/correction/">Correction</a>
+        <a href="../../sequence-1-poubelle-connectee/modelisation-3d-de-la-poubelle/">Modélisation 3d de la poubelle</a>
+        <a href="../../sequence-1-poubelle-connectee/prototype-arduino/">prototype Arduino</a>
+        <a href="../../sequence-1-poubelle-connectee/simulation-tinkercad/">Simulation Tinkercad</a>
+      </div>
+    </details>
+    <details open>
+      <summary><a href="../../sequence-2-intelligence-artificielle/" style="all:unset;cursor:pointer">Intelligence artificielle</a></summary>
+      <div class="sb-pages">
+        <a href="../../sequence-2-intelligence-artificielle/jeu-intro/" aria-current="true">🎮 Jeu d'intro</a>
+        <a href="../../sequence-2-intelligence-artificielle/seance-1/">Séance 1</a>
+        <a href="../../sequence-2-intelligence-artificielle/seance-2/">Séance 2</a>
+        <a href="../../sequence-2-intelligence-artificielle/tuto-videos-teachable-maching/">Tuto vidéos Teachable machine</a>
+        <a href="../../sequence-2-intelligence-artificielle/seance-3/">Séance 3</a>
+        <a href="../../sequence-2-intelligence-artificielle/seance-4/">Séance 4</a>
+        <a href="../../sequence-2-intelligence-artificielle/fiche-de-connaissance/">Fiche de connaissance</a>
+      </div>
+    </details>
+    <details>
+      <summary><a href="../../sequence-3-reseau-informatique/" style="all:unset;cursor:pointer">Réseau informatique</a></summary>
+      <div class="sb-pages">
+        <a href="../../sequence-3-reseau-informatique/jeu-intro/">🎮 Jeu d'intro</a>
+        <a href="../../sequence-3-reseau-informatique/seance-1/">Séance 1</a>
+        <a href="../../sequence-3-reseau-informatique/seance-2/">Séance 2</a>
+        <a href="../../sequence-3-reseau-informatique/seance-3/">Séance 3</a>
+        <a href="../../sequence-3-reseau-informatique/tp/">TP</a>
+      </div>
+    </details>
+    <details>
+      <summary><a href="../../assr-2-pix/" style="all:unset;cursor:pointer">ASSR 2 · Pix</a></summary>
+      <div class="sb-pages">
+        <a href="../../assr-2-pix/assr2/">ASSR 2</a>
+        <a href="../../assr-2-pix/pix/">Pix</a>
+      </div>
+    </details>
+    <details>
+      <summary><a href="../../sessions-dnb/" style="all:unset;cursor:pointer">Préparation au DNB</a></summary>
+      <div class="sb-pages">
+        <a href="../../sessions-dnb/sujets-dnb/">Sujets d'entraînement</a>
+      </div>
+    </details>
+    <details>
+      <summary><a href="../../chaines-fonctionnelles/" style="all:unset;cursor:pointer">Chaînes fonctionnelles</a></summary>
+      <div class="sb-pages">
+        
+      </div>
+    </details>
+    <details>
+      <summary><a href="../../fonctions-solutions-techniques/" style="all:unset;cursor:pointer">Fonctions et solutions techniques</a></summary>
+      <div class="sb-pages">
+        
+      </div>
+    </details>
+    </nav>
+  </aside>
+  <article>
+    <div class="page-head">
+      <div class="kicker">
+        <span class="badge" style="--badge-bg:#f1e9fe;--badge-fg:#7c3aed">3e</span>
+        <span class="badge badge-new">🎮 Jeu d'introduction</span>
+        
+      </div>
+      <h1>🎮 Dresse ta machine ! — l'IA, c'est vous qui l'entraînez</h1>
+      <p class="desc">Une machine qui ne sait rien, des créatures inconnues, et des équipes qui vont échouer sans comprendre pourquoi… c'est prévu.</p>
+    </div>
+    
+    
+<div class="student-bar">
+  <span class="sb-info">💾 Tes réponses sont enregistrées automatiquement sur cet appareil.</span>
+  <span class="sb-actions">
+    <button class="btn btn-ghost btn-sm" id="print-answers" type="button">🖨 Imprimer / PDF</button>
+    <button class="btn btn-ghost btn-sm" id="clear-answers" type="button">🗑 Tout effacer</button>
+  </span>
+</div>
+    <div class="prose">
+      <h2>🎯 Le défi</h2>
+<p>Le laboratoire vient de recevoir <strong>APPRENTI-1</strong>, une machine flambant neuve qui ne sait strictement rien faire. Ni parler, ni trier, ni reconnaître quoi que ce soit. Son mode d&#39;emploi tient en une ligne : <em>« Cette machine apprend uniquement par l&#39;exemple. Ne lui expliquez jamais rien. »</em></p>
+<p>Votre mission : dresser APPRENTI-1 pour qu&#39;elle reconnaisse deux créatures inconnues, les <strong>Zorgs</strong> et les <strong>Bloops</strong>. Attention : à la fin, la machine sera testée sur des créatures qu&#39;elle n&#39;a <strong>jamais vues</strong>. Certaines équipes vont réussir… et d&#39;autres vont échouer sans comprendre pourquoi. C&#39;est prévu.</p>
+<h2>🧰 Matériel et organisation</h2>
+<ul>
+<li><strong>Durée :</strong> 40 à 45 minutes.</li>
+<li><strong>Équipes :</strong> un îlot de 4 = une équipe, avec un nom d&#39;équipe (30 secondes).</li>
+<li><strong>Rôles :</strong> un élève joue <strong>la machine APPRENTI-1</strong> ; les trois autres se répartissent les rôles de <strong>rapporteur</strong>, <strong>coureur PC</strong> et <strong>gardien du temps / secrétaire</strong>.</li>
+<li><strong>Le professeur prépare :</strong> le tableau des scores et une paire de ciseaux par îlot. Discrètement, il attribue à la moitié des îlots le <strong>paquet A</strong> et à l&#39;autre moitié le <strong>paquet B</strong> (en bas de page), <strong>sans dire pourquoi</strong>.</li>
+</ul>
+<h2>🕹️ Déroulé</h2>
+<h3>Manche 1 — Le dressage (15 min, débranchée, à l&#39;îlot)</h3>
+<p>Découpez votre paquet de cartes (A ou B, selon le professeur) et séparez les cartes <strong>ENTRAÎNEMENT</strong> des cartes <strong>TEST</strong>.</p>
+<ol>
+<li><strong>Entraînement (5 min)</strong> : montrez à la machine les 6 cartes ENTRAÎNEMENT, une par une, 15 secondes chacune, en lisant uniquement l&#39;étiquette (« ZORG » ou « BLOOP »). <strong>Interdiction absolue d&#39;expliquer, de commenter ou de faire des gestes.</strong> La machine observe en silence.</li>
+<li><strong>Test (5 min)</strong> : donnez à la machine les 3 cartes TEST, sans étiquette. Elle annonce « Zorg » ou « Bloop » pour chacune, sans aide. Le professeur donne les bonnes réponses à la fin de la manche.</li>
+</ol>
+<p><strong>Barème : +3 points par carte TEST correctement classée (maximum 9 points).</strong></p>
+<p>Quelle règle votre machine pense-t-elle avoir découverte ?</p>
+<div class="answer-field">
+  <textarea rows="3" data-answer-idx="0" placeholder="✏️ Écris ta réponse ici…" aria-label="Zone de réponse de l'élève"></textarea>
+</div>
+<h3>Manche 2 — Vrai ou fake ? (12 min, PC en U)</h3>
+<p>Le professeur lit une affirmation. Le <strong>coureur</strong> file vers un PC en U et dispose de <strong>3 minutes</strong> pour vérifier avec un moteur de recherche, puis revient avec un verdict (VRAI ou FAUX) <strong>et une preuve</strong> (un fait précis ou le nom d&#39;une source).</p>
+<ol>
+<li>« Une intelligence artificielle a déjà battu le champion du monde du jeu de go. »</li>
+<li>« Une machine peut apprendre toute seule, sans qu&#39;on lui fournisse aucune donnée. »</li>
+<li>« Certaines IA de reconnaissance de visages se trompent plus souvent sur certains visages, à cause des photos utilisées pour leur entraînement. »</li>
+</ol>
+<p><strong>Barème : +3 points par verdict correct avec preuve, +1 point si le verdict est correct mais sans preuve.</strong></p>
+<p>Nos verdicts et nos preuves :</p>
+<div class="answer-field">
+  <textarea rows="7" data-answer-idx="1" placeholder="✏️ Écris ta réponse ici…" aria-label="Zone de réponse de l'élève"></textarea>
+</div>
+<h3>Manche 3 — Le procès de la machine (8 min, débat éclair, à l&#39;îlot)</h3>
+<p>Une IA de tri de photos confond les chiens blancs à poils frisés avec des moutons. Elle a été entraînée avec 10 000 photos de moutons… et 12 photos de chiens. <strong>Qui est responsable de l&#39;erreur : la machine, les données ou les humains ?</strong></p>
+<p>Chaque îlot choisit un « accusé », prépare ses arguments pendant 2 minutes, puis le rapporteur plaide en 45 secondes maximum. Chaque équipe vote ensuite pour la meilleure plaidoirie (interdiction de voter pour soi).</p>
+<p><strong>Barème : +4 points pour la plaidoirie gagnante, +2 points pour la deuxième.</strong></p>
+<h2>🏆 Score et débrief</h2>
+<p>Additionnez les trois manches. Avant d&#39;annoncer le vainqueur, le professeur révèle enfin le secret des paquets A et B…</p>
+<p><strong>Débrief oral (5 min) :</strong></p>
+<ul>
+<li>Les machines du paquet B se sont trompées au test. Étaient-elles moins « intelligentes »… ou leurs <strong>exemples d&#39;entraînement</strong> étaient-ils mal choisis ?</li>
+<li>Qu&#39;aurait-il fallu changer dans l&#39;entraînement pour éviter l&#39;erreur ?</li>
+<li>Un élève a appris « par l&#39;exemple » en 5 minutes avec 6 cartes. Comment une <strong>vraie machine</strong> fait-elle, avec des millions d&#39;exemples ? <em>C&#39;est toute la question de la séquence — et nous entraînerons bientôt une vraie IA avec Teachable Machine.</em></li>
+</ul>
+<hr>
+<h2>✂️ Cartes à découper (bas de page)</h2>
+<p><strong>PAQUET A — cartes ENTRAÎNEMENT :</strong></p>
+<table>
+<thead>
+<tr>
+<th>Description de la créature</th>
+<th>Étiquette</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>3 yeux, corps rayé, grande taille</td>
+<td>ZORG</td>
+</tr>
+<tr>
+<td>3 yeux, sans rayures, petite taille</td>
+<td>ZORG</td>
+</tr>
+<tr>
+<td>3 yeux, corps rayé, petite taille</td>
+<td>ZORG</td>
+</tr>
+<tr>
+<td>2 yeux, sans rayures, grande taille</td>
+<td>BLOOP</td>
+</tr>
+<tr>
+<td>2 yeux, corps rayé, petite taille</td>
+<td>BLOOP</td>
+</tr>
+<tr>
+<td>2 yeux, sans rayures, petite taille</td>
+<td>BLOOP</td>
+</tr>
+</tbody></table>
+<p><strong>PAQUET B — cartes ENTRAÎNEMENT :</strong></p>
+<table>
+<thead>
+<tr>
+<th>Description de la créature</th>
+<th>Étiquette</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>3 yeux, corps rayé, grande taille</td>
+<td>ZORG</td>
+</tr>
+<tr>
+<td>3 yeux, corps rayé, petite taille</td>
+<td>ZORG</td>
+</tr>
+<tr>
+<td>3 yeux, corps rayé, grande taille</td>
+<td>ZORG</td>
+</tr>
+<tr>
+<td>2 yeux, sans rayures, petite taille</td>
+<td>BLOOP</td>
+</tr>
+<tr>
+<td>2 yeux, sans rayures, grande taille</td>
+<td>BLOOP</td>
+</tr>
+<tr>
+<td>2 yeux, sans rayures, petite taille</td>
+<td>BLOOP</td>
+</tr>
+</tbody></table>
+<p><strong>Cartes TEST (identiques pour tous les paquets) :</strong></p>
+<table>
+<thead>
+<tr>
+<th>Carte</th>
+<th>Description de la créature</th>
+<th>Étiquette</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>T1</td>
+<td>3 yeux, sans rayures, grande taille</td>
+<td>?</td>
+</tr>
+<tr>
+<td>T2</td>
+<td>2 yeux, corps rayé, grande taille</td>
+<td>?</td>
+</tr>
+<tr>
+<td>T3</td>
+<td>3 yeux, corps rayé, petite taille</td>
+<td>?</td>
+</tr>
+</tbody></table>
+<p><em>Ne lisez pas la ligne suivante avant la fin du test !</em> Réponses (professeur) : T1 = ZORG, T2 = BLOOP, T3 = ZORG. La règle secrète : <strong>un Zorg a toujours 3 yeux</strong> — les rayures ne comptent pas.</p>
+
+    </div>
+    
+<section class="quiz" id="quiz">
+  <h2>🧠 Teste tes connaissances</h2>
+  <p class="quiz-hint">Réponds aux questions puis clique sur « Vérifier » — la correction s'affiche aussitôt.</p>
+  
+    <div class="quiz-q" data-ok="1" data-explain="La machine a déduit la règle toute seule à partir des cartes d'entraînement : c'est le principe de l'apprentissage machine.">
+      <p class="qq-text">1. Comment APPRENTI-1 a-t-il appris à reconnaître les Zorgs ?</p>
+      <div class="qq-opts">
+        <label class="qq-opt"><input type="radio" name="q0" value="0"><span>On lui a expliqué la règle avec des mots</span></label>
+        <label class="qq-opt"><input type="radio" name="q0" value="1"><span>On lui a montré des exemples étiquetés</span></label>
+        <label class="qq-opt"><input type="radio" name="q0" value="2"><span>Il connaissait déjà les Zorgs</span></label>
+      </div>
+      <button class="btn btn-ghost qq-check" type="button">Vérifier ma réponse</button>
+      <div class="qq-feedback" aria-live="polite"></div>
+    </div>
+
+    <div class="quiz-q" data-ok="0" data-explain="Avec des exemples trompeurs, la machine apprend une mauvaise règle : c'est ce qu'on appelle un biais.">
+      <p class="qq-text">2. Pourquoi certaines machines se sont-elles trompées au test ?</p>
+      <div class="qq-opts">
+        <label class="qq-opt"><input type="radio" name="q1" value="0"><span>Leurs exemples d'entraînement étaient mal choisis</span></label>
+        <label class="qq-opt"><input type="radio" name="q1" value="1"><span>Elles n'ont pas assez réfléchi</span></label>
+        <label class="qq-opt"><input type="radio" name="q1" value="2"><span>Les cartes de test étaient truquées</span></label>
+      </div>
+      <button class="btn btn-ghost qq-check" type="button">Vérifier ma réponse</button>
+      <div class="qq-feedback" aria-live="polite"></div>
+    </div>
+
+    <div class="quiz-q" data-ok="1" data-explain="Plus les exemples sont nombreux et variés, plus la règle apprise est fiable.">
+      <p class="qq-text">3. Pour qu'une machine apprenne mieux, il faut surtout…</p>
+      <div class="qq-opts">
+        <label class="qq-opt"><input type="radio" name="q2" value="0"><span>la faire fonctionner plus vite</span></label>
+        <label class="qq-opt"><input type="radio" name="q2" value="1"><span>lui donner des exemples nombreux et variés</span></label>
+        <label class="qq-opt"><input type="radio" name="q2" value="2"><span>lui montrer toujours la même carte</span></label>
+      </div>
+      <button class="btn btn-ghost qq-check" type="button">Vérifier ma réponse</button>
+      <div class="qq-feedback" aria-live="polite"></div>
+    </div>
+
+    <div class="quiz-q" data-ok="2" data-explain="On entraîne d'abord la machine avec des exemples connus, puis on la teste sur des cas nouveaux.">
+      <p class="qq-text">4. En manche 1, la phase où l'on montre les cartes étiquetées s'appelle…</p>
+      <div class="qq-opts">
+        <label class="qq-opt"><input type="radio" name="q3" value="0"><span>le test</span></label>
+        <label class="qq-opt"><input type="radio" name="q3" value="1"><span>la mise à jour</span></label>
+        <label class="qq-opt"><input type="radio" name="q3" value="2"><span>l'entraînement</span></label>
+      </div>
+      <button class="btn btn-ghost qq-check" type="button">Vérifier ma réponse</button>
+      <div class="qq-feedback" aria-live="polite"></div>
+    </div>
+  <div class="quiz-score" aria-live="polite"></div>
+</section>
+    
+    <nav class="pager">
+      
+      <a class="pg-next" href="../seance-1/"><span class="pg-label">Suivant →</span><span class="pg-title">Séance 1: C'est quoi l'intelligence artificielle</span></a>
+    </nav>
+  </article>
+</div>
+</main>
+<footer class="site-footer">
+  <div class="wrap footer-grid">
+    <div>
+      <h4>Technologie &amp; SNT</h4>
+      <p>Site pédagogique regroupant les cours, activités et ressources de Technologie du collège et de SNT du lycée.</p>
+    </div>
+    <div>
+      <h4>Niveaux</h4>
+      <ul>
+        <li><a href="../../../5eme/">5ème</a></li>
+        <li><a href="../../../4eme/">4ème</a></li>
+        <li><a href="../../../3eme/">3ème</a></li>
+        <li><a href="../../../snt/">2nde SNT</a></li>
+        <li><a href="../../../sicit/">SI · CIT</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Références</h4>
+      <ul>
+        <li><a href="https://eduscol.education.fr/2098/technologie-au-cycle-4" target="_blank" rel="noopener">Programme de Technologie (Eduscol)</a></li>
+        <li><a href="https://eduscol.education.fr/3016/sciences-numeriques-et-technologie-au-lycee" target="_blank" rel="noopener">Programme SNT (Eduscol)</a></li>
+        <li><a href="https://pix.fr" target="_blank" rel="noopener">Pix — compétences numériques</a></li>
+        <li><a href="https://sites.google.com/view/lmtechno25" target="_blank" rel="noopener">Site d'origine (Google Sites)</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="wrap footer-bottom">
+    <span>© M. Eddy Bachaalany · Lycée Montaigne, Beit Chabab</span>
+    <span>Cours de Technologie collège &amp; SNT lycée</span>
+  </div>
+</footer>
+<div class="search-overlay" id="search-overlay" role="dialog" aria-label="Recherche">
+  <div class="search-panel">
+    <div class="search-input-row">
+      <span>🔍</span>
+      <input id="search-input" type="search" placeholder="Rechercher une séquence, une séance, une notion…" autocomplete="off">
+      <kbd>Échap</kbd>
+    </div>
+    <div class="search-results" id="search-results"></div>
+  </div>
+</div>
+<button class="back-to-top" id="back-to-top" type="button" aria-label="Retour en haut">↑</button>
+<script src="../../../assets/client.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="fr" data-base="../../../" data-section="snt">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>🎮 Opération Fichier Secret · Les données structurées et leur traitement — Technologie &amp; SNT</title>
+<meta name="description" content="Des étiquettes en vrac, un nuage bien mystérieux… remettez de l'ordre dans les données avant qu'il ne soit trop tard.">
+<meta property="og:title" content="🎮 Opération Fichier Secret · Les données structurées et leur traitement — Technologie &amp; SNT">
+<meta property="og:description" content="Des étiquettes en vrac, un nuage bien mystérieux… remettez de l'ordre dans les données avant qu'il ne soit trop tard.">
+<meta property="og:type" content="website">
+<link rel="icon" href="../../../assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lexend:wght@500;600;700;800&family=Caveat:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../../assets/styles.css">
+<script>
+(function(){try{var t=localStorage.getItem("lmtechno-theme");if(!t)t=window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light";document.documentElement.setAttribute("data-theme",t);}catch(e){}})();
+(function(){try{var s=JSON.parse(localStorage.getItem("lmtechno-eleve")||"null");if(!s||!s.section)return;var d=document.documentElement,cur=d.getAttribute("data-section")||"",base=d.getAttribute("data-base")||"./";if(cur==="home"||(cur&&cur!==s.section))location.replace(base+s.section+"/");}catch(e){}})();
+</script>
+<script src="../../../assets/firebase-config.js"></script>
+
+</head>
+<body>
+<a class="skip-link" href="#contenu">Aller au contenu</a>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="../../../index.html">
+      <span class="brand-logo">T</span>
+      <span>Technologie <span style="color:var(--muted);font-weight:500">&amp;</span> SNT
+        <small>Lycée Montaigne, Beit Chabab</small>
+      </span>
+    </a>
+    
+<nav class="main-nav" id="main-nav" aria-label="Navigation principale">
+  <a href="../../../index.html">Accueil</a>
+  <a href="../../../5eme/" style="--dot:#0d9268">5ème</a>
+  <a href="../../../4eme/" style="--dot:#2050d0">4ème</a>
+  <a href="../../../3eme/" style="--dot:#7c3aed">3ème</a>
+  <a href="../../../snt/" style="--dot:#d9640f" aria-current="true">2nde SNT</a>
+  <a href="../../../sicit/" style="--dot:#0d8e9c">SI · CIT</a>
+  <a class="nav-account" href="../../../connexion/">👤 Espace</a>
+</nav>
+    <div class="header-actions">
+      <button class="search-btn" id="search-open" type="button" aria-label="Rechercher">
+        <span>🔍</span><span class="label">Rechercher</span><kbd>Ctrl K</kbd>
+      </button>
+      <button class="icon-btn" id="theme-toggle" type="button" aria-label="Changer de thème">🌙</button>
+      <button class="icon-btn nav-toggle" id="nav-toggle" type="button" aria-label="Menu" aria-expanded="false">☰</button>
+    </div>
+  </div>
+</header>
+<main id="contenu">
+
+<nav class="breadcrumbs wrap" aria-label="Fil d'Ariane">
+    <a href="../../../index.html">Accueil</a><span class="sep">›</span>
+    <a href="../../">2nde SNT</a><span class="sep">›</span>
+    <a href="../">Les données structurées et leur traitement</a><span class="sep">›</span>
+    <span class="current">🎮 Opération Fichier Secret</span>
+  </nav>
+<div class="wrap course-layout">
+  <aside class="sidebar" style="--accent:undefined;--accent-soft:undefined;">
+    <div class="sb-title"><span class="dot"></span>2nde SNT </div>
+    <nav>
+    <details>
+      <summary><a href="../../theme-2-internet/" style="all:unset;cursor:pointer">Internet</a></summary>
+      <div class="sb-pages">
+        <a href="../../theme-2-internet/jeu-intro/">🎮 Jeu d'intro</a>
+        <a href="../../theme-2-internet/tcpip/">TCP/IP</a>
+        <a href="../../theme-2-internet/fiche-de-revision/">Fiche de révision</a>
+        <a href="../../theme-2-internet/routage/">Routage</a>
+        <a href="../../theme-2-internet/exercices/">Exercices</a>
+        <a href="../../theme-2-internet/synthese/">Synthèse</a>
+        <a href="../../theme-2-internet/dns-et-reseaux-pair-a-pair/">DNS et réseaux pair-à-pair</a>
+        <a href="../../theme-2-internet/support-du-cours/">Support du cours</a>
+      </div>
+    </details>
+    <details>
+      <summary><a href="../../theme-3-web/" style="all:unset;cursor:pointer">Le Web</a></summary>
+      <div class="sb-pages">
+        <a href="../../theme-3-web/jeu-intro/">🎮 Jeu d'intro</a>
+        <a href="../../theme-3-web/1-histoire-du-web/">1.Histoire du web</a>
+        <a href="../../theme-3-web/2-fonctionnement-du-web/">2.Fonctionnement du web</a>
+        <a href="../../theme-3-web/3-lecriture-dune-page-web/">3. L'écriture d'une page Web</a>
+        <a href="../../theme-3-web/4-le-langage-htmlcss-2/">4. Le langage HTML/CSS (2)</a>
+        <a href="../../theme-3-web/5-programmer-la-popularite-dune-page/">5. Programmer (Python)</a>
+      </div>
+    </details>
+    <details>
+      <summary><a href="../../theme-reseaux-sociaux/" style="all:unset;cursor:pointer">Les réseaux sociaux</a></summary>
+      <div class="sb-pages">
+        <a href="../../theme-reseaux-sociaux/jeu-intro/">🎮 Jeu d'intro</a>
+        <a href="../../theme-reseaux-sociaux/seance-1/">Séance 1</a>
+        <a href="../../theme-reseaux-sociaux/seance-2/">Séance 2</a>
+        <a href="../../theme-reseaux-sociaux/seance-3/">Séance 3</a>
+      </div>
+    </details>
+    <details open>
+      <summary><a href="../../theme-donnees-structurees/" style="all:unset;cursor:pointer">Les données structurées et leur traitement</a></summary>
+      <div class="sb-pages">
+        <a href="../../theme-donnees-structurees/jeu-intro/" aria-current="true">🎮 Jeu d'intro</a>
+        <a href="../../theme-donnees-structurees/seance-1/">Séance 1</a>
+        <a href="../../theme-donnees-structurees/seance-2/">Séance 2</a>
+        <a href="../../theme-donnees-structurees/seance-3/">Séance 3</a>
+      </div>
+    </details>
+    <details>
+      <summary><a href="../../theme-4-photographie/" style="all:unset;cursor:pointer">La photographie numérique</a></summary>
+      <div class="sb-pages">
+        <a href="../../theme-4-photographie/jeu-intro/">🎮 Jeu d'intro</a>
+        <a href="../../theme-4-photographie/parite-1-loeil-et-le-capteur-numerique/">partie 1: L'oeil et le capteur numérique</a>
+        <a href="../../theme-4-photographie/partie-2-formats-des-images/">Partie 2: Formats des images</a>
+        <a href="../../theme-4-photographie/3-programmer-traiter-une-image/">3. Programmer (Python)</a>
+      </div>
+    </details>
+    <details>
+      <summary><a href="../../theme-5-geolocalisation/" style="all:unset;cursor:pointer">Localisation et cartographie</a></summary>
+      <div class="sb-pages">
+        <a href="../../theme-5-geolocalisation/jeu-intro/">🎮 Jeu d'intro</a>
+        <a href="../../theme-5-geolocalisation/seance-1/">Séance 1</a>
+        <a href="../../theme-5-geolocalisation/la-geolocalisation-par-satellite/">La géolocalisation par satellite</a>
+        <a href="../../theme-5-geolocalisation/le-protocole-nmea/">Le protocole NMEA</a>
+      </div>
+    </details>
+    <details>
+      <summary><a href="../../theme-informatique-embarquee/" style="all:unset;cursor:pointer">Informatique embarquée et objets connectés</a></summary>
+      <div class="sb-pages">
+        <a href="../../theme-informatique-embarquee/jeu-intro/">🎮 Jeu d'intro</a>
+        <a href="../../theme-informatique-embarquee/seance-1/">Séance 1</a>
+        <a href="../../theme-informatique-embarquee/seance-2/">Séance 2</a>
+        <a href="../../theme-informatique-embarquee/seance-3/">Séance 3</a>
+      </div>
+    </details>
+    <details>
+      <summary><a href="../../tp-arduino/" style="all:unset;cursor:pointer">TP Arduino</a></summary>
+      <div class="sb-pages">
+        
+      </div>
+    </details>
+    </nav>
+  </aside>
+  <article>
+    <div class="page-head">
+      <div class="kicker">
+        <span class="badge" style="--badge-bg:#fdeede;--badge-fg:#d9640f">SNT</span>
+        <span class="badge badge-new">🎮 Jeu d'introduction</span>
+        <span class="badge badge-new">✦ Nouveau</span>
+      </div>
+      <h1>🎮 Opération Fichier Secret</h1>
+      <p class="desc">Des étiquettes en vrac, un nuage bien mystérieux… remettez de l'ordre dans les données avant qu'il ne soit trop tard.</p>
+    </div>
+    
+    
+<div class="student-bar">
+  <span class="sb-info">💾 Tes réponses sont enregistrées automatiquement sur cet appareil.</span>
+  <span class="sb-actions">
+    <button class="btn btn-ghost btn-sm" id="print-answers" type="button">🖨 Imprimer / PDF</button>
+    <button class="btn btn-ghost btn-sm" id="clear-answers" type="button">🗑 Tout effacer</button>
+  </span>
+</div>
+    <div class="prose">
+      <h2>🎯 Le défi</h2>
+<p>Catastrophe au club multisports : le fichier des adhérents est tombé par terre et toutes les fiches se sont mélangées ! Pour ne rien arranger, on murmure que certaines informations n&#39;auraient jamais dû se retrouver dans ce fichier… Votre mission : reconstruire les données proprement, découvrir où elles dorment vraiment quand on parle de « cloud », et décider qui a le droit de garder quoi.</p>
+<h2>🧰 Matériel et organisation</h2>
+<ul>
+<li><strong>Durée</strong> : 45 minutes</li>
+<li><strong>Équipes</strong> : un îlot de 4 = une équipe, avec un nom d&#39;équipe (ex. <em>Les Archivistes de l&#39;Ombre</em>, <em>Data Squad</em>…).</li>
+<li><strong>Rôles</strong> : un <strong>rapporteur</strong>, un <strong>coureur PC</strong> (seul à aller aux ordinateurs en U), un <strong>gardien du temps</strong>, un <strong>secrétaire</strong>.</li>
+<li><strong>Le professeur prépare</strong> : le tableau pour les scores et des ciseaux par îlot.</li>
+</ul>
+<h2>🕹️ Déroulé</h2>
+<h3>Manche 1 — Le grand désordre (14 min, à l&#39;îlot)</h3>
+<p>Découpez les fiches en vrac en bas de page : chaque fiche décrit un adhérent, mais chacune est écrite n&#39;importe comment. Mission : construire une <strong>table propre</strong> (un tableau) au dos de la feuille, avec une colonne par type d&#39;information et une ligne par personne. À vous de choisir et de nommer les colonnes !</p>
+<p>Puis répondez grâce à votre table :</p>
+<p>Qui a moins de 15 ans ?
+……………………………………</p>
+<p>Classez les adhérents du plus jeune au plus âgé (les ex æquo sont permis) :
+……………………………………</p>
+<p>Quel problème pose la fiche de Jade ?
+……………………………………</p>
+<p><strong>Barème</strong> : table correcte avec colonnes nommées <strong>+6 pts</strong> ; <strong>+2 pts</strong> par question juste ; <strong>+2 pts bonus</strong> à la première équipe qui explique pourquoi la table est plus pratique que les fiches en vrac.</p>
+<h3>Manche 2 — Tête dans le nuage (12 min, PC en U)</h3>
+<p>Le coureur PC part enquêter sur un ordinateur du U, une question à la fois.</p>
+<p>Que signifie le sigle <strong>CSV</strong>, et à quoi ressemble un tel fichier ?
+……………………………………</p>
+<p>Quand on enregistre une photo « dans le cloud », où est-elle stockée physiquement ?
+……………………………………</p>
+<p>Que signifie <strong>RGPD</strong>, et à quoi sert ce règlement (une phrase) ?
+……………………………………</p>
+<p><strong>Barème</strong> : <strong>+3 pts</strong> par réponse correcte, <strong>+1 pt bonus</strong> si l&#39;équipe termine dans le temps.</p>
+<h3>Manche 3 — Ont-ils le droit ? (10 min, à l&#39;îlot)</h3>
+<p>Débat-éclair. Le professeur lit trois situations ; pour chacune, l&#39;équipe vote « acceptable » ou « pas acceptable » et le rapporteur donne une justification en une phrase.</p>
+<ol>
+<li>La cantine du lycée garde la liste des allergies alimentaires des élèves.</li>
+<li>Un club de sport publie les numéros de téléphone de ses membres sur son site public.</li>
+<li>Un jeu gratuit sur téléphone envoie la liste de tes contacts à des entreprises de publicité.</li>
+</ol>
+<p>Vos votes et vos arguments :
+……………………………………</p>
+<p><strong>Barème</strong> : <strong>+2 pts</strong> par justification claire (quel que soit le vote), <strong>+1 pt bonus</strong> par situation si l&#39;équipe précise qui devrait donner son accord.</p>
+<h2>🏆 Score et débrief</h2>
+<p>Total des trois manches au tableau : l&#39;équipe gagnante reçoit le label <strong>Gardiens des Données</strong>. Terminez par le Défi éclair en bas de page.</p>
+<p><strong>Débrief oral (5 min)</strong> :</p>
+<ul>
+<li>Pourquoi ranger les données en table (lignes et colonnes) plutôt qu&#39;en vrac ? Qu&#39;est-ce que cela permet de faire très vite ?</li>
+<li>Le « cloud » est-il vraiment un nuage ? Qui garde réellement vos photos ?</li>
+<li>Toutes les données méritent-elles la même protection ? Qui décide ?</li>
+</ul>
+<p>Tables, tri, filtres, cloud et RGPD : c&#39;est tout le menu de la séquence « Les données structurées ».</p>
+<hr>
+<h3>✂️ À découper — les fiches en vrac (manche 1)</h3>
+<table>
+<thead>
+<tr>
+<th>Fiche</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>« Nadia, basket, habite Beyrouth, 15 ans »</td>
+</tr>
+<tr>
+<td>« 14 ans — Omar — natation — Saïda »</td>
+</tr>
+<tr>
+<td>« escalade / Tripoli / Lily / 16 ans »</td>
+</tr>
+<tr>
+<td>« Marc habite Jounieh, il a 15 ans et joue au tennis »</td>
+</tr>
+<tr>
+<td>« Jade, 15 ans, ville : ??? , sport : ??? »</td>
+</tr>
+</tbody></table>
+
+    </div>
+    
+<section class="quiz" id="quiz">
+  <h2>🧠 Teste tes connaissances</h2>
+  <p class="quiz-hint">Réponds aux questions puis clique sur « Vérifier » — la correction s'affiche aussitôt.</p>
+  
+    <div class="quiz-q" data-ok="0" data-explain="Une ligne = un adhérent du club ; les colonnes décrivent ses caractéristiques.">
+      <p class="qq-text">1. Dans une table de données, une ligne représente en général…</p>
+      <div class="qq-opts">
+        <label class="qq-opt"><input type="radio" name="q0" value="0"><span>une personne ou un objet</span></label>
+        <label class="qq-opt"><input type="radio" name="q0" value="1"><span>une couleur</span></label>
+        <label class="qq-opt"><input type="radio" name="q0" value="2"><span>un mot de passe</span></label>
+      </div>
+      <button class="btn btn-ghost qq-check" type="button">Vérifier ma réponse</button>
+      <div class="qq-feedback" aria-live="polite"></div>
+    </div>
+
+    <div class="quiz-q" data-ok="1" data-explain="CSV signifie « Comma-Separated Values » : des valeurs séparées par des virgules, une ligne par fiche.">
+      <p class="qq-text">2. Un fichier CSV contient…</p>
+      <div class="qq-opts">
+        <label class="qq-opt"><input type="radio" name="q1" value="0"><span>des vidéos compressées</span></label>
+        <label class="qq-opt"><input type="radio" name="q1" value="1"><span>des données séparées par des virgules</span></label>
+        <label class="qq-opt"><input type="radio" name="q1" value="2"><span>des jeux gratuits</span></label>
+      </div>
+      <button class="btn btn-ghost qq-check" type="button">Vérifier ma réponse</button>
+      <div class="qq-feedback" aria-live="polite"></div>
+    </div>
+
+    <div class="quiz-q" data-ok="2" data-explain="Vos fichiers sont stockés dans d'immenses centres de données, des bâtiments remplis de serveurs.">
+      <p class="qq-text">3. Le « cloud », c'est en réalité…</p>
+      <div class="qq-opts">
+        <label class="qq-opt"><input type="radio" name="q2" value="0"><span>un nuage au-dessus de nos têtes</span></label>
+        <label class="qq-opt"><input type="radio" name="q2" value="1"><span>l'air qui transporte le Wi-Fi</span></label>
+        <label class="qq-opt"><input type="radio" name="q2" value="2"><span>des serveurs bien réels installés quelque part sur Terre</span></label>
+      </div>
+      <button class="btn btn-ghost qq-check" type="button">Vérifier ma réponse</button>
+      <div class="qq-feedback" aria-live="polite"></div>
+    </div>
+
+    <div class="quiz-q" data-ok="1" data-explain="Ce règlement européen encadre la collecte et l'utilisation des données personnelles.">
+      <p class="qq-text">4. Le RGPD est…</p>
+      <div class="qq-opts">
+        <label class="qq-opt"><input type="radio" name="q3" value="0"><span>un format d'image</span></label>
+        <label class="qq-opt"><input type="radio" name="q3" value="1"><span>un règlement qui protège les données personnelles</span></label>
+        <label class="qq-opt"><input type="radio" name="q3" value="2"><span>un réseau social européen</span></label>
+      </div>
+      <button class="btn btn-ghost qq-check" type="button">Vérifier ma réponse</button>
+      <div class="qq-feedback" aria-live="polite"></div>
+    </div>
+  <div class="quiz-score" aria-live="polite"></div>
+</section>
+    
+    <nav class="pager">
+      
+      <a class="pg-next" href="../seance-1/"><span class="pg-label">Suivant →</span><span class="pg-title">Données, descripteurs et tables</span></a>
+    </nav>
+  </article>
+</div>
+</main>
+<footer class="site-footer">
+  <div class="wrap footer-grid">
+    <div>
+      <h4>Technologie &amp; SNT</h4>
+      <p>Site pédagogique regroupant les cours, activités et ressources de Technologie du collège et de SNT du lycée.</p>
+    </div>
+    <div>
+      <h4>Niveaux</h4>
+      <ul>
+        <li><a href="../../../5eme/">5ème</a></li>
+        <li><a href="../../../4eme/">4ème</a></li>
+        <li><a href="../../../3eme/">3ème</a></li>
+        <li><a href="../../../snt/">2nde SNT</a></li>
+        <li><a href="../../../sicit/">SI · CIT</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Références</h4>
+      <ul>
+        <li><a href="https://eduscol.education.fr/2098/technologie-au-cycle-4" target="_blank" rel="noopener">Programme de Technologie (Eduscol)</a></li>
+        <li><a href="https://eduscol.education.fr/3016/sciences-numeriques-et-technologie-au-lycee" target="_blank" rel="noopener">Programme SNT (Eduscol)</a></li>
+        <li><a href="https://pix.fr" target="_blank" rel="noopener">Pix — compétences numériques</a></li>
+        <li><a href="https://sites.google.com/view/lmtechno25" target="_blank" rel="noopener">Site d'origine (Google Sites)</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="wrap footer-bottom">
+    <span>© M. Eddy Bachaalany · Lycée Montaigne, Beit Chabab</span>
+    <span>Cours de Technologie collège &amp; SNT lycée</span>
+  </div>
+</footer>
+<div class="search-overlay" id="search-overlay" role="dialog" aria-label="Recherche">
+  <div class="search-panel">
+    <div class="search-input-row">
+      <span>🔍</span>
+      <input id="search-input" type="search" placeholder="Rechercher une séquence, une séance, une notion…" autocomplete="off">
+      <kbd>Échap</kbd>
+    </div>
+    <div class="search-results" id="search-results"></div>
+  </div>
+</div>
+<button class="back-to-top" id="back-to-top" type="button" aria-label="Retour en haut">↑</button>
+<script src="../../../assets/client.js" defer></script>
+</body>
+</html>

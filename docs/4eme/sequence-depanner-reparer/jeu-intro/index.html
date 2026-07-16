@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="fr" data-base="../../../" data-section="4eme">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>🎮 Urgences Techno — L'atelier des objets en panne · Dépanner et réparer un objet technique — Technologie &amp; SNT</title>
+<meta name="description" content="Observer, supposer, tester : reprenez l'atelier de réparation et sauvez les objets sans notice.">
+<meta property="og:title" content="🎮 Urgences Techno — L'atelier des objets en panne · Dépanner et réparer un objet technique — Technologie &amp; SNT">
+<meta property="og:description" content="Observer, supposer, tester : reprenez l'atelier de réparation et sauvez les objets sans notice.">
+<meta property="og:type" content="website">
+<link rel="icon" href="../../../assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lexend:wght@500;600;700;800&family=Caveat:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../../assets/styles.css">
+<script>
+(function(){try{var t=localStorage.getItem("lmtechno-theme");if(!t)t=window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light";document.documentElement.setAttribute("data-theme",t);}catch(e){}})();
+(function(){try{var s=JSON.parse(localStorage.getItem("lmtechno-eleve")||"null");if(!s||!s.section)return;var d=document.documentElement,cur=d.getAttribute("data-section")||"",base=d.getAttribute("data-base")||"./";if(cur==="home"||(cur&&cur!==s.section))location.replace(base+s.section+"/");}catch(e){}})();
+</script>
+<script src="../../../assets/firebase-config.js"></script>
+
+</head>
+<body>
+<a class="skip-link" href="#contenu">Aller au contenu</a>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="../../../index.html">
+      <span class="brand-logo">T</span>
+      <span>Technologie <span style="color:var(--muted);font-weight:500">&amp;</span> SNT
+        <small>Lycée Montaigne, Beit Chabab</small>
+      </span>
+    </a>
+    
+<nav class="main-nav" id="main-nav" aria-label="Navigation principale">
+  <a href="../../../index.html">Accueil</a>
+  <a href="../../../5eme/" style="--dot:#0d9268">5ème</a>
+  <a href="../../../4eme/" style="--dot:#2050d0" aria-current="true">4ème</a>
+  <a href="../../../3eme/" style="--dot:#7c3aed">3ème</a>
+  <a href="../../../snt/" style="--dot:#d9640f">2nde SNT</a>
+  <a href="../../../sicit/" style="--dot:#0d8e9c">SI · CIT</a>
+  <a class="nav-account" href="../../../connexion/">👤 Espace</a>
+</nav>
+    <div class="header-actions">
+      <button class="search-btn" id="search-open" type="button" aria-label="Rechercher">
+        <span>🔍</span><span class="label">Rechercher</span><kbd>Ctrl K</kbd>
+      </button>
+      <button class="icon-btn" id="theme-toggle" type="button" aria-label="Changer de thème">🌙</button>
+      <button class="icon-btn nav-toggle" id="nav-toggle" type="button" aria-label="Menu" aria-expanded="false">☰</button>
+    </div>
+  </div>
+</header>
+<main id="contenu">
+
+<nav class="breadcrumbs wrap" aria-label="Fil d'Ariane">
+    <a href="../../../index.html">Accueil</a><span class="sep">›</span>
+    <a href="../../">4ème</a><span class="sep">›</span>
+    <a href="../">Dépanner et réparer un objet technique</a><span class="sep">›</span>
+    <span class="current">🎮 Urgences Techno — L'atelier des objets en panne</span>
+  </nav>
+<div class="wrap course-layout">
+  <aside class="sidebar" style="--accent:undefined;--accent-soft:undefined;">
+    <div class="sb-title"><span class="dot"></span>4ème </div>
+    <nav>
+    <details>
+      <summary><a href="../../sequence-0-ia-generative/" style="all:unset;cursor:pointer">L'IA générative comme assistant personnel</a></summary>
+      <div class="sb-pages">
+        <a href="../../sequence-0-ia-generative/jeu-intro/">🎮 Jeu d'intro</a>
+        <a href="../../sequence-0-ia-generative/seance-1/">Séance 1</a>
+        <a href="../../sequence-0-ia-generative/seance-1-corr/">Séance 1 — correction</a>
+        <a href="../../sequence-0-ia-generative/creer-un-prompt-efficace/">Créer un prompt efficace</a>
+        <a href="../../sequence-0-ia-generative/prompts-avantages-et-biais/">Prompts, avantages et biais</a>
+      </div>
+    </details>
+    <details>
+      <summary><a href="../../sequence-1-ia-securite/" style="all:unset;cursor:pointer">IA générative et sécurité des données</a></summary>
+      <div class="sb-pages">
+        <a href="../../sequence-1-ia-securite/jeu-intro/">🎮 Jeu d'intro</a>
+        <a href="../../sequence-1-ia-securite/seance-1/">Séance 1</a>
+        <a href="../../sequence-1-ia-securite/seance-1-corr/">Séance 1 — correction</a>
+        <a href="../../sequence-1-ia-securite/seance-2/">Séance 2</a>
+        <a href="../../sequence-1-ia-securite/seance-2-corr/">Séance 2 — correction</a>
+        <a href="../../sequence-1-ia-securite/ressources/">Ressources</a>
+      </div>
+    </details>
+    <details open>
+      <summary><a href="../../sequence-depanner-reparer/" style="all:unset;cursor:pointer">Dépanner et réparer un objet technique</a></summary>
+      <div class="sb-pages">
+        <a href="../../sequence-depanner-reparer/jeu-intro/" aria-current="true">🎮 Jeu d'intro</a>
+        <a href="../../sequence-depanner-reparer/seance-1/">Séance 1</a>
+        <a href="../../sequence-depanner-reparer/seance-2/">Séance 2</a>
+      </div>
+    </details>
+    <details>
+      <summary><a href="../../sequence-objet-developpement-durable/" style="all:unset;cursor:pointer">Choisir un objet dans un contexte de développement durable</a></summary>
+      <div class="sb-pages">
+        <a href="../../sequence-objet-developpement-durable/jeu-intro/">🎮 Jeu d'intro</a>
+        <a href="../../sequence-objet-developpement-durable/seance-1/">Séance 1</a>
+        <a href="../../sequence-objet-developpement-durable/seance-2/">Séance 2</a>
+      </div>
+    </details>
+    <details>
+      <summary><a href="../../sequence-materiaux-procedes/" style="all:unset;cursor:pointer">Matériaux et procédés de fabrication</a></summary>
+      <div class="sb-pages">
+        <a href="../../sequence-materiaux-procedes/jeu-intro/">🎮 Jeu d'intro</a>
+        <a href="../../sequence-materiaux-procedes/seance-1/">Séance 1</a>
+        <a href="../../sequence-materiaux-procedes/seance-2/">Séance 2</a>
+      </div>
+    </details>
+    <details>
+      <summary><a href="../../sequence-1-reseau-informatique/" style="all:unset;cursor:pointer">Le réseau informatique</a></summary>
+      <div class="sb-pages">
+        <a href="../../sequence-1-reseau-informatique/jeu-intro/">🎮 Jeu d'intro</a>
+        <a href="../../sequence-1-reseau-informatique/seance-1/">Séance 1</a>
+        <a href="../../sequence-1-reseau-informatique/seance-2/">Séance 2</a>
+        <a href="../../sequence-1-reseau-informatique/seance-3/">Séance 3</a>
+        <a href="../../sequence-1-reseau-informatique/seance-4/">Séance 4</a>
+      </div>
+    </details>
+    <details>
+      <summary><a href="../../sequence-2-portail-automatise/" style="all:unset;cursor:pointer">Portail automatisé</a></summary>
+      <div class="sb-pages">
+        <a href="../../sequence-2-portail-automatise/jeu-intro/">🎮 Jeu d'intro</a>
+        <a href="../../sequence-2-portail-automatise/seance-0/">Séance 0</a>
+        <a href="../../sequence-2-portail-automatise/seance-1/">Séance 1</a>
+        <a href="../../sequence-2-portail-automatise/seance-1-corr/">Séance 1 — correction</a>
+        <a href="../../sequence-2-portail-automatise/seance-2/">Séance 2</a>
+      </div>
+    </details>
+    <details>
+      <summary><a href="../../sequence-3-objets-connectes/" style="all:unset;cursor:pointer">Les objets connectés</a></summary>
+      <div class="sb-pages">
+        <a href="../../sequence-3-objets-connectes/jeu-intro/">🎮 Jeu d'intro</a>
+        <a href="../../sequence-3-objets-connectes/seance-1/">Séance 1</a>
+        <a href="../../sequence-3-objets-connectes/seance-2/">Séance 2</a>
+      </div>
+    </details>
+    <details>
+      <summary><a href="../../sequence-4-microbit/" style="all:unset;cursor:pointer">Programmer un ordinateur de poche</a></summary>
+      <div class="sb-pages">
+        <a href="../../sequence-4-microbit/jeu-intro/">🎮 Jeu d'intro</a>
+        <a href="../../sequence-4-microbit/seance-1/">Séance 1</a>
+        <a href="../../sequence-4-microbit/seance-2/">Séance 2</a>
+        <a href="../../sequence-4-microbit/correction/">Correction</a>
+        <a href="../../sequence-4-microbit/programmer-une-boussolle/">Programmer une boussole</a>
+      </div>
+    </details>
+    <details>
+      <summary><a href="../../sequence-5-feu-tricolore-arduino/" style="all:unset;cursor:pointer">Feu tricolore avec Arduino</a></summary>
+      <div class="sb-pages">
+        <a href="../../sequence-5-feu-tricolore-arduino/jeu-intro/">🎮 Jeu d'intro</a>
+        <a href="../../sequence-5-feu-tricolore-arduino/seance-1/">Séance 1</a>
+        <a href="../../sequence-5-feu-tricolore-arduino/seance-2/">Séance 2</a>
+      </div>
+    </details>
+    <details>
+      <summary><a href="../../sequence-6-serre-autonome/" style="all:unset;cursor:pointer">Serre autonome</a></summary>
+      <div class="sb-pages">
+        <a href="../../sequence-6-serre-autonome/jeu-intro/">🎮 Jeu d'intro</a>
+        <a href="../../sequence-6-serre-autonome/seance-0/">Séance 0</a>
+        <a href="../../sequence-6-serre-autonome/seance-1/">Séance 1</a>
+        <a href="../../sequence-6-serre-autonome/seance-2/">Séance 2</a>
+        <a href="../../sequence-6-serre-autonome/seance-3/">Séance 3</a>
+      </div>
+    </details>
+    <details>
+      <summary><a href="../../chaines-fonctionnelles/" style="all:unset;cursor:pointer">Chaînes fonctionnelles</a></summary>
+      <div class="sb-pages">
+        <a href="../../chaines-fonctionnelles/exercices/">Exercices</a>
+        <a href="../../chaines-fonctionnelles/correction/">Correction</a>
+      </div>
+    </details>
+    <details>
+      <summary><a href="../../olympiades-informatique/" style="all:unset;cursor:pointer">Olympiades d'informatique</a></summary>
+      <div class="sb-pages">
+        
+      </div>
+    </details>
+    </nav>
+  </aside>
+  <article>
+    <div class="page-head">
+      <div class="kicker">
+        <span class="badge" style="--badge-bg:#e7edfc;--badge-fg:#2050d0">4e</span>
+        <span class="badge badge-new">🎮 Jeu d'introduction</span>
+        <span class="badge badge-new">✦ Nouveau</span>
+      </div>
+      <h1>🎮 Urgences Techno — L'atelier des objets en panne</h1>
+      <p class="desc">Observer, supposer, tester : reprenez l'atelier de réparation et sauvez les objets sans notice.</p>
+    </div>
+    
+    
+<div class="student-bar">
+  <span class="sb-info">💾 Tes réponses sont enregistrées automatiquement sur cet appareil.</span>
+  <span class="sb-actions">
+    <button class="btn btn-ghost btn-sm" id="print-answers" type="button">🖨 Imprimer / PDF</button>
+    <button class="btn btn-ghost btn-sm" id="clear-answers" type="button">🗑 Tout effacer</button>
+  </span>
+</div>
+    <div class="prose">
+      <h2>🎯 Le défi</h2>
+<p>L&#39;atelier de réparation du quartier est débordé. Le vieux réparateur part à la retraite et laisse tout derrière lui : une lampe de poche qui n&#39;éclaire plus, un vélo qui freine mal, une enceinte muette, une trottinette qui refuse de s&#39;allumer... Aucune notice, aucun mode d&#39;emploi. Juste un mot épinglé sur l&#39;établi :</p>
+<blockquote>
+<p>« Un bon réparateur ne devine pas : il <strong>observe</strong>, il <strong>suppose</strong>, il <strong>teste</strong>. »</p>
+</blockquote>
+<p>Vos équipes reprennent l&#39;atelier aujourd&#39;hui. Les clients attendent. Saurez-vous retrouver les pannes... sans rien casser de plus ?</p>
+<h2>🧰 Matériel et organisation</h2>
+<ul>
+<li><strong>Durée</strong> : 40 à 45 minutes.</li>
+<li><strong>Équipes</strong> : un îlot = un atelier de 4, avec une enseigne (ex. « SOS Machines », « Les Rebrancheurs »).</li>
+<li><strong>Rôles</strong> : <strong>rapporteur</strong>, <strong>coureur PC</strong> (change à chaque défi de la manche 3), <strong>gardien du temps</strong>, <strong>secrétaire</strong>.</li>
+<li><strong>Le professeur prépare</strong> : le tableau des scores, des ciseaux par îlot pour les cartes du bas de page. En option : une lampe de poche ou tout petit objet démontable posé au bureau, pour l&#39;ambiance.</li>
+</ul>
+<h2>🕹️ Déroulé</h2>
+<h3>Manche 1 — « Symptôme, hypothèse, test » (12 min, à l&#39;îlot)</h3>
+<p>Découpez les 12 cartes de la série A. Elles se combinent en <strong>4 chaînes de réparation</strong> de 3 cartes chacune : un <strong>SYMPTÔME</strong> (ce qu&#39;on observe), une <strong>HYPOTHÈSE</strong> (la cause possible) et un <strong>TEST</strong> (comment vérifier). Reconstituez les 4 chaînes sur la table. Chaque carte ne sert qu&#39;une seule fois.</p>
+<p><strong>Barème</strong> : +3 points par chaîne complète et correcte (12 points possibles). <em>Correction pour le professeur : lampe → piles vides → piles neuves ; vélo → patins usés → épaisseur des patins ; enceinte → câble audio débranché → vérifier le branchement ; trottinette → batterie déchargée → chargeur et voyant.</em></p>
+<p><strong>Question d&#39;équipe</strong> — Pour la lampe de poche qui n&#39;éclaire plus, trouvez une <strong>deuxième</strong> hypothèse possible et le test qui va avec. (+2 points si la paire est cohérente.)</p>
+<div class="answer-field">
+  <textarea rows="5" data-answer-idx="0" placeholder="✏️ Écris ta réponse ici…" aria-label="Zone de réponse de l'élève"></textarea>
+</div>
+<h3>Manche 2 — « Le malade imaginaire » (10 min, à l&#39;îlot)</h3>
+<p>Un membre de l&#39;équipe pioche <strong>en secret</strong> une carte de la série B : il devient l&#39;objet en panne et ne peut répondre que par <strong>oui</strong> ou <strong>non</strong>. Les trois autres l&#39;interrogent pour trouver <strong>l&#39;objet ET sa panne</strong>. Le gardien du temps compte les questions posées.</p>
+<p><strong>Barème</strong> : panne trouvée en 5 questions ou moins : +4 points ; en 6 à 8 questions : +3 ; en 9 à 12 : +2 ; au-delà : +1 si elle est trouvée. Faites <strong>deux tours</strong> avec deux « malades » différents (8 points possibles).</p>
+<h3>Manche 3 — « La pièce mystère » (12 min, PC en U)</h3>
+<p>Des clients arrivent avec des appareils <strong>sans notice</strong>. Trois défis de recherche chronométrés, avec un <strong>coureur différent</strong> à chaque défi. <strong>Barème : +3 points par réponse correcte et rédigée.</strong></p>
+<p><strong>Défi 1</strong> — Dans beaucoup d&#39;appareils, une petite pièce protège le circuit en « se sacrifiant » quand le courant est trop fort. Comment s&#39;appelle-t-elle ?</p>
+<div class="answer-field">
+  <textarea rows="3" data-answer-idx="1" placeholder="✏️ Écris ta réponse ici…" aria-label="Zone de réponse de l'élève"></textarea>
+</div>
+<p><strong>Défi 2</strong> — Quel appareil de mesure permet de vérifier si le courant passe dans un fil ou si une pile est encore bonne ?</p>
+<div class="answer-field">
+  <textarea rows="3" data-answer-idx="2" placeholder="✏️ Écris ta réponse ici…" aria-label="Zone de réponse de l'élève"></textarea>
+</div>
+<p><strong>Défi 3</strong> — La notice est perdue ! Citez deux types de ressources en ligne qui peuvent la remplacer pour réparer soi-même.</p>
+<div class="answer-field">
+  <textarea rows="3" data-answer-idx="3" placeholder="✏️ Écris ta réponse ici…" aria-label="Zone de réponse de l'élève"></textarea>
+</div>
+<h2>🏆 Score et débrief</h2>
+<p>Additionnez les points des trois manches : l&#39;atelier gagnant reçoit l&#39;enseigne dorée du quartier.</p>
+<p>Questions de débrief à l&#39;oral :</p>
+<ol>
+<li>Quelle est la différence entre <strong>deviner</strong> une panne et la <strong>diagnostiquer</strong> ?</li>
+<li>Pourquoi vaut-il mieux tester <strong>une seule hypothèse à la fois</strong> ?</li>
+<li>Avant d&#39;ouvrir un appareil électrique, quel geste de sécurité est obligatoire ? Et sans notice, comment s&#39;en sortir ?</li>
+</ol>
+<p>Vous venez d&#39;utiliser, sans le savoir, la démarche complète du dépanneur : symptôme → hypothèses → tests → réparation. C&#39;est tout le programme de la séquence qui commence ! Terminez par le <strong>Défi éclair</strong> ci-dessous.</p>
+<hr>
+<h3>✂️ À découper — série A : les 12 cartes « chaînes de réparation » (manche 1, cartes mélangées)</h3>
+<table>
+<thead>
+<tr>
+<th>TEST — Regarder l&#39;épaisseur des patins de frein</th>
+<th>SYMPTÔME — La lampe de poche n&#39;éclaire plus</th>
+<th>HYPOTHÈSE — La batterie est déchargée</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>SYMPTÔME — L&#39;enceinte ne produit aucun son</td>
+<td>TEST — Mettre des piles neuves et réessayer</td>
+<td>HYPOTHÈSE — Les patins de frein sont usés</td>
+</tr>
+<tr>
+<td>HYPOTHÈSE — Les piles sont vides</td>
+<td>SYMPTÔME — La trottinette électrique ne s&#39;allume plus</td>
+<td>TEST — Vérifier que le câble est bien branché des deux côtés</td>
+</tr>
+<tr>
+<td>SYMPTÔME — Le vélo freine mal</td>
+<td>HYPOTHÈSE — Le câble audio est débranché</td>
+<td>TEST — Brancher le chargeur et observer le voyant</td>
+</tr>
+</tbody></table>
+<h3>✂️ À découper — série B : les cartes « objet malade » (manche 2)</h3>
+<table>
+<thead>
+<tr>
+<th>💨 Sèche-cheveux — il souffle mais ne chauffe plus</th>
+<th>🎮 Manette de console — le joystick gauche ne répond plus</th>
+<th>🚲 Vélo — la chaîne saute sans arrêt</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>💡 Lampe de chevet — elle clignote</td>
+<td>🎧 Casque audio — une seule oreille fonctionne</td>
+<td>🤖 Robot aspirateur — il tourne en rond</td>
+</tr>
+</tbody></table>
+
+    </div>
+    
+<section class="quiz" id="quiz">
+  <h2>🧠 Teste tes connaissances</h2>
+  <p class="quiz-hint">Réponds aux questions puis clique sur « Vérifier » — la correction s'affiche aussitôt.</p>
+  
+    <div class="quiz-q" data-ok="1" data-explain="Le symptôme (ce qu'on voit, entend ou sent) est le point de départ de toute la démarche de diagnostic.">
+      <p class="qq-text">1. Par quoi commence toujours un bon dépannage ?</p>
+      <div class="qq-opts">
+        <label class="qq-opt"><input type="radio" name="q0" value="0"><span>Démonter entièrement l'appareil</span></label>
+        <label class="qq-opt"><input type="radio" name="q0" value="1"><span>Observer précisément le symptôme</span></label>
+        <label class="qq-opt"><input type="radio" name="q0" value="2"><span>Acheter une pièce neuve au hasard</span></label>
+      </div>
+      <button class="btn btn-ghost qq-check" type="button">Vérifier ma réponse</button>
+      <div class="qq-feedback" aria-live="polite"></div>
+    </div>
+
+    <div class="quiz-q" data-ok="0" data-explain="Une hypothèse n'est qu'une supposition : seul un test permet de la confirmer ou de l'éliminer.">
+      <p class="qq-text">2. Une hypothèse de panne, c'est...</p>
+      <div class="qq-opts">
+        <label class="qq-opt"><input type="radio" name="q1" value="0"><span>une cause possible, qu'il faudra tester</span></label>
+        <label class="qq-opt"><input type="radio" name="q1" value="1"><span>la solution garantie à 100 %</span></label>
+        <label class="qq-opt"><input type="radio" name="q1" value="2"><span>le prix de la réparation</span></label>
+      </div>
+      <button class="btn btn-ghost qq-check" type="button">Vérifier ma réponse</button>
+      <div class="qq-feedback" aria-live="polite"></div>
+    </div>
+
+    <div class="quiz-q" data-ok="1" data-explain="On élimine les causes une par une : c'est comme cela que le diagnostic avance, sans gaspiller de pièces.">
+      <p class="qq-text">3. Le test montre que votre hypothèse était fausse. Que faites-vous ?</p>
+      <div class="qq-opts">
+        <label class="qq-opt"><input type="radio" name="q2" value="0"><span>On abandonne la réparation</span></label>
+        <label class="qq-opt"><input type="radio" name="q2" value="1"><span>On formule et on teste une autre hypothèse</span></label>
+        <label class="qq-opt"><input type="radio" name="q2" value="2"><span>On change toutes les pièces d'un coup</span></label>
+      </div>
+      <button class="btn btn-ghost qq-check" type="button">Vérifier ma réponse</button>
+      <div class="qq-feedback" aria-live="polite"></div>
+    </div>
+
+    <div class="quiz-q" data-ok="0" data-explain="Débrancher l'appareil supprime le risque de choc électrique : c'est la règle de sécurité numéro un.">
+      <p class="qq-text">4. Avant d'ouvrir un appareil électrique, on doit d'abord...</p>
+      <div class="qq-opts">
+        <label class="qq-opt"><input type="radio" name="q3" value="0"><span>le débrancher</span></label>
+        <label class="qq-opt"><input type="radio" name="q3" value="1"><span>le secouer pour écouter</span></label>
+        <label class="qq-opt"><input type="radio" name="q3" value="2"><span>le poser sur un tapis</span></label>
+      </div>
+      <button class="btn btn-ghost qq-check" type="button">Vérifier ma réponse</button>
+      <div class="qq-feedback" aria-live="polite"></div>
+    </div>
+  <div class="quiz-score" aria-live="polite"></div>
+</section>
+    
+    <nav class="pager">
+      
+      <a class="pg-next" href="../seance-1/"><span class="pg-label">Suivant →</span><span class="pg-title">Diagnostiquer une panne : de l'observation à la localisation</span></a>
+    </nav>
+  </article>
+</div>
+</main>
+<footer class="site-footer">
+  <div class="wrap footer-grid">
+    <div>
+      <h4>Technologie &amp; SNT</h4>
+      <p>Site pédagogique regroupant les cours, activités et ressources de Technologie du collège et de SNT du lycée.</p>
+    </div>
+    <div>
+      <h4>Niveaux</h4>
+      <ul>
+        <li><a href="../../../5eme/">5ème</a></li>
+        <li><a href="../../../4eme/">4ème</a></li>
+        <li><a href="../../../3eme/">3ème</a></li>
+        <li><a href="../../../snt/">2nde SNT</a></li>
+        <li><a href="../../../sicit/">SI · CIT</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Références</h4>
+      <ul>
+        <li><a href="https://eduscol.education.fr/2098/technologie-au-cycle-4" target="_blank" rel="noopener">Programme de Technologie (Eduscol)</a></li>
+        <li><a href="https://eduscol.education.fr/3016/sciences-numeriques-et-technologie-au-lycee" target="_blank" rel="noopener">Programme SNT (Eduscol)</a></li>
+        <li><a href="https://pix.fr" target="_blank" rel="noopener">Pix — compétences numériques</a></li>
+        <li><a href="https://sites.google.com/view/lmtechno25" target="_blank" rel="noopener">Site d'origine (Google Sites)</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="wrap footer-bottom">
+    <span>© M. Eddy Bachaalany · Lycée Montaigne, Beit Chabab</span>
+    <span>Cours de Technologie collège &amp; SNT lycée</span>
+  </div>
+</footer>
+<div class="search-overlay" id="search-overlay" role="dialog" aria-label="Recherche">
+  <div class="search-panel">
+    <div class="search-input-row">
+      <span>🔍</span>
+      <input id="search-input" type="search" placeholder="Rechercher une séquence, une séance, une notion…" autocomplete="off">
+      <kbd>Échap</kbd>
+    </div>
+    <div class="search-results" id="search-results"></div>
+  </div>
+</div>
+<button class="back-to-top" id="back-to-top" type="button" aria-label="Retour en haut">↑</button>
+<script src="../../../assets/client.js" defer></script>
+</body>
+</html>
