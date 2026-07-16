@@ -18,6 +18,14 @@ const CONTENT = path.join(ROOT, "content");
 const OUT = path.join(ROOT, "docs");
 const SITE_URL = "https://ebechalani.github.io/techno/";
 
+// Version des assets (cache-busting) : hash du contenu des fichiers front.
+const crypto = require("crypto");
+const ASSET_V = crypto.createHash("md5").update(
+  ["styles.css", "client.js", "app/assets/app.js", "app/assets/sync.js", "app/assets/firebase-config.js"]
+    .map((f) => { try { return fs.readFileSync(path.join(__dirname, f), "utf8"); } catch (e) { return ""; } })
+    .join("\n")
+).digest("hex").slice(0, 10);
+
 /* ---------------- Utilitaires ---------------- */
 
 const esc = (s) =>
@@ -250,7 +258,7 @@ function navHTML(site, rel, currentSectionId) {
 function layout({ site, rel, title, description, body, sectionId, extraHead = "" }) {
   const fullTitle = title ? `${title} — ${site.title}` : `${site.title} · ${site.school}`;
   const html = `<!DOCTYPE html>
-<html lang="fr" data-base="${rel}" data-section="${esc(sectionId || "")}">
+<html lang="fr" data-base="${rel}" data-section="${esc(sectionId || "")}" data-v="${ASSET_V}">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -263,12 +271,12 @@ function layout({ site, rel, title, description, body, sectionId, extraHead = ""
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lexend:wght@500;600;700;800&family=Caveat:wght@500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="${rel}assets/styles.css">
+<link rel="stylesheet" href="${rel}assets/styles.css?v=${ASSET_V}">
 <script>
 (function(){try{var t=localStorage.getItem("lmtechno-theme");if(!t)t=window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light";document.documentElement.setAttribute("data-theme",t);}catch(e){}})();
 (function(){try{var s=JSON.parse(localStorage.getItem("lmtechno-eleve")||"null");if(!s||!s.section)return;var d=document.documentElement,cur=d.getAttribute("data-section")||"",base=d.getAttribute("data-base")||"./";if(cur==="home"||(cur&&cur!==s.section))location.replace(base+s.section+"/");}catch(e){}})();
 </script>
-<script src="${rel}assets/firebase-config.js"></script>
+<script src="${rel}assets/firebase-config.js?v=${ASSET_V}"></script>
 ${extraHead}
 </head>
 <body>
@@ -329,7 +337,7 @@ ${body}
   </div>
 </div>
 <button class="back-to-top" id="back-to-top" type="button" aria-label="Retour en haut">↑</button>
-<script src="${rel}assets/client.js" defer></script>
+<script src="${rel}assets/client.js?v=${ASSET_V}" defer></script>
 </body>
 </html>`;
   return relativize(html, rel);
@@ -707,10 +715,18 @@ function main() {
     fs.cpSync(imgSrc, path.join(OUT, "assets", "img"), { recursive: true });
   }
 
-  // application « espaces » (connexion, prof, élève) copiée telle quelle
+  // application « espaces » (connexion, prof, élève) copiée telle quelle,
+  // avec versionnage des assets (cache-busting)
   const appSrc = path.join(__dirname, "app");
   if (fs.existsSync(appSrc)) {
     fs.cpSync(appSrc, OUT, { recursive: true });
+    for (const page of ["connexion", "prof", "eleve", path.join("prof", "evaluations")]) {
+      const f = path.join(OUT, page, "index.html");
+      if (!fs.existsSync(f)) continue;
+      let h = fs.readFileSync(f, "utf8");
+      h = h.replace(/(assets\/(?:app|firebase-config|styles)\.(?:js|css))(?!\?)/g, `$1?v=${ASSET_V}`);
+      fs.writeFileSync(f, h, "utf8");
+    }
   }
 
   renderHome(site, sections);

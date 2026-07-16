@@ -8,9 +8,9 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lexend:wght@500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../assets/styles.css">
+<link rel="stylesheet" href="../assets/styles.css?v=954ad8bd4f">
 <script>(function(){try{var t=localStorage.getItem("lmtechno-theme");if(!t)t=window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light";document.documentElement.setAttribute("data-theme",t);}catch(e){}})();</script>
-<script src="../assets/firebase-config.js"></script>
+<script src="../assets/firebase-config.js?v=954ad8bd4f"></script>
 </head>
 <body>
 <header class="app-header">
@@ -77,7 +77,7 @@
 </main>
 
 <script type="module">
-import { isConfigured, onAuth, teacherSignIn, teacherSignUp, studentJoin } from "../assets/app.js";
+import { isConfigured, onAuth, teacherSignIn, teacherSignUp, studentJoin } from "../assets/app.js?v=954ad8bd4f";
 
 if (!isConfigured()) {
   document.getElementById("notconfig").style.display = "block";

@@ -289,7 +289,10 @@
     var sess = localStorage.getItem("lmtechno-eleve");
     var fb = window.LMTECHNO_FIREBASE;
     if (sess && fb && fb.apiKey && String(fb.apiKey).indexOf("VOTRE_") === -1) {
-      import(BASE + "assets/sync.js").catch(function () {});
+      var V = root.getAttribute("data-v") || "";
+      import(BASE + "assets/sync.js" + (V ? "?v=" + V : "")).catch(function (e) {
+        try { console.warn("sync.js non chargé :", e); } catch (x) {}
+      });
     }
   } catch (e) {}
 

@@ -4,8 +4,10 @@
    que Firebase est configuré. Enregistre réponses + scores de quiz vers
    Firestore et les recharge d'un appareil à l'autre.
    ============================================================================ */
-import { currentStudent, isConfigured, pageKeyFromPath, loadWork, saveWork,
-  watchGroupAnswers, saveGroupAnswer } from "./app.js";
+// version chaînée depuis l'URL du module (cache-busting de app.js)
+const __V = new URL(import.meta.url).searchParams.get("v") || "";
+const { currentStudent, isConfigured, pageKeyFromPath, loadWork, saveWork,
+  watchGroupAnswers, saveGroupAnswer } = await import("./app.js" + (__V ? "?v=" + __V : ""));
 
 (async function () {
   const sess = currentStudent();
