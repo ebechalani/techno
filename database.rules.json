@@ -1,7 +1,4 @@
 {
-  "//": "Règles de sécurité Realtime Database — espaces Technologie & SNT.",
-  "//2": "À coller dans Firebase → Realtime Database → onglet Règles → Publier.",
-  "//admin": "L'e-mail admin ci-dessous doit être identique à adminEmail dans firebase-config.js.",
   "rules": {
     "teachers": {
       ".read": "auth != null && auth.token.email == 'ebechalani@gmail.com'",
