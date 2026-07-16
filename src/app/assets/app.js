@@ -202,10 +202,10 @@ export async function loadStudentWork(classId, sid) {
 
 export async function studentJoin(code, firstName) {
   code = String(code || "").trim().toUpperCase();
+  await ensureAnon(); // se connecter AVANT de lire (les règles exigent auth != null)
   const map = await get(ref(db, "classCodes/" + code));
   if (!map.exists()) throw new Error("Code de classe inconnu.");
   const { classId, teacherUid } = map.val();
-  await signInAnonymously(auth);
   const sid = normId(firstName);
   const sdoc = await get(ref(db, "students/" + classId + "/" + sid));
   if (!sdoc.exists()) {
