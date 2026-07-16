@@ -12,7 +12,7 @@ import {
   signOut, onAuthStateChanged, signInAnonymously, updateProfile,
 } from "https://www.gstatic.com/firebasejs/10.12.5/firebase-auth.js";
 import {
-  getDatabase, ref, get, set, update, remove, push,
+  getDatabase, ref, get, set, update, remove, push, onValue,
   query, orderByChild, equalTo, serverTimestamp,
 } from "https://www.gstatic.com/firebasejs/10.12.5/firebase-database.js";
 
@@ -250,4 +250,84 @@ export async function loadWork(classId, sid, pageKey) {
   await ensureAnon();
   const s = await get(ref(db, "work/" + classId + "/" + sid + "/" + pageKey));
   return s.exists() ? s.val() : null;
+}
+
+/* ---------- Groupes d'îlot (travail collaboratif) ----------
+ * groups/{classId}/{groupId}   : { name, members: {sid: prénom}, createdAt }
+ * groupwork/{classId}/{groupId}/{pageKey} :
+ *   { title, answers: {idx: {text, by, at}}, updatedAt }
+ * Les réponses d'un membre apparaissent en direct chez les autres (onValue).
+ */
+
+function saveSession(patch) {
+  try {
+    const s = JSON.parse(localStorage.getItem("lmtechno-eleve") || "null") || {};
+    Object.assign(s, patch);
+    localStorage.setItem("lmtechno-eleve", JSON.stringify(s));
+    return s;
+  } catch (e) { return null; }
+}
+
+export async function listGroups(classId) {
+  await ensureAnon();
+  const s = await get(ref(db, "groups/" + classId));
+  const out = [];
+  s.forEach((c) => {
+    const v = c.val() || {};
+    out.push({ id: c.key, name: v.name || c.key, members: v.members || {} });
+  });
+  return out;
+}
+
+export async function createGroup(classId, name, sid, firstName) {
+  await ensureAnon();
+  const clean = String(name || "").trim().slice(0, 40);
+  if (!clean) throw new Error("Donne un nom à ton groupe.");
+  const r = push(ref(db, "groups/" + classId));
+  await set(r, { name: clean, createdAt: serverTimestamp(), members: { [sid]: firstName } });
+  saveSession({ groupId: r.key, groupName: clean });
+  return { id: r.key, name: clean };
+}
+
+export async function joinGroup(classId, groupId, sid, firstName) {
+  await ensureAnon();
+  const g = await get(ref(db, "groups/" + classId + "/" + groupId));
+  if (!g.exists()) throw new Error("Ce groupe n'existe plus.");
+  await update(ref(db, "groups/" + classId + "/" + groupId + "/members"), { [sid]: firstName });
+  saveSession({ groupId, groupName: (g.val() || {}).name || "" });
+  return { id: groupId, name: (g.val() || {}).name || "" };
+}
+
+export async function leaveGroup(classId, groupId, sid) {
+  await ensureAnon();
+  await remove(ref(db, "groups/" + classId + "/" + groupId + "/members/" + sid));
+  saveSession({ groupId: null, groupName: null });
+}
+
+// Écoute en direct les réponses de groupe d'une page. Retourne l'arrêt d'écoute.
+export function watchGroupAnswers(classId, groupId, pageKey, cb) {
+  const r = ref(db, "groupwork/" + classId + "/" + groupId + "/" + pageKey + "/answers");
+  return onValue(r, (snap) => cb(snap.val() || {}));
+}
+
+export async function saveGroupAnswer(classId, groupId, pageKey, idx, text, by, title) {
+  await ensureAnon();
+  await set(ref(db, "groupwork/" + classId + "/" + groupId + "/" + pageKey + "/answers/" + idx),
+    { text, by, at: serverTimestamp() });
+  await update(ref(db, "groupwork/" + classId + "/" + groupId + "/" + pageKey),
+    { title: title || "", updatedAt: serverTimestamp(), lastBy: by });
+}
+
+// Côté professeur : travail d'un groupe, page par page.
+export async function loadGroupWork(classId, groupId) {
+  await ensureAnon();
+  const s = await get(ref(db, "groupwork/" + classId + "/" + groupId));
+  const out = [];
+  s.forEach((c) => { out.push({ pageKey: c.key, ...c.val() }); });
+  return out;
+}
+
+export async function removeGroup(classId, groupId) {
+  await remove(ref(db, "groupwork/" + classId + "/" + groupId));
+  await remove(ref(db, "groups/" + classId + "/" + groupId));
 }

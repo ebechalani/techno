@@ -64,6 +64,7 @@
 <script type="module">
 import { isConfigured, onAuth, logout, ensureTeacher, createClass, listMyClasses, deleteClass,
   addStudent, removeStudent, listStudents, loadStudentWork,
+  listGroups, loadGroupWork, removeGroup,
   listPendingTeachers, approveTeacher, rejectTeacher } from "../assets/app.js";
 
 const $ = (id) => document.getElementById(id);
@@ -137,6 +138,8 @@ async function refresh() {
   if (!classes.length) { box.innerHTML = '<p style="color:var(--muted)">Aucune classe pour l’instant. Créez-en une ci-dessus.</p>'; return; }
   box.innerHTML = "";
   for (const cls of classes) {
+    let groups = [];
+    try { groups = await listGroups(cls.id); } catch (e) {}
     const students = await listStudents(cls.id);
     students.sort((a, b) => (a.firstName || "").localeCompare(b.firstName || ""));
     const card = document.createElement("div");
@@ -173,6 +176,17 @@ async function refresh() {
           </tbody>
         </table>
       </div>
+      <h3 style="margin:1.2rem 0 0.4rem;font-size:1rem">👥 Groupes d'îlot</h3>
+      ${groups.length ? `<div class="table-scroll"><table class="dash-table">
+        <thead><tr><th>Groupe</th><th>Membres</th><th></th></tr></thead>
+        <tbody>${groups.map((g) => `<tr>
+          <td><strong>${esc(g.name)}</strong></td>
+          <td>${Object.values(g.members || {}).map(esc).join(", ") || '<span style="color:var(--muted)">vide</span>'}</td>
+          <td class="num" style="white-space:nowrap">
+            <button class="btn btn-ghost btn-sm" data-gdetail="${cls.id}" data-gid="${esc(g.id)}" data-gname="${esc(g.name)}">Voir le travail</button>
+            <button class="btn btn-ghost btn-sm" data-gdel="${cls.id}" data-gid="${esc(g.id)}" title="Supprimer le groupe">🗑</button>
+          </td></tr>`).join("")}
+        </tbody></table></div>` : '<p style="color:var(--muted);font-size:0.88rem">Aucun groupe : les élèves les créent eux-mêmes depuis « Mon espace » (îlots de 4 ou plus, réponses partagées en direct).</p>'}
       <div data-detailbox="${cls.id}"></div>`;
     box.appendChild(card);
   }
@@ -205,6 +219,31 @@ function wire() {
       <div class="table-scroll"><table class="dash-table"><thead><tr><th>Page</th><th class="num">Quiz</th><th class="num">Réponses écrites</th></tr></thead><tbody>
       ${work.map((w) => { const q = w.quiz && w.quiz.total ? Math.round(w.quiz.score / w.quiz.total * 100) : null; const nb = w.answers ? Object.keys(w.answers).length : 0; return `<tr><td>${esc((w.title || w.pageKey).replace(/_/g, " "))}</td><td class="num">${scorePill(q)}</td><td class="num">${nb}</td></tr>`; }).join("")}
       </tbody></table></div></div>`;
+    boxDet.querySelector("[data-closedet]").onclick = () => boxDet.innerHTML = "";
+  });
+  document.querySelectorAll("[data-gdel]").forEach((b) => b.onclick = async () => {
+    if (!confirm("Supprimer ce groupe et toutes ses réponses partagées ?")) return;
+    try { await removeGroup(b.getAttribute("data-gdel"), b.getAttribute("data-gid")); await refresh(); }
+    catch (e) { alert("Erreur : " + (e.message || e)); }
+  });
+  document.querySelectorAll("[data-gdetail]").forEach((b) => b.onclick = async () => {
+    const cid = b.getAttribute("data-gdetail"), gid = b.getAttribute("data-gid"), gname = b.getAttribute("data-gname");
+    const boxDet = document.querySelector(`[data-detailbox="${cid}"]`);
+    boxDet.innerHTML = '<p style="color:var(--muted)">Chargement…</p>';
+    let work = [];
+    try { work = await loadGroupWork(cid, gid); } catch (e) {}
+    if (!work.length) { boxDet.innerHTML = `<div class="app-card" style="margin-top:0.6rem"><strong>${gname}</strong> n'a pas encore de travail partagé. <button class="btn btn-ghost btn-sm" data-closedet style="float:right">Fermer</button></div>`; boxDet.querySelector("[data-closedet]").onclick = () => boxDet.innerHTML = ""; return; }
+    boxDet.innerHTML = `<div class="app-card" style="margin-top:0.6rem">
+      <div style="display:flex;align-items:center;gap:0.6rem"><strong>👥 Travail du groupe — ${gname}</strong><button class="btn btn-ghost btn-sm" data-closedet style="margin-left:auto">Fermer</button></div>
+      ${work.map((w) => {
+        const answers = Object.entries(w.answers || {}).sort((a, b2) => Number(a[0]) - Number(b2[0]));
+        return `<h4 style="margin:1rem 0 0.4rem">${esc((w.title || w.pageKey).replace(/_/g, " "))}</h4>
+        ${answers.length ? answers.map(([k, a]) => `<div style="background:var(--surface-2);border-radius:8px;padding:0.5rem 0.8rem;margin:0.3rem 0;font-size:0.9rem">
+          ${esc(a.text || "")}
+          <div style="color:var(--muted);font-size:0.75rem;margin-top:0.2rem">✍️ ${esc(a.by || "?")}</div>
+        </div>`).join("") : '<p style="color:var(--muted);font-size:0.85rem">Aucune réponse.</p>'}`;
+      }).join("")}
+    </div>`;
     boxDet.querySelector("[data-closedet]").onclick = () => boxDet.innerHTML = "";
   });
 }

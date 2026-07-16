@@ -901,6 +901,12 @@ main { min-height: 60vh; }
   border-radius: 999px; padding: 0.3rem 0.9rem; font-weight: 600; font-size: 0.9rem;
 }
 
+/* Étiquette d'auteur sous un champ partagé (mode groupe) */
+.af-author {
+  font-size: 0.74rem; color: var(--muted); margin-top: 0.2rem;
+  font-family: var(--font-head); font-weight: 600; min-height: 1em;
+}
+
 /* Bandeau élève connecté sur les pages de cours */
 .sync-banner {
   position: fixed; left: 50%; bottom: 1rem; transform: translateX(-50%);

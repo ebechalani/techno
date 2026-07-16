@@ -30,6 +30,10 @@
       <p style="color:var(--text-2)">Tes réponses et tes scores de quiz sont enregistrés ici : tu les retrouves sur n'importe quel appareil en te reconnectant.</p>
       <a class="btn btn-primary" href="../index.html">📚 Continuer mes cours</a>
     </div>
+    <div class="app-card" id="group-card">
+      <h2 style="margin-top:0">👥 Mon groupe d'îlot</h2>
+      <div id="group-box">Chargement…</div>
+    </div>
     <div class="app-card">
       <h2 style="margin-top:0">Ma progression</h2>
       <div id="progress"></div>
@@ -38,7 +42,8 @@
 </main>
 
 <script type="module">
-import { isConfigured, currentStudent, logout, loadStudentWork } from "../assets/app.js";
+import { isConfigured, currentStudent, logout, loadStudentWork,
+  listGroups, createGroup, joinGroup, leaveGroup } from "../assets/app.js";
 
 const $ = (id) => document.getElementById(id);
 if (!isConfigured()) { location.href = "../connexion/"; }
@@ -76,7 +81,63 @@ function scorePill(pct) {
   } catch (e) {
     $("loading").textContent = "Impossible de charger ta progression. Reconnecte-toi.";
   }
+  renderGroup();
 })();
+
+/* ---------- Groupe d'îlot ---------- */
+async function renderGroup() {
+  const box = $("group-box");
+  const s = currentStudent();
+  if (s.groupId) {
+    let members = [];
+    try {
+      const groups = await listGroups(s.classId);
+      const g = groups.find((x) => x.id === s.groupId);
+      if (!g) { // groupe supprimé
+        box.innerHTML = "";
+        s.groupId = null;
+        try { const raw = JSON.parse(localStorage.getItem("lmtechno-eleve")); raw.groupId = null; raw.groupName = null; localStorage.setItem("lmtechno-eleve", JSON.stringify(raw)); } catch (e) {}
+        return renderGroup();
+      }
+      members = Object.values(g.members || {});
+    } catch (e) {}
+    box.innerHTML = `
+      <p>Tu es dans le groupe <strong>${esc(s.groupName || "")}</strong>${members.length ? " avec : " + members.map(esc).join(", ") : ""}.</p>
+      <p style="color:var(--muted);font-size:0.88rem">Sur les pages de cours, ce que chacun écrit apparaît chez tous les membres du groupe, en direct. Votre professeur voit le travail du groupe.</p>
+      <button class="btn btn-ghost btn-sm" id="g-leave" type="button">Quitter le groupe</button>`;
+    $("g-leave").onclick = async () => {
+      if (!confirm("Quitter le groupe ? (les réponses du groupe sont conservées)")) return;
+      await leaveGroup(s.classId, s.groupId, s.sid);
+      location.reload();
+    };
+    return;
+  }
+  // pas de groupe : créer ou rejoindre
+  let groups = [];
+  try { groups = await listGroups(s.classId); } catch (e) {}
+  box.innerHTML = `
+    <p style="color:var(--text-2)">Travaille en îlot : crée un groupe (choisissez le nom ensemble) ou rejoins celui de ta table. Ce que chacun écrit apparaîtra chez tous, en direct.</p>
+    <div class="inline-form" style="margin-bottom:0.8rem">
+      <div class="field"><label for="g-name">Créer un groupe</label>
+        <input id="g-name" type="text" maxlength="40" placeholder="Les Fusées"></div>
+      <button class="btn btn-primary" id="g-create" type="button">Créer</button>
+    </div>
+    ${groups.length ? `<p style="font-weight:600;margin:0.6rem 0 0.4rem">Ou rejoindre un groupe de la classe :</p>
+    <div class="chips">${groups.map((g) => `<button class="chip-student" style="cursor:pointer" data-join="${esc(g.id)}" data-name="${esc(g.name)}">${esc(g.name)} · ${Object.keys(g.members || {}).length} membre${Object.keys(g.members || {}).length > 1 ? "s" : ""}</button>`).join("")}</div>` : ""}
+    <div class="app-msg err" id="g-msg"></div>`;
+  $("g-create").onclick = async () => {
+    const name = $("g-name").value.trim();
+    const msg = $("g-msg"); msg.className = "app-msg";
+    if (!name) { msg.textContent = "Choisis un nom de groupe."; msg.className = "app-msg show err"; return; }
+    $("g-create").disabled = true;
+    try { await createGroup(s.classId, name, s.sid, s.firstName); location.reload(); }
+    catch (e) { msg.textContent = e.message || "Erreur."; msg.className = "app-msg show err"; $("g-create").disabled = false; }
+  };
+  box.querySelectorAll("[data-join]").forEach((b) => b.onclick = async () => {
+    try { await joinGroup(s.classId, b.getAttribute("data-join"), s.sid, s.firstName); location.reload(); }
+    catch (e) { const msg = $("g-msg"); msg.textContent = e.message || "Erreur."; msg.className = "app-msg show err"; }
+  });
+}
 </script>
 </body>
 </html>

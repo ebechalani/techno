@@ -36,6 +36,18 @@
         ".read": "auth != null",
         ".write": "auth != null"
       }
+    },
+    "groups": {
+      "$cid": {
+        ".read": "auth != null",
+        ".write": "auth != null"
+      }
+    },
+    "groupwork": {
+      "$cid": {
+        ".read": "auth != null",
+        ".write": "auth != null"
+      }
     }
   }
 }
