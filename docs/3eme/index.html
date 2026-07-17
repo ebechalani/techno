@@ -15,7 +15,7 @@
 <link rel="stylesheet" href="../assets/styles.css?v=93c7e2ac98">
 <script>
 (function(){try{var t=localStorage.getItem("lmtechno-theme");if(!t)t=window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light";document.documentElement.setAttribute("data-theme",t);}catch(e){}})();
-(function(){try{var s=JSON.parse(localStorage.getItem("lmtechno-eleve")||"null");if(!s||!s.section)return;var d=document.documentElement,cur=d.getAttribute("data-section")||"",base=d.getAttribute("data-base")||"./";if(cur==="home"||(cur&&cur!==s.section))location.replace(base+s.section+"/");}catch(e){}})();
+(function(){try{var s=JSON.parse(localStorage.getItem("lmtechno-eleve")||"null");if(!s||!s.section)return;var d=document.documentElement,cur=d.getAttribute("data-section")||"",base=d.getAttribute("data-base")||"./",lv=["5eme","4eme","3eme","snt","sicit"];if(cur==="home"||(lv.indexOf(cur)>=0&&cur!==s.section))location.replace(base+s.section+"/");}catch(e){}})();
 </script>
 <script src="../assets/firebase-config.js?v=93c7e2ac98"></script>
 
@@ -38,6 +38,7 @@
   <a href="../3eme/" style="--dot:#7c3aed" aria-current="true">3ème</a>
   <a href="../snt/" style="--dot:#d9640f">2nde SNT</a>
   <a href="../sicit/" style="--dot:#0d8e9c">SI · CIT</a>
+  <a href="../atelier/" style="--dot:#b91c1c">Atelier</a>
   <a class="nav-account" href="../connexion/">👤 Espace</a>
 </nav>
     <div class="header-actions">
@@ -92,6 +93,16 @@
       <p>Architecture des réseaux, du domicile à Internet.</p>
       <span class="seq-foot">
         <span>📖 3 séances</span>
+        <span>📎 2 compléments</span>
+      </span>
+    </a>
+    
+    <a class="seq-card" href="./projet-fablab-serie/" style="--accent:#7c3aed">
+      <span class="seq-num">Séquence <span class="seq-new">✦ Nouveau</span></span>
+      <h3>🏭 Projet fablab : produire en série</h3>
+      <p>Fabriquer UNE pièce, tout le monde sait faire. En produire VINGT, identiques, dans les temps et sans gâchis : ça, c'est un vrai défi d'ingénieur.</p>
+      <span class="seq-foot">
+        <span>📖 4 séances</span>
         <span>📎 2 compléments</span>
       </span>
     </a>
@@ -153,6 +164,7 @@
         <li><a href="../3eme/">3ème</a></li>
         <li><a href="../snt/">2nde SNT</a></li>
         <li><a href="../sicit/">SI · CIT</a></li>
+        <li><a href="../atelier/">Atelier</a></li>
       </ul>
     </div>
     <div>

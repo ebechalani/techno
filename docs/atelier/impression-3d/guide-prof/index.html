@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="fr" data-base="../../../" data-section="atelier" data-v="93c7e2ac98">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>👨‍🏫 Guide du professeur — imprimantes 3D · Impression 3D — Technologie &amp; SNT</title>
+<meta name="description" content="Réglage du plateau, profils Cura, défauts courants, files d'impression et grille de permis : tout pour faire tourner le parc FDM sereinement.">
+<meta property="og:title" content="👨‍🏫 Guide du professeur — imprimantes 3D · Impression 3D — Technologie &amp; SNT">
+<meta property="og:description" content="Réglage du plateau, profils Cura, défauts courants, files d'impression et grille de permis : tout pour faire tourner le parc FDM sereinement.">
+<meta property="og:type" content="website">
+<link rel="icon" href="../../../assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lexend:wght@500;600;700;800&family=Caveat:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../../assets/styles.css?v=93c7e2ac98">
+<script>
+(function(){try{var t=localStorage.getItem("lmtechno-theme");if(!t)t=window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light";document.documentElement.setAttribute("data-theme",t);}catch(e){}})();
+(function(){try{var s=JSON.parse(localStorage.getItem("lmtechno-eleve")||"null");if(!s||!s.section)return;var d=document.documentElement,cur=d.getAttribute("data-section")||"",base=d.getAttribute("data-base")||"./",lv=["5eme","4eme","3eme","snt","sicit"];if(cur==="home"||(lv.indexOf(cur)>=0&&cur!==s.section))location.replace(base+s.section+"/");}catch(e){}})();
+</script>
+<script src="../../../assets/firebase-config.js?v=93c7e2ac98"></script>
+
+</head>
+<body>
+<a class="skip-link" href="#contenu">Aller au contenu</a>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="../../../index.html">
+      <span class="brand-logo">T</span>
+      <span>Technologie <span style="color:var(--muted);font-weight:500">&amp;</span> SNT
+        <small>Lycée Montaigne, Beit Chabab</small>
+      </span>
+    </a>
+    
+<nav class="main-nav" id="main-nav" aria-label="Navigation principale">
+  <a href="../../../index.html">Accueil</a>
+  <a href="../../../5eme/" style="--dot:#0d9268">5ème</a>
+  <a href="../../../4eme/" style="--dot:#2050d0">4ème</a>
+  <a href="../../../3eme/" style="--dot:#7c3aed">3ème</a>
+  <a href="../../../snt/" style="--dot:#d9640f">2nde SNT</a>
+  <a href="../../../sicit/" style="--dot:#0d8e9c">SI · CIT</a>
+  <a href="../../../atelier/" style="--dot:#b91c1c" aria-current="true">Atelier</a>
+  <a class="nav-account" href="../../../connexion/">👤 Espace</a>
+</nav>
+    <div class="header-actions">
+      <button class="search-btn" id="search-open" type="button" aria-label="Rechercher">
+        <span>🔍</span><span class="label">Rechercher</span><kbd>Ctrl K</kbd>
+      </button>
+      <button class="icon-btn" id="theme-toggle" type="button" aria-label="Changer de thème">🌙</button>
+      <button class="icon-btn nav-toggle" id="nav-toggle" type="button" aria-label="Menu" aria-expanded="false">☰</button>
+    </div>
+  </div>
+</header>
+<main id="contenu">
+
+<nav class="breadcrumbs wrap" aria-label="Fil d'Ariane">
+    <a href="../../../index.html">Accueil</a><span class="sep">›</span>
+    <a href="../../">Atelier</a><span class="sep">›</span>
+    <a href="../">Impression 3D</a><span class="sep">›</span>
+    <span class="current">👨‍🏫 Guide du professeur — imprimantes 3D</span>
+  </nav>
+<div class="wrap course-layout">
+  <aside class="sidebar" style="--accent:undefined;--accent-soft:undefined;">
+    <div class="sb-title"><span class="dot"></span>Atelier </div>
+    <nav>
+    <details>
+      <summary><a href="../../bienvenue-atelier/" style="all:unset;cursor:pointer">Bienvenue à l'atelier</a></summary>
+      <div class="sb-pages">
+        <a href="../../bienvenue-atelier/regles-dor/">Règles d'or</a>
+        <a href="../../bienvenue-atelier/organisation-permis/">Rôles &amp; permis</a>
+        <a href="../../bienvenue-atelier/guide-prof/">Guide professeur</a>
+      </div>
+    </details>
+    <details>
+      <summary><a href="../../decoupe-vinyle-skycut/" style="all:unset;cursor:pointer">Vinyle Skycut</a></summary>
+      <div class="sb-pages">
+        <a href="../../decoupe-vinyle-skycut/fiche-machine/">Fiche machine</a>
+        <a href="../../decoupe-vinyle-skycut/guide-prof/">Guide prof</a>
+      </div>
+    </details>
+    <details open>
+      <summary><a href="../../impression-3d/" style="all:unset;cursor:pointer">Impression 3D</a></summary>
+      <div class="sb-pages">
+        <a href="../../impression-3d/fiche-machine/">Fiche machine</a>
+        <a href="../../impression-3d/guide-prof/" aria-current="true">Guide prof</a>
+      </div>
+    </details>
+    <details>
+      <summary><a href="../../scie-chantourner/" style="all:unset;cursor:pointer">Scie à chantourner</a></summary>
+      <div class="sb-pages">
+        <a href="../../scie-chantourner/fiche-machine/">Fiche machine</a>
+        <a href="../../scie-chantourner/guide-prof/">Guide prof</a>
+      </div>
+    </details>
+    <details>
+      <summary><a href="../../decoupe-laser/" style="all:unset;cursor:pointer">Découpeuse laser</a></summary>
+      <div class="sb-pages">
+        <a href="../../decoupe-laser/fiche-machine/">Fiche machine</a>
+        <a href="../../decoupe-laser/guide-prof/">Guide prof</a>
+      </div>
+    </details>
+    <details>
+      <summary><a href="../../cnc-ttc6050/" style="all:unset;cursor:pointer">CNC TTC 6050</a></summary>
+      <div class="sb-pages">
+        <a href="../../cnc-ttc6050/fiche-machine/">Fiche machine</a>
+        <a href="../../cnc-ttc6050/guide-prof/">Guide prof</a>
+      </div>
+    </details>
+    <details>
+      <summary><a href="../../meuleuse-droite/" style="all:unset;cursor:pointer">Meuleuse droite</a></summary>
+      <div class="sb-pages">
+        <a href="../../meuleuse-droite/fiche-machine/">Fiche machine</a>
+        <a href="../../meuleuse-droite/guide-prof/">Guide prof</a>
+      </div>
+    </details>
+    </nav>
+  </aside>
+  <article>
+    <div class="page-head">
+      <div class="kicker">
+        <span class="badge" style="--badge-bg:#fdeaea;--badge-fg:#b91c1c">Atelier</span>
+        <span class="badge badge-corr">✔ Correction</span>
+        
+      </div>
+      <h1>👨‍🏫 Guide du professeur — imprimantes 3D</h1>
+      <p class="desc">Réglage du plateau, profils Cura, défauts courants, files d'impression et grille de permis : tout pour faire tourner le parc FDM sereinement.</p>
+    </div>
+    <div class="callout callout-objectif"><span class="co-icon">🎯</span><div class="co-body"><div class="co-title">Objectifs</div><ul>
+<li>Préparer les machines et les profils Cura avant la séance.</li>
+<li>Diagnostiquer et corriger les défauts d&#39;impression courants.</li>
+<li>Organiser les files d&#39;impression et la maintenance du parc.</li>
+<li>Évaluer les élèves et valider le permis imprimante 3D.</li>
+</ul>
+</div></div>
+    
+    <div class="prose">
+      <h2>📋 Préparation en amont</h2>
+<ul>
+<li><strong>Machines</strong> : plateau nettoyé à l&#39;alcool isopropylique (les traces de doigts sont la cause n°1 des décollements), nivellement vérifié sur chaque imprimante, filament PLA chargé et extrusion testée (10 cm de purge propre).</li>
+<li><strong>Logiciels</strong> : TinkerCAD accessible (comptes classe créés en amont — prévoir la procédure de connexion), <strong>Cura installé sur les PC du U avec le profil de classe</strong> (voir plus bas), un dossier réseau ou une clé USB dédiée pour collecter les G-codes.</li>
+<li><strong>Affichage</strong> : fiche de poste (IPS) plastifiée à côté de chaque machine, <strong>tableau de réservation</strong> vierge au mur de la zone impression, marquage de la zone machines.</li>
+<li><strong>Matériel</strong> : spatules, pinces coupantes (pour la jupe et l&#39;écheniollage des fils), pied à coulisse par îlot pour le contrôle qualité, feuille de papier 80 g pour le réglage du plateau.</li>
+<li><strong>Consommables</strong> : vérifier le stock (compter ~4 g par élève, soit ~150 g pour une classe de 28 avec les ratés — une bobine de 1 kg par classe est confortable).</li>
+<li><strong>Ventilation</strong> : s&#39;assurer que l&#39;extraction/aération de la salle fonctionne ; les imprimantes FDM émettent des particules ultrafines même en PLA.</li>
+<li>Ces dispositions s&#39;inscrivent dans le cadre du <strong>DUERP</strong> de l&#39;établissement et des consignes écrites au poste (cf. guide d&#39;accompagnement éduscol, mai 2024).</li>
+</ul>
+<h2>🛠️ Le réglage du plateau : le geste qui décide de tout</h2>
+<p>La règle à répéter aux élèves : <strong>« si la première couche n&#39;accroche pas, rien d&#39;autre ne compte »</strong>. Deux méthodes selon vos machines :</p>
+<ol>
+<li><strong>Méthode de la feuille de papier</strong> (machines sans capteur) : buse et plateau à température d&#39;impression (le métal se dilate !), amener la buse aux points de réglage, glisser une feuille de 80 g : elle doit <strong>frotter légèrement</strong> sans se bloquer. Faire les 4 coins puis le centre, deux tours complets.</li>
+<li><strong>Palpeur / nivellement automatique</strong> : lancer la routine d&#39;auto-nivellement, puis ajuster le <strong>Z-offset</strong> pendant l&#39;impression d&#39;une première couche de test : trop haut → les lignes sont des « spaghettis » ronds qui n&#39;adhèrent pas ; trop bas → couche translucide, buse qui racle, risque de bouchage.</li>
+</ol>
+<p><strong>Diagnostic visuel d&#39;une bonne première couche</strong> : lignes légèrement écrasées (section ovale), qui se touchent sans se chevaucher, surface mate et uniforme. Faites-le constater aux élèves — c&#39;est le cœur de la validation que vous effectuez à chaque lancement.</p>
+<h2>🌡️ Températures indicatives (à calibrer sur VOS machines)</h2>
+<table>
+<thead>
+<tr>
+<th>Filament</th>
+<th>Buse</th>
+<th>Plateau</th>
+<th>Remarques</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>PLA</strong></td>
+<td><strong>195-215 °C</strong> (bon point de départ : 210 °C, 215 °C en première couche)</td>
+<td><strong>50-60 °C</strong></td>
+<td>Le seul filament en libre usage par les élèves</td>
+</tr>
+<tr>
+<td><strong>PETG</strong></td>
+<td><strong>230-250 °C</strong> — <em>à calibrer avant toute utilisation</em></td>
+<td><strong>70-85 °C</strong> — <em>à calibrer</em></td>
+<td>Réservé au professeur ou sur accord explicite ; plus sujet au stringing</td>
+</tr>
+</tbody></table>
+<p>Ces valeurs sont <strong>indicatives</strong> : chaque marque de filament, chaque buse, chaque capteur diffère. La bonne pratique : imprimer une <strong>tour de température</strong> à réception de chaque nouvelle bobine et noter la valeur retenue sur la bobine au marqueur.</p>
+<h2>🗂️ Profils Cura de classe</h2>
+<p>Préparez et verrouillez un profil unique <strong>« Classe-PLA-0.2 »</strong> déployé sur tous les postes :</p>
+<ul>
+<li>Hauteur de couche 0,2 mm ; remplissage 15 % ; jupe activée (3 tours) ; supports désactivés par défaut ; températures calibrées de VOS machines ; vitesse conservatrice (~50 mm/s).</li>
+<li>Passez Cura en <strong>mode d&#39;affichage « Basique »</strong> pour ne laisser visibles que remplissage, supports et adhérence : les élèves manipulent 3 réglages, pas 400.</li>
+<li>Créez un second profil <strong>« Classe-PLA-brim »</strong> (bordure 6 mm) pour les pièces fines ou hautes — utile en différenciation.</li>
+<li>Exportez les profils (.curaprofile) et gardez-en une copie : une mise à jour de Cura ou un poste réinstallé les efface.</li>
+</ul>
+<h2>🩺 Défauts courants : diagnostic et remèdes</h2>
+<table>
+<thead>
+<tr>
+<th>Défaut</th>
+<th>Symptôme</th>
+<th>Causes probables</th>
+<th>Remèdes</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Warping</strong></td>
+<td>Coins qui se soulèvent, pièce banane</td>
+<td>Refroidissement inégal → retrait ; plateau froid ou sale ; courant d&#39;air</td>
+<td>Plateau chauffé et propre, <strong>brim</strong>, couper le ventilateur sur les 3-5 premières couches, éloigner la machine des fenêtres/climatisation</td>
+</tr>
+<tr>
+<td><strong>Stringing</strong></td>
+<td>Fils fins entre les parties de la pièce</td>
+<td>Buse trop chaude, rétraction insuffisante, filament humide</td>
+<td>Baisser la buse de 5-10 °C, augmenter distance/vitesse de rétraction, <strong>sécher le filament</strong></td>
+</tr>
+<tr>
+<td><strong>Décollement de la 1re couche</strong></td>
+<td>Impression qui part en « plat de spaghettis »</td>
+<td>Plateau gras ou mal réglé, Z-offset trop haut, première couche trop rapide</td>
+<td>Nettoyage alcool isopropylique, re-nivellement, 1re couche plus lente et plus chaude, brim</td>
+</tr>
+<tr>
+<td><strong>Sous-extrusion</strong></td>
+<td>Couches incomplètes, lignes qui manquent, pièce fragile</td>
+<td>Buse partiellement bouchée, filament qui patine dans l&#39;extrudeur, diamètre mal déclaré</td>
+<td>Vérifier la tension du galet d&#39;extrudeur, nettoyer la buse, contrôler le diamètre du filament dans Cura</td>
+</tr>
+<tr>
+<td><strong>Buse bouchée</strong></td>
+<td>Plus rien ne sort, clics de l&#39;extrudeur</td>
+<td>Résidus carbonisés, poussière sur le filament, impression trop basse qui a obturé la buse</td>
+<td>Nettoyage à chaud (brosse laiton), aiguille de débouchage, <strong>cold pull</strong> (tirage à froid), en dernier recours changer la buse</td>
+</tr>
+</tbody></table>
+<p>Gardez une <strong>boîte à défauts</strong> : conservez les pièces ratées étiquetées (warping, stringing…) — c&#39;est un support pédagogique excellent pour la zone d&#39;analyse « … » de la fiche élève.</p>
+<h2>🔧 Maintenance du parc</h2>
+<ul>
+<li><strong>Buse</strong> : brossage laiton à chaud chaque semaine d&#39;utilisation ; cold pull au premier signe de sous-extrusion ; une buse laiton est un consommable (~toutes les 300-500 h).</li>
+<li><strong>Courroies</strong> : vérifier la tension chaque trimestre (une courroie pincée doit « sonner » comme une corde grave, sans claquer) ; des courroies détendues = décalages de couches.</li>
+<li><strong>Axes</strong> : dépoussiérer et graisser légèrement tiges lisses et vis trapézoïdales chaque trimestre (graisse adaptée, jamais d&#39;excès qui attire la poussière).</li>
+<li><strong>Filament</strong> : le PLA absorbe l&#39;humidité (climat libanais humide en été !) → <strong>rangement en boîte étanche avec sachets dessicants</strong>, bobines entamées jamais laissées à l&#39;air libre pendant les vacances. Filament qui « crépite » à l&#39;extrusion = filament humide.</li>
+<li><strong>Plateau</strong> : nettoyage alcool isopropylique avant chaque série ; inspecter la surface (rayures de spatule).</li>
+</ul>
+<h2>🗓️ Organisation des files d&#39;impression</h2>
+<p>Problème structurel : un porte-clés prend <strong>30 à 50 minutes</strong>, une classe en produit 28, et une séance dure 55 minutes. Les impressions <strong>dépassent donc le temps de cours</strong> — il faut un système :</p>
+<ol>
+<li><strong>Tableau de réservation</strong> affiché en zone machines : colonnes Machine / Fichier / Élève / Classe / Durée estimée / Lancé le / Terminé ✔. Les élèves s&#39;y inscrivent en fin de séance.</li>
+<li><strong>Nommage obligatoire des fichiers : PrénomClasse</strong> (<code>Lea5B.gcode</code>). Un fichier mal nommé n&#39;entre pas dans la file — tenez bon, c&#39;est ce qui évite les pièces orphelines.</li>
+<li><strong>Lancement entre les cours</strong> : vous lancez 2-3 impressions aux intercours et récréations ; avec 3-4 machines, une classe est servie en une semaine. Ne jamais laisser une impression tourner sans personne dans les parages — passez vérifier la première couche puis à intervalles réguliers.</li>
+<li><strong>Bac de livraison</strong> par classe : les pièces refroidies et détachées y sont déposées, distribuées en début de séance suivante (moment de l&#39;analyse critique).</li>
+</ol>
+<h2>💰 Coût matière : un calcul à faire AVEC les élèves</h2>
+<p>Exemple à adapter à vos prix réels : bobine de 1 kg de PLA ≈ <strong>20-25 €</strong>. Un porte-clés ≈ <strong>4 g</strong> → coût matière ≈ <strong>0,10 €</strong> environ par pièce. Faites poser le calcul par les élèves à partir de la masse annoncée par Cura (leur zone de réponse) : c&#39;est une application concrète de proportionnalité, et cela objective la règle « on tranche et on vérifie AVANT d&#39;imprimer » — un raté n&#39;est pas gratuit, ni en argent ni en temps machine.</p>
+<h2>⏱️ Déroulé minuté (séance de 55 min)</h2>
+<table>
+<thead>
+<tr>
+<th>Temps</th>
+<th>Phase</th>
+<th>Rôle du professeur</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>0-5 min</td>
+<td>Accueil, pièce d&#39;exemple qui circule</td>
+<td>Montrer les couches à l&#39;œil nu sur la pièce</td>
+</tr>
+<tr>
+<td>5-15 min</td>
+<td>Additif vs soustractif + PLA + sécurité (fiche)</td>
+<td>Questionner : « quelle machine de l&#39;atelier enlève la matière ? »</td>
+</tr>
+<tr>
+<td>15-25 min</td>
+<td>Chaîne numérique + démonstration Cura au vidéoprojecteur</td>
+<td>Montrer STL → tranchage → G-code (ouvrir le G-code dans un éditeur : effet garanti)</td>
+</tr>
+<tr>
+<td>25-45 min</td>
+<td>Modélisation TinkerCAD + tranchage aux PC</td>
+<td>Circuler, débloquer, faire vérifier les dimensions au binôme</td>
+</tr>
+<tr>
+<td>45-52 min</td>
+<td>Notation temps/masse, inscription file d&#39;impression</td>
+<td>Contrôler le nommage des fichiers</td>
+</tr>
+<tr>
+<td>52-55 min</td>
+<td>« Ce que je retiens » + annonce du quiz permis</td>
+<td>Le quiz peut être fait en classe ou à la maison</td>
+</tr>
+</tbody></table>
+<p>Le <strong>lancement des impressions et la validation des premières couches</strong> se font sur les créneaux suivants, par petits groupes de titulaires du permis.</p>
+<h2>🔄 Gestion des rotations d&#39;îlots</h2>
+<p>Avec 3-4 machines pour 7 îlots, faites tourner par îlot complet lors des séances de lancement : l&#39;<strong>opérateur CFAO</strong> charge le G-code, le <strong>chef d&#39;atelier</strong> déroule la checklist sécurité à voix haute, le <strong>contrôleur qualité</strong> observe et décrit la première couche, le <strong>magasinier</strong> vérifie bobine et rangement. Pendant qu&#39;un îlot est en zone machines (avec vous), les autres modélisent la version 2, mesurent les pièces livrées au pied à coulisse ou analysent la boîte à défauts.</p>
+<h2>🎚️ Différenciation</h2>
+<ul>
+<li><strong>Soutien</strong> : fournir un modèle TinkerCAD pré-rempli (socle déjà dimensionné, l&#39;élève ajoute texte et trou) ; fiche des 6 étapes avec captures d&#39;écran ; binôme avec un élève déjà à l&#39;aise.</li>
+<li><strong>Approfondissement</strong> : porte-clés double face ou texte évidé (trou au lieu de relief — question intéressante : pourquoi le creux doit-il être moins profond que le socle ?) ; comparer le temps et la masse pour un remplissage 10 % vs 40 % et argumenter le choix ; concevoir un jeton dont l&#39;épaisseur totale reste 5 mm mais avec un logo importé en SVG.</li>
+</ul>
+<h2>🪪 Grille de validation du permis imprimante 3D</h2>
+<table>
+<thead>
+<tr>
+<th>Critère observable</th>
+<th>Validé si…</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Quiz sécurité (théorie)</strong></td>
+<td>≥ 7/8 au quiz de la fiche machine</td>
+</tr>
+<tr>
+<td><strong>Chaîne numérique</strong></td>
+<td>L&#39;élève nomme dans l&#39;ordre : modélisation → STL → tranchage → G-code → impression</td>
+</tr>
+<tr>
+<td><strong>Réglages</strong></td>
+<td>L&#39;élève justifie hauteur de couche, remplissage et absence de supports pour SA pièce</td>
+</tr>
+<tr>
+<td><strong>Sécurité gestuelle</strong></td>
+<td>Ne touche ni buse ni pièce chaude sans qu&#39;on le rappelle ; attend le plateau froid ; spatule vers l&#39;extérieur</td>
+</tr>
+<tr>
+<td><strong>Première couche</strong></td>
+<td>Sait dire si une première couche observée est bonne, trop haute ou trop basse</td>
+</tr>
+<tr>
+<td><strong>Comportement</strong></td>
+<td>Nomme correctement son fichier, s&#39;inscrit sur le tableau, signale toute anomalie</td>
+</tr>
+</tbody></table>
+<p>Permis délivré si <strong>tous</strong> les critères sont validés (le quiz est repassable une fois après remédiation). Affichez le tableau des permis en zone machines ; le permis reste <strong>révocable</strong> en cas de manquement — et il n&#39;exempte jamais de la surveillance directe : c&#39;est un dispositif pédagogique local (adossé au DUERP), pas une autorisation réglementaire.</p>
+<h2>⚠️ Pièges et pannes courants (vécu de terrain)</h2>
+<ul>
+<li><strong>Texte trop fin dans TinkerCAD</strong> : en dessous de ~4 mm de hauteur de lettre, les caractères fondent en pâtés. Imposer une taille minimale.</li>
+<li><strong>Trou trop près du bord</strong> : à moins de 2 mm du bord, la paroi casse au premier porte-clés accroché. Faire vérifier au binôme avant export.</li>
+<li><strong>Fichier exporté en OBJ ou en pouces</strong> : contrôler l&#39;unité et le format à l&#39;export (une pièce 25× trop petite = export en pouces mal interprété).</li>
+<li><strong>Élève qui « améliore » les réglages du profil</strong> : verrouiller le profil, mode basique, et re-trancher vous-même en cas de doute.</li>
+<li><strong>Bobine emmêlée ou vide en cours d&#39;impression</strong> : vérifier le filament restant avant chaque lancement (peser la bobine : tare ~230-250 g selon les marques, à vérifier).</li>
+<li><strong>Coupure de courant</strong> : certaines machines reprennent l&#39;impression, d&#39;autres non — tester la fonction avant de compter dessus.</li>
+<li><strong>Odeur inhabituelle ou fumée</strong> : arrêt immédiat, débrancher, aérer ; ne jamais relancer sans avoir trouvé la cause.</li>
+</ul>
+
+    </div>
+    
+    
+    <nav class="pager">
+      <a class="pg-prev" href="../fiche-machine/"><span class="pg-label">← Précédent</span><span class="pg-title">🧊 Imprimante 3D — ma première pièce</span></a>
+      
+    </nav>
+  </article>
+</div>
+</main>
+<footer class="site-footer">
+  <div class="wrap footer-grid">
+    <div>
+      <h4>Technologie &amp; SNT</h4>
+      <p>Site pédagogique regroupant les cours, activités et ressources de Technologie du collège et de SNT du lycée.</p>
+    </div>
+    <div>
+      <h4>Niveaux</h4>
+      <ul>
+        <li><a href="../../../5eme/">5ème</a></li>
+        <li><a href="../../../4eme/">4ème</a></li>
+        <li><a href="../../../3eme/">3ème</a></li>
+        <li><a href="../../../snt/">2nde SNT</a></li>
+        <li><a href="../../../sicit/">SI · CIT</a></li>
+        <li><a href="../../../atelier/">Atelier</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Références</h4>
+      <ul>
+        <li><a href="https://eduscol.education.fr/2098/technologie-au-cycle-4" target="_blank" rel="noopener">Programme de Technologie (Eduscol)</a></li>
+        <li><a href="https://eduscol.education.fr/3016/sciences-numeriques-et-technologie-au-lycee" target="_blank" rel="noopener">Programme SNT (Eduscol)</a></li>
+        <li><a href="https://pix.fr" target="_blank" rel="noopener">Pix — compétences numériques</a></li>
+        <li><a href="https://sites.google.com/view/lmtechno25" target="_blank" rel="noopener">Site d'origine (Google Sites)</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="wrap footer-bottom">
+    <span>© M. Eddy Bachaalany · Lycée Montaigne, Beit Chabab</span>
+    <span>Cours de Technologie collège &amp; SNT lycée</span>
+  </div>
+</footer>
+<div class="search-overlay" id="search-overlay" role="dialog" aria-label="Recherche">
+  <div class="search-panel">
+    <div class="search-input-row">
+      <span>🔍</span>
+      <input id="search-input" type="search" placeholder="Rechercher une séquence, une séance, une notion…" autocomplete="off">
+      <kbd>Échap</kbd>
+    </div>
+    <div class="search-results" id="search-results"></div>
+  </div>
+</div>
+<button class="back-to-top" id="back-to-top" type="button" aria-label="Retour en haut">↑</button>
+<script src="../../../assets/client.js?v=93c7e2ac98" defer></script>
+</body>
+</html>

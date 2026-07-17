@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="fr" data-base="../../../" data-section="5eme" data-v="93c7e2ac98">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>🖥️ Séance 2 — Concevoir en vectoriel : dessiner pour la machine · Signalétique — Technologie &amp; SNT</title>
+<meta name="description" content="Aux PC en U : texte, pictogramme, marges et export SVG en suivant le protocole pas à pas, puis relecture croisée entre îlots.">
+<meta property="og:title" content="🖥️ Séance 2 — Concevoir en vectoriel : dessiner pour la machine · Signalétique — Technologie &amp; SNT">
+<meta property="og:description" content="Aux PC en U : texte, pictogramme, marges et export SVG en suivant le protocole pas à pas, puis relecture croisée entre îlots.">
+<meta property="og:type" content="website">
+<link rel="icon" href="../../../assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lexend:wght@500;600;700;800&family=Caveat:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../../assets/styles.css?v=93c7e2ac98">
+<script>
+(function(){try{var t=localStorage.getItem("lmtechno-theme");if(!t)t=window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light";document.documentElement.setAttribute("data-theme",t);}catch(e){}})();
+(function(){try{var s=JSON.parse(localStorage.getItem("lmtechno-eleve")||"null");if(!s||!s.section)return;var d=document.documentElement,cur=d.getAttribute("data-section")||"",base=d.getAttribute("data-base")||"./",lv=["5eme","4eme","3eme","snt","sicit"];if(cur==="home"||(lv.indexOf(cur)>=0&&cur!==s.section))location.replace(base+s.section+"/");}catch(e){}})();
+</script>
+<script src="../../../assets/firebase-config.js?v=93c7e2ac98"></script>
+
+</head>
+<body>
+<a class="skip-link" href="#contenu">Aller au contenu</a>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="../../../index.html">
+      <span class="brand-logo">T</span>
+      <span>Technologie <span style="color:var(--muted);font-weight:500">&amp;</span> SNT
+        <small>Lycée Montaigne, Beit Chabab</small>
+      </span>
+    </a>
+    
+<nav class="main-nav" id="main-nav" aria-label="Navigation principale">
+  <a href="../../../index.html">Accueil</a>
+  <a href="../../../5eme/" style="--dot:#0d9268" aria-current="true">5ème</a>
+  <a href="../../../4eme/" style="--dot:#2050d0">4ème</a>
+  <a href="../../../3eme/" style="--dot:#7c3aed">3ème</a>
+  <a href="../../../snt/" style="--dot:#d9640f">2nde SNT</a>
+  <a href="../../../sicit/" style="--dot:#0d8e9c">SI · CIT</a>
+  <a href="../../../atelier/" style="--dot:#b91c1c">Atelier</a>
+  <a class="nav-account" href="../../../connexion/">👤 Espace</a>
+</nav>
+    <div class="header-actions">
+      <button class="search-btn" id="search-open" type="button" aria-label="Rechercher">
+        <span>🔍</span><span class="label">Rechercher</span><kbd>Ctrl K</kbd>
+      </button>
+      <button class="icon-btn" id="theme-toggle" type="button" aria-label="Changer de thème">🌙</button>
+      <button class="icon-btn nav-toggle" id="nav-toggle" type="button" aria-label="Menu" aria-expanded="false">☰</button>
+    </div>
+  </div>
+</header>
+<main id="contenu">
+
+<nav class="breadcrumbs wrap" aria-label="Fil d'Ariane">
+    <a href="../../../index.html">Accueil</a><span class="sep">›</span>
+    <a href="../../">5ème</a><span class="sep">›</span>
+    <a href="../">Signalétique</a><span class="sep">›</span>
+    <span class="current">🖥️ Séance 2 — Concevoir en vectoriel : dessiner pour la machine</span>
+  </nav>
+<div class="wrap course-layout">
+  <aside class="sidebar" style="--accent:undefined;--accent-soft:undefined;">
+    <div class="sb-title"><span class="dot"></span>5ème </div>
+    <nav>
+    <details>
+      <summary><a href="../../sequence-1-cybersecurite/" style="all:unset;cursor:pointer">Cybersécurité</a></summary>
+      <div class="sb-pages">
+        <a href="../../sequence-1-cybersecurite/jeu-intro/">🎮 Jeu d'intro</a>
+        <a href="../../sequence-1-cybersecurite/seance-1/">Séance 1</a>
+        <a href="../../sequence-1-cybersecurite/seance-1-corr/">Séance 1 — correction</a>
+        <a href="../../sequence-1-cybersecurite/seance-2/">Séance 2</a>
+        <a href="../../sequence-1-cybersecurite/seance-2-corr/">Séance 2 — correction</a>
+        <a href="../../sequence-1-cybersecurite/seance-3/">Séance 3</a>
+        <a href="../../sequence-1-cybersecurite/seance-3-corr/">Séance 3 — correction</a>
+        <a href="../../sequence-1-cybersecurite/seance-4/">Séance 4</a>
+        <a href="../../sequence-1-cybersecurite/seance-4-corr/">Séance 4 — correction</a>
+        <a href="../../sequence-1-cybersecurite/ressources/">Ressources</a>
+      </div>
+    </details>
+    <details>
+      <summary><a href="../../sequence-reparer-objet/" style="all:unset;cursor:pointer">Réparer un objet technique</a></summary>
+      <div class="sb-pages">
+        <a href="../../sequence-reparer-objet/jeu-intro/">🎮 Jeu d'intro</a>
+        <a href="../../sequence-reparer-objet/seance-1/">Séance 1</a>
+        <a href="../../sequence-reparer-objet/seance-2/">Séance 2</a>
+      </div>
+    </details>
+    <details open>
+      <summary><a href="../../projet-fablab-signaletique/" style="all:unset;cursor:pointer">Signalétique</a></summary>
+      <div class="sb-pages">
+        <a href="../../projet-fablab-signaletique/jeu-intro/">Jeu d'intro</a>
+        <a href="../../projet-fablab-signaletique/seance-1/">Analyser le besoin</a>
+        <a href="../../projet-fablab-signaletique/seance-2/" aria-current="true">Conception vectorielle</a>
+        <a href="../../projet-fablab-signaletique/seance-3/">Production atelier</a>
+        <a href="../../projet-fablab-signaletique/seance-4/">Contrôle et pose</a>
+        <a href="../../projet-fablab-signaletique/guide-prof/">Guide professeur</a>
+      </div>
+    </details>
+    <details>
+      <summary><a href="../../sequence-1-preserver-les-ressources/" style="all:unset;cursor:pointer">Préserver les ressources</a></summary>
+      <div class="sb-pages">
+        <a href="../../sequence-1-preserver-les-ressources/jeu-intro/">🎮 Jeu d'intro</a>
+        <a href="../../sequence-1-preserver-les-ressources/seance-1/">Séance 1</a>
+        <a href="../../sequence-1-preserver-les-ressources/seance-2/">Séance 2</a>
+        <a href="../../sequence-1-preserver-les-ressources/seance-3/">Séance 3</a>
+      </div>
+    </details>
+    <details>
+      <summary><a href="../../sequence-2-eclairage-automatique/" style="all:unset;cursor:pointer">Éclairage automatique</a></summary>
+      <div class="sb-pages">
+        <a href="../../sequence-2-eclairage-automatique/jeu-intro/">🎮 Jeu d'intro</a>
+        <a href="../../sequence-2-eclairage-automatique/seance-1/">Séance 1</a>
+        <a href="../../sequence-2-eclairage-automatique/seance-2/">Séance 2</a>
+        <a href="../../sequence-2-eclairage-automatique/seance-3/">Séance 3</a>
+        <a href="../../sequence-2-eclairage-automatique/synthese-capteur-actionneur-interface/">Synthèse : Capteur, actionneur, interface</a>
+        <a href="../../sequence-2-eclairage-automatique/synthese-systemes-embarques/">Synthèse: Systèmes embarqués</a>
+        <a href="../../sequence-2-eclairage-automatique/seance-4/">Séance 4</a>
+      </div>
+    </details>
+    <details>
+      <summary><a href="../../sequence-3-vivre-dans-une-boite/" style="all:unset;cursor:pointer">Vivre dans une boîte</a></summary>
+      <div class="sb-pages">
+        <a href="../../sequence-3-vivre-dans-une-boite/jeu-intro/">🎮 Jeu d'intro</a>
+        <a href="../../sequence-3-vivre-dans-une-boite/seance-1/">Séance 1</a>
+        <a href="../../sequence-3-vivre-dans-une-boite/cahier-des-charges/">Séance 2: Identifier le cahier des charges</a>
+        <a href="../../sequence-3-vivre-dans-une-boite/seance-3/">Séance 3</a>
+        <a href="../../sequence-3-vivre-dans-une-boite/seance-4/">Séance 4</a>
+        <a href="../../sequence-3-vivre-dans-une-boite/synthese/">Synthèse</a>
+        <a href="../../sequence-3-vivre-dans-une-boite/seance-5/">Séance 5</a>
+        <a href="../../sequence-3-vivre-dans-une-boite/fiches-de-connaissance/">Fiches de connaissance</a>
+        <a href="../../sequence-3-vivre-dans-une-boite/seance-6/">Séance 6</a>
+        <a href="../../sequence-3-vivre-dans-une-boite/seance-7/">Séance 7</a>
+      </div>
+    </details>
+    <details>
+      <summary><a href="../../sequence-4-animal-sounds/" style="all:unset;cursor:pointer">Animal sounds for kids</a></summary>
+      <div class="sb-pages">
+        
+      </div>
+    </details>
+    <details>
+      <summary><a href="../../assr-1/" style="all:unset;cursor:pointer">ASSR 1</a></summary>
+      <div class="sb-pages">
+        <a href="../../assr-1/assr1/">Préparation</a>
+      </div>
+    </details>
+    </nav>
+  </aside>
+  <article>
+    <div class="page-head">
+      <div class="kicker">
+        <span class="badge" style="--badge-bg:#e2f6ee;--badge-fg:#0d9268">5e</span>
+        <span class="badge">Signalétique</span>
+        <span class="badge badge-new">✦ Nouveau</span>
+      </div>
+      <h1>🖥️ Séance 2 — Concevoir en vectoriel : dessiner pour la machine</h1>
+      <p class="desc">Aux PC en U : texte, pictogramme, marges et export SVG en suivant le protocole pas à pas, puis relecture croisée entre îlots.</p>
+    </div>
+    <div class="callout callout-objectif"><span class="co-icon">🎯</span><div class="co-body"><div class="co-title">Objectifs</div><ul>
+<li>Expliquer la différence entre une image en pixels et une image vectorielle.</li>
+<li>Créer le fichier de ma signalétique (texte + pictogramme) en suivant le protocole fourni.</li>
+<li>Appliquer les règles de lisibilité : lettres de 40 mm minimum, contraste fort, pictogrammes normalisés.</li>
+<li>Vérifier le fichier d&#39;un autre îlot avec la grille de relecture.</li>
+</ul>
+</div></div>
+    
+<div class="student-bar">
+  <span class="sb-info">💾 Tes réponses sont enregistrées automatiquement sur cet appareil.</span>
+  <span class="sb-actions">
+    <button class="btn btn-ghost btn-sm" id="print-answers" type="button">🖨 Imprimer / PDF</button>
+    <button class="btn btn-ghost btn-sm" id="clear-answers" type="button">🗑 Tout effacer</button>
+  </span>
+</div>
+    <div class="prose">
+      <h2>🖼️ Pourquoi « vectoriel » ?</h2>
+<p>Installe-toi aux PC en U : aujourd&#39;hui, on fabrique le <strong>fichier</strong>, pas encore l&#39;objet. Les machines de découpe (Skycut, laser) ne comprennent pas les photos. Une photo est une grille de petits carrés de couleur (des <strong>pixels</strong>) : si tu l&#39;agrandis, elle devient floue, et surtout la machine ne sait pas où passer sa lame ou son faisceau. Une <strong>image vectorielle</strong>, elle, décrit des <strong>formes par des lignes et des courbes</strong> (des chemins) : « un rectangle de 200 mm sur 100 mm », « la lettre S suivant cette courbe ». La machine suit ces chemins exactement, et on peut agrandir sans jamais perdre en qualité. Nos plaques et stickers seront donc dessinés en vectoriel, avec <strong>SignMaster</strong> (le logiciel du Skycut) ou <strong>Inkscape</strong>, selon le poste que vous indique le professeur.</p>
+<p><strong>Rôles du jour :</strong> l&#39;opérateur CFAO tient la souris, mais <strong>tout le monde décide</strong> ; le chef d&#39;atelier fait respecter le protocole étape par étape ; le contrôleur qualité coche la grille au fur et à mesure ; le magasinier note le nom des fichiers et où ils sont enregistrés.</p>
+<h2>🚀 Le protocole pas à pas (à suivre DANS L&#39;ORDRE, comme à la manche 2 du jeu)</h2>
+<ol>
+<li><strong>Ouvre le logiciel</strong> du poste (SignMaster ou Inkscape) et crée un <strong>nouveau document aux dimensions exactes de ta plaque</strong>, celles du croquis coté de la séance 1 (exemple : 200 × 100 mm). Vérifie que l&#39;unité est bien le <strong>millimètre</strong>.</li>
+<li><strong>Trace le contour</strong> de la plaque : un rectangle aux dimensions du document. C&#39;est lui que la machine découpera.</li>
+<li><strong>Trace les marges de sécurité : 10 mm</strong> à l&#39;intérieur de chaque bord. Rien (ni texte, ni picto) ne doit dépasser dans la marge : trop près du bord, la gravure fragilise la plaque et le sticker s&#39;échenille mal.</li>
+<li><strong>Écris le texte</strong> avec l&#39;outil texte : nom exact de la salle (celui vérifié en séance 1, orthographe comprise !). Police <strong>sans empattement</strong> (Arial ou équivalent), en <strong>MAJUSCULES</strong>. Règle la <strong>hauteur des lettres à 40 mm minimum</strong> : c&#39;est la hauteur qui garantit la lecture à 3 m d&#39;après votre cahier des charges. Vérifie avec l&#39;outil de dimensions du logiciel, pas à l&#39;œil.</li>
+<li><strong>Ajoute le pictogramme</strong> : prends-le dans la bibliothèque de formes du logiciel ou trace-le avec des formes simples (cercle, triangle, rectangle). Les formes doivent être <strong>fermées</strong> (un contour ouvert ne se découpe pas). Respecte les codes des pictogrammes normalisés : <strong>rond rouge barré = interdiction</strong>, <strong>rond bleu = obligation</strong> (lunettes obligatoires !), <strong>triangle jaune = danger</strong>.</li>
+<li><strong>Convertis le texte en contours</strong> (« vectoriser le texte ») : le texte devient des chemins que n&#39;importe quelle machine sait suivre, même si le poste n&#39;a pas ta police.</li>
+<li><strong>Enregistre puis exporte en SVG</strong> avec un nom de fichier qui dit tout : <code>salleB12_ilot3_plaque.svg</code>. Le magasinier note l&#39;emplacement exact du fichier.</li>
+<li><strong>Prépare la version sticker</strong> : mêmes étapes, mais uniquement des formes pleines et simples (le vinyle n&#39;aime pas les détails plus fins que 2 mm, ils se déchirent à l&#39;échenillage).</li>
+</ol>
+<blockquote>
+<p>⚠️ <strong>Question à poser au professeur avant d&#39;exporter le sticker :</strong> faut-il mettre le motif <strong>en miroir</strong> ? Réponse courte : pour du <strong>vinyle adhésif</strong> classique posé sur une porte, <strong>non</strong>. Le miroir, c&#39;est pour le flex thermocollant qu&#39;on presse sur du tissu. Vérifie de quel matériau il s&#39;agit.</p>
+</blockquote>
+<h2>🎨 Les 4 règles de lisibilité (à afficher dans un coin de ta tête)</h2>
+<table>
+<thead>
+<tr>
+<th>Règle</th>
+<th>Pourquoi</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Contraste fort</strong> : motif foncé sur fond clair, ou l&#39;inverse</td>
+<td>un panneau gris sur gris est invisible à 3 m</td>
+</tr>
+<tr>
+<td><strong>Lettres de 40 mm minimum</strong>, majuscules, police simple</td>
+<td>les polices « fantaisie » deviennent illisibles de loin</td>
+</tr>
+<tr>
+<td><strong>Un seul message par panneau</strong></td>
+<td>deux messages = aucun n&#39;est lu</td>
+</tr>
+<tr>
+<td><strong>Pictogramme normalisé</strong> avant le texte</td>
+<td>un picto se comprend même sans lire, même sans parler français</td>
+</tr>
+</tbody></table>
+<h2>🔁 Validation croisée entre îlots (15 min)</h2>
+<p>Comme le contrôleur de la manche 3 : <strong>on ne valide jamais soi-même sa propre production</strong>. Chaque îlot ouvre le fichier d&#39;un AUTRE îlot et remplit la grille :</p>
+<table>
+<thead>
+<tr>
+<th>Critère de relecture</th>
+<th>OK / à corriger</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Dimensions du document = dimensions du cahier des charges</td>
+<td></td>
+</tr>
+<tr>
+<td>Orthographe du nom de salle vérifiée</td>
+<td></td>
+</tr>
+<tr>
+<td>Hauteur des lettres ≥ 40 mm (mesurée dans le logiciel)</td>
+<td></td>
+</tr>
+<tr>
+<td>Marges de 10 mm respectées partout</td>
+<td></td>
+</tr>
+<tr>
+<td>Texte converti en contours</td>
+<td></td>
+</tr>
+<tr>
+<td>Pictogramme aux bons codes (rouge/bleu/jaune) et formes fermées</td>
+<td></td>
+</tr>
+<tr>
+<td>Nom de fichier complet (salle + îlot + type)</td>
+<td></td>
+</tr>
+</tbody></table>
+<p><strong>Zone d&#39;îlot — verdict de la relecture croisée :</strong> notez ici les corrections demandées par l&#39;îlot relecteur sur VOTRE fichier, et ce que vous avez corrigé.</p>
+<div class="answer-field">
+  <textarea rows="3" data-answer-idx="0" placeholder="✏️ Écris ta réponse ici…" aria-label="Zone de réponse de l'élève"></textarea>
+</div>
+<p><strong>Zone d&#39;îlot — préparation de la production :</strong> listez ce qui devra être prêt pour la séance de production (fichiers exportés et où, matériaux, permis machines validés de chaque membre, rôle de chacun aux postes).</p>
+<div class="answer-field">
+  <textarea rows="3" data-answer-idx="1" placeholder="✏️ Écris ta réponse ici…" aria-label="Zone de réponse de l'élève"></textarea>
+</div>
+<h2>🧭 Ce que je retiens</h2>
+<ul>
+<li>Une image <strong>vectorielle</strong> décrit des formes par des chemins : la machine les suit exactement et l&#39;agrandissement ne perd aucune qualité.</li>
+<li>Le fichier suit un <strong>protocole</strong> : dimensions en mm, marges de 10 mm, lettres de 40 mm, texte vectorisé, export SVG bien nommé.</li>
+<li>Les <strong>pictogrammes normalisés</strong> ont un code couleur : rouge = interdiction, bleu = obligation, jaune = danger.</li>
+<li>On <strong>valide en croisé</strong> : c&#39;est toujours quelqu&#39;un d&#39;autre qui relit, avec une grille, pas à l&#39;œil.</li>
+</ul>
+
+    </div>
+    
+    
+    <nav class="pager">
+      <a class="pg-prev" href="../seance-1/"><span class="pg-label">← Précédent</span><span class="pg-title">🔎 Séance 1 — Analyser le besoin : à qui parle un panneau ?</span></a>
+      <a class="pg-next" href="../seance-3/"><span class="pg-label">Suivant →</span><span class="pg-title">🏭 Séance 3 — Produire à l'atelier : 4 postes en rotation</span></a>
+    </nav>
+  </article>
+</div>
+</main>
+<footer class="site-footer">
+  <div class="wrap footer-grid">
+    <div>
+      <h4>Technologie &amp; SNT</h4>
+      <p>Site pédagogique regroupant les cours, activités et ressources de Technologie du collège et de SNT du lycée.</p>
+    </div>
+    <div>
+      <h4>Niveaux</h4>
+      <ul>
+        <li><a href="../../../5eme/">5ème</a></li>
+        <li><a href="../../../4eme/">4ème</a></li>
+        <li><a href="../../../3eme/">3ème</a></li>
+        <li><a href="../../../snt/">2nde SNT</a></li>
+        <li><a href="../../../sicit/">SI · CIT</a></li>
+        <li><a href="../../../atelier/">Atelier</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Références</h4>
+      <ul>
+        <li><a href="https://eduscol.education.fr/2098/technologie-au-cycle-4" target="_blank" rel="noopener">Programme de Technologie (Eduscol)</a></li>
+        <li><a href="https://eduscol.education.fr/3016/sciences-numeriques-et-technologie-au-lycee" target="_blank" rel="noopener">Programme SNT (Eduscol)</a></li>
+        <li><a href="https://pix.fr" target="_blank" rel="noopener">Pix — compétences numériques</a></li>
+        <li><a href="https://sites.google.com/view/lmtechno25" target="_blank" rel="noopener">Site d'origine (Google Sites)</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="wrap footer-bottom">
+    <span>© M. Eddy Bachaalany · Lycée Montaigne, Beit Chabab</span>
+    <span>Cours de Technologie collège &amp; SNT lycée</span>
+  </div>
+</footer>
+<div class="search-overlay" id="search-overlay" role="dialog" aria-label="Recherche">
+  <div class="search-panel">
+    <div class="search-input-row">
+      <span>🔍</span>
+      <input id="search-input" type="search" placeholder="Rechercher une séquence, une séance, une notion…" autocomplete="off">
+      <kbd>Échap</kbd>
+    </div>
+    <div class="search-results" id="search-results"></div>
+  </div>
+</div>
+<button class="back-to-top" id="back-to-top" type="button" aria-label="Retour en haut">↑</button>
+<script src="../../../assets/client.js?v=93c7e2ac98" defer></script>
+</body>
+</html>

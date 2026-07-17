@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="fr" data-base="../../../" data-section="3eme" data-v="93c7e2ac98">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>👨‍🏫 Guide du professeur — Projet fablab : produire en série · Produire en série — Technologie &amp; SNT</title>
+<meta name="description" content="Préparation matière, plan coté, déroulé minuté, rotations, évaluation adossée au programme 2020 et pièges à éviter — dont le plus coûteux : lancer la série sans prototype validé.">
+<meta property="og:title" content="👨‍🏫 Guide du professeur — Projet fablab : produire en série · Produire en série — Technologie &amp; SNT">
+<meta property="og:description" content="Préparation matière, plan coté, déroulé minuté, rotations, évaluation adossée au programme 2020 et pièges à éviter — dont le plus coûteux : lancer la série sans prototype validé.">
+<meta property="og:type" content="website">
+<link rel="icon" href="../../../assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lexend:wght@500;600;700;800&family=Caveat:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../../assets/styles.css?v=93c7e2ac98">
+<script>
+(function(){try{var t=localStorage.getItem("lmtechno-theme");if(!t)t=window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light";document.documentElement.setAttribute("data-theme",t);}catch(e){}})();
+(function(){try{var s=JSON.parse(localStorage.getItem("lmtechno-eleve")||"null");if(!s||!s.section)return;var d=document.documentElement,cur=d.getAttribute("data-section")||"",base=d.getAttribute("data-base")||"./",lv=["5eme","4eme","3eme","snt","sicit"];if(cur==="home"||(lv.indexOf(cur)>=0&&cur!==s.section))location.replace(base+s.section+"/");}catch(e){}})();
+</script>
+<script src="../../../assets/firebase-config.js?v=93c7e2ac98"></script>
+
+</head>
+<body>
+<a class="skip-link" href="#contenu">Aller au contenu</a>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="../../../index.html">
+      <span class="brand-logo">T</span>
+      <span>Technologie <span style="color:var(--muted);font-weight:500">&amp;</span> SNT
+        <small>Lycée Montaigne, Beit Chabab</small>
+      </span>
+    </a>
+    
+<nav class="main-nav" id="main-nav" aria-label="Navigation principale">
+  <a href="../../../index.html">Accueil</a>
+  <a href="../../../5eme/" style="--dot:#0d9268">5ème</a>
+  <a href="../../../4eme/" style="--dot:#2050d0">4ème</a>
+  <a href="../../../3eme/" style="--dot:#7c3aed" aria-current="true">3ème</a>
+  <a href="../../../snt/" style="--dot:#d9640f">2nde SNT</a>
+  <a href="../../../sicit/" style="--dot:#0d8e9c">SI · CIT</a>
+  <a href="../../../atelier/" style="--dot:#b91c1c">Atelier</a>
+  <a class="nav-account" href="../../../connexion/">👤 Espace</a>
+</nav>
+    <div class="header-actions">
+      <button class="search-btn" id="search-open" type="button" aria-label="Rechercher">
+        <span>🔍</span><span class="label">Rechercher</span><kbd>Ctrl K</kbd>
+      </button>
+      <button class="icon-btn" id="theme-toggle" type="button" aria-label="Changer de thème">🌙</button>
+      <button class="icon-btn nav-toggle" id="nav-toggle" type="button" aria-label="Menu" aria-expanded="false">☰</button>
+    </div>
+  </div>
+</header>
+<main id="contenu">
+
+<nav class="breadcrumbs wrap" aria-label="Fil d'Ariane">
+    <a href="../../../index.html">Accueil</a><span class="sep">›</span>
+    <a href="../../">3ème</a><span class="sep">›</span>
+    <a href="../">Produire en série</a><span class="sep">›</span>
+    <span class="current">👨‍🏫 Guide du professeur — Projet fablab : produire en série</span>
+  </nav>
+<div class="wrap course-layout">
+  <aside class="sidebar" style="--accent:undefined;--accent-soft:undefined;">
+    <div class="sb-title"><span class="dot"></span>3ème </div>
+    <nav>
+    <details>
+      <summary><a href="../../sequence-1-poubelle-connectee/" style="all:unset;cursor:pointer">La poubelle connectée</a></summary>
+      <div class="sb-pages">
+        <a href="../../sequence-1-poubelle-connectee/jeu-intro/">🎮 Jeu d'intro</a>
+        <a href="../../sequence-1-poubelle-connectee/seance-1/">Séance 1</a>
+        <a href="../../sequence-1-poubelle-connectee/correction/">Correction</a>
+        <a href="../../sequence-1-poubelle-connectee/modelisation-3d-de-la-poubelle/">Modélisation 3d de la poubelle</a>
+        <a href="../../sequence-1-poubelle-connectee/prototype-arduino/">prototype Arduino</a>
+        <a href="../../sequence-1-poubelle-connectee/simulation-tinkercad/">Simulation Tinkercad</a>
+      </div>
+    </details>
+    <details>
+      <summary><a href="../../sequence-2-intelligence-artificielle/" style="all:unset;cursor:pointer">Intelligence artificielle</a></summary>
+      <div class="sb-pages">
+        <a href="../../sequence-2-intelligence-artificielle/jeu-intro/">🎮 Jeu d'intro</a>
+        <a href="../../sequence-2-intelligence-artificielle/seance-1/">Séance 1</a>
+        <a href="../../sequence-2-intelligence-artificielle/seance-2/">Séance 2</a>
+        <a href="../../sequence-2-intelligence-artificielle/tuto-videos-teachable-maching/">Tuto vidéos Teachable machine</a>
+        <a href="../../sequence-2-intelligence-artificielle/seance-3/">Séance 3</a>
+        <a href="../../sequence-2-intelligence-artificielle/seance-4/">Séance 4</a>
+        <a href="../../sequence-2-intelligence-artificielle/fiche-de-connaissance/">Fiche de connaissance</a>
+      </div>
+    </details>
+    <details>
+      <summary><a href="../../sequence-3-reseau-informatique/" style="all:unset;cursor:pointer">Réseau informatique</a></summary>
+      <div class="sb-pages">
+        <a href="../../sequence-3-reseau-informatique/jeu-intro/">🎮 Jeu d'intro</a>
+        <a href="../../sequence-3-reseau-informatique/seance-1/">Séance 1</a>
+        <a href="../../sequence-3-reseau-informatique/seance-2/">Séance 2</a>
+        <a href="../../sequence-3-reseau-informatique/seance-3/">Séance 3</a>
+        <a href="../../sequence-3-reseau-informatique/tp/">TP</a>
+      </div>
+    </details>
+    <details open>
+      <summary><a href="../../projet-fablab-serie/" style="all:unset;cursor:pointer">Produire en série</a></summary>
+      <div class="sb-pages">
+        <a href="../../projet-fablab-serie/jeu-intro/">Jeu : la course des usines</a>
+        <a href="../../projet-fablab-serie/seance-1/">S1 · Gamme de fabrication</a>
+        <a href="../../projet-fablab-serie/seance-2/">S2 · Panoplie et gabarits</a>
+        <a href="../../projet-fablab-serie/seance-3/">S3 · Production</a>
+        <a href="../../projet-fablab-serie/seance-4/">S4 · Coûts et bilan</a>
+        <a href="../../projet-fablab-serie/guide-prof/" aria-current="true">Guide du professeur</a>
+      </div>
+    </details>
+    <details>
+      <summary><a href="../../assr-2-pix/" style="all:unset;cursor:pointer">ASSR 2 · Pix</a></summary>
+      <div class="sb-pages">
+        <a href="../../assr-2-pix/assr2/">ASSR 2</a>
+        <a href="../../assr-2-pix/pix/">Pix</a>
+      </div>
+    </details>
+    <details>
+      <summary><a href="../../sessions-dnb/" style="all:unset;cursor:pointer">Préparation au DNB</a></summary>
+      <div class="sb-pages">
+        <a href="../../sessions-dnb/sujets-dnb/">Sujets d'entraînement</a>
+      </div>
+    </details>
+    <details>
+      <summary><a href="../../chaines-fonctionnelles/" style="all:unset;cursor:pointer">Chaînes fonctionnelles</a></summary>
+      <div class="sb-pages">
+        
+      </div>
+    </details>
+    <details>
+      <summary><a href="../../fonctions-solutions-techniques/" style="all:unset;cursor:pointer">Fonctions et solutions techniques</a></summary>
+      <div class="sb-pages">
+        
+      </div>
+    </details>
+    </nav>
+  </aside>
+  <article>
+    <div class="page-head">
+      <div class="kicker">
+        <span class="badge" style="--badge-bg:#f1e9fe;--badge-fg:#7c3aed">3e</span>
+        <span class="badge badge-corr">✔ Correction</span>
+        <span class="badge badge-new">✦ Nouveau</span>
+      </div>
+      <h1>👨‍🏫 Guide du professeur — Projet fablab : produire en série</h1>
+      <p class="desc">Préparation matière, plan coté, déroulé minuté, rotations, évaluation adossée au programme 2020 et pièges à éviter — dont le plus coûteux : lancer la série sans prototype validé.</p>
+    </div>
+    <div class="callout callout-objectif"><span class="co-icon">🎯</span><div class="co-body"><div class="co-title">Objectifs</div><p>Ce guide vous permet de :</p>
+<ul>
+<li>préparer l&#39;objet, la matière et les gabarits avant la première séance ;</li>
+<li>animer les rotations de postes et le tableau de production ;</li>
+<li>évaluer avec les compétences exactes du programme 2020 et préparer l&#39;oral type DNB.</li>
+</ul>
+</div></div>
+    
+    <div class="prose">
+      <h2>🧭 Vue d&#39;ensemble et intentions</h2>
+<p>Cette séquence de 3e (programme 2020, en vigueur jusqu&#39;à la rentrée 2026) fait vivre le passage de « je fabrique une pièce » à « nous produisons N pièces identiques ». Point de vigilance de conformité : le programme 2020 ne comporte pas d&#39;intitulé « production sérielle » — la petite série est ici un <strong>cadre pédagogique</strong> au service des compétences réelles du programme (« Réaliser, de manière collaborative, le prototype de tout ou partie d&#39;un objet pour valider une solution », procédures, organisation de projets, revues de projet). Évitez donc de présenter la série comme un attendu du programme dans vos documents ; présentez-la comme la situation-problème.</p>
+<p>Durée : 5 séances de 55 min (jeu + 4 séances), extensible à 6 si la production déborde (voir planning). Production cible : <strong>20 supports de téléphone</strong> en contreplaqué 3 mm, 2 pièces encastrées, pour le CDI et le foyer — une commande réelle interne crédibilise fortement le projet (et fournit un « client » pour la revue de projet finale).</p>
+<h2>📐 Choix de l&#39;objet et plan coté fourni</h2>
+<p>Le support à 2 pièces encastrées est volontairement simple : la difficulté pédagogique doit porter sur <strong>l&#39;organisation de la production</strong>, pas sur la pièce. Cotes de référence (à ajuster à votre stock) :</p>
+<table>
+<thead>
+<tr>
+<th>Élément</th>
+<th>Cote</th>
+<th>Remarque</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Façade</td>
+<td>80 × 120 mm, coins R5</td>
+<td>Encoche câble 12 mm en partie basse</td>
+</tr>
+<tr>
+<td>Béquille</td>
+<td>80 × 100 mm</td>
+<td>L&#39;angle d&#39;appui donne une inclinaison confortable d&#39;environ 65-70°</td>
+</tr>
+<tr>
+<td>Fentes d&#39;encastrement</td>
+<td><strong>3,1 mm nominal</strong>, tolérance retenue 3,0 à 3,3 mm</td>
+<td>LE point critique : mesurez l&#39;épaisseur réelle de VOTRE contreplaqué (souvent 2,8 à 3,1 mm réels pour du « 3 mm ») et le kerf de VOTRE laser sur une découpe test, puis ajustez la largeur de fente en conséquence avant d&#39;imprimer les plans</td>
+</tr>
+</tbody></table>
+<p>Dessinez le plan coté (2 vues cotées + perspective) et dupliquez-le en A4 plastifié par îlot. Prévoyez aussi le fichier vectoriel « maître » verrouillé : les élèves refont la panoplie, pas le dessin des pièces (sinon la séance 2 explose en durée et les fentes divergent).</p>
+<h2>📦 Préparation en amont (liste de contrôle)</h2>
+<ul>
+<li>☐ <strong>Matière</strong> : pour 46 pièces (40 + 15 %), comptez le nombre de planches selon votre panoplie de référence + <strong>1 planche de réserve</strong> pour les tests, la grille de calibration et le prototype. Vérifiez que le contreplaqué est de qualité laser (colle intérieure correcte, pas de contreplaqué inconnu type revêtu).</li>
+<li>☐ <strong>Grille de test laser</strong> à jour pour ce lot de planches (matrice puissance × vitesse) : les valeurs du mémo (ordre de 90-100 % à 25-35 mm/s pour une diode ~20 W en 3 mm, plusieurs passes pour 10 W, beaucoup plus rapide en CO2) ne sont que des points de départ — affichez VOS valeurs validées au poste P1.</li>
+<li>☐ <strong>Prototype complet</strong> fabriqué par vous avant la séquence : il sert de référence visuelle et prouve que les cotes fonctionnent.</li>
+<li>☐ <strong>Gabarits</strong> : soit vous les faites fabriquer en séance 2 (prévu), soit, si le temps est court, préparez le go/no-go à l&#39;avance et ne faites fabriquer que le gabarit d&#39;assemblage. Pour le go/no-go découpé au laser, contrôlez ses touches au pied à coulisse : un gabarit faux ruine tout le contrôle.</li>
+<li>☐ <strong>Jeu d&#39;intro</strong> : rame de brouillon A4, modèle d&#39;avion en 6 étapes affichable, 1 gabarit-fenêtre en carton par îlot + 1 pour vous, chronomètre, tableau des scores.</li>
+<li>☐ <strong>Fiches</strong> : fiches de suivi par poste (modèle de la séance 3), fiches IPS affichées à chaque machine (pratique recommandée sur éduscol STI), codes de rebut, tableau de production grand format.</li>
+<li>☐ <strong>Sécurité</strong> : extincteur CO2 en zone laser, extraction fonctionnelle, ligne au sol à 1 m de la CNC, lunettes en nombre, vérification des permis machine (Skycut) des élèves du poste P5. Inscrivez l&#39;activité dans le cadre validé par votre DUERP.</li>
+<li>☐ <strong>Le « client »</strong> : prévenez le professeur documentaliste ou la vie scolaire pour qu&#39;un adulte joue le client à la séance 4 (effet remarquable sur l&#39;engagement).</li>
+</ul>
+<h2>⏱️ Déroulé minuté et planning de production</h2>
+<table>
+<thead>
+<tr>
+<th>Séance</th>
+<th>Déroulé</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Jeu (55 min)</strong></td>
+<td>5&#39; mission et rôles · 3×8&#39; manches (+2&#39; de comptage entre chaque) · 2×5&#39; questions d&#39;équipe (zones de réponse) · 10&#39; débrief structuré (spécialisation, goulot, coût de la qualité)</td>
+</tr>
+<tr>
+<td><strong>S1 (55 min)</strong></td>
+<td>10&#39; étude du plan coté · 20&#39; gamme à compléter · 10&#39; répartition des postes · 15&#39; besoin matière</td>
+</tr>
+<tr>
+<td><strong>S2 (55 min)</strong></td>
+<td>20&#39; nesting (tous) · puis travail par poste : P1 fichiers laser, P3 FAO gabarit CNC, P4 conception go/no-go, P5 logo SignMaster, P2 en soutien de P1 · vous lancez pendant ce temps l&#39;usinage CNC du gabarit d&#39;assemblage (élèves derrière la ligne) et idéalement un premier tir laser de prototype</td>
+</tr>
+<tr>
+<td><strong>S3 (55 min)</strong></td>
+<td>5&#39; sécurité par poste · 5&#39; fiches · 20&#39; production phase 1 · 5&#39; rééquilibrage · 20&#39; phase 2 (repli 5&#39; pris sur la phase 2 si nécessaire)</td>
+</tr>
+<tr>
+<td><strong>S4 (55 min)</strong></td>
+<td>15&#39; taux de rebut · 20&#39; coût de revient · 10&#39; automatisation + DNB · 15&#39; revue de projet éclair (3&#39;/îlot, chevauchement assumé avec le quiz à finir à la maison)</td>
+</tr>
+</tbody></table>
+<p><strong>Si la production ne tient pas dans la S3</strong> (cas fréquent avec un laser diode et beaucoup de passes) : dédoublez en S3a/S3b. Astuce d&#39;organisation qui change tout : <strong>lancez les tirs laser en tâche de fond dès la S2 et entre les séances</strong> — le laser est presque toujours le goulot réel de la classe, et la S3 doit surtout faire tourner P2-P5. Autre variante : ne faire passer au laser en direct qu&#39;une panoplie « témoin » chronométrée, le reste étant découpé par vous hors séance (assumez-le devant les élèves : c&#39;est exactement la sous-traitance, et cela nourrit le débat sur les coûts).</p>
+<h2>🔄 Rotations et animation du tableau de production</h2>
+<ul>
+<li>Attribuez les postes à la S1 en tenant compte des permis déjà validés (P5 exige le permis Skycut) et annoncez une <strong>rotation partielle</strong> en S3 phase 2 : le rééquilibrage du goulot fournit une rotation « justifiée par les chiffres », bien plus formatrice qu&#39;une rotation arbitraire.</li>
+<li>Le <strong>tableau de production</strong> affiché (production cumulée, rebuts, poste goulot) est votre meilleur outil d&#39;animation : mise à jour toutes les 10 min par les chefs d&#39;atelier, c&#39;est lui qui rend le goulot visible et objective le débat du point d&#39;arrêt.</li>
+<li>Seuls les chefs d&#39;atelier circulent : tenez cette règle fermement, c&#39;est elle qui maintient le calme dans un atelier où 5 postes tournent en parallèle.</li>
+<li>Vous-même restez physiquement en <strong>zone machines</strong> (laser + CNC + Skycut) pendant toute la S3 : c&#39;est vous qui armez et lancez chaque tir laser, et le Skycut fonctionne sous votre surveillance directe. Ne vous laissez pas aspirer par les postes manuels : les îlots P2-P4 doivent être autonomes avec leurs fiches.</li>
+</ul>
+<h2>🎚️ Différenciation</h2>
+<ul>
+<li><strong>Postes techniques</strong> (P1 fichiers/panoplie, P3 FAO du gabarit) pour les élèves à l&#39;aise en modélisation ; <strong>postes méthodiques</strong> (P4 contrôle + fiches, P2 finition) pour ceux qui ont besoin de cadre et de réussite visible ; P5 (Skycut) valorise les titulaires du permis.</li>
+<li><strong>Soutien</strong> : gamme pré-remplie aux deux tiers (il ne reste que l&#39;opération 30 et les contrôles), panoplie sur grille aimantée ou gabarits papier à disposer physiquement avant le passage au logiciel, calculs de coûts avec les formules données.</li>
+<li><strong>Approfondissement</strong> : calcul du chutage exact de la panoplie en %, conception d&#39;un go/no-go « deux en un » (GO et NO-GO sur la même pièce imprimée en 3D), étude du temps de retour sur investissement d&#39;un deuxième gabarit d&#39;assemblage, ou rédaction de la fiche IPS simplifiée d&#39;un poste.</li>
+</ul>
+<h2>📊 Évaluation</h2>
+<p>Grille adossée aux <strong>intitulés exacts du programme 2020</strong> (BO n°31 du 30 juillet 2020) :</p>
+<table>
+<thead>
+<tr>
+<th>Compétence (verbatim 2020)</th>
+<th>Observable dans la séquence</th>
+<th>Ni acquis / En cours / Acquis / Expert</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>« Réaliser, de manière collaborative, le prototype de tout ou partie d&#39;un objet pour valider une solution. »</td>
+<td>Prototype validé avant série ; contribution effective au poste ; supports conformes livrés</td>
+<td></td>
+</tr>
+<tr>
+<td>« Imaginer, synthétiser, formaliser et respecter une procédure, un protocole. »</td>
+<td>Gamme complétée et cohérente (S1) ; gamme respectée en production (S3) ; checklists copilotes</td>
+<td></td>
+</tr>
+<tr>
+<td>« Participer à l&#39;organisation et au déroulement de projets. »</td>
+<td>Tenue du rôle d&#39;îlot ; fiches de suivi remplies en temps réel ; participation au rééquilibrage</td>
+<td></td>
+</tr>
+<tr>
+<td>« Rechercher des solutions techniques à un problème posé, expliciter ses choix et les communiquer en argumentant. »</td>
+<td>Diagnostic du goulot chiffré (relevé 2) ; propositions d&#39;automatisation argumentées (S4)</td>
+<td></td>
+</tr>
+<tr>
+<td>« S&#39;approprier un cahier des charges. »</td>
+<td>Analyse du plan coté et de la tolérance de fente (travail 1, S1)</td>
+<td></td>
+</tr>
+<tr>
+<td>« Traduire, à l&#39;aide d&#39;outils de représentation numérique, des choix de solutions sous forme de croquis, de dessins ou de schémas. »</td>
+<td>Panoplie réalisée ; fichiers laser conformes à la checklist</td>
+<td></td>
+</tr>
+<tr>
+<td>« Présenter à l&#39;oral et à l&#39;aide de supports numériques multimédia des solutions techniques au moment des revues de projet. »</td>
+<td>Revue de projet de la S4 (3 min par îlot, chiffres à l&#39;appui)</td>
+<td></td>
+</tr>
+</tbody></table>
+<p>Complétez par le <strong>quiz de la S4</strong> (8 questions, vocabulaire et sécurité) en validation individuelle. <strong>Oral type DNB</strong> : proposez aux volontaires un entraînement de 5 min sur ce projet (structure conseillée aux élèves : contexte et besoin → ma mission et mon poste → un problème rencontré et sa résolution chiffrée → bilan et améliorations) ; les documents à montrer sont déjà dans leur classeur (gamme, panoplie, fiche de suivi, photo des gabarits).</p>
+<h2>⚠️ Pièges et pannes courants</h2>
+<ol>
+<li><strong>LE piège majeur : lancer la série sans pièce d&#39;essai validée.</strong> Une fente fausse de 0,2 mm sur la panoplie = 46 pièces au rebut d&#39;un coup. Règle absolue, à ritualiser devant la classe : <strong>toujours 1 prototype complet découpé, contrôlé au go/no-go, assemblé et testé avec un vrai téléphone AVANT d&#39;autoriser la première panoplie de série.</strong> Faites-en un moment solennel (signature du « bon de lancement » par le contrôleur, le chef d&#39;atelier et vous).</li>
+<li><strong>Épaisseur réelle du contreplaqué variable d&#39;un lot à l&#39;autre</strong> : re-mesurez à chaque nouveau lot et refaites une fente test. Symptôme : assemblages qui forcent (fente trop juste) ou qui baillent.</li>
+<li><strong>Kerf oublié ou double trait dans le fichier</strong> : bords brûlés, fentes élargies. La checklist copilote (lignes en double, calques) est là pour ça — exigez-la cochée avant tout tir.</li>
+<li><strong>Le laser devient le goulot de la classe</strong> : anticipé au planning (tirs en tâche de fond dès la S2). Ne sacrifiez jamais la règle « seul le professeur lance » pour gagner du temps.</li>
+<li><strong>Contrôleur qualité sous pression sociale</strong> (« allez, elle passe presque ») : rappelez que le NO-GO est indiscutable ; le barème du jeu (−2 chez soi contre −5 chez le client) fournit l&#39;argument.</li>
+<li><strong>Fiches de suivi reconstituées de mémoire en fin d&#39;heure</strong> : données inutilisables en S4. Passez dans les îlots à la 10e minute de production pour vérifier la première ligne.</li>
+<li><strong>Vinyle approché du laser</strong> « pour graver le logo directement » : refus absolu — chloré, toxique, corrosif ; le logo se découpe au Skycut. C&#39;est d&#39;ailleurs une question du quiz.</li>
+<li><strong>Pannes classiques</strong> : lame de Skycut usée (échenillage qui arrache → test de coupe, force +5 unités maximum, sinon changer la lame) ; encastrement qui casse à l&#39;assemblage (élève qui force hors gabarit → repasser par le contrôle) ; pièces laser incomplètement découpées (planche voilée → maintien à plat à revoir avec VOS moyens de bridage, et re-tir de la panoplie).</li>
+</ol>
+<h2>📚 Références utiles</h2>
+<ul>
+<li>Programme de technologie cycle 4 consolidé, BO n°31 du 30 juillet 2020 (texte applicable à la 3e jusqu&#39;à la rentrée 2026).</li>
+<li>Guide d&#39;accompagnement du programme de technologie C4 (éduscol, mai 2024), §6.5 sur les équipements du FabLab : machines carténées conformes CE, activités « sous la conduite du professeur en toute sécurité », pas de dérogation « travaux réglementés » possible au collège — repère de prudence valable aussi pour votre organisation.</li>
+<li>Fiches IPS machines (éduscol STI) : à afficher à chaque poste et à commenter régulièrement.</li>
+<li>Votre DUERP et la commission hygiène et sécurité de l&#39;établissement pour valider zonage et fiches de poste.</li>
+</ul>
+
+    </div>
+    
+    
+    <nav class="pager">
+      <a class="pg-prev" href="../seance-4/"><span class="pg-label">← Précédent</span><span class="pg-title">💶 Séance 4 — Qualité, coûts et bilan du projet</span></a>
+      
+    </nav>
+  </article>
+</div>
+</main>
+<footer class="site-footer">
+  <div class="wrap footer-grid">
+    <div>
+      <h4>Technologie &amp; SNT</h4>
+      <p>Site pédagogique regroupant les cours, activités et ressources de Technologie du collège et de SNT du lycée.</p>
+    </div>
+    <div>
+      <h4>Niveaux</h4>
+      <ul>
+        <li><a href="../../../5eme/">5ème</a></li>
+        <li><a href="../../../4eme/">4ème</a></li>
+        <li><a href="../../../3eme/">3ème</a></li>
+        <li><a href="../../../snt/">2nde SNT</a></li>
+        <li><a href="../../../sicit/">SI · CIT</a></li>
+        <li><a href="../../../atelier/">Atelier</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Références</h4>
+      <ul>
+        <li><a href="https://eduscol.education.fr/2098/technologie-au-cycle-4" target="_blank" rel="noopener">Programme de Technologie (Eduscol)</a></li>
+        <li><a href="https://eduscol.education.fr/3016/sciences-numeriques-et-technologie-au-lycee" target="_blank" rel="noopener">Programme SNT (Eduscol)</a></li>
+        <li><a href="https://pix.fr" target="_blank" rel="noopener">Pix — compétences numériques</a></li>
+        <li><a href="https://sites.google.com/view/lmtechno25" target="_blank" rel="noopener">Site d'origine (Google Sites)</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="wrap footer-bottom">
+    <span>© M. Eddy Bachaalany · Lycée Montaigne, Beit Chabab</span>
+    <span>Cours de Technologie collège &amp; SNT lycée</span>
+  </div>
+</footer>
+<div class="search-overlay" id="search-overlay" role="dialog" aria-label="Recherche">
+  <div class="search-panel">
+    <div class="search-input-row">
+      <span>🔍</span>
+      <input id="search-input" type="search" placeholder="Rechercher une séquence, une séance, une notion…" autocomplete="off">
+      <kbd>Échap</kbd>
+    </div>
+    <div class="search-results" id="search-results"></div>
+  </div>
+</div>
+<button class="back-to-top" id="back-to-top" type="button" aria-label="Retour en haut">↑</button>
+<script src="../../../assets/client.js?v=93c7e2ac98" defer></script>
+</body>
+</html>

@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="fr" data-base="../../../" data-section="snt" data-v="93c7e2ac98">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>🖼️ TP 1 — pixels contre vecteurs · Du pixel au sticker — Technologie &amp; SNT</title>
+<meta name="description" content="Zoome jusqu'à casser l'image, comprends pourquoi le SVG ne casse jamais, puis vectorise ton logo.">
+<meta property="og:title" content="🖼️ TP 1 — pixels contre vecteurs · Du pixel au sticker — Technologie &amp; SNT">
+<meta property="og:description" content="Zoome jusqu'à casser l'image, comprends pourquoi le SVG ne casse jamais, puis vectorise ton logo.">
+<meta property="og:type" content="website">
+<link rel="icon" href="../../../assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lexend:wght@500;600;700;800&family=Caveat:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../../assets/styles.css?v=93c7e2ac98">
+<script>
+(function(){try{var t=localStorage.getItem("lmtechno-theme");if(!t)t=window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light";document.documentElement.setAttribute("data-theme",t);}catch(e){}})();
+(function(){try{var s=JSON.parse(localStorage.getItem("lmtechno-eleve")||"null");if(!s||!s.section)return;var d=document.documentElement,cur=d.getAttribute("data-section")||"",base=d.getAttribute("data-base")||"./",lv=["5eme","4eme","3eme","snt","sicit"];if(cur==="home"||(lv.indexOf(cur)>=0&&cur!==s.section))location.replace(base+s.section+"/");}catch(e){}})();
+</script>
+<script src="../../../assets/firebase-config.js?v=93c7e2ac98"></script>
+
+</head>
+<body>
+<a class="skip-link" href="#contenu">Aller au contenu</a>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="../../../index.html">
+      <span class="brand-logo">T</span>
+      <span>Technologie <span style="color:var(--muted);font-weight:500">&amp;</span> SNT
+        <small>Lycée Montaigne, Beit Chabab</small>
+      </span>
+    </a>
+    
+<nav class="main-nav" id="main-nav" aria-label="Navigation principale">
+  <a href="../../../index.html">Accueil</a>
+  <a href="../../../5eme/" style="--dot:#0d9268">5ème</a>
+  <a href="../../../4eme/" style="--dot:#2050d0">4ème</a>
+  <a href="../../../3eme/" style="--dot:#7c3aed">3ème</a>
+  <a href="../../../snt/" style="--dot:#d9640f" aria-current="true">2nde SNT</a>
+  <a href="../../../sicit/" style="--dot:#0d8e9c">SI · CIT</a>
+  <a href="../../../atelier/" style="--dot:#b91c1c">Atelier</a>
+  <a class="nav-account" href="../../../connexion/">👤 Espace</a>
+</nav>
+    <div class="header-actions">
+      <button class="search-btn" id="search-open" type="button" aria-label="Rechercher">
+        <span>🔍</span><span class="label">Rechercher</span><kbd>Ctrl K</kbd>
+      </button>
+      <button class="icon-btn" id="theme-toggle" type="button" aria-label="Changer de thème">🌙</button>
+      <button class="icon-btn nav-toggle" id="nav-toggle" type="button" aria-label="Menu" aria-expanded="false">☰</button>
+    </div>
+  </div>
+</header>
+<main id="contenu">
+
+<nav class="breadcrumbs wrap" aria-label="Fil d'Ariane">
+    <a href="../../../index.html">Accueil</a><span class="sep">›</span>
+    <a href="../../">2nde SNT</a><span class="sep">›</span>
+    <a href="../">Du pixel au sticker</a><span class="sep">›</span>
+    <span class="current">🖼️ TP 1 — pixels contre vecteurs</span>
+  </nav>
+<div class="wrap course-layout">
+  <aside class="sidebar" style="--accent:undefined;--accent-soft:undefined;">
+    <div class="sb-title"><span class="dot"></span>2nde SNT </div>
+    <nav>
+    <details>
+      <summary><a href="../../theme-2-internet/" style="all:unset;cursor:pointer">Internet</a></summary>
+      <div class="sb-pages">
+        <a href="../../theme-2-internet/jeu-intro/">🎮 Jeu d'intro</a>
+        <a href="../../theme-2-internet/tcpip/">TCP/IP</a>
+        <a href="../../theme-2-internet/fiche-de-revision/">Fiche de révision</a>
+        <a href="../../theme-2-internet/routage/">Routage</a>
+        <a href="../../theme-2-internet/exercices/">Exercices</a>
+        <a href="../../theme-2-internet/synthese/">Synthèse</a>
+        <a href="../../theme-2-internet/dns-et-reseaux-pair-a-pair/">DNS et réseaux pair-à-pair</a>
+      </div>
+    </details>
+    <details>
+      <summary><a href="../../theme-3-web/" style="all:unset;cursor:pointer">Le Web</a></summary>
+      <div class="sb-pages">
+        <a href="../../theme-3-web/jeu-intro/">🎮 Jeu d'intro</a>
+        <a href="../../theme-3-web/1-histoire-du-web/">1.Histoire du web</a>
+        <a href="../../theme-3-web/2-fonctionnement-du-web/">2.Fonctionnement du web</a>
+        <a href="../../theme-3-web/3-lecriture-dune-page-web/">3. L'écriture d'une page Web</a>
+        <a href="../../theme-3-web/4-le-langage-htmlcss-2/">4. Le langage HTML/CSS (2)</a>
+        <a href="../../theme-3-web/5-programmer-la-popularite-dune-page/">5. Programmer (Python)</a>
+      </div>
+    </details>
+    <details>
+      <summary><a href="../../theme-reseaux-sociaux/" style="all:unset;cursor:pointer">Les réseaux sociaux</a></summary>
+      <div class="sb-pages">
+        <a href="../../theme-reseaux-sociaux/jeu-intro/">🎮 Jeu d'intro</a>
+        <a href="../../theme-reseaux-sociaux/seance-1/">Séance 1</a>
+        <a href="../../theme-reseaux-sociaux/seance-2/">Séance 2</a>
+        <a href="../../theme-reseaux-sociaux/seance-3/">Séance 3</a>
+      </div>
+    </details>
+    <details>
+      <summary><a href="../../theme-donnees-structurees/" style="all:unset;cursor:pointer">Les données structurées et leur traitement</a></summary>
+      <div class="sb-pages">
+        <a href="../../theme-donnees-structurees/jeu-intro/">🎮 Jeu d'intro</a>
+        <a href="../../theme-donnees-structurees/seance-1/">Séance 1</a>
+        <a href="../../theme-donnees-structurees/seance-2/">Séance 2</a>
+        <a href="../../theme-donnees-structurees/seance-3/">Séance 3</a>
+      </div>
+    </details>
+    <details>
+      <summary><a href="../../theme-4-photographie/" style="all:unset;cursor:pointer">La photographie numérique</a></summary>
+      <div class="sb-pages">
+        <a href="../../theme-4-photographie/jeu-intro/">🎮 Jeu d'intro</a>
+        <a href="../../theme-4-photographie/parite-1-loeil-et-le-capteur-numerique/">partie 1: L'oeil et le capteur numérique</a>
+        <a href="../../theme-4-photographie/partie-2-formats-des-images/">Partie 2: Formats des images</a>
+        <a href="../../theme-4-photographie/3-programmer-traiter-une-image/">3. Programmer (Python)</a>
+      </div>
+    </details>
+    <details open>
+      <summary><a href="../../tp-fablab-sticker/" style="all:unset;cursor:pointer">Du pixel au sticker</a></summary>
+      <div class="sb-pages">
+        <a href="../../tp-fablab-sticker/tp-1/" aria-current="true">Pixels contre vecteurs</a>
+        <a href="../../tp-fablab-sticker/tp-2/">Fabriquer le sticker</a>
+        <a href="../../tp-fablab-sticker/guide-prof/">Guide du professeur</a>
+      </div>
+    </details>
+    <details>
+      <summary><a href="../../theme-5-geolocalisation/" style="all:unset;cursor:pointer">Localisation et cartographie</a></summary>
+      <div class="sb-pages">
+        <a href="../../theme-5-geolocalisation/jeu-intro/">🎮 Jeu d'intro</a>
+        <a href="../../theme-5-geolocalisation/seance-1/">Séance 1</a>
+        <a href="../../theme-5-geolocalisation/la-geolocalisation-par-satellite/">La géolocalisation par satellite</a>
+        <a href="../../theme-5-geolocalisation/le-protocole-nmea/">Le protocole NMEA</a>
+      </div>
+    </details>
+    <details>
+      <summary><a href="../../theme-informatique-embarquee/" style="all:unset;cursor:pointer">Informatique embarquée et objets connectés</a></summary>
+      <div class="sb-pages">
+        <a href="../../theme-informatique-embarquee/jeu-intro/">🎮 Jeu d'intro</a>
+        <a href="../../theme-informatique-embarquee/seance-1/">Séance 1</a>
+        <a href="../../theme-informatique-embarquee/seance-2/">Séance 2</a>
+        <a href="../../theme-informatique-embarquee/seance-3/">Séance 3</a>
+      </div>
+    </details>
+    <details>
+      <summary><a href="../../tp-arduino/" style="all:unset;cursor:pointer">TP Arduino</a></summary>
+      <div class="sb-pages">
+        
+      </div>
+    </details>
+    </nav>
+  </aside>
+  <article>
+    <div class="page-head">
+      <div class="kicker">
+        <span class="badge" style="--badge-bg:#fdeede;--badge-fg:#d9640f">SNT</span>
+        <span class="badge">Du pixel au sticker</span>
+        <span class="badge badge-new">✦ Nouveau</span>
+      </div>
+      <h1>🖼️ TP 1 — pixels contre vecteurs</h1>
+      <p class="desc">Zoome jusqu'à casser l'image, comprends pourquoi le SVG ne casse jamais, puis vectorise ton logo.</p>
+    </div>
+    <div class="callout callout-objectif"><span class="co-icon">🎯</span><div class="co-body"><div class="co-title">Objectifs</div><p>À la fin de cette séance, je suis capable de :</p>
+<ul>
+<li>définir pixel, définition et poids d&#39;une image matricielle ;</li>
+<li>expliquer la différence de principe entre image matricielle et image vectorielle ;</li>
+<li>choisir le format adapté à un usage (photo, logo, découpe) ;</li>
+<li>vectoriser un logo simple et exporter un fichier de découpe.</li>
+</ul>
+</div></div>
+    
+<div class="student-bar">
+  <span class="sb-info">💾 Tes réponses sont enregistrées automatiquement sur cet appareil.</span>
+  <span class="sb-actions">
+    <button class="btn btn-ghost btn-sm" id="print-answers" type="button">🖨 Imprimer / PDF</button>
+    <button class="btn btn-ghost btn-sm" id="clear-answers" type="button">🗑 Tout effacer</button>
+  </span>
+</div>
+    <div class="prose">
+      <h2>🎯 Objectif</h2>
+<p>Aujourd&#39;hui tu travailles <strong>aux PC en U</strong>, en binôme. Mission : comprendre pourquoi ton futur sticker ne peut PAS être une photo, vectoriser ton logo et préparer le fichier que la machine découpera au TP 2. Pas de fichier propre aujourd&#39;hui = pas de découpe la prochaine fois.</p>
+<h2>🔬 Rappel express — la photo numérique (vu en SNT)</h2>
+<p>Une image numérique classique — celle du thème « La photographie numérique » — est dite <strong>matricielle</strong> (ou <em>bitmap</em>) : c&#39;est une grille de <strong>pixels</strong>, des petits carrés colorés homogènes, chacun codé par trois nombres <strong>RVB</strong> (rouge, vert, bleu, en général 8 bits par composante, soit des valeurs de 0 à 255).</p>
+<ul>
+<li>La <strong>définition</strong> de l&#39;image = nombre de pixels en largeur × nombre de pixels en hauteur. Exemple : 4000 × 3000 pixels = 12 000 000 pixels = <strong>12 mégapixels</strong>.</li>
+<li>Le <strong>poids</strong> du fichier dépend de la définition, de la profondeur de couleur et de la <strong>compression</strong>.</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Format</th>
+<th>Compression</th>
+<th>Usage typique</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>RAW</td>
+<td>non compressé (données brutes du capteur)</td>
+<td>photographes, retouche poussée</td>
+</tr>
+<tr>
+<td>BMP / TIFF</td>
+<td>sans perte (ou non compressé)</td>
+<td>archivage, impression de qualité</td>
+</tr>
+<tr>
+<td>JPEG</td>
+<td><strong>avec perte</strong> (on sacrifie des détails invisibles)</td>
+<td>photos du quotidien, web</td>
+</tr>
+<tr>
+<td>PNG</td>
+<td>sans perte + transparence</td>
+<td>captures d&#39;écran, logos affichés à l&#39;écran</td>
+</tr>
+</tbody></table>
+<blockquote>
+<p>⚠️ « Avec perte » veut dire que des informations sont <strong>définitivement supprimées</strong> : réenregistrer 20 fois un JPEG le dégrade un peu plus à chaque fois.</p>
+</blockquote>
+<h2>🔍 Expérience 1 — le zoom qui pique les yeux</h2>
+<ol>
+<li>Ouvre l&#39;image <code>logo-bitmap.png</code> fournie par le professeur (un logo enregistré en matriciel).</li>
+<li>Zoome à <strong>400 %</strong>, puis <strong>1600 %</strong>, avec la visionneuse ou le logiciel de dessin.</li>
+<li>Observe les bords des lettres et des courbes.</li>
+</ol>
+<p><strong>Question A.</strong> Décris précisément ce que tu vois à 1600 % : que deviennent les contours ? Pourquoi le logiciel ne peut-il pas « inventer » les détails manquants ? (Indice : que contient réellement le fichier ?)</p>
+<div class="answer-field">
+  <textarea rows="3" data-answer-idx="0" placeholder="✏️ Écris ta réponse ici…" aria-label="Zone de réponse de l'élève"></textarea>
+</div>
+<h2>📐 Expérience 2 — le zoom qui ne casse jamais</h2>
+<ol>
+<li>Ouvre maintenant <code>logo-vecteur.svg</code> dans Inkscape (ou le navigateur).</li>
+<li>Zoome à 400 %, 1600 %, 6400 %… vas-y, insiste.</li>
+<li>Ouvre ensuite le même fichier SVG avec le <strong>Bloc-notes</strong> : surprise, c&#39;est du texte !</li>
+</ol>
+<p>Un fichier <strong>SVG</strong> (<em>Scalable Vector Graphics</em>) ne stocke aucun pixel. Il stocke des <strong>instructions géométriques</strong> : « trace une courbe qui part de ce point, passe par là, avec cette épaisseur, remplie de cette couleur ». Ce sont des <strong>équations de courbes</strong> (courbes de Bézier). Quand tu zoomes, l&#39;ordinateur <strong>recalcule</strong> le dessin à la nouvelle taille : les contours sont retracés, donc toujours parfaitement nets.</p>
+<p><strong>Question B.</strong> Explique avec tes mots pourquoi le SVG reste net à 6400 % alors que le PNG était en bouillie à 1600 %. Utilise les mots <em>pixels</em>, <em>recalcule</em> et <em>courbes</em>.</p>
+<div class="answer-field">
+  <textarea rows="3" data-answer-idx="1" placeholder="✏️ Écris ta réponse ici…" aria-label="Zone de réponse de l'élève"></textarea>
+</div>
+<h2>⚖️ Matriciel ou vectoriel : qui gagne quand ?</h2>
+<table>
+<thead>
+<tr>
+<th>Besoin</th>
+<th>Matriciel (JPEG/PNG)</th>
+<th>Vectoriel (SVG)</th>
+<th>Pourquoi</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Photo de vacances</td>
+<td>✅</td>
+<td>❌</td>
+<td>une photo réelle a des millions de nuances : impossible à décrire par des courbes</td>
+</tr>
+<tr>
+<td>Logo, icône, pictogramme</td>
+<td>possible mais fragile</td>
+<td>✅</td>
+<td>formes simples, agrandissement sans perte</td>
+</tr>
+<tr>
+<td>Sticker à découper</td>
+<td>❌</td>
+<td>✅</td>
+<td>la lame de la machine <strong>suit un contour</strong> : il lui faut des courbes, pas des pixels</td>
+</tr>
+<tr>
+<td>Gravure laser d&#39;une photo</td>
+<td>✅ (mode <em>raster</em>)</td>
+<td>❌</td>
+<td>le laser balaie ligne par ligne, comme des pixels</td>
+</tr>
+</tbody></table>
+<p>Retiens la règle : <strong>la photo se pixellise, le logo se vectorise.</strong> Et une machine de découpe ne comprend QUE le vectoriel : sans contour mathématique, pas de trajectoire de lame.</p>
+<h2>🖊️ À toi de jouer — vectorise ton logo</h2>
+<p>Ton sticker : <strong>un texte court (ton prénom, ton pseudo, max 10 caractères) + une forme simple</strong> (étoile, éclair, cœur, hexagone…). Une seule couleur de vinyle, donc un motif en aplat, sans dégradé.</p>
+<ol>
+<li>Dans Inkscape, crée un document de <strong>80 × 80 mm</strong> (la taille réelle du sticker — en vectoriel, on travaille en millimètres, pas en pixels !).</li>
+<li>Écris ton texte avec l&#39;outil Texte. Choisis une police <strong>épaisse</strong> (bold) : les polices fines cassent à l&#39;échenillage.</li>
+<li>Dessine ta forme avec les outils formes (étoile, cercle…) ou l&#39;outil courbes de Bézier.</li>
+<li><strong>Vectorise le texte</strong> : sélectionne-le, puis <em>Chemin → Objet en chemin</em>. Le texte n&#39;est plus « la police Arial » mais des courbes autonomes — indispensable pour que la machine le lise sur n&#39;importe quel PC.</li>
+<li>Vérifie en mode <em>Affichage → Mode d&#39;affichage → Contour</em> : tu dois voir uniquement des traits fins = les trajectoires que suivra la lame.</li>
+<li>Règle de fabrication : aucun détail plus fin que <strong>2 mm</strong>, aucun trou intérieur plus petit que <strong>3 mm</strong> (sinon impossible à écheniller). Mesure avec l&#39;outil de mesure.</li>
+<li>Enregistre : <code>sticker-NOM-prenom.svg</code> dans le dossier de la classe.</li>
+</ol>
+<h2>📊 Le match des poids de fichiers</h2>
+<p>Exporte ton logo en trois versions et relève le poids exact (clic droit → Propriétés) :</p>
+<table>
+<thead>
+<tr>
+<th>Version</th>
+<th>Comment l&#39;obtenir</th>
+<th>Poids en Ko</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>PNG 200 × 200 px</td>
+<td><em>Fichier → Exporter</em>, 200 px</td>
+<td>à relever</td>
+</tr>
+<tr>
+<td>PNG 2000 × 2000 px</td>
+<td><em>Fichier → Exporter</em>, 2000 px</td>
+<td>à relever</td>
+</tr>
+<tr>
+<td>SVG</td>
+<td>ton fichier de travail</td>
+<td>à relever</td>
+</tr>
+</tbody></table>
+<p><strong>Relevé 1.</strong> Poids du PNG 200 × 200 px :</p>
+<div class="answer-field">
+  <textarea rows="3" data-answer-idx="2" placeholder="✏️ Écris ta réponse ici…" aria-label="Zone de réponse de l'élève"></textarea>
+</div>
+<p><strong>Relevé 2.</strong> Poids du PNG 2000 × 2000 px (compare : combien de fois plus lourd que le petit ?) :</p>
+<div class="answer-field">
+  <textarea rows="3" data-answer-idx="3" placeholder="✏️ Écris ta réponse ici…" aria-label="Zone de réponse de l'élève"></textarea>
+</div>
+<p><strong>Relevé 3.</strong> Poids du SVG, et ta conclusion : pourquoi le SVG garde-t-il le même poids quelle que soit la taille d&#39;affichage, alors que le PNG explose quand la définition augmente ?</p>
+<div class="answer-field">
+  <textarea rows="3" data-answer-idx="4" placeholder="✏️ Écris ta réponse ici…" aria-label="Zone de réponse de l'élève"></textarea>
+</div>
+<h2>🧰 Préparer le fichier de découpe (checklist de sortie)</h2>
+<p>Avant de quitter la salle, coche mentalement ces 5 points — le contrôleur qualité du binôme vérifie :</p>
+<ol>
+<li>☐ Document en <strong>millimètres</strong>, motif ≤ 80 × 80 mm ;</li>
+<li>☐ Texte converti en chemins (plus aucun objet « texte ») ;</li>
+<li>☐ Aucun détail &lt; 2 mm, aucun contour en double (deux traits superposés = la lame passe deux fois) ;</li>
+<li>☐ Une seule couleur, pas de dégradé, pas d&#39;image bitmap importée oubliée dans le fichier ;</li>
+<li>☐ Fichier nommé <code>sticker-NOM-prenom.svg</code> et déposé au bon endroit.</li>
+</ol>
+<blockquote>
+<p>💡 Le vinyle <strong>adhésif</strong> se découpe à l&#39;endroit : ne mets PAS ton motif en miroir. (Le miroir, c&#39;est pour le flex thermocollant des t-shirts — ce n&#39;est pas notre cas ici.)</p>
+</blockquote>
+<h2>🧭 Ce que je retiens</h2>
+<ul>
+<li>Une image <strong>matricielle</strong> est une grille de pixels RVB : idéale pour les photos, elle se <strong>pixellise</strong> au zoom car le fichier ne contient rien d&#39;autre que ces pixels.</li>
+<li>Une image <strong>vectorielle</strong> (SVG) stocke des <strong>équations de courbes</strong> : l&#39;ordinateur recalcule le dessin à chaque zoom, donc elle reste nette à toute taille et garde un poids minuscule.</li>
+<li><strong>Photo → JPEG (compression avec perte) ; logo/découpe → SVG.</strong> Une machine de découpe a besoin de contours vectoriels pour guider sa lame.</li>
+<li>Un fichier de découpe se prépare en <strong>dimensions réelles (mm)</strong>, texte converti en chemins, détails ≥ 2 mm.</li>
+</ul>
+
+    </div>
+    
+    
+    <nav class="pager">
+      
+      <a class="pg-next" href="../tp-2/"><span class="pg-label">Suivant →</span><span class="pg-title">✂️ TP 2 — fabriquer le sticker</span></a>
+    </nav>
+  </article>
+</div>
+</main>
+<footer class="site-footer">
+  <div class="wrap footer-grid">
+    <div>
+      <h4>Technologie &amp; SNT</h4>
+      <p>Site pédagogique regroupant les cours, activités et ressources de Technologie du collège et de SNT du lycée.</p>
+    </div>
+    <div>
+      <h4>Niveaux</h4>
+      <ul>
+        <li><a href="../../../5eme/">5ème</a></li>
+        <li><a href="../../../4eme/">4ème</a></li>
+        <li><a href="../../../3eme/">3ème</a></li>
+        <li><a href="../../../snt/">2nde SNT</a></li>
+        <li><a href="../../../sicit/">SI · CIT</a></li>
+        <li><a href="../../../atelier/">Atelier</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Références</h4>
+      <ul>
+        <li><a href="https://eduscol.education.fr/2098/technologie-au-cycle-4" target="_blank" rel="noopener">Programme de Technologie (Eduscol)</a></li>
+        <li><a href="https://eduscol.education.fr/3016/sciences-numeriques-et-technologie-au-lycee" target="_blank" rel="noopener">Programme SNT (Eduscol)</a></li>
+        <li><a href="https://pix.fr" target="_blank" rel="noopener">Pix — compétences numériques</a></li>
+        <li><a href="https://sites.google.com/view/lmtechno25" target="_blank" rel="noopener">Site d'origine (Google Sites)</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="wrap footer-bottom">
+    <span>© M. Eddy Bachaalany · Lycée Montaigne, Beit Chabab</span>
+    <span>Cours de Technologie collège &amp; SNT lycée</span>
+  </div>
+</footer>
+<div class="search-overlay" id="search-overlay" role="dialog" aria-label="Recherche">
+  <div class="search-panel">
+    <div class="search-input-row">
+      <span>🔍</span>
+      <input id="search-input" type="search" placeholder="Rechercher une séquence, une séance, une notion…" autocomplete="off">
+      <kbd>Échap</kbd>
+    </div>
+    <div class="search-results" id="search-results"></div>
+  </div>
+</div>
+<button class="back-to-top" id="back-to-top" type="button" aria-label="Retour en haut">↑</button>
+<script src="../../../assets/client.js?v=93c7e2ac98" defer></script>
+</body>
+</html>

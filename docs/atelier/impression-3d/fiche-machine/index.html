@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="fr" data-base="../../../" data-section="atelier" data-v="93c7e2ac98">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>🧊 Imprimante 3D — ma première pièce · Impression 3D — Technologie &amp; SNT</title>
+<meta name="description" content="La fabrication additive de A à Z : comprends la machine, respecte les règles, et imprime ton premier porte-clés.">
+<meta property="og:title" content="🧊 Imprimante 3D — ma première pièce · Impression 3D — Technologie &amp; SNT">
+<meta property="og:description" content="La fabrication additive de A à Z : comprends la machine, respecte les règles, et imprime ton premier porte-clés.">
+<meta property="og:type" content="website">
+<link rel="icon" href="../../../assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lexend:wght@500;600;700;800&family=Caveat:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../../assets/styles.css?v=93c7e2ac98">
+<script>
+(function(){try{var t=localStorage.getItem("lmtechno-theme");if(!t)t=window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light";document.documentElement.setAttribute("data-theme",t);}catch(e){}})();
+(function(){try{var s=JSON.parse(localStorage.getItem("lmtechno-eleve")||"null");if(!s||!s.section)return;var d=document.documentElement,cur=d.getAttribute("data-section")||"",base=d.getAttribute("data-base")||"./",lv=["5eme","4eme","3eme","snt","sicit"];if(cur==="home"||(lv.indexOf(cur)>=0&&cur!==s.section))location.replace(base+s.section+"/");}catch(e){}})();
+</script>
+<script src="../../../assets/firebase-config.js?v=93c7e2ac98"></script>
+
+</head>
+<body>
+<a class="skip-link" href="#contenu">Aller au contenu</a>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="../../../index.html">
+      <span class="brand-logo">T</span>
+      <span>Technologie <span style="color:var(--muted);font-weight:500">&amp;</span> SNT
+        <small>Lycée Montaigne, Beit Chabab</small>
+      </span>
+    </a>
+    
+<nav class="main-nav" id="main-nav" aria-label="Navigation principale">
+  <a href="../../../index.html">Accueil</a>
+  <a href="../../../5eme/" style="--dot:#0d9268">5ème</a>
+  <a href="../../../4eme/" style="--dot:#2050d0">4ème</a>
+  <a href="../../../3eme/" style="--dot:#7c3aed">3ème</a>
+  <a href="../../../snt/" style="--dot:#d9640f">2nde SNT</a>
+  <a href="../../../sicit/" style="--dot:#0d8e9c">SI · CIT</a>
+  <a href="../../../atelier/" style="--dot:#b91c1c" aria-current="true">Atelier</a>
+  <a class="nav-account" href="../../../connexion/">👤 Espace</a>
+</nav>
+    <div class="header-actions">
+      <button class="search-btn" id="search-open" type="button" aria-label="Rechercher">
+        <span>🔍</span><span class="label">Rechercher</span><kbd>Ctrl K</kbd>
+      </button>
+      <button class="icon-btn" id="theme-toggle" type="button" aria-label="Changer de thème">🌙</button>
+      <button class="icon-btn nav-toggle" id="nav-toggle" type="button" aria-label="Menu" aria-expanded="false">☰</button>
+    </div>
+  </div>
+</header>
+<main id="contenu">
+
+<nav class="breadcrumbs wrap" aria-label="Fil d'Ariane">
+    <a href="../../../index.html">Accueil</a><span class="sep">›</span>
+    <a href="../../">Atelier</a><span class="sep">›</span>
+    <a href="../">Impression 3D</a><span class="sep">›</span>
+    <span class="current">🧊 Imprimante 3D — ma première pièce</span>
+  </nav>
+<div class="wrap course-layout">
+  <aside class="sidebar" style="--accent:undefined;--accent-soft:undefined;">
+    <div class="sb-title"><span class="dot"></span>Atelier </div>
+    <nav>
+    <details>
+      <summary><a href="../../bienvenue-atelier/" style="all:unset;cursor:pointer">Bienvenue à l'atelier</a></summary>
+      <div class="sb-pages">
+        <a href="../../bienvenue-atelier/regles-dor/">Règles d'or</a>
+        <a href="../../bienvenue-atelier/organisation-permis/">Rôles &amp; permis</a>
+        <a href="../../bienvenue-atelier/guide-prof/">Guide professeur</a>
+      </div>
+    </details>
+    <details>
+      <summary><a href="../../decoupe-vinyle-skycut/" style="all:unset;cursor:pointer">Vinyle Skycut</a></summary>
+      <div class="sb-pages">
+        <a href="../../decoupe-vinyle-skycut/fiche-machine/">Fiche machine</a>
+        <a href="../../decoupe-vinyle-skycut/guide-prof/">Guide prof</a>
+      </div>
+    </details>
+    <details open>
+      <summary><a href="../../impression-3d/" style="all:unset;cursor:pointer">Impression 3D</a></summary>
+      <div class="sb-pages">
+        <a href="../../impression-3d/fiche-machine/" aria-current="true">Fiche machine</a>
+        <a href="../../impression-3d/guide-prof/">Guide prof</a>
+      </div>
+    </details>
+    <details>
+      <summary><a href="../../scie-chantourner/" style="all:unset;cursor:pointer">Scie à chantourner</a></summary>
+      <div class="sb-pages">
+        <a href="../../scie-chantourner/fiche-machine/">Fiche machine</a>
+        <a href="../../scie-chantourner/guide-prof/">Guide prof</a>
+      </div>
+    </details>
+    <details>
+      <summary><a href="../../decoupe-laser/" style="all:unset;cursor:pointer">Découpeuse laser</a></summary>
+      <div class="sb-pages">
+        <a href="../../decoupe-laser/fiche-machine/">Fiche machine</a>
+        <a href="../../decoupe-laser/guide-prof/">Guide prof</a>
+      </div>
+    </details>
+    <details>
+      <summary><a href="../../cnc-ttc6050/" style="all:unset;cursor:pointer">CNC TTC 6050</a></summary>
+      <div class="sb-pages">
+        <a href="../../cnc-ttc6050/fiche-machine/">Fiche machine</a>
+        <a href="../../cnc-ttc6050/guide-prof/">Guide prof</a>
+      </div>
+    </details>
+    <details>
+      <summary><a href="../../meuleuse-droite/" style="all:unset;cursor:pointer">Meuleuse droite</a></summary>
+      <div class="sb-pages">
+        <a href="../../meuleuse-droite/fiche-machine/">Fiche machine</a>
+        <a href="../../meuleuse-droite/guide-prof/">Guide prof</a>
+      </div>
+    </details>
+    </nav>
+  </aside>
+  <article>
+    <div class="page-head">
+      <div class="kicker">
+        <span class="badge" style="--badge-bg:#fdeaea;--badge-fg:#b91c1c">Atelier</span>
+        <span class="badge">Impression 3D</span>
+        
+      </div>
+      <h1>🧊 Imprimante 3D — ma première pièce</h1>
+      <p class="desc">La fabrication additive de A à Z : comprends la machine, respecte les règles, et imprime ton premier porte-clés.</p>
+    </div>
+    <div class="callout callout-objectif"><span class="co-icon">🎯</span><div class="co-body"><div class="co-title">Objectifs</div><ul>
+<li>Expliquer la fabrication additive couche par couche.</li>
+<li>Décrire la chaîne numérique : TinkerCAD → STL → Cura → G-code → impression.</li>
+<li>Appliquer les règles de sécurité de la zone imprimantes 3D.</li>
+<li>Réaliser ma première pièce : un porte-clés personnalisé, et vérifier ses critères de réussite.</li>
+</ul>
+</div></div>
+    
+<div class="student-bar">
+  <span class="sb-info">💾 Tes réponses sont enregistrées automatiquement sur cet appareil.</span>
+  <span class="sb-actions">
+    <button class="btn btn-ghost btn-sm" id="print-answers" type="button">🖨 Imprimer / PDF</button>
+    <button class="btn btn-ghost btn-sm" id="clear-answers" type="button">🗑 Tout effacer</button>
+  </span>
+</div>
+    <div class="prose">
+      <h2>🎯 Objectif</h2>
+<p>Aujourd&#39;hui, tu vas comprendre comment une imprimante 3D fabrique un objet, parcourir toute la chaîne numérique du modèle jusqu&#39;à la pièce, et lancer <strong>ta première impression</strong> : un porte-clés en relief à ton nom. Cette fiche prépare aussi ton <strong>permis imprimante 3D</strong> — lis-la sérieusement, le quiz en bas de page compte pour le permis.</p>
+<h2>🧱 Additif ou soustractif ? Deux façons de fabriquer</h2>
+<p>Dans l&#39;atelier, presque toutes les machines fabriquent en <strong>enlevant</strong> de la matière : la fraiseuse CNC creuse dans une planche, la découpeuse laser tranche une plaque, la scie à chantourner découpe un contour. On appelle cela la fabrication <strong>soustractive</strong> : on part d&#39;un bloc plus gros que la pièce, et les copeaux ou les chutes finissent à la poubelle.</p>
+<p>L&#39;imprimante 3D fait l&#39;inverse : c&#39;est la fabrication <strong>additive</strong>. Elle part d&#39;un plateau vide et <strong>ajoute</strong> la matière exactement là où il en faut, couche après couche. Notre technologie s&#39;appelle <strong>FDM</strong> (dépôt de fil fondu) : un filament de plastique est poussé dans une buse chauffée à environ 200 °C, qui le dépose fondu en suivant le dessin de chaque couche. La couche refroidit, se solidifie, et la suivante se soude dessus.</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Fabrication soustractive</th>
+<th>Fabrication additive</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Principe</strong></td>
+<td>On part d&#39;un bloc et on <strong>enlève</strong> de la matière</td>
+<td>On part de rien et on <strong>ajoute</strong> la matière couche par couche</td>
+</tr>
+<tr>
+<td><strong>Machines de l&#39;atelier</strong></td>
+<td>Fraiseuse CNC, découpeuse laser, scie à chantourner</td>
+<td>Imprimantes 3D FDM</td>
+</tr>
+<tr>
+<td><strong>Déchets</strong></td>
+<td>Copeaux, chutes</td>
+<td>Très peu : jupe, supports éventuels</td>
+</tr>
+<tr>
+<td><strong>Formes possibles</strong></td>
+<td>Limitées par le passage de l&#39;outil</td>
+<td>Formes creuses, complexes, pièces imbriquées</td>
+</tr>
+<tr>
+<td><strong>Vitesse</strong></td>
+<td>Rapide sur des formes simples</td>
+<td>Lente : plusieurs dizaines de minutes, même pour une petite pièce</td>
+</tr>
+</tbody></table>
+<p>Fais le calcul : avec des couches de <strong>0,2 mm</strong>, ton porte-clés de 5 mm de haut sera construit en <strong>25 couches</strong> — et la buse parcourt des mètres de trajet pour chacune. C&#39;est pour ça qu&#39;une impression 3D prend du temps.</p>
+<h2>🧵 Le PLA : LE plastique de l&#39;école</h2>
+<p>Nos imprimantes utilisent du <strong>PLA</strong> (acide polylactique), un plastique fabriqué à partir de ressources végétales comme l&#39;amidon de maïs. Ce n&#39;est pas un hasard si c&#39;est le filament de référence en milieu scolaire :</p>
+<table>
+<thead>
+<tr>
+<th>Pourquoi le PLA ?</th>
+<th>Explication</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Il s&#39;imprime facilement</strong></td>
+<td>Température de buse modérée, très peu de déformation au refroidissement, pas besoin de caisson fermé</td>
+</tr>
+<tr>
+<td><strong>Il émet peu</strong></td>
+<td>Toutes les imprimantes FDM émettent des particules ultrafines et des composés volatils ; le PLA est le filament qui en émet <strong>le moins</strong> (bien moins que l&#39;ABS), c&#39;est le choix recommandé pour une salle de classe</td>
+</tr>
+<tr>
+<td><strong>Il est agréable à utiliser</strong></td>
+<td>Odeur faible, couleurs variées, finition propre</td>
+</tr>
+<tr>
+<td><strong>Il est rigide</strong></td>
+<td>Parfait pour des porte-clés, maquettes, pièces mécaniques légères</td>
+</tr>
+</tbody></table>
+<p>Ses limites : il ramollit vers 60 °C (ne laisse pas une pièce PLA dans une voiture au soleil !) et il est cassant en cas de choc violent.</p>
+<blockquote>
+<p>⚠️ <strong>Règle de l&#39;atelier : PLA uniquement.</strong> Aucun autre filament (PETG, ABS…) ne passe dans les machines <strong>sans l&#39;accord explicite du professeur</strong> — les températures et les émissions ne sont pas les mêmes.</p>
+</blockquote>
+<h2>🔗 La chaîne numérique : de ton cerveau à la pièce</h2>
+<p>Une imprimante 3D ne comprend pas « un porte-clés » : il faut traduire ton idée, étape par étape, dans un langage que la machine sait exécuter. C&#39;est la <strong>chaîne numérique</strong> :</p>
+<ol>
+<li><strong>Modéliser</strong> — Dans <strong>TinkerCAD</strong>, tu construis ta pièce en 3D en assemblant des formes (boîtes, cylindres, textes) et des trous. Tu travailles en millimètres, avec des dimensions exactes.</li>
+<li><strong>Exporter en STL</strong> — Le fichier <strong>STL</strong> décrit uniquement la <em>surface</em> de ta pièce sous forme de milliers de petits <strong>triangles</strong>. C&#39;est le format d&#39;échange universel de l&#39;impression 3D : il contient la forme, mais aucune information d&#39;impression.</li>
+<li><strong>Trancher</strong> — Le logiciel <strong>Cura</strong> (un <em>slicer</em>, « trancheur ») découpe virtuellement ton STL en couches horizontales et calcule le trajet de la buse pour chaque couche, selon TES réglages.</li>
+<li><strong>Générer le G-code</strong> — Le résultat du tranchage est un fichier <strong>G-code</strong> : la liste de toutes les instructions de la machine, ligne par ligne. Exemple : <code>G1 X45.2 Y30.1 E0.85 F1500</code> signifie « avance vers ce point en extrudant du filament, à cette vitesse ». Une petite pièce = des dizaines de milliers de lignes !</li>
+<li><strong>Imprimer</strong> — La machine exécute le G-code aveuglément. Elle ne « voit » pas la pièce : si les réglages sont mauvais, elle imprime mal sans s&#39;en rendre compte. D&#39;où l&#39;importance de l&#39;étape suivante…</li>
+</ol>
+<h3>🎛️ Les réglages de tranchage à connaître (valeurs de départ, à calibrer sur NOTRE machine)</h3>
+<table>
+<thead>
+<tr>
+<th>Réglage Cura</th>
+<th>Valeur de départ</th>
+<th>À quoi ça sert</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Hauteur de couche</strong></td>
+<td><strong>0,2 mm</strong></td>
+<td>Épaisseur de chaque tranche. Plus fin = plus joli mais plus long (0,1 mm double le temps !)</td>
+</tr>
+<tr>
+<td><strong>Remplissage (infill)</strong></td>
+<td><strong>15 à 20 %</strong></td>
+<td>L&#39;intérieur de la pièce n&#39;est pas plein : un motif en grille suffit. 15-20 % = bon compromis solidité/temps/matière</td>
+</tr>
+<tr>
+<td><strong>Température buse</strong></td>
+<td>≈ 200-210 °C (PLA, <strong>indicatif</strong>)</td>
+<td>Fait fondre le filament. Trop chaud = fils ; trop froid = couches mal soudées</td>
+</tr>
+<tr>
+<td><strong>Température plateau</strong></td>
+<td>≈ 60 °C (<strong>indicatif</strong>)</td>
+<td>Aide la première couche à coller</td>
+</tr>
+<tr>
+<td><strong>Supports</strong></td>
+<td><strong>Non</strong> pour le porte-clés</td>
+<td>Uniquement si la pièce a des parties « en l&#39;air » (surplombs marqués) : la machine ne peut pas déposer du plastique dans le vide</td>
+</tr>
+<tr>
+<td><strong>Jupe / bordure</strong></td>
+<td><strong>Jupe</strong> (skirt)</td>
+<td>La jupe amorce la buse autour de la pièce ; la <strong>bordure</strong> (brim) élargit la première couche pour les pièces fines qui risquent de se décoller</td>
+</tr>
+</tbody></table>
+<h2>⚠️ Sécurité — zone imprimantes 3D</h2>
+<blockquote>
+<p>🔥 <strong>La buse monte à environ 200 °C et le plateau à 60 °C.</strong> À 200 °C, la brûlure est instantanée. On ne touche <strong>JAMAIS</strong> la buse, ni pendant l&#39;impression, ni « juste après » : elle reste brûlante de longues minutes.</p>
+</blockquote>
+<ul>
+<li><strong>Pièces mobiles</strong> : le plateau et la tête se déplacent seuls, parfois brusquement. On ne met <strong>jamais les doigts dans la machine</strong> pendant qu&#39;elle fonctionne, on ne se penche pas au-dessus.</li>
+<li><strong>On retire la pièce quand le plateau est FROID.</strong> Deux raisons : on évite la brûlure, ET la pièce se décolle presque toute seule en refroidissant. Forcer à chaud = pièce abîmée + risque de se blesser.</li>
+<li><strong>La spatule pousse toujours vers l&#39;extérieur</strong>, jamais vers soi ni vers l&#39;autre main. Main libre HORS de la trajectoire.</li>
+<li><strong>Salle ventilée</strong> : l&#39;impression émet des particules fines ; la ventilation reste en marche pendant et après l&#39;impression.</li>
+<li><strong>PLA uniquement</strong>, sauf accord explicite du professeur.</li>
+<li>Cheveux longs attachés, pas d&#39;écharpe ni de cordon près de la machine ; on signale <strong>immédiatement</strong> toute odeur anormale, bruit suspect ou filament emmêlé au professeur.</li>
+</ul>
+<h2>🪪 Régime d&#39;usage de la machine</h2>
+<table>
+<thead>
+<tr>
+<th>Qui ?</th>
+<th>Quoi ?</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Élève titulaire du permis</strong></td>
+<td>Prépare le fichier, charge le G-code, assiste au lancement — toujours <strong>sous la surveillance directe du professeur</strong></td>
+</tr>
+<tr>
+<td><strong>Le professeur</strong></td>
+<td>Autorise chaque lancement et <strong>valide la première couche</strong> avant de laisser l&#39;impression continuer</td>
+</tr>
+<tr>
+<td><strong>Élève sans permis</strong></td>
+<td>Observe, modélise et tranche sur PC, mais ne manipule pas la machine</td>
+</tr>
+</tbody></table>
+<p>La <strong>première couche</strong> est le moment critique : si elle n&#39;accroche pas au plateau, tout le reste est perdu. On reste devant la machine pendant les 2-3 premières minutes, on ne s&#39;en va pas.</p>
+<h2>🏁 Ma première pièce : le porte-clés en relief</h2>
+<p>Tu vas concevoir un porte-clés (ou jeton) personnalisé. Suis les étapes <strong>dans l&#39;ordre</strong> :</p>
+<h3>Étape A — Modéliser dans TinkerCAD</h3>
+<ol>
+<li>Crée un nouveau projet et vérifie que l&#39;unité est le <strong>millimètre</strong>.</li>
+<li>Pose une <strong>boîte</strong> de <strong>40 × 20 mm</strong>, hauteur <strong>3 mm</strong> : c&#39;est le socle. Arrondis les angles si tu veux (forme « polygone » ou congés).</li>
+<li>Ajoute la forme <strong>Texte</strong> : ton prénom ou tes initiales. Règle sa hauteur à <strong>2 mm</strong> et pose-le <strong>sur</strong> le socle (le texte doit dépasser du socle de 2 mm, hauteur totale de la pièce : 5 mm). Vérifie que les lettres ne dépassent pas des bords.</li>
+<li>Crée le <strong>trou d&#39;anneau</strong> : un cylindre en mode « perçage », <strong>Ø 4 mm</strong>, centré à environ <strong>6 mm du petit bord</strong> (garde au moins 4 mm de matière autour du trou), traversant toute l&#39;épaisseur.</li>
+<li>Sélectionne tout et <strong>groupe</strong>. Tourne la vue : vérifie qu&#39;il n&#39;y a ni trou bouché, ni lettre flottante.</li>
+<li><strong>Exporte en STL</strong>. Nomme le fichier <strong>PrénomClasse</strong> (exemple : <code>Lea5B.stl</code>) — c&#39;est obligatoire pour la file d&#39;impression.</li>
+</ol>
+<h3>Étape B — Trancher dans Cura</h3>
+<ol start="7">
+<li>Ouvre ton STL dans <strong>Cura</strong> avec le <strong>profil de la classe</strong> (PLA, couche 0,2 mm). Vérifie : remplissage <strong>15-20 %</strong>, supports <strong>désactivés</strong> (aucun surplomb sur cette pièce), <strong>jupe</strong> activée.</li>
+<li>Clique sur <strong>Découper</strong> (Slice) et lis les informations calculées par Cura, puis note-les :</li>
+</ol>
+<p>⏱️ Temps d&#39;impression estimé par Cura :</p>
+<div class="answer-field">
+  <textarea rows="3" data-answer-idx="0" placeholder="✏️ Écris ta réponse ici…" aria-label="Zone de réponse de l'élève"></textarea>
+</div>
+<p>⚖️ Masse de filament annoncée par Cura (en grammes) :</p>
+<div class="answer-field">
+  <textarea rows="3" data-answer-idx="1" placeholder="✏️ Écris ta réponse ici…" aria-label="Zone de réponse de l'élève"></textarea>
+</div>
+<ol start="9">
+<li>Enregistre le G-code sous le même nom <strong>PrénomClasse</strong> et inscris-toi sur le <strong>tableau de réservation</strong>. Le professeur lancera ton impression (souvent entre deux cours : une impression dure plus longtemps qu&#39;une séance !).</li>
+<li>Au lancement, observe la <strong>première couche</strong> avec le professeur : lignes bien écrasées, régulières, qui se touchent sans se chevaucher.</li>
+</ol>
+<h3>✅ Critères de réussite (à vérifier sur ta pièce refroidie)</h3>
+<table>
+<thead>
+<tr>
+<th>Critère</th>
+<th>Comment je vérifie</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Première couche collée</strong></td>
+<td>Le dessous est lisse et plat, aucune ligne ne s&#39;est décollée pendant l&#39;impression</td>
+</tr>
+<tr>
+<td><strong>Texte lisible</strong></td>
+<td>On lit le prénom à 50 cm sans hésiter ; les lettres sont nettes, non fondues entre elles</td>
+</tr>
+<tr>
+<td><strong>Pas de fils (stringing)</strong></td>
+<td>Aucun cheveu de plastique entre les lettres ou sur les bords</td>
+</tr>
+<tr>
+<td><strong>Dimensions</strong></td>
+<td>Le socle mesure 40 × 20 mm (± 0,5 mm au pied à coulisse) et l&#39;anneau de porte-clés passe dans le trou Ø 4 mm</td>
+</tr>
+</tbody></table>
+<h3>🔍 J&#39;analyse le résultat</h3>
+<p>Observe ta pièce (ou celle d&#39;un camarade si la tienne est parfaite !). Si un critère n&#39;est pas atteint : lequel, quelle est la cause probable (première couche ? température ? réglage Cura ?), et que changerais-tu pour la version 2 ?</p>
+<div class="answer-field">
+  <textarea rows="5" data-answer-idx="2" placeholder="✏️ Écris ta réponse ici…" aria-label="Zone de réponse de l'élève"></textarea>
+</div>
+<h2>🧭 Ce que je retiens</h2>
+<ul>
+<li>L&#39;impression 3D est une fabrication <strong>additive</strong> : la pièce est construite <strong>couche par couche</strong> (0,2 mm), à l&#39;inverse des machines qui enlèvent de la matière.</li>
+<li>La chaîne numérique : <strong>modéliser (TinkerCAD) → exporter en STL → trancher (Cura) → G-code → imprimer</strong> ; le STL décrit la forme, le G-code donne les ordres à la machine.</li>
+<li>Le <strong>PLA</strong> est le plastique de l&#39;école : facile à imprimer et le plus faible en émissions — tout autre filament exige l&#39;accord du professeur.</li>
+<li>Sécurité : buse ≈ 200 °C <strong>intouchable</strong>, on retire la pièce <strong>plateau froid</strong>, spatule <strong>vers l&#39;extérieur</strong>, salle ventilée, et le professeur <strong>valide la première couche</strong> de chaque impression.</li>
+</ul>
+<p>🎫 <strong>Termine par le quiz du permis en bas de page</strong> — il te faut un sans-faute (ou presque) pour valider la partie théorique de ton permis imprimante 3D !</p>
+<h2>🚑 Si quelque chose se passe mal</h2>
+<ul>
+<li><strong>Je porte les bons EPI</strong> : lunettes de protection dans toute la zone machines, cheveux longs attachés, ni écharpe, ni cordon, ni bijou, manches ajustées.</li>
+<li><strong>En cas d&#39;incident, je garde mon calme</strong> : j&#39;arrête (ou je m&#39;écarte) et je <strong>préviens tout de suite le professeur</strong>. Je ne répare jamais seul.</li>
+<li><strong>Brûlure</strong> (buse ≈ 200 °C, plateau chaud) : je passe la zone sous <strong>l&#39;eau froide au moins 10 minutes</strong> et je préviens le professeur. Je ne touche <strong>jamais</strong> la buse.</li>
+</ul>
+
+    </div>
+    
+<section class="quiz" id="quiz">
+  <h2>🧠 Teste tes connaissances</h2>
+  <p class="quiz-hint">Réponds aux questions puis clique sur « Vérifier » — la correction s'affiche aussitôt.</p>
+  
+    <div class="quiz-q" data-ok="1" data-explain="La buse chauffe à environ 200 °C et reste dangereuse bien après la fin de l'impression : on ne la touche jamais.">
+      <p class="qq-text">1. L'impression vient de se terminer. La buse de l'imprimante…</p>
+      <div class="qq-opts">
+        <label class="qq-opt"><input type="radio" name="q0" value="0"><span>peut être touchée : la machine est arrêtée</span></label>
+        <label class="qq-opt"><input type="radio" name="q0" value="1"><span>reste brûlante (≈ 200 °C) de longues minutes : on ne la touche JAMAIS</span></label>
+        <label class="qq-opt"><input type="radio" name="q0" value="2"><span>refroidit en 10 secondes</span></label>
+        <label class="qq-opt"><input type="radio" name="q0" value="3"><span>n'est chaude que pendant le préchauffage</span></label>
+      </div>
+      <button class="btn btn-ghost qq-check" type="button">Vérifier ma réponse</button>
+      <div class="qq-feedback" aria-live="polite"></div>
+    </div>
+
+    <div class="quiz-q" data-ok="2" data-explain="Plateau froid = pas de brûlure, et la pièce se décolle presque toute seule en refroidissant.">
+      <p class="qq-text">2. Quand as-tu le droit de retirer ta pièce du plateau ?</p>
+      <div class="qq-opts">
+        <label class="qq-opt"><input type="radio" name="q1" value="0"><span>Dès la dernière couche, pour gagner du temps</span></label>
+        <label class="qq-opt"><input type="radio" name="q1" value="1"><span>Quand le plateau est encore tiède</span></label>
+        <label class="qq-opt"><input type="radio" name="q1" value="2"><span>Quand le plateau est FROID : la pièce se décolle plus facilement et sans risque de brûlure</span></label>
+        <label class="qq-opt"><input type="radio" name="q1" value="3"><span>Jamais : seul le professeur retire les pièces</span></label>
+      </div>
+      <button class="btn btn-ghost qq-check" type="button">Vérifier ma réponse</button>
+      <div class="qq-feedback" aria-live="polite"></div>
+    </div>
+
+    <div class="quiz-q" data-ok="1" data-explain="Le PLA s'imprime à température modérée, se déforme peu et émet nettement moins que l'ABS : c'est le choix recommandé en classe.">
+      <p class="qq-text">3. Pourquoi le PLA est-il LE filament de l'école ?</p>
+      <div class="qq-opts">
+        <label class="qq-opt"><input type="radio" name="q2" value="0"><span>C'est le plus solide de tous les plastiques</span></label>
+        <label class="qq-opt"><input type="radio" name="q2" value="1"><span>Il s'imprime facilement et c'est le filament qui émet le moins de particules et de composés volatils</span></label>
+        <label class="qq-opt"><input type="radio" name="q2" value="2"><span>Il résiste très bien à la chaleur</span></label>
+        <label class="qq-opt"><input type="radio" name="q2" value="3"><span>Il est le seul filament transparent</span></label>
+      </div>
+      <button class="btn btn-ghost qq-check" type="button">Vérifier ma réponse</button>
+      <div class="qq-feedback" aria-live="polite"></div>
+    </div>
+
+    <div class="quiz-q" data-ok="2" data-explain="Une première couche mal collée condamne l'impression entière : on reste devant la machine jusqu'à sa validation.">
+      <p class="qq-text">4. Pourquoi la première couche est-elle si importante ?</p>
+      <div class="qq-opts">
+        <label class="qq-opt"><input type="radio" name="q3" value="0"><span>C'est la seule couche visible sur la pièce finie</span></label>
+        <label class="qq-opt"><input type="radio" name="q3" value="1"><span>Elle règle la couleur de la pièce</span></label>
+        <label class="qq-opt"><input type="radio" name="q3" value="2"><span>Si elle n'accroche pas au plateau, toute l'impression est perdue : le professeur la valide avant de laisser continuer</span></label>
+        <label class="qq-opt"><input type="radio" name="q3" value="3"><span>Elle détermine le remplissage de la pièce</span></label>
+      </div>
+      <button class="btn btn-ghost qq-check" type="button">Vérifier ma réponse</button>
+      <div class="qq-feedback" aria-live="polite"></div>
+    </div>
+
+    <div class="quiz-q" data-ok="1" data-explain="Le STL décrit uniquement la forme (un maillage de triangles) ; les réglages d'impression viennent après, dans le slicer.">
+      <p class="qq-text">5. Que contient un fichier STL ?</p>
+      <div class="qq-opts">
+        <label class="qq-opt"><input type="radio" name="q4" value="0"><span>Les instructions de déplacement de la buse</span></label>
+        <label class="qq-opt"><input type="radio" name="q4" value="1"><span>La surface de la pièce décrite en milliers de triangles, sans aucun réglage d'impression</span></label>
+        <label class="qq-opt"><input type="radio" name="q4" value="2"><span>Les températures de la buse et du plateau</span></label>
+        <label class="qq-opt"><input type="radio" name="q4" value="3"><span>La photo de la pièce</span></label>
+      </div>
+      <button class="btn btn-ghost qq-check" type="button">Vérifier ma réponse</button>
+      <div class="qq-feedback" aria-live="polite"></div>
+    </div>
+
+    <div class="quiz-q" data-ok="2" data-explain="Le slicer traduit le STL en G-code : des milliers d'ordres que l'imprimante exécute aveuglément.">
+      <p class="qq-text">6. Et le G-code, c'est quoi ?</p>
+      <div class="qq-opts">
+        <label class="qq-opt"><input type="radio" name="q5" value="0"><span>Le format 3D de TinkerCAD</span></label>
+        <label class="qq-opt"><input type="radio" name="q5" value="1"><span>Un logiciel de modélisation</span></label>
+        <label class="qq-opt"><input type="radio" name="q5" value="2"><span>La liste des instructions que la machine exécute ligne par ligne (déplacements, extrusion, températures)</span></label>
+        <label class="qq-opt"><input type="radio" name="q5" value="3"><span>Le code du permis machine</span></label>
+      </div>
+      <button class="btn btn-ghost qq-check" type="button">Vérifier ma réponse</button>
+      <div class="qq-feedback" aria-live="polite"></div>
+    </div>
+
+    <div class="quiz-q" data-ok="1" data-explain="Les supports ne servent que sous les surplombs marqués ; le porte-clés, plat, n'en a pas besoin.">
+      <p class="qq-text">7. Dans quel cas faut-il activer les supports dans Cura ?</p>
+      <div class="qq-opts">
+        <label class="qq-opt"><input type="radio" name="q6" value="0"><span>Pour toutes les pièces, par sécurité</span></label>
+        <label class="qq-opt"><input type="radio" name="q6" value="1"><span>Quand la pièce a des parties en surplomb : la machine ne peut pas déposer du plastique dans le vide</span></label>
+        <label class="qq-opt"><input type="radio" name="q6" value="2"><span>Quand la pièce est plus haute que 3 mm</span></label>
+        <label class="qq-opt"><input type="radio" name="q6" value="3"><span>Quand on imprime en PLA</span></label>
+      </div>
+      <button class="btn btn-ghost qq-check" type="button">Vérifier ma réponse</button>
+      <div class="qq-feedback" aria-live="polite"></div>
+    </div>
+
+    <div class="quiz-q" data-ok="0" data-explain="La spatule pousse toujours vers l'extérieur, jamais vers soi ni vers l'autre main, et uniquement plateau froid.">
+      <p class="qq-text">8. Comment utilise-t-on la spatule pour décoller une pièce ?</p>
+      <div class="qq-opts">
+        <label class="qq-opt"><input type="radio" name="q7" value="0"><span>En poussant vers l'extérieur, main libre hors de la trajectoire, plateau froid</span></label>
+        <label class="qq-opt"><input type="radio" name="q7" value="1"><span>En tirant vers soi pour avoir plus de force</span></label>
+        <label class="qq-opt"><input type="radio" name="q7" value="2"><span>Pendant l'impression, dès que la pièce est assez haute</span></label>
+        <label class="qq-opt"><input type="radio" name="q7" value="3"><span>Avec des gants, plateau encore chaud, pour aller plus vite</span></label>
+      </div>
+      <button class="btn btn-ghost qq-check" type="button">Vérifier ma réponse</button>
+      <div class="qq-feedback" aria-live="polite"></div>
+    </div>
+  <div class="quiz-score" aria-live="polite"></div>
+</section>
+    
+    <nav class="pager">
+      
+      <a class="pg-next" href="../guide-prof/"><span class="pg-label">Suivant →</span><span class="pg-title">👨‍🏫 Guide du professeur — imprimantes 3D</span></a>
+    </nav>
+  </article>
+</div>
+</main>
+<footer class="site-footer">
+  <div class="wrap footer-grid">
+    <div>
+      <h4>Technologie &amp; SNT</h4>
+      <p>Site pédagogique regroupant les cours, activités et ressources de Technologie du collège et de SNT du lycée.</p>
+    </div>
+    <div>
+      <h4>Niveaux</h4>
+      <ul>
+        <li><a href="../../../5eme/">5ème</a></li>
+        <li><a href="../../../4eme/">4ème</a></li>
+        <li><a href="../../../3eme/">3ème</a></li>
+        <li><a href="../../../snt/">2nde SNT</a></li>
+        <li><a href="../../../sicit/">SI · CIT</a></li>
+        <li><a href="../../../atelier/">Atelier</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Références</h4>
+      <ul>
+        <li><a href="https://eduscol.education.fr/2098/technologie-au-cycle-4" target="_blank" rel="noopener">Programme de Technologie (Eduscol)</a></li>
+        <li><a href="https://eduscol.education.fr/3016/sciences-numeriques-et-technologie-au-lycee" target="_blank" rel="noopener">Programme SNT (Eduscol)</a></li>
+        <li><a href="https://pix.fr" target="_blank" rel="noopener">Pix — compétences numériques</a></li>
+        <li><a href="https://sites.google.com/view/lmtechno25" target="_blank" rel="noopener">Site d'origine (Google Sites)</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="wrap footer-bottom">
+    <span>© M. Eddy Bachaalany · Lycée Montaigne, Beit Chabab</span>
+    <span>Cours de Technologie collège &amp; SNT lycée</span>
+  </div>
+</footer>
+<div class="search-overlay" id="search-overlay" role="dialog" aria-label="Recherche">
+  <div class="search-panel">
+    <div class="search-input-row">
+      <span>🔍</span>
+      <input id="search-input" type="search" placeholder="Rechercher une séquence, une séance, une notion…" autocomplete="off">
+      <kbd>Échap</kbd>
+    </div>
+    <div class="search-results" id="search-results"></div>
+  </div>
+</div>
+<button class="back-to-top" id="back-to-top" type="button" aria-label="Retour en haut">↑</button>
+<script src="../../../assets/client.js?v=93c7e2ac98" defer></script>
+</body>
+</html>

@@ -98,6 +98,17 @@
       "archived": false,
       "color": "#0d8e9c",
       "colorSoft": "#e0f5f7"
+    },
+    {
+      "id": "atelier",
+      "slug": "atelier",
+      "file": "atelier.json",
+      "label": "Atelier",
+      "short": "Atelier",
+      "year": "",
+      "archived": false,
+      "color": "#b91c1c",
+      "colorSoft": "#fdeaea"
     }
   ]
 }

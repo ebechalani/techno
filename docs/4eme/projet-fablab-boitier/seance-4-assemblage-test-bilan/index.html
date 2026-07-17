@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="fr" data-base="../../../" data-section="4eme" data-v="93c7e2ac98">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>🔧 Séance 4 — Assemblage, intégration, test… et la v2 dans la tête · Projet boîtier — Technologie &amp; SNT</title>
+<meta name="description" content="Le moment de vérité : le circuit entre dans sa boîte, l'objet s'allume — et vous présentez votre produit à la classe.">
+<meta property="og:title" content="🔧 Séance 4 — Assemblage, intégration, test… et la v2 dans la tête · Projet boîtier — Technologie &amp; SNT">
+<meta property="og:description" content="Le moment de vérité : le circuit entre dans sa boîte, l'objet s'allume — et vous présentez votre produit à la classe.">
+<meta property="og:type" content="website">
+<link rel="icon" href="../../../assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lexend:wght@500;600;700;800&family=Caveat:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../../assets/styles.css?v=93c7e2ac98">
+<script>
+(function(){try{var t=localStorage.getItem("lmtechno-theme");if(!t)t=window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light";document.documentElement.setAttribute("data-theme",t);}catch(e){}})();
+(function(){try{var s=JSON.parse(localStorage.getItem("lmtechno-eleve")||"null");if(!s||!s.section)return;var d=document.documentElement,cur=d.getAttribute("data-section")||"",base=d.getAttribute("data-base")||"./",lv=["5eme","4eme","3eme","snt","sicit"];if(cur==="home"||(lv.indexOf(cur)>=0&&cur!==s.section))location.replace(base+s.section+"/");}catch(e){}})();
+</script>
+<script src="../../../assets/firebase-config.js?v=93c7e2ac98"></script>
+
+</head>
+<body>
+<a class="skip-link" href="#contenu">Aller au contenu</a>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="../../../index.html">
+      <span class="brand-logo">T</span>
+      <span>Technologie <span style="color:var(--muted);font-weight:500">&amp;</span> SNT
+        <small>Lycée Montaigne, Beit Chabab</small>
+      </span>
+    </a>
+    
+<nav class="main-nav" id="main-nav" aria-label="Navigation principale">
+  <a href="../../../index.html">Accueil</a>
+  <a href="../../../5eme/" style="--dot:#0d9268">5ème</a>
+  <a href="../../../4eme/" style="--dot:#2050d0" aria-current="true">4ème</a>
+  <a href="../../../3eme/" style="--dot:#7c3aed">3ème</a>
+  <a href="../../../snt/" style="--dot:#d9640f">2nde SNT</a>
+  <a href="../../../sicit/" style="--dot:#0d8e9c">SI · CIT</a>
+  <a href="../../../atelier/" style="--dot:#b91c1c">Atelier</a>
+  <a class="nav-account" href="../../../connexion/">👤 Espace</a>
+</nav>
+    <div class="header-actions">
+      <button class="search-btn" id="search-open" type="button" aria-label="Rechercher">
+        <span>🔍</span><span class="label">Rechercher</span><kbd>Ctrl K</kbd>
+      </button>
+      <button class="icon-btn" id="theme-toggle" type="button" aria-label="Changer de thème">🌙</button>
+      <button class="icon-btn nav-toggle" id="nav-toggle" type="button" aria-label="Menu" aria-expanded="false">☰</button>
+    </div>
+  </div>
+</header>
+<main id="contenu">
+
+<nav class="breadcrumbs wrap" aria-label="Fil d'Ariane">
+    <a href="../../../index.html">Accueil</a><span class="sep">›</span>
+    <a href="../../">4ème</a><span class="sep">›</span>
+    <a href="../">Projet boîtier</a><span class="sep">›</span>
+    <span class="current">🔧 Séance 4 — Assemblage, intégration, test… et la v2 dans la tête</span>
+  </nav>
+<div class="wrap course-layout">
+  <aside class="sidebar" style="--accent:undefined;--accent-soft:undefined;">
+    <div class="sb-title"><span class="dot"></span>4ème </div>
+    <nav>
+    <details>
+      <summary><a href="../../sequence-0-ia-generative/" style="all:unset;cursor:pointer">L'IA générative comme assistant personnel</a></summary>
+      <div class="sb-pages">
+        <a href="../../sequence-0-ia-generative/jeu-intro/">🎮 Jeu d'intro</a>
+        <a href="../../sequence-0-ia-generative/seance-1/">Séance 1</a>
+        <a href="../../sequence-0-ia-generative/seance-1-corr/">Séance 1 — correction</a>
+        <a href="../../sequence-0-ia-generative/creer-un-prompt-efficace/">Créer un prompt efficace</a>
+        <a href="../../sequence-0-ia-generative/prompts-avantages-et-biais/">Prompts, avantages et biais</a>
+      </div>
+    </details>
+    <details>
+      <summary><a href="../../sequence-1-ia-securite/" style="all:unset;cursor:pointer">IA générative et sécurité des données</a></summary>
+      <div class="sb-pages">
+        <a href="../../sequence-1-ia-securite/jeu-intro/">🎮 Jeu d'intro</a>
+        <a href="../../sequence-1-ia-securite/seance-1/">Séance 1</a>
+        <a href="../../sequence-1-ia-securite/seance-1-corr/">Séance 1 — correction</a>
+        <a href="../../sequence-1-ia-securite/seance-2/">Séance 2</a>
+        <a href="../../sequence-1-ia-securite/seance-2-corr/">Séance 2 — correction</a>
+        <a href="../../sequence-1-ia-securite/ressources/">Ressources</a>
+      </div>
+    </details>
+    <details>
+      <summary><a href="../../sequence-depanner-reparer/" style="all:unset;cursor:pointer">Dépanner et réparer un objet technique</a></summary>
+      <div class="sb-pages">
+        <a href="../../sequence-depanner-reparer/jeu-intro/">🎮 Jeu d'intro</a>
+        <a href="../../sequence-depanner-reparer/seance-1/">Séance 1</a>
+        <a href="../../sequence-depanner-reparer/seance-2/">Séance 2</a>
+      </div>
+    </details>
+    <details>
+      <summary><a href="../../sequence-objet-developpement-durable/" style="all:unset;cursor:pointer">Choisir un objet dans un contexte de développement durable</a></summary>
+      <div class="sb-pages">
+        <a href="../../sequence-objet-developpement-durable/jeu-intro/">🎮 Jeu d'intro</a>
+        <a href="../../sequence-objet-developpement-durable/seance-1/">Séance 1</a>
+        <a href="../../sequence-objet-developpement-durable/seance-2/">Séance 2</a>
+      </div>
+    </details>
+    <details>
+      <summary><a href="../../sequence-materiaux-procedes/" style="all:unset;cursor:pointer">Matériaux et procédés de fabrication</a></summary>
+      <div class="sb-pages">
+        <a href="../../sequence-materiaux-procedes/jeu-intro/">🎮 Jeu d'intro</a>
+        <a href="../../sequence-materiaux-procedes/seance-1/">Séance 1</a>
+        <a href="../../sequence-materiaux-procedes/seance-2/">Séance 2</a>
+      </div>
+    </details>
+    <details>
+      <summary><a href="../../sequence-1-reseau-informatique/" style="all:unset;cursor:pointer">Le réseau informatique</a></summary>
+      <div class="sb-pages">
+        <a href="../../sequence-1-reseau-informatique/jeu-intro/">🎮 Jeu d'intro</a>
+        <a href="../../sequence-1-reseau-informatique/seance-1/">Séance 1</a>
+        <a href="../../sequence-1-reseau-informatique/seance-2/">Séance 2</a>
+        <a href="../../sequence-1-reseau-informatique/seance-3/">Séance 3</a>
+        <a href="../../sequence-1-reseau-informatique/seance-4/">Séance 4</a>
+      </div>
+    </details>
+    <details>
+      <summary><a href="../../sequence-2-portail-automatise/" style="all:unset;cursor:pointer">Portail automatisé</a></summary>
+      <div class="sb-pages">
+        <a href="../../sequence-2-portail-automatise/jeu-intro/">🎮 Jeu d'intro</a>
+        <a href="../../sequence-2-portail-automatise/seance-0/">Séance 0</a>
+        <a href="../../sequence-2-portail-automatise/seance-1/">Séance 1</a>
+        <a href="../../sequence-2-portail-automatise/seance-1-corr/">Séance 1 — correction</a>
+        <a href="../../sequence-2-portail-automatise/seance-2/">Séance 2</a>
+      </div>
+    </details>
+    <details>
+      <summary><a href="../../sequence-3-objets-connectes/" style="all:unset;cursor:pointer">Les objets connectés</a></summary>
+      <div class="sb-pages">
+        <a href="../../sequence-3-objets-connectes/jeu-intro/">🎮 Jeu d'intro</a>
+        <a href="../../sequence-3-objets-connectes/seance-1/">Séance 1</a>
+        <a href="../../sequence-3-objets-connectes/seance-2/">Séance 2</a>
+      </div>
+    </details>
+    <details>
+      <summary><a href="../../sequence-4-microbit/" style="all:unset;cursor:pointer">Programmer un ordinateur de poche</a></summary>
+      <div class="sb-pages">
+        <a href="../../sequence-4-microbit/jeu-intro/">🎮 Jeu d'intro</a>
+        <a href="../../sequence-4-microbit/seance-1/">Séance 1</a>
+        <a href="../../sequence-4-microbit/seance-2/">Séance 2</a>
+        <a href="../../sequence-4-microbit/correction/">Correction</a>
+        <a href="../../sequence-4-microbit/programmer-une-boussolle/">Programmer une boussole</a>
+      </div>
+    </details>
+    <details open>
+      <summary><a href="../../projet-fablab-boitier/" style="all:unset;cursor:pointer">Projet boîtier</a></summary>
+      <div class="sb-pages">
+        <a href="../../projet-fablab-boitier/jeu-mission-emballage-impossible/">Jeu d'intro</a>
+        <a href="../../projet-fablab-boitier/seance-1-cahier-des-charges/">Cahier des charges</a>
+        <a href="../../projet-fablab-boitier/seance-2-cao-boite-encoches/">CAO 2D/3D</a>
+        <a href="../../projet-fablab-boitier/seance-3-fabrication-rotation/">Fabrication</a>
+        <a href="../../projet-fablab-boitier/seance-4-assemblage-test-bilan/" aria-current="true">Assemblage &amp; bilan</a>
+        <a href="../../projet-fablab-boitier/guide-professeur/">Guide prof</a>
+      </div>
+    </details>
+    <details>
+      <summary><a href="../../sequence-5-feu-tricolore-arduino/" style="all:unset;cursor:pointer">Feu tricolore avec Arduino</a></summary>
+      <div class="sb-pages">
+        <a href="../../sequence-5-feu-tricolore-arduino/jeu-intro/">🎮 Jeu d'intro</a>
+        <a href="../../sequence-5-feu-tricolore-arduino/seance-1/">Séance 1</a>
+        <a href="../../sequence-5-feu-tricolore-arduino/seance-2/">Séance 2</a>
+      </div>
+    </details>
+    <details>
+      <summary><a href="../../sequence-6-serre-autonome/" style="all:unset;cursor:pointer">Serre autonome</a></summary>
+      <div class="sb-pages">
+        <a href="../../sequence-6-serre-autonome/jeu-intro/">🎮 Jeu d'intro</a>
+        <a href="../../sequence-6-serre-autonome/seance-0/">Séance 0</a>
+        <a href="../../sequence-6-serre-autonome/seance-1/">Séance 1</a>
+        <a href="../../sequence-6-serre-autonome/seance-2/">Séance 2</a>
+        <a href="../../sequence-6-serre-autonome/seance-3/">Séance 3</a>
+      </div>
+    </details>
+    <details>
+      <summary><a href="../../chaines-fonctionnelles/" style="all:unset;cursor:pointer">Chaînes fonctionnelles</a></summary>
+      <div class="sb-pages">
+        <a href="../../chaines-fonctionnelles/exercices/">Exercices</a>
+        <a href="../../chaines-fonctionnelles/correction/">Correction</a>
+      </div>
+    </details>
+    <details>
+      <summary><a href="../../olympiades-informatique/" style="all:unset;cursor:pointer">Olympiades d'informatique</a></summary>
+      <div class="sb-pages">
+        
+      </div>
+    </details>
+    </nav>
+  </aside>
+  <article>
+    <div class="page-head">
+      <div class="kicker">
+        <span class="badge" style="--badge-bg:#e7edfc;--badge-fg:#2050d0">4e</span>
+        <span class="badge">Projet boîtier</span>
+        <span class="badge badge-new">✦ Nouveau</span>
+      </div>
+      <h1>🔧 Séance 4 — Assemblage, intégration, test… et la v2 dans la tête</h1>
+      <p class="desc">Le moment de vérité : le circuit entre dans sa boîte, l'objet s'allume — et vous présentez votre produit à la classe.</p>
+    </div>
+    <div class="callout callout-objectif"><span class="co-icon">🎯</span><div class="co-body"><div class="co-title">Objectifs</div><ul>
+<li>Assembler le boîtier (emboîtage, collage raisonné) en gardant les faces d&#39;accès démontables.</li>
+<li>Intégrer le circuit et valider le prototype par un protocole de test fonctionnel complet.</li>
+<li>Analyser les défauts et proposer une version 2 argumentée.</li>
+<li>Présenter son objet fini à la classe et évaluer les productions des autres îlots.</li>
+</ul>
+</div></div>
+    
+<div class="student-bar">
+  <span class="sb-info">💾 Tes réponses sont enregistrées automatiquement sur cet appareil.</span>
+  <span class="sb-actions">
+    <button class="btn btn-ghost btn-sm" id="print-answers" type="button">🖨 Imprimer / PDF</button>
+    <button class="btn btn-ghost btn-sm" id="clear-answers" type="button">🗑 Tout effacer</button>
+  </span>
+</div>
+    <div class="prose">
+      <h2>🎯 Objectif de la séance</h2>
+<p>À la fin de l&#39;heure : un objet connecté <strong>fermé, fonctionnel, présenté</strong> — et une liste d&#39;améliorations pour la v2. C&#39;est la dernière ligne droite du processus complet que vous avez organisé depuis la séance 1 : conception → fabrication → assemblage → validation.</p>
+<h2>🧰 Matériel par îlot</h2>
+<p>Toutes vos pièces contrôlées (faces laser, pièces 3D), votre montage électronique, colle à bois, pinces ou élastiques larges, chiffon humide, pied à coulisse, la fiche de test.</p>
+<h2>🚀 Étape 1 — Assemblage à blanc, puis collage (15 min)</h2>
+<ol>
+<li><strong>Remontez tout à blanc</strong> une dernière fois, circuit posé à l&#39;intérieur : c&#39;est la répétition générale. Vérifiez fente USB en face du port, fenêtre en face des LED, place du support de piles.</li>
+<li><strong>Décidez ce qui se colle et ce qui reste démontable.</strong> Rappel du cahier des charges : il faut pouvoir changer les piles ! En général on colle 4 ou 5 faces et on laisse le couvercle emboîté.</li>
+<li><strong>Collage</strong> (magasinier + chef d&#39;atelier) : un mince filet de colle à bois dans les encoches des faces à fixer — pas de flaque, l&#39;excédent s&#39;essuie tout de suite au chiffon humide. Serrez avec pinces ou élastiques, vérifiez <strong>l&#39;équerrage</strong> (les angles droits) en posant la boîte sur la table.</li>
+<li>Pendant la prise (≈ 15-20 min), passez à l&#39;étape 2 — ne manipulez pas la boîte inutilement.</li>
+</ol>
+<blockquote>
+<p>⚠️ La colle à bois se nettoie à l&#39;eau tant qu&#39;elle est fraîche. Mains lavées après collage ; on ne décolle JAMAIS une pièce à la force des doigts près du visage.</p>
+</blockquote>
+<h2>🔌 Étape 2 — Intégration du circuit (10 min)</h2>
+<p>Pendant que la colle prend sur les faces fixes :</p>
+<ol>
+<li>Installez le circuit sur son <strong>support imprimé</strong> (ou ses entretoises) ; la carte ne doit pas toucher directement une paroi ;</li>
+<li>Rangez les câbles : pas de fil pincé entre deux faces, pas de traction sur les connecteurs ;</li>
+<li>Placez le support de piles à son emplacement, interrupteur ou accès prévu ;</li>
+<li>Fermez le couvercle : <strong>rien ne doit forcer.</strong> Si ça force, on rouvre et on cherche pourquoi — on ne « tasse » jamais de l&#39;électronique.</li>
+</ol>
+<h2>✅ Étape 3 — Le protocole de test fonctionnel (10 min)</h2>
+<p>Un produit se valide par des <strong>tests reproductibles</strong>, pas par « ça a l&#39;air bon ». Le contrôleur qualité déroule la fiche, un autre membre exécute, le chef d&#39;atelier note :</p>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Test</th>
+<th>Critère de réussite</th>
+<th>✅/❌</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1</td>
+<td>Mise en marche boîtier fermé</td>
+<td>l&#39;objet démarre sans ouvrir la boîte</td>
+<td></td>
+</tr>
+<tr>
+<td>2</td>
+<td>Lecture de l&#39;affichage</td>
+<td>LED/matrice entièrement visibles par la fenêtre, à 50 cm</td>
+<td></td>
+</tr>
+<tr>
+<td>3</td>
+<td>Branchement USB</td>
+<td>le câble se branche et se débranche boîtier fermé, sans forcer</td>
+<td></td>
+</tr>
+<tr>
+<td>4</td>
+<td>Programme</td>
+<td>reprogrammation ou exécution normale du programme de la séquence précédente</td>
+<td></td>
+</tr>
+<tr>
+<td>5</td>
+<td>Secousse douce</td>
+<td>rien ne bouge ni ne cliquette à l&#39;intérieur</td>
+<td></td>
+</tr>
+<tr>
+<td>6</td>
+<td>Stabilité</td>
+<td>le boîtier reste debout quand on appuie sur ses boutons</td>
+<td></td>
+</tr>
+<tr>
+<td>7</td>
+<td>Changement de piles</td>
+<td>ouverture, échange simulé, fermeture en moins de 2 min, sans outil</td>
+<td></td>
+</tr>
+<tr>
+<td>8</td>
+<td>Température</td>
+<td>après 10 min de fonctionnement, aucune zone chaude anormale près des aérations</td>
+<td></td>
+</tr>
+</tbody></table>
+<p><strong>Score de validation : 8/8 = prototype validé.</strong> Chaque ❌ devient une ligne du plan v2 — c&#39;est une information précieuse, pas une punition.</p>
+<h3>✍️ Résultats de test de l&#39;îlot (zone partagée n°1)</h3>
+<p>Recopiez votre score, la liste des tests échoués et la cause identifiée pour chacun.</p>
+<div class="answer-field">
+  <textarea rows="3" data-answer-idx="0" placeholder="✏️ Écris ta réponse ici…" aria-label="Zone de réponse de l'élève"></textarea>
+</div>
+<h2>🔁 Étape 4 — La version 2 (10 min)</h2>
+<p>Aucun produit n&#39;est parfait en v1 — les industriels non plus. En îlot, répondez : que changeriez-vous <strong>en priorité</strong> si vous refabriquiez ? Classez vos idées en trois familles :</p>
+<ul>
+<li><strong>Correction</strong> (un test a échoué) : ex. fente USB décalée de 1,5 mm → corriger la cote dans le SVG ;</li>
+<li><strong>Amélioration</strong> (ça marche mais moyennement) : encoches trop lâches → ajuster le kerf ; couvercle qui baille → ajouter un ergot imprimé en 3D ;</li>
+<li><strong>Évolution</strong> (nouvelle fonction) : charnière, gravure déco, support mural, passage pour un capteur externe…</li>
+</ul>
+<h3>✍️ Plan v2 de l&#39;îlot (zone partagée n°2)</h3>
+<p>Vos trois changements prioritaires, chacun justifié par un test ou une mesure.</p>
+<div class="answer-field">
+  <textarea rows="3" data-answer-idx="1" placeholder="✏️ Écris ta réponse ici…" aria-label="Zone de réponse de l'élève"></textarea>
+</div>
+<h2>🎤 Étape 5 — Présentation inter-îlots (15 min)</h2>
+<p>Chaque îlot présente en <strong>2 minutes chrono</strong>, tous les membres parlent :</p>
+<ol>
+<li>L&#39;objet et sa fonction (chef d&#39;atelier) ;</li>
+<li>Un choix de conception dont vous êtes fiers (opérateur CFAO) ;</li>
+<li>Le score de test et un défaut assumé (contrôleur qualité) ;</li>
+<li>Le changement n°1 de la v2 (magasinier).</li>
+</ol>
+<p>La classe évalue chaque boîtier sur 3 critères (1 à 3 points chacun) : conformité au cahier des charges, qualité de fabrication, honnêteté de l&#39;analyse v2.</p>
+<h3>✍️ Bilan personnel (zone partagée n°3)</h3>
+<p>En une ou deux phrases chacun : qu&#39;avez-vous appris dans CE projet que vous ne saviez pas faire avant ?</p>
+<div class="answer-field">
+  <textarea rows="3" data-answer-idx="2" placeholder="✏️ Écris ta réponse ici…" aria-label="Zone de réponse de l'élève"></textarea>
+</div>
+<h2>🧭 Ce que je retiens</h2>
+<ul>
+<li>Un assemblage se fait <strong>à blanc d&#39;abord</strong>, à la colle ensuite — et on ne colle jamais la face qui doit rester démontable.</li>
+<li><strong>Intégrer</strong> un circuit, c&#39;est le maintenir, protéger ses câbles et garder ses accès : rien ne doit forcer.</li>
+<li>Un prototype se <strong>valide par un protocole de tests</strong> aux critères mesurables ; chaque échec nourrit la v2.</li>
+<li>Le cycle complet — mesurer, concevoir, fabriquer, assembler, tester, améliorer — est la démarche de tout objet technique réel.</li>
+</ul>
+<p>🎫 Termine par le quiz de la séquence en bas de page : kerf, encoches, fichiers, sécurité… 8 questions pour prouver que tu maîtrises.</p>
+
+    </div>
+    
+<section class="quiz" id="quiz">
+  <h2>🧠 Teste tes connaissances</h2>
+  <p class="quiz-hint">Réponds aux questions puis clique sur « Vérifier » — la correction s'affiche aussitôt.</p>
+  
+    <div class="quiz-q" data-ok="1" data-explain="Le faisceau enlève une fine bande de matière (souvent 0,1 à 0,3 mm, à mesurer sur chaque machine) : c'est le kerf, qu'il faut compenser pour un emboîtage précis.">
+      <p class="qq-text">1. Que désigne le « kerf » en découpe laser ?</p>
+      <div class="qq-opts">
+        <label class="qq-opt"><input type="radio" name="q0" value="0"><span>L'épaisseur de la plaque découpée</span></label>
+        <label class="qq-opt"><input type="radio" name="q0" value="1"><span>La largeur de matière vaporisée par le faisceau (le trait de coupe)</span></label>
+        <label class="qq-opt"><input type="radio" name="q0" value="2"><span>La vitesse de déplacement de la tête laser</span></label>
+        <label class="qq-opt"><input type="radio" name="q0" value="3"><span>Le format de fichier envoyé à la machine</span></label>
+      </div>
+      <button class="btn btn-ghost qq-check" type="button">Vérifier ma réponse</button>
+      <div class="qq-feedback" aria-live="polite"></div>
+    </div>
+
+    <div class="quiz-q" data-ok="0" data-explain="Sans compensation, chaque pièce sort plus petite que le dessin et chaque trou plus grand : l'assemblage flotte.">
+      <p class="qq-text">2. Pourquoi les encoches d'une boîte générée avec compensation du kerf s'emboîtent-elles bien ?</p>
+      <div class="qq-opts">
+        <label class="qq-opt"><input type="radio" name="q1" value="0"><span>Le générateur agrandit légèrement les dents et rétrécit les fentes pour compenser la matière enlevée par le faisceau</span></label>
+        <label class="qq-opt"><input type="radio" name="q1" value="1"><span>Le laser coupe toujours exactement sur la ligne dessinée</span></label>
+        <label class="qq-opt"><input type="radio" name="q1" value="2"><span>Le MDF gonfle après la découpe et rattrape le jeu</span></label>
+        <label class="qq-opt"><input type="radio" name="q1" value="3"><span>On ponce systématiquement chaque encoche après découpe</span></label>
+      </div>
+      <button class="btn btn-ghost qq-check" type="button">Vérifier ma réponse</button>
+      <div class="qq-feedback" aria-live="polite"></div>
+    </div>
+
+    <div class="quiz-q" data-ok="2" data-explain="La découpe laser suit des traits 2D (SVG) ; l'impression 3D fabrique un volume tranché couche par couche à partir d'un STL.">
+      <p class="qq-text">3. Quel format de fichier exporter pour la découpeuse laser, et lequel pour l'imprimante 3D ?</p>
+      <div class="qq-opts">
+        <label class="qq-opt"><input type="radio" name="q2" value="0"><span>STL pour le laser, SVG pour l'imprimante 3D</span></label>
+        <label class="qq-opt"><input type="radio" name="q2" value="1"><span>JPEG pour les deux machines</span></label>
+        <label class="qq-opt"><input type="radio" name="q2" value="2"><span>SVG (dessin 2D vectoriel) pour le laser, STL (volume 3D) pour l'imprimante</span></label>
+        <label class="qq-opt"><input type="radio" name="q2" value="3"><span>PDF pour le laser uniquement</span></label>
+      </div>
+      <button class="btn btn-ghost qq-check" type="button">Vérifier ma réponse</button>
+      <div class="qq-feedback" aria-live="polite"></div>
+    </div>
+
+    <div class="quiz-q" data-ok="3" data-explain="Les élèves préparent le fichier et proposent les réglages, mais seul le professeur arme et lance le tir — et le laser n'est jamais laissé sans surveillance.">
+      <p class="qq-text">4. Qui a le droit d'armer et de lancer la découpe laser au laboratoire ?</p>
+      <div class="qq-opts">
+        <label class="qq-opt"><input type="radio" name="q3" value="0"><span>Le chef d'atelier de l'îlot</span></label>
+        <label class="qq-opt"><input type="radio" name="q3" value="1"><span>Tout élève titulaire d'un permis machine</span></label>
+        <label class="qq-opt"><input type="radio" name="q3" value="2"><span>L'opérateur CFAO s'il porte des lunettes</span></label>
+        <label class="qq-opt"><input type="radio" name="q3" value="3"><span>Uniquement le professeur, capot fermé et extraction en marche</span></label>
+      </div>
+      <button class="btn btn-ghost qq-check" type="button">Vérifier ma réponse</button>
+      <div class="qq-feedback" aria-live="polite"></div>
+    </div>
+
+    <div class="quiz-q" data-ok="1" data-explain="Les plastiques chlorés dégagent un gaz toxique pour les poumons et corrosif pour la machine ; le vinyle se découpe au Skycut, jamais au laser.">
+      <p class="qq-text">5. Lequel de ces matériaux est STRICTEMENT interdit dans la découpeuse laser ?</p>
+      <div class="qq-opts">
+        <label class="qq-opt"><input type="radio" name="q4" value="0"><span>Le contreplaqué de 3 mm</span></label>
+        <label class="qq-opt"><input type="radio" name="q4" value="1"><span>Le PVC et le vinyle adhésif (plastiques chlorés)</span></label>
+        <label class="qq-opt"><input type="radio" name="q4" value="2"><span>Le carton (sous surveillance)</span></label>
+        <label class="qq-opt"><input type="radio" name="q4" value="3"><span>Le MDF de 3 mm</span></label>
+      </div>
+      <button class="btn btn-ghost qq-check" type="button">Vérifier ma réponse</button>
+      <div class="qq-feedback" aria-live="polite"></div>
+    </div>
+
+    <div class="quiz-q" data-ok="2" data-explain="On attend le refroidissement du plateau avant de retirer la pièce, sans forcer un outil en direction de sa main.">
+      <p class="qq-text">6. Pourquoi ne touche-t-on ni la buse ni le plateau pendant et juste après une impression 3D ?</p>
+      <div class="qq-opts">
+        <label class="qq-opt"><input type="radio" name="q5" value="0"><span>Parce que cela décalibre l'imprimante</span></label>
+        <label class="qq-opt"><input type="radio" name="q5" value="1"><span>Parce qu'ils sont couverts de colle toxique</span></label>
+        <label class="qq-opt"><input type="radio" name="q5" value="2"><span>Parce que la buse est vers 200-215 °C et le plateau vers 60 °C : risque de brûlure</span></label>
+        <label class="qq-opt"><input type="radio" name="q5" value="3"><span>Parce que le PLA devient cassant au contact des doigts</span></label>
+      </div>
+      <button class="btn btn-ghost qq-check" type="button">Vérifier ma réponse</button>
+      <div class="qq-feedback" aria-live="polite"></div>
+    </div>
+
+    <div class="quiz-q" data-ok="3" data-explain="Le jeu fonctionnel permet le montage sans forcer ; trop juste ça coince, trop large le circuit cliquette dans la boîte.">
+      <p class="qq-text">7. Ton circuit mesure 52,0 mm de large. Quelle largeur intérieure vises-tu pour qu'il entre sans forcer ni ballotter ?</p>
+      <div class="qq-opts">
+        <label class="qq-opt"><input type="radio" name="q6" value="0"><span>52,0 mm exactement</span></label>
+        <label class="qq-opt"><input type="radio" name="q6" value="1"><span>51,8 mm pour bien le serrer</span></label>
+        <label class="qq-opt"><input type="radio" name="q6" value="2"><span>57,0 mm au minimum, par prudence</span></label>
+        <label class="qq-opt"><input type="radio" name="q6" value="3"><span>Environ 52,3 à 52,5 mm : mesure + jeu fonctionnel de 0,2 à 0,5 mm</span></label>
+      </div>
+      <button class="btn btn-ghost qq-check" type="button">Vérifier ma réponse</button>
+      <div class="qq-feedback" aria-live="polite"></div>
+    </div>
+
+    <div class="quiz-q" data-ok="0" data-explain="Un trait de gravure classé par erreur en découpe traverse la plaque : la vérification des calques fait partie du contrôle avant fabrication.">
+      <p class="qq-text">8. Dans le fichier de dessin, comment indique-t-on à la machine ce qui doit être découpé et ce qui doit être gravé ?</p>
+      <div class="qq-opts">
+        <label class="qq-opt"><input type="radio" name="q7" value="0"><span>Par des calques (ou couleurs) différents, chacun associé à un réglage machine</span></label>
+        <label class="qq-opt"><input type="radio" name="q7" value="1"><span>Par la taille des traits : les gros sont découpés</span></label>
+        <label class="qq-opt"><input type="radio" name="q7" value="2"><span>On ne peut pas découper et graver dans le même fichier</span></label>
+        <label class="qq-opt"><input type="radio" name="q7" value="3"><span>En exportant deux fois le fichier sous deux noms</span></label>
+      </div>
+      <button class="btn btn-ghost qq-check" type="button">Vérifier ma réponse</button>
+      <div class="qq-feedback" aria-live="polite"></div>
+    </div>
+  <div class="quiz-score" aria-live="polite"></div>
+</section>
+    
+    <nav class="pager">
+      <a class="pg-prev" href="../seance-3-fabrication-rotation/"><span class="pg-label">← Précédent</span><span class="pg-title">🏭 Séance 3 — Fabrication : quatre postes, zéro improvisation</span></a>
+      <a class="pg-next" href="../guide-professeur/"><span class="pg-label">Suivant →</span><span class="pg-title">👨‍🏫 Guide du professeur — Projet fablab : le boîtier de mon objet connecté</span></a>
+    </nav>
+  </article>
+</div>
+</main>
+<footer class="site-footer">
+  <div class="wrap footer-grid">
+    <div>
+      <h4>Technologie &amp; SNT</h4>
+      <p>Site pédagogique regroupant les cours, activités et ressources de Technologie du collège et de SNT du lycée.</p>
+    </div>
+    <div>
+      <h4>Niveaux</h4>
+      <ul>
+        <li><a href="../../../5eme/">5ème</a></li>
+        <li><a href="../../../4eme/">4ème</a></li>
+        <li><a href="../../../3eme/">3ème</a></li>
+        <li><a href="../../../snt/">2nde SNT</a></li>
+        <li><a href="../../../sicit/">SI · CIT</a></li>
+        <li><a href="../../../atelier/">Atelier</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Références</h4>
+      <ul>
+        <li><a href="https://eduscol.education.fr/2098/technologie-au-cycle-4" target="_blank" rel="noopener">Programme de Technologie (Eduscol)</a></li>
+        <li><a href="https://eduscol.education.fr/3016/sciences-numeriques-et-technologie-au-lycee" target="_blank" rel="noopener">Programme SNT (Eduscol)</a></li>
+        <li><a href="https://pix.fr" target="_blank" rel="noopener">Pix — compétences numériques</a></li>
+        <li><a href="https://sites.google.com/view/lmtechno25" target="_blank" rel="noopener">Site d'origine (Google Sites)</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="wrap footer-bottom">
+    <span>© M. Eddy Bachaalany · Lycée Montaigne, Beit Chabab</span>
+    <span>Cours de Technologie collège &amp; SNT lycée</span>
+  </div>
+</footer>
+<div class="search-overlay" id="search-overlay" role="dialog" aria-label="Recherche">
+  <div class="search-panel">
+    <div class="search-input-row">
+      <span>🔍</span>
+      <input id="search-input" type="search" placeholder="Rechercher une séquence, une séance, une notion…" autocomplete="off">
+      <kbd>Échap</kbd>
+    </div>
+    <div class="search-results" id="search-results"></div>
+  </div>
+</div>
+<button class="back-to-top" id="back-to-top" type="button" aria-label="Retour en haut">↑</button>
+<script src="../../../assets/client.js?v=93c7e2ac98" defer></script>
+</body>
+</html>

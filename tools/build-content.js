@@ -134,6 +134,16 @@ const SECTIONS = [
     rootPath: "sicit",
     sequences: [],
   },
+  // Section transversale (aucune page Google Sites) : tout le contenu vient
+  // de content/authored/atelier.json. Visible par tous les niveaux.
+  {
+    id: "atelier", slug: "atelier", file: "atelier.json",
+    label: "Atelier", short: "Atelier", year: "", archived: false,
+    color: "#b91c1c", colorSoft: "#fdeaea",
+    tagline: "Le fablab du collège : machines, sécurité, permis et projets de fabrication.",
+    rootPath: null,
+    sequences: [],
+  },
 ];
 
 /* ================= Table de correspondance des URLs ================= */

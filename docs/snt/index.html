@@ -15,7 +15,7 @@
 <link rel="stylesheet" href="../assets/styles.css?v=93c7e2ac98">
 <script>
 (function(){try{var t=localStorage.getItem("lmtechno-theme");if(!t)t=window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light";document.documentElement.setAttribute("data-theme",t);}catch(e){}})();
-(function(){try{var s=JSON.parse(localStorage.getItem("lmtechno-eleve")||"null");if(!s||!s.section)return;var d=document.documentElement,cur=d.getAttribute("data-section")||"",base=d.getAttribute("data-base")||"./";if(cur==="home"||(cur&&cur!==s.section))location.replace(base+s.section+"/");}catch(e){}})();
+(function(){try{var s=JSON.parse(localStorage.getItem("lmtechno-eleve")||"null");if(!s||!s.section)return;var d=document.documentElement,cur=d.getAttribute("data-section")||"",base=d.getAttribute("data-base")||"./",lv=["5eme","4eme","3eme","snt","sicit"];if(cur==="home"||(lv.indexOf(cur)>=0&&cur!==s.section))location.replace(base+s.section+"/");}catch(e){}})();
 </script>
 <script src="../assets/firebase-config.js?v=93c7e2ac98"></script>
 
@@ -38,6 +38,7 @@
   <a href="../3eme/" style="--dot:#7c3aed">3ème</a>
   <a href="../snt/" style="--dot:#d9640f" aria-current="true">2nde SNT</a>
   <a href="../sicit/" style="--dot:#0d8e9c">SI · CIT</a>
+  <a href="../atelier/" style="--dot:#b91c1c">Atelier</a>
   <a class="nav-account" href="../connexion/">👤 Espace</a>
 </nav>
     <div class="header-actions">
@@ -117,6 +118,16 @@
       </span>
     </a>
     
+    <a class="seq-card" href="./tp-fablab-sticker/" style="--accent:#d9640f">
+      <span class="seq-num">TP <span class="seq-new">✦ Nouveau</span></span>
+      <h3>🖼️ TP fablab : du pixel au sticker</h3>
+      <p>Deux séances pour comprendre ce qui sépare une image faite de pixels d'une image faite de courbes — et repartir avec ton propre sticker découpé au fablab.</p>
+      <span class="seq-foot">
+        <span>📖 2 séances</span>
+        <span>📎 1 complément</span>
+      </span>
+    </a>
+    
     <a class="seq-card" href="./theme-5-geolocalisation/" style="--accent:#d9640f">
       <span class="seq-num">Thème 5</span>
       <h3>Localisation et cartographie</h3>
@@ -164,6 +175,7 @@
         <li><a href="../3eme/">3ème</a></li>
         <li><a href="../snt/">2nde SNT</a></li>
         <li><a href="../sicit/">SI · CIT</a></li>
+        <li><a href="../atelier/">Atelier</a></li>
       </ul>
     </div>
     <div>

@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="fr" data-base="../../../" data-section="3eme" data-v="93c7e2ac98">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>⏱️ Séance 3 — Production en série chronométrée · Produire en série — Technologie &amp; SNT</title>
+<meta name="description" content="L'usine tourne pour de vrai : chaque poste tient sa fiche de suivi, le gabarit go/no-go trie les pièces, et on traque le goulot d'étranglement.">
+<meta property="og:title" content="⏱️ Séance 3 — Production en série chronométrée · Produire en série — Technologie &amp; SNT">
+<meta property="og:description" content="L'usine tourne pour de vrai : chaque poste tient sa fiche de suivi, le gabarit go/no-go trie les pièces, et on traque le goulot d'étranglement.">
+<meta property="og:type" content="website">
+<link rel="icon" href="../../../assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lexend:wght@500;600;700;800&family=Caveat:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../../assets/styles.css?v=93c7e2ac98">
+<script>
+(function(){try{var t=localStorage.getItem("lmtechno-theme");if(!t)t=window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light";document.documentElement.setAttribute("data-theme",t);}catch(e){}})();
+(function(){try{var s=JSON.parse(localStorage.getItem("lmtechno-eleve")||"null");if(!s||!s.section)return;var d=document.documentElement,cur=d.getAttribute("data-section")||"",base=d.getAttribute("data-base")||"./",lv=["5eme","4eme","3eme","snt","sicit"];if(cur==="home"||(lv.indexOf(cur)>=0&&cur!==s.section))location.replace(base+s.section+"/");}catch(e){}})();
+</script>
+<script src="../../../assets/firebase-config.js?v=93c7e2ac98"></script>
+
+</head>
+<body>
+<a class="skip-link" href="#contenu">Aller au contenu</a>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="../../../index.html">
+      <span class="brand-logo">T</span>
+      <span>Technologie <span style="color:var(--muted);font-weight:500">&amp;</span> SNT
+        <small>Lycée Montaigne, Beit Chabab</small>
+      </span>
+    </a>
+    
+<nav class="main-nav" id="main-nav" aria-label="Navigation principale">
+  <a href="../../../index.html">Accueil</a>
+  <a href="../../../5eme/" style="--dot:#0d9268">5ème</a>
+  <a href="../../../4eme/" style="--dot:#2050d0">4ème</a>
+  <a href="../../../3eme/" style="--dot:#7c3aed" aria-current="true">3ème</a>
+  <a href="../../../snt/" style="--dot:#d9640f">2nde SNT</a>
+  <a href="../../../sicit/" style="--dot:#0d8e9c">SI · CIT</a>
+  <a href="../../../atelier/" style="--dot:#b91c1c">Atelier</a>
+  <a class="nav-account" href="../../../connexion/">👤 Espace</a>
+</nav>
+    <div class="header-actions">
+      <button class="search-btn" id="search-open" type="button" aria-label="Rechercher">
+        <span>🔍</span><span class="label">Rechercher</span><kbd>Ctrl K</kbd>
+      </button>
+      <button class="icon-btn" id="theme-toggle" type="button" aria-label="Changer de thème">🌙</button>
+      <button class="icon-btn nav-toggle" id="nav-toggle" type="button" aria-label="Menu" aria-expanded="false">☰</button>
+    </div>
+  </div>
+</header>
+<main id="contenu">
+
+<nav class="breadcrumbs wrap" aria-label="Fil d'Ariane">
+    <a href="../../../index.html">Accueil</a><span class="sep">›</span>
+    <a href="../../">3ème</a><span class="sep">›</span>
+    <a href="../">Produire en série</a><span class="sep">›</span>
+    <span class="current">⏱️ Séance 3 — Production en série chronométrée</span>
+  </nav>
+<div class="wrap course-layout">
+  <aside class="sidebar" style="--accent:undefined;--accent-soft:undefined;">
+    <div class="sb-title"><span class="dot"></span>3ème </div>
+    <nav>
+    <details>
+      <summary><a href="../../sequence-1-poubelle-connectee/" style="all:unset;cursor:pointer">La poubelle connectée</a></summary>
+      <div class="sb-pages">
+        <a href="../../sequence-1-poubelle-connectee/jeu-intro/">🎮 Jeu d'intro</a>
+        <a href="../../sequence-1-poubelle-connectee/seance-1/">Séance 1</a>
+        <a href="../../sequence-1-poubelle-connectee/correction/">Correction</a>
+        <a href="../../sequence-1-poubelle-connectee/modelisation-3d-de-la-poubelle/">Modélisation 3d de la poubelle</a>
+        <a href="../../sequence-1-poubelle-connectee/prototype-arduino/">prototype Arduino</a>
+        <a href="../../sequence-1-poubelle-connectee/simulation-tinkercad/">Simulation Tinkercad</a>
+      </div>
+    </details>
+    <details>
+      <summary><a href="../../sequence-2-intelligence-artificielle/" style="all:unset;cursor:pointer">Intelligence artificielle</a></summary>
+      <div class="sb-pages">
+        <a href="../../sequence-2-intelligence-artificielle/jeu-intro/">🎮 Jeu d'intro</a>
+        <a href="../../sequence-2-intelligence-artificielle/seance-1/">Séance 1</a>
+        <a href="../../sequence-2-intelligence-artificielle/seance-2/">Séance 2</a>
+        <a href="../../sequence-2-intelligence-artificielle/tuto-videos-teachable-maching/">Tuto vidéos Teachable machine</a>
+        <a href="../../sequence-2-intelligence-artificielle/seance-3/">Séance 3</a>
+        <a href="../../sequence-2-intelligence-artificielle/seance-4/">Séance 4</a>
+        <a href="../../sequence-2-intelligence-artificielle/fiche-de-connaissance/">Fiche de connaissance</a>
+      </div>
+    </details>
+    <details>
+      <summary><a href="../../sequence-3-reseau-informatique/" style="all:unset;cursor:pointer">Réseau informatique</a></summary>
+      <div class="sb-pages">
+        <a href="../../sequence-3-reseau-informatique/jeu-intro/">🎮 Jeu d'intro</a>
+        <a href="../../sequence-3-reseau-informatique/seance-1/">Séance 1</a>
+        <a href="../../sequence-3-reseau-informatique/seance-2/">Séance 2</a>
+        <a href="../../sequence-3-reseau-informatique/seance-3/">Séance 3</a>
+        <a href="../../sequence-3-reseau-informatique/tp/">TP</a>
+      </div>
+    </details>
+    <details open>
+      <summary><a href="../../projet-fablab-serie/" style="all:unset;cursor:pointer">Produire en série</a></summary>
+      <div class="sb-pages">
+        <a href="../../projet-fablab-serie/jeu-intro/">Jeu : la course des usines</a>
+        <a href="../../projet-fablab-serie/seance-1/">S1 · Gamme de fabrication</a>
+        <a href="../../projet-fablab-serie/seance-2/">S2 · Panoplie et gabarits</a>
+        <a href="../../projet-fablab-serie/seance-3/" aria-current="true">S3 · Production</a>
+        <a href="../../projet-fablab-serie/seance-4/">S4 · Coûts et bilan</a>
+        <a href="../../projet-fablab-serie/guide-prof/">Guide du professeur</a>
+      </div>
+    </details>
+    <details>
+      <summary><a href="../../assr-2-pix/" style="all:unset;cursor:pointer">ASSR 2 · Pix</a></summary>
+      <div class="sb-pages">
+        <a href="../../assr-2-pix/assr2/">ASSR 2</a>
+        <a href="../../assr-2-pix/pix/">Pix</a>
+      </div>
+    </details>
+    <details>
+      <summary><a href="../../sessions-dnb/" style="all:unset;cursor:pointer">Préparation au DNB</a></summary>
+      <div class="sb-pages">
+        <a href="../../sessions-dnb/sujets-dnb/">Sujets d'entraînement</a>
+      </div>
+    </details>
+    <details>
+      <summary><a href="../../chaines-fonctionnelles/" style="all:unset;cursor:pointer">Chaînes fonctionnelles</a></summary>
+      <div class="sb-pages">
+        
+      </div>
+    </details>
+    <details>
+      <summary><a href="../../fonctions-solutions-techniques/" style="all:unset;cursor:pointer">Fonctions et solutions techniques</a></summary>
+      <div class="sb-pages">
+        
+      </div>
+    </details>
+    </nav>
+  </aside>
+  <article>
+    <div class="page-head">
+      <div class="kicker">
+        <span class="badge" style="--badge-bg:#f1e9fe;--badge-fg:#7c3aed">3e</span>
+        <span class="badge">Produire en série</span>
+        <span class="badge badge-new">✦ Nouveau</span>
+      </div>
+      <h1>⏱️ Séance 3 — Production en série chronométrée</h1>
+      <p class="desc">L'usine tourne pour de vrai : chaque poste tient sa fiche de suivi, le gabarit go/no-go trie les pièces, et on traque le goulot d'étranglement.</p>
+    </div>
+    <div class="callout callout-objectif"><span class="co-icon">🎯</span><div class="co-body"><div class="co-title">Objectifs</div><p>À la fin de cette séance, je suis capable de :</p>
+<ul>
+<li>tenir une fiche de suivi de production (quantités, rebuts, causes, temps) ;</li>
+<li>appliquer un contrôle go/no-go et enregistrer les non-conformités ;</li>
+<li>identifier le goulot d&#39;étranglement d&#39;une chaîne réelle et proposer un rééquilibrage.</li>
+</ul>
+</div></div>
+    
+<div class="student-bar">
+  <span class="sb-info">💾 Tes réponses sont enregistrées automatiquement sur cet appareil.</span>
+  <span class="sb-actions">
+    <button class="btn btn-ghost btn-sm" id="print-answers" type="button">🖨 Imprimer / PDF</button>
+    <button class="btn btn-ghost btn-sm" id="clear-answers" type="button">🗑 Tout effacer</button>
+  </span>
+</div>
+    <div class="prose">
+      <h2>🎯 Objectif</h2>
+<p>C&#39;est le grand jour : <strong>l&#39;usine produit</strong>. Un prototype complet a été validé par le professeur en début de séance (fentes contrôlées au go/no-go, assemblage testé, stabilité vérifiée avec un vrai téléphone) — <strong>sans ce feu vert, aucune série ne démarre</strong>. Aujourd&#39;hui on ne dessine plus : on produit, on mesure, on note TOUT. Une usine qui ne mesure pas sa production ne peut ni s&#39;améliorer, ni chiffrer ses coûts.</p>
+<h2>🦺 Sécurité : rappel poste par poste (5 min, avant de démarrer)</h2>
+<table>
+<thead>
+<tr>
+<th>Poste</th>
+<th>Règles à respecter</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>P1 — Débit laser</strong></td>
+<td>Les copilotes préparent fichiers et réglages sur PC ; <strong>seul le professeur arme et lance</strong> chaque tir ; capot fermé pendant la découpe, extraction en marche, extincteur CO2 à proximité ; on ne quitte jamais la machine des yeux pendant un tir ; les pièces sortent chaudes sur les chants : on laisse refroidir</td>
+</tr>
+<tr>
+<td><strong>P2 — Finition</strong></td>
+<td>Ponçage à la cale, poussière dépoussiérée au chiffon (pas de soufflage) ; lunettes dans la zone machines</td>
+</tr>
+<tr>
+<td><strong>P3 — Assemblage</strong></td>
+<td>Travail sur gabarit ; on ne force JAMAIS un encastrement : une pièce qui force retourne au contrôle</td>
+</tr>
+<tr>
+<td><strong>P4 — Contrôle</strong></td>
+<td>Gabarit go/no-go + fiche de suivi ; le contrôleur est <strong>seul juge</strong> : personne ne négocie une pièce NO-GO</td>
+</tr>
+<tr>
+<td><strong>P5 — Marquage Skycut</strong></td>
+<td>Élèves <strong>titulaires du permis</strong>, sous surveillance directe du professeur ; un seul opérateur à la machine</td>
+</tr>
+<tr>
+<td><strong>Tous</strong></td>
+<td>Lunettes de protection dans la zone machines ; cheveux attachés, pas d&#39;écharpe/bijoux/cordons ; un seul opérateur par machine ; <strong>tout incident est signalé immédiatement au professeur</strong></td>
+</tr>
+</tbody></table>
+<h2>📄 Étape 1 — Mise en place des fiches de suivi (5 min)</h2>
+<p>Chaque poste reçoit sa <strong>fiche de suivi de production</strong>, à tenir en temps réel (pas de reconstitution de mémoire en fin d&#39;heure !) :</p>
+<table>
+<thead>
+<tr>
+<th>Heure</th>
+<th>Pièces reçues</th>
+<th>Pièces traitées</th>
+<th>Rebuts</th>
+<th>Cause du rebut</th>
+<th>Temps moyen / pièce</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>14h10</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>14h20</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>14h30</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<p>Causes de rebut à cocher (codes) : <strong>F</strong> fente hors tolérance · <strong>B</strong> bord brûlé/éclat · <strong>C</strong> casse à l&#39;assemblage · <strong>M</strong> marquage raté · <strong>A</strong> autre (préciser). Le <strong>tableau de production</strong> affiché au tableau est mis à jour toutes les 10 minutes par les chefs d&#39;atelier : c&#39;est le tableau de bord de l&#39;usine.</p>
+<h2>🏭 Étape 2 — Production, phase 1 (20 min)</h2>
+<p>La chaîne tourne : P1 sort les pièces des panoplies découpées (les tirs laser ont été lancés par le professeur au fil de la séance), P2 ébavure et contrôle la fente au go/no-go (contrôle intermédiaire de la gamme !), P3 assemble sur gabarit, P4 fait le contrôle final, P5 marque les supports conformes.</p>
+<p>Consignes de production :</p>
+<ol>
+<li><strong>On suit la gamme</strong>, dans l&#39;ordre, sans sauter d&#39;opération.</li>
+<li>Une pièce douteuse va <strong>toujours</strong> au contrôle, jamais directement au poste suivant.</li>
+<li>Le chef d&#39;atelier de chaque îlot surveille <strong>la pile de pièces en attente</strong> devant son poste : c&#39;est l&#39;indicateur du goulot.</li>
+<li>Le magasinier garde les rebuts dans la benne de l&#39;îlot : ils seront comptés (rien à la poubelle !).</li>
+</ol>
+<p><strong>Relevé 1 (à 20 min).</strong> Recopie les chiffres réels de TON poste : pièces traitées, rebuts et causes, temps moyen par pièce (chronométré sur 3 pièces au moins). Devant quel poste de l&#39;usine la pile d&#39;attente est-elle la plus haute en ce moment ?</p>
+<div class="answer-field">
+  <textarea rows="3" data-answer-idx="0" placeholder="✏️ Écris ta réponse ici…" aria-label="Zone de réponse de l'élève"></textarea>
+</div>
+<h2>🔧 Étape 3 — Point d&#39;arrêt : rééquilibrage (5 min)</h2>
+<p>Comme en manche 2 du jeu, l&#39;usine s&#39;arrête et les chefs d&#39;atelier se réunissent devant le tableau de production : <strong>où est le goulot d&#39;étranglement ?</strong> Décisions possibles (une seule réorganisation, comme au jeu) :</p>
+<ul>
+<li>déplacer un opérateur d&#39;un poste rapide vers le poste goulot ;</li>
+<li>déplacer une opération d&#39;un poste à l&#39;autre (ex. : le dépoussiérage passe de P2 à P3) ;</li>
+<li>doubler un outillage (ex. : un deuxième gabarit go/no-go pour paralléliser le contrôle).</li>
+</ul>
+<blockquote>
+<p>💡 Rappel du jeu : accélérer un poste qui n&#39;est PAS le goulot ne produit <strong>aucun</strong> support de plus. On ne renforce que le maillon le plus lent.</p>
+</blockquote>
+<p><strong>Relevé 2.</strong> Note la décision prise par l&#39;usine et la justification chiffrée (temps par pièce du poste goulot avant réorganisation, effet attendu).</p>
+<div class="answer-field">
+  <textarea rows="3" data-answer-idx="1" placeholder="✏️ Écris ta réponse ici…" aria-label="Zone de réponse de l'élève"></textarea>
+</div>
+<h2>🏁 Étape 4 — Production, phase 2 (20 min)</h2>
+<p>La chaîne repart, réorganisée. Mêmes fiches de suivi, mêmes règles. Objectif : <strong>battre la cadence de la phase 1</strong> sans dégrader la qualité (le taux de rebut ne doit pas monter — produire plus vite ET plus mal, c&#39;est perdre deux fois).</p>
+<p>En fin de phase : chaque poste totalise sa fiche, le contrôleur final annonce le <strong>nombre de supports conformes livrables</strong>, les magasiniers comptent les rebuts par cause dans les bennes.</p>
+<p><strong>Relevé 3 (bilan de séance).</strong> Complète avec les chiffres réels de l&#39;usine entière : nombre de supports conformes produits en phase 1 / en phase 2 ; nombre total de rebuts et cause n°1 ; le rééquilibrage a-t-il fonctionné (compare les cadences) ? Que ferais-tu différemment si la production continuait une heure de plus ?</p>
+<div class="answer-field">
+  <textarea rows="3" data-answer-idx="2" placeholder="✏️ Écris ta réponse ici…" aria-label="Zone de réponse de l'élève"></textarea>
+</div>
+<h2>🧹 Étape 5 — Repli du chantier (5 min)</h2>
+<p>Les magasiniers pilotent : machines nettoyées, chutes triées (les grandes chutes retournent au stock : elles serviront pour des tests), gabarits rangés dans la boîte du projet, fiches de suivi remises au professeur. <strong>Les fiches sont les données de la séance 4 : sans elles, pas de calcul de coûts.</strong></p>
+<h2>🧭 Ce que je retiens</h2>
+<ul>
+<li>Une production sérieuse <strong>démarre par un prototype validé</strong> et se pilote avec des <strong>fiches de suivi</strong> remplies en temps réel.</li>
+<li>Le <strong>goulot d&#39;étranglement</strong> se repère à la pile de pièces en attente ; on rééquilibre la chaîne en renforçant CE poste-là, pas un autre.</li>
+<li>Le contrôleur qualité applique le go/no-go <strong>sans négociation</strong> : une tolérance n&#39;est pas une opinion.</li>
+<li>Produire plus vite ne sert à rien si le <strong>taux de rebut</strong> monte : vitesse et qualité se mesurent ensemble.</li>
+</ul>
+<blockquote>
+<p>🦺 <strong>Sécurité à l&#39;atelier (rappel).</strong> Un seul poste machine fonctionne à la fois, sous la <strong>surveillance directe du professeur</strong>. Aux postes <strong>laser</strong> et <strong>CNC</strong>, l&#39;îlot prépare tout mais <strong>c&#39;est le professeur qui lance</strong> ; la <strong>meuleuse</strong> reste réservée au professeur. Les autres postes (contrôle, échenillage, assemblage) travaillent en autonomie à l&#39;îlot. Lunettes en zone machines, cheveux attachés, <strong>jamais de gants près d&#39;un outil qui tourne</strong>. <strong>Tout incident → j&#39;arrête et j&#39;appelle le professeur.</strong></p>
+</blockquote>
+
+    </div>
+    
+    
+    <nav class="pager">
+      <a class="pg-prev" href="../seance-2/"><span class="pg-label">← Précédent</span><span class="pg-title">💻 Séance 2 — CFAO, panoplie et gabarits</span></a>
+      <a class="pg-next" href="../seance-4/"><span class="pg-label">Suivant →</span><span class="pg-title">💶 Séance 4 — Qualité, coûts et bilan du projet</span></a>
+    </nav>
+  </article>
+</div>
+</main>
+<footer class="site-footer">
+  <div class="wrap footer-grid">
+    <div>
+      <h4>Technologie &amp; SNT</h4>
+      <p>Site pédagogique regroupant les cours, activités et ressources de Technologie du collège et de SNT du lycée.</p>
+    </div>
+    <div>
+      <h4>Niveaux</h4>
+      <ul>
+        <li><a href="../../../5eme/">5ème</a></li>
+        <li><a href="../../../4eme/">4ème</a></li>
+        <li><a href="../../../3eme/">3ème</a></li>
+        <li><a href="../../../snt/">2nde SNT</a></li>
+        <li><a href="../../../sicit/">SI · CIT</a></li>
+        <li><a href="../../../atelier/">Atelier</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Références</h4>
+      <ul>
+        <li><a href="https://eduscol.education.fr/2098/technologie-au-cycle-4" target="_blank" rel="noopener">Programme de Technologie (Eduscol)</a></li>
+        <li><a href="https://eduscol.education.fr/3016/sciences-numeriques-et-technologie-au-lycee" target="_blank" rel="noopener">Programme SNT (Eduscol)</a></li>
+        <li><a href="https://pix.fr" target="_blank" rel="noopener">Pix — compétences numériques</a></li>
+        <li><a href="https://sites.google.com/view/lmtechno25" target="_blank" rel="noopener">Site d'origine (Google Sites)</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="wrap footer-bottom">
+    <span>© M. Eddy Bachaalany · Lycée Montaigne, Beit Chabab</span>
+    <span>Cours de Technologie collège &amp; SNT lycée</span>
+  </div>
+</footer>
+<div class="search-overlay" id="search-overlay" role="dialog" aria-label="Recherche">
+  <div class="search-panel">
+    <div class="search-input-row">
+      <span>🔍</span>
+      <input id="search-input" type="search" placeholder="Rechercher une séquence, une séance, une notion…" autocomplete="off">
+      <kbd>Échap</kbd>
+    </div>
+    <div class="search-results" id="search-results"></div>
+  </div>
+</div>
+<button class="back-to-top" id="back-to-top" type="button" aria-label="Retour en haut">↑</button>
+<script src="../../../assets/client.js?v=93c7e2ac98" defer></script>
+</body>
+</html>

@@ -15,7 +15,7 @@
 <link rel="stylesheet" href="../../../assets/styles.css?v=93c7e2ac98">
 <script>
 (function(){try{var t=localStorage.getItem("lmtechno-theme");if(!t)t=window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light";document.documentElement.setAttribute("data-theme",t);}catch(e){}})();
-(function(){try{var s=JSON.parse(localStorage.getItem("lmtechno-eleve")||"null");if(!s||!s.section)return;var d=document.documentElement,cur=d.getAttribute("data-section")||"",base=d.getAttribute("data-base")||"./";if(cur==="home"||(cur&&cur!==s.section))location.replace(base+s.section+"/");}catch(e){}})();
+(function(){try{var s=JSON.parse(localStorage.getItem("lmtechno-eleve")||"null");if(!s||!s.section)return;var d=document.documentElement,cur=d.getAttribute("data-section")||"",base=d.getAttribute("data-base")||"./",lv=["5eme","4eme","3eme","snt","sicit"];if(cur==="home"||(lv.indexOf(cur)>=0&&cur!==s.section))location.replace(base+s.section+"/");}catch(e){}})();
 </script>
 <script src="../../../assets/firebase-config.js?v=93c7e2ac98"></script>
 
@@ -38,6 +38,7 @@
   <a href="../../../3eme/" style="--dot:#7c3aed">3ème</a>
   <a href="../../../snt/" style="--dot:#d9640f" aria-current="true">2nde SNT</a>
   <a href="../../../sicit/" style="--dot:#0d8e9c">SI · CIT</a>
+  <a href="../../../atelier/" style="--dot:#b91c1c">Atelier</a>
   <a class="nav-account" href="../../../connexion/">👤 Espace</a>
 </nav>
     <div class="header-actions">
@@ -109,6 +110,14 @@
         <a href="../../theme-4-photographie/parite-1-loeil-et-le-capteur-numerique/">partie 1: L'oeil et le capteur numérique</a>
         <a href="../../theme-4-photographie/partie-2-formats-des-images/">Partie 2: Formats des images</a>
         <a href="../../theme-4-photographie/3-programmer-traiter-une-image/">3. Programmer (Python)</a>
+      </div>
+    </details>
+    <details>
+      <summary><a href="../../tp-fablab-sticker/" style="all:unset;cursor:pointer">Du pixel au sticker</a></summary>
+      <div class="sb-pages">
+        <a href="../../tp-fablab-sticker/tp-1/">Pixels contre vecteurs</a>
+        <a href="../../tp-fablab-sticker/tp-2/">Fabriquer le sticker</a>
+        <a href="../../tp-fablab-sticker/guide-prof/">Guide du professeur</a>
       </div>
     </details>
     <details>
@@ -270,6 +279,7 @@
         <li><a href="../../../3eme/">3ème</a></li>
         <li><a href="../../../snt/">2nde SNT</a></li>
         <li><a href="../../../sicit/">SI · CIT</a></li>
+        <li><a href="../../../atelier/">Atelier</a></li>
       </ul>
     </div>
     <div>

@@ -15,7 +15,7 @@
 <link rel="stylesheet" href="/techno/assets/styles.css?v=93c7e2ac98">
 <script>
 (function(){try{var t=localStorage.getItem("lmtechno-theme");if(!t)t=window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light";document.documentElement.setAttribute("data-theme",t);}catch(e){}})();
-(function(){try{var s=JSON.parse(localStorage.getItem("lmtechno-eleve")||"null");if(!s||!s.section)return;var d=document.documentElement,cur=d.getAttribute("data-section")||"",base=d.getAttribute("data-base")||"./";if(cur==="home"||(cur&&cur!==s.section))location.replace(base+s.section+"/");}catch(e){}})();
+(function(){try{var s=JSON.parse(localStorage.getItem("lmtechno-eleve")||"null");if(!s||!s.section)return;var d=document.documentElement,cur=d.getAttribute("data-section")||"",base=d.getAttribute("data-base")||"./",lv=["5eme","4eme","3eme","snt","sicit"];if(cur==="home"||(lv.indexOf(cur)>=0&&cur!==s.section))location.replace(base+s.section+"/");}catch(e){}})();
 </script>
 <script src="/techno/assets/firebase-config.js?v=93c7e2ac98"></script>
 
@@ -38,6 +38,7 @@
   <a href="/techno/3eme/" style="--dot:#7c3aed">3ème</a>
   <a href="/techno/snt/" style="--dot:#d9640f">2nde SNT</a>
   <a href="/techno/sicit/" style="--dot:#0d8e9c">SI · CIT</a>
+  <a href="/techno/atelier/" style="--dot:#b91c1c">Atelier</a>
   <a class="nav-account" href="/techno/connexion/">👤 Espace</a>
 </nav>
     <div class="header-actions">
@@ -71,6 +72,7 @@
         <li><a href="/techno/3eme/">3ème</a></li>
         <li><a href="/techno/snt/">2nde SNT</a></li>
         <li><a href="/techno/sicit/">SI · CIT</a></li>
+        <li><a href="/techno/atelier/">Atelier</a></li>
       </ul>
     </div>
     <div>

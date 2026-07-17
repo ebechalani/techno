@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="fr" data-base="../../../" data-section="atelier" data-v="93c7e2ac98">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>🪚 CNC TTC 6050 — l'usinage piloté par ordinateur · CNC TTC 6050 — Technologie &amp; SNT</title>
+<meta name="description" content="Enlever de la matière copeau par copeau : découvre la fabrication soustractive et deviens copilote de la CNC.">
+<meta property="og:title" content="🪚 CNC TTC 6050 — l'usinage piloté par ordinateur · CNC TTC 6050 — Technologie &amp; SNT">
+<meta property="og:description" content="Enlever de la matière copeau par copeau : découvre la fabrication soustractive et deviens copilote de la CNC.">
+<meta property="og:type" content="website">
+<link rel="icon" href="../../../assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lexend:wght@500;600;700;800&family=Caveat:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../../assets/styles.css?v=93c7e2ac98">
+<script>
+(function(){try{var t=localStorage.getItem("lmtechno-theme");if(!t)t=window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light";document.documentElement.setAttribute("data-theme",t);}catch(e){}})();
+(function(){try{var s=JSON.parse(localStorage.getItem("lmtechno-eleve")||"null");if(!s||!s.section)return;var d=document.documentElement,cur=d.getAttribute("data-section")||"",base=d.getAttribute("data-base")||"./",lv=["5eme","4eme","3eme","snt","sicit"];if(cur==="home"||(lv.indexOf(cur)>=0&&cur!==s.section))location.replace(base+s.section+"/");}catch(e){}})();
+</script>
+<script src="../../../assets/firebase-config.js?v=93c7e2ac98"></script>
+
+</head>
+<body>
+<a class="skip-link" href="#contenu">Aller au contenu</a>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="../../../index.html">
+      <span class="brand-logo">T</span>
+      <span>Technologie <span style="color:var(--muted);font-weight:500">&amp;</span> SNT
+        <small>Lycée Montaigne, Beit Chabab</small>
+      </span>
+    </a>
+    
+<nav class="main-nav" id="main-nav" aria-label="Navigation principale">
+  <a href="../../../index.html">Accueil</a>
+  <a href="../../../5eme/" style="--dot:#0d9268">5ème</a>
+  <a href="../../../4eme/" style="--dot:#2050d0">4ème</a>
+  <a href="../../../3eme/" style="--dot:#7c3aed">3ème</a>
+  <a href="../../../snt/" style="--dot:#d9640f">2nde SNT</a>
+  <a href="../../../sicit/" style="--dot:#0d8e9c">SI · CIT</a>
+  <a href="../../../atelier/" style="--dot:#b91c1c" aria-current="true">Atelier</a>
+  <a class="nav-account" href="../../../connexion/">👤 Espace</a>
+</nav>
+    <div class="header-actions">
+      <button class="search-btn" id="search-open" type="button" aria-label="Rechercher">
+        <span>🔍</span><span class="label">Rechercher</span><kbd>Ctrl K</kbd>
+      </button>
+      <button class="icon-btn" id="theme-toggle" type="button" aria-label="Changer de thème">🌙</button>
+      <button class="icon-btn nav-toggle" id="nav-toggle" type="button" aria-label="Menu" aria-expanded="false">☰</button>
+    </div>
+  </div>
+</header>
+<main id="contenu">
+
+<nav class="breadcrumbs wrap" aria-label="Fil d'Ariane">
+    <a href="../../../index.html">Accueil</a><span class="sep">›</span>
+    <a href="../../">Atelier</a><span class="sep">›</span>
+    <a href="../">CNC TTC 6050</a><span class="sep">›</span>
+    <span class="current">🪚 CNC TTC 6050 — l'usinage piloté par ordinateur</span>
+  </nav>
+<div class="wrap course-layout">
+  <aside class="sidebar" style="--accent:undefined;--accent-soft:undefined;">
+    <div class="sb-title"><span class="dot"></span>Atelier </div>
+    <nav>
+    <details>
+      <summary><a href="../../bienvenue-atelier/" style="all:unset;cursor:pointer">Bienvenue à l'atelier</a></summary>
+      <div class="sb-pages">
+        <a href="../../bienvenue-atelier/regles-dor/">Règles d'or</a>
+        <a href="../../bienvenue-atelier/organisation-permis/">Rôles &amp; permis</a>
+        <a href="../../bienvenue-atelier/guide-prof/">Guide professeur</a>
+      </div>
+    </details>
+    <details>
+      <summary><a href="../../decoupe-vinyle-skycut/" style="all:unset;cursor:pointer">Vinyle Skycut</a></summary>
+      <div class="sb-pages">
+        <a href="../../decoupe-vinyle-skycut/fiche-machine/">Fiche machine</a>
+        <a href="../../decoupe-vinyle-skycut/guide-prof/">Guide prof</a>
+      </div>
+    </details>
+    <details>
+      <summary><a href="../../impression-3d/" style="all:unset;cursor:pointer">Impression 3D</a></summary>
+      <div class="sb-pages">
+        <a href="../../impression-3d/fiche-machine/">Fiche machine</a>
+        <a href="../../impression-3d/guide-prof/">Guide prof</a>
+      </div>
+    </details>
+    <details>
+      <summary><a href="../../scie-chantourner/" style="all:unset;cursor:pointer">Scie à chantourner</a></summary>
+      <div class="sb-pages">
+        <a href="../../scie-chantourner/fiche-machine/">Fiche machine</a>
+        <a href="../../scie-chantourner/guide-prof/">Guide prof</a>
+      </div>
+    </details>
+    <details>
+      <summary><a href="../../decoupe-laser/" style="all:unset;cursor:pointer">Découpeuse laser</a></summary>
+      <div class="sb-pages">
+        <a href="../../decoupe-laser/fiche-machine/">Fiche machine</a>
+        <a href="../../decoupe-laser/guide-prof/">Guide prof</a>
+      </div>
+    </details>
+    <details open>
+      <summary><a href="../../cnc-ttc6050/" style="all:unset;cursor:pointer">CNC TTC 6050</a></summary>
+      <div class="sb-pages">
+        <a href="../../cnc-ttc6050/fiche-machine/" aria-current="true">Fiche machine</a>
+        <a href="../../cnc-ttc6050/guide-prof/">Guide prof</a>
+      </div>
+    </details>
+    <details>
+      <summary><a href="../../meuleuse-droite/" style="all:unset;cursor:pointer">Meuleuse droite</a></summary>
+      <div class="sb-pages">
+        <a href="../../meuleuse-droite/fiche-machine/">Fiche machine</a>
+        <a href="../../meuleuse-droite/guide-prof/">Guide prof</a>
+      </div>
+    </details>
+    </nav>
+  </aside>
+  <article>
+    <div class="page-head">
+      <div class="kicker">
+        <span class="badge" style="--badge-bg:#fdeaea;--badge-fg:#b91c1c">Atelier</span>
+        <span class="badge">CNC TTC 6050</span>
+        
+      </div>
+      <h1>🪚 CNC TTC 6050 — l'usinage piloté par ordinateur</h1>
+      <p class="desc">Enlever de la matière copeau par copeau : découvre la fabrication soustractive et deviens copilote de la CNC.</p>
+    </div>
+    <div class="callout callout-objectif"><span class="co-icon">🎯</span><div class="co-body"><div class="co-title">Objectifs</div><p>À la fin de cette fiche, je suis capable de :</p>
+<ul>
+<li>distinguer fabrication additive, découpe laser et fabrication <strong>soustractive</strong> ;</li>
+<li>situer les axes X, Y et Z et expliquer le rôle de la broche et de la fraise ;</li>
+<li>employer correctement : origine pièce, parcours d&#39;outil, profondeur de passe, avance ;</li>
+<li>décrire la chaîne dessin → parcours → G-code → usinage ;</li>
+<li>justifier le bridage obligatoire et le rôle du martyr ;</li>
+<li>réciter les règles de sécurité de la zone CNC et remplir la checklist de lancement.</li>
+</ul>
+</div></div>
+    
+<div class="student-bar">
+  <span class="sb-info">💾 Tes réponses sont enregistrées automatiquement sur cet appareil.</span>
+  <span class="sb-actions">
+    <button class="btn btn-ghost btn-sm" id="print-answers" type="button">🖨 Imprimer / PDF</button>
+    <button class="btn btn-ghost btn-sm" id="clear-answers" type="button">🗑 Tout effacer</button>
+  </span>
+</div>
+    <div class="prose">
+      <h2>🎯 Objectif</h2>
+<p>Comprendre comment une fraiseuse à commande numérique transforme un dessin d&#39;ordinateur en pièce réelle <strong>en enlevant de la matière</strong>, et apprendre les règles strictes qui permettent de travailler près d&#39;elle sans danger. À la fin, ton îlot prépare la gravure de la <strong>plaque de porte de la salle</strong> et tu passes le quiz du permis-copilote.</p>
+<h2>➖ La fabrication soustractive : ajouter, traverser ou enlever ?</h2>
+<p>Trois machines de l&#39;atelier, trois façons opposées de fabriquer :</p>
+<table>
+<thead>
+<tr>
+<th>Machine</th>
+<th>Principe</th>
+<th>Ce qu&#39;elle produit</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>🖨️ Imprimante 3D</td>
+<td><strong>Additive</strong> : elle AJOUTE du plastique fondu, couche par couche, en partant de rien</td>
+<td>Une pièce en volume qui grandit de bas en haut</td>
+</tr>
+<tr>
+<td>🔦 Découpeuse laser</td>
+<td>Elle <strong>traverse</strong> la matière le long d&#39;un trait très fin</td>
+<td>Des pièces plates découpées ou gravées en surface</td>
+</tr>
+<tr>
+<td>🪚 Fraiseuse CNC</td>
+<td><strong>Soustractive</strong> : elle ENLÈVE de la matière avec une fraise qui tourne, copeau après copeau</td>
+<td>Des creux, des poches, des gravures profondes, des découpes dans des plaques épaisses, des reliefs en 3D</td>
+</tr>
+</tbody></table>
+<p>La CNC part d&#39;un bloc de matière (le <strong>brut</strong>) et le sculpte. Elle peut creuser à mi-profondeur, chose impossible au laser, et travailler du bois massif épais, chose difficile en impression 3D. En contrepartie, elle produit des <strong>copeaux</strong> et de la poussière, elle est bruyante, et sa fraise en rotation est un vrai danger.</p>
+<h2>🧭 Trois axes pour se déplacer : X, Y, Z</h2>
+<p>La machine déplace sa fraise dans les trois directions de l&#39;espace :</p>
+<ul>
+<li><strong>Axe X</strong> : de gauche à droite (la plus grande dimension du plateau) ;</li>
+<li><strong>Axe Y</strong> : d&#39;avant en arrière ;</li>
+<li><strong>Axe Z</strong> : de haut en bas — c&#39;est lui qui fait <strong>plonger</strong> la fraise dans la matière.</li>
+</ul>
+<p>Sur notre TTC 6050, la zone de travail fait <strong>600 × 500 mm</strong>, avec une course verticale de <strong>100 mm</strong>. Chaque moteur avance par pas minuscules : la machine sait à tout instant où se trouve la pointe de l&#39;outil, à condition qu&#39;on lui ait indiqué le point de départ (l&#39;origine, voir vocabulaire).</p>
+<h2>🌀 La broche et la fraise</h2>
+<p>La <strong>broche</strong> est le moteur qui fait tourner l&#39;outil : sur notre machine, elle développe <strong>500 W</strong> et peut tourner jusqu&#39;à <strong>12 000 tours par minute</strong> — environ 200 tours chaque seconde. L&#39;outil serré dedans s&#39;appelle la <strong>fraise</strong> : un petit cylindre d&#39;acier avec des arêtes coupantes en hélice, le plus souvent de <strong>3,175 mm de diamètre</strong> (1/8 de pouce) chez nous. Pour la gravure de textes, on utilise une <strong>fraise en V</strong> dont la pointe conique trace des sillons fins ou larges selon la profondeur.</p>
+<p>À cette vitesse, la fraise ne « coupe » pas comme un couteau : elle <strong>arrache des milliers de mini-copeaux par seconde</strong>. C&#39;est aussi pour cela qu&#39;elle projette des débris et qu&#39;elle happe tout ce qui s&#39;approche : gant, manche, cheveu, cordon.</p>
+<h2>🗣️ Le vocabulaire de l&#39;usineur</h2>
+<table>
+<thead>
+<tr>
+<th>Terme</th>
+<th>Définition</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Brut</strong></td>
+<td>Le bloc ou la plaque de matière de départ, avant usinage</td>
+</tr>
+<tr>
+<td><strong>Origine pièce</strong></td>
+<td>Le point (X0, Y0, Z0) que la machine prend comme référence : tout le programme est mesuré à partir de là</td>
+</tr>
+<tr>
+<td><strong>Parcours d&#39;outil</strong></td>
+<td>Le chemin exact que suivra la pointe de la fraise, calculé par le logiciel</td>
+</tr>
+<tr>
+<td><strong>Profondeur de passe</strong></td>
+<td>L&#39;épaisseur de matière enlevée à chaque passage (quelques dixièmes de millimètre à 1,5 mm) : on descend par étages, jamais d&#39;un coup</td>
+</tr>
+<tr>
+<td><strong>Avance</strong></td>
+<td>La vitesse à laquelle la fraise se déplace dans la matière, en mm/min</td>
+</tr>
+<tr>
+<td><strong>Martyr</strong></td>
+<td>La planche sacrifiée posée entre la pièce et le plateau : la fraise peut la marquer sans abîmer la machine</td>
+</tr>
+<tr>
+<td><strong>Bridage</strong></td>
+<td>La fixation solide de la pièce sur le martyr (brides, vis)</td>
+</tr>
+<tr>
+<td><strong>G-code</strong></td>
+<td>Le langage du programme machine : une liste d&#39;ordres du type « va au point X10 Y25 à 600 mm/min »</td>
+</tr>
+</tbody></table>
+<h2>🔗 La chaîne numérique : dessiner → parcours → G-code → usiner</h2>
+<ol>
+<li><strong>Concevoir (CAO)</strong> : tu dessines la pièce à l&#39;ordinateur — contours, textes, poches, dimensions exactes.</li>
+<li><strong>Préparer la fabrication (FAO)</strong> : le logiciel de fabrication transforme ton dessin en <strong>parcours d&#39;outil</strong>. C&#39;est là que tu choisis la fraise, la profondeur de passe et l&#39;avance.</li>
+<li><strong>Générer le G-code</strong> : le logiciel écrit le programme, un fichier texte que la machine sait lire.</li>
+<li><strong>Piloter l&#39;usinage</strong> : un logiciel comme <strong>Candle</strong> ou <strong>UGS</strong> envoie le G-code à la machine, ligne par ligne. Notre TTC 6050 comprend le langage <strong>GRBL</strong>, un standard très répandu.</li>
+<li><strong>Usiner</strong> : la fraise exécute le parcours, passe après passe — cette étape est réalisée <strong>par le professeur uniquement</strong>.</li>
+</ol>
+<p>Retiens la logique : <strong>plus tu travailles sérieusement aux étapes 1 à 3, moins il y a de surprises à l&#39;étape 5.</strong> Une erreur de dessin se corrige en deux clics ; une erreur pendant l&#39;usinage casse une fraise ou ruine la pièce.</p>
+<h2>🧲 Le bridage : obligatoire, sans exception</h2>
+<p>Imagine : la fraise tourne à plusieurs milliers de tours par minute et pousse la pièce avec force. Si la pièce n&#39;est pas fixée, elle est arrachée du plateau et <strong>devient un projectile</strong> — elle peut traverser la salle. C&#39;est pourquoi :</p>
+<blockquote>
+<p>⚠️ <strong>Aucune coupe ne démarre tant que la pièce n&#39;est pas bridée.</strong> La pièce est vissée ou serrée par des brides sur le <strong>martyr</strong>, et le professeur vérifie en essayant de la faire bouger à la main. Si elle bouge d&#39;un millimètre, on rebride.</p>
+</blockquote>
+<p>Le <strong>martyr</strong> (une planche de MDF sacrifiée) protège le plateau en aluminium de la machine : quand la fraise découpe la pièce de part en part, elle mord dans le martyr, pas dans la machine.</p>
+<h2>⚠️ Sécurité STRICTE — la machine la plus dangereuse de l&#39;atelier</h2>
+<p>Les dangers : une <strong>fraise en rotation très rapide</strong> (jusqu&#39;à 12 000 tr/min), des <strong>projections de copeaux</strong> et un <strong>bruit</strong> élevé.</p>
+<blockquote>
+<p>🚫 <strong>JAMAIS de gants, jamais de manches larges</strong> près de la CNC : un tissu happé par la fraise entraîne la main vers l&#39;outil en une fraction de seconde. C&#39;est la règle des professionnels du monde entier pour toute machine tournante.</p>
+</blockquote>
+<ul>
+<li>🥽 <strong>Lunettes de protection obligatoires</strong> pour toute personne dans la zone machines.</li>
+<li>💇 <strong>Cheveux longs attachés</strong>, pas d&#39;écharpe, pas de bijoux, pas de cordons de sweat.</li>
+<li>📏 <strong>Distance de sécurité : au moins 1 mètre, derrière la ligne tracée au sol.</strong> Personne ne la franchit pendant l&#39;usinage.</li>
+<li>🔴 <strong>Arrêt d&#39;urgence repéré AVANT tout lancement</strong> : chacun doit savoir montrer le bouton rouge du doigt avant que la broche ne démarre.</li>
+<li>🧹 <strong>Aspiration des copeaux uniquement machine À L&#39;ARRÊT</strong>, broche immobile — jamais pendant la coupe.</li>
+<li>🗣️ Tout bruit anormal, toute odeur de brûlé, tout incident : <strong>on prévient immédiatement le professeur</strong>, qui coupe la machine.</li>
+</ul>
+<h2>👷 Qui fait quoi : toi ingénieur, le professeur opérateur</h2>
+<table>
+<thead>
+<tr>
+<th>L&#39;ÉLÈVE (ingénieur) ✅</th>
+<th>Le PROFESSEUR (opérateur) 🔒</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Dessine la pièce à l&#39;ordinateur</td>
+<td>Bride la pièce sur le martyr</td>
+</tr>
+<tr>
+<td>Choisit la fraise et prépare le parcours d&#39;outil</td>
+<td>Monte la fraise et fait les origines X, Y, Z</td>
+</tr>
+<tr>
+<td>Génère et vérifie le G-code</td>
+<td>Lance l&#39;usinage et reste devant la machine du début à la fin</td>
+</tr>
+<tr>
+<td>Remplit la <strong>checklist de lancement</strong></td>
+<td>Arrête la machine en cas de problème</td>
+</tr>
+<tr>
+<td>Observe l&#39;usinage à distance, derrière la ligne</td>
+<td>Autorise l&#39;approche une fois la broche immobile</td>
+</tr>
+</tbody></table>
+<h2>🏁 Notre première pièce : la plaque de porte de la salle, gravée en V</h2>
+<p>Mission de l&#39;îlot : concevoir la <strong>plaque qui sera vissée sur la porte de la salle de technologie</strong> — le nom de la salle en belles lettres, entouré d&#39;un cadre, gravé en V dans une plaque de bois.</p>
+<ol>
+<li><strong>Concevoir</strong> : à l&#39;ordinateur, l&#39;îlot compose le texte (nom de la salle, police lisible) et dessine un cadre décoratif. Dimensions imposées : la plaque doit tenir dans un brut de 200 × 100 mm.</li>
+<li><strong>Préparer le parcours</strong> : gravure en V du texte et du cadre. Choisissez la fraise V proposée par le professeur et une profondeur de gravure faible (moins de 1 mm) — c&#39;est la profondeur qui fait la largeur du trait en gravure V.</li>
+<li><strong>Remplir la CHECKLIST DE LANCEMENT</strong> ci-dessous : c&#39;est elle que le professeur lira avant d&#39;accepter d&#39;usiner. Une checklist incomplète = usinage refusé, comme en aéronautique.</li>
+</ol>
+<p><strong>Checklist 1/3 — Le brut : quel matériau, quelles dimensions exactes (longueur × largeur × épaisseur) ? D&#39;où vient-il (chute, plaque neuve) ?</strong></p>
+<div class="answer-field">
+  <textarea rows="3" data-answer-idx="0" placeholder="✏️ Écris ta réponse ici…" aria-label="Zone de réponse de l'élève"></textarea>
+</div>
+<p><strong>Checklist 2/3 — L&#39;outil : quelle fraise (type, angle, diamètre) ? Quelle profondeur de passe demandée ? En combien de passes ?</strong></p>
+<div class="answer-field">
+  <textarea rows="3" data-answer-idx="1" placeholder="✏️ Écris ta réponse ici…" aria-label="Zone de réponse de l'élève"></textarea>
+</div>
+<p><strong>Checklist 3/3 — Le bridage : où placer les brides ou les vis pour que la pièce ne bouge pas ET que la fraise ne les touche jamais ? Fais la liste des points de fixation prévus.</strong></p>
+<div class="answer-field">
+  <textarea rows="3" data-answer-idx="2" placeholder="✏️ Écris ta réponse ici…" aria-label="Zone de réponse de l'élève"></textarea>
+</div>
+<ol start="4">
+<li><strong>Observer</strong> : le professeur bride, fait les origines et lance la gravure. L&#39;îlot observe <strong>derrière la ligne au sol, lunettes sur le nez</strong>. Note ici une observation précise (bruit, copeaux, mouvement des axes, ordre du parcours) :</li>
+</ol>
+<div class="answer-field">
+  <textarea rows="3" data-answer-idx="3" placeholder="✏️ Écris ta réponse ici…" aria-label="Zone de réponse de l'élève"></textarea>
+</div>
+<h2>🧭 Ce que je retiens</h2>
+<ul>
+<li>La CNC pratique la fabrication <strong>soustractive</strong> : elle enlève de la matière avec une fraise en rotation, guidée sur 3 axes (X, Y, Z) par un programme <strong>G-code</strong>.</li>
+<li>La chaîne numérique va du <strong>dessin</strong> au <strong>parcours d&#39;outil</strong> puis au <strong>G-code</strong> : le sérieux de la préparation fait la qualité de la pièce.</li>
+<li>Une pièce mal bridée devient un <strong>projectile</strong> : bridage sur martyr obligatoire, vérifié par le professeur.</li>
+<li>Près de la CNC : <strong>jamais de gants ni de manches larges</strong>, lunettes, cheveux attachés, <strong>1 m de distance derrière la ligne</strong>, arrêt d&#39;urgence repéré — et seul le <strong>professeur</strong> lance l&#39;usinage.</li>
+</ul>
+<p>🎫 Termine par le quiz du permis-copilote en bas de page.</p>
+<h2>🚑 Si quelque chose se passe mal</h2>
+<ul>
+<li><strong>Je porte les bons EPI</strong> : lunettes de protection dans toute la zone machines, cheveux longs attachés, ni écharpe, ni cordon, ni bijou, manches ajustées.</li>
+<li><strong>En cas d&#39;incident, je garde mon calme</strong> : j&#39;arrête (ou je m&#39;écarte) et je <strong>préviens tout de suite le professeur</strong>. Je ne répare jamais seul.</li>
+<li><strong>Pendant l&#39;usinage</strong> (bruit anormal, pièce qui bouge, fumée) : je préviens immédiatement le professeur, <strong>seul</strong> autorisé à couper avec l&#39;arrêt d&#39;urgence. Je reste derrière la ligne au sol, avec des <strong>bouchons d&#39;oreilles</strong> (la machine est bruyante) et je ne m&#39;approche des copeaux que machine à l&#39;arrêt.</li>
+</ul>
+
+    </div>
+    
+<section class="quiz" id="quiz">
+  <h2>🧠 Teste tes connaissances</h2>
+  <p class="quiz-hint">Réponds aux questions puis clique sur « Vérifier » — la correction s'affiche aussitôt.</p>
+  
+    <div class="quiz-q" data-ok="1" data-explain="Près d'un outil en rotation, un gant happé entraîne toute la main : on ne porte jamais de gants, de manches larges ni de cordons.">
+      <p class="qq-text">1. Pourquoi les gants sont-ils INTERDITS près de la fraiseuse CNC en marche ?</p>
+      <div class="qq-opts">
+        <label class="qq-opt"><input type="radio" name="q0" value="0"><span>Ils empêchent de sentir la température du bois</span></label>
+        <label class="qq-opt"><input type="radio" name="q0" value="1"><span>Un gant peut être happé par la fraise en rotation et entraîner la main vers l'outil</span></label>
+        <label class="qq-opt"><input type="radio" name="q0" value="2"><span>Ils salissent la pièce usinée</span></label>
+        <label class="qq-opt"><input type="radio" name="q0" value="3"><span>Ils sont réservés au professeur</span></label>
+      </div>
+      <button class="btn btn-ghost qq-check" type="button">Vérifier ma réponse</button>
+      <div class="qq-feedback" aria-live="polite"></div>
+    </div>
+
+    <div class="quiz-q" data-ok="1" data-explain="La distance d'au moins 1 m derrière la ligne au sol protège des projections de copeaux, et les lunettes restent obligatoires dans la zone machines.">
+      <p class="qq-text">2. Pendant l'usinage, où doivent se tenir les élèves ?</p>
+      <div class="qq-opts">
+        <label class="qq-opt"><input type="radio" name="q1" value="0"><span>Juste à côté de la machine pour bien voir</span></label>
+        <label class="qq-opt"><input type="radio" name="q1" value="1"><span>À au moins 1 mètre, derrière la ligne tracée au sol, avec des lunettes</span></label>
+        <label class="qq-opt"><input type="radio" name="q1" value="2"><span>Assis sur les tables d'îlot, sans consigne particulière</span></label>
+        <label class="qq-opt"><input type="radio" name="q1" value="3"><span>Dans le couloir, porte fermée</span></label>
+      </div>
+      <button class="btn btn-ghost qq-check" type="button">Vérifier ma réponse</button>
+      <div class="qq-feedback" aria-live="polite"></div>
+    </div>
+
+    <div class="quiz-q" data-ok="2" data-explain="La fraise pousse la pièce avec force : non fixée, elle est arrachée du plateau et devient un projectile dangereux.">
+      <p class="qq-text">3. Que risque-t-il de se passer si la pièce n'est pas bridée avant la coupe ?</p>
+      <div class="qq-opts">
+        <label class="qq-opt"><input type="radio" name="q2" value="0"><span>La gravure sera un peu moins profonde</span></label>
+        <label class="qq-opt"><input type="radio" name="q2" value="1"><span>La machine s'arrête toute seule</span></label>
+        <label class="qq-opt"><input type="radio" name="q2" value="2"><span>La pièce peut être arrachée et projetée comme un projectile</span></label>
+        <label class="qq-opt"><input type="radio" name="q2" value="3"><span>Rien, le poids de la pièce suffit à la maintenir</span></label>
+      </div>
+      <button class="btn btn-ghost qq-check" type="button">Vérifier ma réponse</button>
+      <div class="qq-feedback" aria-live="polite"></div>
+    </div>
+
+    <div class="quiz-q" data-ok="0" data-explain="Savoir montrer l'arrêt d'urgence du doigt avant le démarrage fait partie de la checklist : en cas d'incident, chaque seconde compte.">
+      <p class="qq-text">4. Quand doit-on repérer le bouton d'arrêt d'urgence ?</p>
+      <div class="qq-opts">
+        <label class="qq-opt"><input type="radio" name="q3" value="0"><span>AVANT tout lancement d'usinage</span></label>
+        <label class="qq-opt"><input type="radio" name="q3" value="1"><span>Seulement quand un problème arrive</span></label>
+        <label class="qq-opt"><input type="radio" name="q3" value="2"><span>Une fois par an, à la rentrée</span></label>
+        <label class="qq-opt"><input type="radio" name="q3" value="3"><span>Ce n'est pas nécessaire, le professeur s'en occupe</span></label>
+      </div>
+      <button class="btn btn-ghost qq-check" type="button">Vérifier ma réponse</button>
+      <div class="qq-feedback" aria-live="polite"></div>
+    </div>
+
+    <div class="quiz-q" data-ok="3" data-explain="Sur la CNC, les élèves sont ingénieurs (conception, parcours, checklist) ; le professeur est le seul opérateur, du bridage au lancement.">
+      <p class="qq-text">5. Qui bride la pièce, fait les origines et lance l'usinage sur la CNC ?</p>
+      <div class="qq-opts">
+        <label class="qq-opt"><input type="radio" name="q4" value="0"><span>Le chef d'atelier de l'îlot</span></label>
+        <label class="qq-opt"><input type="radio" name="q4" value="1"><span>L'élève qui a préparé le G-code</span></label>
+        <label class="qq-opt"><input type="radio" name="q4" value="2"><span>N'importe quel élève titulaire d'un permis</span></label>
+        <label class="qq-opt"><input type="radio" name="q4" value="3"><span>Uniquement le professeur</span></label>
+      </div>
+      <button class="btn btn-ghost qq-check" type="button">Vérifier ma réponse</button>
+      <div class="qq-feedback" aria-live="polite"></div>
+    </div>
+
+    <div class="quiz-q" data-ok="1" data-explain="On n'approche jamais les mains ni un tuyau d'aspiration d'une broche en rotation : nettoyage seulement machine arrêtée.">
+      <p class="qq-text">6. Quand peut-on aspirer les copeaux autour de la machine ?</p>
+      <div class="qq-opts">
+        <label class="qq-opt"><input type="radio" name="q5" value="0"><span>Pendant la coupe, pour garder la zone propre</span></label>
+        <label class="qq-opt"><input type="radio" name="q5" value="1"><span>Uniquement machine à l'arrêt, broche immobile</span></label>
+        <label class="qq-opt"><input type="radio" name="q5" value="2"><span>Dès que la fraise remonte entre deux passes</span></label>
+        <label class="qq-opt"><input type="radio" name="q5" value="3"><span>Jamais, les copeaux restent sur le plateau</span></label>
+      </div>
+      <button class="btn btn-ghost qq-check" type="button">Vérifier ma réponse</button>
+      <div class="qq-feedback" aria-live="polite"></div>
+    </div>
+
+    <div class="quiz-q" data-ok="1" data-explain="Le martyr est une planche sacrifiée : la fraise peut la marquer lors des découpes traversantes sans abîmer le plateau en aluminium.">
+      <p class="qq-text">7. À quoi sert le martyr placé sous la pièce ?</p>
+      <div class="qq-opts">
+        <label class="qq-opt"><input type="radio" name="q6" value="0"><span>À rendre la pièce plus lourde</span></label>
+        <label class="qq-opt"><input type="radio" name="q6" value="1"><span>À protéger le plateau de la machine quand la fraise traverse la pièce</span></label>
+        <label class="qq-opt"><input type="radio" name="q6" value="2"><span>À réduire le bruit de l'usinage</span></label>
+        <label class="qq-opt"><input type="radio" name="q6" value="3"><span>À chauffer la pièce pour faciliter la coupe</span></label>
+      </div>
+      <button class="btn btn-ghost qq-check" type="button">Vérifier ma réponse</button>
+      <div class="qq-feedback" aria-live="polite"></div>
+    </div>
+
+    <div class="quiz-q" data-ok="2" data-explain="Contrairement à l'imprimante 3D (additive) et au laser (qui suit un trait), la CNC sculpte le brut en enlevant des copeaux.">
+      <p class="qq-text">8. La fraiseuse CNC pratique la fabrication dite « soustractive ». Cela signifie qu'elle :</p>
+      <div class="qq-opts">
+        <label class="qq-opt"><input type="radio" name="q7" value="0"><span>ajoute de la matière couche par couche</span></label>
+        <label class="qq-opt"><input type="radio" name="q7" value="1"><span>traverse la matière le long d'un trait fin</span></label>
+        <label class="qq-opt"><input type="radio" name="q7" value="2"><span>enlève de la matière copeau par copeau avec une fraise en rotation</span></label>
+        <label class="qq-opt"><input type="radio" name="q7" value="3"><span>assemble des pièces entre elles</span></label>
+      </div>
+      <button class="btn btn-ghost qq-check" type="button">Vérifier ma réponse</button>
+      <div class="qq-feedback" aria-live="polite"></div>
+    </div>
+  <div class="quiz-score" aria-live="polite"></div>
+</section>
+    
+    <nav class="pager">
+      
+      <a class="pg-next" href="../guide-prof/"><span class="pg-label">Suivant →</span><span class="pg-title">👨‍🏫 Guide du professeur — CNC TTC 6050</span></a>
+    </nav>
+  </article>
+</div>
+</main>
+<footer class="site-footer">
+  <div class="wrap footer-grid">
+    <div>
+      <h4>Technologie &amp; SNT</h4>
+      <p>Site pédagogique regroupant les cours, activités et ressources de Technologie du collège et de SNT du lycée.</p>
+    </div>
+    <div>
+      <h4>Niveaux</h4>
+      <ul>
+        <li><a href="../../../5eme/">5ème</a></li>
+        <li><a href="../../../4eme/">4ème</a></li>
+        <li><a href="../../../3eme/">3ème</a></li>
+        <li><a href="../../../snt/">2nde SNT</a></li>
+        <li><a href="../../../sicit/">SI · CIT</a></li>
+        <li><a href="../../../atelier/">Atelier</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Références</h4>
+      <ul>
+        <li><a href="https://eduscol.education.fr/2098/technologie-au-cycle-4" target="_blank" rel="noopener">Programme de Technologie (Eduscol)</a></li>
+        <li><a href="https://eduscol.education.fr/3016/sciences-numeriques-et-technologie-au-lycee" target="_blank" rel="noopener">Programme SNT (Eduscol)</a></li>
+        <li><a href="https://pix.fr" target="_blank" rel="noopener">Pix — compétences numériques</a></li>
+        <li><a href="https://sites.google.com/view/lmtechno25" target="_blank" rel="noopener">Site d'origine (Google Sites)</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="wrap footer-bottom">
+    <span>© M. Eddy Bachaalany · Lycée Montaigne, Beit Chabab</span>
+    <span>Cours de Technologie collège &amp; SNT lycée</span>
+  </div>
+</footer>
+<div class="search-overlay" id="search-overlay" role="dialog" aria-label="Recherche">
+  <div class="search-panel">
+    <div class="search-input-row">
+      <span>🔍</span>
+      <input id="search-input" type="search" placeholder="Rechercher une séquence, une séance, une notion…" autocomplete="off">
+      <kbd>Échap</kbd>
+    </div>
+    <div class="search-results" id="search-results"></div>
+  </div>
+</div>
+<button class="back-to-top" id="back-to-top" type="button" aria-label="Retour en haut">↑</button>
+<script src="../../../assets/client.js?v=93c7e2ac98" defer></script>
+</body>
+</html>

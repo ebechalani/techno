@@ -15,7 +15,7 @@
 <link rel="stylesheet" href="../../../assets/styles.css?v=93c7e2ac98">
 <script>
 (function(){try{var t=localStorage.getItem("lmtechno-theme");if(!t)t=window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light";document.documentElement.setAttribute("data-theme",t);}catch(e){}})();
-(function(){try{var s=JSON.parse(localStorage.getItem("lmtechno-eleve")||"null");if(!s||!s.section)return;var d=document.documentElement,cur=d.getAttribute("data-section")||"",base=d.getAttribute("data-base")||"./";if(cur==="home"||(cur&&cur!==s.section))location.replace(base+s.section+"/");}catch(e){}})();
+(function(){try{var s=JSON.parse(localStorage.getItem("lmtechno-eleve")||"null");if(!s||!s.section)return;var d=document.documentElement,cur=d.getAttribute("data-section")||"",base=d.getAttribute("data-base")||"./",lv=["5eme","4eme","3eme","snt","sicit"];if(cur==="home"||(lv.indexOf(cur)>=0&&cur!==s.section))location.replace(base+s.section+"/");}catch(e){}})();
 </script>
 <script src="../../../assets/firebase-config.js?v=93c7e2ac98"></script>
 
@@ -38,6 +38,7 @@
   <a href="../../../3eme/" style="--dot:#7c3aed">3ème</a>
   <a href="../../../snt/" style="--dot:#d9640f">2nde SNT</a>
   <a href="../../../sicit/" style="--dot:#0d8e9c">SI · CIT</a>
+  <a href="../../../atelier/" style="--dot:#b91c1c">Atelier</a>
   <a class="nav-account" href="../../../connexion/">👤 Espace</a>
 </nav>
     <div class="header-actions">
@@ -142,6 +143,17 @@
         <a href="../../sequence-4-microbit/seance-2/">Séance 2</a>
         <a href="../../sequence-4-microbit/correction/">Correction</a>
         <a href="../../sequence-4-microbit/programmer-une-boussolle/">Programmer une boussole</a>
+      </div>
+    </details>
+    <details>
+      <summary><a href="../../projet-fablab-boitier/" style="all:unset;cursor:pointer">Projet boîtier</a></summary>
+      <div class="sb-pages">
+        <a href="../../projet-fablab-boitier/jeu-mission-emballage-impossible/">Jeu d'intro</a>
+        <a href="../../projet-fablab-boitier/seance-1-cahier-des-charges/">Cahier des charges</a>
+        <a href="../../projet-fablab-boitier/seance-2-cao-boite-encoches/">CAO 2D/3D</a>
+        <a href="../../projet-fablab-boitier/seance-3-fabrication-rotation/">Fabrication</a>
+        <a href="../../projet-fablab-boitier/seance-4-assemblage-test-bilan/">Assemblage &amp; bilan</a>
+        <a href="../../projet-fablab-boitier/guide-professeur/">Guide prof</a>
       </div>
     </details>
     <details>
@@ -423,6 +435,7 @@
         <li><a href="../../../3eme/">3ème</a></li>
         <li><a href="../../../snt/">2nde SNT</a></li>
         <li><a href="../../../sicit/">SI · CIT</a></li>
+        <li><a href="../../../atelier/">Atelier</a></li>
       </ul>
     </div>
     <div>

@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="fr" data-base="../../../" data-section="4eme" data-v="93c7e2ac98">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>🏭 Séance 3 — Fabrication : quatre postes, zéro improvisation · Projet boîtier — Technologie &amp; SNT</title>
+<meta name="description" content="Laser, imprimante 3D, préparation, contrôle : ton îlot tourne sur les postes pendant que les machines travaillent.">
+<meta property="og:title" content="🏭 Séance 3 — Fabrication : quatre postes, zéro improvisation · Projet boîtier — Technologie &amp; SNT">
+<meta property="og:description" content="Laser, imprimante 3D, préparation, contrôle : ton îlot tourne sur les postes pendant que les machines travaillent.">
+<meta property="og:type" content="website">
+<link rel="icon" href="../../../assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lexend:wght@500;600;700;800&family=Caveat:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../../assets/styles.css?v=93c7e2ac98">
+<script>
+(function(){try{var t=localStorage.getItem("lmtechno-theme");if(!t)t=window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light";document.documentElement.setAttribute("data-theme",t);}catch(e){}})();
+(function(){try{var s=JSON.parse(localStorage.getItem("lmtechno-eleve")||"null");if(!s||!s.section)return;var d=document.documentElement,cur=d.getAttribute("data-section")||"",base=d.getAttribute("data-base")||"./",lv=["5eme","4eme","3eme","snt","sicit"];if(cur==="home"||(lv.indexOf(cur)>=0&&cur!==s.section))location.replace(base+s.section+"/");}catch(e){}})();
+</script>
+<script src="../../../assets/firebase-config.js?v=93c7e2ac98"></script>
+
+</head>
+<body>
+<a class="skip-link" href="#contenu">Aller au contenu</a>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="../../../index.html">
+      <span class="brand-logo">T</span>
+      <span>Technologie <span style="color:var(--muted);font-weight:500">&amp;</span> SNT
+        <small>Lycée Montaigne, Beit Chabab</small>
+      </span>
+    </a>
+    
+<nav class="main-nav" id="main-nav" aria-label="Navigation principale">
+  <a href="../../../index.html">Accueil</a>
+  <a href="../../../5eme/" style="--dot:#0d9268">5ème</a>
+  <a href="../../../4eme/" style="--dot:#2050d0" aria-current="true">4ème</a>
+  <a href="../../../3eme/" style="--dot:#7c3aed">3ème</a>
+  <a href="../../../snt/" style="--dot:#d9640f">2nde SNT</a>
+  <a href="../../../sicit/" style="--dot:#0d8e9c">SI · CIT</a>
+  <a href="../../../atelier/" style="--dot:#b91c1c">Atelier</a>
+  <a class="nav-account" href="../../../connexion/">👤 Espace</a>
+</nav>
+    <div class="header-actions">
+      <button class="search-btn" id="search-open" type="button" aria-label="Rechercher">
+        <span>🔍</span><span class="label">Rechercher</span><kbd>Ctrl K</kbd>
+      </button>
+      <button class="icon-btn" id="theme-toggle" type="button" aria-label="Changer de thème">🌙</button>
+      <button class="icon-btn nav-toggle" id="nav-toggle" type="button" aria-label="Menu" aria-expanded="false">☰</button>
+    </div>
+  </div>
+</header>
+<main id="contenu">
+
+<nav class="breadcrumbs wrap" aria-label="Fil d'Ariane">
+    <a href="../../../index.html">Accueil</a><span class="sep">›</span>
+    <a href="../../">4ème</a><span class="sep">›</span>
+    <a href="../">Projet boîtier</a><span class="sep">›</span>
+    <span class="current">🏭 Séance 3 — Fabrication : quatre postes, zéro improvisation</span>
+  </nav>
+<div class="wrap course-layout">
+  <aside class="sidebar" style="--accent:undefined;--accent-soft:undefined;">
+    <div class="sb-title"><span class="dot"></span>4ème </div>
+    <nav>
+    <details>
+      <summary><a href="../../sequence-0-ia-generative/" style="all:unset;cursor:pointer">L'IA générative comme assistant personnel</a></summary>
+      <div class="sb-pages">
+        <a href="../../sequence-0-ia-generative/jeu-intro/">🎮 Jeu d'intro</a>
+        <a href="../../sequence-0-ia-generative/seance-1/">Séance 1</a>
+        <a href="../../sequence-0-ia-generative/seance-1-corr/">Séance 1 — correction</a>
+        <a href="../../sequence-0-ia-generative/creer-un-prompt-efficace/">Créer un prompt efficace</a>
+        <a href="../../sequence-0-ia-generative/prompts-avantages-et-biais/">Prompts, avantages et biais</a>
+      </div>
+    </details>
+    <details>
+      <summary><a href="../../sequence-1-ia-securite/" style="all:unset;cursor:pointer">IA générative et sécurité des données</a></summary>
+      <div class="sb-pages">
+        <a href="../../sequence-1-ia-securite/jeu-intro/">🎮 Jeu d'intro</a>
+        <a href="../../sequence-1-ia-securite/seance-1/">Séance 1</a>
+        <a href="../../sequence-1-ia-securite/seance-1-corr/">Séance 1 — correction</a>
+        <a href="../../sequence-1-ia-securite/seance-2/">Séance 2</a>
+        <a href="../../sequence-1-ia-securite/seance-2-corr/">Séance 2 — correction</a>
+        <a href="../../sequence-1-ia-securite/ressources/">Ressources</a>
+      </div>
+    </details>
+    <details>
+      <summary><a href="../../sequence-depanner-reparer/" style="all:unset;cursor:pointer">Dépanner et réparer un objet technique</a></summary>
+      <div class="sb-pages">
+        <a href="../../sequence-depanner-reparer/jeu-intro/">🎮 Jeu d'intro</a>
+        <a href="../../sequence-depanner-reparer/seance-1/">Séance 1</a>
+        <a href="../../sequence-depanner-reparer/seance-2/">Séance 2</a>
+      </div>
+    </details>
+    <details>
+      <summary><a href="../../sequence-objet-developpement-durable/" style="all:unset;cursor:pointer">Choisir un objet dans un contexte de développement durable</a></summary>
+      <div class="sb-pages">
+        <a href="../../sequence-objet-developpement-durable/jeu-intro/">🎮 Jeu d'intro</a>
+        <a href="../../sequence-objet-developpement-durable/seance-1/">Séance 1</a>
+        <a href="../../sequence-objet-developpement-durable/seance-2/">Séance 2</a>
+      </div>
+    </details>
+    <details>
+      <summary><a href="../../sequence-materiaux-procedes/" style="all:unset;cursor:pointer">Matériaux et procédés de fabrication</a></summary>
+      <div class="sb-pages">
+        <a href="../../sequence-materiaux-procedes/jeu-intro/">🎮 Jeu d'intro</a>
+        <a href="../../sequence-materiaux-procedes/seance-1/">Séance 1</a>
+        <a href="../../sequence-materiaux-procedes/seance-2/">Séance 2</a>
+      </div>
+    </details>
+    <details>
+      <summary><a href="../../sequence-1-reseau-informatique/" style="all:unset;cursor:pointer">Le réseau informatique</a></summary>
+      <div class="sb-pages">
+        <a href="../../sequence-1-reseau-informatique/jeu-intro/">🎮 Jeu d'intro</a>
+        <a href="../../sequence-1-reseau-informatique/seance-1/">Séance 1</a>
+        <a href="../../sequence-1-reseau-informatique/seance-2/">Séance 2</a>
+        <a href="../../sequence-1-reseau-informatique/seance-3/">Séance 3</a>
+        <a href="../../sequence-1-reseau-informatique/seance-4/">Séance 4</a>
+      </div>
+    </details>
+    <details>
+      <summary><a href="../../sequence-2-portail-automatise/" style="all:unset;cursor:pointer">Portail automatisé</a></summary>
+      <div class="sb-pages">
+        <a href="../../sequence-2-portail-automatise/jeu-intro/">🎮 Jeu d'intro</a>
+        <a href="../../sequence-2-portail-automatise/seance-0/">Séance 0</a>
+        <a href="../../sequence-2-portail-automatise/seance-1/">Séance 1</a>
+        <a href="../../sequence-2-portail-automatise/seance-1-corr/">Séance 1 — correction</a>
+        <a href="../../sequence-2-portail-automatise/seance-2/">Séance 2</a>
+      </div>
+    </details>
+    <details>
+      <summary><a href="../../sequence-3-objets-connectes/" style="all:unset;cursor:pointer">Les objets connectés</a></summary>
+      <div class="sb-pages">
+        <a href="../../sequence-3-objets-connectes/jeu-intro/">🎮 Jeu d'intro</a>
+        <a href="../../sequence-3-objets-connectes/seance-1/">Séance 1</a>
+        <a href="../../sequence-3-objets-connectes/seance-2/">Séance 2</a>
+      </div>
+    </details>
+    <details>
+      <summary><a href="../../sequence-4-microbit/" style="all:unset;cursor:pointer">Programmer un ordinateur de poche</a></summary>
+      <div class="sb-pages">
+        <a href="../../sequence-4-microbit/jeu-intro/">🎮 Jeu d'intro</a>
+        <a href="../../sequence-4-microbit/seance-1/">Séance 1</a>
+        <a href="../../sequence-4-microbit/seance-2/">Séance 2</a>
+        <a href="../../sequence-4-microbit/correction/">Correction</a>
+        <a href="../../sequence-4-microbit/programmer-une-boussolle/">Programmer une boussole</a>
+      </div>
+    </details>
+    <details open>
+      <summary><a href="../../projet-fablab-boitier/" style="all:unset;cursor:pointer">Projet boîtier</a></summary>
+      <div class="sb-pages">
+        <a href="../../projet-fablab-boitier/jeu-mission-emballage-impossible/">Jeu d'intro</a>
+        <a href="../../projet-fablab-boitier/seance-1-cahier-des-charges/">Cahier des charges</a>
+        <a href="../../projet-fablab-boitier/seance-2-cao-boite-encoches/">CAO 2D/3D</a>
+        <a href="../../projet-fablab-boitier/seance-3-fabrication-rotation/" aria-current="true">Fabrication</a>
+        <a href="../../projet-fablab-boitier/seance-4-assemblage-test-bilan/">Assemblage &amp; bilan</a>
+        <a href="../../projet-fablab-boitier/guide-professeur/">Guide prof</a>
+      </div>
+    </details>
+    <details>
+      <summary><a href="../../sequence-5-feu-tricolore-arduino/" style="all:unset;cursor:pointer">Feu tricolore avec Arduino</a></summary>
+      <div class="sb-pages">
+        <a href="../../sequence-5-feu-tricolore-arduino/jeu-intro/">🎮 Jeu d'intro</a>
+        <a href="../../sequence-5-feu-tricolore-arduino/seance-1/">Séance 1</a>
+        <a href="../../sequence-5-feu-tricolore-arduino/seance-2/">Séance 2</a>
+      </div>
+    </details>
+    <details>
+      <summary><a href="../../sequence-6-serre-autonome/" style="all:unset;cursor:pointer">Serre autonome</a></summary>
+      <div class="sb-pages">
+        <a href="../../sequence-6-serre-autonome/jeu-intro/">🎮 Jeu d'intro</a>
+        <a href="../../sequence-6-serre-autonome/seance-0/">Séance 0</a>
+        <a href="../../sequence-6-serre-autonome/seance-1/">Séance 1</a>
+        <a href="../../sequence-6-serre-autonome/seance-2/">Séance 2</a>
+        <a href="../../sequence-6-serre-autonome/seance-3/">Séance 3</a>
+      </div>
+    </details>
+    <details>
+      <summary><a href="../../chaines-fonctionnelles/" style="all:unset;cursor:pointer">Chaînes fonctionnelles</a></summary>
+      <div class="sb-pages">
+        <a href="../../chaines-fonctionnelles/exercices/">Exercices</a>
+        <a href="../../chaines-fonctionnelles/correction/">Correction</a>
+      </div>
+    </details>
+    <details>
+      <summary><a href="../../olympiades-informatique/" style="all:unset;cursor:pointer">Olympiades d'informatique</a></summary>
+      <div class="sb-pages">
+        
+      </div>
+    </details>
+    </nav>
+  </aside>
+  <article>
+    <div class="page-head">
+      <div class="kicker">
+        <span class="badge" style="--badge-bg:#e7edfc;--badge-fg:#2050d0">4e</span>
+        <span class="badge">Projet boîtier</span>
+        <span class="badge badge-new">✦ Nouveau</span>
+      </div>
+      <h1>🏭 Séance 3 — Fabrication : quatre postes, zéro improvisation</h1>
+      <p class="desc">Laser, imprimante 3D, préparation, contrôle : ton îlot tourne sur les postes pendant que les machines travaillent.</p>
+    </div>
+    <div class="callout callout-objectif"><span class="co-icon">🎯</span><div class="co-body"><div class="co-title">Objectifs</div><ul>
+<li>Préparer un travail de découpe laser (fichier, matériau, réglages proposés) en copilote du professeur.</li>
+<li>Lancer et surveiller le démarrage d&#39;une impression 3D en validant la première couche.</li>
+<li>Appliquer les checklists de sécurité de la zone machines sans exception.</li>
+<li>Contrôler les pièces produites (ajustement à blanc des encoches) et remplir la fiche de production.</li>
+</ul>
+</div></div>
+    
+<div class="student-bar">
+  <span class="sb-info">💾 Tes réponses sont enregistrées automatiquement sur cet appareil.</span>
+  <span class="sb-actions">
+    <button class="btn btn-ghost btn-sm" id="print-answers" type="button">🖨 Imprimer / PDF</button>
+    <button class="btn btn-ghost btn-sm" id="clear-answers" type="button">🗑 Tout effacer</button>
+  </span>
+</div>
+    <div class="prose">
+      <h2>🎯 Organisation de la séance</h2>
+<p>Quatre postes tournent en parallèle ; chaque îlot passe environ <strong>12 minutes</strong> par poste, au signal du professeur. Le chef d&#39;atelier gère les déplacements de son équipe ; lui seul circule entre les postes pour s&#39;informer.</p>
+<table>
+<thead>
+<tr>
+<th>Poste</th>
+<th>Où</th>
+<th>Qui pilote</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>🔴 <strong>Poste laser</strong> (découpe des faces)</td>
+<td>zone machines</td>
+<td>l&#39;îlot prépare, <strong>le professeur lance</strong></td>
+</tr>
+<tr>
+<td>🟠 <strong>Poste impression 3D</strong> (supports, pieds)</td>
+<td>zone machines</td>
+<td>l&#39;îlot, permis 3D requis, sous surveillance directe du professeur</td>
+</tr>
+<tr>
+<td>🟢 <strong>Poste préparation / finition</strong></td>
+<td>table d&#39;îlot</td>
+<td>l&#39;îlot en autonomie</td>
+</tr>
+<tr>
+<td>🔵 <strong>Poste contrôle qualité</strong></td>
+<td>table d&#39;îlot</td>
+<td>l&#39;îlot en autonomie</td>
+</tr>
+</tbody></table>
+<blockquote>
+<p>⚠️ <strong>Tenue en zone machines</strong> : lunettes de protection pour tous, cheveux longs attachés, pas d&#39;écharpe, pas de bijoux ni cordons pendants. <strong>Jamais de gants près d&#39;une machine en rotation</strong> (risque de happement) — les gants ne servent qu&#39;à manipuler des pièces chaudes ou coupantes, machine À L&#39;ARRÊT. Un seul opérateur par machine. Tout incident, même minuscule, se signale immédiatement au professeur.</p>
+</blockquote>
+<h2>🔴 Poste laser — vous préparez, le professeur tire</h2>
+<p><strong>La règle du laboratoire ne souffre aucune exception : les élèves préparent le fichier et proposent les réglages, mais SEUL le professeur arme le laser et lance la découpe.</strong> Capot toujours fermé pendant le tir, extraction d&#39;air en marche, extincteur CO2 à portée, et jamais une machine laser sans surveillance humaine — un laser qui coupe du bois peut allumer un feu en quelques secondes.</p>
+<p><strong>Votre travail de copilotes :</strong></p>
+<ol>
+<li>Charger <code>ilot_X_boite_v1.svg</code> sur le PC du poste ; vérifier à l&#39;écran calques découpe/gravure ;</li>
+<li>Présenter au professeur le <strong>matériau</strong> (MDF ou contreplaqué 3 mm pris auprès du magasinier — mesuré au pied à coulisse) ;</li>
+<li>Proposer les <strong>réglages</strong> depuis la fiche affichée au poste. Valeurs <strong>indicatives, à calibrer sur NOTRE machine</strong> (elles dépendent de sa puissance réelle et du lot de matériau) :</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>Matériau 3 mm</th>
+<th>Machine type diode (~10 W)</th>
+<th>Machine type CO2</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>MDF — découpe</td>
+<td>≈ 100 % @ 400 mm/min, 3-4 passes</td>
+<td>1 passe, plus rapide</td>
+</tr>
+<tr>
+<td>Contreplaqué — découpe</td>
+<td>100 % @ 25-35 mm/s possible à 20 W ; à 10 W : plusieurs passes lentes</td>
+<td>1 passe</td>
+</tr>
+<tr>
+<td>Gravure (les deux)</td>
+<td>30-40 % @ vitesse élevée</td>
+<td>idem, puissance réduite</td>
+</tr>
+</tbody></table>
+<ol start="4">
+<li>Répondre à la <strong>checklist orale</strong> du professeur avant qu&#39;il ne lance : matériau autorisé ? plaque bien à plat ? origine correcte ? extraction en marche ?</li>
+</ol>
+<blockquote>
+<p>⚠️ <strong>Matériaux interdits au laser — à savoir réciter</strong> : PVC et tout plastique chloré, <strong>vinyle adhésif</strong> (chloré !), similicuir/skaï, polycarbonate, ABS, fibre de verre, polystyrène expansé, miroirs et métaux réfléchissants. Les plastiques chlorés dégagent un gaz toxique et corrosif ; les mousses s&#39;enflamment. <strong>Plastique inconnu = interdit.</strong> Et le vinyle se découpe au Skycut, JAMAIS au laser.</p>
+</blockquote>
+<p>Pendant la découpe : on observe <strong>à travers le capot fermé</strong>, on ne quitte pas la machine des yeux, on prévient le professeur à la moindre flamme qui persiste.</p>
+<h2>🟠 Poste impression 3D — la première couche décide de tout</h2>
+<p>Accès réservé aux élèves titulaires du <strong>permis imprimante 3D</strong>, sous surveillance directe du professeur.</p>
+<ol>
+<li>Charger <code>ilot_X_support_v1.stl</code> dans le trancheur ; profil <strong>PLA de la classe</strong> (indicatif : buse 210-215 °C, plateau 60 °C — valeurs à confirmer sur le profil machine) ;</li>
+<li>Vérifier le temps d&#39;impression annoncé : <strong>&gt; 20 min ? Voir le professeur</strong> — la pièce partira dans la file « inter-cours » ;</li>
+<li>Plateau propre (le magasinier le nettoie à l&#39;alcool isopropylique si demandé par le professeur) ;</li>
+<li>Lancer, puis <strong>observer les 2 premières couches sans s&#39;éloigner</strong> : c&#39;est LE contrôle qui compte. Première couche bien écrasée, régulière, qui accroche ? On continue. Filament qui n&#39;adhère pas, « spaghettis », buse qui racle ? <strong>Stop et appel du professeur.</strong></li>
+</ol>
+<blockquote>
+<p>⚠️ Buse à ≈ 200-215 °C, plateau à ≈ 60 °C : <strong>on ne touche ni pendant, ni juste après</strong> l&#39;impression — risque de brûlure. On retire la pièce quand le plateau est redescendu en température, sans forcer avec un outil vers sa main.</p>
+</blockquote>
+<h2>🟢 Poste préparation / finition</h2>
+<p>En autonomie à la table d&#39;îlot, pendant que les machines travaillent :</p>
+<ul>
+<li>Poncer <strong>légèrement</strong> les chants des faces déjà découpées (cale à poncer, grain fin, mouvement le long du chant) — objectif : enlever le brillant carbonisé, PAS arrondir les encoches ;</li>
+<li>Dépoussiérer au chiffon ; se laver les mains après le ponçage du MDF ;</li>
+<li>Préparer le poste de collage de la séance 4 : colle à bois, pinces, chiffon humide ;</li>
+<li>Avancer la <strong>fiche de production</strong> (voir plus bas).</li>
+</ul>
+<h2>🔵 Poste contrôle qualité — l&#39;ajustement à blanc</h2>
+<p>Le contrôleur qualité teste <strong>sans colle</strong> (« à blanc ») l&#39;emboîtage des faces au fur et à mesure qu&#39;elles sortent du laser :</p>
+<table>
+<thead>
+<tr>
+<th>Constat</th>
+<th>Diagnostic</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Les encoches s&#39;emboîtent à la main, avec un peu de résistance</td>
+<td>✅ kerf bien compensé</td>
+<td>rien : c&#39;est l&#39;objectif</td>
+</tr>
+<tr>
+<td>Il faut forcer fort / ça ne rentre pas</td>
+<td>serrage excessif</td>
+<td>ponçage très léger des dents, ou v2 du fichier avec kerf ajusté</td>
+</tr>
+<tr>
+<td>Ça flotte, la boîte se déboîte seule</td>
+<td>trop de jeu</td>
+<td>la colle rattrapera un léger jeu ; sinon v2 du fichier</td>
+</tr>
+<tr>
+<td>La fenêtre LED n&#39;est pas en face des LED</td>
+<td>erreur de cote de position</td>
+<td>mesurer l&#39;écart, corriger le SVG, redécouper la face (voir professeur)</td>
+</tr>
+</tbody></table>
+<p>Chaque pièce contrôlée est cochée sur la <strong>fiche de production</strong> :</p>
+<table>
+<thead>
+<tr>
+<th>Pièce</th>
+<th>Procédé</th>
+<th>Conforme ?</th>
+<th>Défaut constaté</th>
+<th>Décision (garder / retoucher / refaire)</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Face avant</td>
+<td>laser</td>
+<td>☐</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>…</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<h3>✍️ Journal de fabrication (zone partagée n°1)</h3>
+<p>Notez au fil de la séance : heure de passage au laser, réglages réellement utilisés, incidents, pièces refaites.</p>
+<div class="answer-field">
+  <textarea rows="3" data-answer-idx="0" placeholder="✏️ Écris ta réponse ici…" aria-label="Zone de réponse de l'élève"></textarea>
+</div>
+<h3>✍️ Premier bilan qualité (zone partagée n°2)</h3>
+<p>Vos encoches s&#39;emboîtent-elles comme prévu ? Si non : d&#39;après vous, le problème vient-il du kerf, du jeu choisi en séance 1, ou d&#39;une erreur de dessin ? Justifiez avec une mesure.</p>
+<div class="answer-field">
+  <textarea rows="3" data-answer-idx="1" placeholder="✏️ Écris ta réponse ici…" aria-label="Zone de réponse de l'élève"></textarea>
+</div>
+<h2>🧭 Ce que je retiens</h2>
+<ul>
+<li>Au laser, l&#39;élève est <strong>copilote</strong> : fichier + matériau + réglages proposés ; <strong>seul le professeur arme et lance</strong>, capot fermé, extraction en marche.</li>
+<li>La liste des <strong>matériaux interdits</strong> au laser se récite par cœur ; plastique inconnu = interdit ; le vinyle va au Skycut.</li>
+<li>En impression 3D, tout se joue à la <strong>première couche</strong> : on la regarde, on n&#39;abandonne jamais un lancement.</li>
+<li>Le <strong>contrôle à blanc</strong> avant collage évite de coller un défaut : test d&#39;abord, production ensuite.</li>
+</ul>
+<blockquote>
+<p>🦺 <strong>Sécurité à l&#39;atelier (rappel).</strong> Un seul poste machine fonctionne à la fois, sous la <strong>surveillance directe du professeur</strong>. Aux postes <strong>laser</strong> et <strong>CNC</strong>, l&#39;îlot prépare tout mais <strong>c&#39;est le professeur qui lance</strong> ; la <strong>meuleuse</strong> reste réservée au professeur. Les autres postes (contrôle, échenillage, assemblage) travaillent en autonomie à l&#39;îlot. Lunettes en zone machines, cheveux attachés, <strong>jamais de gants près d&#39;un outil qui tourne</strong>. <strong>Tout incident → j&#39;arrête et j&#39;appelle le professeur.</strong></p>
+</blockquote>
+
+    </div>
+    
+    
+    <nav class="pager">
+      <a class="pg-prev" href="../seance-2-cao-boite-encoches/"><span class="pg-label">← Précédent</span><span class="pg-title">💻 Séance 2 — CAO : ma boîte à encoches au dixième de millimètre</span></a>
+      <a class="pg-next" href="../seance-4-assemblage-test-bilan/"><span class="pg-label">Suivant →</span><span class="pg-title">🔧 Séance 4 — Assemblage, intégration, test… et la v2 dans la tête</span></a>
+    </nav>
+  </article>
+</div>
+</main>
+<footer class="site-footer">
+  <div class="wrap footer-grid">
+    <div>
+      <h4>Technologie &amp; SNT</h4>
+      <p>Site pédagogique regroupant les cours, activités et ressources de Technologie du collège et de SNT du lycée.</p>
+    </div>
+    <div>
+      <h4>Niveaux</h4>
+      <ul>
+        <li><a href="../../../5eme/">5ème</a></li>
+        <li><a href="../../../4eme/">4ème</a></li>
+        <li><a href="../../../3eme/">3ème</a></li>
+        <li><a href="../../../snt/">2nde SNT</a></li>
+        <li><a href="../../../sicit/">SI · CIT</a></li>
+        <li><a href="../../../atelier/">Atelier</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Références</h4>
+      <ul>
+        <li><a href="https://eduscol.education.fr/2098/technologie-au-cycle-4" target="_blank" rel="noopener">Programme de Technologie (Eduscol)</a></li>
+        <li><a href="https://eduscol.education.fr/3016/sciences-numeriques-et-technologie-au-lycee" target="_blank" rel="noopener">Programme SNT (Eduscol)</a></li>
+        <li><a href="https://pix.fr" target="_blank" rel="noopener">Pix — compétences numériques</a></li>
+        <li><a href="https://sites.google.com/view/lmtechno25" target="_blank" rel="noopener">Site d'origine (Google Sites)</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="wrap footer-bottom">
+    <span>© M. Eddy Bachaalany · Lycée Montaigne, Beit Chabab</span>
+    <span>Cours de Technologie collège &amp; SNT lycée</span>
+  </div>
+</footer>
+<div class="search-overlay" id="search-overlay" role="dialog" aria-label="Recherche">
+  <div class="search-panel">
+    <div class="search-input-row">
+      <span>🔍</span>
+      <input id="search-input" type="search" placeholder="Rechercher une séquence, une séance, une notion…" autocomplete="off">
+      <kbd>Échap</kbd>
+    </div>
+    <div class="search-results" id="search-results"></div>
+  </div>
+</div>
+<button class="back-to-top" id="back-to-top" type="button" aria-label="Retour en haut">↑</button>
+<script src="../../../assets/client.js?v=93c7e2ac98" defer></script>
+</body>
+</html>

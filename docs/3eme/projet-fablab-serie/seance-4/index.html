@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="fr" data-base="../../../" data-section="3eme" data-v="93c7e2ac98">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>💶 Séance 4 — Qualité, coûts et bilan du projet · Produire en série — Technologie &amp; SNT</title>
+<meta name="description" content="Taux de rebut, coût de revient, pistes d'automatisation : l'usine fait ses comptes et prépare sa revue de projet, façon DNB.">
+<meta property="og:title" content="💶 Séance 4 — Qualité, coûts et bilan du projet · Produire en série — Technologie &amp; SNT">
+<meta property="og:description" content="Taux de rebut, coût de revient, pistes d'automatisation : l'usine fait ses comptes et prépare sa revue de projet, façon DNB.">
+<meta property="og:type" content="website">
+<link rel="icon" href="../../../assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lexend:wght@500;600;700;800&family=Caveat:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../../assets/styles.css?v=93c7e2ac98">
+<script>
+(function(){try{var t=localStorage.getItem("lmtechno-theme");if(!t)t=window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light";document.documentElement.setAttribute("data-theme",t);}catch(e){}})();
+(function(){try{var s=JSON.parse(localStorage.getItem("lmtechno-eleve")||"null");if(!s||!s.section)return;var d=document.documentElement,cur=d.getAttribute("data-section")||"",base=d.getAttribute("data-base")||"./",lv=["5eme","4eme","3eme","snt","sicit"];if(cur==="home"||(lv.indexOf(cur)>=0&&cur!==s.section))location.replace(base+s.section+"/");}catch(e){}})();
+</script>
+<script src="../../../assets/firebase-config.js?v=93c7e2ac98"></script>
+
+</head>
+<body>
+<a class="skip-link" href="#contenu">Aller au contenu</a>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="../../../index.html">
+      <span class="brand-logo">T</span>
+      <span>Technologie <span style="color:var(--muted);font-weight:500">&amp;</span> SNT
+        <small>Lycée Montaigne, Beit Chabab</small>
+      </span>
+    </a>
+    
+<nav class="main-nav" id="main-nav" aria-label="Navigation principale">
+  <a href="../../../index.html">Accueil</a>
+  <a href="../../../5eme/" style="--dot:#0d9268">5ème</a>
+  <a href="../../../4eme/" style="--dot:#2050d0">4ème</a>
+  <a href="../../../3eme/" style="--dot:#7c3aed" aria-current="true">3ème</a>
+  <a href="../../../snt/" style="--dot:#d9640f">2nde SNT</a>
+  <a href="../../../sicit/" style="--dot:#0d8e9c">SI · CIT</a>
+  <a href="../../../atelier/" style="--dot:#b91c1c">Atelier</a>
+  <a class="nav-account" href="../../../connexion/">👤 Espace</a>
+</nav>
+    <div class="header-actions">
+      <button class="search-btn" id="search-open" type="button" aria-label="Rechercher">
+        <span>🔍</span><span class="label">Rechercher</span><kbd>Ctrl K</kbd>
+      </button>
+      <button class="icon-btn" id="theme-toggle" type="button" aria-label="Changer de thème">🌙</button>
+      <button class="icon-btn nav-toggle" id="nav-toggle" type="button" aria-label="Menu" aria-expanded="false">☰</button>
+    </div>
+  </div>
+</header>
+<main id="contenu">
+
+<nav class="breadcrumbs wrap" aria-label="Fil d'Ariane">
+    <a href="../../../index.html">Accueil</a><span class="sep">›</span>
+    <a href="../../">3ème</a><span class="sep">›</span>
+    <a href="../">Produire en série</a><span class="sep">›</span>
+    <span class="current">💶 Séance 4 — Qualité, coûts et bilan du projet</span>
+  </nav>
+<div class="wrap course-layout">
+  <aside class="sidebar" style="--accent:undefined;--accent-soft:undefined;">
+    <div class="sb-title"><span class="dot"></span>3ème </div>
+    <nav>
+    <details>
+      <summary><a href="../../sequence-1-poubelle-connectee/" style="all:unset;cursor:pointer">La poubelle connectée</a></summary>
+      <div class="sb-pages">
+        <a href="../../sequence-1-poubelle-connectee/jeu-intro/">🎮 Jeu d'intro</a>
+        <a href="../../sequence-1-poubelle-connectee/seance-1/">Séance 1</a>
+        <a href="../../sequence-1-poubelle-connectee/correction/">Correction</a>
+        <a href="../../sequence-1-poubelle-connectee/modelisation-3d-de-la-poubelle/">Modélisation 3d de la poubelle</a>
+        <a href="../../sequence-1-poubelle-connectee/prototype-arduino/">prototype Arduino</a>
+        <a href="../../sequence-1-poubelle-connectee/simulation-tinkercad/">Simulation Tinkercad</a>
+      </div>
+    </details>
+    <details>
+      <summary><a href="../../sequence-2-intelligence-artificielle/" style="all:unset;cursor:pointer">Intelligence artificielle</a></summary>
+      <div class="sb-pages">
+        <a href="../../sequence-2-intelligence-artificielle/jeu-intro/">🎮 Jeu d'intro</a>
+        <a href="../../sequence-2-intelligence-artificielle/seance-1/">Séance 1</a>
+        <a href="../../sequence-2-intelligence-artificielle/seance-2/">Séance 2</a>
+        <a href="../../sequence-2-intelligence-artificielle/tuto-videos-teachable-maching/">Tuto vidéos Teachable machine</a>
+        <a href="../../sequence-2-intelligence-artificielle/seance-3/">Séance 3</a>
+        <a href="../../sequence-2-intelligence-artificielle/seance-4/">Séance 4</a>
+        <a href="../../sequence-2-intelligence-artificielle/fiche-de-connaissance/">Fiche de connaissance</a>
+      </div>
+    </details>
+    <details>
+      <summary><a href="../../sequence-3-reseau-informatique/" style="all:unset;cursor:pointer">Réseau informatique</a></summary>
+      <div class="sb-pages">
+        <a href="../../sequence-3-reseau-informatique/jeu-intro/">🎮 Jeu d'intro</a>
+        <a href="../../sequence-3-reseau-informatique/seance-1/">Séance 1</a>
+        <a href="../../sequence-3-reseau-informatique/seance-2/">Séance 2</a>
+        <a href="../../sequence-3-reseau-informatique/seance-3/">Séance 3</a>
+        <a href="../../sequence-3-reseau-informatique/tp/">TP</a>
+      </div>
+    </details>
+    <details open>
+      <summary><a href="../../projet-fablab-serie/" style="all:unset;cursor:pointer">Produire en série</a></summary>
+      <div class="sb-pages">
+        <a href="../../projet-fablab-serie/jeu-intro/">Jeu : la course des usines</a>
+        <a href="../../projet-fablab-serie/seance-1/">S1 · Gamme de fabrication</a>
+        <a href="../../projet-fablab-serie/seance-2/">S2 · Panoplie et gabarits</a>
+        <a href="../../projet-fablab-serie/seance-3/">S3 · Production</a>
+        <a href="../../projet-fablab-serie/seance-4/" aria-current="true">S4 · Coûts et bilan</a>
+        <a href="../../projet-fablab-serie/guide-prof/">Guide du professeur</a>
+      </div>
+    </details>
+    <details>
+      <summary><a href="../../assr-2-pix/" style="all:unset;cursor:pointer">ASSR 2 · Pix</a></summary>
+      <div class="sb-pages">
+        <a href="../../assr-2-pix/assr2/">ASSR 2</a>
+        <a href="../../assr-2-pix/pix/">Pix</a>
+      </div>
+    </details>
+    <details>
+      <summary><a href="../../sessions-dnb/" style="all:unset;cursor:pointer">Préparation au DNB</a></summary>
+      <div class="sb-pages">
+        <a href="../../sessions-dnb/sujets-dnb/">Sujets d'entraînement</a>
+      </div>
+    </details>
+    <details>
+      <summary><a href="../../chaines-fonctionnelles/" style="all:unset;cursor:pointer">Chaînes fonctionnelles</a></summary>
+      <div class="sb-pages">
+        
+      </div>
+    </details>
+    <details>
+      <summary><a href="../../fonctions-solutions-techniques/" style="all:unset;cursor:pointer">Fonctions et solutions techniques</a></summary>
+      <div class="sb-pages">
+        
+      </div>
+    </details>
+    </nav>
+  </aside>
+  <article>
+    <div class="page-head">
+      <div class="kicker">
+        <span class="badge" style="--badge-bg:#f1e9fe;--badge-fg:#7c3aed">3e</span>
+        <span class="badge">Produire en série</span>
+        <span class="badge badge-new">✦ Nouveau</span>
+      </div>
+      <h1>💶 Séance 4 — Qualité, coûts et bilan du projet</h1>
+      <p class="desc">Taux de rebut, coût de revient, pistes d'automatisation : l'usine fait ses comptes et prépare sa revue de projet, façon DNB.</p>
+    </div>
+    <div class="callout callout-objectif"><span class="co-icon">🎯</span><div class="co-body"><div class="co-title">Objectifs</div><p>À la fin de cette séance, je suis capable de :</p>
+<ul>
+<li>calculer un taux de rebut et un coût de revient par pièce ;</li>
+<li>proposer des améliorations argumentées (qualité, cadence, automatisation) ;</li>
+<li>relier le projet aux questions type DNB et le présenter à l&#39;oral.</li>
+</ul>
+</div></div>
+    
+<div class="student-bar">
+  <span class="sb-info">💾 Tes réponses sont enregistrées automatiquement sur cet appareil.</span>
+  <span class="sb-actions">
+    <button class="btn btn-ghost btn-sm" id="print-answers" type="button">🖨 Imprimer / PDF</button>
+    <button class="btn btn-ghost btn-sm" id="clear-answers" type="button">🗑 Tout effacer</button>
+  </span>
+</div>
+    <div class="prose">
+      <h2>🎯 Objectif</h2>
+<p>Les 20 supports sont livrés (ou presque !). Mais une usine ne s&#39;arrête pas quand le dernier carton part : elle <strong>fait ses comptes</strong>. Combien a coûté chaque support ? Combien de matière est partie en rebuts ? Qu&#39;aurait-il fallu automatiser ? C&#39;est aussi la séance où ton projet devient un <strong>atout pour le DNB</strong> : les chaînes de production, les gammes et les gabarits sont des grands classiques des sujets de technologie, et ce projet est un excellent support pour l&#39;oral du brevet.</p>
+<h2>📉 Étape 1 — Le taux de rebut (15 min)</h2>
+<p>Le <strong>taux de rebut</strong> mesure la part de la production partie à la benne :</p>
+<p><strong>Taux de rebut (%) = (nombre de pièces rebutées ÷ nombre de pièces produites en tout) × 100</strong></p>
+<p>Exemple d&#39;entraînement : une usine découpe 46 pièces ; 5 sont rebutées (3 pour fente hors tolérance, 2 pour casse à l&#39;assemblage). Taux de rebut = 5 ÷ 46 × 100 ≈ <strong>10,9 %</strong>.</p>
+<p><strong>Travail 1.</strong> À partir des fiches de suivi de la séance 3 : calcule le taux de rebut réel de VOTRE usine (détaille le calcul), identifie la <strong>cause n°1</strong> de rebut d&#39;après les codes des fiches, et propose UNE action concrète qui aurait évité la majorité de ces rebuts (pense aux contrôles intermédiaires de la gamme). Compare aussi votre taux réel à la marge de 15 % prévue en séance 1 : la marge était-elle bien dimensionnée ?</p>
+<div class="answer-field">
+  <textarea rows="3" data-answer-idx="0" placeholder="✏️ Écris ta réponse ici…" aria-label="Zone de réponse de l'élève"></textarea>
+</div>
+<h2>💶 Étape 2 — Le coût de revient d&#39;un support (20 min)</h2>
+<p>Combien coûte UN support ? On additionne ce que l&#39;usine a réellement dépensé, puis on divise par le nombre de supports <strong>conformes</strong> (les rebuts ne se vendent pas, mais ils ont coûté de la matière et du temps : ils se retrouvent dans le prix des bons !).</p>
+<p>Données fournies (valeurs d&#39;exercice, à remplacer par les données réelles du fablab si le professeur les affiche) :</p>
+<table>
+<thead>
+<tr>
+<th>Poste de coût</th>
+<th>Donnée</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Planche contreplaqué 3 mm, 600 × 400 mm</td>
+<td>3,00 € pièce</td>
+</tr>
+<tr>
+<td>Vinyle adhésif pour logos</td>
+<td>0,10 € par logo posé</td>
+</tr>
+<tr>
+<td>Temps machine laser</td>
+<td>0,50 € par tranche de 10 min (électricité + usure estimées)</td>
+</tr>
+<tr>
+<td>Temps de main-d&#39;œuvre élève</td>
+<td>gratuit aujourd&#39;hui, mais chronométré (une vraie usine le paierait !)</td>
+</tr>
+</tbody></table>
+<p><strong>Méthode guidée :</strong></p>
+<ol>
+<li><strong>Coût matière</strong> = nombre de planches réellement consommées × 3,00 € + nombre de logos × 0,10 €.</li>
+<li><strong>Coût machine</strong> = durée totale des tirs laser (fiche du poste P1) convertie en tranches de 10 min × 0,50 €.</li>
+<li><strong>Coût de revient par support</strong> = (coût matière + coût machine) ÷ nombre de supports <strong>conformes</strong> livrés.</li>
+<li>Question bonus : de combien le coût par support baisserait-il si le taux de rebut était divisé par deux ? (Refais le calcul 3 avec plus de supports conformes pour la même dépense.)</li>
+</ol>
+<p><strong>Travail 2.</strong> Pose les calculs complets avec les chiffres réels de votre usine et conclus : le coût de revient d&#39;un support, et la part du coût due aux rebuts.</p>
+<div class="answer-field">
+  <textarea rows="3" data-answer-idx="1" placeholder="✏️ Écris ta réponse ici…" aria-label="Zone de réponse de l'élève"></textarea>
+</div>
+<h2>🤖 Étape 3 — Et si on automatisait ? (10 min, débat par îlot)</h2>
+<p>Votre chaîne mélange machines à commande numérique (laser, Skycut) et opérations manuelles (ébavurage, assemblage, contrôle). Dans l&#39;industrie, on automatise en priorité les opérations <strong>répétitives, pénibles ou sources d&#39;erreurs</strong>.</p>
+<p><strong>Travail 3.</strong> En îlot, classez vos 5 postes du plus automatisable au moins automatisable. Pour le poste que vous automatiseriez en premier : quelle machine ou quel dispositif faudrait-il ? Qu&#39;est-ce que l&#39;usine y gagnerait (cadence ? régularité ? sécurité ?) et qu&#39;est-ce qui resterait à l&#39;humain ? Justifiez en vous appuyant sur vos fiches de suivi (temps par pièce, causes de rebut).</p>
+<div class="answer-field">
+  <textarea rows="3" data-answer-idx="2" placeholder="✏️ Écris ta réponse ici…" aria-label="Zone de réponse de l'élève"></textarea>
+</div>
+<h2>🎓 Étape 4 — Cap sur le DNB (10 min)</h2>
+<p>Ce projet est un concentré de ce que le brevet peut demander en technologie. Exemples de formulations <strong>type brevet</strong> (entraîne-toi : tu as toutes les réponses dans ton classeur) :</p>
+<ol>
+<li>« Compléter la gamme de fabrication en remettant les opérations dans l&#39;ordre et en justifiant la place du contrôle. »</li>
+<li>« La fente doit mesurer 3,1 mm avec une tolérance de +0,2/−0,1 mm. Indiquer si les pièces mesurées à 2,95 mm, 3,15 mm et 3,35 mm sont conformes. »</li>
+<li>« Une production de 46 pièces compte 5 rebuts. Calculer le taux de rebut. L&#39;objectif de l&#39;entreprise est de 8 % maximum : est-il atteint ? »</li>
+<li>« Identifier sur le schéma de la chaîne le poste goulot d&#39;étranglement et proposer une amélioration. »</li>
+<li>« Expliquer l&#39;intérêt d&#39;un contrôle par gabarit plutôt qu&#39;une mesure au pied à coulisse dans une production en série. »</li>
+</ol>
+<p>Pour l&#39;<strong>oral du DNB</strong>, ce projet coche toutes les cases d&#39;un bon sujet : une démarche de projet complète (analyse → préparation → production → bilan chiffré), un travail d&#39;équipe avec des rôles, des documents à montrer (gamme, panoplie, fiches de suivi, gabarits) et un regard critique (rebuts, coûts, améliorations). Note dès aujourd&#39;hui les 3 documents que tu montrerais au jury et l&#39;anecdote de production que tu raconterais.</p>
+<h2>🗣️ Étape 5 — Mini revue de projet (15 min)</h2>
+<p>Chaque îlot présente en 3 minutes, comme dans une vraie revue de projet : son poste et sa mission, ses chiffres (production, rebuts, temps par pièce), sa plus grosse difficulté et comment elle a été surmontée, son idée d&#39;amélioration n°1. Les autres usines posent une question par îlot. Le professeur joue le client : il annonce si la commande des 20 supports est <strong>acceptée</strong>.</p>
+<p>🎫 <strong>Termine par le quiz en bas de page</strong> : 8 questions pour vérifier que le vocabulaire de l&#39;usine est acquis — il compte pour la validation de la séquence.</p>
+<h2>🧭 Ce que je retiens</h2>
+<ul>
+<li><strong>Taux de rebut</strong> = rebuts ÷ production totale × 100 ; les rebuts coûtent double : matière perdue ET temps perdu.</li>
+<li>Le <strong>coût de revient</strong> d&#39;une pièce inclut matière et temps machine, divisés par les seules pièces <strong>conformes</strong>.</li>
+<li>On automatise d&#39;abord les opérations <strong>répétitives et sources d&#39;erreurs</strong>, chiffres de production à l&#39;appui.</li>
+<li>Ce projet est un support solide pour le <strong>DNB</strong> : gamme, tolérances, taux de rebut, goulot d&#39;étranglement sont des questions classiques, et la démarche complète se raconte très bien à l&#39;oral.</li>
+</ul>
+
+    </div>
+    
+<section class="quiz" id="quiz">
+  <h2>🧠 Teste tes connaissances</h2>
+  <p class="quiz-hint">Réponds aux questions puis clique sur « Vérifier » — la correction s'affiche aussitôt.</p>
+  
+    <div class="quiz-q" data-ok="0" data-explain="La gamme est la « recette » de la fabrication : opérations ordonnées, moyens, temps et contrôles — n'importe quel opérateur doit pouvoir la suivre.">
+      <p class="qq-text">1. Qu'est-ce qu'une gamme de fabrication ?</p>
+      <div class="qq-opts">
+        <label class="qq-opt"><input type="radio" name="q0" value="0"><span>Le document qui liste, dans l'ordre, les opérations, machines, outils, temps et contrôles pour fabriquer une pièce</span></label>
+        <label class="qq-opt"><input type="radio" name="q0" value="1"><span>Le dessin en 3D de la pièce à fabriquer</span></label>
+        <label class="qq-opt"><input type="radio" name="q0" value="2"><span>La facture envoyée au client à la livraison</span></label>
+        <label class="qq-opt"><input type="radio" name="q0" value="3"><span>La liste des élèves affectés à chaque machine</span></label>
+      </div>
+      <button class="btn btn-ghost qq-check" type="button">Vérifier ma réponse</button>
+      <div class="qq-feedback" aria-live="polite"></div>
+    </div>
+
+    <div class="quiz-q" data-ok="1" data-explain="Le go/no-go ne donne pas de valeur : GO doit passer, NO-GO ne doit pas passer — un tri rapide et identique quel que soit le contrôleur.">
+      <p class="qq-text">2. À quoi sert un gabarit de contrôle go/no-go ?</p>
+      <div class="qq-opts">
+        <label class="qq-opt"><input type="radio" name="q1" value="0"><span>À mesurer précisément la cote au dixième de millimètre</span></label>
+        <label class="qq-opt"><input type="radio" name="q1" value="1"><span>À vérifier en quelques secondes qu'une cote est dans la tolérance, sans instrument de mesure</span></label>
+        <label class="qq-opt"><input type="radio" name="q1" value="2"><span>À maintenir la pièce pendant la découpe laser</span></label>
+        <label class="qq-opt"><input type="radio" name="q1" value="3"><span>À compter le nombre de pièces produites</span></label>
+      </div>
+      <button class="btn btn-ghost qq-check" type="button">Vérifier ma réponse</button>
+      <div class="qq-feedback" aria-live="polite"></div>
+    </div>
+
+    <div class="quiz-q" data-ok="2" data-explain="La chaîne entière avance à la vitesse de son poste le plus lent : les pièces s'empilent devant lui, et c'est lui qu'il faut renforcer en priorité.">
+      <p class="qq-text">3. Le goulot d'étranglement d'une chaîne de production, c'est :</p>
+      <div class="qq-opts">
+        <label class="qq-opt"><input type="radio" name="q2" value="0"><span>Le poste le plus dangereux de la chaîne</span></label>
+        <label class="qq-opt"><input type="radio" name="q2" value="1"><span>Le poste où travaille le chef d'atelier</span></label>
+        <label class="qq-opt"><input type="radio" name="q2" value="2"><span>Le poste le plus lent, qui limite la cadence de toute la chaîne</span></label>
+        <label class="qq-opt"><input type="radio" name="q2" value="3"><span>Le dernier poste avant la livraison</span></label>
+      </div>
+      <button class="btn btn-ghost qq-check" type="button">Vérifier ma réponse</button>
+      <div class="qq-feedback" aria-live="polite"></div>
+    </div>
+
+    <div class="quiz-q" data-ok="1" data-explain="Taux de rebut = 4 ÷ 40 × 100 = 10 %.">
+      <p class="qq-text">4. Une usine produit 40 pièces dont 4 sont rebutées. Son taux de rebut est de :</p>
+      <div class="qq-opts">
+        <label class="qq-opt"><input type="radio" name="q3" value="0"><span>4 %</span></label>
+        <label class="qq-opt"><input type="radio" name="q3" value="1"><span>10 %</span></label>
+        <label class="qq-opt"><input type="radio" name="q3" value="2"><span>14 %</span></label>
+        <label class="qq-opt"><input type="radio" name="q3" value="3"><span>40 %</span></label>
+      </div>
+      <button class="btn btn-ghost qq-check" type="button">Vérifier ma réponse</button>
+      <div class="qq-feedback" aria-live="polite"></div>
+    </div>
+
+    <div class="quiz-q" data-ok="0" data-explain="Le nesting optimise l'occupation de la planche (espacements et rotations compris) : moins de chutes, donc moins de matière achetée.">
+      <p class="qq-text">5. La mise en panoplie (nesting) consiste à :</p>
+      <div class="qq-opts">
+        <label class="qq-opt"><input type="radio" name="q4" value="0"><span>Disposer un maximum de pièces dans la planche pour limiter les chutes</span></label>
+        <label class="qq-opt"><input type="radio" name="q4" value="1"><span>Empiler plusieurs planches pour les découper en une fois</span></label>
+        <label class="qq-opt"><input type="radio" name="q4" value="2"><span>Ranger les pièces finies dans des cartons</span></label>
+        <label class="qq-opt"><input type="radio" name="q4" value="3"><span>Régler la puissance du laser selon le matériau</span></label>
+      </div>
+      <button class="btn btn-ghost qq-check" type="button">Vérifier ma réponse</button>
+      <div class="qq-feedback" aria-live="polite"></div>
+    </div>
+
+    <div class="quiz-q" data-ok="3" data-explain="Les élèves préparent fichier et réglages sur PC, mais seul le professeur arme et lance le tir, capot fermé et extraction en marche.">
+      <p class="qq-text">6. Au fablab, qui arme et lance la découpe laser ?</p>
+      <div class="qq-opts">
+        <label class="qq-opt"><input type="radio" name="q5" value="0"><span>L'élève copilote qui a préparé le fichier</span></label>
+        <label class="qq-opt"><input type="radio" name="q5" value="1"><span>Le chef d'atelier de l'îlot</span></label>
+        <label class="qq-opt"><input type="radio" name="q5" value="2"><span>N'importe quel élève titulaire du permis machine</span></label>
+        <label class="qq-opt"><input type="radio" name="q5" value="3"><span>Le professeur, et lui seul</span></label>
+      </div>
+      <button class="btn btn-ghost qq-check" type="button">Vérifier ma réponse</button>
+      <div class="qq-feedback" aria-live="polite"></div>
+    </div>
+
+    <div class="quiz-q" data-ok="1" data-explain="Le vinyle est chloré (famille du PVC) : au laser il libère du chlore, toxique pour les poumons et corrosif pour la machine — sa place est au Skycut.">
+      <p class="qq-text">7. Pourquoi le vinyle adhésif ne passe-t-il JAMAIS à la découpeuse laser ?</p>
+      <div class="qq-opts">
+        <label class="qq-opt"><input type="radio" name="q6" value="0"><span>Parce qu'il est trop fin pour être découpé au laser</span></label>
+        <label class="qq-opt"><input type="radio" name="q6" value="1"><span>Parce que c'est un plastique chloré : brûlé, il dégage des gaz toxiques et corrosifs — on le découpe au Skycut</span></label>
+        <label class="qq-opt"><input type="radio" name="q6" value="2"><span>Parce que sa colle encrasse uniquement le plateau</span></label>
+        <label class="qq-opt"><input type="radio" name="q6" value="3"><span>Parce qu'il coûte trop cher pour être gaspillé en tests</span></label>
+      </div>
+      <button class="btn btn-ghost qq-check" type="button">Vérifier ma réponse</button>
+      <div class="qq-feedback" aria-live="polite"></div>
+    </div>
+
+    <div class="quiz-q" data-ok="2" data-explain="Près d'un outil en rotation, un gant happé entraîne la main : gants uniquement pour manipuler des pièces chaudes ou coupantes, machine à l'arrêt.">
+      <p class="qq-text">8. Peut-on porter des gants pour travailler près de la broche de la CNC en rotation ?</p>
+      <div class="qq-opts">
+        <label class="qq-opt"><input type="radio" name="q7" value="0"><span>Oui, ils protègent les mains des copeaux</span></label>
+        <label class="qq-opt"><input type="radio" name="q7" value="1"><span>Oui, mais uniquement des gants fins</span></label>
+        <label class="qq-opt"><input type="radio" name="q7" value="2"><span>Non, jamais : un gant peut être happé et entraîner la main dans la machine</span></label>
+        <label class="qq-opt"><input type="radio" name="q7" value="3"><span>Oui, si le professeur surveille</span></label>
+      </div>
+      <button class="btn btn-ghost qq-check" type="button">Vérifier ma réponse</button>
+      <div class="qq-feedback" aria-live="polite"></div>
+    </div>
+  <div class="quiz-score" aria-live="polite"></div>
+</section>
+    
+    <nav class="pager">
+      <a class="pg-prev" href="../seance-3/"><span class="pg-label">← Précédent</span><span class="pg-title">⏱️ Séance 3 — Production en série chronométrée</span></a>
+      <a class="pg-next" href="../guide-prof/"><span class="pg-label">Suivant →</span><span class="pg-title">👨‍🏫 Guide du professeur — Projet fablab : produire en série</span></a>
+    </nav>
+  </article>
+</div>
+</main>
+<footer class="site-footer">
+  <div class="wrap footer-grid">
+    <div>
+      <h4>Technologie &amp; SNT</h4>
+      <p>Site pédagogique regroupant les cours, activités et ressources de Technologie du collège et de SNT du lycée.</p>
+    </div>
+    <div>
+      <h4>Niveaux</h4>
+      <ul>
+        <li><a href="../../../5eme/">5ème</a></li>
+        <li><a href="../../../4eme/">4ème</a></li>
+        <li><a href="../../../3eme/">3ème</a></li>
+        <li><a href="../../../snt/">2nde SNT</a></li>
+        <li><a href="../../../sicit/">SI · CIT</a></li>
+        <li><a href="../../../atelier/">Atelier</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Références</h4>
+      <ul>
+        <li><a href="https://eduscol.education.fr/2098/technologie-au-cycle-4" target="_blank" rel="noopener">Programme de Technologie (Eduscol)</a></li>
+        <li><a href="https://eduscol.education.fr/3016/sciences-numeriques-et-technologie-au-lycee" target="_blank" rel="noopener">Programme SNT (Eduscol)</a></li>
+        <li><a href="https://pix.fr" target="_blank" rel="noopener">Pix — compétences numériques</a></li>
+        <li><a href="https://sites.google.com/view/lmtechno25" target="_blank" rel="noopener">Site d'origine (Google Sites)</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="wrap footer-bottom">
+    <span>© M. Eddy Bachaalany · Lycée Montaigne, Beit Chabab</span>
+    <span>Cours de Technologie collège &amp; SNT lycée</span>
+  </div>
+</footer>
+<div class="search-overlay" id="search-overlay" role="dialog" aria-label="Recherche">
+  <div class="search-panel">
+    <div class="search-input-row">
+      <span>🔍</span>
+      <input id="search-input" type="search" placeholder="Rechercher une séquence, une séance, une notion…" autocomplete="off">
+      <kbd>Échap</kbd>
+    </div>
+    <div class="search-results" id="search-results"></div>
+  </div>
+</div>
+<button class="back-to-top" id="back-to-top" type="button" aria-label="Retour en haut">↑</button>
+<script src="../../../assets/client.js?v=93c7e2ac98" defer></script>
+</body>
+</html>

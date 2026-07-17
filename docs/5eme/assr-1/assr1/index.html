@@ -15,7 +15,7 @@
 <link rel="stylesheet" href="../../../assets/styles.css?v=93c7e2ac98">
 <script>
 (function(){try{var t=localStorage.getItem("lmtechno-theme");if(!t)t=window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light";document.documentElement.setAttribute("data-theme",t);}catch(e){}})();
-(function(){try{var s=JSON.parse(localStorage.getItem("lmtechno-eleve")||"null");if(!s||!s.section)return;var d=document.documentElement,cur=d.getAttribute("data-section")||"",base=d.getAttribute("data-base")||"./";if(cur==="home"||(cur&&cur!==s.section))location.replace(base+s.section+"/");}catch(e){}})();
+(function(){try{var s=JSON.parse(localStorage.getItem("lmtechno-eleve")||"null");if(!s||!s.section)return;var d=document.documentElement,cur=d.getAttribute("data-section")||"",base=d.getAttribute("data-base")||"./",lv=["5eme","4eme","3eme","snt","sicit"];if(cur==="home"||(lv.indexOf(cur)>=0&&cur!==s.section))location.replace(base+s.section+"/");}catch(e){}})();
 </script>
 <script src="../../../assets/firebase-config.js?v=93c7e2ac98"></script>
 
@@ -38,6 +38,7 @@
   <a href="../../../3eme/" style="--dot:#7c3aed">3ème</a>
   <a href="../../../snt/" style="--dot:#d9640f">2nde SNT</a>
   <a href="../../../sicit/" style="--dot:#0d8e9c">SI · CIT</a>
+  <a href="../../../atelier/" style="--dot:#b91c1c">Atelier</a>
   <a class="nav-account" href="../../../connexion/">👤 Espace</a>
 </nav>
     <div class="header-actions">
@@ -82,6 +83,17 @@
         <a href="../../sequence-reparer-objet/jeu-intro/">🎮 Jeu d'intro</a>
         <a href="../../sequence-reparer-objet/seance-1/">Séance 1</a>
         <a href="../../sequence-reparer-objet/seance-2/">Séance 2</a>
+      </div>
+    </details>
+    <details>
+      <summary><a href="../../projet-fablab-signaletique/" style="all:unset;cursor:pointer">Signalétique</a></summary>
+      <div class="sb-pages">
+        <a href="../../projet-fablab-signaletique/jeu-intro/">Jeu d'intro</a>
+        <a href="../../projet-fablab-signaletique/seance-1/">Analyser le besoin</a>
+        <a href="../../projet-fablab-signaletique/seance-2/">Conception vectorielle</a>
+        <a href="../../projet-fablab-signaletique/seance-3/">Production atelier</a>
+        <a href="../../projet-fablab-signaletique/seance-4/">Contrôle et pose</a>
+        <a href="../../projet-fablab-signaletique/guide-prof/">Guide professeur</a>
       </div>
     </details>
     <details>
@@ -215,6 +227,7 @@
         <li><a href="../../../3eme/">3ème</a></li>
         <li><a href="../../../snt/">2nde SNT</a></li>
         <li><a href="../../../sicit/">SI · CIT</a></li>
+        <li><a href="../../../atelier/">Atelier</a></li>
       </ul>
     </div>
     <div>

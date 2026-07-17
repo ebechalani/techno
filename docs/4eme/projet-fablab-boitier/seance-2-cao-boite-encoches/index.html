@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="fr" data-base="../../../" data-section="4eme" data-v="93c7e2ac98">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>💻 Séance 2 — CAO : ma boîte à encoches au dixième de millimètre · Projet boîtier — Technologie &amp; SNT</title>
+<meta name="description" content="Générer la boîte, compenser le kerf, percer les bonnes fenêtres : aujourd'hui tout se joue à l'écran.">
+<meta property="og:title" content="💻 Séance 2 — CAO : ma boîte à encoches au dixième de millimètre · Projet boîtier — Technologie &amp; SNT">
+<meta property="og:description" content="Générer la boîte, compenser le kerf, percer les bonnes fenêtres : aujourd'hui tout se joue à l'écran.">
+<meta property="og:type" content="website">
+<link rel="icon" href="../../../assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lexend:wght@500;600;700;800&family=Caveat:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../../assets/styles.css?v=93c7e2ac98">
+<script>
+(function(){try{var t=localStorage.getItem("lmtechno-theme");if(!t)t=window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light";document.documentElement.setAttribute("data-theme",t);}catch(e){}})();
+(function(){try{var s=JSON.parse(localStorage.getItem("lmtechno-eleve")||"null");if(!s||!s.section)return;var d=document.documentElement,cur=d.getAttribute("data-section")||"",base=d.getAttribute("data-base")||"./",lv=["5eme","4eme","3eme","snt","sicit"];if(cur==="home"||(lv.indexOf(cur)>=0&&cur!==s.section))location.replace(base+s.section+"/");}catch(e){}})();
+</script>
+<script src="../../../assets/firebase-config.js?v=93c7e2ac98"></script>
+
+</head>
+<body>
+<a class="skip-link" href="#contenu">Aller au contenu</a>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="../../../index.html">
+      <span class="brand-logo">T</span>
+      <span>Technologie <span style="color:var(--muted);font-weight:500">&amp;</span> SNT
+        <small>Lycée Montaigne, Beit Chabab</small>
+      </span>
+    </a>
+    
+<nav class="main-nav" id="main-nav" aria-label="Navigation principale">
+  <a href="../../../index.html">Accueil</a>
+  <a href="../../../5eme/" style="--dot:#0d9268">5ème</a>
+  <a href="../../../4eme/" style="--dot:#2050d0" aria-current="true">4ème</a>
+  <a href="../../../3eme/" style="--dot:#7c3aed">3ème</a>
+  <a href="../../../snt/" style="--dot:#d9640f">2nde SNT</a>
+  <a href="../../../sicit/" style="--dot:#0d8e9c">SI · CIT</a>
+  <a href="../../../atelier/" style="--dot:#b91c1c">Atelier</a>
+  <a class="nav-account" href="../../../connexion/">👤 Espace</a>
+</nav>
+    <div class="header-actions">
+      <button class="search-btn" id="search-open" type="button" aria-label="Rechercher">
+        <span>🔍</span><span class="label">Rechercher</span><kbd>Ctrl K</kbd>
+      </button>
+      <button class="icon-btn" id="theme-toggle" type="button" aria-label="Changer de thème">🌙</button>
+      <button class="icon-btn nav-toggle" id="nav-toggle" type="button" aria-label="Menu" aria-expanded="false">☰</button>
+    </div>
+  </div>
+</header>
+<main id="contenu">
+
+<nav class="breadcrumbs wrap" aria-label="Fil d'Ariane">
+    <a href="../../../index.html">Accueil</a><span class="sep">›</span>
+    <a href="../../">4ème</a><span class="sep">›</span>
+    <a href="../">Projet boîtier</a><span class="sep">›</span>
+    <span class="current">💻 Séance 2 — CAO : ma boîte à encoches au dixième de millimètre</span>
+  </nav>
+<div class="wrap course-layout">
+  <aside class="sidebar" style="--accent:undefined;--accent-soft:undefined;">
+    <div class="sb-title"><span class="dot"></span>4ème </div>
+    <nav>
+    <details>
+      <summary><a href="../../sequence-0-ia-generative/" style="all:unset;cursor:pointer">L'IA générative comme assistant personnel</a></summary>
+      <div class="sb-pages">
+        <a href="../../sequence-0-ia-generative/jeu-intro/">🎮 Jeu d'intro</a>
+        <a href="../../sequence-0-ia-generative/seance-1/">Séance 1</a>
+        <a href="../../sequence-0-ia-generative/seance-1-corr/">Séance 1 — correction</a>
+        <a href="../../sequence-0-ia-generative/creer-un-prompt-efficace/">Créer un prompt efficace</a>
+        <a href="../../sequence-0-ia-generative/prompts-avantages-et-biais/">Prompts, avantages et biais</a>
+      </div>
+    </details>
+    <details>
+      <summary><a href="../../sequence-1-ia-securite/" style="all:unset;cursor:pointer">IA générative et sécurité des données</a></summary>
+      <div class="sb-pages">
+        <a href="../../sequence-1-ia-securite/jeu-intro/">🎮 Jeu d'intro</a>
+        <a href="../../sequence-1-ia-securite/seance-1/">Séance 1</a>
+        <a href="../../sequence-1-ia-securite/seance-1-corr/">Séance 1 — correction</a>
+        <a href="../../sequence-1-ia-securite/seance-2/">Séance 2</a>
+        <a href="../../sequence-1-ia-securite/seance-2-corr/">Séance 2 — correction</a>
+        <a href="../../sequence-1-ia-securite/ressources/">Ressources</a>
+      </div>
+    </details>
+    <details>
+      <summary><a href="../../sequence-depanner-reparer/" style="all:unset;cursor:pointer">Dépanner et réparer un objet technique</a></summary>
+      <div class="sb-pages">
+        <a href="../../sequence-depanner-reparer/jeu-intro/">🎮 Jeu d'intro</a>
+        <a href="../../sequence-depanner-reparer/seance-1/">Séance 1</a>
+        <a href="../../sequence-depanner-reparer/seance-2/">Séance 2</a>
+      </div>
+    </details>
+    <details>
+      <summary><a href="../../sequence-objet-developpement-durable/" style="all:unset;cursor:pointer">Choisir un objet dans un contexte de développement durable</a></summary>
+      <div class="sb-pages">
+        <a href="../../sequence-objet-developpement-durable/jeu-intro/">🎮 Jeu d'intro</a>
+        <a href="../../sequence-objet-developpement-durable/seance-1/">Séance 1</a>
+        <a href="../../sequence-objet-developpement-durable/seance-2/">Séance 2</a>
+      </div>
+    </details>
+    <details>
+      <summary><a href="../../sequence-materiaux-procedes/" style="all:unset;cursor:pointer">Matériaux et procédés de fabrication</a></summary>
+      <div class="sb-pages">
+        <a href="../../sequence-materiaux-procedes/jeu-intro/">🎮 Jeu d'intro</a>
+        <a href="../../sequence-materiaux-procedes/seance-1/">Séance 1</a>
+        <a href="../../sequence-materiaux-procedes/seance-2/">Séance 2</a>
+      </div>
+    </details>
+    <details>
+      <summary><a href="../../sequence-1-reseau-informatique/" style="all:unset;cursor:pointer">Le réseau informatique</a></summary>
+      <div class="sb-pages">
+        <a href="../../sequence-1-reseau-informatique/jeu-intro/">🎮 Jeu d'intro</a>
+        <a href="../../sequence-1-reseau-informatique/seance-1/">Séance 1</a>
+        <a href="../../sequence-1-reseau-informatique/seance-2/">Séance 2</a>
+        <a href="../../sequence-1-reseau-informatique/seance-3/">Séance 3</a>
+        <a href="../../sequence-1-reseau-informatique/seance-4/">Séance 4</a>
+      </div>
+    </details>
+    <details>
+      <summary><a href="../../sequence-2-portail-automatise/" style="all:unset;cursor:pointer">Portail automatisé</a></summary>
+      <div class="sb-pages">
+        <a href="../../sequence-2-portail-automatise/jeu-intro/">🎮 Jeu d'intro</a>
+        <a href="../../sequence-2-portail-automatise/seance-0/">Séance 0</a>
+        <a href="../../sequence-2-portail-automatise/seance-1/">Séance 1</a>
+        <a href="../../sequence-2-portail-automatise/seance-1-corr/">Séance 1 — correction</a>
+        <a href="../../sequence-2-portail-automatise/seance-2/">Séance 2</a>
+      </div>
+    </details>
+    <details>
+      <summary><a href="../../sequence-3-objets-connectes/" style="all:unset;cursor:pointer">Les objets connectés</a></summary>
+      <div class="sb-pages">
+        <a href="../../sequence-3-objets-connectes/jeu-intro/">🎮 Jeu d'intro</a>
+        <a href="../../sequence-3-objets-connectes/seance-1/">Séance 1</a>
+        <a href="../../sequence-3-objets-connectes/seance-2/">Séance 2</a>
+      </div>
+    </details>
+    <details>
+      <summary><a href="../../sequence-4-microbit/" style="all:unset;cursor:pointer">Programmer un ordinateur de poche</a></summary>
+      <div class="sb-pages">
+        <a href="../../sequence-4-microbit/jeu-intro/">🎮 Jeu d'intro</a>
+        <a href="../../sequence-4-microbit/seance-1/">Séance 1</a>
+        <a href="../../sequence-4-microbit/seance-2/">Séance 2</a>
+        <a href="../../sequence-4-microbit/correction/">Correction</a>
+        <a href="../../sequence-4-microbit/programmer-une-boussolle/">Programmer une boussole</a>
+      </div>
+    </details>
+    <details open>
+      <summary><a href="../../projet-fablab-boitier/" style="all:unset;cursor:pointer">Projet boîtier</a></summary>
+      <div class="sb-pages">
+        <a href="../../projet-fablab-boitier/jeu-mission-emballage-impossible/">Jeu d'intro</a>
+        <a href="../../projet-fablab-boitier/seance-1-cahier-des-charges/">Cahier des charges</a>
+        <a href="../../projet-fablab-boitier/seance-2-cao-boite-encoches/" aria-current="true">CAO 2D/3D</a>
+        <a href="../../projet-fablab-boitier/seance-3-fabrication-rotation/">Fabrication</a>
+        <a href="../../projet-fablab-boitier/seance-4-assemblage-test-bilan/">Assemblage &amp; bilan</a>
+        <a href="../../projet-fablab-boitier/guide-professeur/">Guide prof</a>
+      </div>
+    </details>
+    <details>
+      <summary><a href="../../sequence-5-feu-tricolore-arduino/" style="all:unset;cursor:pointer">Feu tricolore avec Arduino</a></summary>
+      <div class="sb-pages">
+        <a href="../../sequence-5-feu-tricolore-arduino/jeu-intro/">🎮 Jeu d'intro</a>
+        <a href="../../sequence-5-feu-tricolore-arduino/seance-1/">Séance 1</a>
+        <a href="../../sequence-5-feu-tricolore-arduino/seance-2/">Séance 2</a>
+      </div>
+    </details>
+    <details>
+      <summary><a href="../../sequence-6-serre-autonome/" style="all:unset;cursor:pointer">Serre autonome</a></summary>
+      <div class="sb-pages">
+        <a href="../../sequence-6-serre-autonome/jeu-intro/">🎮 Jeu d'intro</a>
+        <a href="../../sequence-6-serre-autonome/seance-0/">Séance 0</a>
+        <a href="../../sequence-6-serre-autonome/seance-1/">Séance 1</a>
+        <a href="../../sequence-6-serre-autonome/seance-2/">Séance 2</a>
+        <a href="../../sequence-6-serre-autonome/seance-3/">Séance 3</a>
+      </div>
+    </details>
+    <details>
+      <summary><a href="../../chaines-fonctionnelles/" style="all:unset;cursor:pointer">Chaînes fonctionnelles</a></summary>
+      <div class="sb-pages">
+        <a href="../../chaines-fonctionnelles/exercices/">Exercices</a>
+        <a href="../../chaines-fonctionnelles/correction/">Correction</a>
+      </div>
+    </details>
+    <details>
+      <summary><a href="../../olympiades-informatique/" style="all:unset;cursor:pointer">Olympiades d'informatique</a></summary>
+      <div class="sb-pages">
+        
+      </div>
+    </details>
+    </nav>
+  </aside>
+  <article>
+    <div class="page-head">
+      <div class="kicker">
+        <span class="badge" style="--badge-bg:#e7edfc;--badge-fg:#2050d0">4e</span>
+        <span class="badge">Projet boîtier</span>
+        <span class="badge badge-new">✦ Nouveau</span>
+      </div>
+      <h1>💻 Séance 2 — CAO : ma boîte à encoches au dixième de millimètre</h1>
+      <p class="desc">Générer la boîte, compenser le kerf, percer les bonnes fenêtres : aujourd'hui tout se joue à l'écran.</p>
+    </div>
+    <div class="callout callout-objectif"><span class="co-icon">🎯</span><div class="co-body"><div class="co-title">Objectifs</div><ul>
+<li>Générer une boîte à encoches avec un générateur en ligne et expliquer le rôle des créneaux et du kerf.</li>
+<li>Personnaliser le dessin 2D : fenêtre LED, fente USB, aérations, calques découpe / gravure.</li>
+<li>Ou modéliser en 3D des pièces de support (entretoises, pieds) et exporter en STL.</li>
+<li>Faire valider sa conception par une revue croisée.</li>
+</ul>
+</div></div>
+    
+<div class="student-bar">
+  <span class="sb-info">💾 Tes réponses sont enregistrées automatiquement sur cet appareil.</span>
+  <span class="sb-actions">
+    <button class="btn btn-ghost btn-sm" id="print-answers" type="button">🖨 Imprimer / PDF</button>
+    <button class="btn btn-ghost btn-sm" id="clear-answers" type="button">🗑 Tout effacer</button>
+  </span>
+</div>
+    <div class="prose">
+      <h2>🎯 Objectif de la séance</h2>
+<p>Transformer ton croquis coté en <strong>fichiers de fabrication</strong> : un SVG prêt pour la découpeuse laser, et si ton îlot a prévu des supports, un STL prêt pour l&#39;imprimante 3D. Poste de travail : les PC en U, par binômes ; le chef d&#39;atelier répartit qui fait la boîte 2D et qui fait les pièces 3D.</p>
+<h2>🧠 Comprendre d&#39;abord : encoches et kerf</h2>
+<h3>Pourquoi des encoches (créneaux) ?</h3>
+<p>Une plaque de 3 mm ne se visse pas facilement dans une autre plaque de 3 mm. La solution des fablabs : découper sur les bords des <strong>créneaux alternés</strong> (comme des dents) qui s&#39;emboîtent à angle droit, façon puzzle. Bien ajustés, ils tiennent même sans colle ; avec un point de colle à bois, l&#39;assemblage devient définitif.</p>
+<h3>Le kerf, ou pourquoi « pile la bonne cote » ne s&#39;emboîte jamais</h3>
+<p>Le faisceau laser ne coupe pas comme une lame infiniment fine : il <strong>vaporise une petite largeur de matière</strong> de chaque côté du trait. Cette largeur perdue s&#39;appelle le <strong>kerf</strong> (trait de coupe). Ordre de grandeur : souvent <strong>0,1 à 0,3 mm</strong> — mais la valeur exacte dépend de VOTRE machine, du matériau et de la focalisation : elle se <strong>mesure par un test de coupe</strong>, elle ne se devine pas.</p>
+<p>Conséquence : si tu dessines une dent de 10,0 mm, la pièce découpée fera ≈ 9,8 mm — et l&#39;encoche en face fera ≈ 10,2 mm. Résultat : un assemblage qui flotte. Les générateurs de boîtes ont une case <strong>« kerf »</strong> : ils agrandissent légèrement les dents et rétrécissent les fentes pour compenser. C&#39;est pour cela que le professeur affiche, à côté du poste laser, <strong>la valeur de kerf mesurée sur notre machine</strong> avec le MDF 3 mm de la classe : recopie-la telle quelle.</p>
+<blockquote>
+<p>⚠️ Le kerf change si le matériau change (MDF ≠ contreplaqué ≠ carton). Un fichier réglé pour le MDF 3 mm ne donnera pas le même emboîtage dans un autre matériau.</p>
+</blockquote>
+<h2>🚀 Parcours A — La boîte 2D (générateur + logiciel de dessin)</h2>
+<h3>Étape 1 — Générer la boîte (10 min)</h3>
+<p>Ouvre le générateur de boîtes indiqué par le professeur (type <strong>MakerCase</strong>) et renseigne :</p>
+<ol>
+<li><strong>Dimensions</strong> : tes cotes <strong>intérieures</strong> de la séance 1 (vérifie bien l&#39;option <em>inside dimensions</em> — sinon le générateur croit que tu donnes l&#39;extérieur !) ;</li>
+<li><strong>Épaisseur du matériau</strong> : 3 mm (à confirmer au pied à coulisse sur la plaque réelle : « 3 mm » du commerce fait parfois 2,8 ou 3,1 mm) ;</li>
+<li><strong>Type d&#39;assemblage</strong> : encoches (<em>finger joints</em>) ; largeur de dent ≈ 2 à 3 fois l&#39;épaisseur (6 à 9 mm), c&#39;est solide et joli ;</li>
+<li><strong>Kerf</strong> : la valeur affichée au poste laser ;</li>
+<li><strong>Couvercle</strong> : choisis une boîte ouverte ou à couvercle selon ta solution « accès aux piles » de la séance 1.</li>
+</ol>
+<p>Exporte le plan en <strong>SVG</strong>.</p>
+<h3>Étape 2 — Personnaliser dans le logiciel de dessin (25 min)</h3>
+<p>Importe le SVG dans le logiciel de dessin vectoriel de la classe et ajoute tes découpes personnalisées, <strong>cotes du croquis sous les yeux</strong> :</p>
+<ul>
+<li>la <strong>fenêtre LED</strong> (rectangle positionné précisément par rapport aux bords de la face) ;</li>
+<li>la <strong>fente USB</strong> (largeur du connecteur + 1 mm, hauteur idem) ;</li>
+<li>les <strong>fentes d&#39;aération</strong> (série de rectangles fins, à 5 mm minimum des bords et des encoches pour ne pas fragiliser la plaque) ;</li>
+<li>le <strong>trou de passage de câble</strong> si prévu.</li>
+</ul>
+<p><strong>Règle des calques (ou des couleurs)</strong> : la machine ne voit pas « une fenêtre » ou « une déco », elle voit des traits à traiter différemment. On sépare donc :</p>
+<table>
+<thead>
+<tr>
+<th>Calque / couleur</th>
+<th>Opération machine</th>
+<th>Exemples</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Découpe</strong> (souvent rouge, trait fin)</td>
+<td>le laser traverse la plaque</td>
+<td>contour des faces, fenêtre, fentes</td>
+</tr>
+<tr>
+<td><strong>Gravure</strong> (souvent noir/bleu)</td>
+<td>le laser marque la surface sans traverser</td>
+<td>nom de l&#39;îlot, logo, pictogrammes</td>
+</tr>
+</tbody></table>
+<p>Un trait posé sur le mauvais calque = une déco qui découpe ta face en deux. Le contrôleur qualité vérifie chaque élément.</p>
+<p><strong>Pense à la gravure déco</strong> : nom de l&#39;objet, prénoms de l&#39;îlot, petit logo — c&#39;est gratuit en temps machine ou presque, et ça transforme une boîte en produit.</p>
+<h3>Étape 3 — Vérifications avant export (5 min)</h3>
+<ul>
+<li><input disabled="" type="checkbox"> Toutes les faces tiennent dans la plaque disponible (demande les dimensions des chutes au magasinier) ;</li>
+<li><input disabled="" type="checkbox"> Aucun trait en double (deux traits superposés = deux passages laser = carbonisation) ;</li>
+<li><input disabled="" type="checkbox"> Fenêtres et fentes positionnées par rapport aux <strong>cotes du croquis</strong>, pas à l&#39;œil ;</li>
+<li><input disabled="" type="checkbox"> Couleurs/calques découpe et gravure conformes ;</li>
+<li><input disabled="" type="checkbox"> Export <strong>SVG</strong> nommé : <code>ilot_X_boite_v1.svg</code>.</li>
+</ul>
+<h2>🚀 Parcours B — Les pièces 3D (TinkerCAD)</h2>
+<p>Pendant ce temps, le binôme 3D modélise les pièces que la découpe 2D ne sait pas faire :</p>
+<ol>
+<li><strong>Entretoises / support de carte</strong> : un cadre qui maintient la micro:bit ou l&#39;Arduino sans vis (cotes de la carte + 0,3 mm de jeu) ;</li>
+<li><strong>Pieds</strong> du boîtier (4 pieds identiques, hauteur 5-8 mm) ;</li>
+<li>Éventuel <strong>guide de câble</strong> ou bouton-poussoir prolongateur.</li>
+</ol>
+<p>Méthode TinkerCAD : formes de base (boîte, cylindre), <strong>perçages</strong> par formes « trou », alignement, groupement — et surtout les cotes tapées au clavier, jamais tirées à la souris au jugé. Garde les pièces <strong>petites et plates</strong> : moins de 20 minutes d&#39;impression par pièce, sinon la fabrication ne tiendra pas dans la séance 3 (le professeur pourra lancer les grosses pièces entre les cours). Export <strong>STL</strong>, nommé <code>ilot_X_support_v1.stl</code>.</p>
+<h2>👀 Revue de conception croisée (10 min)</h2>
+<p>Comme dans un vrai bureau d&#39;études, personne n&#39;envoie son fichier en fabrication sans l&#39;avoir fait relire. Échangez les postes avec l&#39;îlot voisin et contrôlez leur travail avec la grille : dimensions intérieures conformes à LEUR fiche de séance 1, kerf renseigné, calques corrects, fenêtre en face de la zone LED, fente USB du bon côté, noms de fichiers. Notez vos remarques sur leur fiche de revue — et corrigez votre propre fichier au retour.</p>
+<h3>✍️ Compte rendu de revue (zone partagée n°1)</h3>
+<p>Quelles remarques l&#39;îlot voisin a-t-il faites sur votre conception, et qu&#39;avez-vous corrigé ?</p>
+<div class="answer-field">
+  <textarea rows="3" data-answer-idx="0" placeholder="✏️ Écris ta réponse ici…" aria-label="Zone de réponse de l'élève"></textarea>
+</div>
+<h3>✍️ Choix technique (zone partagée n°2)</h3>
+<p>Expliquez en 2-3 phrases : pourquoi avez-vous choisi la 2D découpée, la 3D imprimée, ou les deux, pour chaque partie de votre boîtier ? (Pense : temps de fabrication, solidité, forme possible.)</p>
+<div class="answer-field">
+  <textarea rows="3" data-answer-idx="1" placeholder="✏️ Écris ta réponse ici…" aria-label="Zone de réponse de l'élève"></textarea>
+</div>
+<h2>🧭 Ce que je retiens</h2>
+<ul>
+<li>Le <strong>kerf</strong> est la largeur de matière vaporisée par le laser (≈ 0,1-0,3 mm, à mesurer sur chaque machine/matériau) ; le générateur de boîte le compense pour que les encoches s&#39;emboîtent.</li>
+<li><strong>SVG</strong> = dessin 2D pour la découpe laser ; <strong>STL</strong> = volume 3D pour l&#39;imprimante. Deux procédés, deux fichiers, deux usages.</li>
+<li>Les <strong>calques/couleurs</strong> disent à la machine quoi découper et quoi graver : un trait mal classé ruine la pièce.</li>
+<li>Une conception n&#39;est finie qu&#39;après <strong>revue croisée</strong> : un œil extérieur trouve les erreurs que tu ne vois plus.</li>
+</ul>
+
+    </div>
+    
+    
+    <nav class="pager">
+      <a class="pg-prev" href="../seance-1-cahier-des-charges/"><span class="pg-label">← Précédent</span><span class="pg-title">📐 Séance 1 — Le cahier des charges de MON boîtier</span></a>
+      <a class="pg-next" href="../seance-3-fabrication-rotation/"><span class="pg-label">Suivant →</span><span class="pg-title">🏭 Séance 3 — Fabrication : quatre postes, zéro improvisation</span></a>
+    </nav>
+  </article>
+</div>
+</main>
+<footer class="site-footer">
+  <div class="wrap footer-grid">
+    <div>
+      <h4>Technologie &amp; SNT</h4>
+      <p>Site pédagogique regroupant les cours, activités et ressources de Technologie du collège et de SNT du lycée.</p>
+    </div>
+    <div>
+      <h4>Niveaux</h4>
+      <ul>
+        <li><a href="../../../5eme/">5ème</a></li>
+        <li><a href="../../../4eme/">4ème</a></li>
+        <li><a href="../../../3eme/">3ème</a></li>
+        <li><a href="../../../snt/">2nde SNT</a></li>
+        <li><a href="../../../sicit/">SI · CIT</a></li>
+        <li><a href="../../../atelier/">Atelier</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Références</h4>
+      <ul>
+        <li><a href="https://eduscol.education.fr/2098/technologie-au-cycle-4" target="_blank" rel="noopener">Programme de Technologie (Eduscol)</a></li>
+        <li><a href="https://eduscol.education.fr/3016/sciences-numeriques-et-technologie-au-lycee" target="_blank" rel="noopener">Programme SNT (Eduscol)</a></li>
+        <li><a href="https://pix.fr" target="_blank" rel="noopener">Pix — compétences numériques</a></li>
+        <li><a href="https://sites.google.com/view/lmtechno25" target="_blank" rel="noopener">Site d'origine (Google Sites)</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="wrap footer-bottom">
+    <span>© M. Eddy Bachaalany · Lycée Montaigne, Beit Chabab</span>
+    <span>Cours de Technologie collège &amp; SNT lycée</span>
+  </div>
+</footer>
+<div class="search-overlay" id="search-overlay" role="dialog" aria-label="Recherche">
+  <div class="search-panel">
+    <div class="search-input-row">
+      <span>🔍</span>
+      <input id="search-input" type="search" placeholder="Rechercher une séquence, une séance, une notion…" autocomplete="off">
+      <kbd>Échap</kbd>
+    </div>
+    <div class="search-results" id="search-results"></div>
+  </div>
+</div>
+<button class="back-to-top" id="back-to-top" type="button" aria-label="Retour en haut">↑</button>
+<script src="../../../assets/client.js?v=93c7e2ac98" defer></script>
+</body>
+</html>
