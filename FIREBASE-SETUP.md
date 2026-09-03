@@ -93,9 +93,13 @@ niveaux qu'un collègue peut utiliser pour ses classes, puis **Enregistrer** :
 > **nouvelles** classes ; d'éventuelles classes déjà créées dans d'autres
 > niveaux restent visibles jusqu'à leur suppression.
 
-> 🔑 **Changer d'administrateur ?** Modifiez `adminEmail` dans
-> `src/app/assets/firebase-config.js` **et** l'e-mail dans `firestore.rules`
-> (fonction `isAdmin`) — les deux doivent rester identiques.
+> 🔑 **Changer d'administrateur ?** L'e-mail administrateur est codé à deux
+> endroits qui doivent rester identiques : `adminEmail` dans
+> `src/app/assets/firebase-config.js` **et** les expressions qui citent cet
+> e-mail dans **`database.rules.json`** (les règles actives de la Realtime
+> Database). Modifiez les deux, puis **republiez les règles** (voir « Mettre à
+> jour les règles de la base » plus bas). *(Le fichier `firestore.rules` du
+> dépôt n'est pas utilisé : la sécurité repose sur la Realtime Database.)*
 
 ## Mettre à jour les règles de la base
 

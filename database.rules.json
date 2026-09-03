@@ -9,8 +9,8 @@
       }
     },
     "teacherSections": {
-      ".read": "auth != null",
       "$uid": {
+        ".read": "auth != null && (auth.uid == $uid || auth.token.email == 'ebechalani@gmail.com')",
         ".write": "auth != null && auth.token.email == 'ebechalani@gmail.com'"
       }
     },
