@@ -97,6 +97,34 @@ niveaux qu'un collègue peut utiliser pour ses classes, puis **Enregistrer** :
 > `src/app/assets/firebase-config.js` **et** l'e-mail dans `firestore.rules`
 > (fonction `isAdmin`) — les deux doivent rester identiques.
 
+## Mettre à jour les règles de la base
+
+Les **règles** (`database.rules.json`) ne se déploient **pas** automatiquement
+avec le site : après les avoir modifiées, il faut les republier. Deux méthodes.
+
+### A. Console (rapide, sans rien installer)
+
+1. **https://console.firebase.google.com** → projet **`techno-ea268`**.
+2. Menu de gauche → **Build → Realtime Database** → onglet **« Règles »**.
+3. Effacez tout, collez le contenu du fichier **`database.rules.json`** (à la
+   racine du dépôt), puis **« Publier »**.
+
+### B. Ligne de commande (réutilisable — recommandé si vous modifiez souvent)
+
+Le dépôt contient déjà `firebase.json` et `.firebaserc` (projet
+`techno-ea268`). Une seule fois :
+
+```bash
+npm install -g firebase-tools   # installe l'outil Firebase
+firebase login                  # ouvre le navigateur, connectez-vous
+```
+
+Puis, à chaque changement de règles, depuis la racine du dépôt :
+
+```bash
+firebase deploy --only database
+```
+
 ## Vie privée (RGPD)
 
 - On ne stocke que le **prénom** de l'élève et son travail scolaire — aucune
