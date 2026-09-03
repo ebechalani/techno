@@ -1,0 +1,54 @@
+name: Déployer les règles Firebase
+
+# Republie les règles de la Realtime Database (database.rules.json) dès qu'elles
+# changent sur `main`. Nécessite le secret FIREBASE_SERVICE_ACCOUNT (voir
+# FIREBASE-SETUP.md → « Déploiement automatique des règles »).
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - database.rules.json
+      - firebase.json
+      - .firebaserc
+      - .github/workflows/firebase-rules.yml
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: firebase-rules
+  cancel-in-progress: false
+
+jobs:
+  deploy-rules:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Installer Firebase CLI
+        run: npm install -g firebase-tools
+
+      - name: Écrire la clé du compte de service
+        env:
+          SA_KEY: ${{ secrets.FIREBASE_SERVICE_ACCOUNT }}
+        run: |
+          if [ -z "$SA_KEY" ]; then
+            echo "::error::Secret FIREBASE_SERVICE_ACCOUNT manquant. Voir FIREBASE-SETUP.md."
+            exit 1
+          fi
+          printf '%s' "$SA_KEY" > "$RUNNER_TEMP/gcp-sa-key.json"
+
+      - name: Déployer les règles Realtime Database
+        env:
+          GOOGLE_APPLICATION_CREDENTIALS: ${{ runner.temp }}/gcp-sa-key.json
+        run: firebase deploy --only database --project techno-ea268 --non-interactive
+
+      - name: Nettoyer la clé
+        if: always()
+        run: rm -f "$RUNNER_TEMP/gcp-sa-key.json"

@@ -125,6 +125,30 @@ Puis, à chaque changement de règles, depuis la racine du dépôt :
 firebase deploy --only database
 ```
 
+### C. Automatique — GitHub Actions (aucune action manuelle ensuite)
+
+Le dépôt contient un workflow (`.github/workflows/firebase-rules.yml`) qui
+**republie les règles tout seul** dès que `database.rules.json` change sur
+`main`. Il faut le configurer **une seule fois** en lui donnant une clé
+d'accès (un « compte de service ») rangée dans un secret GitHub :
+
+1. **Créer la clé.** Console Firebase → ⚙️ **Paramètres du projet** → onglet
+   **« Comptes de service »** → **« Générer une nouvelle clé privée »**. Un
+   fichier **JSON** se télécharge (gardez-le confidentiel : ne le committez
+   jamais).
+2. **Ranger la clé dans GitHub.** Dépôt GitHub → **Settings → Secrets and
+   variables → Actions → New repository secret** :
+   - **Name** : `FIREBASE_SERVICE_ACCOUNT`
+   - **Secret** : collez **tout le contenu** du fichier JSON téléchargé.
+3. C'est prêt. Désormais, chaque modification de `database.rules.json` fusionnée
+   dans `main` déclenche le déploiement des règles automatiquement (onglet
+   **Actions** du dépôt pour suivre l'exécution). Vous pouvez aussi le lancer à
+   la main via **Actions → « Déployer les règles Firebase » → Run workflow**.
+
+> Si le déploiement échoue avec une erreur de permissions, ouvrez la
+> **Google Cloud Console → IAM** du projet `techno-ea268` et attribuez au
+> compte de service le rôle **« Firebase Realtime Database Admin »**.
+
 ## Vie privée (RGPD)
 
 - On ne stocke que le **prénom** de l'élève et son travail scolaire — aucune
