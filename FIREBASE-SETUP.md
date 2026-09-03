@@ -76,6 +76,23 @@ Le site se reconstruit et se redéploie automatiquement. C'est prêt !
    scores de quiz se sauvegardent et le suivent sur tous ses appareils.
 6. Vous suivez tout depuis votre **tableau de bord** (séances travaillées, scores).
 
+## Limiter un professeur à certains niveaux
+
+Depuis le tableau de bord **administrateur**, l'encart **👑 Administration**
+comporte une section **« Niveaux autorisés par professeur »**. Cochez les
+niveaux qu'un collègue peut utiliser pour ses classes, puis **Enregistrer** :
+
+- **Aucune case cochée = tous les niveaux** (comportement par défaut).
+- Exemple : pour qu'une collègue ne gère que la 5ᵉ, cochez uniquement **5ème**.
+  Son menu « Niveau » (création de classe) n'affichera plus que 5ème, et la
+  restriction est aussi vérifiée côté base (`teacherSections` dans
+  `database.rules.json`).
+
+> ⚠️ Cette restriction se pose **après** que le professeur a créé son compte et
+> qu'il a été **approuvé** — il apparaît alors dans la liste. Elle porte sur les
+> **nouvelles** classes ; d'éventuelles classes déjà créées dans d'autres
+> niveaux restent visibles jusqu'à leur suppression.
+
 > 🔑 **Changer d'administrateur ?** Modifiez `adminEmail` dans
 > `src/app/assets/firebase-config.js` **et** l'e-mail dans `firestore.rules`
 > (fonction `isAdmin`) — les deux doivent rester identiques.

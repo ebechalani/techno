@@ -8,6 +8,12 @@
         ".write": "auth != null && (auth.token.email == 'ebechalani@gmail.com' || (auth.uid == $uid && (!data.exists() ? (newData.child('approved').val() == false && newData.child('isAdmin').val() == false) : (newData.child('approved').val() == data.child('approved').val() && newData.child('isAdmin').val() == data.child('isAdmin').val()))))"
       }
     },
+    "teacherSections": {
+      ".read": "auth != null",
+      "$uid": {
+        ".write": "auth != null && auth.token.email == 'ebechalani@gmail.com'"
+      }
+    },
     "classCodes": {
       "$code": {
         ".read": "auth != null",
@@ -18,7 +24,7 @@
       "$tuid": {
         ".read": "auth != null",
         "$cid": {
-          ".write": "auth != null && $tuid == auth.uid && root.child('teachers').child(auth.uid).child('approved').val() == true"
+          ".write": "auth != null && $tuid == auth.uid && root.child('teachers').child(auth.uid).child('approved').val() == true && (!newData.exists() || !root.child('teacherSections').child(auth.uid).exists() || root.child('teacherSections').child(auth.uid).child(newData.child('section').val()).val() == true)"
         }
       }
     },
