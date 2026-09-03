@@ -163,3 +163,10 @@ d'accès (un « compte de service ») rangée dans un secret GitHub :
 - L'identifiant « prénom + code de classe » n'est **pas** une authentification
   forte : c'est adapté à des devoirs, pas à des notes officielles ou des données
   confidentielles.
+- Les règles limitent les **lectures** : la liste des élèves d'une classe et les
+  classes d'un professeur ne sont lisibles que par le professeur propriétaire (ou
+  l'administrateur) ; le travail d'un élève n'est lisible qu'en connaissant à la
+  fois l'identifiant de la classe et celui de l'élève. Il n'est donc plus possible
+  de parcourir en bloc les élèves ou les travaux depuis un simple accès au site.
+  (Les **écritures** restent ouvertes aux comptes connectés — cohérent avec le
+  modèle « devoirs », non « notes officielles ».)

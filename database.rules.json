@@ -22,22 +22,28 @@
     },
     "classes": {
       "$tuid": {
-        ".read": "auth != null",
+        ".read": "auth != null && ($tuid == auth.uid || auth.token.email == 'ebechalani@gmail.com')",
         "$cid": {
+          ".read": "auth != null",
           ".write": "auth != null && $tuid == auth.uid && root.child('teachers').child(auth.uid).child('approved').val() == true && (!newData.exists() || !root.child('teacherSections').child(auth.uid).exists() || root.child('teacherSections').child(auth.uid).child(newData.child('section').val()).val() == true)"
         }
       }
     },
     "students": {
       "$cid": {
-        ".read": "auth != null",
-        ".write": "auth != null"
+        ".read": "auth != null && (auth.token.email == 'ebechalani@gmail.com' || root.child('classes').child(auth.uid).child($cid).exists())",
+        ".write": "auth != null",
+        "$sid": {
+          ".read": "auth != null"
+        }
       }
     },
     "work": {
       "$cid": {
-        ".read": "auth != null",
-        ".write": "auth != null"
+        ".write": "auth != null",
+        "$sid": {
+          ".read": "auth != null"
+        }
       }
     },
     "groups": {
