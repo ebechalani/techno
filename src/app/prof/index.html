@@ -35,6 +35,9 @@
   <div id="admin" class="app-card" style="display:none;border-left:4px solid var(--c-3eme)">
     <h2 style="margin-top:0">👑 Administration — nouveaux professeurs</h2>
     <div id="admin-list"></div>
+    <h3 style="margin:1.6rem 0 0.3rem;font-size:1rem">Niveaux autorisés par professeur</h3>
+    <p style="color:var(--muted);font-size:0.84rem;margin:0 0 0.6rem">Cochez les niveaux qu'un professeur peut utiliser pour ses classes. <strong>Aucune case cochée = tous les niveaux</strong> (par défaut).</p>
+    <div id="admin-levels"></div>
   </div>
 
   <div id="dash" style="display:none">
@@ -44,16 +47,11 @@
         <div class="field"><label for="c-name">Nom de la classe</label>
           <input id="c-name" type="text" placeholder="5ème A"></div>
         <div class="field" style="flex:0 0 auto"><label for="c-section">Niveau</label>
-          <select id="c-section">
-            <option value="5eme">5ème</option>
-            <option value="4eme">4ème</option>
-            <option value="3eme">3ème</option>
-            <option value="snt">2nde SNT</option>
-            <option value="sicit">SI · CIT</option>
-          </select></div>
+          <select id="c-section"></select></div>
         <button class="btn btn-primary" id="c-create" type="button">Créer la classe</button>
       </div>
       <p style="color:var(--muted);font-size:0.84rem;margin:0.5rem 0 0">Les élèves de cette classe n'auront accès qu'au niveau choisi.</p>
+      <p id="c-section-note" style="color:var(--primary);font-size:0.84rem;margin:0.3rem 0 0;display:none"></p>
       <div class="app-msg err" id="c-msg"></div>
     </div>
 
@@ -65,9 +63,12 @@
 import { isConfigured, onAuth, logout, ensureTeacher, createClass, listMyClasses, deleteClass,
   addStudent, removeStudent, listStudents, loadStudentWork,
   listGroups, loadGroupWork, removeGroup,
-  listPendingTeachers, approveTeacher, rejectTeacher } from "../assets/app.js";
+  listPendingTeachers, approveTeacher, rejectTeacher,
+  mySections, listTeachers, getTeacherSections, setTeacherSections } from "../assets/app.js";
 
 const $ = (id) => document.getElementById(id);
+// [valeur, libellé] — source unique pour le menu Niveau et la gestion admin.
+const ALL_SECTIONS = [["5eme", "5ème"], ["4eme", "4ème"], ["3eme", "3ème"], ["snt", "2nde SNT"], ["sicit", "SI · CIT"]];
 if (!isConfigured()) { location.href = "../connexion/"; }
 
 $("logout").onclick = async () => { await logout(); location.href = "../connexion/"; };
@@ -79,10 +80,53 @@ onAuth(async ({ role, user }) => {
   try { me = await ensureTeacher(); } catch (e) {}
   $("loading").style.display = "none";
   if (!me || !me.approved) { $("pending").style.display = "block"; return; }
-  if (me.isAdmin) { $("admin").style.display = "block"; refreshAdmin(); }
+  if (me.isAdmin) { $("admin").style.display = "block"; refreshAdmin(); refreshTeacherLevels(); }
+  await applySectionLimit();
   $("dash").style.display = "block";
   await refresh();
 });
+
+// Limite le menu « Niveau » aux niveaux autorisés du professeur connecté.
+async function applySectionLimit() {
+  let allowed = null;
+  try { allowed = await mySections(); } catch (e) {}
+  const opts = allowed ? ALL_SECTIONS.filter(([v]) => allowed.includes(v)) : ALL_SECTIONS;
+  $("c-section").innerHTML = opts.map(([v, l]) => `<option value="${v}">${l}</option>`).join("");
+  const note = $("c-section-note");
+  if (allowed && opts.length) {
+    note.textContent = opts.length === 1
+      ? `Votre compte est limité au niveau ${opts[0][1]}.`
+      : `Votre compte est limité aux niveaux : ${opts.map((o) => o[1]).join(", ")}.`;
+    note.style.display = "block";
+  } else {
+    note.style.display = "none";
+  }
+}
+
+// Admin : cocher les niveaux autorisés de chaque professeur approuvé.
+async function refreshTeacherLevels() {
+  const box = $("admin-levels");
+  let all = [];
+  try { all = await listTeachers(); } catch (e) { box.innerHTML = '<p style="color:var(--muted)">Impossible de charger la liste.</p>'; return; }
+  const approved = all.filter((t) => t.approved);
+  if (!approved.length) { box.innerHTML = '<p style="color:var(--muted)">Aucun professeur approuvé.</p>'; return; }
+  const rows = await Promise.all(approved.map(async (t) => ({ t, secs: await getTeacherSections(t.id).catch(() => null) })));
+  box.innerHTML = `<div class="table-scroll"><table class="dash-table"><thead><tr><th>Professeur</th><th>Niveaux autorisés</th><th></th></tr></thead><tbody>${
+    rows.map(({ t, secs }) => `<tr data-trow="${t.id}">
+      <td>${esc(t.name || t.email)}${t.isAdmin ? " 👑" : ""}</td>
+      <td>${ALL_SECTIONS.map(([v, l]) => `<label style="margin-right:0.7rem;white-space:nowrap"><input type="checkbox" data-sec="${v}"${secs && secs.includes(v) ? " checked" : ""}${t.isAdmin ? " disabled" : ""}> ${l}</label>`).join("")}</td>
+      <td class="num"><button class="btn btn-ghost btn-sm" data-savelvl="${t.id}"${t.isAdmin ? " disabled" : ""}>Enregistrer</button></td>
+    </tr>`).join("")
+  }</tbody></table></div>`;
+  box.querySelectorAll("[data-savelvl]").forEach((b) => b.onclick = async () => {
+    const uid = b.getAttribute("data-savelvl");
+    const row = box.querySelector(`[data-trow="${uid}"]`);
+    const secs = [...row.querySelectorAll("[data-sec]:checked")].map((c) => c.getAttribute("data-sec"));
+    b.disabled = true;
+    try { await setTeacherSections(uid, secs); b.textContent = "✓ Enregistré"; setTimeout(() => { b.textContent = "Enregistrer"; b.disabled = false; }, 1500); }
+    catch (e) { alert("Erreur : " + (e.message || e)); b.disabled = false; }
+  });
+}
 
 async function refreshAdmin() {
   const box = $("admin-list");

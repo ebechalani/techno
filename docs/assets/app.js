@@ -133,11 +133,47 @@ export async function approveTeacher(uid) {
 export async function rejectTeacher(uid) {
   await remove(ref(db, "teachers/" + uid));
 }
+// Tous les professeurs (approuvés + en attente) — pour la gestion des niveaux.
+export async function listTeachers() {
+  const s = await get(ref(db, "teachers"));
+  return toList(s);
+}
+
+/* ---------- Niveaux autorisés par professeur (restriction posée par l'admin) ----------
+ * teacherSections/{uid} = { "5eme": true, ... }  — nœud écrit UNIQUEMENT par l'admin.
+ * Absent (ou vide) = le professeur peut utiliser TOUS les niveaux (comportement par défaut).
+ * Renvoie un tableau de niveaux, ou null si aucune restriction. */
+
+function sectionsFromSnap(s) {
+  if (!s.exists()) return null;
+  const v = s.val() || {};
+  const list = Object.keys(v).filter((k) => v[k]);
+  return list.length ? list : null;
+}
+// Niveaux autorisés du professeur connecté.
+export async function mySections() {
+  return sectionsFromSnap(await get(ref(db, "teacherSections/" + auth.currentUser.uid)));
+}
+// Niveaux autorisés d'un professeur donné (admin).
+export async function getTeacherSections(uid) {
+  return sectionsFromSnap(await get(ref(db, "teacherSections/" + uid)));
+}
+// Définit (admin) les niveaux autorisés d'un professeur. [] ou null => aucune restriction.
+export async function setTeacherSections(uid, sections) {
+  if (!sections || !sections.length) { await remove(ref(db, "teacherSections/" + uid)); return; }
+  const map = {};
+  for (const s of sections) map[s] = true;
+  await set(ref(db, "teacherSections/" + uid), map);
+}
 
 /* ---------- Classes (côté professeur) ---------- */
 
 export async function createClass(name, section) {
   const uid = auth.currentUser.uid;
+  const allowed = await mySections();
+  if (allowed && !allowed.includes(section)) {
+    throw new Error("Ce niveau ne fait pas partie des niveaux autorisés pour votre compte.");
+  }
   let code, taken = true, tries = 0;
   do { code = makeCode(); taken = (await get(ref(db, "classCodes/" + code))).exists(); }
   while (taken && ++tries < 8);
