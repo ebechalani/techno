@@ -238,6 +238,22 @@
     document.documentElement.classList.remove("printing-cards");
   });
 
+  /* Report du travail « débranché » : affiche une zone de saisie sous chaque
+     carte pour que l'îlot recopie son tri. Les réponses utilisent le même
+     mécanisme que les autres champs (sauvegarde auto + envoi au professeur). */
+  document.querySelectorAll("[data-answer-cards]").forEach(function (btn) {
+    var sheet = document.getElementById(btn.getAttribute("data-answer-cards"));
+    if (!sheet) return;
+    // Si l'îlot a déjà saisi quelque chose, on ouvre la saisie d'emblée.
+    var filled = false;
+    sheet.querySelectorAll(".cut-card-ans textarea").forEach(function (t) { if (t.value.trim()) filled = true; });
+    if (filled) { sheet.classList.add("answering"); btn.textContent = "📝 Masquer notre résultat"; }
+    btn.addEventListener("click", function () {
+      var on = sheet.classList.toggle("answering");
+      btn.textContent = on ? "📝 Masquer notre résultat" : "📝 Saisir notre résultat";
+    });
+  });
+
   /* ---------- Quiz auto-corrigés ---------- */
   var quizQs = document.querySelectorAll(".quiz-q");
   quizQs.forEach(function (qEl) {

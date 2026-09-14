@@ -32,30 +32,44 @@
     "students": {
       "$cid": {
         ".read": "auth != null && (auth.token.email == 'ebechalani@gmail.com' || root.child('classes').child(auth.uid).child($cid).exists())",
-        ".write": "auth != null",
+        ".write": "auth != null && (auth.token.email == 'ebechalani@gmail.com' || root.child('classes').child(auth.uid).child($cid).exists())",
         "$sid": {
-          ".read": "auth != null"
+          ".read": "auth != null",
+          ".write": "auth != null && data.exists() && newData.exists()"
         }
+      }
+    },
+    "roster": {
+      "$cid": {
+        ".read": "auth != null",
+        ".write": "auth != null && (auth.token.email == 'ebechalani@gmail.com' || root.child('classes').child(auth.uid).child($cid).exists())"
       }
     },
     "work": {
       "$cid": {
-        ".write": "auth != null",
+        ".write": "auth != null && (auth.token.email == 'ebechalani@gmail.com' || root.child('classes').child(auth.uid).child($cid).exists())",
         "$sid": {
-          ".read": "auth != null"
+          ".read": "auth != null",
+          ".write": "auth != null && newData.exists()"
         }
       }
     },
     "groups": {
       "$cid": {
         ".read": "auth != null",
-        ".write": "auth != null"
+        ".write": "auth != null && (auth.token.email == 'ebechalani@gmail.com' || root.child('classes').child(auth.uid).child($cid).exists())",
+        "$gid": {
+          ".write": "auth != null && newData.exists()"
+        }
       }
     },
     "groupwork": {
       "$cid": {
-        ".read": "auth != null",
-        ".write": "auth != null"
+        ".write": "auth != null && (auth.token.email == 'ebechalani@gmail.com' || root.child('classes').child(auth.uid).child($cid).exists())",
+        "$gid": {
+          ".read": "auth != null",
+          ".write": "auth != null && newData.exists()"
+        }
       }
     }
   }

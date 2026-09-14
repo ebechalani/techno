@@ -190,35 +190,73 @@ export async function listMyClasses() {
   return toList(s);
 }
 
+// Supprime la classe ET toutes les données rattachées (droit à l'effacement).
+// L'ordre compte : les règles autorisent ces suppressions parce que la classe
+// appartient encore au professeur — on efface donc `classes/...` en DERNIER.
 export async function deleteClass(classId, code) {
   const uid = auth.currentUser.uid;
   await remove(ref(db, "work/" + classId));
+  await remove(ref(db, "groupwork/" + classId));
+  await remove(ref(db, "groups/" + classId));
   await remove(ref(db, "students/" + classId));
+  await remove(ref(db, "roster/" + classId));
   if (code) await remove(ref(db, "classCodes/" + code)).catch(() => {});
   await remove(ref(db, "classes/" + uid + "/" + classId));
 }
 
-// Ajoute un élève avec identifiant = pseudo + NUMÉRO UNIQUE. Retourne { sid, label }.
+/* ---------- Trombinoscope léger (roster) ----------
+ * roster/{classId}/{sid} = prénom affiché.
+ * `students/` contient aussi la progression et les scores : il reste réservé au
+ * professeur. Le roster n'expose QUE les prénoms, pour que les élèves puissent
+ * composer leur îlot eux-mêmes. Écriture réservée au professeur propriétaire. */
+
+export async function listRoster(classId) {
+  await ensureAnon();
+  const s = await get(ref(db, "roster/" + classId));
+  const out = [];
+  s.forEach((c) => out.push({ sid: c.key, firstName: c.val() }));
+  out.sort((a, b) => String(a.firstName).localeCompare(String(b.firstName)));
+  return out;
+}
+
+// Réaligne le roster sur la liste des élèves (appelé par le tableau de bord :
+// met à jour les classes existantes sans migration manuelle).
+export async function syncRoster(classId, students) {
+  const map = {};
+  for (const st of students) map[st.id] = st.firstName || st.pseudo || "";
+  await set(ref(db, "roster/" + classId), map);
+}
+
+// Ajoute un élève avec identifiant = pseudo + NUMÉRO.
+// Le numéro est unique DANS LA CLASSE (Léa 1, Marc 2, Sofia 3…) : auparavant il
+// repartait de 1 pour chaque prénom, si bien que presque tout le monde était
+// « 1 ». Retourne { sid, label }.
 export async function addStudent(classId, pseudo) {
   const base = normId(pseudo);
   if (!base) throw new Error("Pseudo invalide.");
-  let n = 1, sid;
-  // eslint-disable-next-line no-constant-condition
-  while (true) {
-    sid = base + "-" + n;
-    if (!(await get(ref(db, "students/" + classId + "/" + sid))).exists()) break;
-    n++;
-  }
+  const snap = await get(ref(db, "students/" + classId));
+  const taken = new Set();
+  let maxN = 0;
+  snap.forEach((c) => {
+    taken.add(c.key);
+    const n = Number((c.val() || {}).number);
+    if (Number.isFinite(n) && n > maxN) maxN = n;
+  });
+  let n = maxN + 1;
+  let sid = base + "-" + n;
+  while (taken.has(sid)) { n++; sid = base + "-" + n; }
   const label = pseudo.trim() + " " + n;
   await update(ref(db, "students/" + classId + "/" + sid), {
     firstName: label, pseudo: pseudo.trim(), number: n, createdAt: serverTimestamp(),
   });
+  await set(ref(db, "roster/" + classId + "/" + sid), label);
   return { sid, label };
 }
 
 export async function removeStudent(classId, sid) {
   await remove(ref(db, "work/" + classId + "/" + sid));
   await remove(ref(db, "students/" + classId + "/" + sid));
+  await remove(ref(db, "roster/" + classId + "/" + sid));
 }
 
 export async function listStudents(classId) {
@@ -315,14 +353,30 @@ export async function listGroups(classId) {
   return out;
 }
 
-export async function createGroup(classId, name, sid, firstName) {
+// `members` : { sid: prénom } des camarades choisis par le créateur de l'îlot.
+// Le créateur en fait toujours partie, même s'il ne s'est pas coché.
+export async function createGroup(classId, name, sid, firstName, members) {
   await ensureAnon();
   const clean = String(name || "").trim().slice(0, 40);
   if (!clean) throw new Error("Donne un nom à ton groupe.");
+  const all = Object.assign({}, members || {}, { [sid]: firstName });
   const r = push(ref(db, "groups/" + classId));
-  await set(r, { name: clean, createdAt: serverTimestamp(), members: { [sid]: firstName } });
+  await set(r, { name: clean, createdAt: serverTimestamp(), members: all });
   saveSession({ groupId: r.key, groupName: clean });
   return { id: r.key, name: clean };
+}
+
+// Remplace la composition d'un îlot (ajout/retrait de camarades).
+export async function setGroupMembers(classId, groupId, members) {
+  await ensureAnon();
+  await set(ref(db, "groups/" + classId + "/" + groupId + "/members"), members || {});
+}
+
+// Retrouve l'îlot auquel appartient un élève — source de vérité côté base,
+// pour qu'un élève AJOUTÉ par un camarade voie son groupe sans rien faire.
+export async function findMyGroup(classId, sid) {
+  const groups = await listGroups(classId);
+  return groups.find((g) => g.members && g.members[sid]) || null;
 }
 
 export async function joinGroup(classId, groupId, sid, firstName) {

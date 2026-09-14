@@ -52,14 +52,19 @@ let cardSheetSeq = 0;
 function renderCardSheet(rawTitle, cards) {
   const id = `cartes-${++cardSheetSeq}`;
   const title = rawTitle.replace(/^\s*✂️\s*/, "").trim();
+  // Chaque carte porte une zone de saisie : l'activité se fait « débranchée »
+  // (cartes découpées, triées sur la table) puis l'îlot reporte son résultat
+  // ici. Masquée tant que l'élève n'a pas cliqué sur « Saisir notre résultat »,
+  // et jamais imprimée. L'index de réponse est attribué par interactivize().
   const items = cards
-    .map((c, n) => `<li class="cut-card"><span class="cut-card-n">${n + 1}</span><span class="cut-card-t">${marked.parseInline(c)}</span></li>`)
+    .map((c, n) => `<li class="cut-card"><span class="cut-card-n">${n + 1}</span><span class="cut-card-t">${marked.parseInline(c)}</span><span class="cut-card-ans answer-field"><textarea rows="1" data-answer-idx="__CARD__" placeholder="✏️ où va cette carte ?" aria-label="Résultat pour la carte ${n + 1}"></textarea></span></li>`)
     .join("");
   return `
 <section class="cards-sheet" id="${id}">
   <div class="cards-head">
     <h3 class="cards-title">✂️ ${escHtml(title)}</h3>
     <span class="cards-count">${cards.length} cartes</span>
+    <button class="btn btn-ghost btn-sm cards-answer-toggle" type="button" data-answer-cards="${id}">📝 Saisir notre résultat</button>
     <button class="btn btn-ghost btn-sm cards-print" type="button" data-print-cards="${id}">🖨 Imprimer ces cartes</button>
   </div>
   <ol class="cut-cards">${items}</ol>
@@ -76,6 +81,9 @@ function renderCardSheet(rawTitle, cards) {
  * carte. Quand le titre annonce un nombre (« les 12 cartes »), on s'en sert pour
  * trancher ; sinon on retombe sur la forme la plus courante selon la largeur.
  */
+// Vocabulaire des intitulés de colonne (par opposition au texte d'une carte).
+const LABEL_WORDS = /^(cartes?|fiches?|contenu|étiquettes?|etiquettes?|description|intitulé|nom|type|réponse|catégorie|colonne)\b/i;
+
 function cardsFromTable(rows, expected) {
   const grid = rows
     .map((r) => r.trim().replace(/^\|/, "").replace(/\|\s*$/, "").split("|").map((c) => c.trim()))
@@ -97,6 +105,14 @@ function cardsFromTable(rows, expected) {
     if (C.length === expected) return C;
   }
   if (!head.length) return B;        // en-tête vide -> corps seul
+  // L'en-tête est-il un jeu d'INTITULÉS de colonne plutôt que de vraies cartes ?
+  const allSame = head.every((h) => h === head[0]);
+  const isLabels = allSame || head.every((h) => h.length < 30 && LABEL_WORDS.test(h));
+  if (isLabels) {
+    // intitulés identiques (« Carte | Carte | Carte ») -> chaque CELLULE est une carte ;
+    // intitulés distincts (« Carte | Description | Étiquette ») -> chaque LIGNE est une carte.
+    return allSame ? B : C;
+  }
   if (width >= 3) return A;          // grille large -> chaque cellule est une carte
   return width === 2 ? C : B;        // 2 colonnes -> paires ; 1 colonne -> intitulé + cartes
 }
@@ -175,13 +191,16 @@ function md(src) {
  */
 function interactivize(html) {
   let idx = 0;
-  const out = html.replace(/(?:<p>[\s…]*…[\s…]*<\/p>\s*)+/g, (m) => {
+  let out = html.replace(/(?:<p>[\s…]*…[\s…]*<\/p>\s*)+/g, (m) => {
     const count = (m.match(/<p>/g) || []).length;
     const rows = Math.min(1 + count * 2, 8);
     return `<div class="answer-field">
   <textarea rows="${rows}" data-answer-idx="${idx++}" placeholder="✏️ Écris ta réponse ici…" aria-label="Zone de réponse de l'élève"></textarea>
 </div>\n`;
   });
+  // Zones de saisie des cartes à découper : on poursuit le MÊME compteur, pour
+  // que chaque réponse de la page garde un index unique et stable.
+  out = out.replace(/data-answer-idx="__CARD__"/g, () => `data-answer-idx="${idx++}"`);
   return { html: out, fields: idx };
 }
 
