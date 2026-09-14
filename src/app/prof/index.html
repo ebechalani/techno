@@ -64,11 +64,31 @@ import { isConfigured, onAuth, logout, ensureTeacher, createClass, listMyClasses
   addStudent, removeStudent, listStudents, loadStudentWork,
   listGroups, loadGroupWork, removeGroup,
   listPendingTeachers, approveTeacher, rejectTeacher,
-  mySections, listTeachers, getTeacherSections, setTeacherSections, syncRoster } from "../assets/app.js";
+  mySections, listTeachers, getTeacherSections, setTeacherSections, syncRoster,
+  createGroupForClass, setGroupMembers, shuffleIntoGroups } from "../assets/app.js";
 
 const $ = (id) => document.getElementById(id);
 // [valeur, libellé] — source unique pour le menu Niveau et la gestion admin.
 const ALL_SECTIONS = [["5eme", "5ème"], ["4eme", "4ème"], ["3eme", "3ème"], ["snt", "2nde SNT"], ["sicit", "SI · CIT"]];
+// Élèves par classe, pour composer les îlots sans relire la base.
+const CLASS_STUDENTS = {};
+
+// Cases à cocher des élèves d'une classe (pré-cochées selon `selected`).
+function studentPicker(cid, selected) {
+  const list = CLASS_STUDENTS[cid] || [];
+  if (!list.length) return '<p style="color:var(--muted);font-size:0.86rem">Ajoutez d\'abord des élèves à la classe.</p>';
+  return `<div class="chips">${list.map((s) => `
+    <label class="chip-student" style="cursor:pointer;user-select:none">
+      <input type="checkbox" data-sid="${esc(s.id)}" data-name="${esc(s.firstName)}"${selected && selected[s.id] ? " checked" : ""} style="margin-right:0.35rem">${esc(s.firstName)}
+    </label>`).join("")}</div>`;
+}
+function pickedFrom(container) {
+  const out = {};
+  container.querySelectorAll("input[data-sid]:checked").forEach((c) => {
+    out[c.getAttribute("data-sid")] = c.getAttribute("data-name");
+  });
+  return out;
+}
 if (!isConfigured()) { location.href = "../connexion/"; }
 
 $("logout").onclick = async () => { await logout(); location.href = "../connexion/"; };
@@ -189,6 +209,7 @@ async function refresh() {
     // Tient à jour le trombinoscope léger que les élèves lisent pour composer
     // leurs îlots (met aussi à niveau les classes créées avant cette fonction).
     try { await syncRoster(cls.id, students); } catch (e) {}
+    CLASS_STUDENTS[cls.id] = students;
     const card = document.createElement("div");
     card.className = "app-card class-card";
     card.innerHTML = `
@@ -223,17 +244,31 @@ async function refresh() {
           </tbody>
         </table>
       </div>
-      <h3 style="margin:1.2rem 0 0.4rem;font-size:1rem">👥 Groupes d'îlot</h3>
-      ${groups.length ? `<div class="table-scroll"><table class="dash-table">
-        <thead><tr><th>Groupe</th><th>Membres</th><th></th></tr></thead>
+      <h3 style="margin:1.2rem 0 0.4rem;font-size:1rem">👥 Îlots</h3>
+      <p style="color:var(--muted);font-size:0.86rem;margin:0 0 0.6rem">Composez les îlots vous-même, ou laissez les élèves le faire depuis « Mon espace ». Un élève n'appartient qu'à un seul îlot.</p>
+      <div class="inline-form" style="margin-bottom:0.5rem">
+        <div class="field"><label>Nom de l'îlot</label>
+          <input type="text" maxlength="40" data-gnew="${cls.id}" placeholder="Îlot 1"></div>
+        <button class="btn btn-primary btn-sm" data-gcreate="${cls.id}">➕ Créer l'îlot</button>
+        <span style="flex:1"></span>
+        <div class="field" style="flex:0 0 auto"><label>Élèves par îlot</label>
+          <input type="number" min="2" max="8" value="4" data-gsize="${cls.id}" style="width:5rem"></div>
+        <button class="btn btn-ghost btn-sm" data-gshuffle="${cls.id}">🎲 Répartir au hasard</button>
+      </div>
+      <div data-gnewpick="${cls.id}">${studentPicker(cls.id, null)}</div>
+      <div class="app-msg err" data-gmsg="${cls.id}"></div>
+      ${groups.length ? `<div class="table-scroll" style="margin-top:0.7rem"><table class="dash-table">
+        <thead><tr><th>Îlot</th><th>Membres</th><th></th></tr></thead>
         <tbody>${groups.map((g) => `<tr>
           <td><strong>${esc(g.name)}</strong></td>
           <td>${Object.values(g.members || {}).map(esc).join(", ") || '<span style="color:var(--muted)">vide</span>'}</td>
           <td class="num" style="white-space:nowrap">
+            <button class="btn btn-ghost btn-sm" data-gedit="${cls.id}" data-gid="${esc(g.id)}">✏️ Membres</button>
             <button class="btn btn-ghost btn-sm" data-gdetail="${cls.id}" data-gid="${esc(g.id)}" data-gname="${esc(g.name)}">Voir le travail</button>
-            <button class="btn btn-ghost btn-sm" data-gdel="${cls.id}" data-gid="${esc(g.id)}" title="Supprimer le groupe">🗑</button>
+            <button class="btn btn-ghost btn-sm" data-gdel="${cls.id}" data-gid="${esc(g.id)}" title="Supprimer l'îlot">🗑</button>
           </td></tr>`).join("")}
-        </tbody></table></div>` : '<p style="color:var(--muted);font-size:0.88rem">Aucun groupe : les élèves les créent eux-mêmes depuis « Mon espace » (îlots de 4 ou plus, réponses partagées en direct).</p>'}
+        </tbody></table></div>` : '<p style="color:var(--muted);font-size:0.88rem;margin-top:0.7rem">Aucun îlot pour l\'instant.</p>'}
+      <div data-geditbox="${cls.id}"></div>
       <div data-detailbox="${cls.id}"></div>`;
     box.appendChild(card);
   }
@@ -241,6 +276,64 @@ async function refresh() {
 }
 
 function wire() {
+  /* ---------- Îlots composés par le professeur ---------- */
+  const gmsg = (cid, text) => {
+    const m = document.querySelector(`[data-gmsg="${cid}"]`);
+    if (!m) return;
+    m.textContent = text || "";
+    m.className = text ? "app-msg show err" : "app-msg";
+  };
+
+  document.querySelectorAll("[data-gcreate]").forEach((b) => b.onclick = async () => {
+    const cid = b.getAttribute("data-gcreate");
+    const name = (document.querySelector(`[data-gnew="${cid}"]`) || {}).value || "";
+    const pick = document.querySelector(`[data-gnewpick="${cid}"]`);
+    const members = pick ? pickedFrom(pick) : {};
+    gmsg(cid, "");
+    if (!name.trim()) return gmsg(cid, "Donnez un nom à l'îlot.");
+    if (!Object.keys(members).length) return gmsg(cid, "Cochez au moins un élève.");
+    b.disabled = true;
+    try { await createGroupForClass(cid, name, members); await refresh(); }
+    catch (e) { gmsg(cid, "Erreur : " + (e.message || e)); b.disabled = false; }
+  });
+
+  document.querySelectorAll("[data-gshuffle]").forEach((b) => b.onclick = async () => {
+    const cid = b.getAttribute("data-gshuffle");
+    const size = (document.querySelector(`[data-gsize="${cid}"]`) || {}).value || 4;
+    const nb = (CLASS_STUDENTS[cid] || []).length;
+    gmsg(cid, "");
+    if (!nb) return gmsg(cid, "Ajoutez d'abord des élèves à la classe.");
+    if (!confirm(`Répartir les ${nb} élèves au hasard en îlots de ${size} ?\n\nLes îlots existants de cette classe seront supprimés, ainsi que leur travail partagé.`)) return;
+    b.disabled = true;
+    try { await shuffleIntoGroups(cid, CLASS_STUDENTS[cid], size, true); await refresh(); }
+    catch (e) { gmsg(cid, "Erreur : " + (e.message || e)); b.disabled = false; }
+  });
+
+  document.querySelectorAll("[data-gedit]").forEach((b) => b.onclick = async () => {
+    const cid = b.getAttribute("data-gedit"), gid = b.getAttribute("data-gid");
+    const boxEd = document.querySelector(`[data-geditbox="${cid}"]`);
+    let current = {};
+    try {
+      const g = (await listGroups(cid)).find((x) => x.id === gid);
+      current = (g && g.members) || {};
+    } catch (e) {}
+    boxEd.innerHTML = `<div class="app-card" style="margin-top:0.6rem">
+      <strong>Membres de l'îlot</strong>
+      <div data-gpickedit="${cid}" style="margin:0.5rem 0">${studentPicker(cid, current)}</div>
+      <button class="btn btn-primary btn-sm" data-gsave="${cid}" data-gid="${gid}">Enregistrer</button>
+      <button class="btn btn-ghost btn-sm" data-gcancel>Annuler</button>
+    </div>`;
+    boxEd.querySelector("[data-gcancel]").onclick = () => { boxEd.innerHTML = ""; };
+    boxEd.querySelector("[data-gsave]").onclick = async (ev) => {
+      const btn = ev.currentTarget;
+      btn.disabled = true;
+      try {
+        await setGroupMembers(cid, gid, pickedFrom(boxEd.querySelector(`[data-gpickedit="${cid}"]`)));
+        await refresh();
+      } catch (e) { gmsg(cid, "Erreur : " + (e.message || e)); btn.disabled = false; }
+    };
+  });
+
   document.querySelectorAll("[data-add]").forEach((b) => b.onclick = async () => {
     const cid = b.getAttribute("data-add");
     const inp = document.querySelector(`[data-addname="${cid}"]`);

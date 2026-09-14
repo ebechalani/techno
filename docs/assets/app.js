@@ -362,14 +362,69 @@ export async function createGroup(classId, name, sid, firstName, members) {
   const all = Object.assign({}, members || {}, { [sid]: firstName });
   const r = push(ref(db, "groups/" + classId));
   await set(r, { name: clean, createdAt: serverTimestamp(), members: all });
+  await detachFromOtherGroups(classId, Object.keys(all), r.key);
   saveSession({ groupId: r.key, groupName: clean });
   return { id: r.key, name: clean };
+}
+
+// Un élève ne travaille que dans UN îlot : on le retire des autres.
+async function detachFromOtherGroups(classId, sids, keepGroupId) {
+  if (!sids.length) return;
+  const all = await listGroups(classId);
+  for (const g of all) {
+    if (g.id === keepGroupId) continue;
+    for (const sid of sids) {
+      if (g.members && g.members[sid]) {
+        await remove(ref(db, "groups/" + classId + "/" + g.id + "/members/" + sid));
+      }
+    }
+  }
 }
 
 // Remplace la composition d'un îlot (ajout/retrait de camarades).
 export async function setGroupMembers(classId, groupId, members) {
   await ensureAnon();
   await set(ref(db, "groups/" + classId + "/" + groupId + "/members"), members || {});
+  await detachFromOtherGroups(classId, Object.keys(members || {}), groupId);
+}
+
+// Répartition aléatoire de la classe en îlots équilibrés (côté professeur).
+// `size` = nombre d'élèves visé par îlot ; la répartition en tourniquet évite
+// qu'il reste un îlot d'un seul élève. `replace` efface les îlots existants
+// (et leur travail partagé) : l'appelant doit avoir demandé confirmation.
+export async function shuffleIntoGroups(classId, students, size, replace) {
+  const list = (students || []).filter((s) => s && s.id);
+  if (!list.length) throw new Error("Aucun élève dans cette classe.");
+  if (replace) {
+    for (const g of await listGroups(classId)) await removeGroup(classId, g.id);
+  }
+  const arr = list.slice();
+  for (let i = arr.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    const t = arr[i]; arr[i] = arr[j]; arr[j] = t;
+  }
+  const per = Math.min(Math.max(2, Number(size) || 4), Math.max(2, arr.length));
+  const count = Math.max(1, Math.ceil(arr.length / per));
+  const buckets = Array.from({ length: count }, () => []);
+  arr.forEach((st, i) => buckets[i % count].push(st));
+  const made = [];
+  for (let i = 0; i < buckets.length; i++) {
+    const members = {};
+    for (const st of buckets[i]) members[st.id] = st.firstName || st.pseudo || "";
+    made.push(await createGroupForClass(classId, "Îlot " + (i + 1), members));
+  }
+  return made;
+}
+
+// Création d'un îlot par le PROFESSEUR depuis son tableau de bord : il choisit
+// les élèves, sans faire partie du groupe et sans toucher à la session élève.
+export async function createGroupForClass(classId, name, members) {
+  const clean = String(name || "").trim().slice(0, 40);
+  if (!clean) throw new Error("Donne un nom à l'îlot.");
+  const r = push(ref(db, "groups/" + classId));
+  await set(r, { name: clean, createdAt: serverTimestamp(), members: members || {} });
+  await detachFromOtherGroups(classId, Object.keys(members || {}), r.key);
+  return { id: r.key, name: clean };
 }
 
 // Retrouve l'îlot auquel appartient un élève — source de vérité côté base,
