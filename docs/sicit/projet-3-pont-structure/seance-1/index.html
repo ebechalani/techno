@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="fr" data-base="../../../" data-section="sicit" data-v="08290246cd">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>🔍 Séance 1 — Observer, supposer, dessiner · Le pont qui résiste — Technologie &amp; SNT</title>
+<meta name="description" content="Des ponts réels, un vocabulaire, quatre hypothèses écrites noir sur blanc, un protocole et les fichiers CAO des éprouvettes.">
+<meta property="og:title" content="🔍 Séance 1 — Observer, supposer, dessiner · Le pont qui résiste — Technologie &amp; SNT">
+<meta property="og:description" content="Des ponts réels, un vocabulaire, quatre hypothèses écrites noir sur blanc, un protocole et les fichiers CAO des éprouvettes.">
+<meta property="og:type" content="website">
+<link rel="icon" href="../../../assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lexend:wght@500;600;700;800&family=Caveat:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../../assets/styles.css?v=08290246cd">
+<script>
+(function(){try{var t=localStorage.getItem("lmtechno-theme");if(!t)t=window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light";document.documentElement.setAttribute("data-theme",t);}catch(e){}})();
+(function(){try{var s=JSON.parse(localStorage.getItem("lmtechno-eleve")||"null");if(!s||!s.section)return;var d=document.documentElement,cur=d.getAttribute("data-section")||"",base=d.getAttribute("data-base")||"./",lv=["5eme","4eme","3eme","snt","sicit"];if(cur==="home"||(lv.indexOf(cur)>=0&&cur!==s.section))location.replace(base+s.section+"/");}catch(e){}})();
+</script>
+<script src="../../../assets/firebase-config.js?v=08290246cd"></script>
+
+</head>
+<body>
+<a class="skip-link" href="#contenu">Aller au contenu</a>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="../../../index.html">
+      <span class="brand-logo">T</span>
+      <span>Technologie <span style="color:var(--muted);font-weight:500">&amp;</span> SNT
+        <small>Lycée Montaigne, Beit Chabab</small>
+      </span>
+    </a>
+    
+<nav class="main-nav" id="main-nav" aria-label="Navigation principale">
+  <a href="../../../index.html">Accueil</a>
+  <a href="../../../5eme/" style="--dot:#0d9268">5ème</a>
+  <a href="../../../4eme/" style="--dot:#2050d0">4ème</a>
+  <a href="../../../3eme/" style="--dot:#7c3aed">3ème</a>
+  <a href="../../../snt/" style="--dot:#d9640f">2nde SNT</a>
+  <a href="../../../sicit/" style="--dot:#0d8e9c" aria-current="true">SI · CIT</a>
+  <a href="../../../atelier/" style="--dot:#b91c1c">Atelier</a>
+  <a class="nav-account" href="../../../connexion/">👤 Espace</a>
+</nav>
+    <div class="header-actions">
+      <button class="search-btn" id="search-open" type="button" aria-label="Rechercher">
+        <span>🔍</span><span class="label">Rechercher</span><kbd>Ctrl K</kbd>
+      </button>
+      <button class="icon-btn" id="theme-toggle" type="button" aria-label="Changer de thème">🌙</button>
+      <button class="icon-btn nav-toggle" id="nav-toggle" type="button" aria-label="Menu" aria-expanded="false">☰</button>
+    </div>
+  </div>
+</header>
+<main id="contenu">
+
+<nav class="breadcrumbs wrap" aria-label="Fil d'Ariane">
+    <a href="../../../index.html">Accueil</a><span class="sep">›</span>
+    <a href="../../">SI · CIT</a><span class="sep">›</span>
+    <a href="../">Le pont qui résiste</a><span class="sep">›</span>
+    <span class="current">🔍 Séance 1 — Observer, supposer, dessiner</span>
+  </nav>
+<div class="wrap course-layout">
+  <aside class="sidebar" style="--accent:undefined;--accent-soft:undefined;">
+    <div class="sb-title"><span class="dot"></span>SI · CIT </div>
+    <nav>
+    <details>
+      <summary><a href="../../projet-1-alarme-luminosite/" style="all:unset;cursor:pointer">L'alarme de luminosité</a></summary>
+      <div class="sb-pages">
+        <a href="../../projet-1-alarme-luminosite/jeu-intro/">🎮 Jeu d'intro</a>
+        <a href="../../projet-1-alarme-luminosite/seance-1/">Du besoin au schéma</a>
+        <a href="../../projet-1-alarme-luminosite/seance-2/">Programmer et mesurer</a>
+        <a href="../../projet-1-alarme-luminosite/seance-3/">Boîtier et tests</a>
+        <a href="../../projet-1-alarme-luminosite/guide-prof/">Guide du professeur</a>
+      </div>
+    </details>
+    <details>
+      <summary><a href="../../projet-2-lampe-energie/" style="all:unset;cursor:pointer">La lampe de bureau</a></summary>
+      <div class="sb-pages">
+        <a href="../../projet-2-lampe-energie/jeu-intro/">🎮 Jeu d'intro</a>
+        <a href="../../projet-2-lampe-energie/seance-1/">Chaîne d'énergie et mesures</a>
+        <a href="../../projet-2-lampe-energie/seance-2/">Concevoir l'abat-jour</a>
+        <a href="../../projet-2-lampe-energie/seance-3/">Assembler et conclure</a>
+        <a href="../../projet-2-lampe-energie/guide-prof/">Guide du professeur</a>
+      </div>
+    </details>
+    <details open>
+      <summary><a href="../../projet-3-pont-structure/" style="all:unset;cursor:pointer">Le pont qui résiste</a></summary>
+      <div class="sb-pages">
+        <a href="../../projet-3-pont-structure/jeu-intro/">🎮 Jeu d'intro</a>
+        <a href="../../projet-3-pont-structure/seance-1/" aria-current="true">Observer et supposer</a>
+        <a href="../../projet-3-pont-structure/seance-2/">Fabriquer</a>
+        <a href="../../projet-3-pont-structure/seance-3/">Essais de charge</a>
+        <a href="../../projet-3-pont-structure/guide-prof/">Guide du professeur</a>
+      </div>
+    </details>
+    <details>
+      <summary><a href="../../projet-4-innover-objet/" style="all:unset;cursor:pointer">Réinventer un objet</a></summary>
+      <div class="sb-pages">
+        <a href="../../projet-4-innover-objet/jeu-intro/">D'où viennent les idées ?</a>
+        <a href="../../projet-4-innover-objet/seance-1/">Veille et analyse</a>
+        <a href="../../projet-4-innover-objet/seance-2/">Créativité et choix</a>
+        <a href="../../projet-4-innover-objet/seance-3/">Maquette et pitch</a>
+        <a href="../../projet-4-innover-objet/guide-prof/">Guide du professeur</a>
+      </div>
+    </details>
+    </nav>
+  </aside>
+  <article>
+    <div class="page-head">
+      <div class="kicker">
+        <span class="badge" style="--badge-bg:#e0f5f7;--badge-fg:#0d8e9c">SI</span>
+        <span class="badge">Le pont qui résiste</span>
+        <span class="badge badge-new">✦ Nouveau</span>
+      </div>
+      <h1>🔍 Séance 1 — Observer, supposer, dessiner</h1>
+      <p class="desc">Des ponts réels, un vocabulaire, quatre hypothèses écrites noir sur blanc, un protocole et les fichiers CAO des éprouvettes.</p>
+    </div>
+    <div class="callout callout-objectif"><span class="co-icon">🎯</span><div class="co-body"><div class="co-title">Objectifs</div><p>À la fin de cette séance, je suis capable de :</p>
+<ul>
+<li>nommer charge, appuis, portée, section et flèche sur une poutre chargée ;</li>
+<li>expliquer avec les mains ce qui se passe dans une poutre qui fléchit (dessus comprimé, dessous tendu) ;</li>
+<li>formuler quatre hypothèses testables sur la hauteur, la forme, le matériau et la portée ;</li>
+<li>rédiger un protocole d&#39;essai de charge à portée fixe ;</li>
+<li>dessiner en CAO les éprouvettes à comparer, en respectant les contraintes des machines.</li>
+</ul>
+</div></div>
+    
+<div class="student-bar">
+  <span class="sb-info">💾 Tes réponses sont enregistrées automatiquement sur cet appareil.</span>
+  <span class="sb-actions">
+    <button class="btn btn-ghost btn-sm" id="print-answers" type="button">🖨 Imprimer / PDF</button>
+    <button class="btn btn-ghost btn-sm" id="clear-answers" type="button">🗑 Tout effacer</button>
+  </span>
+</div>
+    <div class="prose">
+      <h2>🎯 Objectif</h2>
+<p>Pas d&#39;atelier aujourd&#39;hui : tu travailles <strong>à l&#39;îlot puis aux PC en U</strong>. Mission : transformer les intuitions du jeu en <strong>hypothèses écrites</strong>, décider <strong>comment</strong> les tester, et produire les <strong>fichiers CAO</strong> des éprouvettes que l&#39;atelier fabriquera en séance 2. Pas de fichier propre = pas de poutre la semaine prochaine.</p>
+<h2>🕹️ Déroulé</h2>
+<h3>Étape 1 — Retour sur le jeu (5 min)</h3>
+<p>Le rapporteur de chaque îlot rappelle en une phrase ce que le pont de papier et le pari ont montré. Le professeur note les mots qui reviennent : <em>plier, hauteur, écart, tranche, plus épais</em>. On va leur donner un sens précis.</p>
+<h3>Étape 2 — Des ponts réels (10 min, à l&#39;îlot)</h3>
+<p>Le professeur projette quatre ponts. Pour chacun, l&#39;îlot répond aux trois mêmes questions : <strong>où sont les appuis ? par où passe la charge jusqu&#39;au sol ? qu&#39;est-ce qui est « haut » dans la structure ?</strong></p>
+<table>
+<thead>
+<tr>
+<th>Famille</th>
+<th>Exemple</th>
+<th>Ce qui porte le tablier</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Pont à poutres</td>
+<td>viaduc d&#39;autoroute, passerelle en bois</td>
+<td>des poutres hautes sur des piles, portée découpée en tronçons courts</td>
+</tr>
+<tr>
+<td>Pont en treillis</td>
+<td>pont ferroviaire métallique</td>
+<td>une poutre géante faite de triangles : beaucoup de hauteur, peu de matière</td>
+</tr>
+<tr>
+<td>Pont en arc</td>
+<td>pont de pierre ancien</td>
+<td>un arc qui envoie la charge vers les culées en la comprimant</td>
+</tr>
+<tr>
+<td>Pont suspendu ou haubané</td>
+<td>grands franchissements</td>
+<td>des câbles tendus depuis de hauts pylônes qui tiennent le tablier par le haut</td>
+</tr>
+</tbody></table>
+<p><strong>Question A.</strong> Pour les deux premières familles : qu&#39;ont-elles en commun si l&#39;on compare leur hauteur à leur largeur ? Et pourquoi un viaduc a-t-il autant de piles alors qu&#39;on pourrait « sauter » plus loin ?</p>
+<div class="answer-field">
+  <textarea rows="3" data-answer-idx="0" placeholder="✏️ Écris ta réponse ici…" aria-label="Zone de réponse de l'élève"></textarea>
+</div>
+<h3>Étape 3 — Le vocabulaire et l&#39;expérience de la règle (10 min, à l&#39;îlot)</h3>
+<p>Cinq mots, qui décrivent <strong>tous</strong> l&#39;essai de la séance 3.</p>
+<table>
+<thead>
+<tr>
+<th>Mot</th>
+<th>Définition</th>
+<th>Sur notre banc d&#39;essai</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Charge</strong></td>
+<td>La force appliquée (ici, le poids des masses)</td>
+<td>masses marquées ou bouteilles d&#39;eau pesées, posées au centre</td>
+</tr>
+<tr>
+<td><strong>Appuis</strong></td>
+<td>Les points où la structure repose</td>
+<td>les deux arêtes du support d&#39;essai</td>
+</tr>
+<tr>
+<td><strong>Portée</strong></td>
+<td>La distance entre les deux appuis</td>
+<td><strong>240 mm</strong>, fixe, sauf pour l&#39;essai spécial « portée »</td>
+</tr>
+<tr>
+<td><strong>Section</strong></td>
+<td>La « tranche » de la poutre : largeur × hauteur</td>
+<td>20 mm de large, 3 ou 6 mm de haut, à plat ou sur chant</td>
+</tr>
+<tr>
+<td><strong>Flèche</strong></td>
+<td>La descente du centre par rapport à sa position à vide</td>
+<td>lue à la règle, en millimètres</td>
+</tr>
+</tbody></table>
+<p><strong>Expérience de la règle (chacun).</strong> Prends une règle plate de 30 cm. Tiens-la aux deux bouts, à plat, et appuie au milieu avec un doigt : elle plie. Tourne-la sur la tranche et recommence : elle ne bouge presque plus. Même règle, même plastique, même quantité de matière. Regarde ce qui se passe <strong>dedans</strong> quand elle plie à plat : le dessus se raccourcit (il est <strong>comprimé</strong>), le dessous s&#39;allonge (il est <strong>tendu</strong>), la ligne du milieu ne change presque pas de longueur (c&#39;est la <strong>fibre neutre</strong>).</p>
+<p>Conclusion pour un concepteur : <strong>la matière qui travaille le plus est celle qui est loin de la fibre neutre.</strong> D&#39;où la planche sur chant, la poutre en I (matière en haut et en bas) et le treillis (des triangles à la place d&#39;une âme pleine qui travaille peu).</p>
+<p><strong>Question B.</strong> Sur la règle à plat, où ajouter le moins de matière possible pour la rendre le plus rigide possible ? Justifie avec <em>comprimé</em>, <em>tendu</em>, <em>fibre neutre</em>.</p>
+<div class="answer-field">
+  <textarea rows="3" data-answer-idx="1" placeholder="✏️ Écris ta réponse ici…" aria-label="Zone de réponse de l'élève"></textarea>
+</div>
+<h3>Étape 4 — Les éprouvettes et les hypothèses (10 min, à l&#39;îlot)</h3>
+<p>Cinq éprouvettes par îlot, toutes de <strong>280 mm de long et 20 mm de large</strong>, pour une portée de 240 mm :</p>
+<table>
+<thead>
+<tr>
+<th>Repère</th>
+<th>Nom</th>
+<th>Matériau</th>
+<th>Hauteur (épaisseur)</th>
+<th>Fabrication</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>E1</td>
+<td>la fine</td>
+<td>contreplaqué</td>
+<td>3 mm</td>
+<td>scie à chantourner (permis élève)</td>
+</tr>
+<tr>
+<td>E2</td>
+<td>l&#39;épaisse pleine</td>
+<td>contreplaqué</td>
+<td>6 mm</td>
+<td>CNC TTC 6050 (professeur + copilote)</td>
+</tr>
+<tr>
+<td>E3</td>
+<td>l&#39;épaisse ajourée</td>
+<td>contreplaqué, fenêtres triangulaires</td>
+<td>6 mm</td>
+<td>CNC TTC 6050 (même usinage que E2)</td>
+</tr>
+<tr>
+<td>E4</td>
+<td>la plastique</td>
+<td>PLA imprimé, remplissage 100 %</td>
+<td>3 mm</td>
+<td>imprimante 3D (permis élève)</td>
+</tr>
+<tr>
+<td>E5</td>
+<td>la massive</td>
+<td>bois massif (pin ou hêtre)</td>
+<td>6 mm</td>
+<td>CNC TTC 6050 (professeur + copilote)</td>
+</tr>
+</tbody></table>
+<p>Une hypothèse n&#39;est pas un avis : c&#39;est une <strong>phrase que l&#39;essai peut contredire</strong>, avec un ordre de grandeur. Modèle : <em>« Je pense que E2 fléchira environ … fois moins que E1, parce que … »</em>. Rédige les quatre :</p>
+<p><strong>H1 — Hauteur.</strong> E1 à plat contre E2 à plat (même largeur, hauteur doublée), puis E1 à plat contre E1 sur chant :</p>
+<div class="answer-field">
+  <textarea rows="3" data-answer-idx="2" placeholder="✏️ Écris ta réponse ici…" aria-label="Zone de réponse de l'élève"></textarea>
+</div>
+<p><strong>H2 — Forme.</strong> E2 pleine contre E3 ajourée (même contour, environ 40 % de matière en moins) :</p>
+<div class="answer-field">
+  <textarea rows="3" data-answer-idx="3" placeholder="✏️ Écris ta réponse ici…" aria-label="Zone de réponse de l'élève"></textarea>
+</div>
+<p><strong>H3 — Matériau.</strong> E1 (contreplaqué 3 mm) contre E4 (PLA 3 mm), puis E2 (contreplaqué 6 mm) contre E5 (bois massif 6 mm) :</p>
+<div class="answer-field">
+  <textarea rows="3" data-answer-idx="4" placeholder="✏️ Écris ta réponse ici…" aria-label="Zone de réponse de l'élève"></textarea>
+</div>
+<p><strong>H4 — Portée.</strong> E1 à plat, chargée avec 1 kg, à 240 mm, 180 mm puis 120 mm de portée :</p>
+<div class="answer-field">
+  <textarea rows="3" data-answer-idx="5" placeholder="✏️ Écris ta réponse ici…" aria-label="Zone de réponse de l'élève"></textarea>
+</div>
+<h3>Étape 5 — Le protocole d&#39;essai (7 min, à l&#39;îlot)</h3>
+<p>Un protocole, c&#39;est la recette que <strong>n&#39;importe quel autre îlot</strong> pourrait suivre et obtenir les mêmes chiffres. Le nôtre :</p>
+<ol>
+<li>Poser l&#39;éprouvette sur le support, <strong>portée 240 mm</strong> (20 mm de dépassement de chaque côté), centrée.</li>
+<li>Fixer la règle verticalement à côté du centre et lire la position du <strong>bord inférieur</strong> de la poutre à vide : c&#39;est la <strong>référence l0</strong>.</li>
+<li>Poser la charge <strong>au centre</strong>, par paliers réguliers (500 g pour E1, 1 kg pour E2/E3/E5, 250 g pour E4), <strong>sans à-coups</strong>.</li>
+<li>Attendre 5 secondes, lire la nouvelle position l1 : <strong>flèche = l1 − l0</strong>, en mm. Trois lectures par palier, par trois élèves différents ; on note la moyenne.</li>
+<li><strong>Arrêt</strong> dès que la flèche atteint <strong>20 mm</strong>, que la charge atteint 4 kg, ou au premier craquement.</li>
+<li>Retirer les masses, vérifier que la poutre revient à l0 (sinon, le noter : elle a pris un pli).</li>
+</ol>
+<p><strong>Question C.</strong> Pourquoi une portée <strong>fixe</strong> pour toutes les éprouvettes ? Pourquoi <strong>trois lectures</strong> plutôt qu&#39;une ? Qu&#39;est-ce qui pourrait fausser l0 ?</p>
+<div class="answer-field">
+  <textarea rows="3" data-answer-idx="6" placeholder="✏️ Écris ta réponse ici…" aria-label="Zone de réponse de l'élève"></textarea>
+</div>
+<h3>Étape 6 — CAO des éprouvettes (11 min, PC en U, opérateur CFAO + un binôme)</h3>
+<p><strong>CAO 2D pour la CNC (E2, E3, E5).</strong> Dans le logiciel de dessin 2D :</p>
+<ul>
+<li>un rectangle <strong>280 × 20 mm</strong> pour E2 et pour E5 ;</li>
+<li>pour E3, le même rectangle percé de <strong>5 fenêtres triangulaires</strong> régulièrement réparties, avec une <strong>membrure de 4 mm</strong> en haut et en bas et des <strong>diagonales de 4 mm</strong> ;</li>
+<li>contrainte machine : la fraise fait <strong>3,175 mm de diamètre</strong>, donc pas d&#39;angle intérieur pointu — coins des fenêtres arrondis au <strong>rayon de 2 mm</strong> minimum, aucun détail plus étroit que 4 mm ;</li>
+<li>mesure l&#39;aire totale des fenêtres avec l&#39;outil du logiciel : c&#39;est ta « matière économisée » ;</li>
+<li>exporte en <strong>DXF</strong> (ou SVG) sous le nom <strong>poutres-ilot-N.dxf</strong>.</li>
+</ul>
+<p><strong>CAO 3D pour l&#39;imprimante (E4).</strong> Un pavé de <strong>280 × 20 × 3 mm</strong>, exporté en <strong>STL</strong> sous le nom <strong>poutre-pla-ilot-N.stl</strong>. La pièce sera posée <strong>à plat, en diagonale</strong> si le plateau fait moins de 280 mm.</p>
+<p>Aire des fenêtres de E3 (mm²) et pourcentage de matière enlevée par rapport au rectangle plein (5 600 mm²) :</p>
+<div class="answer-field">
+  <textarea rows="3" data-answer-idx="7" placeholder="✏️ Écris ta réponse ici…" aria-label="Zone de réponse de l'élève"></textarea>
+</div>
+<h3>Étape 7 — Bilan (2 min)</h3>
+<p>Le contrôleur qualité vérifie : quatre hypothèses chiffrées, un DXF et un STL déposés dans le dossier de l&#39;îlot.</p>
+<h2>🧠 Ce qu&#39;il faut retenir</h2>
+<ul>
+<li>Une poutre sur <strong>deux appuis</strong>, chargée au centre, <strong>fléchit</strong> : la flèche est la descente du centre par rapport à la position à vide.</li>
+<li>Dans une poutre qui plie, le dessus est <strong>comprimé</strong>, le dessous <strong>tendu</strong>, le milieu (<strong>fibre neutre</strong>) ne travaille presque pas : la matière utile est <strong>loin du milieu</strong>. D&#39;où la planche <strong>sur chant</strong>, la poutre en I et le treillis.</li>
+<li>Une <strong>hypothèse</strong> se rédige avec un ordre de grandeur (« environ … fois moins ») pour que l&#39;essai puisse la contredire.</li>
+<li>Un <strong>protocole</strong> fixe tout ce qui ne doit pas changer (portée, position de la charge, lecture) pour ne faire varier qu&#39;une chose à la fois.</li>
+<li>Un fichier CAO destiné à une machine respecte ses contraintes : diamètre de fraise, rayons intérieurs, épaisseur du brut.</li>
+</ul>
+<h2>✅ Bilan</h2>
+<ul>
+<li>☐ H1 à H4 écrites avec un « combien de fois ».</li>
+<li>☐ Je sais redire le protocole sans le lire.</li>
+<li>☐ DXF et STL déposés.</li>
+</ul>
+<p>Ce que j&#39;ai compris aujourd&#39;hui, et la question que je me pose encore :</p>
+<div class="answer-field">
+  <textarea rows="3" data-answer-idx="8" placeholder="✏️ Écris ta réponse ici…" aria-label="Zone de réponse de l'élève"></textarea>
+</div>
+
+    </div>
+    
+    
+    <nav class="pager">
+      <a class="pg-prev" href="../jeu-intro/"><span class="pg-label">← Précédent</span><span class="pg-title">🎮 Défi Passerelle — qui tiendra la charge ?</span></a>
+      <a class="pg-next" href="../seance-2/"><span class="pg-label">Suivant →</span><span class="pg-title">🪚 Séance 2 — Fabriquer les éprouvettes</span></a>
+    </nav>
+  </article>
+</div>
+</main>
+<footer class="site-footer">
+  <div class="wrap footer-grid">
+    <div>
+      <h4>Technologie &amp; SNT</h4>
+      <p>Site pédagogique regroupant les cours, activités et ressources de Technologie du collège et de SNT du lycée.</p>
+    </div>
+    <div>
+      <h4>Niveaux</h4>
+      <ul>
+        <li><a href="../../../5eme/">5ème</a></li>
+        <li><a href="../../../4eme/">4ème</a></li>
+        <li><a href="../../../3eme/">3ème</a></li>
+        <li><a href="../../../snt/">2nde SNT</a></li>
+        <li><a href="../../../sicit/">SI · CIT</a></li>
+        <li><a href="../../../atelier/">Atelier</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Références</h4>
+      <ul>
+        <li><a href="https://eduscol.education.fr/2098/technologie-au-cycle-4" target="_blank" rel="noopener">Programme de Technologie (Eduscol)</a></li>
+        <li><a href="https://eduscol.education.fr/3016/sciences-numeriques-et-technologie-au-lycee" target="_blank" rel="noopener">Programme SNT (Eduscol)</a></li>
+        <li><a href="https://pix.fr" target="_blank" rel="noopener">Pix — compétences numériques</a></li>
+        <li><a href="https://sites.google.com/view/lmtechno25" target="_blank" rel="noopener">Site d'origine (Google Sites)</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="wrap footer-bottom">
+    <span>© M. Eddy Bachaalany · Lycée Montaigne, Beit Chabab</span>
+    <span>Cours de Technologie collège &amp; SNT lycée</span>
+  </div>
+</footer>
+<div class="search-overlay" id="search-overlay" role="dialog" aria-label="Recherche">
+  <div class="search-panel">
+    <div class="search-input-row">
+      <span>🔍</span>
+      <input id="search-input" type="search" placeholder="Rechercher une séquence, une séance, une notion…" autocomplete="off">
+      <kbd>Échap</kbd>
+    </div>
+    <div class="search-results" id="search-results"></div>
+  </div>
+</div>
+<button class="back-to-top" id="back-to-top" type="button" aria-label="Retour en haut">↑</button>
+<script src="../../../assets/client.js?v=08290246cd" defer></script>
+</body>
+</html>

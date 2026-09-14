@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="fr" data-base="../../../" data-section="sicit" data-v="08290246cd">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>🧊 Séance 3 — Le boîtier : CAO, impression 3D et tests · L'alarme de luminosité — Technologie &amp; SNT</title>
+<meta name="description" content="Mesure, modélise, imprime en PLA, intègre, puis critique tes résultats : seuil mal réglé, servo qui tremble, et la solution des ingénieurs, l'hystérésis.">
+<meta property="og:title" content="🧊 Séance 3 — Le boîtier : CAO, impression 3D et tests · L'alarme de luminosité — Technologie &amp; SNT">
+<meta property="og:description" content="Mesure, modélise, imprime en PLA, intègre, puis critique tes résultats : seuil mal réglé, servo qui tremble, et la solution des ingénieurs, l'hystérésis.">
+<meta property="og:type" content="website">
+<link rel="icon" href="../../../assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lexend:wght@500;600;700;800&family=Caveat:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../../assets/styles.css?v=08290246cd">
+<script>
+(function(){try{var t=localStorage.getItem("lmtechno-theme");if(!t)t=window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light";document.documentElement.setAttribute("data-theme",t);}catch(e){}})();
+(function(){try{var s=JSON.parse(localStorage.getItem("lmtechno-eleve")||"null");if(!s||!s.section)return;var d=document.documentElement,cur=d.getAttribute("data-section")||"",base=d.getAttribute("data-base")||"./",lv=["5eme","4eme","3eme","snt","sicit"];if(cur==="home"||(lv.indexOf(cur)>=0&&cur!==s.section))location.replace(base+s.section+"/");}catch(e){}})();
+</script>
+<script src="../../../assets/firebase-config.js?v=08290246cd"></script>
+
+</head>
+<body>
+<a class="skip-link" href="#contenu">Aller au contenu</a>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="../../../index.html">
+      <span class="brand-logo">T</span>
+      <span>Technologie <span style="color:var(--muted);font-weight:500">&amp;</span> SNT
+        <small>Lycée Montaigne, Beit Chabab</small>
+      </span>
+    </a>
+    
+<nav class="main-nav" id="main-nav" aria-label="Navigation principale">
+  <a href="../../../index.html">Accueil</a>
+  <a href="../../../5eme/" style="--dot:#0d9268">5ème</a>
+  <a href="../../../4eme/" style="--dot:#2050d0">4ème</a>
+  <a href="../../../3eme/" style="--dot:#7c3aed">3ème</a>
+  <a href="../../../snt/" style="--dot:#d9640f">2nde SNT</a>
+  <a href="../../../sicit/" style="--dot:#0d8e9c" aria-current="true">SI · CIT</a>
+  <a href="../../../atelier/" style="--dot:#b91c1c">Atelier</a>
+  <a class="nav-account" href="../../../connexion/">👤 Espace</a>
+</nav>
+    <div class="header-actions">
+      <button class="search-btn" id="search-open" type="button" aria-label="Rechercher">
+        <span>🔍</span><span class="label">Rechercher</span><kbd>Ctrl K</kbd>
+      </button>
+      <button class="icon-btn" id="theme-toggle" type="button" aria-label="Changer de thème">🌙</button>
+      <button class="icon-btn nav-toggle" id="nav-toggle" type="button" aria-label="Menu" aria-expanded="false">☰</button>
+    </div>
+  </div>
+</header>
+<main id="contenu">
+
+<nav class="breadcrumbs wrap" aria-label="Fil d'Ariane">
+    <a href="../../../index.html">Accueil</a><span class="sep">›</span>
+    <a href="../../">SI · CIT</a><span class="sep">›</span>
+    <a href="../">L'alarme de luminosité</a><span class="sep">›</span>
+    <span class="current">🧊 Séance 3 — Le boîtier : CAO, impression 3D et tests</span>
+  </nav>
+<div class="wrap course-layout">
+  <aside class="sidebar" style="--accent:undefined;--accent-soft:undefined;">
+    <div class="sb-title"><span class="dot"></span>SI · CIT </div>
+    <nav>
+    <details open>
+      <summary><a href="../../projet-1-alarme-luminosite/" style="all:unset;cursor:pointer">L'alarme de luminosité</a></summary>
+      <div class="sb-pages">
+        <a href="../../projet-1-alarme-luminosite/jeu-intro/">🎮 Jeu d'intro</a>
+        <a href="../../projet-1-alarme-luminosite/seance-1/">Du besoin au schéma</a>
+        <a href="../../projet-1-alarme-luminosite/seance-2/">Programmer et mesurer</a>
+        <a href="../../projet-1-alarme-luminosite/seance-3/" aria-current="true">Boîtier et tests</a>
+        <a href="../../projet-1-alarme-luminosite/guide-prof/">Guide du professeur</a>
+      </div>
+    </details>
+    <details>
+      <summary><a href="../../projet-2-lampe-energie/" style="all:unset;cursor:pointer">La lampe de bureau</a></summary>
+      <div class="sb-pages">
+        <a href="../../projet-2-lampe-energie/jeu-intro/">🎮 Jeu d'intro</a>
+        <a href="../../projet-2-lampe-energie/seance-1/">Chaîne d'énergie et mesures</a>
+        <a href="../../projet-2-lampe-energie/seance-2/">Concevoir l'abat-jour</a>
+        <a href="../../projet-2-lampe-energie/seance-3/">Assembler et conclure</a>
+        <a href="../../projet-2-lampe-energie/guide-prof/">Guide du professeur</a>
+      </div>
+    </details>
+    <details>
+      <summary><a href="../../projet-3-pont-structure/" style="all:unset;cursor:pointer">Le pont qui résiste</a></summary>
+      <div class="sb-pages">
+        <a href="../../projet-3-pont-structure/jeu-intro/">🎮 Jeu d'intro</a>
+        <a href="../../projet-3-pont-structure/seance-1/">Observer et supposer</a>
+        <a href="../../projet-3-pont-structure/seance-2/">Fabriquer</a>
+        <a href="../../projet-3-pont-structure/seance-3/">Essais de charge</a>
+        <a href="../../projet-3-pont-structure/guide-prof/">Guide du professeur</a>
+      </div>
+    </details>
+    <details>
+      <summary><a href="../../projet-4-innover-objet/" style="all:unset;cursor:pointer">Réinventer un objet</a></summary>
+      <div class="sb-pages">
+        <a href="../../projet-4-innover-objet/jeu-intro/">D'où viennent les idées ?</a>
+        <a href="../../projet-4-innover-objet/seance-1/">Veille et analyse</a>
+        <a href="../../projet-4-innover-objet/seance-2/">Créativité et choix</a>
+        <a href="../../projet-4-innover-objet/seance-3/">Maquette et pitch</a>
+        <a href="../../projet-4-innover-objet/guide-prof/">Guide du professeur</a>
+      </div>
+    </details>
+    </nav>
+  </aside>
+  <article>
+    <div class="page-head">
+      <div class="kicker">
+        <span class="badge" style="--badge-bg:#e0f5f7;--badge-fg:#0d8e9c">SI</span>
+        <span class="badge">L'alarme de luminosité</span>
+        <span class="badge badge-new">✦ Nouveau</span>
+      </div>
+      <h1>🧊 Séance 3 — Le boîtier : CAO, impression 3D et tests</h1>
+      <p class="desc">Mesure, modélise, imprime en PLA, intègre, puis critique tes résultats : seuil mal réglé, servo qui tremble, et la solution des ingénieurs, l'hystérésis.</p>
+    </div>
+    <div class="callout callout-objectif"><span class="co-icon">🎯</span><div class="co-body"><div class="co-title">Objectifs</div><p>À la fin de cette séance, je suis capable de :</p>
+<ul>
+<li>relever les contraintes d&#39;un boîtier (fenêtre pour la LDR, découpe du servo, passage des fils, logement de la carte) à partir de cotes mesurées ;</li>
+<li>modéliser le boîtier en CAO sans surplomb, exporter un STL et le trancher avec le profil de classe ;</li>
+<li>appliquer les règles de sécurité de la zone imprimantes 3D et lancer une impression PLA avec mon permis élève, sous surveillance du professeur ;</li>
+<li>intégrer le montage dans le boîtier et refaire le protocole de tests ;</li>
+<li>analyser de façon critique les résultats (seuil mal réglé, oscillation) et mettre en œuvre une hystérésis à deux seuils.</li>
+</ul>
+</div></div>
+    
+<div class="student-bar">
+  <span class="sb-info">💾 Tes réponses sont enregistrées automatiquement sur cet appareil.</span>
+  <span class="sb-actions">
+    <button class="btn btn-ghost btn-sm" id="print-answers" type="button">🖨 Imprimer / PDF</button>
+    <button class="btn btn-ghost btn-sm" id="clear-answers" type="button">🗑 Tout effacer</button>
+  </span>
+</div>
+    <div class="prose">
+      <h2>🎯 Objectif</h2>
+<p>Ton alarme fonctionne sur une breadboard nue : fils qui se débranchent, LDR qui bouge. Aujourd&#39;hui tu la transformes en <strong>objet</strong> : un boîtier conçu en CAO à partir de contraintes <strong>mesurées</strong>, imprimé en <strong>PLA</strong> (permis élève), dans lequel tu intègres le montage. Puis, comme tout ingénieur après un premier prototype, tu <strong>critiques</strong> tes résultats. Séance en demi-groupes, entre les PC en U (CAO) et la <strong>zone imprimantes 3D</strong>.</p>
+<p>Rôles : l&#39;<strong>opérateur CFAO</strong> modélise et tranche, le <strong>magasinier</strong> mesure, le <strong>contrôleur qualité</strong> valide cotes et tests, le <strong>chef d&#39;atelier</strong> est le seul à circuler et gère le passage à l&#39;imprimante.</p>
+<h2>⚠️ Sécurité</h2>
+<blockquote>
+<p><strong>Zone machines uniquement avec l&#39;autorisation du professeur, et jamais seul.</strong> L&#39;imprimante 3D se lance uniquement avec ton <strong>permis élève</strong> ; sinon tu observes derrière la ligne au sol.</p>
+</blockquote>
+<ul>
+<li><strong>Lunettes obligatoires</strong> en zone machines ; cheveux <strong>attachés</strong> ; pas de bijoux, de cordons ni d&#39;écharpe.</li>
+<li><strong>Jamais de gants près d&#39;un outil en mouvement</strong> : plateau et tête se déplacent seuls.</li>
+<li><strong>Buse à environ 200 °C</strong> : on ne la touche <strong>jamais</strong>, ni pendant, ni « juste après ». Pièce retirée <strong>plateau froid</strong>.</li>
+<li><strong>PLA uniquement</strong>, aucun autre filament sans accord explicite du professeur.</li>
+<li>Ébavurage au cutter <strong>lame vers la table</strong>. Tout incident se <strong>signale immédiatement</strong>.</li>
+</ul>
+<h2>🕹️ Déroulé</h2>
+<h3>Étape 1 — Mesurer pour concevoir (0–12 min)</h3>
+<p>Un boîtier n&#39;est pas un cube au hasard : chaque ouverture répond à une <strong>contrainte</strong>. Le magasinier mesure au <strong>pied à coulisse</strong>, le contrôleur qualité note :</p>
+<table>
+<thead>
+<tr>
+<th>Contrainte</th>
+<th>Ce qu&#39;il faut prévoir</th>
+<th>Cote à mesurer</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>La LDR doit <strong>voir</strong> la lumière</td>
+<td>une fenêtre en face de la LDR, là où la lumière entrera quand la malle s&#39;ouvre</td>
+<td>diamètre de la tête de la LDR</td>
+</tr>
+<tr>
+<td>Le servo doit <strong>sortir</strong> son bras</td>
+<td>une découpe rectangulaire pour le corps + 2 trous pour ses vis</td>
+<td>longueur, largeur, position des pattes</td>
+</tr>
+<tr>
+<td>La LED doit être <strong>visible</strong></td>
+<td>un trou au diamètre de la LED, qui la tient</td>
+<td>diamètre de la LED</td>
+</tr>
+<tr>
+<td>Le bouton doit être <strong>accessible</strong></td>
+<td>un trou ou une découpe</td>
+<td>diamètre ou côté du bouton</td>
+</tr>
+<tr>
+<td>Le câble USB doit <strong>passer</strong></td>
+<td>une encoche latérale en face du connecteur</td>
+<td>largeur et hauteur du connecteur</td>
+</tr>
+<tr>
+<td>Carte et breadboard doivent <strong>tenir</strong></td>
+<td>intérieur avec 1 mm de jeu de chaque côté</td>
+<td>longueur et largeur de la carte et de la breadboard</td>
+</tr>
+</tbody></table>
+<p>Mes cotes mesurées (une ligne par composant, en mm, à 0,5 mm près) :</p>
+<div class="answer-field">
+  <textarea rows="3" data-answer-idx="0" placeholder="✏️ Écris ta réponse ici…" aria-label="Zone de réponse de l'élève"></textarea>
+</div>
+<p><strong>Question A.</strong> Pourquoi ajoute-t-on un <strong>jeu</strong> (0,3 à 0,5 mm pour un trou, 1 mm pour un logement) à la cote mesurée ? Que se passe-t-il si le trou de la LED fait exactement 5,0 mm ?</p>
+<div class="answer-field">
+  <textarea rows="3" data-answer-idx="1" placeholder="✏️ Écris ta réponse ici…" aria-label="Zone de réponse de l'élève"></textarea>
+</div>
+<h3>Étape 2 — Modéliser le boîtier en CAO (12–30 min)</h3>
+<p>L&#39;opérateur CFAO ouvre <strong>Tinkercad</strong> (3D), plan de travail en millimètres. Consignes, pensées pour une impression <strong>sans supports</strong> :</p>
+<ol>
+<li><strong>La coque</strong> : une boîte pleine évidée par une boîte « trou » plus petite ; parois et fond de <strong>2 mm</strong>, ouverte sur le dessus (couvercle imprimé à part, ou chute de contreplaqué 3 mm à la scie à chantourner si le temps le permet).</li>
+<li><strong>La fenêtre LDR</strong> : cylindre « trou » du diamètre mesuré + 0,5 mm, traversant la paroi.</li>
+<li><strong>La découpe servo</strong> : pavé « trou » aux cotes du corps + 0,5 mm de chaque côté, plus deux cylindres « trou » de 2 mm pour les vis.</li>
+<li><strong>Trous LED et bouton</strong> : cylindres « trou », cote mesurée + 0,3 mm.</li>
+<li><strong>L&#39;encoche USB</strong> : pavé « trou » partant du bord supérieur de la paroi (ouverte vers le haut : pas de surplomb).</li>
+<li>Aucune partie « en l&#39;air » : tout repose sur le plateau ou sur la couche du dessous.</li>
+<li>Hauteur ≤ <strong>30 mm</strong>, empreinte ≤ <strong>90 × 70 mm</strong> : au-delà, l&#39;impression dépasse l&#39;heure.</li>
+</ol>
+<p>Grouper, vérifier chaque cote avec l&#39;outil règle, puis <strong>Exporter → STL</strong> sous <code>boitier-ILOT-n.stl</code>.</p>
+<p><strong>Question B.</strong> Pourquoi l&#39;encoche USB est-elle dessinée <strong>ouverte vers le haut</strong> plutôt qu&#39;en trou fermé au milieu de la paroi ? Quel défaut d&#39;impression évite-t-on ?</p>
+<div class="answer-field">
+  <textarea rows="3" data-answer-idx="2" placeholder="✏️ Écris ta réponse ici…" aria-label="Zone de réponse de l'élève"></textarea>
+</div>
+<h3>Étape 3 — Trancher et lancer l&#39;impression (30–40 min, zone imprimantes 3D, permis élève)</h3>
+<ol>
+<li>Dans le trancheur (profil <strong>Classe-PLA-0.2</strong>), importer le STL : couche 0,2 mm, remplissage 15 %, <strong>supports désactivés</strong>, jupe, fond de la coque <strong>sur le plateau</strong>.</li>
+<li>Lire la <strong>durée estimée</strong> et la quantité de filament. Au-delà de 45 min : réduire la hauteur ou l&#39;empreinte et re-trancher.</li>
+<li>Enregistrer le G-code sur la carte SD de la classe, même nom.</li>
+<li>Le chef d&#39;atelier accompagne l&#39;opérateur (titulaire du permis) à l&#39;imprimante ; le professeur <strong>valide la première couche</strong> avant votre retour à l&#39;îlot. Une seule personne au poste.</li>
+</ol>
+<p>Durée estimée et filament indiqués par le trancheur (et ce que vous avez dû modifier) :</p>
+<div class="answer-field">
+  <textarea rows="3" data-answer-idx="3" placeholder="✏️ Écris ta réponse ici…" aria-label="Zone de réponse de l'élève"></textarea>
+</div>
+<h3>Étape 4 — Intégrer et tester (40–52 min, à l&#39;îlot)</h3>
+<p>Pendant l&#39;impression, l&#39;îlot intègre son montage dans le <strong>boîtier témoin</strong> du professeur (ou dans le sien, imprimé la semaine précédente) et refait le <strong>protocole de tests</strong> de la séance 2, boîtier fermé : la LDR ne voit plus que par sa fenêtre.</p>
+<p>Résultat des 6 tests dans le boîtier (réussis / ratés, ce qui a changé par rapport à la breadboard) :</p>
+<div class="answer-field">
+  <textarea rows="3" data-answer-idx="4" placeholder="✏️ Écris ta réponse ici…" aria-label="Zone de réponse de l'élève"></textarea>
+</div>
+<p><strong>Analyse critique 1 — le seuil mal réglé.</strong> Reprenez vos moyennes de la séance 2 :</p>
+<ul>
+<li>seuil <strong>trop bas</strong> (proche de « obscurité ») : que fait l&#39;alarme, malle fermée, quand un rai de lumière passe sous le couvercle ?</li>
+<li>seuil <strong>trop haut</strong> (proche de « lampe ») : que se passe-t-il quand on ouvre la malle un jour gris ?</li>
+<li>si la salle change (néons éteints, volets fermés) : votre seuil de mardi est-il encore bon jeudi ?</li>
+</ul>
+<div class="answer-field">
+  <textarea rows="3" data-answer-idx="5" placeholder="✏️ Écris ta réponse ici…" aria-label="Zone de réponse de l'élève"></textarea>
+</div>
+<p><strong>Analyse critique 2 — l&#39;hystérésis.</strong> À la question F de la séance 2, le servo <strong>tremblait</strong> près du seuil : la lumière oscille de quelques unités autour de la limite et la décision bascule sans arrêt. Les ingénieurs utilisent une <strong>hystérésis</strong> : <strong>deux seuils</strong>. L&#39;alarme passe en « lumière » seulement au-dessus du <strong>seuil haut</strong>, ne repasse en « obscurité » qu&#39;en dessous du <strong>seuil bas</strong>, et entre les deux <strong>garde son état précédent</strong>. Un thermostat fait pareil (allumé à 19 °C, éteint à 21 °C).</p>
+<p>Dans le programme 2 : remplacer <code>bool lumiere = (valeur &gt; seuil);</code> par une variable <strong>globale</strong> <code>bool lumiere = false;</code> déclarée en haut, et dans <code>loop</code> :</p>
+<pre><code>if (valeur &gt; seuilHaut) lumiere = true;
+if (valeur &lt; seuilBas)  lumiere = false;
+</code></pre>
+<p>avec <code>seuilHaut = seuil + 40</code> et <code>seuilBas = seuil - 40</code> déclarés comme constantes.</p>
+<p><strong>Question C.</strong> Téléversez cette version et refaites le test de la main à demi au-dessus de la LDR. Qu&#39;est-ce qui a changé ? Pourquoi <code>lumiere</code> doit-elle maintenant être globale (déclarée hors de <code>loop</code>) ?</p>
+<div class="answer-field">
+  <textarea rows="3" data-answer-idx="6" placeholder="✏️ Écris ta réponse ici…" aria-label="Zone de réponse de l'élève"></textarea>
+</div>
+<p><strong>Question D.</strong> Un écart de 40 convient-il à votre montage ? Comparez-le à la dispersion mesurée à la question B de la séance 2 et proposez une règle pour le choisir.</p>
+<div class="answer-field">
+  <textarea rows="3" data-answer-idx="7" placeholder="✏️ Écris ta réponse ici…" aria-label="Zone de réponse de l'élève"></textarea>
+</div>
+<h3>Étape 5 — Bilan et rangement (52–55 min)</h3>
+<p>Le magasinier débranche l&#39;USB avant de démonter. La pièce se retire <strong>plateau froid</strong>, à la séance suivante ou à la pause avec le professeur. L&#39;opérateur dépose STL, G-code et programme final dans le dossier de l&#39;îlot.</p>
+<h2>🧠 Ce qu&#39;il faut retenir</h2>
+<ul>
+<li>Un boîtier se conçoit à partir de <strong>contraintes mesurées</strong> et d&#39;un <strong>jeu</strong> ajouté aux cotes.</li>
+<li>Une pièce <strong>sans surplomb</strong> s&#39;imprime sans supports : orientation, encoches ouvertes, parois de 2 mm.</li>
+<li>Impression 3D à l&#39;école : <strong>PLA uniquement</strong>, permis élève, buse à ~200 °C jamais touchée, pièce retirée plateau froid.</li>
+<li>Un seuil unique mal placé provoque des <strong>déclenchements intempestifs</strong> ou des <strong>non-détections</strong> ; près du seuil, la décision <strong>oscille</strong>.</li>
+<li>L&#39;<strong>hystérésis</strong> (seuil haut, seuil bas, état conservé entre les deux) stabilise la décision : thermostats, chargeurs.</li>
+<li>Tester dans le boîtier fermé est un <strong>test de validation</strong> : les conditions réelles ne sont jamais celles de la breadboard.</li>
+</ul>
+<h2>✅ Bilan</h2>
+<p>Compte rendu d&#39;îlot en cinq lignes, présenté en 2 minutes à la séance suivante : besoin, schéma en une phrase, seuil retenu et pourquoi, ce que l&#39;hystérésis a changé, amélioration prévue pour une version 2.</p>
+<div class="answer-field">
+  <textarea rows="3" data-answer-idx="8" placeholder="✏️ Écris ta réponse ici…" aria-label="Zone de réponse de l'élève"></textarea>
+</div>
+<p>🎫 Termine par le quiz en bas de page : 5 questions pour valider le projet.</p>
+
+    </div>
+    
+<section class="quiz" id="quiz">
+  <h2>🧠 Teste tes connaissances</h2>
+  <p class="quiz-hint">Réponds aux questions puis clique sur « Vérifier » — la correction s'affiche aussitôt.</p>
+  
+    <div class="quiz-q" data-ok="1" data-explain="Seule, la LDR ne produit aucune tension mesurable. En série avec une résistance fixe entre 5 V et GND, la tension du point milieu varie avec la lumière et la carte peut la lire sur A0.">
+      <p class="qq-text">1. Pourquoi place-t-on une résistance fixe de 10 kΩ en série avec le photo-résistor (pont diviseur) ?</p>
+      <div class="qq-opts">
+        <label class="qq-opt"><input type="radio" name="q0" value="0"><span>Pour protéger la LDR contre la lumière trop forte</span></label>
+        <label class="qq-opt"><input type="radio" name="q0" value="1"><span>Parce que la carte Arduino mesure une tension, pas une résistance : le pont transforme la variation de résistance en variation de tension sur A0</span></label>
+        <label class="qq-opt"><input type="radio" name="q0" value="2"><span>Pour que la LDR consomme moins de courant</span></label>
+        <label class="qq-opt"><input type="radio" name="q0" value="3"><span>Parce que la LDR ne fonctionne pas sans résistance de tirage</span></label>
+      </div>
+      <button class="btn btn-ghost qq-check" type="button">Vérifier ma réponse</button>
+      <div class="qq-feedback" aria-live="polite"></div>
+    </div>
+
+    <div class="quiz-q" data-ok="2" data-explain="Le convertisseur de la carte transforme 0 V à 5 V en un entier de 0 à 1023 ; c'est ce nombre qu'on compare au seuil.">
+      <p class="qq-text">2. Que renvoie l'instruction analogRead(A0) sur une Arduino Uno ?</p>
+      <div class="qq-opts">
+        <label class="qq-opt"><input type="radio" name="q1" value="0"><span>Une tension en volts, avec des décimales</span></label>
+        <label class="qq-opt"><input type="radio" name="q1" value="1"><span>LOW ou HIGH</span></label>
+        <label class="qq-opt"><input type="radio" name="q1" value="2"><span>Un entier de 0 à 1023 proportionnel à la tension sur l'entrée</span></label>
+        <label class="qq-opt"><input type="radio" name="q1" value="3"><span>Une résistance en ohms</span></label>
+      </div>
+      <button class="btn btn-ghost qq-check" type="button">Vérifier ma réponse</button>
+      <div class="qq-feedback" aria-live="polite"></div>
+    </div>
+
+    <div class="quiz-q" data-ok="1" data-explain="Relâché, le bouton laisse D2 reliée à rien. La résistance de tirage impose un niveau défini (LOW) au repos ; sans elle, l'entrée lit n'importe quoi.">
+      <p class="qq-text">3. Sans résistance de tirage, le bouton fonctionne « une fois sur deux » et l'alarme s'arme quand on approche la main. Pourquoi ?</p>
+      <div class="qq-opts">
+        <label class="qq-opt"><input type="radio" name="q2" value="0"><span>Le bouton est trop petit pour le courant</span></label>
+        <label class="qq-opt"><input type="radio" name="q2" value="1"><span>L'entrée D2 est flottante quand le bouton est relâché : elle capte des parasites et lit un niveau aléatoire</span></label>
+        <label class="qq-opt"><input type="radio" name="q2" value="2"><span>Le servo perturbe le bouton</span></label>
+        <label class="qq-opt"><input type="radio" name="q2" value="3"><span>Le seuil est mal réglé</span></label>
+      </div>
+      <button class="btn btn-ghost qq-check" type="button">Vérifier ma réponse</button>
+      <div class="qq-feedback" aria-live="polite"></div>
+    </div>
+
+    <div class="quiz-q" data-ok="3" data-explain="Avec un seuil unique, la moindre oscillation de la lumière fait basculer la décision. Avec un seuil haut pour passer en « lumière » et un seuil bas pour revenir en « obscurité », la décision devient stable.">
+      <p class="qq-text">4. Près du seuil, le servo tremble et la LED clignote n'importe comment. Quelle solution les ingénieurs utilisent-ils ?</p>
+      <div class="qq-opts">
+        <label class="qq-opt"><input type="radio" name="q3" value="0"><span>Augmenter la vitesse du servo</span></label>
+        <label class="qq-opt"><input type="radio" name="q3" value="1"><span>Retirer l'anti-rebond du bouton</span></label>
+        <label class="qq-opt"><input type="radio" name="q3" value="2"><span>Mettre la LDR plus près de la lampe</span></label>
+        <label class="qq-opt"><input type="radio" name="q3" value="3"><span>Une hystérésis : deux seuils (haut et bas) et l'état est conservé entre les deux</span></label>
+      </div>
+      <button class="btn btn-ghost qq-check" type="button">Vérifier ma réponse</button>
+      <div class="qq-feedback" aria-live="polite"></div>
+    </div>
+
+    <div class="quiz-q" data-ok="2" data-explain="Nos imprimantes n'acceptent que le PLA, l'élève doit avoir son permis et rester sous surveillance ; la buse reste brûlante longtemps, et les gants sont interdits près d'un outil ou d'un axe en mouvement.">
+      <p class="qq-text">5. Tu vas lancer l'impression du boîtier. Laquelle de ces affirmations est correcte ?</p>
+      <div class="qq-opts">
+        <label class="qq-opt"><input type="radio" name="q4" value="0"><span>Je peux imprimer en ABS pour que le boîtier soit plus solide</span></label>
+        <label class="qq-opt"><input type="radio" name="q4" value="1"><span>Je retire la pièce dès la dernière couche, tant que le plateau est chaud</span></label>
+        <label class="qq-opt"><input type="radio" name="q4" value="2"><span>PLA uniquement, permis élève, sous surveillance du professeur, buse à ~200 °C jamais touchée, pièce retirée plateau froid</span></label>
+        <label class="qq-opt"><input type="radio" name="q4" value="3"><span>Je mets des gants pour ne pas me brûler près des axes en mouvement</span></label>
+      </div>
+      <button class="btn btn-ghost qq-check" type="button">Vérifier ma réponse</button>
+      <div class="qq-feedback" aria-live="polite"></div>
+    </div>
+  <div class="quiz-score" aria-live="polite"></div>
+</section>
+    
+    <nav class="pager">
+      <a class="pg-prev" href="../seance-2/"><span class="pg-label">← Précédent</span><span class="pg-title">💻 Séance 2 — Programmer, mesurer, régler le seuil</span></a>
+      <a class="pg-next" href="../guide-prof/"><span class="pg-label">Suivant →</span><span class="pg-title">👨‍🏫 Guide du professeur — L'alarme de luminosité</span></a>
+    </nav>
+  </article>
+</div>
+</main>
+<footer class="site-footer">
+  <div class="wrap footer-grid">
+    <div>
+      <h4>Technologie &amp; SNT</h4>
+      <p>Site pédagogique regroupant les cours, activités et ressources de Technologie du collège et de SNT du lycée.</p>
+    </div>
+    <div>
+      <h4>Niveaux</h4>
+      <ul>
+        <li><a href="../../../5eme/">5ème</a></li>
+        <li><a href="../../../4eme/">4ème</a></li>
+        <li><a href="../../../3eme/">3ème</a></li>
+        <li><a href="../../../snt/">2nde SNT</a></li>
+        <li><a href="../../../sicit/">SI · CIT</a></li>
+        <li><a href="../../../atelier/">Atelier</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Références</h4>
+      <ul>
+        <li><a href="https://eduscol.education.fr/2098/technologie-au-cycle-4" target="_blank" rel="noopener">Programme de Technologie (Eduscol)</a></li>
+        <li><a href="https://eduscol.education.fr/3016/sciences-numeriques-et-technologie-au-lycee" target="_blank" rel="noopener">Programme SNT (Eduscol)</a></li>
+        <li><a href="https://pix.fr" target="_blank" rel="noopener">Pix — compétences numériques</a></li>
+        <li><a href="https://sites.google.com/view/lmtechno25" target="_blank" rel="noopener">Site d'origine (Google Sites)</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="wrap footer-bottom">
+    <span>© M. Eddy Bachaalany · Lycée Montaigne, Beit Chabab</span>
+    <span>Cours de Technologie collège &amp; SNT lycée</span>
+  </div>
+</footer>
+<div class="search-overlay" id="search-overlay" role="dialog" aria-label="Recherche">
+  <div class="search-panel">
+    <div class="search-input-row">
+      <span>🔍</span>
+      <input id="search-input" type="search" placeholder="Rechercher une séquence, une séance, une notion…" autocomplete="off">
+      <kbd>Échap</kbd>
+    </div>
+    <div class="search-results" id="search-results"></div>
+  </div>
+</div>
+<button class="back-to-top" id="back-to-top" type="button" aria-label="Retour en haut">↑</button>
+<script src="../../../assets/client.js?v=08290246cd" defer></script>
+</body>
+</html>

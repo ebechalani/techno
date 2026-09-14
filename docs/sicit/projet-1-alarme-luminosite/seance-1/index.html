@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="fr" data-base="../../../" data-section="sicit" data-v="08290246cd">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>🔎 Séance 1 — Du besoin au schéma de câblage · L'alarme de luminosité — Technologie &amp; SNT</title>
+<meta name="description" content="Exprime le besoin, décris les chaînes d'information et d'énergie, choisis tes composants et justifie chaque fil du schéma : pont diviseur, résistance de tirage, résistance de LED.">
+<meta property="og:title" content="🔎 Séance 1 — Du besoin au schéma de câblage · L'alarme de luminosité — Technologie &amp; SNT">
+<meta property="og:description" content="Exprime le besoin, décris les chaînes d'information et d'énergie, choisis tes composants et justifie chaque fil du schéma : pont diviseur, résistance de tirage, résistance de LED.">
+<meta property="og:type" content="website">
+<link rel="icon" href="../../../assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lexend:wght@500;600;700;800&family=Caveat:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../../assets/styles.css?v=08290246cd">
+<script>
+(function(){try{var t=localStorage.getItem("lmtechno-theme");if(!t)t=window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light";document.documentElement.setAttribute("data-theme",t);}catch(e){}})();
+(function(){try{var s=JSON.parse(localStorage.getItem("lmtechno-eleve")||"null");if(!s||!s.section)return;var d=document.documentElement,cur=d.getAttribute("data-section")||"",base=d.getAttribute("data-base")||"./",lv=["5eme","4eme","3eme","snt","sicit"];if(cur==="home"||(lv.indexOf(cur)>=0&&cur!==s.section))location.replace(base+s.section+"/");}catch(e){}})();
+</script>
+<script src="../../../assets/firebase-config.js?v=08290246cd"></script>
+
+</head>
+<body>
+<a class="skip-link" href="#contenu">Aller au contenu</a>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="../../../index.html">
+      <span class="brand-logo">T</span>
+      <span>Technologie <span style="color:var(--muted);font-weight:500">&amp;</span> SNT
+        <small>Lycée Montaigne, Beit Chabab</small>
+      </span>
+    </a>
+    
+<nav class="main-nav" id="main-nav" aria-label="Navigation principale">
+  <a href="../../../index.html">Accueil</a>
+  <a href="../../../5eme/" style="--dot:#0d9268">5ème</a>
+  <a href="../../../4eme/" style="--dot:#2050d0">4ème</a>
+  <a href="../../../3eme/" style="--dot:#7c3aed">3ème</a>
+  <a href="../../../snt/" style="--dot:#d9640f">2nde SNT</a>
+  <a href="../../../sicit/" style="--dot:#0d8e9c" aria-current="true">SI · CIT</a>
+  <a href="../../../atelier/" style="--dot:#b91c1c">Atelier</a>
+  <a class="nav-account" href="../../../connexion/">👤 Espace</a>
+</nav>
+    <div class="header-actions">
+      <button class="search-btn" id="search-open" type="button" aria-label="Rechercher">
+        <span>🔍</span><span class="label">Rechercher</span><kbd>Ctrl K</kbd>
+      </button>
+      <button class="icon-btn" id="theme-toggle" type="button" aria-label="Changer de thème">🌙</button>
+      <button class="icon-btn nav-toggle" id="nav-toggle" type="button" aria-label="Menu" aria-expanded="false">☰</button>
+    </div>
+  </div>
+</header>
+<main id="contenu">
+
+<nav class="breadcrumbs wrap" aria-label="Fil d'Ariane">
+    <a href="../../../index.html">Accueil</a><span class="sep">›</span>
+    <a href="../../">SI · CIT</a><span class="sep">›</span>
+    <a href="../">L'alarme de luminosité</a><span class="sep">›</span>
+    <span class="current">🔎 Séance 1 — Du besoin au schéma de câblage</span>
+  </nav>
+<div class="wrap course-layout">
+  <aside class="sidebar" style="--accent:undefined;--accent-soft:undefined;">
+    <div class="sb-title"><span class="dot"></span>SI · CIT </div>
+    <nav>
+    <details open>
+      <summary><a href="../../projet-1-alarme-luminosite/" style="all:unset;cursor:pointer">L'alarme de luminosité</a></summary>
+      <div class="sb-pages">
+        <a href="../../projet-1-alarme-luminosite/jeu-intro/">🎮 Jeu d'intro</a>
+        <a href="../../projet-1-alarme-luminosite/seance-1/" aria-current="true">Du besoin au schéma</a>
+        <a href="../../projet-1-alarme-luminosite/seance-2/">Programmer et mesurer</a>
+        <a href="../../projet-1-alarme-luminosite/seance-3/">Boîtier et tests</a>
+        <a href="../../projet-1-alarme-luminosite/guide-prof/">Guide du professeur</a>
+      </div>
+    </details>
+    <details>
+      <summary><a href="../../projet-2-lampe-energie/" style="all:unset;cursor:pointer">La lampe de bureau</a></summary>
+      <div class="sb-pages">
+        <a href="../../projet-2-lampe-energie/jeu-intro/">🎮 Jeu d'intro</a>
+        <a href="../../projet-2-lampe-energie/seance-1/">Chaîne d'énergie et mesures</a>
+        <a href="../../projet-2-lampe-energie/seance-2/">Concevoir l'abat-jour</a>
+        <a href="../../projet-2-lampe-energie/seance-3/">Assembler et conclure</a>
+        <a href="../../projet-2-lampe-energie/guide-prof/">Guide du professeur</a>
+      </div>
+    </details>
+    <details>
+      <summary><a href="../../projet-3-pont-structure/" style="all:unset;cursor:pointer">Le pont qui résiste</a></summary>
+      <div class="sb-pages">
+        <a href="../../projet-3-pont-structure/jeu-intro/">🎮 Jeu d'intro</a>
+        <a href="../../projet-3-pont-structure/seance-1/">Observer et supposer</a>
+        <a href="../../projet-3-pont-structure/seance-2/">Fabriquer</a>
+        <a href="../../projet-3-pont-structure/seance-3/">Essais de charge</a>
+        <a href="../../projet-3-pont-structure/guide-prof/">Guide du professeur</a>
+      </div>
+    </details>
+    <details>
+      <summary><a href="../../projet-4-innover-objet/" style="all:unset;cursor:pointer">Réinventer un objet</a></summary>
+      <div class="sb-pages">
+        <a href="../../projet-4-innover-objet/jeu-intro/">D'où viennent les idées ?</a>
+        <a href="../../projet-4-innover-objet/seance-1/">Veille et analyse</a>
+        <a href="../../projet-4-innover-objet/seance-2/">Créativité et choix</a>
+        <a href="../../projet-4-innover-objet/seance-3/">Maquette et pitch</a>
+        <a href="../../projet-4-innover-objet/guide-prof/">Guide du professeur</a>
+      </div>
+    </details>
+    </nav>
+  </aside>
+  <article>
+    <div class="page-head">
+      <div class="kicker">
+        <span class="badge" style="--badge-bg:#e0f5f7;--badge-fg:#0d8e9c">SI</span>
+        <span class="badge">L'alarme de luminosité</span>
+        <span class="badge badge-new">✦ Nouveau</span>
+      </div>
+      <h1>🔎 Séance 1 — Du besoin au schéma de câblage</h1>
+      <p class="desc">Exprime le besoin, décris les chaînes d'information et d'énergie, choisis tes composants et justifie chaque fil du schéma : pont diviseur, résistance de tirage, résistance de LED.</p>
+    </div>
+    <div class="callout callout-objectif"><span class="co-icon">🎯</span><div class="co-body"><div class="co-title">Objectifs</div><p>À la fin de cette séance, je suis capable de :</p>
+<ul>
+<li>formuler le besoin d&#39;un système (à qui ? sur quoi ? dans quel but ?) et le décliner en fonctions et contraintes ;</li>
+<li>décrire la chaîne d&#39;information (acquérir → traiter → communiquer) et la chaîne d&#39;énergie (alimenter → distribuer → convertir → transmettre) de l&#39;alarme ;</li>
+<li>distinguer un signal analogique d&#39;un signal numérique et choisir la broche Arduino adaptée à chaque composant ;</li>
+<li>dessiner un schéma de câblage et justifier le pont diviseur de la LDR, la résistance de tirage du bouton et la résistance en série de la LED.</li>
+</ul>
+</div></div>
+    
+<div class="student-bar">
+  <span class="sb-info">💾 Tes réponses sont enregistrées automatiquement sur cet appareil.</span>
+  <span class="sb-actions">
+    <button class="btn btn-ghost btn-sm" id="print-answers" type="button">🖨 Imprimer / PDF</button>
+    <button class="btn btn-ghost btn-sm" id="clear-answers" type="button">🗑 Tout effacer</button>
+  </span>
+</div>
+    <div class="prose">
+      <h2>🎯 Objectif</h2>
+<p>Aujourd&#39;hui tu travailles <strong>aux PC en U</strong>, par îlot de 4, sans passer par la zone machines. Mission : avant de brancher quoi que ce soit, <strong>analyser</strong> l&#39;alarme comme un ingénieur : besoin, chaînes d&#39;information et d&#39;énergie, composants et <strong>schéma de câblage</strong> validé. Pas de schéma validé = pas de câblage à la séance 2.</p>
+<p>Rôles : le <strong>chef d&#39;atelier</strong> tient le temps, l&#39;<strong>opérateur CFAO</strong> dessine le schéma sur Tinkercad Circuits, le <strong>contrôleur qualité</strong> vérifie chaque réponse, le <strong>magasinier</strong> identifie chaque composant dans la boîte de l&#39;îlot (sans câbler).</p>
+<h2>🕹️ Déroulé</h2>
+<h3>Étape 1 — Exprimer le besoin (0–10 min)</h3>
+<p>Un système technique répond toujours à un <strong>besoin</strong>. Pour le formuler, réponds aux trois questions de la « bête à cornes » :</p>
+<ul>
+<li><strong>À qui rend-il service ?</strong> (l&#39;utilisateur)</li>
+<li><strong>Sur quoi agit-il ?</strong> (la matière d&#39;œuvre : l&#39;objet ou la situation que le système modifie)</li>
+<li><strong>Dans quel but ?</strong> (la finalité)</li>
+</ul>
+<p>Puis rédige la phrase de besoin : « Ce système rend service à … en agissant sur … pour … ».</p>
+<p>Ma phrase de besoin :</p>
+<div class="answer-field">
+  <textarea rows="3" data-answer-idx="0" placeholder="✏️ Écris ta réponse ici…" aria-label="Zone de réponse de l'élève"></textarea>
+</div>
+<p>Le besoin se décline en <strong>fonctions</strong> (ce que le système doit faire) et en <strong>contraintes</strong> (ce qu&#39;il doit respecter). Point de départ : <em>FP1 : détecter l&#39;ouverture de la malle grâce à la lumière.</em> <em>C1 : être alimenté par le port USB d&#39;un ordinateur (5 V).</em></p>
+<p>Ajoute au moins deux fonctions et deux contraintes (pense au signal d&#39;alerte, à l&#39;armement, au réglage, au boîtier) :</p>
+<div class="answer-field">
+  <textarea rows="3" data-answer-idx="1" placeholder="✏️ Écris ta réponse ici…" aria-label="Zone de réponse de l'élève"></textarea>
+</div>
+<h3>Étape 2 — Chaîne d&#39;information et chaîne d&#39;énergie (10–25 min)</h3>
+<p>Tout système automatisé se décrit avec <strong>deux chaînes</strong> qui travaillent ensemble. <strong>La chaîne d&#39;information</strong> transporte des signaux, pas de puissance :</p>
+<table>
+<thead>
+<tr>
+<th>Fonction</th>
+<th>Rôle</th>
+<th>Composant type</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Acquérir</strong></td>
+<td>transformer une grandeur physique (lumière, appui) en signal électrique</td>
+<td>capteur</td>
+</tr>
+<tr>
+<td><strong>Traiter</strong></td>
+<td>comparer, décider, selon un programme</td>
+<td>carte à microcontrôleur</td>
+</tr>
+<tr>
+<td><strong>Communiquer</strong></td>
+<td>envoyer un ordre à la chaîne d&#39;énergie, ou une information à l&#39;utilisateur</td>
+<td>sorties de la carte, LED</td>
+</tr>
+</tbody></table>
+<p><strong>La chaîne d&#39;énergie</strong> transporte la puissance nécessaire à l&#39;action :</p>
+<table>
+<thead>
+<tr>
+<th>Fonction</th>
+<th>Rôle</th>
+<th>Exemple ici</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Alimenter</strong></td>
+<td>fournir l&#39;énergie</td>
+<td>port USB du PC (5 V)</td>
+</tr>
+<tr>
+<td><strong>Distribuer</strong></td>
+<td>laisser passer ou non l&#39;énergie, sur ordre de la chaîne d&#39;information</td>
+<td>électronique de commande du servo, sortie de la carte pour la LED</td>
+</tr>
+<tr>
+<td><strong>Convertir</strong></td>
+<td>transformer l&#39;énergie électrique en une autre forme</td>
+<td>servo (électrique → mécanique), LED (électrique → lumineuse)</td>
+</tr>
+<tr>
+<td><strong>Transmettre</strong></td>
+<td>acheminer l&#39;énergie convertie jusqu&#39;à l&#39;action utile</td>
+<td>bras du servo et drapeau</td>
+</tr>
+</tbody></table>
+<p>Les deux chaînes se rencontrent à l&#39;<strong>ordre</strong> : la chaîne d&#39;information l&#39;envoie, la chaîne d&#39;énergie l&#39;exécute.</p>
+<p><strong>Question A.</strong> Écris la chaîne d&#39;information de l&#39;alarme sous la forme « Acquérir : … → Traiter : … → Communiquer : … ». Attention : <strong>deux</strong> informations sont acquises (la lumière ET l&#39;appui sur le bouton).</p>
+<div class="answer-field">
+  <textarea rows="3" data-answer-idx="2" placeholder="✏️ Écris ta réponse ici…" aria-label="Zone de réponse de l'élève"></textarea>
+</div>
+<p><strong>Question B.</strong> Écris la chaîne d&#39;énergie du <strong>drapeau</strong> sous la forme « Alimenter : … → Distribuer : … → Convertir : … → Transmettre : … ».</p>
+<div class="answer-field">
+  <textarea rows="3" data-answer-idx="3" placeholder="✏️ Écris ta réponse ici…" aria-label="Zone de réponse de l'élève"></textarea>
+</div>
+<h3>Étape 3 — Choisir les composants (25–35 min)</h3>
+<p>Le magasinier identifie les composants de la boîte ; le contrôleur qualité complète le tableau. Deux notions :</p>
+<ul>
+<li>un signal <strong>analogique</strong> prend toutes les valeurs entre deux limites (la tension sur la LDR varie continûment avec la lumière) ; l&#39;Arduino Uno le convertit en un <strong>entier de 0 à 1023</strong> sur ses broches <strong>A0 à A5</strong> ;</li>
+<li>un signal <strong>numérique</strong> n&#39;a que deux états : <strong>LOW</strong> (0 V) ou <strong>HIGH</strong> (5 V), sur les broches <strong>D2 à D13</strong>, en entrée ou en sortie.</li>
+</ul>
+<p>Le <strong>photo-résistor</strong> (LDR) est une résistance qui <strong>diminue</strong> quand la lumière augmente : de plusieurs centaines de kilo-ohms dans le noir à quelques centaines d&#39;ohms en pleine lumière. Le <strong>servo-moteur</strong> se place à l&#39;angle demandé (0 à 180°) ; trois fils : rouge (5 V), marron ou noir (GND), orange (signal). Le <strong>bouton-poussoir</strong> ferme un contact quand on l&#39;enfonce. La <strong>LED</strong> ne se branche jamais directement sur 5 V : une résistance en série limite le courant.</p>
+<p>Complète le tableau (fonction, composant, grandeur, type de signal, broche Arduino) :</p>
+<table>
+<thead>
+<tr>
+<th>Fonction</th>
+<th>Composant</th>
+<th>Grandeur</th>
+<th>Signal</th>
+<th>Broche</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Acquérir</td>
+<td>photo-résistor</td>
+<td>éclairement</td>
+<td>analogique</td>
+<td>à compléter</td>
+</tr>
+<tr>
+<td>Acquérir</td>
+<td>bouton-poussoir</td>
+<td>à compléter</td>
+<td>à compléter</td>
+<td>à compléter</td>
+</tr>
+<tr>
+<td>Traiter</td>
+<td>à compléter</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td>Communiquer / Convertir</td>
+<td>servo-moteur</td>
+<td>angle du drapeau</td>
+<td>numérique (impulsions)</td>
+<td>à compléter</td>
+</tr>
+<tr>
+<td>Communiquer / Convertir</td>
+<td>LED</td>
+<td>à compléter</td>
+<td>à compléter</td>
+<td>à compléter</td>
+</tr>
+</tbody></table>
+<p>Mon tableau complété :</p>
+<div class="answer-field">
+  <textarea rows="3" data-answer-idx="4" placeholder="✏️ Écris ta réponse ici…" aria-label="Zone de réponse de l'élève"></textarea>
+</div>
+<p><strong>Question D.</strong> Pourquoi la LDR doit-elle aller sur une entrée <strong>analogique</strong> alors que le bouton peut aller sur une entrée <strong>numérique</strong> ?</p>
+<div class="answer-field">
+  <textarea rows="3" data-answer-idx="5" placeholder="✏️ Écris ta réponse ici…" aria-label="Zone de réponse de l'élève"></textarea>
+</div>
+<h3>Étape 4 — Dessiner et justifier le schéma de câblage (35–52 min)</h3>
+<p>L&#39;opérateur CFAO ouvre <strong>Tinkercad Circuits</strong>, place une Arduino Uno et une breadboard, et l&#39;îlot réalise <strong>virtuellement</strong> les quatre sous-montages (aucun câblage réel aujourd&#39;hui), puis recopie le schéma au propre sur la fiche papier.</p>
+<p><strong>Sous-montage 1 — La LDR et son pont diviseur.</strong> L&#39;Arduino ne mesure pas une résistance, seulement des <strong>tensions</strong>. On met donc la LDR <strong>en série</strong> avec une résistance fixe de <strong>10 kΩ</strong> entre 5 V et GND, et on mesure la tension au <strong>point milieu</strong>, relié à <strong>A0</strong>. C&#39;est un <strong>pont diviseur de tension</strong> :</p>
+<ul>
+<li>LDR entre <strong>5 V</strong> et <strong>A0</strong> ;</li>
+<li>résistance de 10 kΩ entre <strong>A0</strong> et <strong>GND</strong>.</li>
+</ul>
+<p>La tension au point milieu vaut : U(A0) = 5 V × R10k ÷ (R_LDR + R10k). Quand la lumière augmente, R_LDR diminue, donc U(A0) <strong>augmente</strong> et le nombre lu par la carte aussi.</p>
+<p><strong>Sous-montage 2 — La LED.</strong> Sortie <strong>D8</strong> → résistance de <strong>220 Ω</strong> → patte longue (+) de la LED → patte courte (−) vers GND.</p>
+<p><strong>Sous-montage 3 — Le servo.</strong> Rouge sur <strong>5 V</strong>, marron/noir sur <strong>GND</strong>, signal sur <strong>D9</strong>. Un seul petit servo (SG90) peut être alimenté par le 5 V de la carte.</p>
+<p><strong>Sous-montage 4 — Le bouton et sa résistance de tirage.</strong> Le bouton relie <strong>5 V</strong> à <strong>D2</strong> quand on l&#39;enfonce. Relâché, D2 n&#39;est reliée à rien : l&#39;entrée est « <strong>flottante</strong> » et lit n&#39;importe quoi (des parasites). On ajoute donc <strong>10 kΩ</strong> entre <strong>D2</strong> et <strong>GND</strong> : au repos, elle « tire » l&#39;entrée à 0 V (LOW) ; à l&#39;appui, le 5 V l&#39;emporte (HIGH). C&#39;est une <strong>résistance de tirage vers le bas</strong> (<em>pull-down</em>).</p>
+<p><strong>Question E.</strong> Estime le nombre lu sur A0 dans deux cas extrêmes : R_LDR ≈ 200 kΩ (noir complet) et R_LDR ≈ 500 Ω (lampe très proche). Rappel : 5 V donne 1023, 0 V donne 0. Dans quel sens varie la valeur avec la lumière ?</p>
+<div class="answer-field">
+  <textarea rows="3" data-answer-idx="6" placeholder="✏️ Écris ta réponse ici…" aria-label="Zone de réponse de l'élève"></textarea>
+</div>
+<p><strong>Question F.</strong> Un autre îlot a oublié la résistance de tirage : le bouton marche « une fois sur deux » et l&#39;alarme s&#39;arme toute seule quand on approche la main. Explique le phénomène avec le mot <em>flottante</em>.</p>
+<div class="answer-field">
+  <textarea rows="3" data-answer-idx="7" placeholder="✏️ Écris ta réponse ici…" aria-label="Zone de réponse de l'élève"></textarea>
+</div>
+<p><strong>Question G.</strong> Pourquoi une résistance de 220 Ω devant la LED, et que risque-t-on sans elle ?</p>
+<div class="answer-field">
+  <textarea rows="3" data-answer-idx="8" placeholder="✏️ Écris ta réponse ici…" aria-label="Zone de réponse de l'élève"></textarea>
+</div>
+<h3>Étape 5 — Validation (52–55 min)</h3>
+<p>Le contrôleur qualité coche : ☐ besoin ; ☐ les deux chaînes ; ☐ tableau complet ; ☐ schéma avec les 4 sous-montages, broches nommées et valeurs des résistances. Le chef d&#39;atelier enregistre le circuit sous <code>alarme-ILOT-n</code> et le montre au professeur.</p>
+<h2>🧠 Ce qu&#39;il faut retenir</h2>
+<ul>
+<li>Un système technique répond à un <strong>besoin</strong> (à qui ? sur quoi ? dans quel but ?) décliné en <strong>fonctions</strong> et <strong>contraintes</strong>.</li>
+<li>La <strong>chaîne d&#39;information</strong> (acquérir → traiter → communiquer) transporte des signaux ; la <strong>chaîne d&#39;énergie</strong> (alimenter → distribuer → convertir → transmettre) transporte la puissance. Elles se rejoignent à l&#39;<strong>ordre</strong>.</li>
+<li>Entrée <strong>analogique</strong> (A0–A5) : un nombre de <strong>0 à 1023</strong> ; entrée ou sortie <strong>numérique</strong> (D2–D13) : <strong>LOW</strong> ou <strong>HIGH</strong>.</li>
+<li>La LDR se mesure avec un <strong>pont diviseur</strong> : la carte lit une tension, pas une résistance.</li>
+<li>Un bouton sur une entrée numérique exige une <strong>résistance de tirage</strong>, sinon l&#39;entrée est <strong>flottante</strong>.</li>
+<li>Une LED se protège toujours par une <strong>résistance en série</strong>.</li>
+</ul>
+<h2>✅ Bilan</h2>
+<p>En deux phrases : qu&#39;est-ce que je sais expliquer sans la fiche ? Qu&#39;est-ce qui reste flou à revoir avant la séance 2 ?</p>
+<div class="answer-field">
+  <textarea rows="3" data-answer-idx="9" placeholder="✏️ Écris ta réponse ici…" aria-label="Zone de réponse de l'élève"></textarea>
+</div>
+
+    </div>
+    
+    
+    <nav class="pager">
+      <a class="pg-prev" href="../jeu-intro/"><span class="pg-label">← Précédent</span><span class="pg-title">🎮 Opération Malle Ouverte — qui capte, qui décide, qui agit ?</span></a>
+      <a class="pg-next" href="../seance-2/"><span class="pg-label">Suivant →</span><span class="pg-title">💻 Séance 2 — Programmer, mesurer, régler le seuil</span></a>
+    </nav>
+  </article>
+</div>
+</main>
+<footer class="site-footer">
+  <div class="wrap footer-grid">
+    <div>
+      <h4>Technologie &amp; SNT</h4>
+      <p>Site pédagogique regroupant les cours, activités et ressources de Technologie du collège et de SNT du lycée.</p>
+    </div>
+    <div>
+      <h4>Niveaux</h4>
+      <ul>
+        <li><a href="../../../5eme/">5ème</a></li>
+        <li><a href="../../../4eme/">4ème</a></li>
+        <li><a href="../../../3eme/">3ème</a></li>
+        <li><a href="../../../snt/">2nde SNT</a></li>
+        <li><a href="../../../sicit/">SI · CIT</a></li>
+        <li><a href="../../../atelier/">Atelier</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Références</h4>
+      <ul>
+        <li><a href="https://eduscol.education.fr/2098/technologie-au-cycle-4" target="_blank" rel="noopener">Programme de Technologie (Eduscol)</a></li>
+        <li><a href="https://eduscol.education.fr/3016/sciences-numeriques-et-technologie-au-lycee" target="_blank" rel="noopener">Programme SNT (Eduscol)</a></li>
+        <li><a href="https://pix.fr" target="_blank" rel="noopener">Pix — compétences numériques</a></li>
+        <li><a href="https://sites.google.com/view/lmtechno25" target="_blank" rel="noopener">Site d'origine (Google Sites)</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="wrap footer-bottom">
+    <span>© M. Eddy Bachaalany · Lycée Montaigne, Beit Chabab</span>
+    <span>Cours de Technologie collège &amp; SNT lycée</span>
+  </div>
+</footer>
+<div class="search-overlay" id="search-overlay" role="dialog" aria-label="Recherche">
+  <div class="search-panel">
+    <div class="search-input-row">
+      <span>🔍</span>
+      <input id="search-input" type="search" placeholder="Rechercher une séquence, une séance, une notion…" autocomplete="off">
+      <kbd>Échap</kbd>
+    </div>
+    <div class="search-results" id="search-results"></div>
+  </div>
+</div>
+<button class="back-to-top" id="back-to-top" type="button" aria-label="Retour en haut">↑</button>
+<script src="../../../assets/client.js?v=08290246cd" defer></script>
+</body>
+</html>

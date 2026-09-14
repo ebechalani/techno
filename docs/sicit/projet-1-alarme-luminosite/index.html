@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="fr" data-base="../../" data-section="sicit" data-v="08290246cd">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>🔦 Projet 1 — L'alarme de luminosité — Technologie &amp; SNT</title>
+<meta name="description" content="Un jeu et trois séances pour concevoir de A à Z un objet qui capte la lumière, décide et agit : du schéma de câblage au programme Arduino, jusqu'au boîtier imprimé en 3D.">
+<meta property="og:title" content="🔦 Projet 1 — L'alarme de luminosité — Technologie &amp; SNT">
+<meta property="og:description" content="Un jeu et trois séances pour concevoir de A à Z un objet qui capte la lumière, décide et agit : du schéma de câblage au programme Arduino, jusqu'au boîtier imprimé en 3D.">
+<meta property="og:type" content="website">
+<link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lexend:wght@500;600;700;800&family=Caveat:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/styles.css?v=08290246cd">
+<script>
+(function(){try{var t=localStorage.getItem("lmtechno-theme");if(!t)t=window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light";document.documentElement.setAttribute("data-theme",t);}catch(e){}})();
+(function(){try{var s=JSON.parse(localStorage.getItem("lmtechno-eleve")||"null");if(!s||!s.section)return;var d=document.documentElement,cur=d.getAttribute("data-section")||"",base=d.getAttribute("data-base")||"./",lv=["5eme","4eme","3eme","snt","sicit"];if(cur==="home"||(lv.indexOf(cur)>=0&&cur!==s.section))location.replace(base+s.section+"/");}catch(e){}})();
+</script>
+<script src="../../assets/firebase-config.js?v=08290246cd"></script>
+
+</head>
+<body>
+<a class="skip-link" href="#contenu">Aller au contenu</a>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="../../index.html">
+      <span class="brand-logo">T</span>
+      <span>Technologie <span style="color:var(--muted);font-weight:500">&amp;</span> SNT
+        <small>Lycée Montaigne, Beit Chabab</small>
+      </span>
+    </a>
+    
+<nav class="main-nav" id="main-nav" aria-label="Navigation principale">
+  <a href="../../index.html">Accueil</a>
+  <a href="../../5eme/" style="--dot:#0d9268">5ème</a>
+  <a href="../../4eme/" style="--dot:#2050d0">4ème</a>
+  <a href="../../3eme/" style="--dot:#7c3aed">3ème</a>
+  <a href="../../snt/" style="--dot:#d9640f">2nde SNT</a>
+  <a href="../../sicit/" style="--dot:#0d8e9c" aria-current="true">SI · CIT</a>
+  <a href="../../atelier/" style="--dot:#b91c1c">Atelier</a>
+  <a class="nav-account" href="../../connexion/">👤 Espace</a>
+</nav>
+    <div class="header-actions">
+      <button class="search-btn" id="search-open" type="button" aria-label="Rechercher">
+        <span>🔍</span><span class="label">Rechercher</span><kbd>Ctrl K</kbd>
+      </button>
+      <button class="icon-btn" id="theme-toggle" type="button" aria-label="Changer de thème">🌙</button>
+      <button class="icon-btn nav-toggle" id="nav-toggle" type="button" aria-label="Menu" aria-expanded="false">☰</button>
+    </div>
+  </div>
+</header>
+<main id="contenu">
+
+<nav class="breadcrumbs wrap" aria-label="Fil d'Ariane">
+    <a href="../../index.html">Accueil</a><span class="sep">›</span>
+    <a href="../">SI · CIT</a><span class="sep">›</span>
+    <span class="current">🔦 Projet 1 — L'alarme de luminosité</span>
+  </nav>
+<div class="wrap course-layout">
+  <aside class="sidebar" style="--accent:undefined;--accent-soft:undefined;">
+    <div class="sb-title"><span class="dot"></span>SI · CIT </div>
+    <nav>
+    <details open>
+      <summary><a href="../projet-1-alarme-luminosite/" style="all:unset;cursor:pointer">L'alarme de luminosité</a></summary>
+      <div class="sb-pages">
+        <a href="../projet-1-alarme-luminosite/jeu-intro/">🎮 Jeu d'intro</a>
+        <a href="../projet-1-alarme-luminosite/seance-1/">Du besoin au schéma</a>
+        <a href="../projet-1-alarme-luminosite/seance-2/">Programmer et mesurer</a>
+        <a href="../projet-1-alarme-luminosite/seance-3/">Boîtier et tests</a>
+        <a href="../projet-1-alarme-luminosite/guide-prof/">Guide du professeur</a>
+      </div>
+    </details>
+    <details>
+      <summary><a href="../projet-2-lampe-energie/" style="all:unset;cursor:pointer">La lampe de bureau</a></summary>
+      <div class="sb-pages">
+        <a href="../projet-2-lampe-energie/jeu-intro/">🎮 Jeu d'intro</a>
+        <a href="../projet-2-lampe-energie/seance-1/">Chaîne d'énergie et mesures</a>
+        <a href="../projet-2-lampe-energie/seance-2/">Concevoir l'abat-jour</a>
+        <a href="../projet-2-lampe-energie/seance-3/">Assembler et conclure</a>
+        <a href="../projet-2-lampe-energie/guide-prof/">Guide du professeur</a>
+      </div>
+    </details>
+    <details>
+      <summary><a href="../projet-3-pont-structure/" style="all:unset;cursor:pointer">Le pont qui résiste</a></summary>
+      <div class="sb-pages">
+        <a href="../projet-3-pont-structure/jeu-intro/">🎮 Jeu d'intro</a>
+        <a href="../projet-3-pont-structure/seance-1/">Observer et supposer</a>
+        <a href="../projet-3-pont-structure/seance-2/">Fabriquer</a>
+        <a href="../projet-3-pont-structure/seance-3/">Essais de charge</a>
+        <a href="../projet-3-pont-structure/guide-prof/">Guide du professeur</a>
+      </div>
+    </details>
+    <details>
+      <summary><a href="../projet-4-innover-objet/" style="all:unset;cursor:pointer">Réinventer un objet</a></summary>
+      <div class="sb-pages">
+        <a href="../projet-4-innover-objet/jeu-intro/">D'où viennent les idées ?</a>
+        <a href="../projet-4-innover-objet/seance-1/">Veille et analyse</a>
+        <a href="../projet-4-innover-objet/seance-2/">Créativité et choix</a>
+        <a href="../projet-4-innover-objet/seance-3/">Maquette et pitch</a>
+        <a href="../projet-4-innover-objet/guide-prof/">Guide du professeur</a>
+      </div>
+    </details>
+    </nav>
+  </aside>
+  <article>
+    <div class="page-head">
+      <div class="kicker">
+        <span class="badge" style="--badge-bg:#e0f5f7;--badge-fg:#0d8e9c">SI</span>
+        <span class="badge">Projet 1</span>
+        <span class="badge badge-new">✦ Nouveau</span>
+      </div>
+      <h1>🔦 Projet 1 — L'alarme de luminosité</h1>
+      <p class="desc">Un jeu et trois séances pour concevoir de A à Z un objet qui capte la lumière, décide et agit : du schéma de câblage au programme Arduino, jusqu'au boîtier imprimé en 3D.</p>
+    </div>
+    <div class="callout callout-objectif"><span class="co-icon">🎯</span><div class="co-body"><div class="co-title">Objectifs de la séquence</div><p>À la fin de cette séquence, je suis capable de :</p>
+<ul>
+<li>exprimer le besoin auquel répond un système technique et le traduire en fonctions à assurer ;</li>
+<li>décrire un système par sa <strong>chaîne d&#39;information</strong> (acquérir → traiter → communiquer) et sa <strong>chaîne d&#39;énergie</strong> ;</li>
+<li>choisir et justifier les composants (photo-résistor, servo-moteur, LED, bouton-poussoir) et dessiner un schéma de câblage avec <strong>pont diviseur</strong> et <strong>résistance de tirage</strong> ;</li>
+<li>programmer une carte Arduino Uno : lecture analogique, test de seuil, commande d&#39;un servo, anti-rebond d&#39;un bouton ;</li>
+<li>mener une expérimentation rigoureuse (tableau de mesures, réglage du seuil) et analyser de façon critique les résultats (seuil mal réglé, <strong>hystérésis</strong>) ;</li>
+<li>modéliser un boîtier en CAO à partir de contraintes mesurées, le faire imprimer en PLA et y intégrer le montage ;</li>
+<li>présenter mes choix et mes résultats dans un compte rendu de projet et les argumenter.</li>
+</ul>
+</div></div>
+    <div class="callout callout-competence"><span class="co-icon">🧭</span><div class="co-body"><div class="co-title">Compétences travaillées</div><p><strong>« Programme d&#39;enseignement optionnel de création et innovation technologiques, et de sciences de l&#39;ingénieur de la classe de seconde générale et technologique »</strong> — arrêté du 17 janvier 2019, BO spécial n°1 du 22 janvier 2019.</p>
+<p><strong>Dominante SI.</strong> Le projet met en œuvre la démarche scientifique telle que le programme la décrit : <strong>observation</strong> (comment réagit un photo-résistor ?), <strong>hypothèse</strong> (« plus il y a de lumière, plus la valeur lue augmente »), <strong>modélisation</strong> (chaînes d&#39;information et d&#39;énergie, schéma de câblage, algorithme), <strong>simulation</strong> (Tinkercad Circuits), <strong>expérimentation matérielle</strong> (campagne de mesures, réglage du seuil sur le montage réel) et <strong>analyse critique des résultats</strong> (déclenchements intempestifs, hystérésis). Le tout se fait <strong>en projet</strong>, par îlots, avec des rôles tournants.</p>
+<p>Compétences SI mobilisées, telles que nommées dans cette séquence :</p>
+<ul>
+<li><strong>Analyser</strong> : exprimer le besoin, identifier les fonctions, décrire les chaînes d&#39;information et d&#39;énergie (séance 1) ;</li>
+<li><strong>Modéliser</strong> : schéma de câblage justifié, algorithme puis programme (séances 1 et 2) ;</li>
+<li><strong>Expérimenter</strong> : protocole de mesures, tableau de valeurs, réglage et validation du seuil, tests fonctionnels (séances 2 et 3) ;</li>
+<li><strong>Communiquer</strong> : schémas, compte rendu, présentation argumentée des résultats et des choix (toutes les séances).</li>
+</ul>
+<p><strong>Champ exploré : l&#39;INFORMATION.</strong> Le cœur du projet est une chaîne d&#39;information complète : une grandeur physique (l&#39;éclairement) est acquise, convertie en nombre, comparée à un seuil, puis transformée en signal visible. Les champs de l&#39;énergie (alimentation par USB, conversion électrique → mécanique par le servo) et des matériaux et structures (boîtier PLA) sont abordés mais restent secondaires.</p>
+<p><strong>Ouverture CIT.</strong> Le boîtier de la séance 3 est traité comme un objet <strong>à concevoir</strong> : contraintes relevées, modélisation, fabrication, test, retour critique. C&#39;est un premier contact avec les compétences CIT « méthodes de créativité et de design de produits » et « présenter des résultats et argumenter », sans démarche de créativité complète (pas de recherche d&#39;idées divergente, pas de veille technologique ici).</p>
+<p><strong>Honnêteté sur le périmètre :</strong> ce qui relève des attendus du programme, c&#39;est la démarche scientifique en projet (observation, hypothèse, modélisation, simulation, expérimentation, analyse critique), le travail en équipe et la présentation argumentée des résultats, dans le champ de l&#39;information. Ce qui relève du <strong>prolongement</strong>, c&#39;est le vocabulaire précis retenu ici (chaîne d&#39;information en trois fonctions acquérir/traiter/communiquer, chaîne d&#39;énergie), les détails techniques (pont diviseur, résistance de tirage, anti-rebond, hystérésis) et la fabrication du boîtier par impression 3D : ce sont des choix pédagogiques de l&#39;équipe, pas des contenus imposés par le BO, et le programme ne prescrit aucune plateforme (Arduino) ni aucun composant particulier.</p>
+</div></div>
+    <div class="prose"><p>Dans l&#39;atelier, une <strong>malle</strong> range le matériel Arduino : cartes, capteurs, servos, breadboards. Le magasinier de chaque îlot en a la responsabilité… et régulièrement, du matériel disparaît ou revient en vrac. Personne n&#39;a rien vu. Idée d&#39;un élève : « et si la malle donnait l&#39;alerte quand on l&#39;ouvre ? » Une malle fermée est <strong>noire</strong> à l&#39;intérieur ; dès qu&#39;on soulève le couvercle, la lumière entre. Il suffit donc d&#39;un composant qui <strong>capte la lumière</strong>, d&#39;un cerveau qui <strong>décide</strong> si le niveau est anormal, et d&#39;un dispositif qui <strong>signale</strong> l&#39;intrusion : un petit drapeau qui se lève et une LED qui clignote. Le magasinier arme ou désarme l&#39;alarme d&#39;un appui sur un bouton.</p>
+<p>C&#39;est exactement un <strong>système technique</strong> au sens des sciences de l&#39;ingénieur : une chaîne d&#39;information (acquérir, traiter, communiquer) et une chaîne d&#39;énergie, que tu vas <strong>analyser</strong>, <strong>modéliser</strong>, <strong>programmer</strong>, <strong>expérimenter</strong> puis <strong>mettre en boîtier</strong>. Le même montage, avec une ligne de code changée, devient une veilleuse qui réagit à la tombée de la nuit ou un détecteur de panne d&#39;éclairage : l&#39;alarme peut se déclencher quand la lumière <strong>monte</strong> ou quand elle <strong>descend</strong>, c&#39;est toi qui choisis le sens.</p>
+<p>Le jeu d&#39;introduction te fait découvrir, cartes en main, qui capte, qui décide et qui agit. La séance 1 est une séance d&#39;<strong>analyse</strong> : besoin, chaînes, choix des composants et schéma de câblage justifié. La séance 2 est une séance de <strong>programmation et d&#39;expérimentation</strong> : tu mesures vraiment, tu règles un seuil à partir de tes propres valeurs. La séance 3 t&#39;emmène à l&#39;atelier pour <strong>concevoir le boîtier</strong> en CAO, le faire imprimer en PLA (permis élève), intégrer le montage et surtout <strong>critiquer</strong> tes résultats : que se passe-t-il quand le seuil est mal réglé, et comment un ingénieur résout ce problème avec une hystérésis.</p>
+<p>À la fin, ton îlot présente un objet qui fonctionne, un schéma, un programme commenté et un compte rendu de mesures. Un vrai mini-projet d&#39;ingénieur.</p>
+</div>
+    <h2 style="margin-top:2rem">Déroulé de la séquence</h2>
+    <div class="seance-list">
+      
+    <a class="seance-item" href="./jeu-intro/" style="--accent:#0d8e9c;--accent-soft:#e0f5f7">
+      <span class="s-num">🎮</span>
+      <span class="s-info">
+        <span class="s-title">🎮 Opération Malle Ouverte — qui capte, qui décide, qui agit ?</span>
+        <span class="s-sub">Une malle pillée, douze cartes à trier, une chaîne humaine et un cahier des charges : découvre capteur, traitement, actionneur et alimentation avant d'écrire une ligne de code.</span>
+      </span>
+      <span class="s-arrow">→</span>
+    </a>
+      
+    <a class="seance-item" href="./seance-1/" style="--accent:#0d8e9c;--accent-soft:#e0f5f7">
+      <span class="s-num">1</span>
+      <span class="s-info">
+        <span class="s-title">🔎 Séance 1 — Du besoin au schéma de câblage</span>
+        <span class="s-sub">Exprime le besoin, décris les chaînes d'information et d'énergie, choisis tes composants et justifie chaque fil du schéma : pont diviseur, résistance de tirage, résistance de LED.</span>
+      </span>
+      <span class="s-arrow">→</span>
+    </a>
+      
+    <a class="seance-item" href="./seance-2/" style="--accent:#0d8e9c;--accent-soft:#e0f5f7">
+      <span class="s-num">2</span>
+      <span class="s-info">
+        <span class="s-title">💻 Séance 2 — Programmer, mesurer, régler le seuil</span>
+        <span class="s-sub">Lecture analogique, campagne de mesures dans trois éclairements, choix du seuil, servo, LED clignotante et bouton anti-rebond : ton alarme fonctionne pour de vrai.</span>
+      </span>
+      <span class="s-arrow">→</span>
+    </a>
+      
+    <a class="seance-item" href="./seance-3/" style="--accent:#0d8e9c;--accent-soft:#e0f5f7">
+      <span class="s-num">3</span>
+      <span class="s-info">
+        <span class="s-title">🧊 Séance 3 — Le boîtier : CAO, impression 3D et tests</span>
+        <span class="s-sub">Mesure, modélise, imprime en PLA, intègre, puis critique tes résultats : seuil mal réglé, servo qui tremble, et la solution des ingénieurs, l'hystérésis.</span>
+      </span>
+      <span class="s-arrow">→</span>
+    </a>
+      
+    <a class="seance-item" href="./guide-prof/" style="--accent:#0d8e9c;--accent-soft:#e0f5f7">
+      <span class="s-num">✔</span>
+      <span class="s-info">
+        <span class="s-title">👨‍🏫 Guide du professeur — L'alarme de luminosité</span>
+        <span class="s-sub">Ancrage au programme SI·CIT, organisation en îlots et demi-groupes, déroulé minuté, corrigés et valeurs attendues, différenciation, évaluation et sécurité.</span>
+      </span>
+      <span class="s-arrow">→</span>
+    </a>
+    </div>
+    
+  </article>
+</div>
+</main>
+<footer class="site-footer">
+  <div class="wrap footer-grid">
+    <div>
+      <h4>Technologie &amp; SNT</h4>
+      <p>Site pédagogique regroupant les cours, activités et ressources de Technologie du collège et de SNT du lycée.</p>
+    </div>
+    <div>
+      <h4>Niveaux</h4>
+      <ul>
+        <li><a href="../../5eme/">5ème</a></li>
+        <li><a href="../../4eme/">4ème</a></li>
+        <li><a href="../../3eme/">3ème</a></li>
+        <li><a href="../../snt/">2nde SNT</a></li>
+        <li><a href="../../sicit/">SI · CIT</a></li>
+        <li><a href="../../atelier/">Atelier</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Références</h4>
+      <ul>
+        <li><a href="https://eduscol.education.fr/2098/technologie-au-cycle-4" target="_blank" rel="noopener">Programme de Technologie (Eduscol)</a></li>
+        <li><a href="https://eduscol.education.fr/3016/sciences-numeriques-et-technologie-au-lycee" target="_blank" rel="noopener">Programme SNT (Eduscol)</a></li>
+        <li><a href="https://pix.fr" target="_blank" rel="noopener">Pix — compétences numériques</a></li>
+        <li><a href="https://sites.google.com/view/lmtechno25" target="_blank" rel="noopener">Site d'origine (Google Sites)</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="wrap footer-bottom">
+    <span>© M. Eddy Bachaalany · Lycée Montaigne, Beit Chabab</span>
+    <span>Cours de Technologie collège &amp; SNT lycée</span>
+  </div>
+</footer>
+<div class="search-overlay" id="search-overlay" role="dialog" aria-label="Recherche">
+  <div class="search-panel">
+    <div class="search-input-row">
+      <span>🔍</span>
+      <input id="search-input" type="search" placeholder="Rechercher une séquence, une séance, une notion…" autocomplete="off">
+      <kbd>Échap</kbd>
+    </div>
+    <div class="search-results" id="search-results"></div>
+  </div>
+</div>
+<button class="back-to-top" id="back-to-top" type="button" aria-label="Retour en haut">↑</button>
+<script src="../../assets/client.js?v=08290246cd" defer></script>
+</body>
+</html>

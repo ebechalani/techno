@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="fr" data-base="../../" data-section="sicit" data-v="08290246cd">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>💡 Projet 2 — La lampe de bureau : où passe l'énergie ? — Technologie &amp; SNT</title>
+<meta name="description" content="Mesure, calcule, compare : conçois une lampe à LED qui éclaire autant qu'une ampoule classique en consommant plusieurs fois moins, et prouve-le avec tes propres chiffres.">
+<meta property="og:title" content="💡 Projet 2 — La lampe de bureau : où passe l'énergie ? — Technologie &amp; SNT">
+<meta property="og:description" content="Mesure, calcule, compare : conçois une lampe à LED qui éclaire autant qu'une ampoule classique en consommant plusieurs fois moins, et prouve-le avec tes propres chiffres.">
+<meta property="og:type" content="website">
+<link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lexend:wght@500;600;700;800&family=Caveat:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/styles.css?v=08290246cd">
+<script>
+(function(){try{var t=localStorage.getItem("lmtechno-theme");if(!t)t=window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light";document.documentElement.setAttribute("data-theme",t);}catch(e){}})();
+(function(){try{var s=JSON.parse(localStorage.getItem("lmtechno-eleve")||"null");if(!s||!s.section)return;var d=document.documentElement,cur=d.getAttribute("data-section")||"",base=d.getAttribute("data-base")||"./",lv=["5eme","4eme","3eme","snt","sicit"];if(cur==="home"||(lv.indexOf(cur)>=0&&cur!==s.section))location.replace(base+s.section+"/");}catch(e){}})();
+</script>
+<script src="../../assets/firebase-config.js?v=08290246cd"></script>
+
+</head>
+<body>
+<a class="skip-link" href="#contenu">Aller au contenu</a>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="../../index.html">
+      <span class="brand-logo">T</span>
+      <span>Technologie <span style="color:var(--muted);font-weight:500">&amp;</span> SNT
+        <small>Lycée Montaigne, Beit Chabab</small>
+      </span>
+    </a>
+    
+<nav class="main-nav" id="main-nav" aria-label="Navigation principale">
+  <a href="../../index.html">Accueil</a>
+  <a href="../../5eme/" style="--dot:#0d9268">5ème</a>
+  <a href="../../4eme/" style="--dot:#2050d0">4ème</a>
+  <a href="../../3eme/" style="--dot:#7c3aed">3ème</a>
+  <a href="../../snt/" style="--dot:#d9640f">2nde SNT</a>
+  <a href="../../sicit/" style="--dot:#0d8e9c" aria-current="true">SI · CIT</a>
+  <a href="../../atelier/" style="--dot:#b91c1c">Atelier</a>
+  <a class="nav-account" href="../../connexion/">👤 Espace</a>
+</nav>
+    <div class="header-actions">
+      <button class="search-btn" id="search-open" type="button" aria-label="Rechercher">
+        <span>🔍</span><span class="label">Rechercher</span><kbd>Ctrl K</kbd>
+      </button>
+      <button class="icon-btn" id="theme-toggle" type="button" aria-label="Changer de thème">🌙</button>
+      <button class="icon-btn nav-toggle" id="nav-toggle" type="button" aria-label="Menu" aria-expanded="false">☰</button>
+    </div>
+  </div>
+</header>
+<main id="contenu">
+
+<nav class="breadcrumbs wrap" aria-label="Fil d'Ariane">
+    <a href="../../index.html">Accueil</a><span class="sep">›</span>
+    <a href="../">SI · CIT</a><span class="sep">›</span>
+    <span class="current">💡 Projet 2 — La lampe de bureau : où passe l'énergie ?</span>
+  </nav>
+<div class="wrap course-layout">
+  <aside class="sidebar" style="--accent:undefined;--accent-soft:undefined;">
+    <div class="sb-title"><span class="dot"></span>SI · CIT </div>
+    <nav>
+    <details>
+      <summary><a href="../projet-1-alarme-luminosite/" style="all:unset;cursor:pointer">L'alarme de luminosité</a></summary>
+      <div class="sb-pages">
+        <a href="../projet-1-alarme-luminosite/jeu-intro/">🎮 Jeu d'intro</a>
+        <a href="../projet-1-alarme-luminosite/seance-1/">Du besoin au schéma</a>
+        <a href="../projet-1-alarme-luminosite/seance-2/">Programmer et mesurer</a>
+        <a href="../projet-1-alarme-luminosite/seance-3/">Boîtier et tests</a>
+        <a href="../projet-1-alarme-luminosite/guide-prof/">Guide du professeur</a>
+      </div>
+    </details>
+    <details open>
+      <summary><a href="../projet-2-lampe-energie/" style="all:unset;cursor:pointer">La lampe de bureau</a></summary>
+      <div class="sb-pages">
+        <a href="../projet-2-lampe-energie/jeu-intro/">🎮 Jeu d'intro</a>
+        <a href="../projet-2-lampe-energie/seance-1/">Chaîne d'énergie et mesures</a>
+        <a href="../projet-2-lampe-energie/seance-2/">Concevoir l'abat-jour</a>
+        <a href="../projet-2-lampe-energie/seance-3/">Assembler et conclure</a>
+        <a href="../projet-2-lampe-energie/guide-prof/">Guide du professeur</a>
+      </div>
+    </details>
+    <details>
+      <summary><a href="../projet-3-pont-structure/" style="all:unset;cursor:pointer">Le pont qui résiste</a></summary>
+      <div class="sb-pages">
+        <a href="../projet-3-pont-structure/jeu-intro/">🎮 Jeu d'intro</a>
+        <a href="../projet-3-pont-structure/seance-1/">Observer et supposer</a>
+        <a href="../projet-3-pont-structure/seance-2/">Fabriquer</a>
+        <a href="../projet-3-pont-structure/seance-3/">Essais de charge</a>
+        <a href="../projet-3-pont-structure/guide-prof/">Guide du professeur</a>
+      </div>
+    </details>
+    <details>
+      <summary><a href="../projet-4-innover-objet/" style="all:unset;cursor:pointer">Réinventer un objet</a></summary>
+      <div class="sb-pages">
+        <a href="../projet-4-innover-objet/jeu-intro/">D'où viennent les idées ?</a>
+        <a href="../projet-4-innover-objet/seance-1/">Veille et analyse</a>
+        <a href="../projet-4-innover-objet/seance-2/">Créativité et choix</a>
+        <a href="../projet-4-innover-objet/seance-3/">Maquette et pitch</a>
+        <a href="../projet-4-innover-objet/guide-prof/">Guide du professeur</a>
+      </div>
+    </details>
+    </nav>
+  </aside>
+  <article>
+    <div class="page-head">
+      <div class="kicker">
+        <span class="badge" style="--badge-bg:#e0f5f7;--badge-fg:#0d8e9c">SI</span>
+        <span class="badge">Projet 2</span>
+        <span class="badge badge-new">✦ Nouveau</span>
+      </div>
+      <h1>💡 Projet 2 — La lampe de bureau : où passe l'énergie ?</h1>
+      <p class="desc">Mesure, calcule, compare : conçois une lampe à LED qui éclaire autant qu'une ampoule classique en consommant plusieurs fois moins, et prouve-le avec tes propres chiffres.</p>
+    </div>
+    <div class="callout callout-objectif"><span class="co-icon">🎯</span><div class="co-body"><div class="co-title">Objectifs de la séquence</div><p>À la fin de cette séquence, je suis capable de :</p>
+<ul>
+<li>décrire la chaîne d&#39;énergie d&#39;une lampe de bureau (alimenter, distribuer, convertir, transmettre, agir) et situer les pertes ;</li>
+<li>mesurer une tension et une intensité au multimètre en basse tension continue (5 V / 12 V) en respectant les règles de branchement ;</li>
+<li>calculer une puissance P = U × I et une énergie E = P × t, avec les bonnes unités ;</li>
+<li>définir le rendement et comparer une LED à une ampoule à incandescence à éclairement comparable, avec des ordres de grandeur réalistes ;</li>
+<li>concevoir en CAO 2D un abat-jour à encoches répondant à des contraintes (chaleur, câble, stabilité, diffusion) et le faire découper au laser en copilote ;</li>
+<li>personnaliser la lampe avec un décor en vinyle découpé au Skycut ;</li>
+<li>rédiger un compte rendu chiffré avec un regard critique sur les incertitudes et les limites du bilan.</li>
+</ul>
+</div></div>
+    <div class="callout callout-competence"><span class="co-icon">🧭</span><div class="co-body"><div class="co-title">Compétences travaillées</div><p><strong>« Programme d&#39;enseignement optionnel de création et innovation technologiques, et de sciences de l&#39;ingénieur de la classe de seconde générale et technologique » — arrêté du 17 janvier 2019, BO spécial n°1 du 22 janvier 2019.</strong></p>
+<p>Champ exploré : l&#39;<strong>énergie</strong>, avec une dominante <strong>SI</strong>.</p>
+<p>Compétences mobilisées, dans la démarche scientifique décrite par le programme (observation, hypothèse, modélisation, simulation, expérimentation matérielle ou virtuelle, analyse critique des résultats), en travail en projet :</p>
+<ul>
+<li><strong>Analyser</strong> : décrire la chaîne d&#39;énergie de la lampe et identifier le maillon où se produisent les pertes (observation, hypothèse).</li>
+<li><strong>Modéliser</strong> : schéma électrique normalisé, calcul de la puissance P = U × I, de l&#39;énergie E = P × t et du rendement η = P utile / P absorbée.</li>
+<li><strong>Expérimenter</strong> : mesures de tension et d&#39;intensité au multimètre sur une LED et sur une ampoule à incandescence, comparaison à éclairement comparable, encadrement des incertitudes (analyse critique des résultats).</li>
+<li><strong>Communiquer</strong> : compte rendu chiffré et argumenté, présenter des résultats et argumenter.</li>
+</ul>
+<p>Côté CIT, la conception de l&#39;abat-jour mobilise les compétences « méthodes de créativité et de design de produits » et « démarche scientifique en équipe » (rôles d&#39;îlot), ainsi que la recherche documentaire pour les ordres de grandeur de rendement des sources lumineuses.</p>
+<p><strong>Honnêteté sur le périmètre :</strong> ce qui relève des attendus du programme, c&#39;est la démarche scientifique appliquée au champ de l&#39;énergie : observer, modéliser (chaîne d&#39;énergie, P, E, rendement), expérimenter (mesures), analyser de façon critique et communiquer des résultats en équipe. Le design de l&#39;abat-jour, sa fabrication au laser et le décor en vinyle au Skycut sont des <strong>prolongements</strong> : ils donnent un objet réel au projet et entraînent des gestes de fabrication numérique, mais le programme n&#39;exige ni boîte à encoches ni sticker. De même, les pourcentages de rendement (≈ 5 % pour l&#39;incandescence, ≈ 30 à 40 % pour la LED) sont des ordres de grandeur issus de données de fabricants, pas des valeurs mesurées au lycée : on ne mesure pas un flux lumineux avec le matériel de l&#39;atelier, et la séquence le dit aux élèves.</p>
+</div></div>
+    <div class="prose"><p>Une lampe de bureau, c&#39;est l&#39;objet le plus banal de ta chambre. Et pourtant, entre la prise murale et la page de ton cahier, l&#39;énergie fait un voyage étonnant : elle change de tension, traverse un interrupteur, devient lumière… et, pour une bonne part, devient de la chaleur que personne n&#39;a demandée. Une vieille ampoule à incandescence transforme environ 95 % de ce qu&#39;elle consomme en chaleur : ce n&#39;est pas une lampe, c&#39;est un petit radiateur qui éclaire un peu.</p>
+<p>Dans ce projet, tu vas suivre l&#39;énergie à la trace. D&#39;abord dans un jeu, en classant des composants et des situations le long de la <strong>chaîne d&#39;énergie</strong>. Puis avec un <strong>multimètre</strong> : tu mesures la tension et l&#39;intensité d&#39;un ruban LED et d&#39;une petite ampoule, en basse tension continue, tu calcules la <strong>puissance</strong>, l&#39;<strong>énergie</strong> sur une année, et tu compares les deux sources <strong>à éclairement comparable</strong> pour parler enfin de <strong>rendement</strong> avec des chiffres.</p>
+<p>Ensuite tu passes à la matière : tu conçois un <strong>abat-jour à encoches</strong> en CAO 2D, découpé au laser dans du contreplaqué, avec le professeur aux commandes et toi en copilote, et tu le personnalises avec un décor en vinyle au <strong>Skycut</strong>. La lampe montée, tu refais tes mesures et tu écris un <strong>bilan énergétique</strong> honnête, incertitudes comprises.</p>
+<p>À la fin, tu repars avec une lampe qui fonctionne et, surtout, avec une réponse chiffrée à la question du titre : où passe l&#39;énergie ?</p>
+</div>
+    <h2 style="margin-top:2rem">Déroulé de la séquence</h2>
+    <div class="seance-list">
+      
+    <a class="seance-item" href="./jeu-intro/" style="--accent:#0d8e9c;--accent-soft:#e0f5f7">
+      <span class="s-num">🎮</span>
+      <span class="s-info">
+        <span class="s-title">🎮 Brigade énergie — Où passe l'énergie ?</span>
+        <span class="s-sub">Douze cartes, une ampoule brûlante et une LED tiède : suis l'énergie à la trace et démasque les fuites.</span>
+      </span>
+      <span class="s-arrow">→</span>
+    </a>
+      
+    <a class="seance-item" href="./seance-1/" style="--accent:#0d8e9c;--accent-soft:#e0f5f7">
+      <span class="s-num">1</span>
+      <span class="s-info">
+        <span class="s-title">🔋 Séance 1 — Chaîne d'énergie et mesures au multimètre</span>
+        <span class="s-sub">Du besoin à la puissance : décris la chaîne d'énergie, mesure U et I sur une LED et une ampoule, et calcule qui gaspille.</span>
+      </span>
+      <span class="s-arrow">→</span>
+    </a>
+      
+    <a class="seance-item" href="./seance-2/" style="--accent:#0d8e9c;--accent-soft:#e0f5f7">
+      <span class="s-num">2</span>
+      <span class="s-info">
+        <span class="s-title">📐 Séance 2 — Concevoir l'abat-jour et le découper au laser</span>
+        <span class="s-sub">Contraintes, boîte à encoches en CAO 2D, peigne de test, puis découpe laser en copilote.</span>
+      </span>
+      <span class="s-arrow">→</span>
+    </a>
+      
+    <a class="seance-item" href="./seance-3/" style="--accent:#0d8e9c;--accent-soft:#e0f5f7">
+      <span class="s-num">3</span>
+      <span class="s-info">
+        <span class="s-title">🔦 Séance 3 — Assembler, décorer, mesurer et conclure</span>
+        <span class="s-sub">Lampe montée, décor Skycut, mesures finales et bilan énergétique chiffré, incertitudes comprises.</span>
+      </span>
+      <span class="s-arrow">→</span>
+    </a>
+      
+    <a class="seance-item" href="./guide-prof/" style="--accent:#0d8e9c;--accent-soft:#e0f5f7">
+      <span class="s-num">✔</span>
+      <span class="s-info">
+        <span class="s-title">👨‍🏫 Guide du professeur — La lampe de bureau</span>
+        <span class="s-sub">Ancrage au programme SI·CIT 2019, organisation en demi-groupes, déroulé minuté, corrigés et valeurs attendues, sécurité basse tension et laser.</span>
+      </span>
+      <span class="s-arrow">→</span>
+    </a>
+    </div>
+    
+  </article>
+</div>
+</main>
+<footer class="site-footer">
+  <div class="wrap footer-grid">
+    <div>
+      <h4>Technologie &amp; SNT</h4>
+      <p>Site pédagogique regroupant les cours, activités et ressources de Technologie du collège et de SNT du lycée.</p>
+    </div>
+    <div>
+      <h4>Niveaux</h4>
+      <ul>
+        <li><a href="../../5eme/">5ème</a></li>
+        <li><a href="../../4eme/">4ème</a></li>
+        <li><a href="../../3eme/">3ème</a></li>
+        <li><a href="../../snt/">2nde SNT</a></li>
+        <li><a href="../../sicit/">SI · CIT</a></li>
+        <li><a href="../../atelier/">Atelier</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Références</h4>
+      <ul>
+        <li><a href="https://eduscol.education.fr/2098/technologie-au-cycle-4" target="_blank" rel="noopener">Programme de Technologie (Eduscol)</a></li>
+        <li><a href="https://eduscol.education.fr/3016/sciences-numeriques-et-technologie-au-lycee" target="_blank" rel="noopener">Programme SNT (Eduscol)</a></li>
+        <li><a href="https://pix.fr" target="_blank" rel="noopener">Pix — compétences numériques</a></li>
+        <li><a href="https://sites.google.com/view/lmtechno25" target="_blank" rel="noopener">Site d'origine (Google Sites)</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="wrap footer-bottom">
+    <span>© M. Eddy Bachaalany · Lycée Montaigne, Beit Chabab</span>
+    <span>Cours de Technologie collège &amp; SNT lycée</span>
+  </div>
+</footer>
+<div class="search-overlay" id="search-overlay" role="dialog" aria-label="Recherche">
+  <div class="search-panel">
+    <div class="search-input-row">
+      <span>🔍</span>
+      <input id="search-input" type="search" placeholder="Rechercher une séquence, une séance, une notion…" autocomplete="off">
+      <kbd>Échap</kbd>
+    </div>
+    <div class="search-results" id="search-results"></div>
+  </div>
+</div>
+<button class="back-to-top" id="back-to-top" type="button" aria-label="Retour en haut">↑</button>
+<script src="../../assets/client.js?v=08290246cd" defer></script>
+</body>
+</html>

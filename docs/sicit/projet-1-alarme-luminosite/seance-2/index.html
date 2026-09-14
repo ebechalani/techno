@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="fr" data-base="../../../" data-section="sicit" data-v="08290246cd">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>💻 Séance 2 — Programmer, mesurer, régler le seuil · L'alarme de luminosité — Technologie &amp; SNT</title>
+<meta name="description" content="Lecture analogique, campagne de mesures dans trois éclairements, choix du seuil, servo, LED clignotante et bouton anti-rebond : ton alarme fonctionne pour de vrai.">
+<meta property="og:title" content="💻 Séance 2 — Programmer, mesurer, régler le seuil · L'alarme de luminosité — Technologie &amp; SNT">
+<meta property="og:description" content="Lecture analogique, campagne de mesures dans trois éclairements, choix du seuil, servo, LED clignotante et bouton anti-rebond : ton alarme fonctionne pour de vrai.">
+<meta property="og:type" content="website">
+<link rel="icon" href="../../../assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lexend:wght@500;600;700;800&family=Caveat:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../../assets/styles.css?v=08290246cd">
+<script>
+(function(){try{var t=localStorage.getItem("lmtechno-theme");if(!t)t=window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light";document.documentElement.setAttribute("data-theme",t);}catch(e){}})();
+(function(){try{var s=JSON.parse(localStorage.getItem("lmtechno-eleve")||"null");if(!s||!s.section)return;var d=document.documentElement,cur=d.getAttribute("data-section")||"",base=d.getAttribute("data-base")||"./",lv=["5eme","4eme","3eme","snt","sicit"];if(cur==="home"||(lv.indexOf(cur)>=0&&cur!==s.section))location.replace(base+s.section+"/");}catch(e){}})();
+</script>
+<script src="../../../assets/firebase-config.js?v=08290246cd"></script>
+
+</head>
+<body>
+<a class="skip-link" href="#contenu">Aller au contenu</a>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="../../../index.html">
+      <span class="brand-logo">T</span>
+      <span>Technologie <span style="color:var(--muted);font-weight:500">&amp;</span> SNT
+        <small>Lycée Montaigne, Beit Chabab</small>
+      </span>
+    </a>
+    
+<nav class="main-nav" id="main-nav" aria-label="Navigation principale">
+  <a href="../../../index.html">Accueil</a>
+  <a href="../../../5eme/" style="--dot:#0d9268">5ème</a>
+  <a href="../../../4eme/" style="--dot:#2050d0">4ème</a>
+  <a href="../../../3eme/" style="--dot:#7c3aed">3ème</a>
+  <a href="../../../snt/" style="--dot:#d9640f">2nde SNT</a>
+  <a href="../../../sicit/" style="--dot:#0d8e9c" aria-current="true">SI · CIT</a>
+  <a href="../../../atelier/" style="--dot:#b91c1c">Atelier</a>
+  <a class="nav-account" href="../../../connexion/">👤 Espace</a>
+</nav>
+    <div class="header-actions">
+      <button class="search-btn" id="search-open" type="button" aria-label="Rechercher">
+        <span>🔍</span><span class="label">Rechercher</span><kbd>Ctrl K</kbd>
+      </button>
+      <button class="icon-btn" id="theme-toggle" type="button" aria-label="Changer de thème">🌙</button>
+      <button class="icon-btn nav-toggle" id="nav-toggle" type="button" aria-label="Menu" aria-expanded="false">☰</button>
+    </div>
+  </div>
+</header>
+<main id="contenu">
+
+<nav class="breadcrumbs wrap" aria-label="Fil d'Ariane">
+    <a href="../../../index.html">Accueil</a><span class="sep">›</span>
+    <a href="../../">SI · CIT</a><span class="sep">›</span>
+    <a href="../">L'alarme de luminosité</a><span class="sep">›</span>
+    <span class="current">💻 Séance 2 — Programmer, mesurer, régler le seuil</span>
+  </nav>
+<div class="wrap course-layout">
+  <aside class="sidebar" style="--accent:undefined;--accent-soft:undefined;">
+    <div class="sb-title"><span class="dot"></span>SI · CIT </div>
+    <nav>
+    <details open>
+      <summary><a href="../../projet-1-alarme-luminosite/" style="all:unset;cursor:pointer">L'alarme de luminosité</a></summary>
+      <div class="sb-pages">
+        <a href="../../projet-1-alarme-luminosite/jeu-intro/">🎮 Jeu d'intro</a>
+        <a href="../../projet-1-alarme-luminosite/seance-1/">Du besoin au schéma</a>
+        <a href="../../projet-1-alarme-luminosite/seance-2/" aria-current="true">Programmer et mesurer</a>
+        <a href="../../projet-1-alarme-luminosite/seance-3/">Boîtier et tests</a>
+        <a href="../../projet-1-alarme-luminosite/guide-prof/">Guide du professeur</a>
+      </div>
+    </details>
+    <details>
+      <summary><a href="../../projet-2-lampe-energie/" style="all:unset;cursor:pointer">La lampe de bureau</a></summary>
+      <div class="sb-pages">
+        <a href="../../projet-2-lampe-energie/jeu-intro/">🎮 Jeu d'intro</a>
+        <a href="../../projet-2-lampe-energie/seance-1/">Chaîne d'énergie et mesures</a>
+        <a href="../../projet-2-lampe-energie/seance-2/">Concevoir l'abat-jour</a>
+        <a href="../../projet-2-lampe-energie/seance-3/">Assembler et conclure</a>
+        <a href="../../projet-2-lampe-energie/guide-prof/">Guide du professeur</a>
+      </div>
+    </details>
+    <details>
+      <summary><a href="../../projet-3-pont-structure/" style="all:unset;cursor:pointer">Le pont qui résiste</a></summary>
+      <div class="sb-pages">
+        <a href="../../projet-3-pont-structure/jeu-intro/">🎮 Jeu d'intro</a>
+        <a href="../../projet-3-pont-structure/seance-1/">Observer et supposer</a>
+        <a href="../../projet-3-pont-structure/seance-2/">Fabriquer</a>
+        <a href="../../projet-3-pont-structure/seance-3/">Essais de charge</a>
+        <a href="../../projet-3-pont-structure/guide-prof/">Guide du professeur</a>
+      </div>
+    </details>
+    <details>
+      <summary><a href="../../projet-4-innover-objet/" style="all:unset;cursor:pointer">Réinventer un objet</a></summary>
+      <div class="sb-pages">
+        <a href="../../projet-4-innover-objet/jeu-intro/">D'où viennent les idées ?</a>
+        <a href="../../projet-4-innover-objet/seance-1/">Veille et analyse</a>
+        <a href="../../projet-4-innover-objet/seance-2/">Créativité et choix</a>
+        <a href="../../projet-4-innover-objet/seance-3/">Maquette et pitch</a>
+        <a href="../../projet-4-innover-objet/guide-prof/">Guide du professeur</a>
+      </div>
+    </details>
+    </nav>
+  </aside>
+  <article>
+    <div class="page-head">
+      <div class="kicker">
+        <span class="badge" style="--badge-bg:#e0f5f7;--badge-fg:#0d8e9c">SI</span>
+        <span class="badge">L'alarme de luminosité</span>
+        <span class="badge badge-new">✦ Nouveau</span>
+      </div>
+      <h1>💻 Séance 2 — Programmer, mesurer, régler le seuil</h1>
+      <p class="desc">Lecture analogique, campagne de mesures dans trois éclairements, choix du seuil, servo, LED clignotante et bouton anti-rebond : ton alarme fonctionne pour de vrai.</p>
+    </div>
+    <div class="callout callout-objectif"><span class="co-icon">🎯</span><div class="co-body"><div class="co-title">Objectifs</div><p>À la fin de cette séance, je suis capable de :</p>
+<ul>
+<li>câbler le montage sur breadboard à partir du schéma et le faire vérifier avant la mise sous tension ;</li>
+<li>lire une entrée analogique avec Arduino et afficher les valeurs au moniteur série ;</li>
+<li>réaliser une campagne de mesures (trois conditions, trois mesures, moyenne, dispersion) et en déduire un seuil justifié ;</li>
+<li>programmer la décision (seuil), la commande du servo et de la LED, et la lecture d&#39;un bouton sur front avec anti-rebond ;</li>
+<li>valider le fonctionnement avec un protocole de tests et noter les résultats.</li>
+</ul>
+</div></div>
+    
+<div class="student-bar">
+  <span class="sb-info">💾 Tes réponses sont enregistrées automatiquement sur cet appareil.</span>
+  <span class="sb-actions">
+    <button class="btn btn-ghost btn-sm" id="print-answers" type="button">🖨 Imprimer / PDF</button>
+    <button class="btn btn-ghost btn-sm" id="clear-answers" type="button">🗑 Tout effacer</button>
+  </span>
+</div>
+    <div class="prose">
+      <h2>🎯 Objectif</h2>
+<p>Aujourd&#39;hui, ton schéma devient un <strong>montage réel</strong> et un <strong>programme</strong>. Tu travailles aux PC en U, par îlot, avec la boîte de composants : pas de zone machines. Deux temps : d&#39;abord <strong>mesurer</strong> ce que « voit » vraiment le photo-résistor dans trois situations, ensuite <strong>programmer</strong> l&#39;alarme complète (seuil, servo, LED, bouton anti-rebond) et la <strong>tester</strong> selon un protocole.</p>
+<p>Rôles : l&#39;<strong>opérateur CFAO</strong> est au clavier (Arduino IDE), le <strong>magasinier</strong> câble sur la breadboard, le <strong>contrôleur qualité</strong> relit chaque fil avant l&#39;USB et remplit les tableaux, le <strong>chef d&#39;atelier</strong> tient le temps et fait tourner la souris (chacun doit avoir tapé du code).</p>
+<h2>🕹️ Déroulé</h2>
+<h3>Étape 1 — Câbler et vérifier (0–7 min)</h3>
+<ol>
+<li>Le magasinier réalise sur la breadboard les 4 sous-montages de la séance 1 : LDR + 10 kΩ sur <strong>A0</strong>, LED + 220 Ω sur <strong>D8</strong>, servo sur <strong>D9</strong>, bouton + 10 kΩ de tirage sur <strong>D2</strong>.</li>
+<li>Le contrôleur qualité vérifie <strong>chaque fil</strong> avec le schéma, puis : aucun fil direct entre 5 V et GND (court-circuit), LED dans le bon sens (patte longue côté résistance), rouge du servo sur 5 V.</li>
+<li>Seulement ensuite, l&#39;opérateur branche l&#39;USB. Si la carte s&#39;éteint ou chauffe : débranche immédiatement et appelle le professeur.</li>
+</ol>
+<h3>Étape 2 — Programme 1 : lire et afficher (7–17 min)</h3>
+<p>Dans Arduino IDE, tape ce premier programme, téléverse-le, puis ouvre le <strong>moniteur série</strong> (loupe en haut à droite, vitesse 9600).</p>
+<pre><code>const int brocheLDR = A0;
+
+void setup() {
+  Serial.begin(9600);
+}
+
+void loop() {
+  int valeur = analogRead(brocheLDR);
+  Serial.println(valeur);
+  delay(200);
+}
+</code></pre>
+<ul>
+<li><code>analogRead(A0)</code> lit la tension sur A0 et renvoie un entier de <strong>0</strong> (0 V) à <strong>1023</strong> (5 V).</li>
+<li><code>Serial.println</code> envoie la valeur au PC pour que tu la voies.</li>
+<li><code>delay(200)</code> attend 200 ms : cinq mesures par seconde.</li>
+</ul>
+<p>Passe la main au-dessus de la LDR : les nombres bougent ? Le montage est bon. Sinon, retour au contrôleur.</p>
+<h3>Étape 3 — Campagne de mesures (17–29 min)</h3>
+<p>Une mesure unique ne vaut rien : <strong>trois mesures</strong> par condition, puis la <strong>moyenne</strong>. Les trois conditions reproduisent la vie de la malle :</p>
+<table>
+<thead>
+<tr>
+<th>Condition</th>
+<th>Comment la réaliser</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Obscurité</strong> (malle fermée)</td>
+<td>boîte à chaussures retournée sur le montage, couvercle bien fermé</td>
+</tr>
+<tr>
+<td><strong>Lumière de la salle</strong> (malle ouverte)</td>
+<td>montage à découvert sur la table, éclairage habituel</td>
+</tr>
+<tr>
+<td><strong>Lampe</strong> (torche du téléphone à 10 cm)</td>
+<td>pire cas : quelqu&#39;un éclaire directement l&#39;intérieur</td>
+</tr>
+</tbody></table>
+<p>Relevé 1 — obscurité : trois valeurs lues, puis moyenne :</p>
+<div class="answer-field">
+  <textarea rows="3" data-answer-idx="0" placeholder="✏️ Écris ta réponse ici…" aria-label="Zone de réponse de l'élève"></textarea>
+</div>
+<p>Relevé 2 — lumière de la salle : trois valeurs lues, puis moyenne :</p>
+<div class="answer-field">
+  <textarea rows="3" data-answer-idx="1" placeholder="✏️ Écris ta réponse ici…" aria-label="Zone de réponse de l'élève"></textarea>
+</div>
+<p>Relevé 3 — lampe à 10 cm : trois valeurs lues, puis moyenne :</p>
+<div class="answer-field">
+  <textarea rows="3" data-answer-idx="2" placeholder="✏️ Écris ta réponse ici…" aria-label="Zone de réponse de l'élève"></textarea>
+</div>
+<p><strong>Question A.</strong> Les valeurs augmentent-elles ou diminuent-elles avec la lumière ? Est-ce cohérent avec ta prévision de la question E de la séance 1 (pont diviseur, LDR côté 5 V) ?</p>
+<div class="answer-field">
+  <textarea rows="3" data-answer-idx="3" placeholder="✏️ Écris ta réponse ici…" aria-label="Zone de réponse de l'élève"></textarea>
+</div>
+<p><strong>Question B.</strong> Dans une même condition, les trois valeurs sont-elles identiques ? De combien varient-elles ? D&#39;où vient cette dispersion (ombre de ta main, néon, personne qui passe…) ?</p>
+<div class="answer-field">
+  <textarea rows="3" data-answer-idx="4" placeholder="✏️ Écris ta réponse ici…" aria-label="Zone de réponse de l'élève"></textarea>
+</div>
+<h3>Étape 4 — Choisir le seuil (29–35 min)</h3>
+<p>L&#39;alarme doit distinguer malle <strong>fermée</strong> (obscurité) et <strong>ouverte</strong> (lumière de la salle). Le seuil se place <strong>entre</strong> ces deux moyennes, le plus loin possible des deux, pour que la dispersion de la question B ne fasse pas basculer l&#39;alarme par erreur. Règle simple : <strong>seuil = (moyenne obscurité + moyenne lumière de la salle) ÷ 2</strong>.</p>
+<p><strong>Question C.</strong> Calcule ton seuil et justifie-le en une phrase. Puis explique ce qui se passerait avec un seuil choisi 20 unités au-dessus de la valeur « obscurité ».</p>
+<div class="answer-field">
+  <textarea rows="3" data-answer-idx="5" placeholder="✏️ Écris ta réponse ici…" aria-label="Zone de réponse de l'élève"></textarea>
+</div>
+<h3>Étape 5 — Programme 2 : l&#39;alarme complète (35–47 min)</h3>
+<p>Remplace le programme 1 par celui-ci. <strong>Écris ton seuil</strong> à la place de 400 et choisis le sens de l&#39;alerte.</p>
+<pre><code>#include &lt;Servo.h&gt;
+
+const int brocheLDR    = A0;
+const int brocheLED    = 8;
+const int brocheServo  = 9;
+const int brocheBouton = 2;
+
+const int  seuil         = 400;   // TA valeur calculée à l&#39;étape 4
+const bool alerteSiClair = true;  // true : alerte quand la lumière apparaît
+                                  // false : alerte quand la lumière disparaît
+
+Servo drapeau;
+bool alarmeArmee = false;
+bool boutonAvant = LOW;
+
+void setup() {
+  pinMode(brocheLED, OUTPUT);
+  pinMode(brocheBouton, INPUT);
+  drapeau.attach(brocheServo);
+  drapeau.write(0);
+  Serial.begin(9600);
+}
+
+void loop() {
+  // 1. Le bouton : on réagit seulement au passage relâché -&gt; appuyé
+  bool bouton = digitalRead(brocheBouton);
+  if (bouton == HIGH &amp;&amp; boutonAvant == LOW) {
+    alarmeArmee = !alarmeArmee;   // bascule armée / désarmée
+    delay(50);                    // anti-rebond
+  }
+  boutonAvant = bouton;
+
+  // 2. Le capteur et la décision
+  int valeur = analogRead(brocheLDR);
+  bool lumiere = (valeur &gt; seuil);
+  bool alerte  = alarmeArmee &amp;&amp; (lumiere == alerteSiClair);
+
+  // 3. Les actionneurs
+  if (alerte) {
+    drapeau.write(90);
+    digitalWrite(brocheLED, HIGH);
+    delay(100);
+    digitalWrite(brocheLED, LOW);
+    delay(100);
+  } else {
+    drapeau.write(0);
+    digitalWrite(brocheLED, LOW);
+  }
+  Serial.println(valeur);
+}
+</code></pre>
+<p>Lis le programme avec ton îlot avant de le téléverser. Trois idées :</p>
+<ul>
+<li><strong>Le seuil</strong> : <code>valeur &gt; seuil</code> donne vrai ou faux ; c&#39;est la règle « SI… ALORS » du jeu d&#39;introduction.</li>
+<li><strong>Le front montant</strong> : on ne bascule que quand le bouton <strong>passe</strong> de LOW à HIGH (<code>bouton == HIGH &amp;&amp; boutonAvant == LOW</code>). Sinon, doigt appuyé, l&#39;alarme s&#39;armerait et se désarmerait des centaines de fois par seconde.</li>
+<li><strong>L&#39;anti-rebond</strong> : un contact mécanique <strong>rebondit</strong> pendant quelques millisecondes et la carte voit plusieurs appuis. Le <code>delay(50)</code> les ignore.</li>
+</ul>
+<p><strong>Question D.</strong> À quoi sert la variable <code>boutonAvant</code> ? Que se passerait-il si on l&#39;enlevait et qu&#39;on écrivait simplement <code>if (bouton == HIGH)</code> ?</p>
+<div class="answer-field">
+  <textarea rows="3" data-answer-idx="6" placeholder="✏️ Écris ta réponse ici…" aria-label="Zone de réponse de l'élève"></textarea>
+</div>
+<p><strong>Question E.</strong> Ligne <code>bool alerte = alarmeArmee &amp;&amp; (lumiere == alerteSiClair);</code> — explique dans quel cas exactement <code>alerte</code> vaut vrai quand <code>alerteSiClair</code> est <code>false</code>. Quel usage de l&#39;alarme cela permet-il ?</p>
+<div class="answer-field">
+  <textarea rows="3" data-answer-idx="7" placeholder="✏️ Écris ta réponse ici…" aria-label="Zone de réponse de l'élève"></textarea>
+</div>
+<h3>Étape 6 — Protocole de tests (47–52 min)</h3>
+<p>Le contrôleur qualité réalise <strong>dans l&#39;ordre</strong> les actions du tableau et note l&#39;<strong>observé</strong> en face de l&#39;<strong>attendu</strong>. Un test raté n&#39;est pas un échec : c&#39;est une information.</p>
+<table>
+<thead>
+<tr>
+<th>Action</th>
+<th>Attendu</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Branchement, alarme non armée, boîte ouverte</td>
+<td>drapeau baissé, LED éteinte</td>
+</tr>
+<tr>
+<td>Un appui sur le bouton</td>
+<td>alarme armée : boîte ouverte → drapeau levé, LED clignote</td>
+</tr>
+<tr>
+<td>Boîte fermée sur le montage</td>
+<td>drapeau baissé, LED éteinte</td>
+</tr>
+<tr>
+<td>Boîte rouverte</td>
+<td>drapeau levé, LED clignote</td>
+</tr>
+<tr>
+<td>Un appui sur le bouton</td>
+<td>désarmée : plus rien ne bouge même boîte ouverte</td>
+</tr>
+<tr>
+<td>Appui long de 3 secondes</td>
+<td>une seule bascule, pas plusieurs</td>
+</tr>
+</tbody></table>
+<p>Résultats observés (une ligne par test, et le nombre de tests réussis sur 6) :</p>
+<div class="answer-field">
+  <textarea rows="3" data-answer-idx="8" placeholder="✏️ Écris ta réponse ici…" aria-label="Zone de réponse de l'élève"></textarea>
+</div>
+<p><strong>Question F.</strong> Pose une main à demi au-dessus de la LDR pour obtenir une valeur proche du seuil. Que fait le servo ? Note précisément ce que tu observes : c&#39;est le point de départ de l&#39;analyse critique de la séance 3.</p>
+<div class="answer-field">
+  <textarea rows="3" data-answer-idx="9" placeholder="✏️ Écris ta réponse ici…" aria-label="Zone de réponse de l'élève"></textarea>
+</div>
+<h3>Étape 7 — Rangement et bilan (52–55 min)</h3>
+<p>Le magasinier débranche l&#39;USB <strong>avant</strong> de toucher au montage, puis range les composants. L&#39;opérateur enregistre le programme sous <code>alarme-ILOT-n.ino</code>.</p>
+<h2>🧠 Ce qu&#39;il faut retenir</h2>
+<ul>
+<li><code>analogRead</code> renvoie un nombre de <strong>0 à 1023</strong> proportionnel à la tension sur l&#39;entrée.</li>
+<li>Une <strong>campagne de mesures</strong> = plusieurs mesures par condition, une moyenne, une estimation de la dispersion.</li>
+<li>Le <strong>seuil</strong> se place entre les deux états à distinguer, le plus loin possible des deux.</li>
+<li>Un bouton se lit sur un <strong>front</strong> (changement d&#39;état) et se protège par un <strong>anti-rebond</strong>.</li>
+<li>Un programme Arduino suit la chaîne d&#39;information : <strong>acquérir</strong> (<code>analogRead</code>, <code>digitalRead</code>) → <strong>traiter</strong> (<code>if</code>) → <strong>communiquer</strong> (<code>digitalWrite</code>, <code>servo.write</code>).</li>
+</ul>
+<h2>✅ Bilan</h2>
+<p>En trois lignes : mon seuil, comment je l&#39;ai choisi, et le test qui a le moins bien marché (et pourquoi, selon moi).</p>
+<div class="answer-field">
+  <textarea rows="3" data-answer-idx="10" placeholder="✏️ Écris ta réponse ici…" aria-label="Zone de réponse de l'élève"></textarea>
+</div>
+
+    </div>
+    
+    
+    <nav class="pager">
+      <a class="pg-prev" href="../seance-1/"><span class="pg-label">← Précédent</span><span class="pg-title">🔎 Séance 1 — Du besoin au schéma de câblage</span></a>
+      <a class="pg-next" href="../seance-3/"><span class="pg-label">Suivant →</span><span class="pg-title">🧊 Séance 3 — Le boîtier : CAO, impression 3D et tests</span></a>
+    </nav>
+  </article>
+</div>
+</main>
+<footer class="site-footer">
+  <div class="wrap footer-grid">
+    <div>
+      <h4>Technologie &amp; SNT</h4>
+      <p>Site pédagogique regroupant les cours, activités et ressources de Technologie du collège et de SNT du lycée.</p>
+    </div>
+    <div>
+      <h4>Niveaux</h4>
+      <ul>
+        <li><a href="../../../5eme/">5ème</a></li>
+        <li><a href="../../../4eme/">4ème</a></li>
+        <li><a href="../../../3eme/">3ème</a></li>
+        <li><a href="../../../snt/">2nde SNT</a></li>
+        <li><a href="../../../sicit/">SI · CIT</a></li>
+        <li><a href="../../../atelier/">Atelier</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Références</h4>
+      <ul>
+        <li><a href="https://eduscol.education.fr/2098/technologie-au-cycle-4" target="_blank" rel="noopener">Programme de Technologie (Eduscol)</a></li>
+        <li><a href="https://eduscol.education.fr/3016/sciences-numeriques-et-technologie-au-lycee" target="_blank" rel="noopener">Programme SNT (Eduscol)</a></li>
+        <li><a href="https://pix.fr" target="_blank" rel="noopener">Pix — compétences numériques</a></li>
+        <li><a href="https://sites.google.com/view/lmtechno25" target="_blank" rel="noopener">Site d'origine (Google Sites)</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="wrap footer-bottom">
+    <span>© M. Eddy Bachaalany · Lycée Montaigne, Beit Chabab</span>
+    <span>Cours de Technologie collège &amp; SNT lycée</span>
+  </div>
+</footer>
+<div class="search-overlay" id="search-overlay" role="dialog" aria-label="Recherche">
+  <div class="search-panel">
+    <div class="search-input-row">
+      <span>🔍</span>
+      <input id="search-input" type="search" placeholder="Rechercher une séquence, une séance, une notion…" autocomplete="off">
+      <kbd>Échap</kbd>
+    </div>
+    <div class="search-results" id="search-results"></div>
+  </div>
+</div>
+<button class="back-to-top" id="back-to-top" type="button" aria-label="Retour en haut">↑</button>
+<script src="../../../assets/client.js?v=08290246cd" defer></script>
+</body>
+</html>
