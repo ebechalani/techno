@@ -76,6 +76,9 @@ function renderCardSheet(rawTitle, cards) {
  * carte. Quand le titre annonce un nombre (« les 12 cartes »), on s'en sert pour
  * trancher ; sinon on retombe sur la forme la plus courante selon la largeur.
  */
+// Vocabulaire des intitulés de colonne (par opposition au texte d'une carte).
+const LABEL_WORDS = /^(cartes?|fiches?|contenu|étiquettes?|etiquettes?|description|intitulé|nom|type|réponse|catégorie|colonne)\b/i;
+
 function cardsFromTable(rows, expected) {
   const grid = rows
     .map((r) => r.trim().replace(/^\|/, "").replace(/\|\s*$/, "").split("|").map((c) => c.trim()))
@@ -97,6 +100,14 @@ function cardsFromTable(rows, expected) {
     if (C.length === expected) return C;
   }
   if (!head.length) return B;        // en-tête vide -> corps seul
+  // L'en-tête est-il un jeu d'INTITULÉS de colonne plutôt que de vraies cartes ?
+  const allSame = head.every((h) => h === head[0]);
+  const isLabels = allSame || head.every((h) => h.length < 30 && LABEL_WORDS.test(h));
+  if (isLabels) {
+    // intitulés identiques (« Carte | Carte | Carte ») -> chaque CELLULE est une carte ;
+    // intitulés distincts (« Carte | Description | Étiquette ») -> chaque LIGNE est une carte.
+    return allSame ? B : C;
+  }
   if (width >= 3) return A;          // grille large -> chaque cellule est une carte
   return width === 2 ? C : B;        // 2 colonnes -> paires ; 1 colonne -> intitulé + cartes
 }
