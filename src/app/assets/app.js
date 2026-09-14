@@ -190,9 +190,14 @@ export async function listMyClasses() {
   return toList(s);
 }
 
+// Supprime la classe ET toutes les données rattachées (droit à l'effacement).
+// L'ordre compte : les règles autorisent ces suppressions parce que la classe
+// appartient encore au professeur — on efface donc `classes/...` en DERNIER.
 export async function deleteClass(classId, code) {
   const uid = auth.currentUser.uid;
   await remove(ref(db, "work/" + classId));
+  await remove(ref(db, "groupwork/" + classId));
+  await remove(ref(db, "groups/" + classId));
   await remove(ref(db, "students/" + classId));
   if (code) await remove(ref(db, "classCodes/" + code)).catch(() => {});
   await remove(ref(db, "classes/" + uid + "/" + classId));
