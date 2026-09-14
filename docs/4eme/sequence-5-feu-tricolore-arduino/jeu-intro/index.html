@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr" data-base="../../../" data-section="4eme" data-v="c85901ed9e">
+<html lang="fr" data-base="../../../" data-section="4eme" data-v="204b541532">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -12,12 +12,12 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lexend:wght@500;600;700;800&family=Caveat:wght@500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../../../assets/styles.css?v=c85901ed9e">
+<link rel="stylesheet" href="../../../assets/styles.css?v=204b541532">
 <script>
 (function(){try{var t=localStorage.getItem("lmtechno-theme");if(!t)t=window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light";document.documentElement.setAttribute("data-theme",t);}catch(e){}})();
 (function(){try{var s=JSON.parse(localStorage.getItem("lmtechno-eleve")||"null");if(!s||!s.section)return;var d=document.documentElement,cur=d.getAttribute("data-section")||"",base=d.getAttribute("data-base")||"./",lv=["5eme","4eme","3eme","snt","sicit"];if(cur==="home"||(lv.indexOf(cur)>=0&&cur!==s.section))location.replace(base+s.section+"/");}catch(e){}})();
 </script>
-<script src="../../../assets/firebase-config.js?v=c85901ed9e"></script>
+<script src="../../../assets/firebase-config.js?v=204b541532"></script>
 
 </head>
 <body>
@@ -253,31 +253,14 @@
 </ul>
 <p>À la séance 1, on apprendra à dessiner ce cycle proprement (l&#39;organigramme) et à câbler nos LED sur une vraie carte Arduino, sans danger.</p>
 <hr>
-<h3>✂️ À découper — les cartes-étapes (manche 1)</h3>
-<table>
-<thead>
-<tr>
-<th></th>
-<th></th>
-<th></th>
-</tr>
-</thead>
-<tbody><tr>
-<td>Allumer le vert</td>
-<td>Attendre 8 secondes</td>
-<td>Éteindre le vert</td>
-</tr>
-<tr>
-<td>Allumer l&#39;orange</td>
-<td>Attendre 3 secondes</td>
-<td>Éteindre l&#39;orange</td>
-</tr>
-<tr>
-<td>Allumer le rouge</td>
-<td>Attendre 8 secondes</td>
-<td>Éteindre le rouge, puis recommencer au début</td>
-</tr>
-</tbody></table>
+<section class="cards-sheet" id="cartes-20">
+  <div class="cards-head">
+    <h3 class="cards-title">✂️ À découper — les cartes-étapes (manche 1)</h3>
+    <span class="cards-count">9 cartes</span>
+    <button class="btn btn-ghost btn-sm cards-print" type="button" data-print-cards="cartes-20">🖨 Imprimer ces cartes</button>
+  </div>
+  <ol class="cut-cards"><li class="cut-card"><span class="cut-card-n">1</span><span class="cut-card-t">Allumer le vert</span></li><li class="cut-card"><span class="cut-card-n">2</span><span class="cut-card-t">Attendre 8 secondes</span></li><li class="cut-card"><span class="cut-card-n">3</span><span class="cut-card-t">Éteindre le vert</span></li><li class="cut-card"><span class="cut-card-n">4</span><span class="cut-card-t">Allumer l&#39;orange</span></li><li class="cut-card"><span class="cut-card-n">5</span><span class="cut-card-t">Attendre 3 secondes</span></li><li class="cut-card"><span class="cut-card-n">6</span><span class="cut-card-t">Éteindre l&#39;orange</span></li><li class="cut-card"><span class="cut-card-n">7</span><span class="cut-card-t">Allumer le rouge</span></li><li class="cut-card"><span class="cut-card-n">8</span><span class="cut-card-t">Attendre 8 secondes</span></li><li class="cut-card"><span class="cut-card-n">9</span><span class="cut-card-t">Éteindre le rouge, puis recommencer au début</span></li></ol>
+</section>
 
     </div>
     
@@ -381,6 +364,6 @@
   </div>
 </div>
 <button class="back-to-top" id="back-to-top" type="button" aria-label="Retour en haut">↑</button>
-<script src="../../../assets/client.js?v=c85901ed9e" defer></script>
+<script src="../../../assets/client.js?v=204b541532" defer></script>
 </body>
 </html>

@@ -215,6 +215,29 @@
   var printBtn = document.getElementById("print-answers");
   if (printBtn) printBtn.addEventListener("click", function () { window.print(); });
 
+  /* ---------- Impression des cartes à découper ---------- */
+  /* On clone la planche demandée dans un conteneur de premier niveau : la CSS
+     d'impression masque alors tout le reste de la page (cf. .printing-cards). */
+  document.querySelectorAll("[data-print-cards]").forEach(function (btn) {
+    btn.addEventListener("click", function () {
+      var sheet = document.getElementById(btn.getAttribute("data-print-cards"));
+      if (!sheet) return;
+      var root = document.getElementById("cards-print-root");
+      if (!root) {
+        root = document.createElement("div");
+        root.id = "cards-print-root";
+        document.body.appendChild(root);
+      }
+      root.innerHTML = "";
+      root.appendChild(sheet.cloneNode(true));
+      document.documentElement.classList.add("printing-cards");
+      window.print();
+    });
+  });
+  window.addEventListener("afterprint", function () {
+    document.documentElement.classList.remove("printing-cards");
+  });
+
   /* ---------- Quiz auto-corrigés ---------- */
   var quizQs = document.querySelectorAll(".quiz-q");
   quizQs.forEach(function (qEl) {

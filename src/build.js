@@ -35,6 +35,116 @@ const esc = (s) =>
     .replace(/>/g, "&gt;")
     .replace(/"/g, "&quot;");
 
+/** Échappe le texte destiné à un attribut/contenu HTML. */
+function escHtml(s) {
+  return String(s == null ? "" : s)
+    .replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
+}
+
+let cardSheetSeq = 0;
+
+/**
+ * Transforme une section « ✂️ … à découper » suivie d'un tableau en planche de
+ * cartes prête à imprimer (grille + bouton d'impression).
+ * Note : en Markdown la 1re ligne du tableau est l'en-tête — ici elle contient
+ * de vraies cartes. On récupère donc TOUTES les cellules non vides (th + td).
+ */
+function renderCardSheet(rawTitle, cards) {
+  const id = `cartes-${++cardSheetSeq}`;
+  const title = rawTitle.replace(/^\s*✂️\s*/, "").trim();
+  const items = cards
+    .map((c, n) => `<li class="cut-card"><span class="cut-card-n">${n + 1}</span><span class="cut-card-t">${marked.parseInline(c)}</span></li>`)
+    .join("");
+  return `
+<section class="cards-sheet" id="${id}">
+  <div class="cards-head">
+    <h3 class="cards-title">✂️ ${escHtml(title)}</h3>
+    <span class="cards-count">${cards.length} cartes</span>
+    <button class="btn btn-ghost btn-sm cards-print" type="button" data-print-cards="${id}">🖨 Imprimer ces cartes</button>
+  </div>
+  <ol class="cut-cards">${items}</ol>
+</section>
+`;
+}
+
+/**
+ * Décide ce qu'est une carte dans un tableau. Trois formes coexistent dans le
+ * contenu : (A) toutes les cellules sont des cartes — la 1re ligne Markdown est
+ * alors une vraie carte, pas un en-tête ; (B) la 1re ligne est un intitulé de
+ * colonne (« Cartes ADRESSES ») et seules les lignes suivantes sont des cartes ;
+ * (C) tableau de paires (« Description | Étiquette ») où chaque LIGNE fait une
+ * carte. Quand le titre annonce un nombre (« les 12 cartes »), on s'en sert pour
+ * trancher ; sinon on retombe sur la forme la plus courante selon la largeur.
+ */
+function cardsFromTable(rows, expected) {
+  const grid = rows
+    .map((r) => r.trim().replace(/^\|/, "").replace(/\|\s*$/, "").split("|").map((c) => c.trim()))
+    .filter((cells) => !cells.every((c) => c === "" || /^:?-{2,}:?$/.test(c)));
+  if (!grid.length) return [];
+  const sepAt = rows.findIndex((r) => /^\s*\|[\s:|-]*\|?\s*$/.test(r) && /-{2,}/.test(r));
+  const hasHeader = sepAt > 0;
+  const width = Math.max(...grid.map((g) => g.length));
+  const head = hasHeader ? grid[0].filter(Boolean) : [];
+  const body = (hasHeader ? grid.slice(1) : grid);
+
+  const A = [...head, ...body.flat().filter(Boolean)];              // tout est carte
+  const B = body.flat().filter(Boolean);                            // en-tête = intitulé
+  const C = body.map((r) => r.filter(Boolean).join(" → ")).filter(Boolean); // 1 carte par ligne
+
+  if (expected) {
+    if (A.length === expected) return A;
+    if (B.length === expected) return B;
+    if (C.length === expected) return C;
+  }
+  if (!head.length) return B;        // en-tête vide -> corps seul
+  if (width >= 3) return A;          // grille large -> chaque cellule est une carte
+  return width === 2 ? C : B;        // 2 colonnes -> paires ; 1 colonne -> intitulé + cartes
+}
+
+/** Repère les titres « à découper » et convertit chaque tableau qui suit en planche. */
+function renderCutCards(src) {
+  const lines = src.split("\n");
+  const out = [];
+  for (let i = 0; i < lines.length; i++) {
+    const h = lines[i].match(/^(#{2,6})\s+(.*(?:✂️|découper).*)$/i);
+    if (!h) { out.push(lines[i]); continue; }
+    const level = h[1].length;
+    const sectionTitle = h[2];
+    // Bloc de la section : jusqu'au prochain titre de niveau <= ou un séparateur ---
+    let j = i + 1;
+    const block = [];
+    while (j < lines.length) {
+      const nh = lines[j].match(/^(#{1,6})\s+/);
+      if (nh && nh[1].length <= level) break;
+      if (/^\s*---\s*$/.test(lines[j])) break;
+      block.push(lines[j]); j++;
+    }
+    // Découpe le bloc en groupes : intitulé en gras éventuel + tableau
+    const sheets = [];
+    let label = "";
+    for (let k = 0; k < block.length; k++) {
+      const line = block[k];
+      if (/^\s*\|/.test(line)) {
+        const rows = [];
+        while (k < block.length && /^\s*\|/.test(block[k])) { rows.push(block[k]); k++; }
+        k--;
+        const titled = [sectionTitle, label].filter(Boolean).join(" — ");
+        const m = titled.match(/(\d+)\s*cartes/i);
+        const cards = cardsFromTable(rows, m ? Number(m[1]) : 0);
+        if (cards.length) sheets.push({ title: titled, cards });
+        label = "";
+        continue;
+      }
+      const bold = line.match(/^\s*\*\*(.+?)\s*:?\*\*\s*:?\s*$/);
+      if (bold) { label = bold[1].trim(); continue; }
+    }
+    if (!sheets.length) { out.push(lines[i]); continue; }
+    for (const s of sheets) out.push(renderCardSheet(s.title, s.cards));
+    i = j - 1;
+  }
+  return out.join("\n");
+}
+
 function md(src) {
   if (!src) return "";
   // directive ::rgbmixer -> mélangeur de couleurs interactif (synthèse additive)
@@ -44,6 +154,8 @@ function md(src) {
     const html = renderEmbed({ title, url });
     return html ? `\n${html}\n` : `[${title || "Document"}](${url})`;
   });
+  // sections « ✂️ … à découper » -> planches de cartes imprimables
+  src = renderCutCards(src);
   const renderer = new marked.Renderer();
   const linkFn = renderer.link.bind(renderer);
   renderer.link = function (token) {
