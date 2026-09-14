@@ -39,6 +39,12 @@
         }
       }
     },
+    "roster": {
+      "$cid": {
+        ".read": "auth != null",
+        ".write": "auth != null && (auth.token.email == 'ebechalani@gmail.com' || root.child('classes').child(auth.uid).child($cid).exists())"
+      }
+    },
     "work": {
       "$cid": {
         ".write": "auth != null && (auth.token.email == 'ebechalani@gmail.com' || root.child('classes').child(auth.uid).child($cid).exists())",

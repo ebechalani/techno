@@ -8,9 +8,9 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lexend:wght@500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../assets/styles.css?v=9595096296">
+<link rel="stylesheet" href="../assets/styles.css?v=d6b0902a60">
 <script>(function(){try{var t=localStorage.getItem("lmtechno-theme");if(!t)t=window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light";document.documentElement.setAttribute("data-theme",t);}catch(e){}})();</script>
-<script src="../assets/firebase-config.js?v=9595096296"></script>
+<script src="../assets/firebase-config.js?v=d6b0902a60"></script>
 </head>
 <body>
 <header class="app-header">
@@ -43,7 +43,8 @@
 
 <script type="module">
 import { isConfigured, currentStudent, logout, loadStudentWork,
-  listGroups, createGroup, joinGroup, leaveGroup } from "../assets/app.js?v=9595096296";
+  listGroups, createGroup, joinGroup, leaveGroup,
+  listRoster, findMyGroup, setGroupMembers } from "../assets/app.js?v=d6b0902a60";
 
 const $ = (id) => document.getElementById(id);
 if (!isConfigured()) { location.href = "../connexion/"; }
@@ -85,52 +86,104 @@ function scorePill(pct) {
 })();
 
 /* ---------- Groupe d'îlot ---------- */
+
+// Met à jour la session locale (un camarade a pu nous ajouter à un îlot).
+function saveSession(patch) {
+  try {
+    const raw = JSON.parse(localStorage.getItem("lmtechno-eleve") || "null") || {};
+    Object.assign(raw, patch);
+    localStorage.setItem("lmtechno-eleve", JSON.stringify(raw));
+  } catch (e) {}
+}
+
+// Cases à cocher des camarades (hors soi-même), pré-cochées selon `selected`.
+function pickerHtml(roster, mySid, selected) {
+  const others = roster.filter((r) => r.sid !== mySid);
+  if (!others.length) {
+    return '<p style="color:var(--muted);font-size:0.88rem">Aucun autre élève inscrit dans la classe pour l’instant.</p>';
+  }
+  return `<div class="chips" id="g-picker">${others.map((r) => `
+    <label class="chip-student" style="cursor:pointer;user-select:none">
+      <input type="checkbox" data-sid="${esc(r.sid)}" data-name="${esc(r.firstName)}"${selected && selected[r.sid] ? " checked" : ""} style="margin-right:0.35rem">
+      ${esc(r.firstName)}
+    </label>`).join("")}</div>`;
+}
+
+function pickedMembers() {
+  const out = {};
+  document.querySelectorAll("#g-picker input[data-sid]:checked").forEach((c) => {
+    out[c.getAttribute("data-sid")] = c.getAttribute("data-name");
+  });
+  return out;
+}
+
 async function renderGroup() {
   const box = $("group-box");
   const s = currentStudent();
-  if (s.groupId) {
-    let members = [];
-    try {
-      const groups = await listGroups(s.classId);
-      const g = groups.find((x) => x.id === s.groupId);
-      if (!g) { // groupe supprimé
-        box.innerHTML = "";
-        s.groupId = null;
-        try { const raw = JSON.parse(localStorage.getItem("lmtechno-eleve")); raw.groupId = null; raw.groupName = null; localStorage.setItem("lmtechno-eleve", JSON.stringify(raw)); } catch (e) {}
-        return renderGroup();
-      }
-      members = Object.values(g.members || {});
-    } catch (e) {}
+
+  // La base fait foi : si un camarade nous a ajoutés, on rejoint sans rien faire.
+  let mine = null;
+  try { mine = await findMyGroup(s.classId, s.sid); } catch (e) {}
+  if (mine) saveSession({ groupId: mine.id, groupName: mine.name });
+  else if (s.groupId) saveSession({ groupId: null, groupName: null });
+
+  let roster = [];
+  try { roster = await listRoster(s.classId); } catch (e) {}
+
+  if (mine) {
+    const members = Object.values(mine.members || {});
     box.innerHTML = `
-      <p>Tu es dans le groupe <strong>${esc(s.groupName || "")}</strong>${members.length ? " avec : " + members.map(esc).join(", ") : ""}.</p>
-      <p style="color:var(--muted);font-size:0.88rem">Sur les pages de cours, ce que chacun écrit apparaît chez tous les membres du groupe, en direct. Votre professeur voit le travail du groupe.</p>
-      <button class="btn btn-ghost btn-sm" id="g-leave" type="button">Quitter le groupe</button>`;
+      <p>Tu es dans l’îlot <strong>${esc(mine.name)}</strong>${members.length > 1 ? " avec : " + members.filter((m) => m !== s.firstName).map(esc).join(", ") : " (seul·e pour l’instant)"}.</p>
+      <p style="color:var(--muted);font-size:0.88rem">Sur les pages de cours, ce que chacun écrit apparaît chez tous les membres de l’îlot, en direct. Votre professeur voit le travail de l’îlot.</p>
+      <div style="display:flex;gap:0.5rem;flex-wrap:wrap">
+        <button class="btn btn-ghost btn-sm" id="g-edit" type="button">✏️ Modifier les membres</button>
+        <button class="btn btn-ghost btn-sm" id="g-leave" type="button">Quitter l’îlot</button>
+      </div>
+      <div id="g-editbox" style="margin-top:0.8rem"></div>
+      <div class="app-msg err" id="g-msg"></div>`;
     $("g-leave").onclick = async () => {
-      if (!confirm("Quitter le groupe ? (les réponses du groupe sont conservées)")) return;
-      await leaveGroup(s.classId, s.groupId, s.sid);
+      if (!confirm("Quitter l’îlot ? (les réponses de l’îlot sont conservées)")) return;
+      await leaveGroup(s.classId, mine.id, s.sid);
       location.reload();
+    };
+    $("g-edit").onclick = () => {
+      $("g-editbox").innerHTML = `
+        <p style="font-weight:600;margin:0 0 0.4rem">Qui travaille dans cet îlot ?</p>
+        ${pickerHtml(roster, s.sid, mine.members || {})}
+        <button class="btn btn-primary btn-sm" id="g-save" type="button" style="margin-top:0.6rem">Enregistrer l’îlot</button>`;
+      $("g-save").onclick = async () => {
+        const msg = $("g-msg"); msg.className = "app-msg";
+        $("g-save").disabled = true;
+        try {
+          await setGroupMembers(s.classId, mine.id, Object.assign(pickedMembers(), { [s.sid]: s.firstName }));
+          location.reload();
+        } catch (e) {
+          msg.textContent = e.message || "Erreur."; msg.className = "app-msg show err"; $("g-save").disabled = false;
+        }
+      };
     };
     return;
   }
-  // pas de groupe : créer ou rejoindre
+
+  // Pas d'îlot : en créer un (en choisissant ses camarades) ou en rejoindre un.
   let groups = [];
   try { groups = await listGroups(s.classId); } catch (e) {}
   box.innerHTML = `
-    <p style="color:var(--text-2)">Travaille en îlot : crée un groupe (choisissez le nom ensemble) ou rejoins celui de ta table. Ce que chacun écrit apparaîtra chez tous, en direct.</p>
-    <div class="inline-form" style="margin-bottom:0.8rem">
-      <div class="field"><label for="g-name">Créer un groupe</label>
-        <input id="g-name" type="text" maxlength="40" placeholder="Les Fusées"></div>
-      <button class="btn btn-primary" id="g-create" type="button">Créer</button>
-    </div>
-    ${groups.length ? `<p style="font-weight:600;margin:0.6rem 0 0.4rem">Ou rejoindre un groupe de la classe :</p>
+    <p style="color:var(--text-2)">Travaille en îlot : crée l’îlot de ta table et <strong>coche les camarades qui y travaillent</strong> — ils n’ont rien à faire, ils le verront à leur connexion. Ce que chacun écrit apparaîtra chez tous, en direct.</p>
+    <div class="field" style="max-width:320px"><label for="g-name">Nom de l’îlot</label>
+      <input id="g-name" type="text" maxlength="40" placeholder="Les Fusées"></div>
+    <p style="font-weight:600;margin:0.8rem 0 0.4rem">Qui travaille avec toi ?</p>
+    ${pickerHtml(roster, s.sid, null)}
+    <button class="btn btn-primary" id="g-create" type="button" style="margin-top:0.7rem">Créer l’îlot</button>
+    ${groups.length ? `<p style="font-weight:600;margin:1.2rem 0 0.4rem">Ou rejoindre un îlot existant :</p>
     <div class="chips">${groups.map((g) => `<button class="chip-student" style="cursor:pointer" data-join="${esc(g.id)}" data-name="${esc(g.name)}">${esc(g.name)} · ${Object.keys(g.members || {}).length} membre${Object.keys(g.members || {}).length > 1 ? "s" : ""}</button>`).join("")}</div>` : ""}
     <div class="app-msg err" id="g-msg"></div>`;
   $("g-create").onclick = async () => {
     const name = $("g-name").value.trim();
     const msg = $("g-msg"); msg.className = "app-msg";
-    if (!name) { msg.textContent = "Choisis un nom de groupe."; msg.className = "app-msg show err"; return; }
+    if (!name) { msg.textContent = "Choisis un nom d’îlot."; msg.className = "app-msg show err"; return; }
     $("g-create").disabled = true;
-    try { await createGroup(s.classId, name, s.sid, s.firstName); location.reload(); }
+    try { await createGroup(s.classId, name, s.sid, s.firstName, pickedMembers()); location.reload(); }
     catch (e) { msg.textContent = e.message || "Erreur."; msg.className = "app-msg show err"; $("g-create").disabled = false; }
   };
   box.querySelectorAll("[data-join]").forEach((b) => b.onclick = async () => {
