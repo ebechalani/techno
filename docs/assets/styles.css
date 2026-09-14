@@ -948,13 +948,25 @@ main { min-height: 60vh; }
   position: absolute; top: 5px; left: 8px;
   font-size: 0.62rem; color: var(--muted); font-variant-numeric: tabular-nums;
 }
+/* Report du travail « débranché » : masqué tant que l'îlot n'a pas cliqué
+   sur « Saisir notre résultat », et jamais imprimé. */
+.cut-card { flex-direction: column; gap: 0.5rem; }
+.cut-card-ans { display: none; width: 100%; margin: 0; }
+.cards-sheet.answering .cut-card-ans { display: block; }
+.cards-sheet.answering .cut-card { justify-content: space-between; }
+.cut-card-ans textarea {
+  width: 100%; min-height: 0; resize: vertical;
+  font-size: 0.82rem; padding: 0.3rem 0.45rem; text-align: center;
+}
 #cards-print-root { display: none; }
 
 @media print {
   /* Impression d'une seule planche de cartes : on masque tout le reste */
   html.printing-cards body > *:not(#cards-print-root) { display: none !important; }
   html.printing-cards #cards-print-root { display: block !important; }
-  html.printing-cards .cards-print { display: none !important; }
+  html.printing-cards .cards-print,
+  html.printing-cards .cards-answer-toggle,
+  html.printing-cards .cut-card-ans { display: none !important; }
   html.printing-cards .cards-head {
     border-bottom: 1px solid #000; margin-bottom: 6mm; padding-bottom: 2mm;
   }
