@@ -227,17 +227,24 @@ export async function syncRoster(classId, students) {
   await set(ref(db, "roster/" + classId), map);
 }
 
-// Ajoute un élève avec identifiant = pseudo + NUMÉRO UNIQUE. Retourne { sid, label }.
+// Ajoute un élève avec identifiant = pseudo + NUMÉRO.
+// Le numéro est unique DANS LA CLASSE (Léa 1, Marc 2, Sofia 3…) : auparavant il
+// repartait de 1 pour chaque prénom, si bien que presque tout le monde était
+// « 1 ». Retourne { sid, label }.
 export async function addStudent(classId, pseudo) {
   const base = normId(pseudo);
   if (!base) throw new Error("Pseudo invalide.");
-  let n = 1, sid;
-  // eslint-disable-next-line no-constant-condition
-  while (true) {
-    sid = base + "-" + n;
-    if (!(await get(ref(db, "students/" + classId + "/" + sid))).exists()) break;
-    n++;
-  }
+  const snap = await get(ref(db, "students/" + classId));
+  const taken = new Set();
+  let maxN = 0;
+  snap.forEach((c) => {
+    taken.add(c.key);
+    const n = Number((c.val() || {}).number);
+    if (Number.isFinite(n) && n > maxN) maxN = n;
+  });
+  let n = maxN + 1;
+  let sid = base + "-" + n;
+  while (taken.has(sid)) { n++; sid = base + "-" + n; }
   const label = pseudo.trim() + " " + n;
   await update(ref(db, "students/" + classId + "/" + sid), {
     firstName: label, pseudo: pseudo.trim(), number: n, createdAt: serverTimestamp(),
