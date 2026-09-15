@@ -7,7 +7,7 @@
 // version chaînée depuis l'URL du module (cache-busting de app.js)
 const __V = new URL(import.meta.url).searchParams.get("v") || "";
 const { currentStudent, isConfigured, pageKeyFromPath, loadWork, saveWork,
-  watchGroupAnswers, saveGroupAnswer } = await import("./app.js" + (__V ? "?v=" + __V : ""));
+  watchGroupAnswers, saveGroupAnswer, logout } = await import("./app.js" + (__V ? "?v=" + __V : ""));
 
 (async function () {
   const sess = currentStudent();
@@ -25,8 +25,16 @@ const { currentStudent, isConfigured, pageKeyFromPath, loadWork, saveWork,
   banner.className = "sync-banner show";
   banner.innerHTML = '<span class="sync-dot"></span><span>' +
     (inGroup ? "👥 " + esc(sess.groupName || "Groupe") + " · " + esc(sess.firstName) : "🎒 " + esc(sess.firstName)) +
-    '</span><a href="' + base + 'eleve/">Mon espace</a>';
+    '</span><a href="' + base + 'eleve/">Mon espace</a>' +
+    '<button type="button" class="sync-logout" title="Se déconnecter de cet ordinateur">Quitter</button>';
   document.body.appendChild(banner);
+  // Poste partagé : se déconnecter efface les réponses gardées sur la machine.
+  banner.querySelector(".sync-logout").addEventListener("click", async () => {
+    if (!confirm("Te déconnecter de cet ordinateur ?\n\nTon travail est enregistré en ligne : tu le retrouveras en te reconnectant. Les réponses affichées ici seront effacées de cette machine.")) return;
+    try { await push(); } catch (e) {}
+    await logout();
+    location.href = base + "connexion/";
+  });
   const dot = banner.querySelector(".sync-dot");
   let saveTimer = null;
 

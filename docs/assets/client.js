@@ -166,8 +166,18 @@
     });
   }
 
-  /* ---------- Réponses des élèves (enregistrées dans le navigateur) ---------- */
-  var PAGE_KEY = "lmtechno-rep:" + location.pathname.replace(/\/index\.html$/, "/");
+  /* ---------- Réponses des élèves (enregistrées dans le navigateur) ----------
+     La clé inclut l'IDENTITÉ de l'élève connecté : sur un ordinateur partagé
+     entre plusieurs classes, un élève ne peut pas lire les réponses laissées
+     par le précédent. Sans connexion, on retombe sur un brouillon « local ». */
+  function answerScope() {
+    try {
+      var s = JSON.parse(localStorage.getItem("lmtechno-eleve") || "null");
+      if (s && s.classId && s.sid) return s.classId + "/" + s.sid;
+    } catch (e) {}
+    return "local";
+  }
+  var PAGE_KEY = "lmtechno-rep:" + answerScope() + ":" + location.pathname.replace(/\/index\.html$/, "/");
 
   var answerFields = document.querySelectorAll(".answer-field textarea");
   if (answerFields.length) {
