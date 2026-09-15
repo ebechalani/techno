@@ -49,27 +49,60 @@ let cardSheetSeq = 0;
  * Note : en Markdown la 1re ligne du tableau est l'en-tête — ici elle contient
  * de vraies cartes. On récupère donc TOUTES les cellules non vides (th + td).
  */
-function renderCardSheet(rawTitle, cards) {
+/** Encode la correction d'une carte : lisible par le script, pas d'un coup d'œil
+ *  au code source de la page. Ce n'est pas un secret — juste de quoi éviter que
+ *  la réponse se lise par-dessus l'épaule. */
+const hideKey = (s) => Buffer.from(String(s), "utf8").toString("base64");
+
+function renderCardSheet(rawTitle, cards, keys) {
   const id = `cartes-${++cardSheetSeq}`;
   const title = rawTitle.replace(/^\s*✂️\s*/, "").trim();
+  const keyed = keys && keys.some(Boolean);
   // Chaque carte porte une zone de saisie : l'activité se fait « débranchée »
   // (cartes découpées, triées sur la table) puis l'îlot reporte son résultat
   // ici. Masquée tant que l'élève n'a pas cliqué sur « Saisir notre résultat »,
   // et jamais imprimée. L'index de réponse est attribué par interactivize().
   const items = cards
-    .map((c, n) => `<li class="cut-card"><span class="cut-card-n">${n + 1}</span><span class="cut-card-t">${marked.parseInline(c)}</span><span class="cut-card-ans answer-field"><textarea rows="1" data-answer-idx="__CARD__" placeholder="✏️ où va cette carte ?" aria-label="Résultat pour la carte ${n + 1}"></textarea></span></li>`)
+    .map((c, n) => {
+      const k = keys && keys[n];
+      // `data-answer-label` : le professeur doit pouvoir relire la réponse en
+      // sachant de quelle carte il s'agit.
+      return `<li class="cut-card"${k ? ` data-k="${hideKey(k)}"` : ""}><span class="cut-card-n">${n + 1}</span><span class="cut-card-t">${marked.parseInline(c)}</span><span class="cut-card-ans answer-field"><textarea rows="1" data-answer-idx="__CARD__" data-answer-label="${escHtml("Carte " + (n + 1) + " — " + stripMd(c))}" placeholder="✏️ où va cette carte ?" aria-label="Résultat pour la carte ${n + 1}"></textarea></span><span class="cut-card-verdict" aria-live="polite"></span></li>`;
+    })
     .join("");
+  // Les valeurs attendues (VRAI / INVENTÉ…) sont annoncées quand elles sont peu
+  // nombreuses : l'élève sait quoi écrire, et la vérification peut être exacte.
+  const uniq = keyed ? [...new Set(keys.filter(Boolean).map((k) => k.split("/")[0].trim()))] : [];
+  // Remise en ordre (le corrigé n'est que des rangs) vs. tri par familles.
+  const ordering = keyed && uniq.every((u) => /^\d+$/.test(u));
+  const hint = !keyed ? ""
+    : ordering ? "Écris sous chaque carte <strong>son numéro d’ordre</strong> (1 = en premier)."
+    : uniq.length > 1 && uniq.length <= 8
+      ? "À écrire sous chaque carte : " + uniq.map((u) => `<strong>${escHtml(u)}</strong>`).join(" · ")
+      : "";
   return `
 <section class="cards-sheet" id="${id}">
   <div class="cards-head">
     <h3 class="cards-title">✂️ ${escHtml(title)}</h3>
     <span class="cards-count">${cards.length} cartes</span>
     <button class="btn btn-ghost btn-sm cards-answer-toggle" type="button" data-answer-cards="${id}">📝 Saisir notre résultat</button>
+    ${keyed ? `<button class="btn btn-ghost btn-sm cards-check" type="button" data-check-cards="${id}">🔎 Vérifier notre tri</button>` : ""}
     <button class="btn btn-ghost btn-sm cards-print" type="button" data-print-cards="${id}">🖨 Imprimer ces cartes</button>
   </div>
+  ${hint ? `<p class="cards-hint">${hint}</p>` : ""}
   <ol class="cut-cards">${items}</ol>
+  ${keyed ? `<p class="cards-score" data-cards-score="${id}"></p>` : ""}
 </section>
 `;
+}
+
+/** Texte brut d'une carte (pour un attribut / le tableau de bord du professeur). */
+function stripMd(s) {
+  return String(s == null ? "" : s)
+    .replace(/[*_`]/g, "")
+    .replace(/\s+/g, " ")
+    .trim()
+    .slice(0, 90);
 }
 
 /**
@@ -117,6 +150,30 @@ function cardsFromTable(rows, expected) {
   return width === 2 ? C : B;        // 2 colonnes -> paires ; 1 colonne -> intitulé + cartes
 }
 
+/**
+ * Corrigé d'une planche de cartes, écrit sous le tableau dans le contenu :
+ *   Corrigé : 1=VRAI ; 2=INVENTÉ ; 3=VRAI…      (numéroté, ordre libre)
+ *   Corrigé : VRAI ; INVENTÉ ; VRAI…            (positionnel)
+ * Plusieurs formulations acceptées pour une même carte : « VRAI / V / vrai ».
+ * Renvoie un tableau aligné sur les cartes (cases vides = carte non corrigée).
+ */
+function parseCardKey(raw, count) {
+  const keys = new Array(count).fill("");
+  const parts = String(raw).split(/\s*[;|]\s*/).map((p) => p.trim()).filter(Boolean);
+  let pos = 0;
+  for (const p of parts) {
+    const m = p.match(/^(\d+)\s*[=:.)]\s*(.+)$/);
+    if (m) {
+      const n = Number(m[1]) - 1;
+      if (n >= 0 && n < count) keys[n] = m[2].trim();
+    } else if (pos < count) {
+      keys[pos] = p;
+    }
+    pos = m ? Number(m[1]) : pos + 1;
+  }
+  return keys.some(Boolean) ? keys : null;
+}
+
 /** Repère les titres « à découper » et convertit chaque tableau qui suit en planche. */
 function renderCutCards(src) {
   const lines = src.split("\n");
@@ -147,15 +204,22 @@ function renderCutCards(src) {
         const titled = [sectionTitle, label].filter(Boolean).join(" — ");
         const m = titled.match(/(\d+)\s*cartes/i);
         const cards = cardsFromTable(rows, m ? Number(m[1]) : 0);
-        if (cards.length) sheets.push({ title: titled, cards });
+        if (cards.length) sheets.push({ title: titled, cards, keys: null });
         label = "";
+        continue;
+      }
+      // « Corrigé : 1=VRAI ; 2=INVENTÉ ; … » -> vérificateur sur la planche qui
+      // précède. La ligne n'est jamais rendue ni imprimée.
+      const key = line.match(/^\s*(?:corrigé|corrige|clé|cle)\s*(?:des cartes)?\s*:\s*(\S.*)$/i);
+      if (key && sheets.length) {
+        sheets[sheets.length - 1].keys = parseCardKey(key[1], sheets[sheets.length - 1].cards.length);
         continue;
       }
       const bold = line.match(/^\s*\*\*(.+?)\s*:?\*\*\s*:?\s*$/);
       if (bold) { label = bold[1].trim(); continue; }
     }
     if (!sheets.length) { out.push(lines[i]); continue; }
-    for (const s of sheets) out.push(renderCardSheet(s.title, s.cards));
+    for (const s of sheets) out.push(renderCardSheet(s.title, s.cards, s.keys));
     i = j - 1;
   }
   return out.join("\n");
@@ -189,13 +253,31 @@ function md(src) {
  * des fiches d'activité) deviennent des champs de saisie que l'élève peut
  * remplir ; ses réponses sont enregistrées dans son navigateur.
  */
+/**
+ * Intitulé d'une zone de réponse : le dernier paragraphe / titre qui la précède
+ * (« Mission 2 — Quand les données quittent la maison, où vont-elles ? »).
+ * Sans lui, le professeur reçoit des réponses sans savoir à quelle question.
+ */
+function labelBefore(html, offset) {
+  const before = html.slice(Math.max(0, offset - 2000), offset);
+  const m = before.match(/<(p|h2|h3|h4|h5|li)\b[^>]*>([\s\S]*?)<\/\1>\s*$/i);
+  if (!m) return "";
+  return stripMd(
+    m[2].replace(/<[^>]+>/g, " ")
+      .replace(/&nbsp;/g, " ").replace(/&amp;/g, "&")
+      .replace(/&lt;/g, "<").replace(/&gt;/g, ">").replace(/&quot;/g, '"')
+      .replace(/&#39;/g, "'")
+  );
+}
+
 function interactivize(html) {
   let idx = 0;
-  let out = html.replace(/(?:<p>[\s…]*…[\s…]*<\/p>\s*)+/g, (m) => {
+  let out = html.replace(/(?:<p>[\s…]*…[\s…]*<\/p>\s*)+/g, (m, offset) => {
     const count = (m.match(/<p>/g) || []).length;
     const rows = Math.min(1 + count * 2, 8);
+    const label = labelBefore(html, offset);
     return `<div class="answer-field">
-  <textarea rows="${rows}" data-answer-idx="${idx++}" placeholder="✏️ Écris ta réponse ici…" aria-label="Zone de réponse de l'élève"></textarea>
+  <textarea rows="${rows}" data-answer-idx="${idx++}"${label ? ` data-answer-label="${escHtml(label)}"` : ""} placeholder="✏️ Écris ta réponse ici…" aria-label="Zone de réponse de l'élève"></textarea>
 </div>\n`;
   });
   // Zones de saisie des cartes à découper : on poursuit le MÊME compteur, pour

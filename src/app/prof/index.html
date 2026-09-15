@@ -61,7 +61,7 @@
 
 <script type="module">
 import { isConfigured, onAuth, logout, ensureTeacher, createClass, listMyClasses, deleteClass,
-  addStudent, removeStudent, listStudents, loadStudentWork,
+  addStudent, removeStudent, listStudents, loadStudentWork, loadClassAnswers,
   listGroups, loadGroupWork, removeGroup,
   listPendingTeachers, approveTeacher, rejectTeacher,
   mySections, listTeachers, getTeacherSections, setTeacherSections, syncRoster,
@@ -229,7 +229,10 @@ async function refresh() {
       <div class="chips" data-chips="${cls.id}">
         ${students.map((s) => `<span class="chip-student">${esc(s.firstName)}<button title="Retirer" data-rm="${cls.id}" data-sid="${esc(s.id)}">×</button></span>`).join("") || '<span style="color:var(--muted);font-size:0.85rem">Aucun élève inscrit.</span>'}
       </div>
-      <h3 style="margin:1.2rem 0 0.4rem;font-size:1rem">Progression</h3>
+      <h3 style="margin:1.2rem 0 0.4rem;font-size:1rem;display:flex;align-items:center;gap:0.6rem;flex-wrap:wrap">
+        Progression
+        <button class="btn btn-ghost btn-sm" data-allwork="${cls.id}">📝 Lire toutes les réponses écrites</button>
+      </h3>
       <div class="table-scroll">
         <table class="dash-table">
           <thead><tr><th>Élève</th><th class="num">Séances</th><th class="num">Quiz faits</th><th class="num">Moyenne quiz</th><th></th></tr></thead>
@@ -348,17 +351,81 @@ function wire() {
     if (!confirm("Supprimer définitivement cette classe, ses élèves et toutes leurs réponses ?")) return;
     try { await deleteClass(b.getAttribute("data-del"), b.getAttribute("data-code")); await refresh(); } catch (e) { alert("Erreur : " + (e.message || e)); }
   });
+  /* Une réponse d'élève, telle que le professeur doit la lire : la consigne
+     au-dessus, le texte de l'élève en dessous. */
+  const answerBlock = (label, text, who) => `<div class="answer-read">
+    ${label ? `<div class="answer-read-q">${esc(label)}</div>` : ""}
+    <div class="answer-read-a">${esc(text)}</div>
+    ${who ? `<div class="answer-read-by">✍️ ${esc(who)}</div>` : ""}
+  </div>`;
+
   document.querySelectorAll("[data-detail]").forEach((b) => b.onclick = async () => {
     const cid = b.getAttribute("data-detail"), sid = b.getAttribute("data-sid"), name = b.getAttribute("data-name");
     const boxDet = document.querySelector(`[data-detailbox="${cid}"]`);
     boxDet.innerHTML = '<p style="color:var(--muted)">Chargement…</p>';
-    const work = await loadStudentWork(cid, sid);
-    if (!work.length) { boxDet.innerHTML = `<div class="app-card" style="margin-top:0.6rem"><strong>${name}</strong> n'a pas encore de travail enregistré.</div>`; return; }
+    let work = [];
+    try { work = await loadStudentWork(cid, sid); }
+    catch (e) { boxDet.innerHTML = `<div class="app-card" style="margin-top:0.6rem">Lecture impossible : ${esc(e.message || e)}</div>`; return; }
+    if (!work.length) { boxDet.innerHTML = `<div class="app-card" style="margin-top:0.6rem"><strong>${esc(name)}</strong> n'a pas encore de travail enregistré.</div>`; return; }
+    work.sort((a, c) => String(a.title || a.pageKey).localeCompare(String(c.title || c.pageKey)));
+    const nAns = work.reduce((n, w) => n + (w.answers ? Object.keys(w.answers).length : 0), 0);
     boxDet.innerHTML = `<div class="app-card" style="margin-top:0.6rem">
-      <div style="display:flex;align-items:center;gap:0.6rem"><strong>Détail — ${name}</strong><button class="btn btn-ghost btn-sm" data-closedet style="margin-left:auto">Fermer</button></div>
-      <div class="table-scroll"><table class="dash-table"><thead><tr><th>Page</th><th class="num">Quiz</th><th class="num">Réponses écrites</th></tr></thead><tbody>
-      ${work.map((w) => { const q = w.quiz && w.quiz.total ? Math.round(w.quiz.score / w.quiz.total * 100) : null; const nb = w.answers ? Object.keys(w.answers).length : 0; return `<tr><td>${esc((w.title || w.pageKey).replace(/_/g, " "))}</td><td class="num">${scorePill(q)}</td><td class="num">${nb}</td></tr>`; }).join("")}
-      </tbody></table></div></div>`;
+      <div style="display:flex;align-items:center;gap:0.6rem"><strong>Détail — ${esc(name)}</strong><button class="btn btn-ghost btn-sm" data-closedet style="margin-left:auto">Fermer</button></div>
+      ${work.map((w) => {
+        const q = w.quiz && w.quiz.total ? Math.round(w.quiz.score / w.quiz.total * 100) : null;
+        const labels = w.labels || {};
+        const keys = Object.keys(w.answers || {}).sort((a, c) => Number(a) - Number(c));
+        return `<h4 style="margin:1.1rem 0 0.4rem;display:flex;align-items:center;gap:0.5rem;flex-wrap:wrap">
+            ${esc((w.title || w.pageKey).replace(/_/g, " "))}
+            ${q != null ? `<span style="font-weight:400;font-size:0.82rem;color:var(--muted)">quiz</span> ${scorePill(q)}` : ""}
+            ${w.path ? `<a class="btn btn-ghost btn-sm" href="${esc(w.path)}" target="_blank" rel="noopener">↗ la page</a>` : ""}
+          </h4>
+          ${keys.length
+            ? keys.map((k) => answerBlock(labels[k] || "", w.answers[k], "")).join("")
+            : (w.groupAnswers
+              ? `<p style="color:var(--muted);font-size:0.85rem">${w.groupAnswers} réponse(s) écrite(s) en îlot — à lire dans « Voir le travail » de l'îlot.</p>`
+              : '<p style="color:var(--muted);font-size:0.85rem">Aucune réponse écrite sur cette page.</p>')}`;
+      }).join("")}
+      ${nAns ? "" : '<p style="color:var(--muted);font-size:0.85rem;margin-top:1rem">Si cet élève travaille en îlot, ses réponses écrites sont enregistrées au nom de l\'îlot : ouvrez « Voir le travail » dans la table des îlots.</p>'}
+    </div>`;
+    boxDet.querySelector("[data-closedet]").onclick = () => boxDet.innerHTML = "";
+  });
+
+  /* Correction de la classe entière : une page, toutes les réponses à la suite. */
+  document.querySelectorAll("[data-allwork]").forEach((b) => b.onclick = async () => {
+    const cid = b.getAttribute("data-allwork");
+    const boxDet = document.querySelector(`[data-detailbox="${cid}"]`);
+    boxDet.innerHTML = '<p style="color:var(--muted)">Lecture des réponses de toute la classe…</p>';
+    let pages = [];
+    try {
+      let groups = [];
+      try { groups = await listGroups(cid); } catch (e) {}
+      pages = await loadClassAnswers(cid, CLASS_STUDENTS[cid] || [], groups);
+    } catch (e) {
+      boxDet.innerHTML = `<div class="app-card" style="margin-top:0.6rem">Lecture impossible : ${esc(e.message || e)}</div>`;
+      return;
+    }
+    if (!pages.length) {
+      boxDet.innerHTML = `<div class="app-card" style="margin-top:0.6rem">Aucune réponse écrite pour l'instant dans cette classe.
+        <button class="btn btn-ghost btn-sm" data-closedet style="float:right">Fermer</button></div>`;
+      boxDet.querySelector("[data-closedet]").onclick = () => boxDet.innerHTML = "";
+      return;
+    }
+    const total = pages.reduce((n, p) => n + p.entries.length, 0);
+    boxDet.innerHTML = `<div class="app-card" style="margin-top:0.6rem">
+      <div style="display:flex;align-items:center;gap:0.6rem;flex-wrap:wrap">
+        <strong>📝 Réponses écrites de la classe</strong>
+        <span style="color:var(--muted);font-size:0.85rem">${total} réponse${total > 1 ? "s" : ""} · ${pages.length} page${pages.length > 1 ? "s" : ""}</span>
+        <button class="btn btn-ghost btn-sm" data-closedet style="margin-left:auto">Fermer</button>
+      </div>
+      ${pages.map((p) => `<details class="answers-page"${pages.length === 1 ? " open" : ""}>
+        <summary><strong>${esc((p.title || p.pageKey).replace(/_/g, " "))}</strong>
+          <span style="color:var(--muted);font-weight:400">— ${p.entries.length} réponse${p.entries.length > 1 ? "s" : ""}</span>
+          ${p.path ? `<a href="${esc(p.path)}" target="_blank" rel="noopener" style="font-weight:400;font-size:0.85rem">↗ la page</a>` : ""}
+        </summary>
+        ${p.entries.map((e) => answerBlock(e.label, e.text, e.who)).join("")}
+      </details>`).join("")}
+    </div>`;
     boxDet.querySelector("[data-closedet]").onclick = () => boxDet.innerHTML = "";
   });
   document.querySelectorAll("[data-gdel]").forEach((b) => b.onclick = async () => {
@@ -376,12 +443,16 @@ function wire() {
     boxDet.innerHTML = `<div class="app-card" style="margin-top:0.6rem">
       <div style="display:flex;align-items:center;gap:0.6rem"><strong>👥 Travail du groupe — ${gname}</strong><button class="btn btn-ghost btn-sm" data-closedet style="margin-left:auto">Fermer</button></div>
       ${work.map((w) => {
-        const answers = Object.entries(w.answers || {}).sort((a, b2) => Number(a[0]) - Number(b2[0]));
-        return `<h4 style="margin:1rem 0 0.4rem">${esc((w.title || w.pageKey).replace(/_/g, " "))}</h4>
-        ${answers.length ? answers.map(([k, a]) => `<div style="background:var(--surface-2);border-radius:8px;padding:0.5rem 0.8rem;margin:0.3rem 0;font-size:0.9rem">
-          ${esc(a.text || "")}
-          <div style="color:var(--muted);font-size:0.75rem;margin-top:0.2rem">✍️ ${esc(a.by || "?")}</div>
-        </div>`).join("") : '<p style="color:var(--muted);font-size:0.85rem">Aucune réponse.</p>'}`;
+        const answers = Object.entries(w.answers || {})
+          .sort((a, b2) => Number(a[0]) - Number(b2[0]))
+          .filter(([, a]) => String((a || {}).text || "").trim());
+        return `<h4 style="margin:1rem 0 0.4rem;display:flex;align-items:center;gap:0.5rem;flex-wrap:wrap">
+          ${esc((w.title || w.pageKey).replace(/_/g, " "))}
+          ${w.path ? `<a class="btn btn-ghost btn-sm" href="${esc(w.path)}" target="_blank" rel="noopener">↗ la page</a>` : ""}
+        </h4>
+        ${answers.length
+          ? answers.map(([, a]) => answerBlock(a.label || "", a.text || "", a.by || "?")).join("")
+          : '<p style="color:var(--muted);font-size:0.85rem">Aucune réponse.</p>'}`;
       }).join("")}
     </div>`;
     boxDet.querySelector("[data-closedet]").onclick = () => boxDet.innerHTML = "";

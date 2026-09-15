@@ -46,6 +46,17 @@ const { currentStudent, isConfigured, pageKeyFromPath, loadWork, saveWork,
     fields.forEach((ta) => { const k = ta.getAttribute("data-answer-idx"); if (ta.value.trim()) a[k] = ta.value; });
     return a;
   }
+  // Intitulé de chaque zone remplie (la consigne qui la précède) : sans lui le
+  // professeur reçoit des réponses sans savoir à quelle question elles répondent.
+  function collectLabels() {
+    const l = {};
+    fields.forEach((ta) => {
+      const k = ta.getAttribute("data-answer-idx");
+      const lab = ta.getAttribute("data-answer-label");
+      if (lab && ta.value.trim()) l[k] = lab;
+    });
+    return l;
+  }
   function collectQuiz() {
     if (!quizQs.length) return null;
     const done = document.querySelectorAll(".quiz-q.answered-ok, .quiz-q.answered-ko").length;
@@ -63,9 +74,14 @@ const { currentStudent, isConfigured, pageKeyFromPath, loadWork, saveWork,
       // personnel garde le quiz (score individuel) + le NOMBRE de réponses de
       // l'îlot, qui vaut pour chacun de ses membres.
       const groupAnswers = inGroup ? Object.keys(collectAnswers()).length : 0;
-      const data = inGroup
-        ? { quiz: collectQuiz(), title, groupAnswers }
-        : { answers: collectAnswers(), quiz: collectQuiz(), title };
+      let data;
+      if (inGroup) {
+        data = { quiz: collectQuiz(), title, groupAnswers };
+      } else {
+        const labels = collectLabels();
+        data = { answers: collectAnswers(), quiz: collectQuiz(), title, path: location.pathname };
+        if (Object.keys(labels).length) data.labels = labels;
+      }
       await saveWork(sess.classId, sess.sid, pageKey, data);
       if (inGroup) {
         await markGroupAnswered(sess.classId, sess.groupId, pageKey, groupAnswers, title);
@@ -113,7 +129,7 @@ const { currentStudent, isConfigured, pageKeyFromPath, loadWork, saveWork,
         clearTimeout(timers.get(k));
         dot.classList.add("saving");
         timers.set(k, setTimeout(async () => {
-          try { await saveGroupAnswer(sess.classId, sess.groupId, pageKey, k, ta.value, sess.firstName, title); }
+          try { await saveGroupAnswer(sess.classId, sess.groupId, pageKey, k, ta.value, sess.firstName, title, ta.getAttribute("data-answer-label") || "", location.pathname); }
           catch (e) {}
           dot.classList.remove("saving");
           const tag = authors.get(k);
