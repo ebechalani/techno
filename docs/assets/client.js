@@ -301,12 +301,14 @@
     return false;
   }
 
-  /* Trois essais par planche, et la correction ne s'ouvre QUE lorsque le
-     résultat de l'îlot est parti chez le professeur : sans cela, il suffirait
-     de révéler le corrigé puis de recopier les bonnes réponses.
-     sync.js (chargé seulement si un élève est connecté) installe
-     window.LMTechnoCards.submit ; sans lui, rien n'est envoyé et la correction
-     reste fermée. */
+  /* Vérification CARTE PAR CARTE, 3 essais par carte. Corriger toute la
+     planche d'un coup révélerait les bonnes réponses par élimination (avec
+     deux catégories, un ❌ suffit) ; ici l'élève s'engage sur une carte, et
+     une carte ratée trois fois se verrouille sans livrer sa réponse.
+     La correction ne s'ouvre QUE lorsque toutes les cartes sont réglées ET que
+     le résultat est parti chez le professeur : sync.js (chargé seulement si un
+     élève est connecté) installe window.LMTechnoCards.submit ; sans lui, rien
+     n'est envoyé et la correction reste fermée. */
   var CARD_TRIES = 3;
   window.LMTechnoCards = window.LMTechnoCards || { submit: null };
 
@@ -331,143 +333,135 @@
     });
   }
 
-  document.querySelectorAll("[data-check-cards]").forEach(function (btn) {
-    var sheet = document.getElementById(btn.getAttribute("data-check-cards"));
+  document.querySelectorAll("[data-cards-score]").forEach(function (score) {
+    var sheet = document.getElementById(score.getAttribute("data-cards-score"));
     if (!sheet) return;
     var id = sheet.id;
-    var score = sheet.querySelector("[data-cards-score]");
-    var cards = sheet.querySelectorAll(".cut-card[data-k]");
+    var cards = Array.prototype.slice.call(sheet.querySelectorAll(".cut-card[data-k]"));
     var total = cards.length;
+    if (!total) return;
     var st = cardsState(id);
-    var tries = Array.isArray(st.tries) ? st.tries : [];
+    var per = (st.cards && typeof st.cards === "object") ? st.cards : {};   // idx -> { t, ok }
     var revealed = !!st.revealed;
     var sent = !!st.sent;
+    var sending = null;
 
-    function reveal() {
-      revealed = true;
-      st.revealed = true; st.tries = tries; st.sent = sent; saveCardsState(id, st);
-      cards.forEach(function (li) {
-        var v = li.querySelector(".cut-card-verdict");
-        if (v) v.textContent = "✔ " + b64(li.getAttribute("data-k")).split("/")[0];
-        li.classList.add("shown");
-      });
-      sheet.classList.add("answering");
+    function idxOf(li) { var ta = li.querySelector("textarea"); return ta ? ta.getAttribute("data-answer-idx") : ""; }
+    function stateOf(li) { return per[idxOf(li)] || { t: 0, ok: false }; }
+    function isLocked(s) { return !s.ok && s.t >= CARD_TRIES; }
+    function persist() { st.cards = per; st.revealed = revealed; st.sent = sent; saveCardsState(id, st); }
+
+    /* Une carte : son verdict et son état (saisie ouverte, juste, verrouillée). */
+    function paint(li) {
+      var s = stateOf(li);
+      var ta = li.querySelector("textarea");
+      var b = li.querySelector("[data-check-card]");
+      var v = li.querySelector(".cut-card-verdict");
+      var done = s.ok || isLocked(s);
+      li.classList.toggle("ok", !!s.ok);
+      li.classList.toggle("locked", isLocked(s));
+      li.classList.toggle("ko", !s.ok && s.t > 0 && !isLocked(s));
+      li.classList.toggle("shown", revealed && isLocked(s));
+      if (ta) ta.disabled = done;
+      if (b) { b.disabled = done; b.textContent = done ? "🔎 Vérifier" : "🔎 Vérifier (" + (CARD_TRIES - s.t) + ")"; }
+      if (!v) return;
+      if (s.ok) v.textContent = "✅ juste" + (s.t > 1 ? " (au " + s.t + "ᵉ essai)" : "");
+      else if (isLocked(s)) v.textContent = revealed
+        ? "✔ " + b64(li.getAttribute("data-k")).split("/")[0]
+        : "🔒 3 essais épuisés";
+      else if (s.t > 0) v.textContent = "❌ essai " + s.t + " / " + CARD_TRIES + " — réessaie";
+      else v.textContent = "";
     }
 
-    function render(last, blank, justSent) {
-      if (!score) return;
-      var left = Math.max(0, CARD_TRIES - tries.length);
-      var perfect = last && last.good === total;
-      btn.disabled = left === 0 || perfect;
-      btn.textContent = left === 0 || perfect ? "🔎 Vérifier notre tri"
-        : "🔎 Vérifier notre tri (" + left + " essai" + (left > 1 ? "s" : "") + ")";
-
+    /* Le bilan de la planche, sous les cartes. */
+    function summary(extra) {
+      var ok = 0, locked = 0, pending = 0;
+      cards.forEach(function (li) { var s = stateOf(li); if (s.ok) ok++; else if (isLocked(s)) locked++; else pending++; });
+      var started = ok + locked > 0;
+      var allDone = pending === 0;
       var html = "";
-      if (last) {
-        html += "<strong>" + last.good + " / " + total + "</strong> carte" + (last.good > 1 ? "s" : "") +
-          " bien classée" + (last.good > 1 ? "s" : "");
-        if (blank) html += " · " + blank + " sans réponse";
-        html += " <span class=\"cards-tries\">essai " + tries.length + " / " + CARD_TRIES + "</span>";
-        if (perfect) html += " 🎉 Tri parfait !";
+      if (started) {
+        html += "<strong>" + ok + " / " + total + "</strong> carte" + (ok > 1 ? "s" : "") + " juste" + (ok > 1 ? "s" : "");
+        if (locked) html += " · <span class=\"cards-locked-n\">🔒 " + locked + " bloquée" + (locked > 1 ? "s" : "") + "</span>";
+        if (pending) html += " · " + pending + " à vérifier";
+        if (allDone && ok === total) html += " 🎉 Tri parfait !";
       }
-      if (tries.length > 1) {
-        html += '<div class="cards-history">Vos essais : ' +
-          tries.map(function (t) { return t.good + "/" + total; }).join(" → ") + "</div>";
+      if (allDone && locked && !revealed) {
+        if (sent) html += ' <button type="button" class="btn btn-ghost btn-sm" data-reveal>👁 Voir la correction des cartes bloquées</button>';
+        else html += '<div class="cards-locked">🔒 La correction s\'affichera une fois votre résultat ' +
+          "envoyé au professeur. Connecte-toi à ton espace, puis vérifie une carte.</div>";
       }
-      if (!perfect && !revealed) {
-        if (left > 0) {
-          html += '<div class="cards-next">Il vous reste <strong>' + left + " essai" + (left > 1 ? "s" : "") +
-            "</strong> : corrigez les cartes ❌, puis vérifiez à nouveau.</div>";
-        } else if (sent) {
-          html += ' <button type="button" class="btn btn-ghost btn-sm" data-reveal>👁 Voir la correction</button>';
-        } else {
-          html += '<div class="cards-locked">🔒 La correction s\'affichera une fois votre résultat ' +
-            "envoyé au professeur. Connecte-toi à ton espace, puis vérifie à nouveau.</div>";
-        }
-      }
-      if (justSent) html += '<div class="cards-sent">✅ Résultat envoyé au professeur.</div>';
+      if (extra) html += extra;
       score.innerHTML = html;
       score.className = "cards-score" + (html ? " show " : " ") +
-        (perfect ? "all-ok" : !last ? "" : last.good >= total / 2 ? "mid" : "low");
+        (!started ? "" : allDone && ok === total ? "all-ok" : ok >= total / 2 ? "mid" : "low");
       var rev = score.querySelector("[data-reveal]");
       if (rev) rev.addEventListener("click", function () {
-        reveal();
-        render(last, blank, false);
-        // Le professeur doit savoir que l'îlot a consulté la correction.
-        waitSubmit().then(function (submit) {
-          if (!submit) return;
-          return submit(id, {
-            title: sheet.getAttribute("data-cards-title") || "",
-            total: total,
-            tries: tries.map(function (t) { return t.good; }),
-            best: tries.reduce(function (m, t) { return Math.max(m, t.good); }, 0),
-            revealed: true,
-          });
-        }).catch(function () {});
+        revealed = true; persist();
+        sheet.classList.add("answering");
+        cards.forEach(paint);
+        summary("");
+        send(); // le professeur doit savoir que l'îlot a consulté la correction
       });
     }
 
-    // Le nombre d'essais restants doit être lisible dès l'arrivée sur la page,
-    // et après un rechargement l'élève retrouve ses essais déjà consommés.
-    if (revealed) reveal();
-    render(tries.length ? tries[tries.length - 1] : null, 0, false);
-
-    btn.addEventListener("click", function () {
-      if (btn.disabled) return;
-      sheet.classList.add("answering"); // la saisie doit être visible pour corriger
-      var toggle = sheet.querySelector(".cards-answer-toggle");
-      if (toggle) toggle.textContent = "📝 Masquer notre résultat";
-
-      var good = 0, blank = 0;
-      cards.forEach(function (li) {
-        var key = b64(li.getAttribute("data-k"));
-        var ta = li.querySelector(".cut-card-ans textarea");
-        var verdict = li.querySelector(".cut-card-verdict");
-        var val = ta ? ta.value : "";
-        li.classList.remove("ok", "ko", "blank");
-        if (!String(val).trim()) {
-          blank++; li.classList.add("blank");
-          if (verdict) verdict.textContent = "— à compléter";
-          return;
-        }
-        if (matches(val, key)) {
-          good++; li.classList.add("ok");
-          if (verdict) verdict.textContent = "✅ juste";
-        } else {
-          li.classList.add("ko");
-          if (verdict) verdict.textContent = "❌ à revoir";
-        }
+    /* Envoi au professeur : état de chaque carte, puis bilan. */
+    function payload() {
+      var ok = 0, locked = 0, attempts = 0, perCard = {};
+      cards.forEach(function (li, n) {
+        var s = stateOf(li);
+        if (s.ok) ok++; else if (isLocked(s)) locked++;
+        attempts += s.t;
+        perCard[String(n + 1)] = { t: s.t, ok: !!s.ok };
       });
+      return { title: sheet.getAttribute("data-cards-title") || "", total: total, ok: ok, locked: locked,
+               pending: total - ok - locked, attempts: attempts, perCard: perCard, revealed: revealed };
+    }
+    function send() {
+      if (sending) return sending;
+      sending = waitSubmit().then(function (submit) {
+        if (!submit) return false;
+        return submit(id, payload());
+      }).then(function (okSent) {
+        sending = null;
+        if (!okSent) return false;
+        var was = sent;
+        sent = true; persist();
+        summary(was ? "" : '<div class="cards-sent">✅ Résultat envoyé au professeur.</div>');
+        return true;
+      }).catch(function () { sending = null; return false; });
+      return sending;
+    }
 
-      // Une planche incomplète ne consomme pas d'essai : on la signale, c'est tout.
-      if (blank && score) {
-        score.className = "cards-score show";
-        score.innerHTML = '<div class="cards-next">Complétez les <strong>' + blank + " carte" +
-          (blank > 1 ? "s" : "") + '</strong> sans réponse avant de vérifier : cet essai ne compte pas.</div>';
-        return;
-      }
+    function check(li) {
+      var s = stateOf(li);
+      if (s.ok || isLocked(s)) return;
+      var ta = li.querySelector("textarea");
+      var v = li.querySelector(".cut-card-verdict");
+      var val = ta ? ta.value : "";
+      if (!String(val).trim()) { if (v) v.textContent = "— écris d'abord une réponse"; return; }
+      s = { t: s.t + 1, ok: matches(val, b64(li.getAttribute("data-k"))) };
+      per[idxOf(li)] = s;
+      persist();
+      paint(li);
+      summary("");
+      send();
+    }
 
-      var attempt = { good: good, total: total, at: Date.now() };
-      tries.push(attempt);
-      st.tries = tries; st.revealed = revealed; st.sent = sent;
-      saveCardsState(id, st);
-      render(attempt, blank, false);
-
-      waitSubmit().then(function (submit) {
-        if (!submit) return;
-        return submit(id, {
-          title: sheet.getAttribute("data-cards-title") || "",
-          total: total,
-          tries: tries.map(function (t) { return t.good; }),
-          best: tries.reduce(function (m, t) { return Math.max(m, t.good); }, 0),
-          revealed: revealed,
-        }).then(function (ok) {
-          if (!ok) return;
-          sent = true; st.sent = true; saveCardsState(id, st);
-          render(attempt, blank, true);
-        });
-      }).catch(function () {});
+    cards.forEach(function (li) {
+      var b = li.querySelector("[data-check-card]");
+      var ta = li.querySelector("textarea");
+      if (b) b.addEventListener("click", function () { check(li); });
+      // Entrée = vérifier cette carte (Maj+Entrée pour un retour à la ligne)
+      if (ta) ta.addEventListener("keydown", function (e) {
+        if (e.key === "Enter" && !e.shiftKey) { e.preventDefault(); check(li); }
+      });
     });
+
+    // Après un rechargement, l'élève retrouve chaque carte dans l'état où il l'a laissée.
+    cards.forEach(paint);
+    summary("");
+    if (cards.some(function (li) { return stateOf(li).t > 0; })) sheet.classList.add("answering");
   });
 
   /* ---------- Quiz auto-corrigés ---------- */
