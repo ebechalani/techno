@@ -1019,6 +1019,26 @@ main { min-height: 60vh; }
 .cards-score.show { display: block; }
 .cards-score.all-ok { border-color: var(--ok); }
 .cards-score.low { border-color: var(--no); }
+.cards-tries {
+  font-size: 0.76rem; color: var(--muted); border: 1px solid var(--border);
+  border-radius: 999px; padding: 0.05rem 0.45rem; margin-left: 0.3rem; white-space: nowrap;
+}
+.cards-history, .cards-next, .cards-locked, .cards-sent {
+  font-size: 0.84rem; margin-top: 0.4rem;
+}
+.cards-history { color: var(--muted); font-variant-numeric: tabular-nums; }
+.cards-next { color: var(--text-2); }
+.cards-locked { color: var(--mid); }
+.cards-sent { color: var(--ok); }
+.cards-check:disabled { opacity: 0.55; cursor: not-allowed; }
+
+/* Côté professeur : résultat du vérificateur de cartes */
+.cards-result {
+  display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap;
+  border-left: 3px solid var(--mid-bg); background: var(--surface-2);
+  border-radius: 0 8px 8px 0; padding: 0.5rem 0.8rem; margin: 0.45rem 0; font-size: 0.9rem;
+}
+.cards-result-meta { font-size: 0.78rem; color: var(--muted); }
 
 #cards-print-root { display: none; }
 
