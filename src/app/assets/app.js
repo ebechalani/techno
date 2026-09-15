@@ -340,9 +340,27 @@ export async function saveWork(classId, sid, pageKey, data) {
   await update(ref(db, "students/" + classId + "/" + sid), { lastActive: serverTimestamp() });
   await update(ref(db, "students/" + classId + "/" + sid + "/progress/" + pageKey), {
     quiz: data.quiz || null,
-    answered: data.answers ? Object.keys(data.answers).length : 0,
+    // En îlot, les réponses vivent dans le groupe : on compte celles de l'îlot.
+    answered: data.answers ? Object.keys(data.answers).length : (data.groupAnswers || 0),
     title: data.title || "",
   });
+}
+
+/* En îlot, une réponse écrite par UN membre vaut pour TOUT l'îlot : on inscrit
+ * la progression sur chaque membre, pour que le tableau de bord du professeur
+ * et l'espace de chaque élève la reflètent. Le texte, lui, reste unique dans
+ * `groupwork/` — on ne duplique qu'un compteur. */
+export async function markGroupAnswered(classId, groupId, pageKey, answered, title) {
+  await ensureAnon();
+  const g = await get(ref(db, "groups/" + classId + "/" + groupId + "/members"));
+  if (!g.exists()) return 0;
+  const sids = Object.keys(g.val() || {});
+  await Promise.all(sids.map((sid) =>
+    update(ref(db, "students/" + classId + "/" + sid + "/progress/" + pageKey), {
+      answered, title: title || "", viaGroup: groupId,
+    }).catch(() => {})
+  ));
+  return sids.length;
 }
 
 export async function loadWork(classId, sid, pageKey) {
