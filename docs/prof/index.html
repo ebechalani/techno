@@ -8,9 +8,9 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lexend:wght@500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../assets/styles.css?v=16e357438a">
+<link rel="stylesheet" href="../assets/styles.css?v=d54c60ede7">
 <script>(function(){try{var t=localStorage.getItem("lmtechno-theme");if(!t)t=window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light";document.documentElement.setAttribute("data-theme",t);}catch(e){}})();</script>
-<script src="../assets/firebase-config.js?v=16e357438a"></script>
+<script src="../assets/firebase-config.js?v=d54c60ede7"></script>
 </head>
 <body>
 <header class="app-header">
@@ -65,7 +65,7 @@ import { isConfigured, onAuth, logout, ensureTeacher, createClass, listMyClasses
   listGroups, loadGroupWork, removeGroup,
   listPendingTeachers, approveTeacher, rejectTeacher,
   mySections, listTeachers, getTeacherSections, setTeacherSections, syncRoster,
-  createGroupForClass, setGroupMembers, shuffleIntoGroups } from "../assets/app.js?v=16e357438a";
+  createGroupForClass, setGroupMembers, shuffleIntoGroups } from "../assets/app.js?v=d54c60ede7";
 
 const $ = (id) => document.getElementById(id);
 // [valeur, libellé] — source unique pour le menu Niveau et la gestion admin.
@@ -359,6 +359,21 @@ function wire() {
     ${who ? `<div class="answer-read-by">✍️ ${esc(who)}</div>` : ""}
   </div>`;
 
+  /* Résultat du vérificateur de cartes : les 3 essais, le meilleur score, et
+     si la correction a été consultée. */
+  const cardsBlock = (cards) => Object.values(cards || {}).map((c) => {
+    const tries = Array.isArray(c.tries) ? c.tries : [];
+    const total = c.total || 0;
+    const best = c.best != null ? c.best : (tries.length ? Math.max(...tries) : 0);
+    const pct = total ? Math.round(best / total * 100) : null;
+    return `<div class="cards-result">
+      <strong>✂️ ${esc(c.title || "Cartes")}</strong> ${scorePill(pct)}
+      <span class="cards-result-meta">${best} / ${total} au meilleur essai ·
+      ${tries.length} essai${tries.length > 1 ? "s" : ""}${tries.length ? " (" + tries.map((t) => t + "/" + total).join(" → ") + ")" : ""}
+      · ${c.revealed ? "corrigé consulté" : "corrigé non consulté"}</span>
+    </div>`;
+  }).join("");
+
   document.querySelectorAll("[data-detail]").forEach((b) => b.onclick = async () => {
     const cid = b.getAttribute("data-detail"), sid = b.getAttribute("data-sid"), name = b.getAttribute("data-name");
     const boxDet = document.querySelector(`[data-detailbox="${cid}"]`);
@@ -380,6 +395,7 @@ function wire() {
             ${q != null ? `<span style="font-weight:400;font-size:0.82rem;color:var(--muted)">quiz</span> ${scorePill(q)}` : ""}
             ${w.path ? `<a class="btn btn-ghost btn-sm" href="${esc(w.path)}" target="_blank" rel="noopener">↗ la page</a>` : ""}
           </h4>
+          ${cardsBlock(w.cards)}
           ${keys.length
             ? keys.map((k) => answerBlock(labels[k] || "", w.answers[k], "")).join("")
             : (w.groupAnswers
@@ -450,6 +466,7 @@ function wire() {
           ${esc((w.title || w.pageKey).replace(/_/g, " "))}
           ${w.path ? `<a class="btn btn-ghost btn-sm" href="${esc(w.path)}" target="_blank" rel="noopener">↗ la page</a>` : ""}
         </h4>
+        ${cardsBlock(w.cards)}
         ${answers.length
           ? answers.map(([, a]) => answerBlock(a.label || "", a.text || "", a.by || "?")).join("")
           : '<p style="color:var(--muted);font-size:0.85rem">Aucune réponse.</p>'}`;

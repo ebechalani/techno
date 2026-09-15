@@ -7,7 +7,8 @@
 // version chaînée depuis l'URL du module (cache-busting de app.js)
 const __V = new URL(import.meta.url).searchParams.get("v") || "";
 const { currentStudent, isConfigured, pageKeyFromPath, loadWork, saveWork,
-  watchGroupAnswers, saveGroupAnswer, markGroupAnswered, logout } = await import("./app.js" + (__V ? "?v=" + __V : ""));
+  watchGroupAnswers, saveGroupAnswer, markGroupAnswered, logout,
+  saveCardsResult, saveGroupCardsResult } = await import("./app.js" + (__V ? "?v=" + __V : ""));
 
 (async function () {
   const sess = currentStudent();
@@ -86,8 +87,11 @@ const { currentStudent, isConfigured, pageKeyFromPath, loadWork, saveWork,
       if (inGroup) {
         await markGroupAnswered(sess.classId, sess.groupId, pageKey, groupAnswers, title);
       }
+      dot.classList.remove("saving");
+      return true;
     } catch (e) { /* silencieux : localStorage garde une copie */ }
     dot.classList.remove("saving");
+    return false;
   }
   function schedule() { clearTimeout(saveTimer); saveTimer = setTimeout(push, 900); }
 
@@ -153,6 +157,35 @@ const { currentStudent, isConfigured, pageKeyFromPath, loadWork, saveWork,
     } catch (e) {}
     fields.forEach((ta) => ta.addEventListener("input", schedule));
   }
+
+  /* ---- Vérificateur de cartes : envoi du résultat au professeur ----
+     client.js n'ouvre la correction QUE si cette fonction a répondu true :
+     le tri de l'îlot part chez le professeur AVANT que le corrigé soit
+     visible, sans quoi il suffirait de révéler puis de recopier. */
+  window.LMTechnoCards = window.LMTechnoCards || { submit: null };
+  window.LMTechnoCards.submit = async function (sheetId, result) {
+    try {
+      // 1. les réponses écrites sur les cartes partent d'abord…
+      if (inGroup) {
+        const sheet = document.getElementById(sheetId);
+        const tas = sheet ? Array.from(sheet.querySelectorAll(".cut-card-ans textarea")) : [];
+        for (const ta of tas) {
+          await saveGroupAnswer(sess.classId, sess.groupId, pageKey,
+            ta.getAttribute("data-answer-idx"), ta.value, sess.firstName, title,
+            ta.getAttribute("data-answer-label") || "", location.pathname);
+        }
+        await markGroupAnswered(sess.classId, sess.groupId, pageKey,
+          Object.keys(collectAnswers()).length, title);
+      } else if (!(await push())) {
+        return false;
+      }
+      // 2. …puis le score, les essais et la consultation du corrigé.
+      const data = { ...result, path: location.pathname, pageTitle: title };
+      if (inGroup) await saveGroupCardsResult(sess.classId, sess.groupId, pageKey, sheetId, data);
+      else await saveCardsResult(sess.classId, sess.sid, pageKey, sheetId, data);
+      return true;
+    } catch (e) { return false; }
+  };
 
   /* ---- Quiz : toujours individuel ---- */
   quizQs.forEach((q) => {

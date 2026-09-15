@@ -416,6 +416,22 @@ export async function markGroupAnswered(classId, groupId, pageKey, answered, tit
   return sids.length;
 }
 
+/* Résultat du vérificateur de cartes : score de chaque essai, meilleur score,
+ * et si l'îlot a fini par consulter la correction. Rangé à côté du travail de
+ * la page — aucune règle supplémentaire n'est nécessaire (l'écriture sous
+ * work/{classe}/{élève} et groupwork/{classe}/{îlot} est déjà autorisée). */
+export async function saveCardsResult(classId, sid, pageKey, sheetId, data) {
+  await ensureAnon();
+  await update(ref(db, "work/" + classId + "/" + sid + "/" + pageKey + "/cards/" + sheetId),
+    { ...data, updatedAt: serverTimestamp() });
+}
+
+export async function saveGroupCardsResult(classId, groupId, pageKey, sheetId, data) {
+  await ensureAnon();
+  await update(ref(db, "groupwork/" + classId + "/" + groupId + "/" + pageKey + "/cards/" + sheetId),
+    { ...data, updatedAt: serverTimestamp() });
+}
+
 export async function loadWork(classId, sid, pageKey) {
   await ensureAnon();
   const s = await get(ref(db, "work/" + classId + "/" + sid + "/" + pageKey));

@@ -81,7 +81,7 @@ function renderCardSheet(rawTitle, cards, keys) {
       ? "À écrire sous chaque carte : " + uniq.map((u) => `<strong>${escHtml(u)}</strong>`).join(" · ")
       : "";
   return `
-<section class="cards-sheet" id="${id}">
+<section class="cards-sheet" id="${id}"${keyed ? ` data-cards-title="${escHtml(title)}"` : ""}>
   <div class="cards-head">
     <h3 class="cards-title">✂️ ${escHtml(title)}</h3>
     <span class="cards-count">${cards.length} cartes</span>
