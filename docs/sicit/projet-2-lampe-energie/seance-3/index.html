@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="fr" data-base="../../../" data-section="sicit" data-v="08290246cd">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>🔦 Séance 3 — Assembler, décorer, mesurer et conclure · La lampe de bureau — Technologie &amp; SNT</title>
+<meta name="description" content="Lampe montée, décor Skycut, mesures finales et bilan énergétique chiffré, incertitudes comprises.">
+<meta property="og:title" content="🔦 Séance 3 — Assembler, décorer, mesurer et conclure · La lampe de bureau — Technologie &amp; SNT">
+<meta property="og:description" content="Lampe montée, décor Skycut, mesures finales et bilan énergétique chiffré, incertitudes comprises.">
+<meta property="og:type" content="website">
+<link rel="icon" href="../../../assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lexend:wght@500;600;700;800&family=Caveat:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../../assets/styles.css?v=08290246cd">
+<script>
+(function(){try{var t=localStorage.getItem("lmtechno-theme");if(!t)t=window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light";document.documentElement.setAttribute("data-theme",t);}catch(e){}})();
+(function(){try{var s=JSON.parse(localStorage.getItem("lmtechno-eleve")||"null");if(!s||!s.section)return;var d=document.documentElement,cur=d.getAttribute("data-section")||"",base=d.getAttribute("data-base")||"./",lv=["5eme","4eme","3eme","snt","sicit"];if(cur==="home"||(lv.indexOf(cur)>=0&&cur!==s.section))location.replace(base+s.section+"/");}catch(e){}})();
+</script>
+<script src="../../../assets/firebase-config.js?v=08290246cd"></script>
+
+</head>
+<body>
+<a class="skip-link" href="#contenu">Aller au contenu</a>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="../../../index.html">
+      <span class="brand-logo">T</span>
+      <span>Technologie <span style="color:var(--muted);font-weight:500">&amp;</span> SNT
+        <small>Lycée Montaigne, Beit Chabab</small>
+      </span>
+    </a>
+    
+<nav class="main-nav" id="main-nav" aria-label="Navigation principale">
+  <a href="../../../index.html">Accueil</a>
+  <a href="../../../5eme/" style="--dot:#0d9268">5ème</a>
+  <a href="../../../4eme/" style="--dot:#2050d0">4ème</a>
+  <a href="../../../3eme/" style="--dot:#7c3aed">3ème</a>
+  <a href="../../../snt/" style="--dot:#d9640f">2nde SNT</a>
+  <a href="../../../sicit/" style="--dot:#0d8e9c" aria-current="true">SI · CIT</a>
+  <a href="../../../atelier/" style="--dot:#b91c1c">Atelier</a>
+  <a class="nav-account" href="../../../connexion/">👤 Espace</a>
+</nav>
+    <div class="header-actions">
+      <button class="search-btn" id="search-open" type="button" aria-label="Rechercher">
+        <span>🔍</span><span class="label">Rechercher</span><kbd>Ctrl K</kbd>
+      </button>
+      <button class="icon-btn" id="theme-toggle" type="button" aria-label="Changer de thème">🌙</button>
+      <button class="icon-btn nav-toggle" id="nav-toggle" type="button" aria-label="Menu" aria-expanded="false">☰</button>
+    </div>
+  </div>
+</header>
+<main id="contenu">
+
+<nav class="breadcrumbs wrap" aria-label="Fil d'Ariane">
+    <a href="../../../index.html">Accueil</a><span class="sep">›</span>
+    <a href="../../">SI · CIT</a><span class="sep">›</span>
+    <a href="../">La lampe de bureau</a><span class="sep">›</span>
+    <span class="current">🔦 Séance 3 — Assembler, décorer, mesurer et conclure</span>
+  </nav>
+<div class="wrap course-layout">
+  <aside class="sidebar" style="--accent:undefined;--accent-soft:undefined;">
+    <div class="sb-title"><span class="dot"></span>SI · CIT </div>
+    <nav>
+    <details>
+      <summary><a href="../../projet-1-alarme-luminosite/" style="all:unset;cursor:pointer">L'alarme de luminosité</a></summary>
+      <div class="sb-pages">
+        <a href="../../projet-1-alarme-luminosite/jeu-intro/">🎮 Jeu d'intro</a>
+        <a href="../../projet-1-alarme-luminosite/seance-1/">Du besoin au schéma</a>
+        <a href="../../projet-1-alarme-luminosite/seance-2/">Programmer et mesurer</a>
+        <a href="../../projet-1-alarme-luminosite/seance-3/">Boîtier et tests</a>
+        <a href="../../projet-1-alarme-luminosite/guide-prof/">Guide du professeur</a>
+      </div>
+    </details>
+    <details open>
+      <summary><a href="../../projet-2-lampe-energie/" style="all:unset;cursor:pointer">La lampe de bureau</a></summary>
+      <div class="sb-pages">
+        <a href="../../projet-2-lampe-energie/jeu-intro/">🎮 Jeu d'intro</a>
+        <a href="../../projet-2-lampe-energie/seance-1/">Chaîne d'énergie et mesures</a>
+        <a href="../../projet-2-lampe-energie/seance-2/">Concevoir l'abat-jour</a>
+        <a href="../../projet-2-lampe-energie/seance-3/" aria-current="true">Assembler et conclure</a>
+        <a href="../../projet-2-lampe-energie/guide-prof/">Guide du professeur</a>
+      </div>
+    </details>
+    <details>
+      <summary><a href="../../projet-3-pont-structure/" style="all:unset;cursor:pointer">Le pont qui résiste</a></summary>
+      <div class="sb-pages">
+        <a href="../../projet-3-pont-structure/jeu-intro/">🎮 Jeu d'intro</a>
+        <a href="../../projet-3-pont-structure/seance-1/">Observer et supposer</a>
+        <a href="../../projet-3-pont-structure/seance-2/">Fabriquer</a>
+        <a href="../../projet-3-pont-structure/seance-3/">Essais de charge</a>
+        <a href="../../projet-3-pont-structure/guide-prof/">Guide du professeur</a>
+      </div>
+    </details>
+    <details>
+      <summary><a href="../../projet-4-innover-objet/" style="all:unset;cursor:pointer">Réinventer un objet</a></summary>
+      <div class="sb-pages">
+        <a href="../../projet-4-innover-objet/jeu-intro/">D'où viennent les idées ?</a>
+        <a href="../../projet-4-innover-objet/seance-1/">Veille et analyse</a>
+        <a href="../../projet-4-innover-objet/seance-2/">Créativité et choix</a>
+        <a href="../../projet-4-innover-objet/seance-3/">Maquette et pitch</a>
+        <a href="../../projet-4-innover-objet/guide-prof/">Guide du professeur</a>
+      </div>
+    </details>
+    </nav>
+  </aside>
+  <article>
+    <div class="page-head">
+      <div class="kicker">
+        <span class="badge" style="--badge-bg:#e0f5f7;--badge-fg:#0d8e9c">SI</span>
+        <span class="badge">La lampe de bureau</span>
+        <span class="badge badge-new">✦ Nouveau</span>
+      </div>
+      <h1>🔦 Séance 3 — Assembler, décorer, mesurer et conclure</h1>
+      <p class="desc">Lampe montée, décor Skycut, mesures finales et bilan énergétique chiffré, incertitudes comprises.</p>
+    </div>
+    <div class="callout callout-objectif"><span class="co-icon">🎯</span><div class="co-body"><div class="co-title">Objectifs</div><p>À la fin de cette séance, je suis capable de :</p>
+<ul>
+<li>assembler un abat-jour à encoches et y intégrer un ruban LED 12 V correctement câblé ;</li>
+<li>découper et poser un décor en vinyle au Skycut après un test de coupe ;</li>
+<li>mesurer U, I et P sur la lampe montée et comparer avec une ampoule à incandescence à éclairement comparable ;</li>
+<li>encadrer mes mesures par une incertitude et rédiger un bilan énergétique chiffré qui nomme ses propres limites.</li>
+</ul>
+</div></div>
+    
+<div class="student-bar">
+  <span class="sb-info">💾 Tes réponses sont enregistrées automatiquement sur cet appareil.</span>
+  <span class="sb-actions">
+    <button class="btn btn-ghost btn-sm" id="print-answers" type="button">🖨 Imprimer / PDF</button>
+    <button class="btn btn-ghost btn-sm" id="clear-answers" type="button">🗑 Tout effacer</button>
+  </span>
+</div>
+    <div class="prose">
+      <h2>🎯 Objectif</h2>
+<p>Dernière ligne droite : tu <strong>assembles</strong> l&#39;abat-jour, tu y fixes le ruban LED, tu <strong>personnalises</strong> la lampe avec un décor en vinyle découpé au <strong>Skycut</strong> (permis élève), puis tu refais les <strong>mesures sur la lampe montée</strong> et tu compares, chiffres à l&#39;appui, avec une ampoule à incandescence. Tu termines par un <strong>bilan énergétique</strong> et un regard critique sur tes mesures. Le quiz de fin de page valide la séquence.</p>
+<h2>⚠️ Sécurité</h2>
+<ul>
+<li><strong>Zone machines avec autorisation du professeur, jamais seul</strong> ; lunettes obligatoires ; cheveux attachés, pas de bijoux ni de cordons ; <strong>jamais de gants</strong> près d&#39;un outil en mouvement.</li>
+<li><strong>Skycut</strong> : uniquement avec ton <strong>permis</strong>, un seul opérateur, doigts loin du chariot ; crochet d&#39;échenillage lame vers la table.</li>
+<li><strong>Vinyle = Skycut, jamais laser.</strong></li>
+<li>Électricité : <strong>12 V continu uniquement</strong>, alimentation éteinte à chaque branchement, ampèremètre <strong>en série</strong>. Le cordon 230 V reste au professeur.</li>
+<li>L&#39;ampoule de comparaison est <strong>brûlante</strong> : on ne la touche pas, on ne la pose jamais dans l&#39;abat-jour en bois.</li>
+<li>Colle à bois : mains lavées, pas de colle sur les contacts du ruban LED.</li>
+</ul>
+<h2>🕹️ Déroulé</h2>
+<h3>Étape 1 — Assemblage (15 min, à l&#39;îlot)</h3>
+<ol>
+<li>Assemble <strong>à blanc</strong> (sans colle) les quatre faces sur la base : les créneaux doivent entrer à la main, comme sur le peigne. Une encoche trop serrée se ponce légèrement ; trop lâche, on comblera à la colle.</li>
+<li>Colle à bois en filet fin dans les creux, montage, <strong>équerrage</strong> vérifié sur la table, maintien avec deux pinces pendant que tu passes à l&#39;étape 2.</li>
+<li><strong>Ruban LED</strong> : coupe sur le repère ciseaux (jamais ailleurs, tu détruirais un groupe de 3 LED). Colle-le à l&#39;intérieur, en bas de la face arrière, <strong>tourné vers l&#39;intérieur</strong> de l&#39;abat-jour, pour que la lumière ressorte diffusée par la fente et jamais en direct.</li>
+<li>Passe le câble par le trou Ø 8 mm, raccorde au bornier ou au connecteur (repère <strong>+ rouge / − noir</strong>), ajoute l&#39;interrupteur en série. Fais vérifier par le contrôleur qualité <strong>avant</strong> d&#39;allumer.</li>
+</ol>
+<p>Le magasinier note les pièces manquantes ou cassées, et ce qui l&#39;explique :</p>
+<div class="answer-field">
+  <textarea rows="3" data-answer-idx="0" placeholder="✏️ Écris ta réponse ici…" aria-label="Zone de réponse de l'élève"></textarea>
+</div>
+<h3>Étape 2 — Décor au Skycut (12 min, opérateur titulaire du permis)</h3>
+<p>Ton décor : un motif ou un mot court (nom de l&#39;îlot, prénom, pictogramme) de <strong>60 × 30 mm maximum</strong>, une seule couleur, en vinyle adhésif.</p>
+<ol>
+<li>Dans SignMaster, texte vectorisé ou SVG importé, dimensionné en millimètres ; <strong>pas de miroir</strong> (c&#39;est un adhésif, pas du flex).</li>
+<li><strong>Test de coupe obligatoire</strong> : kiss cut, le liner ne doit pas être traversé. Force de départ indicative 20 à 25, vitesse 8, à ajuster.</li>
+<li>Découpe, <strong>échenillage</strong> au crochet, tape de transfert, pose sur la face avant de l&#39;abat-jour, marouflage du centre vers les bords.</li>
+</ol>
+<p>Réglages validés (force, vitesse, nombre de tests) et qualité de la pose :</p>
+<div class="answer-field">
+  <textarea rows="3" data-answer-idx="1" placeholder="✏️ Écris ta réponse ici…" aria-label="Zone de réponse de l'élève"></textarea>
+</div>
+<h3>Étape 3 — Mesures finales sur la lampe montée (13 min)</h3>
+<p>Même protocole qu&#39;à la séance 1, <strong>alimentation éteinte à chaque branchement</strong>, 12 V, limitation 1 A.</p>
+<table>
+<thead>
+<tr>
+<th>Configuration</th>
+<th>U (V)</th>
+<th>I (A)</th>
+<th>P = U × I (W)</th>
+<th>Feuille à 30 cm</th>
+<th>Chaleur des parois après 3 min</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Lampe montée (ruban dans l&#39;abat-jour)</td>
+<td>à relever</td>
+<td>à relever</td>
+<td>à calculer</td>
+<td>à noter</td>
+<td>à noter</td>
+</tr>
+<tr>
+<td>Ruban LED seul (rappel séance 1)</td>
+<td>à recopier</td>
+<td>à recopier</td>
+<td>à recopier</td>
+<td>à recopier</td>
+<td>–</td>
+</tr>
+<tr>
+<td>Ampoule incandescente seule, à 30 cm</td>
+<td>à recopier</td>
+<td>à recopier</td>
+<td>à recopier</td>
+<td>à noter</td>
+<td>–</td>
+</tr>
+</tbody></table>
+<p>Puis la <strong>comparaison à éclairement comparable</strong> : pose la lampe montée et l&#39;ampoule (hors abat-jour, sur son support) à la même hauteur au-dessus de deux feuilles blanches identiques. Si le professeur autorise une application luxmètre sur un téléphone, relève les deux valeurs en lux ; sinon, jugez à trois l&#39;éclairement (plus faible / équivalent / plus fort). Ajuste au besoin la tension de l&#39;ampoule (entre 10 et 12 V) pour obtenir un éclairement voisin de celui de la lampe, et note la puissance correspondante.</p>
+<p>Tes relevés et le rapport P ampoule / P lampe à éclairement comparable :</p>
+<div class="answer-field">
+  <textarea rows="3" data-answer-idx="2" placeholder="✏️ Écris ta réponse ici…" aria-label="Zone de réponse de l'élève"></textarea>
+</div>
+<p><strong>Question A.</strong> L&#39;intensité de la lampe montée est-elle identique à celle du ruban seul mesuré à la séance 1 ? Si elle a bougé de quelques mA, trouve deux explications possibles (longueur de câble ajoutée, échauffement du ruban dans la boîte, contact du connecteur, précision du multimètre).</p>
+<div class="answer-field">
+  <textarea rows="3" data-answer-idx="3" placeholder="✏️ Écris ta réponse ici…" aria-label="Zone de réponse de l'élève"></textarea>
+</div>
+<h3>Étape 4 — Analyse critique et bilan énergétique chiffré (10 min)</h3>
+<p><strong>Incertitudes.</strong> Un multimètre d&#39;atelier annonce typiquement ± 1 % de la valeur lue plus quelques unités du dernier chiffre : à 0,12 A, cela fait déjà ± 0,005 A environ, soit 4 %. Ajoute l&#39;affichage de l&#39;alimentation, moins précis, et la variation de I avec la température du ruban. Encadre ta puissance : P = … W ± … W.</p>
+<div class="answer-field">
+  <textarea rows="3" data-answer-idx="4" placeholder="✏️ Écris ta réponse ici…" aria-label="Zone de réponse de l'élève"></textarea>
+</div>
+<p><strong>Bilan énergétique de ta lampe.</strong> Complète, avec tes mesures et les ordres de grandeur de la séance 1 (LED ≈ 35 % de lumière, incandescence ≈ 5 %) :</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Ta lampe LED</th>
+<th>Ampoule à éclairement comparable</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>P absorbée (W)</td>
+<td>ta mesure</td>
+<td>ta mesure</td>
+</tr>
+<tr>
+<td>P lumière utile (W) ≈ 35 % / 5 %</td>
+<td>à calculer</td>
+<td>à calculer</td>
+</tr>
+<tr>
+<td>P perdue en chaleur (W)</td>
+<td>à calculer</td>
+<td>à calculer</td>
+</tr>
+<tr>
+<td>E sur un an (3 h/j × 200 j), en kWh</td>
+<td>à calculer</td>
+<td>à calculer</td>
+</tr>
+</tbody></table>
+<p>Ce que montre ce tableau : les deux puissances <strong>lumineuses</strong> sont voisines (c&#39;est normal, tu as réglé un éclairement comparable), mais l&#39;ampoule doit absorber <strong>plusieurs fois plus</strong> pour y arriver, et tout le surplus chauffe la pièce. Rédige la conclusion :</p>
+<div class="answer-field">
+  <textarea rows="3" data-answer-idx="5" placeholder="✏️ Écris ta réponse ici…" aria-label="Zone de réponse de l'élève"></textarea>
+</div>
+<p><strong>Question B — Regard critique.</strong> Ta lampe est-elle vraiment « basse consommation » ? Cite un poste d&#39;énergie que ton bilan ne compte pas (fabrication du contreplaqué, du ruban, transport, pertes dans le bloc secteur 230 V → 12 V, fin de vie).</p>
+<div class="answer-field">
+  <textarea rows="3" data-answer-idx="6" placeholder="✏️ Écris ta réponse ici…" aria-label="Zone de réponse de l'élève"></textarea>
+</div>
+<h3>Étape 5 — Bilan et quiz (5 min)</h3>
+<p>Lampe éteinte, ampoule refroidie avant rangement. Le chef d&#39;atelier rend la lampe, le tableau de mesures, la conclusion et le compte rendu de copilote. Quiz en bas de page : <strong>5 questions</strong>.</p>
+<h2>🧠 Ce qu&#39;il faut retenir</h2>
+<ul>
+<li>Sur la lampe montée, <strong>P = U × I</strong> se mesure comme sur le ruban seul : les écarts de quelques mA viennent des <strong>incertitudes</strong> (appareil, calibre, température, contacts), pas d&#39;une erreur.</li>
+<li>Comparer deux sources <strong>à éclairement comparable</strong> est la seule façon honnête de parler de rendement : à lumière égale, l&#39;incandescence absorbe <strong>environ 5 à 8 fois</strong> plus qu&#39;une LED et le surplus part en <strong>chaleur</strong>.</li>
+<li><strong>E = P × t</strong> transforme quelques watts en kWh sur l&#39;année : c&#39;est là que la différence se lit sur une facture.</li>
+<li>Un bilan énergétique ne compte que ce qu&#39;on a mesuré : fabrication, transport et fin de vie restent hors champ, il faut le dire.</li>
+<li>Skycut avec permis, test de coupe obligatoire, <strong>vinyle jamais au laser</strong>.</li>
+</ul>
+<h2>✅ Bilan</h2>
+<p>Ton compte rendu final tient en cinq lignes : besoin, chaîne d&#39;énergie, mesures (U, I, P des deux sources à éclairement comparable), rendement et énergie annuelle, limite du bilan. Écris-le ici, puis fais-le relire par le contrôleur qualité.</p>
+<div class="answer-field">
+  <textarea rows="3" data-answer-idx="7" placeholder="✏️ Écris ta réponse ici…" aria-label="Zone de réponse de l'élève"></textarea>
+</div>
+
+    </div>
+    
+<section class="quiz" id="quiz">
+  <h2>🧠 Teste tes connaissances</h2>
+  <p class="quiz-hint">Réponds aux questions puis clique sur « Vérifier » — la correction s'affiche aussitôt.</p>
+  
+    <div class="quiz-q" data-ok="1" data-explain="P = U × I = 12 V × 0,15 A = 1,8 W : la puissance se calcule en multipliant tension et intensité, jamais en les additionnant ou en les divisant.">
+      <p class="qq-text">1. Le ruban LED de la lampe est alimenté sous 12 V et le multimètre en série indique 0,15 A. Quelle est la puissance absorbée ?</p>
+      <div class="qq-opts">
+        <label class="qq-opt"><input type="radio" name="q0" value="0"><span>80 W</span></label>
+        <label class="qq-opt"><input type="radio" name="q0" value="1"><span>1,8 W</span></label>
+        <label class="qq-opt"><input type="radio" name="q0" value="2"><span>12,15 W</span></label>
+        <label class="qq-opt"><input type="radio" name="q0" value="3"><span>0,0125 W</span></label>
+      </div>
+      <button class="btn btn-ghost qq-check" type="button">Vérifier ma réponse</button>
+      <div class="qq-feedback" aria-live="polite"></div>
+    </div>
+
+    <div class="quiz-q" data-ok="2" data-explain="L'ampèremètre se place en série pour être traversé par le courant ; branché en parallèle sur l'alimentation, il fait un court-circuit et grille son fusible.">
+      <p class="qq-text">2. Pour mesurer l'intensité qui traverse le ruban LED, comment branche-t-on le multimètre ?</p>
+      <div class="qq-opts">
+        <label class="qq-opt"><input type="radio" name="q1" value="0"><span>En parallèle sur le ruban, calibre volt</span></label>
+        <label class="qq-opt"><input type="radio" name="q1" value="1"><span>En parallèle sur l'alimentation, calibre ampère</span></label>
+        <label class="qq-opt"><input type="radio" name="q1" value="2"><span>En série dans le circuit, calibre ampère, alimentation éteinte pendant le branchement</span></label>
+        <label class="qq-opt"><input type="radio" name="q1" value="3"><span>Entre le + et le − de l'alimentation, calibre ohm</span></label>
+      </div>
+      <button class="btn btn-ghost qq-check" type="button">Vérifier ma réponse</button>
+      <div class="qq-feedback" aria-live="polite"></div>
+    </div>
+
+    <div class="quiz-q" data-ok="0" data-explain="η = P utile / P absorbée. Pour une ampoule à incandescence il vaut environ 5 %, pour une LED environ 30 à 40 % ; le reste part en chaleur.">
+      <p class="qq-text">3. Le rendement d'un convertisseur d'énergie, c'est…</p>
+      <div class="qq-opts">
+        <label class="qq-opt"><input type="radio" name="q2" value="0"><span>la puissance utile divisée par la puissance absorbée</span></label>
+        <label class="qq-opt"><input type="radio" name="q2" value="1"><span>la puissance absorbée divisée par la durée</span></label>
+        <label class="qq-opt"><input type="radio" name="q2" value="2"><span>la tension multipliée par l'intensité</span></label>
+        <label class="qq-opt"><input type="radio" name="q2" value="3"><span>l'énergie perdue en chaleur</span></label>
+      </div>
+      <button class="btn btn-ghost qq-check" type="button">Vérifier ma réponse</button>
+      <div class="qq-feedback" aria-live="polite"></div>
+    </div>
+
+    <div class="quiz-q" data-ok="2" data-explain="Les pertes ont lieu au maillon « convertir » : le filament transforme environ 95 % de l'énergie électrique en chaleur, ce qui explique qu'il soit brûlant.">
+      <p class="qq-text">4. À éclairement comparable, l'ampoule à incandescence absorbe 5 à 8 fois plus de puissance que la LED. Où passe la différence ?</p>
+      <div class="qq-opts">
+        <label class="qq-opt"><input type="radio" name="q3" value="0"><span>Dans l'interrupteur, qui la stocke</span></label>
+        <label class="qq-opt"><input type="radio" name="q3" value="1"><span>En lumière supplémentaire invisible</span></label>
+        <label class="qq-opt"><input type="radio" name="q3" value="2"><span>En chaleur dégagée par le filament</span></label>
+        <label class="qq-opt"><input type="radio" name="q3" value="3"><span>Dans le câble, qui la renvoie vers la prise</span></label>
+      </div>
+      <button class="btn btn-ghost qq-check" type="button">Vérifier ma réponse</button>
+      <div class="qq-feedback" aria-live="polite"></div>
+    </div>
+
+    <div class="quiz-q" data-ok="2" data-explain="L'élève est copilote (préparation, focus, cadrage, checklist), le professeur seul arme et lance ; le vinyle est un plastique chloré qui dégage un gaz toxique et corrosif dans le laser.">
+      <p class="qq-text">5. Lors de la découpe de l'abat-jour, quelle affirmation est correcte ?</p>
+      <div class="qq-opts">
+        <label class="qq-opt"><input type="radio" name="q4" value="0"><span>L'élève titulaire du permis lance lui-même le laser</span></label>
+        <label class="qq-opt"><input type="radio" name="q4" value="1"><span>Le décor en vinyle peut être découpé au laser en même temps que le bois</span></label>
+        <label class="qq-opt"><input type="radio" name="q4" value="2"><span>Seul le professeur lance le laser ; le vinyle se découpe au Skycut, jamais au laser</span></label>
+        <label class="qq-opt"><input type="radio" name="q4" value="3"><span>On ouvre le capot pendant le tir pour surveiller la flamme</span></label>
+      </div>
+      <button class="btn btn-ghost qq-check" type="button">Vérifier ma réponse</button>
+      <div class="qq-feedback" aria-live="polite"></div>
+    </div>
+  <div class="quiz-score" aria-live="polite"></div>
+</section>
+    
+    <nav class="pager">
+      <a class="pg-prev" href="../seance-2/"><span class="pg-label">← Précédent</span><span class="pg-title">📐 Séance 2 — Concevoir l'abat-jour et le découper au laser</span></a>
+      <a class="pg-next" href="../guide-prof/"><span class="pg-label">Suivant →</span><span class="pg-title">👨‍🏫 Guide du professeur — La lampe de bureau</span></a>
+    </nav>
+  </article>
+</div>
+</main>
+<footer class="site-footer">
+  <div class="wrap footer-grid">
+    <div>
+      <h4>Technologie &amp; SNT</h4>
+      <p>Site pédagogique regroupant les cours, activités et ressources de Technologie du collège et de SNT du lycée.</p>
+    </div>
+    <div>
+      <h4>Niveaux</h4>
+      <ul>
+        <li><a href="../../../5eme/">5ème</a></li>
+        <li><a href="../../../4eme/">4ème</a></li>
+        <li><a href="../../../3eme/">3ème</a></li>
+        <li><a href="../../../snt/">2nde SNT</a></li>
+        <li><a href="../../../sicit/">SI · CIT</a></li>
+        <li><a href="../../../atelier/">Atelier</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Références</h4>
+      <ul>
+        <li><a href="https://eduscol.education.fr/2098/technologie-au-cycle-4" target="_blank" rel="noopener">Programme de Technologie (Eduscol)</a></li>
+        <li><a href="https://eduscol.education.fr/3016/sciences-numeriques-et-technologie-au-lycee" target="_blank" rel="noopener">Programme SNT (Eduscol)</a></li>
+        <li><a href="https://pix.fr" target="_blank" rel="noopener">Pix — compétences numériques</a></li>
+        <li><a href="https://sites.google.com/view/lmtechno25" target="_blank" rel="noopener">Site d'origine (Google Sites)</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="wrap footer-bottom">
+    <span>© M. Eddy Bachaalany · Lycée Montaigne, Beit Chabab</span>
+    <span>Cours de Technologie collège &amp; SNT lycée</span>
+  </div>
+</footer>
+<div class="search-overlay" id="search-overlay" role="dialog" aria-label="Recherche">
+  <div class="search-panel">
+    <div class="search-input-row">
+      <span>🔍</span>
+      <input id="search-input" type="search" placeholder="Rechercher une séquence, une séance, une notion…" autocomplete="off">
+      <kbd>Échap</kbd>
+    </div>
+    <div class="search-results" id="search-results"></div>
+  </div>
+</div>
+<button class="back-to-top" id="back-to-top" type="button" aria-label="Retour en haut">↑</button>
+<script src="../../../assets/client.js?v=08290246cd" defer></script>
+</body>
+</html>

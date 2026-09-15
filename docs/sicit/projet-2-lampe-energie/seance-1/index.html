@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="fr" data-base="../../../" data-section="sicit" data-v="08290246cd">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>🔋 Séance 1 — Chaîne d'énergie et mesures au multimètre · La lampe de bureau — Technologie &amp; SNT</title>
+<meta name="description" content="Du besoin à la puissance : décris la chaîne d'énergie, mesure U et I sur une LED et une ampoule, et calcule qui gaspille.">
+<meta property="og:title" content="🔋 Séance 1 — Chaîne d'énergie et mesures au multimètre · La lampe de bureau — Technologie &amp; SNT">
+<meta property="og:description" content="Du besoin à la puissance : décris la chaîne d'énergie, mesure U et I sur une LED et une ampoule, et calcule qui gaspille.">
+<meta property="og:type" content="website">
+<link rel="icon" href="../../../assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lexend:wght@500;600;700;800&family=Caveat:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../../assets/styles.css?v=08290246cd">
+<script>
+(function(){try{var t=localStorage.getItem("lmtechno-theme");if(!t)t=window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light";document.documentElement.setAttribute("data-theme",t);}catch(e){}})();
+(function(){try{var s=JSON.parse(localStorage.getItem("lmtechno-eleve")||"null");if(!s||!s.section)return;var d=document.documentElement,cur=d.getAttribute("data-section")||"",base=d.getAttribute("data-base")||"./",lv=["5eme","4eme","3eme","snt","sicit"];if(cur==="home"||(lv.indexOf(cur)>=0&&cur!==s.section))location.replace(base+s.section+"/");}catch(e){}})();
+</script>
+<script src="../../../assets/firebase-config.js?v=08290246cd"></script>
+
+</head>
+<body>
+<a class="skip-link" href="#contenu">Aller au contenu</a>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="../../../index.html">
+      <span class="brand-logo">T</span>
+      <span>Technologie <span style="color:var(--muted);font-weight:500">&amp;</span> SNT
+        <small>Lycée Montaigne, Beit Chabab</small>
+      </span>
+    </a>
+    
+<nav class="main-nav" id="main-nav" aria-label="Navigation principale">
+  <a href="../../../index.html">Accueil</a>
+  <a href="../../../5eme/" style="--dot:#0d9268">5ème</a>
+  <a href="../../../4eme/" style="--dot:#2050d0">4ème</a>
+  <a href="../../../3eme/" style="--dot:#7c3aed">3ème</a>
+  <a href="../../../snt/" style="--dot:#d9640f">2nde SNT</a>
+  <a href="../../../sicit/" style="--dot:#0d8e9c" aria-current="true">SI · CIT</a>
+  <a href="../../../atelier/" style="--dot:#b91c1c">Atelier</a>
+  <a class="nav-account" href="../../../connexion/">👤 Espace</a>
+</nav>
+    <div class="header-actions">
+      <button class="search-btn" id="search-open" type="button" aria-label="Rechercher">
+        <span>🔍</span><span class="label">Rechercher</span><kbd>Ctrl K</kbd>
+      </button>
+      <button class="icon-btn" id="theme-toggle" type="button" aria-label="Changer de thème">🌙</button>
+      <button class="icon-btn nav-toggle" id="nav-toggle" type="button" aria-label="Menu" aria-expanded="false">☰</button>
+    </div>
+  </div>
+</header>
+<main id="contenu">
+
+<nav class="breadcrumbs wrap" aria-label="Fil d'Ariane">
+    <a href="../../../index.html">Accueil</a><span class="sep">›</span>
+    <a href="../../">SI · CIT</a><span class="sep">›</span>
+    <a href="../">La lampe de bureau</a><span class="sep">›</span>
+    <span class="current">🔋 Séance 1 — Chaîne d'énergie et mesures au multimètre</span>
+  </nav>
+<div class="wrap course-layout">
+  <aside class="sidebar" style="--accent:undefined;--accent-soft:undefined;">
+    <div class="sb-title"><span class="dot"></span>SI · CIT </div>
+    <nav>
+    <details>
+      <summary><a href="../../projet-1-alarme-luminosite/" style="all:unset;cursor:pointer">L'alarme de luminosité</a></summary>
+      <div class="sb-pages">
+        <a href="../../projet-1-alarme-luminosite/jeu-intro/">🎮 Jeu d'intro</a>
+        <a href="../../projet-1-alarme-luminosite/seance-1/">Du besoin au schéma</a>
+        <a href="../../projet-1-alarme-luminosite/seance-2/">Programmer et mesurer</a>
+        <a href="../../projet-1-alarme-luminosite/seance-3/">Boîtier et tests</a>
+        <a href="../../projet-1-alarme-luminosite/guide-prof/">Guide du professeur</a>
+      </div>
+    </details>
+    <details open>
+      <summary><a href="../../projet-2-lampe-energie/" style="all:unset;cursor:pointer">La lampe de bureau</a></summary>
+      <div class="sb-pages">
+        <a href="../../projet-2-lampe-energie/jeu-intro/">🎮 Jeu d'intro</a>
+        <a href="../../projet-2-lampe-energie/seance-1/" aria-current="true">Chaîne d'énergie et mesures</a>
+        <a href="../../projet-2-lampe-energie/seance-2/">Concevoir l'abat-jour</a>
+        <a href="../../projet-2-lampe-energie/seance-3/">Assembler et conclure</a>
+        <a href="../../projet-2-lampe-energie/guide-prof/">Guide du professeur</a>
+      </div>
+    </details>
+    <details>
+      <summary><a href="../../projet-3-pont-structure/" style="all:unset;cursor:pointer">Le pont qui résiste</a></summary>
+      <div class="sb-pages">
+        <a href="../../projet-3-pont-structure/jeu-intro/">🎮 Jeu d'intro</a>
+        <a href="../../projet-3-pont-structure/seance-1/">Observer et supposer</a>
+        <a href="../../projet-3-pont-structure/seance-2/">Fabriquer</a>
+        <a href="../../projet-3-pont-structure/seance-3/">Essais de charge</a>
+        <a href="../../projet-3-pont-structure/guide-prof/">Guide du professeur</a>
+      </div>
+    </details>
+    <details>
+      <summary><a href="../../projet-4-innover-objet/" style="all:unset;cursor:pointer">Réinventer un objet</a></summary>
+      <div class="sb-pages">
+        <a href="../../projet-4-innover-objet/jeu-intro/">D'où viennent les idées ?</a>
+        <a href="../../projet-4-innover-objet/seance-1/">Veille et analyse</a>
+        <a href="../../projet-4-innover-objet/seance-2/">Créativité et choix</a>
+        <a href="../../projet-4-innover-objet/seance-3/">Maquette et pitch</a>
+        <a href="../../projet-4-innover-objet/guide-prof/">Guide du professeur</a>
+      </div>
+    </details>
+    </nav>
+  </aside>
+  <article>
+    <div class="page-head">
+      <div class="kicker">
+        <span class="badge" style="--badge-bg:#e0f5f7;--badge-fg:#0d8e9c">SI</span>
+        <span class="badge">La lampe de bureau</span>
+        <span class="badge badge-new">✦ Nouveau</span>
+      </div>
+      <h1>🔋 Séance 1 — Chaîne d'énergie et mesures au multimètre</h1>
+      <p class="desc">Du besoin à la puissance : décris la chaîne d'énergie, mesure U et I sur une LED et une ampoule, et calcule qui gaspille.</p>
+    </div>
+    <div class="callout callout-objectif"><span class="co-icon">🎯</span><div class="co-body"><div class="co-title">Objectifs</div><p>À la fin de cette séance, je suis capable de :</p>
+<ul>
+<li>formuler le besoin d&#39;une lampe de bureau et décrire sa chaîne d&#39;énergie maillon par maillon ;</li>
+<li>dessiner un schéma électrique simple avec voltmètre en parallèle et ampèremètre en série ;</li>
+<li>mesurer U et I au multimètre en basse tension continue (5 V / 12 V) en toute sécurité ;</li>
+<li>calculer P = U × I et E = P × t, puis un premier ordre de grandeur du rendement d&#39;une LED et d&#39;une ampoule à incandescence.</li>
+</ul>
+</div></div>
+    
+<div class="student-bar">
+  <span class="sb-info">💾 Tes réponses sont enregistrées automatiquement sur cet appareil.</span>
+  <span class="sb-actions">
+    <button class="btn btn-ghost btn-sm" id="print-answers" type="button">🖨 Imprimer / PDF</button>
+    <button class="btn btn-ghost btn-sm" id="clear-answers" type="button">🗑 Tout effacer</button>
+  </span>
+</div>
+    <div class="prose">
+      <h2>🎯 Objectif</h2>
+<p>Aujourd&#39;hui, pas de machine : tu travailles <strong>à l&#39;îlot, avec un multimètre et une alimentation réglable</strong>. Mission : décrire la chaîne d&#39;énergie de la lampe que tu vas fabriquer, puis <strong>mesurer</strong> ce qu&#39;une LED et une petite ampoule à incandescence consomment réellement. À la fin de l&#39;heure, tu dois pouvoir dire avec des chiffres : « pour la même lumière, l&#39;ampoule consomme X fois plus ». Un tableau de mesures incomplet = pas de conception à la séance 2.</p>
+<h2>⚠️ Sécurité</h2>
+<ul>
+<li>On travaille <strong>uniquement en basse tension continue : 5 V et 12 V</strong>. Ces tensions ne présentent pas de danger d&#39;électrisation, mais un <strong>court-circuit</strong> fait chauffer les fils et peut abîmer l&#39;alimentation : on branche toujours <strong>alimentation éteinte</strong>, on vérifie, on allume.</li>
+<li><strong>Le 230 V n&#39;existe pas pour toi</strong> : le cordon secteur de l&#39;alimentation est branché par le professeur, et tu ne touches jamais à l&#39;arrière de l&#39;appareil ni à une prise murale.</li>
+<li>L&#39;<strong>ampoule à incandescence</strong> devient <strong>brûlante</strong> en moins d&#39;une minute : on ne la touche pas, on la laisse refroidir avant de la débrancher.</li>
+<li>Multimètre en <strong>ampèremètre = en série</strong>, jamais en parallèle sur l&#39;alimentation (fusible grillé garanti).</li>
+<li>Lunettes non obligatoires à l&#39;îlot, mais cheveux attachés et pas de cordons qui traînent sur la table de mesure.</li>
+</ul>
+<h2>🕹️ Déroulé</h2>
+<h3>Étape 1 — Le besoin (5 min)</h3>
+<p>Une lampe de bureau, ça sert à quoi exactement ? Complète la phrase avec le chef d&#39;atelier : « La lampe permet à <em>un élève</em> d&#39;<em>éclairer sa zone de travail</em> sans <em>éblouir ni chauffer</em>, en consommant <em>le moins d&#39;énergie possible</em> ». Note ensuite deux contraintes que le proviseur du jeu d&#39;introduction ajouterait :</p>
+<div class="answer-field">
+  <textarea rows="3" data-answer-idx="0" placeholder="✏️ Écris ta réponse ici…" aria-label="Zone de réponse de l'élève"></textarea>
+</div>
+<h3>Étape 2 — La chaîne d&#39;énergie de la lampe (10 min)</h3>
+<p>Rappel de la séance jeu : l&#39;énergie traverse cinq maillons. Dans notre lampe :</p>
+<table>
+<thead>
+<tr>
+<th>Maillon</th>
+<th>Composant dans la lampe</th>
+<th>Forme d&#39;énergie en entrée → en sortie</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Alimenter</strong></td>
+<td>bloc secteur ou alimentation réglable (230 V → 12 V continu)</td>
+<td>électrique → électrique</td>
+</tr>
+<tr>
+<td><strong>Distribuer</strong></td>
+<td>interrupteur</td>
+<td>électrique → électrique (passe ou bloque)</td>
+</tr>
+<tr>
+<td><strong>Convertir</strong></td>
+<td>ruban LED 12 V</td>
+<td>électrique → <strong>lumineuse + thermique</strong></td>
+</tr>
+<tr>
+<td><strong>Transmettre</strong></td>
+<td>abat-jour en contreplaqué</td>
+<td>lumineuse → lumineuse (diffusée, orientée)</td>
+</tr>
+<tr>
+<td><strong>Agir</strong></td>
+<td>zone de travail éclairée</td>
+<td>lumineuse → effet utile : lire, écrire</td>
+</tr>
+</tbody></table>
+<p><strong>Question A.</strong> À quel maillon les pertes sont-elles les plus importantes ? Sous quelle forme partent-elles ? Et l&#39;abat-jour, perd-il de l&#39;énergie ? (Réfléchis : une partie de la lumière est absorbée par le bois.)</p>
+<div class="answer-field">
+  <textarea rows="3" data-answer-idx="1" placeholder="✏️ Écris ta réponse ici…" aria-label="Zone de réponse de l'élève"></textarea>
+</div>
+<h3>Étape 3 — Schéma électrique et rappel des grandeurs (7 min)</h3>
+<p>Dessine sur ta feuille le schéma normalisé du circuit : <strong>alimentation 12 V — interrupteur — ruban LED</strong>, en série. Ajoute ensuite le <strong>voltmètre en parallèle</strong> sur la LED et l&#39;<strong>ampèremètre en série</strong> dans la boucle.</p>
+<table>
+<thead>
+<tr>
+<th>Grandeur</th>
+<th>Symbole</th>
+<th>Unité</th>
+<th>Se mesure…</th>
+<th>Ce qu&#39;elle raconte</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Tension</td>
+<td>U</td>
+<td>volt (V)</td>
+<td>en <strong>parallèle</strong></td>
+<td>la « pression » électrique entre deux points</td>
+</tr>
+<tr>
+<td>Intensité</td>
+<td>I</td>
+<td>ampère (A)</td>
+<td>en <strong>série</strong></td>
+<td>le « débit » de charges dans le fil</td>
+</tr>
+<tr>
+<td>Puissance</td>
+<td>P = U × I</td>
+<td>watt (W)</td>
+<td>se calcule</td>
+<td>l&#39;énergie consommée <strong>chaque seconde</strong></td>
+</tr>
+<tr>
+<td>Énergie</td>
+<td>E = P × t</td>
+<td>wattheure (Wh) ou joule (J)</td>
+<td>se calcule</td>
+<td>ce que l&#39;on paie sur la facture</td>
+</tr>
+</tbody></table>
+<blockquote>
+<p>💡 1 Wh, c&#39;est une puissance de 1 W maintenue pendant 1 heure. Le kWh de la facture vaut 1 000 Wh.</p>
+</blockquote>
+<h3>Étape 4 — Les mesures (18 min)</h3>
+<p>Matériel de l&#39;îlot : alimentation réglable (limitation de courant réglée à <strong>1 A</strong> par le professeur), 1 multimètre, 30 cm de ruban LED 12 V, une petite ampoule à incandescence 12 V (5 à 10 W selon le modèle disponible), fils à pinces, une feuille blanche.</p>
+<p>Protocole, <strong>alimentation éteinte à chaque changement de branchement</strong> :</p>
+<ol>
+<li>Règle l&#39;alimentation sur <strong>12 V</strong>. Branche le ruban LED avec l&#39;ampèremètre en série (calibre 10 A d&#39;abord, puis mA si l&#39;aiguille bouge à peine). Allume. Relève I. Bascule le multimètre en voltmètre, en parallèle sur le ruban : relève U.</li>
+<li>Pose une feuille blanche à <strong>30 cm</strong> sous le ruban : note l&#39;éclairement ressenti (faible / moyen / fort). Après 2 minutes, approche la main à 5 cm <strong>sans toucher</strong> : tiède ou chaud ?</li>
+<li>Éteins. Remplace le ruban par l&#39;ampoule. Refais exactement les mêmes relevés (U, I, feuille, chaleur).</li>
+<li>Éteins. Baisse l&#39;alimentation sur <strong>5 V</strong> et rallume chaque récepteur à tour de rôle : que se passe-t-il ? (Le ruban LED 12 V a un seuil : en dessous d&#39;environ 8 V, il ne s&#39;allume pas ; l&#39;ampoule, elle, rougeoie faiblement.)</li>
+<li>Si l&#39;îlot dispose d&#39;un <strong>wattmètre</strong>, le professeur le branche pour vérifier ta puissance calculée.</li>
+</ol>
+<p><strong>Tableau de mesures à recopier et à compléter</strong> (une ligne par récepteur et par tension) :</p>
+<table>
+<thead>
+<tr>
+<th>Récepteur</th>
+<th>Tension réglée</th>
+<th>U mesurée (V)</th>
+<th>I mesurée (A)</th>
+<th>P = U × I (W)</th>
+<th>Feuille à 30 cm</th>
+<th>Chaleur à 5 cm</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Ruban LED 30 cm</td>
+<td>12 V</td>
+<td>à relever</td>
+<td>à relever</td>
+<td>à calculer</td>
+<td>à noter</td>
+<td>à noter</td>
+</tr>
+<tr>
+<td>Ampoule incandescente</td>
+<td>12 V</td>
+<td>à relever</td>
+<td>à relever</td>
+<td>à calculer</td>
+<td>à noter</td>
+<td>à noter</td>
+</tr>
+<tr>
+<td>Ruban LED 30 cm</td>
+<td>5 V</td>
+<td>à relever</td>
+<td>à relever</td>
+<td>à calculer</td>
+<td>à noter</td>
+<td>à noter</td>
+</tr>
+<tr>
+<td>Ampoule incandescente</td>
+<td>5 V</td>
+<td>à relever</td>
+<td>à relever</td>
+<td>à calculer</td>
+<td>à noter</td>
+<td>à noter</td>
+</tr>
+</tbody></table>
+<p>Tes relevés à 12 V (U, I et P pour chacun des deux récepteurs) :</p>
+<div class="answer-field">
+  <textarea rows="3" data-answer-idx="2" placeholder="✏️ Écris ta réponse ici…" aria-label="Zone de réponse de l'élève"></textarea>
+</div>
+<p>Tes observations à 5 V :</p>
+<div class="answer-field">
+  <textarea rows="3" data-answer-idx="3" placeholder="✏️ Écris ta réponse ici…" aria-label="Zone de réponse de l'élève"></textarea>
+</div>
+<h3>Étape 5 — Calculs et premier ordre de grandeur (10 min)</h3>
+<p><strong>Calcul 1 — Le rapport de puissance.</strong> Divise la puissance de l&#39;ampoule par celle du ruban LED. Combien de fois l&#39;ampoule consomme-t-elle plus, pour un éclairement que tu as jugé comparable sur la feuille ?</p>
+<div class="answer-field">
+  <textarea rows="3" data-answer-idx="4" placeholder="✏️ Écris ta réponse ici…" aria-label="Zone de réponse de l'élève"></textarea>
+</div>
+<p><strong>Calcul 2 — L&#39;énergie sur une année scolaire.</strong> Une lampe de bureau fonctionne environ <strong>3 h par jour, 200 jours par an</strong>. Calcule E = P × t pour chaque récepteur, en Wh puis en kWh.</p>
+<div class="answer-field">
+  <textarea rows="3" data-answer-idx="5" placeholder="✏️ Écris ta réponse ici…" aria-label="Zone de réponse de l'élève"></textarea>
+</div>
+<p><strong>Calcul 3 — Où passe l&#39;énergie ?</strong> On ne mesure pas la lumière au lycée, on utilise des ordres de grandeur publiés par les fabricants : une ampoule à incandescence transforme <strong>environ 5 %</strong> de l&#39;énergie électrique en lumière (le reste chauffe le filament et l&#39;air), une LED <strong>environ 30 à 40 %</strong>. Le <strong>rendement</strong> s&#39;écrit η = P utile / P absorbée. Calcule la puissance lumineuse utile et la puissance perdue en chaleur pour tes deux récepteurs. Que remarques-tu sur les puissances lumineuses ?</p>
+<div class="answer-field">
+  <textarea rows="3" data-answer-idx="6" placeholder="✏️ Écris ta réponse ici…" aria-label="Zone de réponse de l'élève"></textarea>
+</div>
+<p><strong>Question B — Analyse critique.</strong> Ta valeur de I lue sur le multimètre est-elle exactement celle affichée par l&#39;alimentation ? Cite deux raisons pour lesquelles deux mesures de la même grandeur peuvent différer (précision de l&#39;appareil, calibre, échauffement du récepteur, contact des pinces…).</p>
+<div class="answer-field">
+  <textarea rows="3" data-answer-idx="7" placeholder="✏️ Écris ta réponse ici…" aria-label="Zone de réponse de l'élève"></textarea>
+</div>
+<h3>Étape 6 — Bilan (5 min)</h3>
+<p>Le contrôleur qualité vérifie que le tableau est complet et que chaque P porte son unité. Le magasinier range fils et multimètre, ampoule refroidie.</p>
+<h2>🧠 Ce qu&#39;il faut retenir</h2>
+<ul>
+<li>Une <strong>chaîne d&#39;énergie</strong> se lit en cinq maillons : alimenter, distribuer, convertir, transmettre, agir. Les <strong>pertes</strong> apparaissent surtout au maillon <strong>convertir</strong>.</li>
+<li><strong>U</strong> se mesure en <strong>parallèle</strong>, <strong>I</strong> en <strong>série</strong> ; <strong>P = U × I</strong> en watts ; <strong>E = P × t</strong> en wattheures.</li>
+<li>À 12 V, un ruban LED de 30 cm absorbe de l&#39;ordre de <strong>1 à 2 W</strong>, une petite ampoule à incandescence <strong>5 à 10 W</strong>, pour un éclairement voisin.</li>
+<li>Le <strong>rendement</strong> η = P utile / P absorbée : ≈ 5 % pour l&#39;incandescence, ≈ 30 à 40 % pour la LED. La différence part en <strong>chaleur</strong>.</li>
+<li>On travaille en <strong>basse tension continue</strong> (5 V / 12 V) ; le 230 V reste l&#39;affaire du professeur.</li>
+</ul>
+<h2>✅ Bilan</h2>
+<p>Écris en trois lignes la conclusion chiffrée de ta brigade : « Pour un éclairement comparable, l&#39;ampoule absorbe … W contre … W pour la LED, soit … fois plus ; sur une année, cela représente … kWh contre … kWh. » Cette phrase ouvrira ton compte rendu final.</p>
+<div class="answer-field">
+  <textarea rows="3" data-answer-idx="8" placeholder="✏️ Écris ta réponse ici…" aria-label="Zone de réponse de l'élève"></textarea>
+</div>
+
+    </div>
+    
+    
+    <nav class="pager">
+      <a class="pg-prev" href="../jeu-intro/"><span class="pg-label">← Précédent</span><span class="pg-title">🎮 Brigade énergie — Où passe l'énergie ?</span></a>
+      <a class="pg-next" href="../seance-2/"><span class="pg-label">Suivant →</span><span class="pg-title">📐 Séance 2 — Concevoir l'abat-jour et le découper au laser</span></a>
+    </nav>
+  </article>
+</div>
+</main>
+<footer class="site-footer">
+  <div class="wrap footer-grid">
+    <div>
+      <h4>Technologie &amp; SNT</h4>
+      <p>Site pédagogique regroupant les cours, activités et ressources de Technologie du collège et de SNT du lycée.</p>
+    </div>
+    <div>
+      <h4>Niveaux</h4>
+      <ul>
+        <li><a href="../../../5eme/">5ème</a></li>
+        <li><a href="../../../4eme/">4ème</a></li>
+        <li><a href="../../../3eme/">3ème</a></li>
+        <li><a href="../../../snt/">2nde SNT</a></li>
+        <li><a href="../../../sicit/">SI · CIT</a></li>
+        <li><a href="../../../atelier/">Atelier</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Références</h4>
+      <ul>
+        <li><a href="https://eduscol.education.fr/2098/technologie-au-cycle-4" target="_blank" rel="noopener">Programme de Technologie (Eduscol)</a></li>
+        <li><a href="https://eduscol.education.fr/3016/sciences-numeriques-et-technologie-au-lycee" target="_blank" rel="noopener">Programme SNT (Eduscol)</a></li>
+        <li><a href="https://pix.fr" target="_blank" rel="noopener">Pix — compétences numériques</a></li>
+        <li><a href="https://sites.google.com/view/lmtechno25" target="_blank" rel="noopener">Site d'origine (Google Sites)</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="wrap footer-bottom">
+    <span>© M. Eddy Bachaalany · Lycée Montaigne, Beit Chabab</span>
+    <span>Cours de Technologie collège &amp; SNT lycée</span>
+  </div>
+</footer>
+<div class="search-overlay" id="search-overlay" role="dialog" aria-label="Recherche">
+  <div class="search-panel">
+    <div class="search-input-row">
+      <span>🔍</span>
+      <input id="search-input" type="search" placeholder="Rechercher une séquence, une séance, une notion…" autocomplete="off">
+      <kbd>Échap</kbd>
+    </div>
+    <div class="search-results" id="search-results"></div>
+  </div>
+</div>
+<button class="back-to-top" id="back-to-top" type="button" aria-label="Retour en haut">↑</button>
+<script src="../../../assets/client.js?v=08290246cd" defer></script>
+</body>
+</html>

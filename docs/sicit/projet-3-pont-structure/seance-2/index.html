@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="fr" data-base="../../../" data-section="sicit" data-v="08290246cd">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>🪚 Séance 2 — Fabriquer les éprouvettes · Le pont qui résiste — Technologie &amp; SNT</title>
+<meta name="description" content="CNC en copilote, scie à chantourner, imprimante 3D et pied à coulisse : cinq poutres par îlot, conformes au dixième de millimètre près.">
+<meta property="og:title" content="🪚 Séance 2 — Fabriquer les éprouvettes · Le pont qui résiste — Technologie &amp; SNT">
+<meta property="og:description" content="CNC en copilote, scie à chantourner, imprimante 3D et pied à coulisse : cinq poutres par îlot, conformes au dixième de millimètre près.">
+<meta property="og:type" content="website">
+<link rel="icon" href="../../../assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lexend:wght@500;600;700;800&family=Caveat:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../../assets/styles.css?v=08290246cd">
+<script>
+(function(){try{var t=localStorage.getItem("lmtechno-theme");if(!t)t=window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light";document.documentElement.setAttribute("data-theme",t);}catch(e){}})();
+(function(){try{var s=JSON.parse(localStorage.getItem("lmtechno-eleve")||"null");if(!s||!s.section)return;var d=document.documentElement,cur=d.getAttribute("data-section")||"",base=d.getAttribute("data-base")||"./",lv=["5eme","4eme","3eme","snt","sicit"];if(cur==="home"||(lv.indexOf(cur)>=0&&cur!==s.section))location.replace(base+s.section+"/");}catch(e){}})();
+</script>
+<script src="../../../assets/firebase-config.js?v=08290246cd"></script>
+
+</head>
+<body>
+<a class="skip-link" href="#contenu">Aller au contenu</a>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="../../../index.html">
+      <span class="brand-logo">T</span>
+      <span>Technologie <span style="color:var(--muted);font-weight:500">&amp;</span> SNT
+        <small>Lycée Montaigne, Beit Chabab</small>
+      </span>
+    </a>
+    
+<nav class="main-nav" id="main-nav" aria-label="Navigation principale">
+  <a href="../../../index.html">Accueil</a>
+  <a href="../../../5eme/" style="--dot:#0d9268">5ème</a>
+  <a href="../../../4eme/" style="--dot:#2050d0">4ème</a>
+  <a href="../../../3eme/" style="--dot:#7c3aed">3ème</a>
+  <a href="../../../snt/" style="--dot:#d9640f">2nde SNT</a>
+  <a href="../../../sicit/" style="--dot:#0d8e9c" aria-current="true">SI · CIT</a>
+  <a href="../../../atelier/" style="--dot:#b91c1c">Atelier</a>
+  <a class="nav-account" href="../../../connexion/">👤 Espace</a>
+</nav>
+    <div class="header-actions">
+      <button class="search-btn" id="search-open" type="button" aria-label="Rechercher">
+        <span>🔍</span><span class="label">Rechercher</span><kbd>Ctrl K</kbd>
+      </button>
+      <button class="icon-btn" id="theme-toggle" type="button" aria-label="Changer de thème">🌙</button>
+      <button class="icon-btn nav-toggle" id="nav-toggle" type="button" aria-label="Menu" aria-expanded="false">☰</button>
+    </div>
+  </div>
+</header>
+<main id="contenu">
+
+<nav class="breadcrumbs wrap" aria-label="Fil d'Ariane">
+    <a href="../../../index.html">Accueil</a><span class="sep">›</span>
+    <a href="../../">SI · CIT</a><span class="sep">›</span>
+    <a href="../">Le pont qui résiste</a><span class="sep">›</span>
+    <span class="current">🪚 Séance 2 — Fabriquer les éprouvettes</span>
+  </nav>
+<div class="wrap course-layout">
+  <aside class="sidebar" style="--accent:undefined;--accent-soft:undefined;">
+    <div class="sb-title"><span class="dot"></span>SI · CIT </div>
+    <nav>
+    <details>
+      <summary><a href="../../projet-1-alarme-luminosite/" style="all:unset;cursor:pointer">L'alarme de luminosité</a></summary>
+      <div class="sb-pages">
+        <a href="../../projet-1-alarme-luminosite/jeu-intro/">🎮 Jeu d'intro</a>
+        <a href="../../projet-1-alarme-luminosite/seance-1/">Du besoin au schéma</a>
+        <a href="../../projet-1-alarme-luminosite/seance-2/">Programmer et mesurer</a>
+        <a href="../../projet-1-alarme-luminosite/seance-3/">Boîtier et tests</a>
+        <a href="../../projet-1-alarme-luminosite/guide-prof/">Guide du professeur</a>
+      </div>
+    </details>
+    <details>
+      <summary><a href="../../projet-2-lampe-energie/" style="all:unset;cursor:pointer">La lampe de bureau</a></summary>
+      <div class="sb-pages">
+        <a href="../../projet-2-lampe-energie/jeu-intro/">🎮 Jeu d'intro</a>
+        <a href="../../projet-2-lampe-energie/seance-1/">Chaîne d'énergie et mesures</a>
+        <a href="../../projet-2-lampe-energie/seance-2/">Concevoir l'abat-jour</a>
+        <a href="../../projet-2-lampe-energie/seance-3/">Assembler et conclure</a>
+        <a href="../../projet-2-lampe-energie/guide-prof/">Guide du professeur</a>
+      </div>
+    </details>
+    <details open>
+      <summary><a href="../../projet-3-pont-structure/" style="all:unset;cursor:pointer">Le pont qui résiste</a></summary>
+      <div class="sb-pages">
+        <a href="../../projet-3-pont-structure/jeu-intro/">🎮 Jeu d'intro</a>
+        <a href="../../projet-3-pont-structure/seance-1/">Observer et supposer</a>
+        <a href="../../projet-3-pont-structure/seance-2/" aria-current="true">Fabriquer</a>
+        <a href="../../projet-3-pont-structure/seance-3/">Essais de charge</a>
+        <a href="../../projet-3-pont-structure/guide-prof/">Guide du professeur</a>
+      </div>
+    </details>
+    <details>
+      <summary><a href="../../projet-4-innover-objet/" style="all:unset;cursor:pointer">Réinventer un objet</a></summary>
+      <div class="sb-pages">
+        <a href="../../projet-4-innover-objet/jeu-intro/">D'où viennent les idées ?</a>
+        <a href="../../projet-4-innover-objet/seance-1/">Veille et analyse</a>
+        <a href="../../projet-4-innover-objet/seance-2/">Créativité et choix</a>
+        <a href="../../projet-4-innover-objet/seance-3/">Maquette et pitch</a>
+        <a href="../../projet-4-innover-objet/guide-prof/">Guide du professeur</a>
+      </div>
+    </details>
+    </nav>
+  </aside>
+  <article>
+    <div class="page-head">
+      <div class="kicker">
+        <span class="badge" style="--badge-bg:#e0f5f7;--badge-fg:#0d8e9c">SI</span>
+        <span class="badge">Le pont qui résiste</span>
+        <span class="badge badge-new">✦ Nouveau</span>
+      </div>
+      <h1>🪚 Séance 2 — Fabriquer les éprouvettes</h1>
+      <p class="desc">CNC en copilote, scie à chantourner, imprimante 3D et pied à coulisse : cinq poutres par îlot, conformes au dixième de millimètre près.</p>
+    </div>
+    <div class="callout callout-objectif"><span class="co-icon">🎯</span><div class="co-body"><div class="co-title">Objectifs</div><p>À la fin de cette séance, je suis capable de :</p>
+<ul>
+<li>tenir le rôle de copilote à la CNC TTC 6050 : vérifier le brut, le bridage, la simulation et la zone avant que le professeur ne lance l&#39;usinage ;</li>
+<li>découper une bande droite à la scie à chantourner en appliquant la règle des doigts ;</li>
+<li>préparer et lancer une impression 3D en PLA avec les bons réglages ;</li>
+<li>contrôler une pièce au pied à coulisse et décider si elle est conforme ;</li>
+<li>appliquer sans exception les règles d&#39;or de l&#39;atelier.</li>
+</ul>
+</div></div>
+    
+<div class="student-bar">
+  <span class="sb-info">💾 Tes réponses sont enregistrées automatiquement sur cet appareil.</span>
+  <span class="sb-actions">
+    <button class="btn btn-ghost btn-sm" id="print-answers" type="button">🖨 Imprimer / PDF</button>
+    <button class="btn btn-ghost btn-sm" id="clear-answers" type="button">🗑 Tout effacer</button>
+  </span>
+</div>
+    <div class="prose">
+      <h2>🎯 Objectif</h2>
+<p>Direction l&#39;<strong>atelier</strong>. Ton îlot fabrique ses cinq éprouvettes E1 à E5 à partir des fichiers de la séance 1, en tournant sur quatre postes. Rôles : le <strong>chef d&#39;atelier</strong> gère l&#39;ordre de passage et la sécurité de l&#39;îlot, l&#39;<strong>opérateur CFAO</strong> porte les fichiers et pilote les postes élèves, le <strong>contrôleur qualité</strong> mesure et valide, le <strong>magasinier</strong> gère bruts, chutes et rangement. Tout le monde passe au moins une fois en copilote CNC.</p>
+<h2>⚠️ Sécurité — à lire AVANT d&#39;entrer dans la zone machines</h2>
+<blockquote>
+<p><strong>Zone machines uniquement avec l&#39;autorisation du professeur, et jamais seul.</strong> Lunettes obligatoires pour tous. Cheveux attachés, pas de bijoux, pas de cordons de sweat ni d&#39;écharpe. <strong>JAMAIS de gants près d&#39;un outil en mouvement</strong> — fraise ou lame de scie — un gant happé entraîne la main.</p>
+</blockquote>
+<ul>
+<li><strong>CNC TTC 6050</strong> : c&#39;est <strong>le professeur qui bride, règle l&#39;origine et lance l&#39;usinage</strong>. Le copilote vérifie, observe et reste <strong>derrière la ligne au sol</strong> pendant que la broche tourne. On ne touche à rien tant que la broche n&#39;est pas <strong>complètement arrêtée</strong>, on ne souffle jamais les copeaux avec la bouche.</li>
+<li><strong>Scie à chantourner</strong> : après permis, sous surveillance directe. <strong>Doigts jamais dans l&#39;axe de la lame, jamais à moins de 5 cm</strong> ; pièce plaquée sur la table, presseur baissé, vitesse lente, machine arrêtée pour tout réglage.</li>
+<li><strong>Imprimante 3D</strong> : buse à plus de 200 °C et plateau chaud : on ne touche ni la buse ni la pièce en cours. <strong>PLA uniquement.</strong></li>
+<li><strong>Meuleuse droite</strong> : outil du professeur, on ne s&#39;en approche pas.</li>
+<li>Le moindre incident (lame cassée, bruit anormal, pièce qui bouge, odeur de brûlé) : <strong>j&#39;arrête et j&#39;appelle le professeur</strong>, sans « finir d&#39;abord ».</li>
+</ul>
+<h2>🧰 Matériel par îlot</h2>
+<table>
+<thead>
+<tr>
+<th>Quantité</th>
+<th>Matériel</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1</td>
+<td>plaque de contreplaqué 6 mm, environ 300 × 100 mm (E2 + E3), martyr en place sur la CNC</td>
+</tr>
+<tr>
+<td>1</td>
+<td>planchette de bois massif 6 mm, 300 × 40 mm (E5)</td>
+</tr>
+<tr>
+<td>1</td>
+<td>chute de contreplaqué 3 mm, 300 × 60 mm (E1, plus une bande d&#39;exercice)</td>
+</tr>
+<tr>
+<td>1</td>
+<td>bobine de PLA chargée, carte SD ou liaison PC de l&#39;imprimante</td>
+</tr>
+<tr>
+<td>1</td>
+<td>pied à coulisse, règle, crayon, équerre</td>
+</tr>
+<tr>
+<td>1</td>
+<td>lime ou papier de verre grain moyen, cutter à lame rétractable (dégagement des onglets)</td>
+</tr>
+</tbody></table>
+<h2>🕹️ Déroulé</h2>
+<h3>Étape 1 — Briefing et préparation du brut (10 min)</h3>
+<p>Le professeur rappelle les règles d&#39;or et l&#39;ordre de passage des îlots à la CNC. Pendant ce temps, à l&#39;îlot :</p>
+<ul>
+<li>le magasinier et le contrôleur mesurent <strong>l&#39;épaisseur réelle</strong> de chaque brut au pied à coulisse, en trois endroits (un « contreplaqué 6 mm » fait souvent 5,7 ou 6,2 mm) ;</li>
+<li>l&#39;opérateur CFAO vérifie que les fichiers sont ouverts sur le PC de préparation et que la profondeur d&#39;usinage prévue correspond à l&#39;épaisseur mesurée (+ 0,3 mm pour traverser franchement dans le martyr) ;</li>
+<li>le chef d&#39;atelier trace au crayon la bande E1 (280 × 20 mm) sur la chute de contreplaqué 3 mm, à la règle et à l&#39;équerre.</li>
+</ul>
+<p>Épaisseurs mesurées (contreplaqué 6 mm / bois massif / contreplaqué 3 mm), trois lectures chacune :</p>
+<div class="answer-field">
+  <textarea rows="3" data-answer-idx="0" placeholder="✏️ Écris ta réponse ici…" aria-label="Zone de réponse de l'élève"></textarea>
+</div>
+<h3>Étape 2 — Rotation sur les quatre postes (35 min, environ 8 min par poste)</h3>
+<h4>Poste A — CNC TTC 6050 : copilote du professeur (E2, E3, E5)</h4>
+<p>Le professeur usine ; toi, tu tiens la <strong>check-list du copilote</strong> et tu réponds à voix haute à chaque point :</p>
+<ol>
+<li>☐ Le brut est <strong>bridé</strong> sur le martyr, hors du parcours de la fraise ; le professeur a essayé de le faire bouger à la main : rien ne bouge.</li>
+<li>☐ La fraise (Ø 3,175 mm, 2 dents) est serrée <strong>à deux clés</strong>, sans dent ébréchée.</li>
+<li>☐ L&#39;<strong>origine pièce</strong> X, Y, Z est faite ; la simulation à l&#39;écran montre que tout le parcours tient dans le brut, <strong>onglets</strong> compris.</li>
+<li>☐ La profondeur totale = épaisseur mesurée + 0,3 mm, par <strong>passes de 1 mm</strong> maximum.</li>
+<li>☐ Zone dégagée, tous derrière la ligne, lunettes sur tous les nez, arrêt d&#39;urgence identifié (tu montres du doigt où il est).</li>
+<li>Pendant l&#39;usinage : tu écoutes. Un bruit régulier de copeaux fins = normal. Un sifflement aigu, un claquement, une odeur de brûlé = tu <strong>le signales immédiatement</strong>.</li>
+<li>Broche <strong>arrêtée</strong> et immobile : le professeur débride ; tu dégages les pièces du brut en coupant les onglets <strong>au cutter, lame vers la table</strong>, puis tu affleures les résidus à la lime.</li>
+</ol>
+<p>Ce que j&#39;ai vérifié comme copilote, et ce que j&#39;ai entendu pendant l&#39;usinage :</p>
+<div class="answer-field">
+  <textarea rows="3" data-answer-idx="1" placeholder="✏️ Écris ta réponse ici…" aria-label="Zone de réponse de l'élève"></textarea>
+</div>
+<h4>Poste B — Scie à chantourner : E1 (permis élève, un opérateur + un observateur)</h4>
+<ol>
+<li>Machine démarrée <strong>avant</strong> le contact avec le bois, vitesse lente.</li>
+<li>Coupe <strong>à côté</strong> du trait, du côté de la chute, mains <strong>sur les côtés</strong> de la ligne de coupe, jamais derrière la pièce.</li>
+<li>Avance douce et régulière : c&#39;est la lame qui coupe, pas tes bras. Si tu forces, arrête et demande.</li>
+<li>Deux coupes longues (les 280 mm) puis les deux coupes courtes ; on traverse toujours pour sortir de la coupe.</li>
+<li>Fin de coupe près des doigts → <strong>poussoir</strong>, pas les doigts.</li>
+<li>Ébavure légère au papier de verre, sans arrondir les arêtes (la hauteur doit rester 3 mm partout).</li>
+</ol>
+<p>Ma largeur de coupe : le trait est-il resté visible sur la pièce ? Écart maximal mesuré par rapport à 20 mm :</p>
+<div class="answer-field">
+  <textarea rows="3" data-answer-idx="2" placeholder="✏️ Écris ta réponse ici…" aria-label="Zone de réponse de l'élève"></textarea>
+</div>
+<h4>Poste C — Imprimante 3D : E4 (permis élève)</h4>
+<p>Dans le logiciel de tranchage : <strong>PLA</strong>, hauteur de couche <strong>0,2 mm</strong>, <strong>remplissage 100 %</strong> (sinon tu compares un matériau à une éponge), 3 parois, pas de support. Pose la pièce <strong>à plat</strong>, tournée en <strong>diagonale</strong> si le plateau fait moins de 280 mm. Vérifie le temps annoncé (environ 45 minutes à 1 heure) et lance. Reste devant la machine pendant la <strong>première couche</strong> : si elle ne colle pas, on arrête et on recommence, on ne « laisse pas voir ».</p>
+<p>Réglages retenus et durée annoncée :</p>
+<div class="answer-field">
+  <textarea rows="3" data-answer-idx="3" placeholder="✏️ Écris ta réponse ici…" aria-label="Zone de réponse de l'élève"></textarea>
+</div>
+<h4>Poste D — Contrôle qualité au pied à coulisse</h4>
+<p>Chaque éprouvette terminée passe ici. Le contrôleur mesure et le secrétaire de l&#39;îlot note, pour E1 à E5 : <strong>longueur</strong> (1 lecture), <strong>largeur</strong> (3 lectures : aux deux bouts et au centre), <strong>hauteur</strong> (3 lectures). Tolérance : largeur <strong>20 ± 0,5 mm</strong>, hauteur = épaisseur du brut mesurée à l&#39;étape 1. Une pièce hors tolérance n&#39;est pas jetée : on la note comme telle, et on en tiendra compte dans l&#39;analyse de la séance 3. Puis chaque éprouvette est <strong>marquée au crayon</strong> (E1… E5 et le numéro d&#39;îlot) à une extrémité, jamais au centre.</p>
+<p>Tableau de contrôle (E1 à E5 : longueur / largeur mini-maxi / hauteur mini-maxi / conforme oui-non) :</p>
+<div class="answer-field">
+  <textarea rows="3" data-answer-idx="4" placeholder="✏️ Écris ta réponse ici…" aria-label="Zone de réponse de l'élève"></textarea>
+</div>
+<h3>Étape 3 — Vérification finale et bilan (10 min)</h3>
+<p>Le magasinier range bruts et chutes, aspire les copeaux (machine hors tension, avec le professeur), ramène les lunettes. Le chef d&#39;atelier présente les cinq éprouvettes au professeur : nom, matériau, conformité. Les éprouvettes partent dans la boîte de l&#39;îlot jusqu&#39;à la séance 3 ; l&#39;impression PLA non terminée sera récupérée par le professeur.</p>
+<h2>🧠 Ce qu&#39;il faut retenir</h2>
+<ul>
+<li>La CNC est une machine <strong>soustractive</strong> : elle part d&#39;un brut et enlève de la matière copeau après copeau, par passes successives. Elle est lancée par le professeur ; le copilote <strong>vérifie</strong> (bridage, origine, simulation, zone) et <strong>observe</strong> (bruit, copeaux, odeur).</li>
+<li><strong>Jamais de gants</strong> près d&#39;une fraise ou d&#39;une lame ; lunettes, cheveux attachés, zone machines avec autorisation et jamais seul.</li>
+<li>Une pièce « de 6 mm » ne fait jamais exactement 6 mm : on <strong>mesure le brut</strong> avant d&#39;usiner et on <strong>contrôle</strong> la pièce après. Une mesure de flèche ne vaut rien si l&#39;on ne connaît pas la vraie hauteur de la poutre.</li>
+<li>Pour comparer des matériaux, les éprouvettes doivent être <strong>identiques en tout sauf le matériau</strong> : d&#39;où le PLA en remplissage 100 %.</li>
+</ul>
+<h2>✅ Bilan</h2>
+<ul>
+<li>☐ J&#39;ai été copilote à la CNC et j&#39;ai répondu aux 7 points de la check-list.</li>
+<li>☐ Les cinq éprouvettes de l&#39;îlot sont marquées et mesurées.</li>
+<li>☐ Je sais citer les quatre règles d&#39;or sans les lire.</li>
+</ul>
+<p>Une chose que j&#39;ai vue à l&#39;atelier aujourd&#39;hui et que je ne savais pas :</p>
+<div class="answer-field">
+  <textarea rows="3" data-answer-idx="5" placeholder="✏️ Écris ta réponse ici…" aria-label="Zone de réponse de l'élève"></textarea>
+</div>
+
+    </div>
+    
+    
+    <nav class="pager">
+      <a class="pg-prev" href="../seance-1/"><span class="pg-label">← Précédent</span><span class="pg-title">🔍 Séance 1 — Observer, supposer, dessiner</span></a>
+      <a class="pg-next" href="../seance-3/"><span class="pg-label">Suivant →</span><span class="pg-title">⚖️ Séance 3 — L'essai de charge</span></a>
+    </nav>
+  </article>
+</div>
+</main>
+<footer class="site-footer">
+  <div class="wrap footer-grid">
+    <div>
+      <h4>Technologie &amp; SNT</h4>
+      <p>Site pédagogique regroupant les cours, activités et ressources de Technologie du collège et de SNT du lycée.</p>
+    </div>
+    <div>
+      <h4>Niveaux</h4>
+      <ul>
+        <li><a href="../../../5eme/">5ème</a></li>
+        <li><a href="../../../4eme/">4ème</a></li>
+        <li><a href="../../../3eme/">3ème</a></li>
+        <li><a href="../../../snt/">2nde SNT</a></li>
+        <li><a href="../../../sicit/">SI · CIT</a></li>
+        <li><a href="../../../atelier/">Atelier</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Références</h4>
+      <ul>
+        <li><a href="https://eduscol.education.fr/2098/technologie-au-cycle-4" target="_blank" rel="noopener">Programme de Technologie (Eduscol)</a></li>
+        <li><a href="https://eduscol.education.fr/3016/sciences-numeriques-et-technologie-au-lycee" target="_blank" rel="noopener">Programme SNT (Eduscol)</a></li>
+        <li><a href="https://pix.fr" target="_blank" rel="noopener">Pix — compétences numériques</a></li>
+        <li><a href="https://sites.google.com/view/lmtechno25" target="_blank" rel="noopener">Site d'origine (Google Sites)</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="wrap footer-bottom">
+    <span>© M. Eddy Bachaalany · Lycée Montaigne, Beit Chabab</span>
+    <span>Cours de Technologie collège &amp; SNT lycée</span>
+  </div>
+</footer>
+<div class="search-overlay" id="search-overlay" role="dialog" aria-label="Recherche">
+  <div class="search-panel">
+    <div class="search-input-row">
+      <span>🔍</span>
+      <input id="search-input" type="search" placeholder="Rechercher une séquence, une séance, une notion…" autocomplete="off">
+      <kbd>Échap</kbd>
+    </div>
+    <div class="search-results" id="search-results"></div>
+  </div>
+</div>
+<button class="back-to-top" id="back-to-top" type="button" aria-label="Retour en haut">↑</button>
+<script src="../../../assets/client.js?v=08290246cd" defer></script>
+</body>
+</html>

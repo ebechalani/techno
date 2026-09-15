@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="fr" data-base="../../../" data-section="sicit" data-v="08290246cd">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>📐 Séance 2 — Concevoir l'abat-jour et le découper au laser · La lampe de bureau — Technologie &amp; SNT</title>
+<meta name="description" content="Contraintes, boîte à encoches en CAO 2D, peigne de test, puis découpe laser en copilote.">
+<meta property="og:title" content="📐 Séance 2 — Concevoir l'abat-jour et le découper au laser · La lampe de bureau — Technologie &amp; SNT">
+<meta property="og:description" content="Contraintes, boîte à encoches en CAO 2D, peigne de test, puis découpe laser en copilote.">
+<meta property="og:type" content="website">
+<link rel="icon" href="../../../assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lexend:wght@500;600;700;800&family=Caveat:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../../assets/styles.css?v=08290246cd">
+<script>
+(function(){try{var t=localStorage.getItem("lmtechno-theme");if(!t)t=window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light";document.documentElement.setAttribute("data-theme",t);}catch(e){}})();
+(function(){try{var s=JSON.parse(localStorage.getItem("lmtechno-eleve")||"null");if(!s||!s.section)return;var d=document.documentElement,cur=d.getAttribute("data-section")||"",base=d.getAttribute("data-base")||"./",lv=["5eme","4eme","3eme","snt","sicit"];if(cur==="home"||(lv.indexOf(cur)>=0&&cur!==s.section))location.replace(base+s.section+"/");}catch(e){}})();
+</script>
+<script src="../../../assets/firebase-config.js?v=08290246cd"></script>
+
+</head>
+<body>
+<a class="skip-link" href="#contenu">Aller au contenu</a>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="../../../index.html">
+      <span class="brand-logo">T</span>
+      <span>Technologie <span style="color:var(--muted);font-weight:500">&amp;</span> SNT
+        <small>Lycée Montaigne, Beit Chabab</small>
+      </span>
+    </a>
+    
+<nav class="main-nav" id="main-nav" aria-label="Navigation principale">
+  <a href="../../../index.html">Accueil</a>
+  <a href="../../../5eme/" style="--dot:#0d9268">5ème</a>
+  <a href="../../../4eme/" style="--dot:#2050d0">4ème</a>
+  <a href="../../../3eme/" style="--dot:#7c3aed">3ème</a>
+  <a href="../../../snt/" style="--dot:#d9640f">2nde SNT</a>
+  <a href="../../../sicit/" style="--dot:#0d8e9c" aria-current="true">SI · CIT</a>
+  <a href="../../../atelier/" style="--dot:#b91c1c">Atelier</a>
+  <a class="nav-account" href="../../../connexion/">👤 Espace</a>
+</nav>
+    <div class="header-actions">
+      <button class="search-btn" id="search-open" type="button" aria-label="Rechercher">
+        <span>🔍</span><span class="label">Rechercher</span><kbd>Ctrl K</kbd>
+      </button>
+      <button class="icon-btn" id="theme-toggle" type="button" aria-label="Changer de thème">🌙</button>
+      <button class="icon-btn nav-toggle" id="nav-toggle" type="button" aria-label="Menu" aria-expanded="false">☰</button>
+    </div>
+  </div>
+</header>
+<main id="contenu">
+
+<nav class="breadcrumbs wrap" aria-label="Fil d'Ariane">
+    <a href="../../../index.html">Accueil</a><span class="sep">›</span>
+    <a href="../../">SI · CIT</a><span class="sep">›</span>
+    <a href="../">La lampe de bureau</a><span class="sep">›</span>
+    <span class="current">📐 Séance 2 — Concevoir l'abat-jour et le découper au laser</span>
+  </nav>
+<div class="wrap course-layout">
+  <aside class="sidebar" style="--accent:undefined;--accent-soft:undefined;">
+    <div class="sb-title"><span class="dot"></span>SI · CIT </div>
+    <nav>
+    <details>
+      <summary><a href="../../projet-1-alarme-luminosite/" style="all:unset;cursor:pointer">L'alarme de luminosité</a></summary>
+      <div class="sb-pages">
+        <a href="../../projet-1-alarme-luminosite/jeu-intro/">🎮 Jeu d'intro</a>
+        <a href="../../projet-1-alarme-luminosite/seance-1/">Du besoin au schéma</a>
+        <a href="../../projet-1-alarme-luminosite/seance-2/">Programmer et mesurer</a>
+        <a href="../../projet-1-alarme-luminosite/seance-3/">Boîtier et tests</a>
+        <a href="../../projet-1-alarme-luminosite/guide-prof/">Guide du professeur</a>
+      </div>
+    </details>
+    <details open>
+      <summary><a href="../../projet-2-lampe-energie/" style="all:unset;cursor:pointer">La lampe de bureau</a></summary>
+      <div class="sb-pages">
+        <a href="../../projet-2-lampe-energie/jeu-intro/">🎮 Jeu d'intro</a>
+        <a href="../../projet-2-lampe-energie/seance-1/">Chaîne d'énergie et mesures</a>
+        <a href="../../projet-2-lampe-energie/seance-2/" aria-current="true">Concevoir l'abat-jour</a>
+        <a href="../../projet-2-lampe-energie/seance-3/">Assembler et conclure</a>
+        <a href="../../projet-2-lampe-energie/guide-prof/">Guide du professeur</a>
+      </div>
+    </details>
+    <details>
+      <summary><a href="../../projet-3-pont-structure/" style="all:unset;cursor:pointer">Le pont qui résiste</a></summary>
+      <div class="sb-pages">
+        <a href="../../projet-3-pont-structure/jeu-intro/">🎮 Jeu d'intro</a>
+        <a href="../../projet-3-pont-structure/seance-1/">Observer et supposer</a>
+        <a href="../../projet-3-pont-structure/seance-2/">Fabriquer</a>
+        <a href="../../projet-3-pont-structure/seance-3/">Essais de charge</a>
+        <a href="../../projet-3-pont-structure/guide-prof/">Guide du professeur</a>
+      </div>
+    </details>
+    <details>
+      <summary><a href="../../projet-4-innover-objet/" style="all:unset;cursor:pointer">Réinventer un objet</a></summary>
+      <div class="sb-pages">
+        <a href="../../projet-4-innover-objet/jeu-intro/">D'où viennent les idées ?</a>
+        <a href="../../projet-4-innover-objet/seance-1/">Veille et analyse</a>
+        <a href="../../projet-4-innover-objet/seance-2/">Créativité et choix</a>
+        <a href="../../projet-4-innover-objet/seance-3/">Maquette et pitch</a>
+        <a href="../../projet-4-innover-objet/guide-prof/">Guide du professeur</a>
+      </div>
+    </details>
+    </nav>
+  </aside>
+  <article>
+    <div class="page-head">
+      <div class="kicker">
+        <span class="badge" style="--badge-bg:#e0f5f7;--badge-fg:#0d8e9c">SI</span>
+        <span class="badge">La lampe de bureau</span>
+        <span class="badge badge-new">✦ Nouveau</span>
+      </div>
+      <h1>📐 Séance 2 — Concevoir l'abat-jour et le découper au laser</h1>
+      <p class="desc">Contraintes, boîte à encoches en CAO 2D, peigne de test, puis découpe laser en copilote.</p>
+    </div>
+    <div class="callout callout-objectif"><span class="co-icon">🎯</span><div class="co-body"><div class="co-title">Objectifs</div><p>À la fin de cette séance, je suis capable de :</p>
+<ul>
+<li>traduire des contraintes (chaleur, passage du câble, stabilité, diffusion) en choix de conception ;</li>
+<li>dessiner en CAO 2D une boîte à encoches en tenant compte de l&#39;épaisseur réelle du contreplaqué et du kerf du laser ;</li>
+<li>valider un ajustement par un essai sur un peigne de test avant la découpe finale ;</li>
+<li>préparer et faire lancer une découpe laser en copilote en respectant les règles de sécurité et les matériaux autorisés.</li>
+</ul>
+</div></div>
+    
+<div class="student-bar">
+  <span class="sb-info">💾 Tes réponses sont enregistrées automatiquement sur cet appareil.</span>
+  <span class="sb-actions">
+    <button class="btn btn-ghost btn-sm" id="print-answers" type="button">🖨 Imprimer / PDF</button>
+    <button class="btn btn-ghost btn-sm" id="clear-answers" type="button">🗑 Tout effacer</button>
+  </span>
+</div>
+    <div class="prose">
+      <h2>🎯 Objectif</h2>
+<p>Tu passes de l&#39;énergie à la matière : aujourd&#39;hui tu conçois l&#39;<strong>abat-jour</strong> de ta lampe en <strong>CAO 2D</strong>, sous forme de <strong>boîte à encoches</strong> en contreplaqué de 3 mm, et tu la fais découper à la <strong>découpeuse laser</strong> en <strong>copilote</strong> : tu prépares tout, <strong>le professeur lance</strong>. Le ruban LED que tu as mesuré à la séance 1 vient se loger à l&#39;intérieur. La CAO se fait aux PC en U ; la découpe se fait en zone machines, par îlot, en rotation.</p>
+<h2>⚠️ Sécurité</h2>
+<ul>
+<li><strong>Zone machines uniquement avec l&#39;autorisation du professeur, jamais seul.</strong> Les autres élèves de l&#39;îlot restent derrière la ligne au sol.</li>
+<li><strong>Lunettes obligatoires</strong> dans la zone machines ; cheveux attachés, pas de bijoux, pas de cordons de sweat.</li>
+<li><strong>Découpeuse laser : seul le professeur arme et lance.</strong> Toi, copilote : matériau, focus, cadrage (frame), checklist. Capot fermé pendant le tir, extraction en marche, extincteur CO2 à portée, une personne toujours devant la vitre.</li>
+<li><strong>Matériaux autorisés aujourd&#39;hui : contreplaqué 3 mm fourni par le magasinier, rien d&#39;autre.</strong> <strong>JAMAIS de vinyle dans le laser</strong> : c&#39;est un plastique chloré, il dégage un gaz toxique et corrosif. Le décor en vinyle viendra à la séance 3, sur le <strong>Skycut</strong>.</li>
+<li>Une pièce qui sort du laser est <strong>chaude</strong> sur les chants : on attend, on la saisit par le centre.</li>
+<li><strong>Jamais de gants</strong> près d&#39;un outil en mouvement. Tout incident, odeur ou flamme persistante → j&#39;alerte le professeur <strong>immédiatement</strong>.</li>
+</ul>
+<h2>🕹️ Déroulé</h2>
+<h3>Étape 1 — Cahier des charges de l&#39;abat-jour (5 min)</h3>
+<p>Reprends la conclusion chiffrée de la séance 1 et déduis-en les contraintes. Complète le tableau avec ton îlot :</p>
+<table>
+<thead>
+<tr>
+<th>Contrainte</th>
+<th>Pourquoi</th>
+<th>Solution retenue</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Chaleur</strong></td>
+<td>le ruban LED absorbe ≈ 1,5 W et reste tiède ; une ampoule de 10 W serait brûlante dans une boîte fermée</td>
+<td>LED uniquement, plus des <strong>fentes de ventilation</strong> en haut</td>
+</tr>
+<tr>
+<td><strong>Passage du câble</strong></td>
+<td>le câble 12 V doit entrer sans être pincé</td>
+<td>trou de <strong>Ø 8 mm</strong> dans la base, à l&#39;arrière</td>
+</tr>
+<tr>
+<td><strong>Stabilité</strong></td>
+<td>une lampe qui bascule casse et éblouit</td>
+<td>base <strong>≥ 120 × 120 mm</strong>, centre de gravité bas (LED en bas de l&#39;abat-jour)</td>
+</tr>
+<tr>
+<td><strong>Diffusion</strong></td>
+<td>la LED éblouit en direct</td>
+<td>motif ajouré ou fente orientée vers le bureau, LED jamais visible de face</td>
+</tr>
+<tr>
+<td><strong>Fabrication</strong></td>
+<td>contreplaqué 3 mm, laser</td>
+<td>assemblage par <strong>encoches</strong> sans vis, colle à bois</td>
+</tr>
+</tbody></table>
+<p><strong>Question A.</strong> Pourquoi la contrainte « chaleur » aurait-elle interdit une ampoule à incandescence dans un abat-jour en bois fermé ? Appuie-toi sur tes mesures (P absorbée et part en chaleur).</p>
+<div class="answer-field">
+  <textarea rows="3" data-answer-idx="0" placeholder="✏️ Écris ta réponse ici…" aria-label="Zone de réponse de l'élève"></textarea>
+</div>
+<h3>Étape 2 — Le principe de la boîte à encoches (5 min)</h3>
+<p>Une boîte à encoches (<em>tabbed box</em>) est faite de plaques dont les bords portent des <strong>créneaux</strong> : les bosses d&#39;une plaque entrent dans les creux de la plaque voisine. La règle qui fait tout : <strong>la largeur d&#39;un creux = l&#39;épaisseur de la plaque</strong>. Sauf que le laser vaporise une fine bande de matière de chaque côté du trait, le <strong>kerf</strong> (environ 0,2 mm). Un creux dessiné à 3,0 mm sort donc à ≈ 3,2 mm : la boîte a du jeu. On dessine les creux <strong>un peu plus étroits</strong> (2,8 à 2,9 mm) pour un montage serré.</p>
+<p>Mesure l&#39;épaisseur réelle de ta plaque au pied à coulisse (le lot peut faire 2,8 ou 3,2 mm) :</p>
+<div class="answer-field">
+  <textarea rows="3" data-answer-idx="1" placeholder="✏️ Écris ta réponse ici…" aria-label="Zone de réponse de l'élève"></textarea>
+</div>
+<h3>Étape 3 — CAO 2D (20 min, PC en U, opérateur CFAO au clavier, les autres dictent)</h3>
+<p>Dans le logiciel de CAO 2D de la salle (Inkscape ou équivalent), document en <strong>millimètres</strong>, plaque de travail 300 × 200 mm.</p>
+<ol>
+<li><strong>Base</strong> : carré de 120 × 120 mm, créneaux de 10 mm sur les quatre côtés, trou Ø 8 mm pour le câble à 15 mm du bord arrière.</li>
+<li><strong>Quatre faces</strong> de l&#39;abat-jour : 80 mm de large × 120 mm de haut, créneaux sur les bords verticaux et sur le bas (pour entrer dans la base). Laisse le haut <strong>ouvert</strong> (ventilation) ou ajoute une couronne avec fentes.</li>
+<li><strong>Diffusion</strong> : sur la face avant, dessine une fente horizontale de 60 × 8 mm à 30 mm du bas, ou un motif ajouré (traits d&#39;au moins 2 mm de large, sinon le bois casse).</li>
+<li><strong>Calques</strong> : <strong>rouge = découpe</strong> (contours, créneaux, trou, fente), <strong>noir = gravure</strong> (nom de l&#39;îlot, à 10 mm du bord). La gravure passe toujours <strong>avant</strong> la découpe.</li>
+<li>Vérifie en mode contour qu&#39;aucun trait n&#39;est en double (le laser passerait deux fois = bois carbonisé).</li>
+<li>Enregistre : <em>lampe-ILOT-nom.svg</em> dans le dossier de la classe.</li>
+</ol>
+<blockquote>
+<p>📏 Compte l&#39;encombrement : base + 4 faces = 120 × 120 + 4 × (80 × 120) ≈ 53 000 mm², soit une seule plaque de 300 × 200 mm par îlot si tu imbriques bien les pièces. Le magasinier vérifie.</p>
+</blockquote>
+<p><strong>Question B.</strong> Explique en deux phrases comment tu as choisi la largeur des creux (épaisseur mesurée, kerf) et ce qui se passerait si tu les dessinais à 3,5 mm.</p>
+<div class="answer-field">
+  <textarea rows="3" data-answer-idx="2" placeholder="✏️ Écris ta réponse ici…" aria-label="Zone de réponse de l'élève"></textarea>
+</div>
+<h3>Étape 4 — Essai d&#39;ajustement : le peigne d&#39;encoches (5 min)</h3>
+<p>Avant de découper toute la lampe, chaque îlot prépare un <strong>peigne de test</strong> : une bande de 60 × 20 mm avec quatre creux de <strong>2,7 · 2,8 · 2,9 · 3,0 mm</strong>. Le professeur découpe les quatre peignes en un seul tir. Tu essaies ta chute de contreplaqué dans chaque creux : le bon, c&#39;est celui où la plaque entre <strong>à la main, en forçant légèrement</strong>, sans marteau. Reporte cette valeur dans ton fichier avant la découpe finale.</p>
+<p>Largeur retenue et sensation d&#39;ajustement (trop lâche / juste / trop serré) :</p>
+<div class="answer-field">
+  <textarea rows="3" data-answer-idx="3" placeholder="✏️ Écris ta réponse ici…" aria-label="Zone de réponse de l'élève"></textarea>
+</div>
+<h3>Étape 5 — Découpe laser en copilote (15 min, rotation des îlots)</h3>
+<p>À la zone machines, un seul copilote par îlot à la fois, les autres finissent la CAO ou préparent le motif Skycut de la séance 3.</p>
+<ol>
+<li><strong>Matériau</strong> : plaque de contreplaqué 3 mm identifiée par le magasinier, posée bien à plat, sans chute ni poussière sur le plateau.</li>
+<li><strong>Focus</strong> réglé à la surface, vérifié avec le professeur.</li>
+<li><strong>Réglages</strong> lus sur la <strong>grille de tests affichée à côté de la machine</strong> (découpe : lent et puissant ; gravure : rapide et peu puissant). Pas les chiffres d&#39;Internet.</li>
+<li><strong>Cadrage (frame)</strong> : la tête parcourt le contour sans tirer ; tout doit tomber sur la plaque, loin des bords brûlés.</li>
+<li><strong>Checklist à voix haute</strong> : matériau autorisé · à plat · focus · calques et ordre gravure → découpe · cadrage vérifié · extraction en marche · capot prêt · extincteur en place.</li>
+<li><strong>Appel du professeur</strong> : il vérifie, ferme le capot, arme, lance. Tu surveilles devant la vitre. Flamme qui suit le faisceau et s&#39;éteint : normal. Flamme qui reste : <strong>tu alertes</strong>.</li>
+<li>Après le tir : attends, récupère les pièces par le centre, contrôle : les créneaux sont-ils nets ? Le trou de câble est-il traversé ?</li>
+</ol>
+<p><strong>Question C — Compte rendu de copilote.</strong> Réglages lus sur la grille (puissance, vitesse, passes) pour la découpe et pour la gravure, observations pendant le tir (fumée, flamme, odeur), état des chants.</p>
+<div class="answer-field">
+  <textarea rows="3" data-answer-idx="4" placeholder="✏️ Écris ta réponse ici…" aria-label="Zone de réponse de l'élève"></textarea>
+</div>
+<h3>Étape 6 — Bilan (5 min)</h3>
+<p>Pièces regroupées par îlot dans un sachet étiqueté, peigne de test compris. Le contrôleur qualité vérifie le nombre de pièces (5 ou 6) et la présence du trou de câble.</p>
+<h2>🧠 Ce qu&#39;il faut retenir</h2>
+<ul>
+<li>Un abat-jour se conçoit à partir des <strong>contraintes</strong> : chaleur (LED seulement), passage du câble, stabilité, diffusion de la lumière.</li>
+<li><strong>Boîte à encoches</strong> : largeur du creux = épaisseur de la plaque <strong>moins le kerf</strong> du laser (≈ 0,2 mm). On teste sur un <strong>peigne</strong> avant de découper la pièce.</li>
+<li>Un fichier laser propre : unités en mm, calques rouge (découpe) / noir (gravure), gravure avant découpe, aucun trait en double.</li>
+<li>Au laser, l&#39;élève est <strong>copilote</strong> : il prépare tout, <strong>seul le professeur lance</strong>. Contreplaqué autorisé ; <strong>vinyle jamais</strong>.</li>
+</ul>
+<h2>✅ Bilan</h2>
+<p>En trois lignes : quelle contrainte t&#39;a le plus fait modifier ton dessin, et qu&#39;as-tu changé après le peigne de test ?</p>
+<div class="answer-field">
+  <textarea rows="3" data-answer-idx="5" placeholder="✏️ Écris ta réponse ici…" aria-label="Zone de réponse de l'élève"></textarea>
+</div>
+
+    </div>
+    
+    
+    <nav class="pager">
+      <a class="pg-prev" href="../seance-1/"><span class="pg-label">← Précédent</span><span class="pg-title">🔋 Séance 1 — Chaîne d'énergie et mesures au multimètre</span></a>
+      <a class="pg-next" href="../seance-3/"><span class="pg-label">Suivant →</span><span class="pg-title">🔦 Séance 3 — Assembler, décorer, mesurer et conclure</span></a>
+    </nav>
+  </article>
+</div>
+</main>
+<footer class="site-footer">
+  <div class="wrap footer-grid">
+    <div>
+      <h4>Technologie &amp; SNT</h4>
+      <p>Site pédagogique regroupant les cours, activités et ressources de Technologie du collège et de SNT du lycée.</p>
+    </div>
+    <div>
+      <h4>Niveaux</h4>
+      <ul>
+        <li><a href="../../../5eme/">5ème</a></li>
+        <li><a href="../../../4eme/">4ème</a></li>
+        <li><a href="../../../3eme/">3ème</a></li>
+        <li><a href="../../../snt/">2nde SNT</a></li>
+        <li><a href="../../../sicit/">SI · CIT</a></li>
+        <li><a href="../../../atelier/">Atelier</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Références</h4>
+      <ul>
+        <li><a href="https://eduscol.education.fr/2098/technologie-au-cycle-4" target="_blank" rel="noopener">Programme de Technologie (Eduscol)</a></li>
+        <li><a href="https://eduscol.education.fr/3016/sciences-numeriques-et-technologie-au-lycee" target="_blank" rel="noopener">Programme SNT (Eduscol)</a></li>
+        <li><a href="https://pix.fr" target="_blank" rel="noopener">Pix — compétences numériques</a></li>
+        <li><a href="https://sites.google.com/view/lmtechno25" target="_blank" rel="noopener">Site d'origine (Google Sites)</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="wrap footer-bottom">
+    <span>© M. Eddy Bachaalany · Lycée Montaigne, Beit Chabab</span>
+    <span>Cours de Technologie collège &amp; SNT lycée</span>
+  </div>
+</footer>
+<div class="search-overlay" id="search-overlay" role="dialog" aria-label="Recherche">
+  <div class="search-panel">
+    <div class="search-input-row">
+      <span>🔍</span>
+      <input id="search-input" type="search" placeholder="Rechercher une séquence, une séance, une notion…" autocomplete="off">
+      <kbd>Échap</kbd>
+    </div>
+    <div class="search-results" id="search-results"></div>
+  </div>
+</div>
+<button class="back-to-top" id="back-to-top" type="button" aria-label="Retour en haut">↑</button>
+<script src="../../../assets/client.js?v=08290246cd" defer></script>
+</body>
+</html>

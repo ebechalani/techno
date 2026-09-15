@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="fr" data-base="../../../" data-section="sicit" data-v="08290246cd">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>🛠️ Séance 3 — Maquette et pitch : la preuve en main · Réinventer un objet — Technologie &amp; SNT</title>
+<meta name="description" content="Quinze minutes de carton, une pièce en PLA ou une boîte à encoches au laser, puis trois minutes pour convaincre la classe.">
+<meta property="og:title" content="🛠️ Séance 3 — Maquette et pitch : la preuve en main · Réinventer un objet — Technologie &amp; SNT">
+<meta property="og:description" content="Quinze minutes de carton, une pièce en PLA ou une boîte à encoches au laser, puis trois minutes pour convaincre la classe.">
+<meta property="og:type" content="website">
+<link rel="icon" href="../../../assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lexend:wght@500;600;700;800&family=Caveat:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../../assets/styles.css?v=08290246cd">
+<script>
+(function(){try{var t=localStorage.getItem("lmtechno-theme");if(!t)t=window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light";document.documentElement.setAttribute("data-theme",t);}catch(e){}})();
+(function(){try{var s=JSON.parse(localStorage.getItem("lmtechno-eleve")||"null");if(!s||!s.section)return;var d=document.documentElement,cur=d.getAttribute("data-section")||"",base=d.getAttribute("data-base")||"./",lv=["5eme","4eme","3eme","snt","sicit"];if(cur==="home"||(lv.indexOf(cur)>=0&&cur!==s.section))location.replace(base+s.section+"/");}catch(e){}})();
+</script>
+<script src="../../../assets/firebase-config.js?v=08290246cd"></script>
+
+</head>
+<body>
+<a class="skip-link" href="#contenu">Aller au contenu</a>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="../../../index.html">
+      <span class="brand-logo">T</span>
+      <span>Technologie <span style="color:var(--muted);font-weight:500">&amp;</span> SNT
+        <small>Lycée Montaigne, Beit Chabab</small>
+      </span>
+    </a>
+    
+<nav class="main-nav" id="main-nav" aria-label="Navigation principale">
+  <a href="../../../index.html">Accueil</a>
+  <a href="../../../5eme/" style="--dot:#0d9268">5ème</a>
+  <a href="../../../4eme/" style="--dot:#2050d0">4ème</a>
+  <a href="../../../3eme/" style="--dot:#7c3aed">3ème</a>
+  <a href="../../../snt/" style="--dot:#d9640f">2nde SNT</a>
+  <a href="../../../sicit/" style="--dot:#0d8e9c" aria-current="true">SI · CIT</a>
+  <a href="../../../atelier/" style="--dot:#b91c1c">Atelier</a>
+  <a class="nav-account" href="../../../connexion/">👤 Espace</a>
+</nav>
+    <div class="header-actions">
+      <button class="search-btn" id="search-open" type="button" aria-label="Rechercher">
+        <span>🔍</span><span class="label">Rechercher</span><kbd>Ctrl K</kbd>
+      </button>
+      <button class="icon-btn" id="theme-toggle" type="button" aria-label="Changer de thème">🌙</button>
+      <button class="icon-btn nav-toggle" id="nav-toggle" type="button" aria-label="Menu" aria-expanded="false">☰</button>
+    </div>
+  </div>
+</header>
+<main id="contenu">
+
+<nav class="breadcrumbs wrap" aria-label="Fil d'Ariane">
+    <a href="../../../index.html">Accueil</a><span class="sep">›</span>
+    <a href="../../">SI · CIT</a><span class="sep">›</span>
+    <a href="../">Réinventer un objet</a><span class="sep">›</span>
+    <span class="current">🛠️ Séance 3 — Maquette et pitch : la preuve en main</span>
+  </nav>
+<div class="wrap course-layout">
+  <aside class="sidebar" style="--accent:undefined;--accent-soft:undefined;">
+    <div class="sb-title"><span class="dot"></span>SI · CIT </div>
+    <nav>
+    <details>
+      <summary><a href="../../projet-1-alarme-luminosite/" style="all:unset;cursor:pointer">L'alarme de luminosité</a></summary>
+      <div class="sb-pages">
+        <a href="../../projet-1-alarme-luminosite/jeu-intro/">🎮 Jeu d'intro</a>
+        <a href="../../projet-1-alarme-luminosite/seance-1/">Du besoin au schéma</a>
+        <a href="../../projet-1-alarme-luminosite/seance-2/">Programmer et mesurer</a>
+        <a href="../../projet-1-alarme-luminosite/seance-3/">Boîtier et tests</a>
+        <a href="../../projet-1-alarme-luminosite/guide-prof/">Guide du professeur</a>
+      </div>
+    </details>
+    <details>
+      <summary><a href="../../projet-2-lampe-energie/" style="all:unset;cursor:pointer">La lampe de bureau</a></summary>
+      <div class="sb-pages">
+        <a href="../../projet-2-lampe-energie/jeu-intro/">🎮 Jeu d'intro</a>
+        <a href="../../projet-2-lampe-energie/seance-1/">Chaîne d'énergie et mesures</a>
+        <a href="../../projet-2-lampe-energie/seance-2/">Concevoir l'abat-jour</a>
+        <a href="../../projet-2-lampe-energie/seance-3/">Assembler et conclure</a>
+        <a href="../../projet-2-lampe-energie/guide-prof/">Guide du professeur</a>
+      </div>
+    </details>
+    <details>
+      <summary><a href="../../projet-3-pont-structure/" style="all:unset;cursor:pointer">Le pont qui résiste</a></summary>
+      <div class="sb-pages">
+        <a href="../../projet-3-pont-structure/jeu-intro/">🎮 Jeu d'intro</a>
+        <a href="../../projet-3-pont-structure/seance-1/">Observer et supposer</a>
+        <a href="../../projet-3-pont-structure/seance-2/">Fabriquer</a>
+        <a href="../../projet-3-pont-structure/seance-3/">Essais de charge</a>
+        <a href="../../projet-3-pont-structure/guide-prof/">Guide du professeur</a>
+      </div>
+    </details>
+    <details open>
+      <summary><a href="../../projet-4-innover-objet/" style="all:unset;cursor:pointer">Réinventer un objet</a></summary>
+      <div class="sb-pages">
+        <a href="../../projet-4-innover-objet/jeu-intro/">D'où viennent les idées ?</a>
+        <a href="../../projet-4-innover-objet/seance-1/">Veille et analyse</a>
+        <a href="../../projet-4-innover-objet/seance-2/">Créativité et choix</a>
+        <a href="../../projet-4-innover-objet/seance-3/" aria-current="true">Maquette et pitch</a>
+        <a href="../../projet-4-innover-objet/guide-prof/">Guide du professeur</a>
+      </div>
+    </details>
+    </nav>
+  </aside>
+  <article>
+    <div class="page-head">
+      <div class="kicker">
+        <span class="badge" style="--badge-bg:#e0f5f7;--badge-fg:#0d8e9c">SI</span>
+        <span class="badge">Réinventer un objet</span>
+        <span class="badge badge-new">✦ Nouveau</span>
+      </div>
+      <h1>🛠️ Séance 3 — Maquette et pitch : la preuve en main</h1>
+      <p class="desc">Quinze minutes de carton, une pièce en PLA ou une boîte à encoches au laser, puis trois minutes pour convaincre la classe.</p>
+    </div>
+    <div class="callout callout-objectif"><span class="co-icon">🎯</span><div class="co-body"><div class="co-title">Objectifs</div><p>À la fin de cette séance, je suis capable de :</p>
+<ul>
+<li>fabriquer une maquette rapide en carton pour tester un geste à l&#39;échelle 1 ;</li>
+<li>choisir et mettre en œuvre le procédé fablab adapté à la forme (PLA avec permis, boîte à encoches laser en copilote, chantournage) ;</li>
+<li>appliquer les règles de sécurité de la zone machines ;</li>
+<li>construire et présenter un pitch de 3 minutes (besoin, idée, preuve, limites) ;</li>
+<li>évaluer un pitch avec une grille d&#39;écoute et formuler un retour critique constructif.</li>
+</ul>
+</div></div>
+    
+<div class="student-bar">
+  <span class="sb-info">💾 Tes réponses sont enregistrées automatiquement sur cet appareil.</span>
+  <span class="sb-actions">
+    <button class="btn btn-ghost btn-sm" id="print-answers" type="button">🖨 Imprimer / PDF</button>
+    <button class="btn btn-ghost btn-sm" id="clear-answers" type="button">🗑 Tout effacer</button>
+  </span>
+</div>
+    <div class="prose">
+      <h2>🎯 Objectif</h2>
+<p>Aujourd&#39;hui, la preuve. Votre idée devient d&#39;abord une <strong>maquette « quick and dirty »</strong> en carton (15 minutes, pas une de plus), puis une <strong>maquette fablab</strong> : pièce imprimée en PLA ou boîte à encoches découpée au laser. Ensuite, chaque îlot présente un <strong>pitch de 3 minutes</strong> devant la classe, avec une grille d&#39;écoute pour ceux qui ne pitchent pas. En SI, la maquette est une <strong>expérimentation</strong> : elle sert à vérifier une hypothèse (« ça tient d&#39;une main »), pas à faire joli.</p>
+<h2>⚠️ Sécurité</h2>
+<blockquote>
+<p><strong>Zone machines uniquement avec l&#39;autorisation du professeur, et jamais seul.</strong> Le reste de l&#39;îlot travaille à sa table.</p>
+</blockquote>
+<ul>
+<li><strong>Lunettes de protection obligatoires</strong> dès qu&#39;on entre dans la zone machines.</li>
+<li><strong>Cheveux attachés</strong>, pas de bijoux, pas de cordons de sweat, manches serrées.</li>
+<li><strong>JAMAIS de gants</strong> près d&#39;un outil en mouvement (scie, fraise, chariot d&#39;imprimante) : un gant happé entraîne la main.</li>
+<li><strong>Imprimantes 3D</strong> (permis élève) : buse à environ 200 °C, on ne touche jamais la buse ni le plateau chaud ; <strong>PLA uniquement</strong>.</li>
+<li><strong>Scie à chantourner</strong> (permis élève) : contreplaqué 3 à 6 mm, doigts à distance de la lame, pièce tenue à plat.</li>
+<li><strong>Découpeuse laser</strong> : vous êtes <strong>copilote</strong>. Vous préparez le fichier, le matériau, le focus et le cadrage ; <strong>seul le professeur lance la découpe</strong>. Capot fermé, extraction en marche, quelqu&#39;un devant la machine en permanence. <strong>Jamais de vinyle ni de plastique inconnu</strong> dans le laser.</li>
+<li><strong>Fraiseuse CNC</strong> et <strong>meuleuse droite</strong> : lancées ou manipulées <strong>par le professeur uniquement</strong> — pas au programme de cette séance.</li>
+<li>Cutter pour le carton : lame vers la table, jamais vers la main qui tient. Tout incident → on arrête, on appelle le professeur.</li>
+</ul>
+<h2>🕹️ Déroulé</h2>
+<h3>Étape 1 — Briefing et rôles (5 min)</h3>
+<p>Le professeur rappelle les règles et affecte les créneaux machines. Rôles du jour : le <strong>chef d&#39;atelier</strong> tient le chrono et gère la file d&#39;attente machine ; l&#39;<strong>opérateur CFAO</strong> prépare le fichier (TinkerCAD ou fichier laser) ; le <strong>contrôleur qualité</strong> vérifie la maquette avec le cahier des charges ; le <strong>magasinier</strong> gère carton, colle, chutes de contreplaqué et rangement.</p>
+<h3>Étape 2 — Maquette « quick and dirty » en carton (15 min, à l&#39;îlot)</h3>
+<p>Matériel : carton, ciseaux, cutter, colle, ruban adhésif, pâte à modeler, élastiques. Consigne : <strong>à l&#39;échelle 1</strong>, moche autorisé, solide facultatif. Le but est de tester <strong>le geste</strong> de l&#39;utilisateur, celui que la maquette doit prouver (cahier des charges, ligne 5).</p>
+<ol>
+<li>Découpez les pièces principales aux dimensions du croquis.</li>
+<li>Assemblez vite : scotch et pâte à modeler suffisent.</li>
+<li><strong>Testez</strong> : faites faire le geste par un élève d&#39;un autre îlot, sans lui expliquer.</li>
+<li>Notez ce qui marche, ce qui coince, ce que vous <strong>changez</strong> avant la version fablab.</li>
+</ol>
+<p>Ce que la maquette carton vous a appris (au moins une chose à modifier) :</p>
+<div class="answer-field">
+  <textarea rows="3" data-answer-idx="0" placeholder="✏️ Écris ta réponse ici…" aria-label="Zone de réponse de l'élève"></textarea>
+</div>
+<blockquote>
+<p>💡 Une maquette rapide qui révèle un défaut est une <strong>réussite</strong> : elle vient d&#39;éviter de gaspiller du PLA ou du contreplaqué.</p>
+</blockquote>
+<h3>Étape 3 — Maquette fablab (20 min, rotation atelier)</h3>
+<p>Deux voies, choisies en séance 2 selon la forme de votre idée. Dans les deux cas, on ne fabrique que <strong>la pièce qui prouve l&#39;idée</strong>, pas l&#39;objet complet.</p>
+<p><strong>Voie A — Pièce en PLA (permis imprimante 3D)</strong> : pour une forme en volume (crochet, clip, support, embout).</p>
+<ol>
+<li>Dans TinkerCAD, modélisez la pièce en millimètres, <strong>taille maximale 40 × 40 × 20 mm</strong> pour une impression courte ; évitez les parties en l&#39;air (pas de supports).</li>
+<li>Exportez en STL, tranchez dans Cura avec le profil de classe (couche 0,2 mm, remplissage 15 à 20 %, jupe).</li>
+<li>Vérifiez le temps annoncé : <strong>au-delà de 25 minutes, simplifiez la pièce</strong>.</li>
+<li>L&#39;élève titulaire du permis lance l&#39;impression sous la surveillance du professeur, vérifie la première couche, puis retourne à l&#39;îlot. La pièce se récupère en fin de séance ou au début de la séance suivante.</li>
+</ol>
+<p><strong>Voie B — Boîte à encoches au laser (élève copilote)</strong> : pour une forme à plat ou un contenant (trousse rigide, range-câbles, support de téléphone).</p>
+<ol>
+<li>Générez la boîte avec un générateur de boîtes à encoches (dimensions intérieures, épaisseur du contreplaqué <strong>3 mm</strong>, largeur d&#39;encoche = épaisseur). Ajoutez vos ouvertures et le nom de l&#39;îlot en gravure.</li>
+<li>Préparez les calques : <strong>gravure</strong> (rapide, peu puissante) puis <strong>découpe</strong> (lente, puissante), avec les réglages de la grille de tests affichée au poste.</li>
+<li>Posez la plaque bien à plat, vérifiez le focus avec le professeur, lancez le <strong>cadrage</strong> (frame) sans tir.</li>
+<li>Checklist copilote : matériau autorisé ▢ — extraction en marche ▢ — capot fermé ▢ — extincteur CO2 à portée ▢. <strong>Le professeur lance.</strong> Vous restez devant la machine jusqu&#39;à la fin.</li>
+<li>Assemblez à sec (les encoches doivent tenir sans colle) ; un point de colle si nécessaire.</li>
+</ol>
+<p><strong>Voie C (variante)</strong> — silhouette ou pièce plate simple découpée à la <strong>scie à chantourner</strong> (permis élève, contreplaqué 3 à 6 mm).</p>
+<p>Fiche de fabrication : voie choisie, dimensions réelles, réglages utilisés, temps de fabrication, écart entre le résultat et le croquis :</p>
+<div class="answer-field">
+  <textarea rows="3" data-answer-idx="1" placeholder="✏️ Écris ta réponse ici…" aria-label="Zone de réponse de l'élève"></textarea>
+</div>
+<h3>Étape 4 — Préparer le pitch (5 min, à l&#39;îlot)</h3>
+<p>Un <strong>pitch</strong> est une présentation courte qui <strong>convainc</strong>. Trois minutes, quatre parties, tous les membres parlent :</p>
+<table>
+<thead>
+<tr>
+<th>Partie</th>
+<th>Durée</th>
+<th>Contenu</th>
+<th>Qui</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>1. Le besoin</strong></td>
+<td>45 s</td>
+<td>l&#39;objet, l&#39;agacement mesuré (enquête + avis clients), la phrase-problème</td>
+<td>contrôleur qualité</td>
+</tr>
+<tr>
+<td><strong>2. L&#39;idée</strong></td>
+<td>45 s</td>
+<td>la solution, sa famille (usage/forme/matériau/fonction), pourquoi elle a gagné la grille</td>
+<td>chef d&#39;atelier</td>
+</tr>
+<tr>
+<td><strong>3. La preuve</strong></td>
+<td>60 s</td>
+<td>la maquette <strong>dans les mains</strong>, le geste montré, ce qu&#39;elle prouve</td>
+<td>opérateur CFAO</td>
+</tr>
+<tr>
+<td><strong>4. Les limites et la suite</strong></td>
+<td>30 s</td>
+<td>ce que la maquette ne prouve pas, ce qu&#39;on ferait en V2, sources citées</td>
+<td>magasinier</td>
+</tr>
+</tbody></table>
+<p>Votre plan de pitch (une phrase clé par partie + la phrase d&#39;accroche de départ) :</p>
+<div class="answer-field">
+  <textarea rows="3" data-answer-idx="2" placeholder="✏️ Écris ta réponse ici…" aria-label="Zone de réponse de l'élève"></textarea>
+</div>
+<h3>Étape 5 — Pitchs et retour critique (10 min, classe entière)</h3>
+<p>Trois îlots pitchent aujourd&#39;hui (3 min + 1 min de questions chacun), les autres pitchent au créneau suivant pendant que les impressions terminent. Pendant qu&#39;un îlot présente, <strong>chaque autre îlot remplit la grille d&#39;écoute</strong> :</p>
+<table>
+<thead>
+<tr>
+<th>Critère d&#39;écoute</th>
+<th>0</th>
+<th>1</th>
+<th>2</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Le besoin est prouvé (chiffres de l&#39;enquête, avis clients)</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>L&#39;idée est claire en une phrase</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>La maquette est montrée et le geste démontré</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Les limites sont dites honnêtement</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Temps respecté (2 min 30 à 3 min 30) et tout le monde a parlé</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<p>Retour critique (règle : <strong>un point fort, une question, une suggestion</strong> — jamais « c&#39;est nul ») : notez ici les retours reçus par votre îlot et la note d&#39;écoute moyenne donnée par la classe :</p>
+<div class="answer-field">
+  <textarea rows="3" data-answer-idx="3" placeholder="✏️ Écris ta réponse ici…" aria-label="Zone de réponse de l'élève"></textarea>
+</div>
+<h2>🧠 Ce qu&#39;il faut retenir</h2>
+<ul>
+<li>Une <strong>maquette rapide</strong> (« quick and dirty ») sert à <strong>tester un geste</strong> à l&#39;échelle 1 en quelques minutes ; découvrir un défaut est une réussite.</li>
+<li>On maquette <strong>la pièce qui prouve l&#39;idée</strong>, pas l&#39;objet entier : PLA pour le volume, boîte à encoches laser pour le plat, chantournage pour une silhouette.</li>
+<li>Au laser, l&#39;élève est <strong>copilote</strong> : il prépare tout, <strong>le professeur lance</strong> ; l&#39;imprimante 3D et la scie à chantourner se pilotent avec le <strong>permis élève</strong>, sous surveillance.</li>
+<li>Un <strong>pitch</strong> de 3 minutes suit un plan : <strong>besoin, idée, preuve par la maquette, limites</strong>. Dire ses limites rend le reste crédible.</li>
+<li>Le <strong>retour critique</strong> se formule en « un point fort, une question, une suggestion ».</li>
+</ul>
+<h2>✅ Bilan</h2>
+<p>Votre agence a fait le tour complet : observer, chercher, imaginer, choisir, prouver, convaincre. La maquette, le plan de pitch et la grille d&#39;écoute reçue constituent votre dossier de projet. Terminez par le <strong>quiz</strong> en bas de page : 5 questions pour valider la séquence.</p>
+
+    </div>
+    
+<section class="quiz" id="quiz">
+  <h2>🧠 Teste tes connaissances</h2>
+  <p class="quiz-hint">Réponds aux questions puis clique sur « Vérifier » — la correction s'affiche aussitôt.</p>
+  
+    <div class="quiz-q" data-ok="1" data-explain="SCAMPER = Substituer, Combiner, Adapter, Modifier, autre usage (Put to other use), Éliminer, Réorganiser. Le E invite à supprimer quelque chose, par exemple la fermeture éclair d'une trousse.">
+      <p class="qq-text">1. Dans la méthode SCAMPER, que signifie la lettre E ?</p>
+      <div class="qq-opts">
+        <label class="qq-opt"><input type="radio" name="q0" value="0"><span>Étendre : agrandir l'objet</span></label>
+        <label class="qq-opt"><input type="radio" name="q0" value="1"><span>Éliminer : supprimer une pièce, une étape ou une fonction</span></label>
+        <label class="qq-opt"><input type="radio" name="q0" value="2"><span>Évaluer : noter l'idée dans la grille</span></label>
+        <label class="qq-opt"><input type="radio" name="q0" value="3"><span>Exporter : envoyer le fichier à la machine</span></label>
+      </div>
+      <button class="btn btn-ghost qq-check" type="button">Vérifier ma réponse</button>
+      <div class="qq-feedback" aria-live="polite"></div>
+    </div>
+
+    <div class="quiz-q" data-ok="2" data-explain="Le brevet est un contrat : l'invention est publiée (texte, dessins, revendications) et, en échange, l'inventeur obtient un monopole limité dans le temps, en général 20 ans. On peut lire un brevet librement, pas copier l'invention tant qu'il est en vigueur.">
+      <p class="qq-text">2. Qu'obtient un inventeur en déposant un brevet ?</p>
+      <div class="qq-opts">
+        <label class="qq-opt"><input type="radio" name="q1" value="0"><span>Le droit de garder son invention secrète pour toujours</span></label>
+        <label class="qq-opt"><input type="radio" name="q1" value="1"><span>Une preuve que son idée fonctionne</span></label>
+        <label class="qq-opt"><input type="radio" name="q1" value="2"><span>Le droit d'interdire aux autres de fabriquer ou vendre son invention pendant une durée limitée, en échange de sa publication</span></label>
+        <label class="qq-opt"><input type="radio" name="q1" value="3"><span>Une subvention pour fabriquer l'objet</span></label>
+      </div>
+      <button class="btn btn-ghost qq-check" type="button">Vérifier ma réponse</button>
+      <div class="qq-feedback" aria-live="polite"></div>
+    </div>
+
+    <div class="quiz-q" data-ok="0" data-explain="La règle n°1 du brainstorming est l'absence de critique pendant la production d'idées : la quantité d'abord, le tri ensuite (carte mentale, grille de critères).">
+      <p class="qq-text">3. Pendant un brainstorming, un camarade dit « ça existe déjà, c'est nul ». Que fait le gardien des règles ?</p>
+      <div class="qq-opts">
+        <label class="qq-opt"><input type="radio" name="q2" value="0"><span>Il l'interrompt : aucune critique pendant le brainstorming, on juge après</span></label>
+        <label class="qq-opt"><input type="radio" name="q2" value="1"><span>Il retire l'idée critiquée de la feuille</span></label>
+        <label class="qq-opt"><input type="radio" name="q2" value="2"><span>Il donne un point bonus pour l'esprit critique</span></label>
+        <label class="qq-opt"><input type="radio" name="q2" value="3"><span>Il arrête le brainstorming pour vérifier sur les PC</span></label>
+      </div>
+      <button class="btn btn-ghost qq-check" type="button">Vérifier ma réponse</button>
+      <div class="qq-feedback" aria-live="polite"></div>
+    </div>
+
+    <div class="quiz-q" data-ok="2" data-explain="Score = somme des (note × poids) = 3×3 + 2×2 + 1×1 = 9 + 4 + 1 = 14. La pondération donne plus d'importance aux critères essentiels, comme « répond au problème » ou « faisable au fablab ».">
+      <p class="qq-text">4. Dans la grille de critères pondérés, une idée obtient les notes 3, 2, 1 pour des critères de poids 3, 2, 1. Quel est son score ?</p>
+      <div class="qq-opts">
+        <label class="qq-opt"><input type="radio" name="q3" value="0"><span>6</span></label>
+        <label class="qq-opt"><input type="radio" name="q3" value="1"><span>9</span></label>
+        <label class="qq-opt"><input type="radio" name="q3" value="2"><span>14</span></label>
+        <label class="qq-opt"><input type="radio" name="q3" value="3"><span>18</span></label>
+      </div>
+      <button class="btn btn-ghost qq-check" type="button">Vérifier ma réponse</button>
+      <div class="qq-feedback" aria-live="polite"></div>
+    </div>
+
+    <div class="quiz-q" data-ok="3" data-explain="Au laser, l'élève est copilote : il prépare tout (fichier, matériau autorisé, focus, cadrage, checklist) mais seul le professeur arme et lance la découpe. L'imprimante 3D et la scie à chantourner, elles, se pilotent avec le permis élève sous surveillance.">
+      <p class="qq-text">5. Votre boîte à encoches est prête sur le poste laser : fichier, focus, cadrage, plaque de contreplaqué. Qui lance la découpe ?</p>
+      <div class="qq-opts">
+        <label class="qq-opt"><input type="radio" name="q4" value="0"><span>L'opérateur CFAO, puisqu'il a préparé le fichier</span></label>
+        <label class="qq-opt"><input type="radio" name="q4" value="1"><span>N'importe quel élève titulaire d'un permis machine</span></label>
+        <label class="qq-opt"><input type="radio" name="q4" value="2"><span>Le chef d'atelier, responsable de l'îlot</span></label>
+        <label class="qq-opt"><input type="radio" name="q4" value="3"><span>Le professeur, seul autorisé à lancer le laser ; l'élève reste copilote devant la machine</span></label>
+      </div>
+      <button class="btn btn-ghost qq-check" type="button">Vérifier ma réponse</button>
+      <div class="qq-feedback" aria-live="polite"></div>
+    </div>
+  <div class="quiz-score" aria-live="polite"></div>
+</section>
+    
+    <nav class="pager">
+      <a class="pg-prev" href="../seance-2/"><span class="pg-label">← Précédent</span><span class="pg-title">💡 Séance 2 — Créativité et choix : de trente idées à une seule</span></a>
+      <a class="pg-next" href="../guide-prof/"><span class="pg-label">Suivant →</span><span class="pg-title">👨‍🏫 Guide du professeur — Réinventer un objet</span></a>
+    </nav>
+  </article>
+</div>
+</main>
+<footer class="site-footer">
+  <div class="wrap footer-grid">
+    <div>
+      <h4>Technologie &amp; SNT</h4>
+      <p>Site pédagogique regroupant les cours, activités et ressources de Technologie du collège et de SNT du lycée.</p>
+    </div>
+    <div>
+      <h4>Niveaux</h4>
+      <ul>
+        <li><a href="../../../5eme/">5ème</a></li>
+        <li><a href="../../../4eme/">4ème</a></li>
+        <li><a href="../../../3eme/">3ème</a></li>
+        <li><a href="../../../snt/">2nde SNT</a></li>
+        <li><a href="../../../sicit/">SI · CIT</a></li>
+        <li><a href="../../../atelier/">Atelier</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Références</h4>
+      <ul>
+        <li><a href="https://eduscol.education.fr/2098/technologie-au-cycle-4" target="_blank" rel="noopener">Programme de Technologie (Eduscol)</a></li>
+        <li><a href="https://eduscol.education.fr/3016/sciences-numeriques-et-technologie-au-lycee" target="_blank" rel="noopener">Programme SNT (Eduscol)</a></li>
+        <li><a href="https://pix.fr" target="_blank" rel="noopener">Pix — compétences numériques</a></li>
+        <li><a href="https://sites.google.com/view/lmtechno25" target="_blank" rel="noopener">Site d'origine (Google Sites)</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="wrap footer-bottom">
+    <span>© M. Eddy Bachaalany · Lycée Montaigne, Beit Chabab</span>
+    <span>Cours de Technologie collège &amp; SNT lycée</span>
+  </div>
+</footer>
+<div class="search-overlay" id="search-overlay" role="dialog" aria-label="Recherche">
+  <div class="search-panel">
+    <div class="search-input-row">
+      <span>🔍</span>
+      <input id="search-input" type="search" placeholder="Rechercher une séquence, une séance, une notion…" autocomplete="off">
+      <kbd>Échap</kbd>
+    </div>
+    <div class="search-results" id="search-results"></div>
+  </div>
+</div>
+<button class="back-to-top" id="back-to-top" type="button" aria-label="Retour en haut">↑</button>
+<script src="../../../assets/client.js?v=08290246cd" defer></script>
+</body>
+</html>
