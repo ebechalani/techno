@@ -293,6 +293,59 @@ export async function loadStudentWork(classId, sid) {
   return out;
 }
 
+/* Toutes les réponses écrites d'une classe, regroupées par page — c'est ainsi
+ * qu'un professeur corrige : une question, toutes les réponses à la suite.
+ * Les règles n'autorisent la lecture que sous `work/{classe}/{élève}` : on lit
+ * donc élève par élève (en parallèle) plutôt que la classe d'un bloc.
+ * Renvoie [{ pageKey, title, path, entries: [{ who, idx, label, text }] }]. */
+export async function loadClassAnswers(classId, students, groups) {
+  await ensureAnon();
+  const pages = new Map();
+  const page = (key, title, path) => {
+    if (!pages.has(key)) pages.set(key, { pageKey: key, title: title || key, path: path || "", entries: [] });
+    const p = pages.get(key);
+    if (title && (!p.title || p.title === key)) p.title = title;
+    if (path && !p.path) p.path = path;
+    return p;
+  };
+
+  await Promise.all((students || []).map(async (st) => {
+    const snap = await get(ref(db, "work/" + classId + "/" + st.id)).catch(() => null);
+    if (!snap || !snap.exists()) return;
+    snap.forEach((c) => {
+      const w = c.val() || {};
+      const answers = w.answers || {};
+      const labels = w.labels || {};
+      const keys = Object.keys(answers).sort((a, b) => Number(a) - Number(b));
+      if (!keys.length) return;
+      const p = page(c.key, w.title, w.path);
+      keys.forEach((k) => p.entries.push({ who: st.firstName || st.id, idx: Number(k), label: labels[k] || "", text: answers[k] }));
+    });
+  }));
+
+  await Promise.all((groups || []).map(async (g) => {
+    const snap = await get(ref(db, "groupwork/" + classId + "/" + g.id)).catch(() => null);
+    if (!snap || !snap.exists()) return;
+    snap.forEach((c) => {
+      const w = c.val() || {};
+      const answers = w.answers || {};
+      const keys = Object.keys(answers).sort((a, b) => Number(a) - Number(b));
+      if (!keys.length) return;
+      const p = page(c.key, w.title, w.path);
+      keys.forEach((k) => {
+        const a = answers[k] || {};
+        if (!String(a.text || "").trim()) return;
+        p.entries.push({ who: "👥 " + g.name + (a.by ? " · " + a.by : ""), idx: Number(k), label: a.label || "", text: a.text });
+      });
+    });
+  }));
+
+  const out = [...pages.values()];
+  out.forEach((p) => p.entries.sort((a, b) => a.idx - b.idx || String(a.who).localeCompare(String(b.who))));
+  out.sort((a, b) => String(a.title).localeCompare(String(b.title)));
+  return out;
+}
+
 /* ---------- Connexion élève (code de classe + pseudo) ---------- */
 
 export async function studentJoin(code, firstName) {
@@ -498,12 +551,12 @@ export function watchGroupAnswers(classId, groupId, pageKey, cb) {
   return onValue(r, (snap) => cb(snap.val() || {}));
 }
 
-export async function saveGroupAnswer(classId, groupId, pageKey, idx, text, by, title) {
+export async function saveGroupAnswer(classId, groupId, pageKey, idx, text, by, title, label, path) {
   await ensureAnon();
   await set(ref(db, "groupwork/" + classId + "/" + groupId + "/" + pageKey + "/answers/" + idx),
-    { text, by, at: serverTimestamp() });
+    { text, by, at: serverTimestamp(), label: label || "" });
   await update(ref(db, "groupwork/" + classId + "/" + groupId + "/" + pageKey),
-    { title: title || "", updatedAt: serverTimestamp(), lastBy: by });
+    { title: title || "", updatedAt: serverTimestamp(), lastBy: by, path: path || "" });
 }
 
 // Côté professeur : travail d'un groupe, page par page.

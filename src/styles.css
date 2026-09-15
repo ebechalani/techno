@@ -38,6 +38,11 @@
   --c-arch-soft: #e9edf4;
 
   --ok: #0d9268;
+  --ok-bg: #dcf5ec;
+  --mid: #b45309;
+  --mid-bg: #fdf0dc;
+  --no: #c53030;
+  --no-bg: #fde8e8;
   --warn: #b45309;
 
   --radius: 14px;
@@ -78,6 +83,14 @@
   --c-sicit-soft: #103237;
   --c-arch: #9caac6;
   --c-arch-soft: #212c44;
+
+  --ok: #34d19e;
+  --ok-bg: #123529;
+  --mid: #f0b35c;
+  --mid-bg: #3c2712;
+  --no: #f28b8b;
+  --no-bg: #3d1a1a;
+  --warn: #f0b35c;
 
   --shadow-1: 0 1px 2px rgba(0, 0, 0, 0.4), 0 2px 10px rgba(0, 0, 0, 0.35);
   --shadow-2: 0 4px 14px rgba(0, 0, 0, 0.45), 0 12px 34px rgba(0, 0, 0, 0.4);
@@ -892,6 +905,23 @@ main { min-height: 60vh; }
 .pill-score.low { background: var(--no-bg); color: var(--no); }
 .pill-score.none { background: var(--surface-2); color: var(--muted); }
 
+/* Lecture des réponses écrites par le professeur : la consigne, puis le texte
+   de l'élève tel qu'il l'a tapé (retours à la ligne compris). */
+.answer-read {
+  border-left: 3px solid var(--primary-soft);
+  background: var(--surface-2); border-radius: 0 8px 8px 0;
+  padding: 0.5rem 0.8rem; margin: 0.45rem 0;
+}
+.answer-read-q { font-size: 0.78rem; color: var(--muted); margin-bottom: 0.25rem; }
+.answer-read-a { font-size: 0.92rem; white-space: pre-wrap; overflow-wrap: anywhere; }
+.answer-read-by { font-size: 0.75rem; color: var(--muted); margin-top: 0.25rem; }
+.answers-page { border-top: 1px solid var(--border); padding: 0.55rem 0 0.3rem; }
+.answers-page > summary {
+  cursor: pointer; display: flex; align-items: baseline; gap: 0.5rem;
+  flex-wrap: wrap; font-size: 0.95rem; padding: 0.2rem 0;
+}
+.answers-page > summary::marker { color: var(--muted); }
+
 .inline-form { display: flex; gap: 0.5rem; flex-wrap: wrap; align-items: flex-end; }
 .inline-form .field { margin-bottom: 0; flex: 1; min-width: 160px; }
 
@@ -964,6 +994,32 @@ main { min-height: 60vh; }
   width: 100%; min-height: 0; resize: vertical;
   font-size: 0.82rem; padding: 0.3rem 0.45rem; text-align: center;
 }
+/* Vérificateur : correction immédiate du tri des cartes */
+.cards-hint {
+  margin: -0.4rem 0 0.8rem; font-size: 0.82rem; color: var(--text-2);
+}
+.cut-card.ok { border-color: var(--ok); border-style: solid; }
+.cut-card.ko { border-color: var(--no); border-style: solid; }
+.cut-card.blank { border-color: var(--border); opacity: 0.75; }
+.cut-card-verdict {
+  display: none; font-size: 0.74rem; font-weight: 600; letter-spacing: 0.01em;
+}
+.cards-sheet.answering .cut-card.ok .cut-card-verdict,
+.cards-sheet.answering .cut-card.ko .cut-card-verdict,
+.cards-sheet.answering .cut-card.blank .cut-card-verdict,
+.cards-sheet.answering .cut-card.shown .cut-card-verdict { display: block; }
+.cut-card.ok .cut-card-verdict { color: var(--ok); }
+.cut-card.ko .cut-card-verdict { color: var(--no); }
+.cut-card.blank .cut-card-verdict { color: var(--muted); }
+.cards-score {
+  display: none; margin: 0.9rem 0 0; padding: 0.6rem 0.85rem;
+  border-radius: 10px; font-size: 0.9rem;
+  border: 1px solid var(--border); background: var(--surface-2, var(--surface));
+}
+.cards-score.show { display: block; }
+.cards-score.all-ok { border-color: var(--ok); }
+.cards-score.low { border-color: var(--no); }
+
 #cards-print-root { display: none; }
 
 @media print {
@@ -972,7 +1028,14 @@ main { min-height: 60vh; }
   html.printing-cards #cards-print-root { display: block !important; }
   html.printing-cards .cards-print,
   html.printing-cards .cards-answer-toggle,
+  html.printing-cards .cards-check,
+  html.printing-cards .cards-hint,
+  html.printing-cards .cards-score,
+  html.printing-cards .cut-card-verdict,
   html.printing-cards .cut-card-ans { display: none !important; }
+  /* La correction ne doit jamais partir à l'imprimante avec les cartes. */
+  html.printing-cards .cut-card.ok,
+  html.printing-cards .cut-card.ko { border: 1px dashed #444; }
   html.printing-cards .cards-head {
     border-bottom: 1px solid #000; margin-bottom: 6mm; padding-bottom: 2mm;
   }

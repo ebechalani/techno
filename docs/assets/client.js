@@ -264,6 +264,97 @@
     });
   });
 
+  /* ---------- Vérificateur des cartes triées ---------- */
+  /* Les planches qui portent un corrigé (« Corrigé : 1=VRAI ; … » dans le
+     contenu) peuvent être vérifiées sur le site : l'îlot saisit son tri sous
+     chaque carte, clique sur « Vérifier notre tri » et voit immédiatement ce
+     qui est juste. Le corrigé est encodé en base64 : il n'est pas secret, mais
+     il ne se lit pas par-dessus l'épaule. */
+  function b64(s) {
+    try {
+      var bin = atob(s);
+      var bytes = new Uint8Array(bin.length);
+      for (var i = 0; i < bin.length; i++) bytes[i] = bin.charCodeAt(i);
+      return new TextDecoder("utf-8").decode(bytes);
+    } catch (e) { return ""; }
+  }
+  /* Comparaison tolérante : casse, accents, ponctuation et articles ignorés. */
+  function norm(s) {
+    return String(s == null ? "" : s)
+      .normalize("NFD").replace(/[̀-ͯ]/g, "")
+      .toLowerCase()
+      .replace(/[^a-z0-9]+/g, " ")
+      .replace(/\b(le|la|les|l|un|une|des|de|du|d|c est|c|est|ce)\b/g, " ")
+      .replace(/\s+/g, " ").trim();
+  }
+  function matches(answer, key) {
+    var a = norm(answer);
+    if (!a) return false;
+    var alts = key.split("/");
+    for (var i = 0; i < alts.length; i++) {
+      var k = norm(alts[i]);
+      if (!k) continue;
+      if (a === k) return true;
+      // « c'est vrai », « carte VRAIE » : la bonne réponse est contenue en entier
+      if (new RegExp("(^| )" + k.replace(/[.*+?^${}()|[\]\\]/g, "\\$&") + "( |$)").test(a)) return true;
+    }
+    return false;
+  }
+
+  document.querySelectorAll("[data-check-cards]").forEach(function (btn) {
+    var sheet = document.getElementById(btn.getAttribute("data-check-cards"));
+    if (!sheet) return;
+    var score = sheet.querySelector("[data-cards-score]");
+    var revealed = false;
+    btn.addEventListener("click", function () {
+      sheet.classList.add("answering"); // la saisie doit être visible pour corriger
+      var toggle = sheet.querySelector(".cards-answer-toggle");
+      if (toggle) toggle.textContent = "📝 Masquer notre résultat";
+      var cards = sheet.querySelectorAll(".cut-card[data-k]");
+      var good = 0, blank = 0;
+      cards.forEach(function (li) {
+        var key = b64(li.getAttribute("data-k"));
+        var ta = li.querySelector(".cut-card-ans textarea");
+        var verdict = li.querySelector(".cut-card-verdict");
+        var val = ta ? ta.value : "";
+        li.classList.remove("ok", "ko", "blank");
+        if (!String(val).trim()) {
+          blank++;
+          li.classList.add("blank");
+          if (verdict) verdict.textContent = "— à compléter";
+          return;
+        }
+        if (matches(val, key)) {
+          good++;
+          li.classList.add("ok");
+          if (verdict) verdict.textContent = "✅ juste";
+        } else {
+          li.classList.add("ko");
+          if (verdict) verdict.textContent = "❌ à revoir";
+        }
+      });
+      if (!score) return;
+      var total = cards.length;
+      score.className = "cards-score show " + (good === total ? "all-ok" : good >= total / 2 ? "mid" : "low");
+      score.innerHTML = "<strong>" + good + " / " + total + "</strong> carte" + (good > 1 ? "s" : "") +
+        " bien classée" + (good > 1 ? "s" : "") +
+        (blank ? " · " + blank + " carte" + (blank > 1 ? "s" : "") + " sans réponse" : "") +
+        (good === total ? " 🎉 Tri parfait !" : "") +
+        (revealed || good === total ? "" :
+          ' <button type="button" class="btn btn-ghost btn-sm" data-reveal>👁 Voir la correction</button>');
+      var rev = score.querySelector("[data-reveal]");
+      if (rev) rev.addEventListener("click", function () {
+        revealed = true;
+        sheet.querySelectorAll(".cut-card[data-k]").forEach(function (li) {
+          var v = li.querySelector(".cut-card-verdict");
+          if (v) v.textContent = "✔ " + b64(li.getAttribute("data-k")).split("/")[0];
+          li.classList.add("shown");
+        });
+        rev.remove();
+      });
+    });
+  });
+
   /* ---------- Quiz auto-corrigés ---------- */
   var quizQs = document.querySelectorAll(".quiz-q");
   quizQs.forEach(function (qEl) {
