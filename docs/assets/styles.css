@@ -919,6 +919,12 @@ main { min-height: 60vh; }
 .sync-banner .sync-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--ok); }
 .sync-banner .sync-dot.saving { background: var(--mid); }
 .sync-banner a { font-weight: 600; }
+.sync-banner .sync-logout {
+  border: 1px solid var(--border-2); background: var(--surface-2); color: var(--text-2);
+  border-radius: 999px; padding: 0.2rem 0.7rem; font: inherit; font-weight: 600;
+  cursor: pointer;
+}
+.sync-banner .sync-logout:hover { background: var(--bg-soft); color: var(--text); }
 
 /* ---------- Impression ---------- */
 /* ---------- Cartes à découper (jeux d'introduction) ---------- */

@@ -81,8 +81,29 @@ export function teacherSignIn(email, password) {
   return signInWithEmailAndPassword(auth, email, password);
 }
 
+/* ---------- Brouillons locaux (ordinateurs partagés) ----------
+ * Les réponses sont gardées dans le navigateur sous une clé
+ * `lmtechno-rep:{classId}/{sid}:{page}`. Sur un poste partagé entre plusieurs
+ * classes, il faut effacer celles des AUTRES élèves : sinon le suivant relit
+ * le travail du précédent. `keepScope` conserve les brouillons de l'élève
+ * indiqué (utile quand il se reconnecte sur son propre appareil). */
+export function clearLocalAnswers(keepScope) {
+  try {
+    const kill = [];
+    for (let i = 0; i < localStorage.length; i++) {
+      const k = localStorage.key(i);
+      if (!k || k.indexOf("lmtechno-rep:") !== 0) continue;
+      if (keepScope && k.indexOf("lmtechno-rep:" + keepScope + ":") === 0) continue;
+      kill.push(k);
+    }
+    kill.forEach((k) => localStorage.removeItem(k));
+    return kill.length;
+  } catch (e) { return 0; }
+}
+
 export function logout() {
   try { localStorage.removeItem("lmtechno-eleve"); } catch (e) {}
+  clearLocalAnswers(null); // rien ne doit rester sur un poste partagé
   return signOut(auth);
 }
 
@@ -292,6 +313,10 @@ export async function studentJoin(code, firstName) {
     className: cls.exists() ? cls.val().name : "",
     section: cls.exists() ? (cls.val().section || "") : "",
   };
+  // Poste partagé : on efface les brouillons de tous les AUTRES élèves, et on
+  // garde ceux de celui qui se connecte (son travail est de toute façon
+  // rechargé depuis la base par sync.js).
+  clearLocalAnswers(classId + "/" + sid);
   try { localStorage.setItem("lmtechno-eleve", JSON.stringify(session)); } catch (e) {}
   return session;
 }
