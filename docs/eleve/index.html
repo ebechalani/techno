@@ -8,9 +8,9 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lexend:wght@500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../assets/styles.css?v=855b66946a">
+<link rel="stylesheet" href="../assets/styles.css?v=a3271703b2">
 <script>(function(){try{var t=localStorage.getItem("lmtechno-theme");if(!t)t=window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light";document.documentElement.setAttribute("data-theme",t);}catch(e){}})();</script>
-<script src="../assets/firebase-config.js?v=855b66946a"></script>
+<script src="../assets/firebase-config.js?v=a3271703b2"></script>
 </head>
 <body>
 <header class="app-header">
@@ -44,7 +44,7 @@
 <script type="module">
 import { isConfigured, currentStudent, logout, loadStudentWork,
   listGroups, createGroup, joinGroup, leaveGroup,
-  listRoster, findMyGroup, setGroupMembers } from "../assets/app.js?v=855b66946a";
+  listRoster, findMyGroup, setGroupMembers } from "../assets/app.js?v=a3271703b2";
 
 const $ = (id) => document.getElementById(id);
 if (!isConfigured()) { location.href = "../connexion/"; }
@@ -76,7 +76,7 @@ function scorePill(pct) {
       <thead><tr><th>Séance</th><th class="num">Quiz</th><th class="num">Réponses</th></tr></thead>
       <tbody>${work.map((w) => {
         const q = w.quiz && w.quiz.total ? Math.round(w.quiz.score / w.quiz.total * 100) : null;
-        const nb = w.answers ? Object.keys(w.answers).length : 0;
+        const nb = w.answers ? Object.keys(w.answers).length : (w.groupAnswers || 0);
         return `<tr><td>${esc((w.title || w.pageKey).replace(/_/g, " "))}</td><td class="num">${scorePill(q)}</td><td class="num">${nb}</td></tr>`;
       }).join("")}</tbody></table></div>`;
   } catch (e) {

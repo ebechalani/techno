@@ -7,7 +7,7 @@
 // version chaînée depuis l'URL du module (cache-busting de app.js)
 const __V = new URL(import.meta.url).searchParams.get("v") || "";
 const { currentStudent, isConfigured, pageKeyFromPath, loadWork, saveWork,
-  watchGroupAnswers, saveGroupAnswer, logout } = await import("./app.js" + (__V ? "?v=" + __V : ""));
+  watchGroupAnswers, saveGroupAnswer, markGroupAnswered, logout } = await import("./app.js" + (__V ? "?v=" + __V : ""));
 
 (async function () {
   const sess = currentStudent();
@@ -59,10 +59,17 @@ const { currentStudent, isConfigured, pageKeyFromPath, loadWork, saveWork,
     try {
       // en mode groupe, les réponses écrites vivent dans le groupe ;
       // le travail personnel ne garde que le quiz (score individuel).
+      // En îlot, les réponses écrites appartiennent au groupe : le travail
+      // personnel garde le quiz (score individuel) + le NOMBRE de réponses de
+      // l'îlot, qui vaut pour chacun de ses membres.
+      const groupAnswers = inGroup ? Object.keys(collectAnswers()).length : 0;
       const data = inGroup
-        ? { quiz: collectQuiz(), title }
+        ? { quiz: collectQuiz(), title, groupAnswers }
         : { answers: collectAnswers(), quiz: collectQuiz(), title };
       await saveWork(sess.classId, sess.sid, pageKey, data);
+      if (inGroup) {
+        await markGroupAnswered(sess.classId, sess.groupId, pageKey, groupAnswers, title);
+      }
     } catch (e) { /* silencieux : localStorage garde une copie */ }
     dot.classList.remove("saving");
   }
