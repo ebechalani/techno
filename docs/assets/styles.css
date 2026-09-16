@@ -1082,7 +1082,10 @@ main { min-height: 60vh; }
 @media print {
   .site-header, .sidebar, .pager, .site-footer, .back-to-top,
   .breadcrumbs, .search-overlay, .hero-actions, .embed-bar a.embed-open,
-  .student-bar, .qq-check { display: none !important; }
+  .student-bar, .qq-check,
+  /* la correction et les verdicts ne partent jamais à l'imprimante */
+  .cut-card-verdict, .cards-score, .cut-card-check, .cards-hint { display: none !important; }
+  .cut-card.ok, .cut-card.ko, .cut-card.locked { border: 2px dashed #999; background: none; }
   .answer-field textarea { border: 1px solid #999; background: none; }
   body { background: #fff; color: #000; font-size: 12pt; }
   .course-layout { display: block; padding: 0; }
