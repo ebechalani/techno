@@ -8,9 +8,9 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lexend:wght@500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../assets/styles.css?v=d54c60ede7">
+<link rel="stylesheet" href="../assets/styles.css?v=6b6461b63f">
 <script>(function(){try{var t=localStorage.getItem("lmtechno-theme");if(!t)t=window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light";document.documentElement.setAttribute("data-theme",t);}catch(e){}})();</script>
-<script src="../assets/firebase-config.js?v=d54c60ede7"></script>
+<script src="../assets/firebase-config.js?v=6b6461b63f"></script>
 </head>
 <body>
 <header class="app-header">
@@ -65,7 +65,7 @@ import { isConfigured, onAuth, logout, ensureTeacher, createClass, listMyClasses
   listGroups, loadGroupWork, removeGroup,
   listPendingTeachers, approveTeacher, rejectTeacher,
   mySections, listTeachers, getTeacherSections, setTeacherSections, syncRoster,
-  createGroupForClass, setGroupMembers, shuffleIntoGroups } from "../assets/app.js?v=d54c60ede7";
+  createGroupForClass, setGroupMembers, shuffleIntoGroups } from "../assets/app.js?v=6b6461b63f";
 
 const $ = (id) => document.getElementById(id);
 // [valeur, libellé] — source unique pour le menu Niveau et la gestion admin.
@@ -362,8 +362,28 @@ function wire() {
   /* Résultat du vérificateur de cartes : les 3 essais, le meilleur score, et
      si la correction a été consultée. */
   const cardsBlock = (cards) => Object.values(cards || {}).map((c) => {
-    const tries = Array.isArray(c.tries) ? c.tries : [];
     const total = c.total || 0;
+    const per = c.perCard && typeof c.perCard === "object" ? c.perCard : null;
+    let meta;
+    if (per) {
+      // Vérification carte par carte : justes / bloquées / en attente, et combien
+      // de cartes ont demandé plus d'un essai.
+      const ok = c.ok || 0, locked = c.locked || 0, pending = c.pending != null ? c.pending : total - ok - locked;
+      const retried = Object.values(per).filter((p) => p.ok && p.t > 1).length;
+      const firstTry = Object.values(per).filter((p) => p.ok && p.t === 1).length;
+      const perList = Object.keys(per).sort((a, b) => Number(a) - Number(b))
+        .map((k) => `${k}${per[k].ok ? "✅" : per[k].t >= 3 ? "🔒" : per[k].t ? "❌" + per[k].t : "·"}`).join(" ");
+      meta = `${ok} juste${ok > 1 ? "s" : ""} (${firstTry} du 1ᵉʳ coup${retried ? ", " + retried + " après un ❌" : ""})` +
+        (locked ? ` · 🔒 ${locked} bloquée${locked > 1 ? "s" : ""}` : "") +
+        (pending ? ` · ${pending} non vérifiée${pending > 1 ? "s" : ""}` : "") +
+        ` · ${c.attempts || 0} essai${(c.attempts || 0) > 1 ? "s" : ""} au total` +
+        `<div class="cards-result-cards">${esc(perList)}</div>`;
+      const pct = total ? Math.round(ok / total * 100) : null;
+      return `<div class="cards-result"><strong>✂️ ${esc(c.title || "Cartes")}</strong> ${scorePill(pct)}
+        <span class="cards-result-meta">${meta} · ${c.revealed ? "corrigé consulté" : "corrigé non consulté"}</span></div>`;
+    }
+    // Ancien format (planche vérifiée d'un bloc) : conservé pour les résultats déjà enregistrés.
+    const tries = Array.isArray(c.tries) ? c.tries : [];
     const best = c.best != null ? c.best : (tries.length ? Math.max(...tries) : 0);
     const pct = total ? Math.round(best / total * 100) : null;
     return `<div class="cards-result">

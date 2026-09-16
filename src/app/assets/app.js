@@ -420,16 +420,60 @@ export async function markGroupAnswered(classId, groupId, pageKey, answered, tit
  * et si l'îlot a fini par consulter la correction. Rangé à côté du travail de
  * la page — aucune règle supplémentaire n'est nécessaire (l'écriture sous
  * work/{classe}/{élève} et groupwork/{classe}/{îlot} est déjà autorisée). */
-export async function saveCardsResult(classId, sid, pageKey, sheetId, data) {
+/* Un essai déjà consommé ne doit jamais être « rendu » : quand deux appareils
+ * d'un même îlot écrivent, on garde le maximum d'essais et toute réussite
+ * acquise, au lieu que le dernier arrivé écrase les autres. */
+function mergeCardsResult(prev, next) {
+  const per = {};
+  [(prev && prev.perCard) || {}, next.perCard || {}].forEach((src) => {
+    Object.keys(src).forEach((k) => {
+      const a = per[k] || {}, b = src[k] || {};
+      per[k] = { t: Math.max(a.t || 0, b.t || 0), ok: !!(a.ok || b.ok) };
+    });
+  });
+  const vals = Object.values(per);
+  const ok = vals.filter((c) => c.ok).length;
+  const locked = vals.filter((c) => !c.ok && (c.t || 0) >= 3).length;
+  return {
+    ...next,
+    perCard: per,
+    ok, locked,
+    pending: Math.max(0, (next.total || vals.length) - ok - locked),
+    attempts: vals.reduce((n, c) => n + (c.t || 0), 0),
+    revealed: !!(next.revealed || (prev && prev.revealed)),
+  };
+}
+
+async function saveCardsAt(path, data) {
   await ensureAnon();
-  await update(ref(db, "work/" + classId + "/" + sid + "/" + pageKey + "/cards/" + sheetId),
-    { ...data, updatedAt: serverTimestamp() });
+  const prev = await get(ref(db, path)).catch(() => null);
+  await update(ref(db, path), {
+    ...mergeCardsResult(prev && prev.exists() ? prev.val() : null, data),
+    updatedAt: serverTimestamp(),
+  });
+}
+
+export async function saveCardsResult(classId, sid, pageKey, sheetId, data) {
+  await saveCardsAt("work/" + classId + "/" + sid + "/" + pageKey + "/cards/" + sheetId, data);
 }
 
 export async function saveGroupCardsResult(classId, groupId, pageKey, sheetId, data) {
+  await saveCardsAt("groupwork/" + classId + "/" + groupId + "/" + pageKey + "/cards/" + sheetId, data);
+}
+
+/* Relecture de l'état d'une planche : c'est lui qui fait foi, pour qu'un élève
+ * qui se connecte en cours de route, change d'appareil, ou rejoint un îlot ne
+ * récupère pas trois essais neufs. */
+export async function loadCardsResult(classId, sid, pageKey, sheetId) {
   await ensureAnon();
-  await update(ref(db, "groupwork/" + classId + "/" + groupId + "/" + pageKey + "/cards/" + sheetId),
-    { ...data, updatedAt: serverTimestamp() });
+  const s = await get(ref(db, "work/" + classId + "/" + sid + "/" + pageKey + "/cards/" + sheetId));
+  return s.exists() ? s.val() : null;
+}
+
+export async function loadGroupCardsResult(classId, groupId, pageKey, sheetId) {
+  await ensureAnon();
+  const s = await get(ref(db, "groupwork/" + classId + "/" + groupId + "/" + pageKey + "/cards/" + sheetId));
+  return s.exists() ? s.val() : null;
 }
 
 export async function loadWork(classId, sid, pageKey) {
