@@ -2,7 +2,9 @@
   "rules": {
     "teachers": {
       ".read": "auth != null && auth.token.email == 'ebechalani@gmail.com'",
-      ".indexOn": ["approved"],
+      ".indexOn": [
+        "approved"
+      ],
       "$uid": {
         ".read": "auth != null && (auth.uid == $uid || auth.token.email == 'ebechalani@gmail.com')",
         ".write": "auth != null && (auth.token.email == 'ebechalani@gmail.com' || (auth.uid == $uid && (!data.exists() ? (newData.child('approved').val() == false && newData.child('isAdmin').val() == false) : (newData.child('approved').val() == data.child('approved').val() && newData.child('isAdmin').val() == data.child('isAdmin').val()))))"
@@ -17,7 +19,7 @@
     "classCodes": {
       "$code": {
         ".read": "auth != null",
-        ".write": "auth != null && (!data.exists() ? (root.child('teachers').child(auth.uid).child('approved').val() == true && newData.child('teacherUid').val() == auth.uid) : data.child('teacherUid').val() == auth.uid)"
+        ".write": "auth != null && (!data.exists() ? (root.child('teachers').child(auth.uid).child('approved').val() == true && newData.child('teacherUid').val() == auth.uid) : (data.child('teacherUid').val() == auth.uid || auth.token.email == 'ebechalani@gmail.com'))"
       }
     },
     "classes": {
@@ -25,7 +27,7 @@
         ".read": "auth != null && ($tuid == auth.uid || auth.token.email == 'ebechalani@gmail.com')",
         "$cid": {
           ".read": "auth != null",
-          ".write": "auth != null && $tuid == auth.uid && root.child('teachers').child(auth.uid).child('approved').val() == true && (!newData.exists() || !root.child('teacherSections').child(auth.uid).exists() || root.child('teacherSections').child(auth.uid).child(newData.child('section').val()).val() == true)"
+          ".write": "auth != null && ($tuid == auth.uid || auth.token.email == 'ebechalani@gmail.com') && root.child('teachers').child($tuid).child('approved').val() == true && (!newData.exists() || !root.child('teacherSections').child($tuid).exists() || root.child('teacherSections').child($tuid).child(newData.child('section').val()).val() == true)"
         }
       }
     },

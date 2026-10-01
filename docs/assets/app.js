@@ -211,6 +211,41 @@ export async function listMyClasses() {
   return toList(s);
 }
 
+/* Transfère une classe à un autre professeur (administrateur uniquement).
+ * Tout le reste — élèves, travaux, îlots, trombinoscope — est rattaché à la
+ * CLASSE, et les règles donnent l'accès à qui la possède : déplacer le nœud
+ * `classes/{prof}/{classe}` suffit donc à tout transférer, sans toucher aux
+ * données des élèves ni changer le code de connexion.
+ * L'ordre compte : on dépose chez le destinataire D'ABORD et on retire chez
+ * l'ancien propriétaire EN DERNIER. Si quelque chose échoue au milieu, la
+ * classe apparaît chez les deux — gênant mais réparable ; l'inverse la rendrait
+ * inaccessible à tout le monde. */
+export async function transferClass(classId, code, toUid) {
+  const fromUid = auth.currentUser.uid;
+  if (toUid === fromUid) throw new Error("Cette classe vous appartient déjà.");
+  const snap = await get(ref(db, "classes/" + fromUid + "/" + classId));
+  if (!snap.exists()) throw new Error("Classe introuvable.");
+  const cls = snap.val();
+
+  const target = await get(ref(db, "teachers/" + toUid));
+  if (!target.exists()) throw new Error("Ce professeur n'a pas de compte.");
+  if (target.val().approved !== true) {
+    throw new Error("Ce professeur n'est pas encore validé : validez-le d'abord ci-dessus.");
+  }
+  const allowed = await getTeacherSections(toUid);
+  if (allowed && !allowed.includes(cls.section)) {
+    throw new Error("Ce professeur n'est pas autorisé sur ce niveau. Ajoutez-le dans « Niveaux autorisés ».");
+  }
+
+  await set(ref(db, "classes/" + toUid + "/" + classId), {
+    ...cls, teacherUid: toUid, transferredFrom: fromUid, transferredAt: serverTimestamp(),
+  });
+  // Le code de connexion des élèves ne change pas : on le réaffecte seulement.
+  if (code) await update(ref(db, "classCodes/" + code), { classId, teacherUid: toUid });
+  await remove(ref(db, "classes/" + fromUid + "/" + classId));
+  return { classId, toUid };
+}
+
 // Supprime la classe ET toutes les données rattachées (droit à l'effacement).
 // L'ordre compte : les règles autorisent ces suppressions parce que la classe
 // appartient encore au professeur — on efface donc `classes/...` en DERNIER.
