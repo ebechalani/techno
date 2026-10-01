@@ -67,7 +67,9 @@ function renderCardSheet(rawTitle, cards, keys) {
       const k = keys && keys[n];
       // `data-answer-label` : le professeur doit pouvoir relire la réponse en
       // sachant de quelle carte il s'agit.
-      return `<li class="cut-card"${k ? ` data-k="${hideKey(k)}"` : ""}><span class="cut-card-n">${n + 1}</span><span class="cut-card-t">${marked.parseInline(c)}</span><span class="cut-card-ans answer-field"><textarea rows="1" data-answer-idx="__CARD__" data-answer-label="${escHtml("Carte " + (n + 1) + " — " + stripMd(c))}" placeholder="✏️ où va cette carte ?" aria-label="Résultat pour la carte ${n + 1}"></textarea></span><span class="cut-card-verdict" aria-live="polite"></span></li>`;
+      // Avec un corrigé, chaque carte se vérifie SEULE (3 essais) : corriger
+      // toute la planche d'un coup révélerait les bonnes réponses par élimination.
+      return `<li class="cut-card"${k ? ` data-k="${hideKey(k)}"` : ""}><span class="cut-card-n">${n + 1}</span><span class="cut-card-t">${marked.parseInline(c)}</span><span class="cut-card-ans answer-field"><textarea rows="1" data-answer-idx="__CARD__" data-answer-label="${escHtml("Carte " + (n + 1) + " — " + stripMd(c))}" placeholder="✏️ où va cette carte ?" aria-label="Résultat pour la carte ${n + 1}"></textarea>${k ? `<button type="button" class="btn btn-ghost btn-sm cut-card-check" data-check-card aria-label="Vérifier la carte ${n + 1}">🔎 Vérifier</button>` : ""}</span><span class="cut-card-verdict" aria-live="polite"></span></li>`;
     })
     .join("");
   // Les valeurs attendues (VRAI / INVENTÉ…) sont annoncées quand elles sont peu
@@ -76,17 +78,17 @@ function renderCardSheet(rawTitle, cards, keys) {
   // Remise en ordre (le corrigé n'est que des rangs) vs. tri par familles.
   const ordering = keyed && uniq.every((u) => /^\d+$/.test(u));
   const hint = !keyed ? ""
-    : ordering ? "Écris sous chaque carte <strong>son numéro d’ordre</strong> (1 = en premier)."
-    : uniq.length > 1 && uniq.length <= 8
-      ? "À écrire sous chaque carte : " + uniq.map((u) => `<strong>${escHtml(u)}</strong>`).join(" · ")
-      : "";
+    : (ordering ? "Écris sous chaque carte <strong>son numéro d’ordre</strong> (1 = en premier)"
+      : uniq.length > 1 && uniq.length <= 8
+        ? "À écrire sous chaque carte : " + uniq.map((u) => `<strong>${escHtml(u)}</strong>`).join(" · ")
+        : "Écris ta réponse sous chaque carte")
+      + ", puis vérifie <strong>carte par carte</strong> — 3 essais par carte.";
   return `
 <section class="cards-sheet" id="${id}"${keyed ? ` data-cards-title="${escHtml(title)}"` : ""}>
   <div class="cards-head">
     <h3 class="cards-title">✂️ ${escHtml(title)}</h3>
     <span class="cards-count">${cards.length} cartes</span>
     <button class="btn btn-ghost btn-sm cards-answer-toggle" type="button" data-answer-cards="${id}">📝 Saisir notre résultat</button>
-    ${keyed ? `<button class="btn btn-ghost btn-sm cards-check" type="button" data-check-cards="${id}">🔎 Vérifier notre tri</button>` : ""}
     <button class="btn btn-ghost btn-sm cards-print" type="button" data-print-cards="${id}">🖨 Imprimer ces cartes</button>
   </div>
   ${hint ? `<p class="cards-hint">${hint}</p>` : ""}

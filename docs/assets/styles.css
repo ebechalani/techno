@@ -1004,13 +1004,18 @@ main { min-height: 60vh; }
 .cut-card-verdict {
   display: none; font-size: 0.74rem; font-weight: 600; letter-spacing: 0.01em;
 }
-.cards-sheet.answering .cut-card.ok .cut-card-verdict,
-.cards-sheet.answering .cut-card.ko .cut-card-verdict,
-.cards-sheet.answering .cut-card.blank .cut-card-verdict,
-.cards-sheet.answering .cut-card.shown .cut-card-verdict { display: block; }
+.cards-sheet.answering .cut-card-verdict:not(:empty) { display: block; }
 .cut-card.ok .cut-card-verdict { color: var(--ok); }
 .cut-card.ko .cut-card-verdict { color: var(--no); }
-.cut-card.blank .cut-card-verdict { color: var(--muted); }
+.cut-card.locked { border-color: var(--border-2); border-style: solid; background: var(--bg-soft); }
+.cut-card.locked .cut-card-verdict { color: var(--muted); }
+.cut-card.locked.shown .cut-card-verdict { color: var(--mid); }
+.cut-card.ok textarea:disabled,
+.cut-card.locked textarea:disabled { opacity: 0.8; }
+/* Vérification carte par carte : le bouton vit sous la zone de saisie */
+.cut-card-check { display: block; width: 100%; margin-top: 0.3rem; font-size: 0.78rem; }
+.cut-card-check:disabled { display: none; }
+.cards-locked-n { color: var(--mid); }
 .cards-score {
   display: none; margin: 0.9rem 0 0; padding: 0.6rem 0.85rem;
   border-radius: 10px; font-size: 0.9rem;
@@ -1077,7 +1082,10 @@ main { min-height: 60vh; }
 @media print {
   .site-header, .sidebar, .pager, .site-footer, .back-to-top,
   .breadcrumbs, .search-overlay, .hero-actions, .embed-bar a.embed-open,
-  .student-bar, .qq-check { display: none !important; }
+  .student-bar, .qq-check,
+  /* la correction et les verdicts ne partent jamais à l'imprimante */
+  .cut-card-verdict, .cards-score, .cut-card-check, .cards-hint { display: none !important; }
+  .cut-card.ok, .cut-card.ko, .cut-card.locked { border: 2px dashed #999; background: none; }
   .answer-field textarea { border: 1px solid #999; background: none; }
   body { background: #fff; color: #000; font-size: 12pt; }
   .course-layout { display: block; padding: 0; }

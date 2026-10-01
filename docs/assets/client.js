@@ -209,6 +209,18 @@
     clearBtn.addEventListener("click", function () {
       if (!confirm("Effacer toutes tes réponses de cette page ?")) return;
       try { localStorage.removeItem(PAGE_KEY); } catch (e) {}
+      // Les planches de cartes aussi : sinon les verdicts et les verrous
+      // restent affichés au-dessus de cases vides.
+      var hadCards = false;
+      try {
+        var kill = [];
+        for (var ci = 0; ci < localStorage.length; ci++) {
+          var ck = localStorage.key(ci);
+          if (ck && ck.indexOf("lmtechno-cartes:") === 0 && ck.indexOf(":" + CARDS_PATH + ":") !== -1) kill.push(ck);
+        }
+        kill.forEach(function (k) { localStorage.removeItem(k); });
+        hadCards = kill.length > 0;
+      } catch (e) {}
       answerFields.forEach(function (ta) {
         ta.value = "";
         ta.parentElement.classList.remove("saved");
@@ -219,6 +231,9 @@
         var fb = q.querySelector(".qq-feedback");
         if (fb) { fb.className = "qq-feedback"; fb.textContent = ""; }
       });
+      // Les planches reprennent à zéro : le plus simple et le plus sûr est de
+      // recharger (l'état distant, lui, reste celui du professeur).
+      if (hadCards) location.reload();
     });
   }
 
@@ -301,173 +316,275 @@
     return false;
   }
 
-  /* Trois essais par planche, et la correction ne s'ouvre QUE lorsque le
-     résultat de l'îlot est parti chez le professeur : sans cela, il suffirait
-     de révéler le corrigé puis de recopier les bonnes réponses.
-     sync.js (chargé seulement si un élève est connecté) installe
-     window.LMTechnoCards.submit ; sans lui, rien n'est envoyé et la correction
-     reste fermée. */
-  var CARD_TRIES = 3;
-  window.LMTechnoCards = window.LMTechnoCards || { submit: null };
+  /* Vérification CARTE PAR CARTE, 3 essais par carte. Corriger toute la
+     planche d'un coup révélerait les bonnes réponses par élimination (avec
+     deux catégories, un ❌ suffit) ; ici l'élève s'engage sur une carte, et
+     une carte ratée trois fois se verrouille sans livrer sa réponse.
 
-  function cardsState(id) {
-    try { return JSON.parse(localStorage.getItem(PAGE_KEY + ":cartes:" + id) || "null") || {}; }
+     L'état de référence est celui du PROFESSEUR (work/ ou groupwork/), pas le
+     navigateur : sinon se connecter, changer d'appareil ou travailler à
+     plusieurs dans un îlot rendrait des essais neufs. Le navigateur n'en garde
+     qu'une copie de travail, fusionnée avec la copie distante au chargement
+     (on garde le maximum d'essais et toute réussite déjà acquise).
+
+     La correction ne s'ouvre que si toutes les cartes sont réglées ET que le
+     résultat est bien arrivé chez le professeur — c'est sync.js (chargé
+     seulement si un élève est connecté) qui installe window.LMTechnoCards. */
+  var CARD_TRIES = 3;
+  window.LMTechnoCards = window.LMTechnoCards || { submit: null, load: null };
+
+  /* Portée de l'état : l'îlot s'il y en a un (les 3 essais valent pour l'îlot
+     entier, pas par élève), sinon l'élève, sinon un brouillon local.
+     Volontairement HORS du préfixe « lmtechno-rep: » : celui-ci est purgé à la
+     connexion, ce qui rendrait des essais neufs à qui se connecte en cours de
+     route. */
+  function cardScope() {
+    try {
+      var s = JSON.parse(localStorage.getItem("lmtechno-eleve") || "null");
+      if (s && s.classId) return s.classId + "/" + (s.groupId ? "g:" + s.groupId : s.sid);
+    } catch (e) {}
+    return "local";
+  }
+  var CARDS_PATH = location.pathname.replace(/\/index\.html$/, "/");
+  function cardsKey(id, scope) {
+    return "lmtechno-cartes:" + (scope || cardScope()) + ":" + CARDS_PATH + ":" + id;
+  }
+  function readCards(id, scope) {
+    try { return JSON.parse(localStorage.getItem(cardsKey(id, scope)) || "null") || {}; }
     catch (e) { return {}; }
   }
-  function saveCardsState(id, st) {
-    try { localStorage.setItem(PAGE_KEY + ":cartes:" + id, JSON.stringify(st)); } catch (e) {}
+  function writeCards(id, st) {
+    try { localStorage.setItem(cardsKey(id), JSON.stringify(st)); } catch (e) {}
+  }
+  /* Fusion de deux relevés de cartes : on ne perd jamais un essai déjà
+     consommé, ni une carte déjà trouvée. */
+  function mergeCards(a, b) {
+    var out = {};
+    [a || {}, b || {}].forEach(function (src) {
+      Object.keys(src).forEach(function (k) {
+        var x = out[k] || {}, y = src[k] || {};
+        out[k] = { t: Math.max(x.t || 0, y.t || 0), ok: !!(x.ok || y.ok), last: y.last || x.last || "" };
+      });
+    });
+    return out;
   }
   // Attend que sync.js soit prêt, mais seulement si un élève est connecté.
-  function waitSubmit() {
+  function waitBridge(what) {
     var connected = false;
     try { connected = !!JSON.parse(localStorage.getItem("lmtechno-eleve") || "null"); } catch (e) {}
     if (!connected) return Promise.resolve(null);
-    if (window.LMTechnoCards.submit) return Promise.resolve(window.LMTechnoCards.submit);
+    if (window.LMTechnoCards[what]) return Promise.resolve(window.LMTechnoCards[what]);
     return new Promise(function (resolve) {
       var n = 0;
       var t = setInterval(function () {
-        if (window.LMTechnoCards.submit || ++n > 30) { clearInterval(t); resolve(window.LMTechnoCards.submit || null); }
+        if (window.LMTechnoCards[what] || ++n > 30) { clearInterval(t); resolve(window.LMTechnoCards[what] || null); }
       }, 100);
     });
   }
 
-  document.querySelectorAll("[data-check-cards]").forEach(function (btn) {
-    var sheet = document.getElementById(btn.getAttribute("data-check-cards"));
+  document.querySelectorAll("[data-cards-score]").forEach(function (score) {
+    var sheet = document.getElementById(score.getAttribute("data-cards-score"));
     if (!sheet) return;
     var id = sheet.id;
-    var score = sheet.querySelector("[data-cards-score]");
-    var cards = sheet.querySelectorAll(".cut-card[data-k]");
+    var cards = Array.prototype.slice.call(sheet.querySelectorAll(".cut-card[data-k]"));
     var total = cards.length;
-    var st = cardsState(id);
-    var tries = Array.isArray(st.tries) ? st.tries : [];
-    var revealed = !!st.revealed;
-    var sent = !!st.sent;
+    if (!total) return;
 
-    function reveal() {
-      revealed = true;
-      st.revealed = true; st.tries = tries; st.sent = sent; saveCardsState(id, st);
-      cards.forEach(function (li) {
-        var v = li.querySelector(".cut-card-verdict");
-        if (v) v.textContent = "✔ " + b64(li.getAttribute("data-k")).split("/")[0];
-        li.classList.add("shown");
-      });
-      sheet.classList.add("answering");
+    /* Clé d'une carte : son NUMÉRO IMPRIMÉ. Stable si le contenu de la page
+       change ailleurs, et c'est le numéro que l'élève et le professeur voient.
+       (data-answer-idx est un compteur global à la page : un paragraphe ajouté
+       plus haut décalerait tous les états.) */
+    function idxOf(li) {
+      var n = li.querySelector(".cut-card-n");
+      return n ? n.textContent.trim() : String(cards.indexOf(li) + 1);
     }
 
-    function render(last, blank, justSent) {
-      if (!score) return;
-      var left = Math.max(0, CARD_TRIES - tries.length);
-      var perfect = last && last.good === total;
-      btn.disabled = left === 0 || perfect;
-      btn.textContent = left === 0 || perfect ? "🔎 Vérifier notre tri"
-        : "🔎 Vérifier notre tri (" + left + " essai" + (left > 1 ? "s" : "") + ")";
+    var st = readCards(id);
+    // Reprise du brouillon anonyme quand l'élève se connecte en cours d'activité.
+    if (!st.cards && cardScope() !== "local") {
+      var anon = readCards(id, "local");
+      if (anon && anon.cards) st = anon;
+    }
+    var per = (st.cards && typeof st.cards === "object") ? st.cards : {};
+    var revealed = !!(st.cards && st.revealed);   // jamais hérité d'un ancien format
+    var sent = !!(st.cards && st.sent);
+    var sending = null, queued = false;
 
+    function stateOf(li) { return per[idxOf(li)] || { t: 0, ok: false }; }
+    function isLocked(s) { return !s.ok && s.t >= CARD_TRIES; }
+    function persist() { st = { cards: per, revealed: revealed, sent: sent }; writeCards(id, st); }
+
+    /* Le libellé de « Saisir notre résultat » doit suivre l'état réel, sinon un
+       clic replie le travail de l'îlot au lieu de l'ouvrir. */
+    function setAnswering(on) {
+      sheet.classList.toggle("answering", on);
+      var t = sheet.querySelector(".cards-answer-toggle");
+      if (t) t.textContent = on ? "📝 Masquer notre résultat" : "📝 Saisir notre résultat";
+    }
+
+    /* Une carte : son verdict et son état (saisie ouverte, juste, verrouillée). */
+    function paint(li) {
+      var s = stateOf(li);
+      var ta = li.querySelector("textarea");
+      var b = li.querySelector("[data-check-card]");
+      var v = li.querySelector(".cut-card-verdict");
+      var done = s.ok || isLocked(s);
+      li.classList.toggle("ok", !!s.ok);
+      li.classList.toggle("locked", isLocked(s));
+      li.classList.toggle("ko", !s.ok && s.t > 0 && !isLocked(s));
+      li.classList.toggle("shown", revealed && isLocked(s));
+      if (ta) ta.disabled = done;
+      if (b) { b.disabled = done; b.textContent = done ? "🔎 Vérifier" : "🔎 Vérifier (" + (CARD_TRIES - s.t) + ")"; }
+      if (!v) return;
+      if (s.ok) v.textContent = "✅ juste" + (s.t > 1 ? " (au " + s.t + "ᵉ essai)" : "");
+      else if (isLocked(s)) v.textContent = revealed
+        ? "✔ " + b64(li.getAttribute("data-k")).split("/")[0]
+        : "🔒 3 essais épuisés";
+      else if (s.t > 0) v.textContent = "❌ essai " + s.t + " / " + CARD_TRIES + " — réessaie";
+      else v.textContent = "";
+    }
+    function paintAll() { cards.forEach(paint); }
+
+    /* Le bilan de la planche, sous les cartes. */
+    function summary(extra) {
+      var ok = 0, locked = 0, pending = 0;
+      cards.forEach(function (li) { var s = stateOf(li); if (s.ok) ok++; else if (isLocked(s)) locked++; else pending++; });
+      var started = ok + locked > 0;
+      var allDone = pending === 0;
       var html = "";
-      if (last) {
-        html += "<strong>" + last.good + " / " + total + "</strong> carte" + (last.good > 1 ? "s" : "") +
-          " bien classée" + (last.good > 1 ? "s" : "");
-        if (blank) html += " · " + blank + " sans réponse";
-        html += " <span class=\"cards-tries\">essai " + tries.length + " / " + CARD_TRIES + "</span>";
-        if (perfect) html += " 🎉 Tri parfait !";
+      if (started) {
+        html += "<strong>" + ok + " / " + total + "</strong> carte" + (ok > 1 ? "s" : "") + " juste" + (ok > 1 ? "s" : "");
+        if (locked) html += " · <span class=\"cards-locked-n\">🔒 " + locked + " bloquée" + (locked > 1 ? "s" : "") + "</span>";
+        if (pending) html += " · " + pending + " à vérifier";
+        if (allDone && ok === total) html += " 🎉 Tri parfait !";
       }
-      if (tries.length > 1) {
-        html += '<div class="cards-history">Vos essais : ' +
-          tries.map(function (t) { return t.good + "/" + total; }).join(" → ") + "</div>";
+      if (allDone && locked && !revealed) {
+        if (sent) html += ' <button type="button" class="btn btn-ghost btn-sm" data-reveal>👁 Voir la correction des cartes bloquées</button>';
+        else html += '<div class="cards-locked">🔒 La correction s\'affichera une fois votre résultat ' +
+          'envoyé au professeur. <button type="button" class="btn btn-ghost btn-sm" data-resend>↻ Envoyer maintenant</button>' +
+          "<br><small>Si rien ne part, connecte-toi à ton espace élève puis réessaie.</small></div>";
       }
-      if (!perfect && !revealed) {
-        if (left > 0) {
-          html += '<div class="cards-next">Il vous reste <strong>' + left + " essai" + (left > 1 ? "s" : "") +
-            "</strong> : corrigez les cartes ❌, puis vérifiez à nouveau.</div>";
-        } else if (sent) {
-          html += ' <button type="button" class="btn btn-ghost btn-sm" data-reveal>👁 Voir la correction</button>';
-        } else {
-          html += '<div class="cards-locked">🔒 La correction s\'affichera une fois votre résultat ' +
-            "envoyé au professeur. Connecte-toi à ton espace, puis vérifie à nouveau.</div>";
-        }
-      }
-      if (justSent) html += '<div class="cards-sent">✅ Résultat envoyé au professeur.</div>';
+      if (extra) html += extra;
       score.innerHTML = html;
       score.className = "cards-score" + (html ? " show " : " ") +
-        (perfect ? "all-ok" : !last ? "" : last.good >= total / 2 ? "mid" : "low");
+        (!started ? "" : allDone && ok === total ? "all-ok" : ok >= total / 2 ? "mid" : "low");
+
+      var resend = score.querySelector("[data-resend]");
+      if (resend) resend.addEventListener("click", function () {
+        resend.disabled = true;
+        send().then(function (okSent) {
+          if (!okSent) { summary('<div class="cards-locked">Envoi impossible pour l\'instant. Connecte-toi à ton espace élève, puis réessaie.</div>'); }
+        });
+      });
+
       var rev = score.querySelector("[data-reveal]");
+      // La correction ne s'affiche qu'une fois l'envoi CONFIRMÉ, et le fait que
+      // l'îlot l'ait consultée doit partir avec.
       if (rev) rev.addEventListener("click", function () {
-        reveal();
-        render(last, blank, false);
-        // Le professeur doit savoir que l'îlot a consulté la correction.
-        waitSubmit().then(function (submit) {
-          if (!submit) return;
-          return submit(id, {
-            title: sheet.getAttribute("data-cards-title") || "",
-            total: total,
-            tries: tries.map(function (t) { return t.good; }),
-            best: tries.reduce(function (m, t) { return Math.max(m, t.good); }, 0),
-            revealed: true,
-          });
-        }).catch(function () {});
+        rev.disabled = true;
+        revealed = true; persist();
+        send().then(function (okSent) {
+          if (!okSent) {
+            revealed = false; persist();
+            summary('<div class="cards-locked">Envoi impossible : la correction reste fermée. Réessaie dans un instant.</div>');
+            return;
+          }
+          setAnswering(true);
+          paintAll();
+          summary("");
+        });
       });
     }
 
-    // Le nombre d'essais restants doit être lisible dès l'arrivée sur la page,
-    // et après un rechargement l'élève retrouve ses essais déjà consommés.
-    if (revealed) reveal();
-    render(tries.length ? tries[tries.length - 1] : null, 0, false);
-
-    btn.addEventListener("click", function () {
-      if (btn.disabled) return;
-      sheet.classList.add("answering"); // la saisie doit être visible pour corriger
-      var toggle = sheet.querySelector(".cards-answer-toggle");
-      if (toggle) toggle.textContent = "📝 Masquer notre résultat";
-
-      var good = 0, blank = 0;
+    /* Ce que reçoit le professeur : l'état de chaque carte, puis le bilan. */
+    function payload() {
+      var ok = 0, locked = 0, attempts = 0, perCard = {};
       cards.forEach(function (li) {
-        var key = b64(li.getAttribute("data-k"));
-        var ta = li.querySelector(".cut-card-ans textarea");
-        var verdict = li.querySelector(".cut-card-verdict");
-        var val = ta ? ta.value : "";
-        li.classList.remove("ok", "ko", "blank");
-        if (!String(val).trim()) {
-          blank++; li.classList.add("blank");
-          if (verdict) verdict.textContent = "— à compléter";
-          return;
-        }
-        if (matches(val, key)) {
-          good++; li.classList.add("ok");
-          if (verdict) verdict.textContent = "✅ juste";
-        } else {
-          li.classList.add("ko");
-          if (verdict) verdict.textContent = "❌ à revoir";
-        }
+        var s = stateOf(li);
+        if (s.ok) ok++; else if (isLocked(s)) locked++;
+        attempts += s.t;
+        perCard[idxOf(li)] = { t: s.t, ok: !!s.ok };
       });
+      return { title: sheet.getAttribute("data-cards-title") || "", total: total, ok: ok, locked: locked,
+               pending: total - ok - locked, attempts: attempts, perCard: perCard, revealed: revealed };
+    }
+    function doSend() {
+      return waitBridge("submit").then(function (submit) {
+        if (!submit) return false;
+        return submit(id, payload());
+      }).then(function (okSent) {
+        if (!okSent) return false;
+        var was = sent;
+        sent = true; persist();
+        summary(was ? "" : '<div class="cards-sent">✅ Résultat envoyé au professeur.</div>');
+        return true;
+      });
+    }
+    /* Un envoi déjà en vol ne doit pas AVALER la vérification suivante : on
+       mémorise qu'il faut rejouer, sinon le dernier état n'arrive jamais. */
+    function send() {
+      if (sending) { queued = true; return sending; }
+      var done = function (r) {
+        sending = null;
+        if (queued) { queued = false; return send(); }
+        return r;
+      };
+      sending = doSend().then(done, function () { return done(false); });
+      return sending;
+    }
 
-      // Une planche incomplète ne consomme pas d'essai : on la signale, c'est tout.
-      if (blank && score) {
-        score.className = "cards-score show";
-        score.innerHTML = '<div class="cards-next">Complétez les <strong>' + blank + " carte" +
-          (blank > 1 ? "s" : "") + '</strong> sans réponse avant de vérifier : cet essai ne compte pas.</div>';
-        return;
-      }
+    function check(li) {
+      var s = stateOf(li);
+      if (s.ok || isLocked(s)) return;
+      var ta = li.querySelector("textarea");
+      var v = li.querySelector(".cut-card-verdict");
+      var val = ta ? ta.value : "";
+      if (!String(val).trim()) { if (v) v.textContent = "— écris d'abord une réponse"; return; }
+      // Même réponse que l'essai précédent (double-clic, touche Entrée
+      // maintenue) : on ne consomme pas d'essai pour rien.
+      var n = norm(val);
+      if (s.t > 0 && s.last === n) { if (v) v.textContent = "↻ même réponse — modifie-la avant de revérifier"; return; }
+      per[idxOf(li)] = { t: s.t + 1, ok: matches(val, b64(li.getAttribute("data-k"))), last: n };
+      persist();
+      paint(li);
+      summary("");
+      send();
+    }
 
-      var attempt = { good: good, total: total, at: Date.now() };
-      tries.push(attempt);
-      st.tries = tries; st.revealed = revealed; st.sent = sent;
-      saveCardsState(id, st);
-      render(attempt, blank, false);
-
-      waitSubmit().then(function (submit) {
-        if (!submit) return;
-        return submit(id, {
-          title: sheet.getAttribute("data-cards-title") || "",
-          total: total,
-          tries: tries.map(function (t) { return t.good; }),
-          best: tries.reduce(function (m, t) { return Math.max(m, t.good); }, 0),
-          revealed: revealed,
-        }).then(function (ok) {
-          if (!ok) return;
-          sent = true; st.sent = true; saveCardsState(id, st);
-          render(attempt, blank, true);
-        });
-      }).catch(function () {});
+    cards.forEach(function (li) {
+      var b = li.querySelector("[data-check-card]");
+      var ta = li.querySelector("textarea");
+      if (b) b.addEventListener("click", function () { check(li); });
+      // Entrée = vérifier cette carte (Maj+Entrée pour un retour à la ligne).
+      // e.repeat : une touche maintenue ne doit pas brûler les 3 essais.
+      if (ta) ta.addEventListener("keydown", function (e) {
+        if (e.key === "Enter" && !e.shiftKey) { e.preventDefault(); if (e.repeat) return; check(li); }
+      });
     });
+
+    // Affichage immédiat depuis la copie locale…
+    paintAll();
+    summary("");
+    if (cards.some(function (li) { return stateOf(li).t > 0; })) setAnswering(true);
+
+    // …puis l'état du professeur fait foi : on fusionne et on repeint.
+    waitBridge("load").then(function (load) {
+      if (!load) return null;
+      return load(id);
+    }).then(function (remote) {
+      if (remote && remote.perCard) {
+        per = mergeCards(per, remote.perCard);
+        if (remote.revealed) revealed = true;
+        sent = true;                       // il y a bien une trace chez le professeur
+        persist();
+        paintAll();
+        summary("");
+        if (cards.some(function (li) { return stateOf(li).t > 0; })) setAnswering(true);
+      }
+      // Travail terminé mais jamais transmis (réseau coupé, connexion tardive) :
+      // on rattrape, sinon la correction resterait fermée pour toujours.
+      if (!sent && cards.some(function (li) { return stateOf(li).t > 0; })) send();
+    }).catch(function () {});
   });
 
   /* ---------- Quiz auto-corrigés ---------- */

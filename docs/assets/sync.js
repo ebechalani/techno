@@ -8,7 +8,7 @@
 const __V = new URL(import.meta.url).searchParams.get("v") || "";
 const { currentStudent, isConfigured, pageKeyFromPath, loadWork, saveWork,
   watchGroupAnswers, saveGroupAnswer, markGroupAnswered, logout,
-  saveCardsResult, saveGroupCardsResult } = await import("./app.js" + (__V ? "?v=" + __V : ""));
+  saveCardsResult, saveGroupCardsResult, loadCardsResult, loadGroupCardsResult } = await import("./app.js" + (__V ? "?v=" + __V : ""));
 
 (async function () {
   const sess = currentStudent();
@@ -116,7 +116,8 @@ const { currentStudent, isConfigured, pageKeyFromPath, loadWork, saveWork,
         if (!a) return;
         const tag = authors.get(k);
         if (tag && a.by) tag.textContent = "✍️ " + a.by;
-        if (document.activeElement === ta) return;        // ne pas écraser une saisie en cours
+        // ne pas écraser une saisie en cours, ni une carte déjà jugée
+        if (document.activeElement === ta || ta.disabled) return;
         if (ta.value !== a.text) {
           ta.value = a.text;
           ta.parentElement.classList.toggle("saved", !!a.text.trim());
@@ -162,18 +163,16 @@ const { currentStudent, isConfigured, pageKeyFromPath, loadWork, saveWork,
      client.js n'ouvre la correction QUE si cette fonction a répondu true :
      le tri de l'îlot part chez le professeur AVANT que le corrigé soit
      visible, sans quoi il suffirait de révéler puis de recopier. */
-  window.LMTechnoCards = window.LMTechnoCards || { submit: null };
+  window.LMTechnoCards = window.LMTechnoCards || { submit: null, load: null };
   window.LMTechnoCards.submit = async function (sheetId, result) {
     try {
       // 1. les réponses écrites sur les cartes partent d'abord…
       if (inGroup) {
         const sheet = document.getElementById(sheetId);
         const tas = sheet ? Array.from(sheet.querySelectorAll(".cut-card-ans textarea")) : [];
-        for (const ta of tas) {
-          await saveGroupAnswer(sess.classId, sess.groupId, pageKey,
-            ta.getAttribute("data-answer-idx"), ta.value, sess.firstName, title,
-            ta.getAttribute("data-answer-label") || "", location.pathname);
-        }
+        await Promise.all(tas.map((ta) => saveGroupAnswer(sess.classId, sess.groupId, pageKey,
+          ta.getAttribute("data-answer-idx"), ta.value, sess.firstName, title,
+          ta.getAttribute("data-answer-label") || "", location.pathname)));
         await markGroupAnswered(sess.classId, sess.groupId, pageKey,
           Object.keys(collectAnswers()).length, title);
       } else if (!(await push())) {
@@ -185,6 +184,17 @@ const { currentStudent, isConfigured, pageKeyFromPath, loadWork, saveWork,
       else await saveCardsResult(sess.classId, sess.sid, pageKey, sheetId, data);
       return true;
     } catch (e) { return false; }
+  };
+
+  // Relecture : l'état enregistré chez le professeur fait foi sur celui du
+  // navigateur (connexion en cours de route, autre appareil, autre membre de
+  // l'îlot).
+  window.LMTechnoCards.load = async function (sheetId) {
+    try {
+      return inGroup
+        ? await loadGroupCardsResult(sess.classId, sess.groupId, pageKey, sheetId)
+        : await loadCardsResult(sess.classId, sess.sid, pageKey, sheetId);
+    } catch (e) { return null; }
   };
 
   /* ---- Quiz : toujours individuel ---- */

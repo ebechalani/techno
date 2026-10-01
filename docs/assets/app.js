@@ -211,6 +211,41 @@ export async function listMyClasses() {
   return toList(s);
 }
 
+/* Transfère une classe à un autre professeur (administrateur uniquement).
+ * Tout le reste — élèves, travaux, îlots, trombinoscope — est rattaché à la
+ * CLASSE, et les règles donnent l'accès à qui la possède : déplacer le nœud
+ * `classes/{prof}/{classe}` suffit donc à tout transférer, sans toucher aux
+ * données des élèves ni changer le code de connexion.
+ * L'ordre compte : on dépose chez le destinataire D'ABORD et on retire chez
+ * l'ancien propriétaire EN DERNIER. Si quelque chose échoue au milieu, la
+ * classe apparaît chez les deux — gênant mais réparable ; l'inverse la rendrait
+ * inaccessible à tout le monde. */
+export async function transferClass(classId, code, toUid) {
+  const fromUid = auth.currentUser.uid;
+  if (toUid === fromUid) throw new Error("Cette classe vous appartient déjà.");
+  const snap = await get(ref(db, "classes/" + fromUid + "/" + classId));
+  if (!snap.exists()) throw new Error("Classe introuvable.");
+  const cls = snap.val();
+
+  const target = await get(ref(db, "teachers/" + toUid));
+  if (!target.exists()) throw new Error("Ce professeur n'a pas de compte.");
+  if (target.val().approved !== true) {
+    throw new Error("Ce professeur n'est pas encore validé : validez-le d'abord ci-dessus.");
+  }
+  const allowed = await getTeacherSections(toUid);
+  if (allowed && !allowed.includes(cls.section)) {
+    throw new Error("Ce professeur n'est pas autorisé sur ce niveau. Ajoutez-le dans « Niveaux autorisés ».");
+  }
+
+  await set(ref(db, "classes/" + toUid + "/" + classId), {
+    ...cls, teacherUid: toUid, transferredFrom: fromUid, transferredAt: serverTimestamp(),
+  });
+  // Le code de connexion des élèves ne change pas : on le réaffecte seulement.
+  if (code) await update(ref(db, "classCodes/" + code), { classId, teacherUid: toUid });
+  await remove(ref(db, "classes/" + fromUid + "/" + classId));
+  return { classId, toUid };
+}
+
 // Supprime la classe ET toutes les données rattachées (droit à l'effacement).
 // L'ordre compte : les règles autorisent ces suppressions parce que la classe
 // appartient encore au professeur — on efface donc `classes/...` en DERNIER.
@@ -420,16 +455,60 @@ export async function markGroupAnswered(classId, groupId, pageKey, answered, tit
  * et si l'îlot a fini par consulter la correction. Rangé à côté du travail de
  * la page — aucune règle supplémentaire n'est nécessaire (l'écriture sous
  * work/{classe}/{élève} et groupwork/{classe}/{îlot} est déjà autorisée). */
-export async function saveCardsResult(classId, sid, pageKey, sheetId, data) {
+/* Un essai déjà consommé ne doit jamais être « rendu » : quand deux appareils
+ * d'un même îlot écrivent, on garde le maximum d'essais et toute réussite
+ * acquise, au lieu que le dernier arrivé écrase les autres. */
+function mergeCardsResult(prev, next) {
+  const per = {};
+  [(prev && prev.perCard) || {}, next.perCard || {}].forEach((src) => {
+    Object.keys(src).forEach((k) => {
+      const a = per[k] || {}, b = src[k] || {};
+      per[k] = { t: Math.max(a.t || 0, b.t || 0), ok: !!(a.ok || b.ok) };
+    });
+  });
+  const vals = Object.values(per);
+  const ok = vals.filter((c) => c.ok).length;
+  const locked = vals.filter((c) => !c.ok && (c.t || 0) >= 3).length;
+  return {
+    ...next,
+    perCard: per,
+    ok, locked,
+    pending: Math.max(0, (next.total || vals.length) - ok - locked),
+    attempts: vals.reduce((n, c) => n + (c.t || 0), 0),
+    revealed: !!(next.revealed || (prev && prev.revealed)),
+  };
+}
+
+async function saveCardsAt(path, data) {
   await ensureAnon();
-  await update(ref(db, "work/" + classId + "/" + sid + "/" + pageKey + "/cards/" + sheetId),
-    { ...data, updatedAt: serverTimestamp() });
+  const prev = await get(ref(db, path)).catch(() => null);
+  await update(ref(db, path), {
+    ...mergeCardsResult(prev && prev.exists() ? prev.val() : null, data),
+    updatedAt: serverTimestamp(),
+  });
+}
+
+export async function saveCardsResult(classId, sid, pageKey, sheetId, data) {
+  await saveCardsAt("work/" + classId + "/" + sid + "/" + pageKey + "/cards/" + sheetId, data);
 }
 
 export async function saveGroupCardsResult(classId, groupId, pageKey, sheetId, data) {
+  await saveCardsAt("groupwork/" + classId + "/" + groupId + "/" + pageKey + "/cards/" + sheetId, data);
+}
+
+/* Relecture de l'état d'une planche : c'est lui qui fait foi, pour qu'un élève
+ * qui se connecte en cours de route, change d'appareil, ou rejoint un îlot ne
+ * récupère pas trois essais neufs. */
+export async function loadCardsResult(classId, sid, pageKey, sheetId) {
   await ensureAnon();
-  await update(ref(db, "groupwork/" + classId + "/" + groupId + "/" + pageKey + "/cards/" + sheetId),
-    { ...data, updatedAt: serverTimestamp() });
+  const s = await get(ref(db, "work/" + classId + "/" + sid + "/" + pageKey + "/cards/" + sheetId));
+  return s.exists() ? s.val() : null;
+}
+
+export async function loadGroupCardsResult(classId, groupId, pageKey, sheetId) {
+  await ensureAnon();
+  const s = await get(ref(db, "groupwork/" + classId + "/" + groupId + "/" + pageKey + "/cards/" + sheetId));
+  return s.exists() ? s.val() : null;
 }
 
 export async function loadWork(classId, sid, pageKey) {

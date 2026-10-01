@@ -61,7 +61,7 @@
 
 <script type="module">
 import { isConfigured, onAuth, logout, ensureTeacher, createClass, listMyClasses, deleteClass,
-  addStudent, removeStudent, listStudents, loadStudentWork, loadClassAnswers,
+  addStudent, removeStudent, listStudents, loadStudentWork, loadClassAnswers, transferClass,
   listGroups, loadGroupWork, removeGroup,
   listPendingTeachers, approveTeacher, rejectTeacher,
   mySections, listTeachers, getTeacherSections, setTeacherSections, syncRoster,
@@ -93,6 +93,9 @@ if (!isConfigured()) { location.href = "../connexion/"; }
 
 $("logout").onclick = async () => { await logout(); location.href = "../connexion/"; };
 
+let IS_ADMIN = false;
+let OTHER_TEACHERS = [];   // professeurs approuvés, hors moi — cible d'un transfert
+
 onAuth(async ({ role, user }) => {
   if (role !== "prof") { location.href = "../connexion/"; return; }
   $("who").textContent = user.displayName || user.email;
@@ -100,7 +103,11 @@ onAuth(async ({ role, user }) => {
   try { me = await ensureTeacher(); } catch (e) {}
   $("loading").style.display = "none";
   if (!me || !me.approved) { $("pending").style.display = "block"; return; }
-  if (me.isAdmin) { $("admin").style.display = "block"; refreshAdmin(); refreshTeacherLevels(); }
+  if (me.isAdmin) {
+    IS_ADMIN = true;
+    $("admin").style.display = "block"; refreshAdmin(); refreshTeacherLevels();
+    try { OTHER_TEACHERS = (await listTeachers()).filter((t) => t.approved && t.id !== me.id); } catch (e) {}
+  }
   await applySectionLimit();
   $("dash").style.display = "block";
   await refresh();
@@ -220,6 +227,16 @@ async function refresh() {
         <span>Code : <span class="class-code">${esc(cls.code)}</span></span>
         <button class="btn btn-ghost btn-sm" data-del="${cls.id}" data-code="${esc(cls.code)}">🗑 Supprimer</button>
       </div>
+      ${IS_ADMIN && OTHER_TEACHERS.length ? `<div class="inline-form" style="margin:0.5rem 0 0">
+        <div class="field"><label for="xfer-${cls.id}">Confier cette classe à un autre professeur</label>
+          <select id="xfer-${cls.id}" data-xfersel="${cls.id}">
+            <option value="">— choisir un professeur —</option>
+            ${OTHER_TEACHERS.map((t) => `<option value="${esc(t.id)}">${esc(t.name || t.email)}</option>`).join("")}
+          </select></div>
+        <button class="btn btn-ghost btn-sm" data-xfer="${cls.id}" data-code="${esc(cls.code)}" data-name="${esc(cls.name)}">👤 Transférer</button>
+      </div>
+      <p style="color:var(--muted);font-size:0.82rem;margin:0.3rem 0 0">Les élèves, leurs réponses et les îlots suivent la classe. Le code <strong>${esc(cls.code)}</strong> ne change pas : rien à refaire côté élèves.</p>
+      <div class="app-msg err" data-xfermsg="${cls.id}"></div>` : ""}
       <p style="color:var(--muted);font-size:0.88rem;margin:0.6rem 0">Chaque élève reçoit un <strong>pseudo + numéro unique</strong> (ci-dessous). Donnez-lui le <strong>code de la classe</strong> et son <strong>pseudo</strong> : il se connecte avec les deux.</p>
       <div class="inline-form" style="margin:0.6rem 0 0.4rem">
         <div class="field"><label>Ajouter un élève (pseudo)</label>
@@ -347,6 +364,20 @@ function wire() {
     if (!confirm("Retirer cet élève et ses réponses ?")) return;
     try { await removeStudent(b.getAttribute("data-rm"), b.getAttribute("data-sid")); await refresh(); } catch (e) { alert("Erreur : " + (e.message || e)); }
   });
+  document.querySelectorAll("[data-xfer]").forEach((b) => b.onclick = async () => {
+    const cid = b.getAttribute("data-xfer"), code = b.getAttribute("data-code"), name = b.getAttribute("data-name");
+    const sel = document.querySelector(`[data-xfersel="${cid}"]`);
+    const msg = document.querySelector(`[data-xfermsg="${cid}"]`);
+    const show = (t) => { msg.textContent = t || ""; msg.className = t ? "app-msg show err" : "app-msg"; };
+    show("");
+    const toUid = sel ? sel.value : "";
+    if (!toUid) return show("Choisissez d'abord le professeur à qui confier la classe.");
+    const who = sel.options[sel.selectedIndex].textContent;
+    if (!confirm(`Confier « ${name} » à ${who} ?\n\nCette classe disparaîtra de VOTRE tableau de bord : ${who} en devient responsable, avec les élèves, leurs réponses et les îlots. Vous y gardez accès comme administrateur.\n\nLe code de connexion des élèves ne change pas.`)) return;
+    b.disabled = true;
+    try { await transferClass(cid, code, toUid); await refresh(); }
+    catch (e) { show("Transfert impossible : " + (e.message || e)); b.disabled = false; }
+  });
   document.querySelectorAll("[data-del]").forEach((b) => b.onclick = async () => {
     if (!confirm("Supprimer définitivement cette classe, ses élèves et toutes leurs réponses ?")) return;
     try { await deleteClass(b.getAttribute("data-del"), b.getAttribute("data-code")); await refresh(); } catch (e) { alert("Erreur : " + (e.message || e)); }
@@ -362,8 +393,28 @@ function wire() {
   /* Résultat du vérificateur de cartes : les 3 essais, le meilleur score, et
      si la correction a été consultée. */
   const cardsBlock = (cards) => Object.values(cards || {}).map((c) => {
-    const tries = Array.isArray(c.tries) ? c.tries : [];
     const total = c.total || 0;
+    const per = c.perCard && typeof c.perCard === "object" ? c.perCard : null;
+    let meta;
+    if (per) {
+      // Vérification carte par carte : justes / bloquées / en attente, et combien
+      // de cartes ont demandé plus d'un essai.
+      const ok = c.ok || 0, locked = c.locked || 0, pending = c.pending != null ? c.pending : total - ok - locked;
+      const retried = Object.values(per).filter((p) => p.ok && p.t > 1).length;
+      const firstTry = Object.values(per).filter((p) => p.ok && p.t === 1).length;
+      const perList = Object.keys(per).sort((a, b) => Number(a) - Number(b))
+        .map((k) => `${k}${per[k].ok ? "✅" : per[k].t >= 3 ? "🔒" : per[k].t ? "❌" + per[k].t : "·"}`).join(" ");
+      meta = `${ok} juste${ok > 1 ? "s" : ""} (${firstTry} du 1ᵉʳ coup${retried ? ", " + retried + " après un ❌" : ""})` +
+        (locked ? ` · 🔒 ${locked} bloquée${locked > 1 ? "s" : ""}` : "") +
+        (pending ? ` · ${pending} non vérifiée${pending > 1 ? "s" : ""}` : "") +
+        ` · ${c.attempts || 0} essai${(c.attempts || 0) > 1 ? "s" : ""} au total` +
+        `<div class="cards-result-cards">${esc(perList)}</div>`;
+      const pct = total ? Math.round(ok / total * 100) : null;
+      return `<div class="cards-result"><strong>✂️ ${esc(c.title || "Cartes")}</strong> ${scorePill(pct)}
+        <span class="cards-result-meta">${meta} · ${c.revealed ? "corrigé consulté" : "corrigé non consulté"}</span></div>`;
+    }
+    // Ancien format (planche vérifiée d'un bloc) : conservé pour les résultats déjà enregistrés.
+    const tries = Array.isArray(c.tries) ? c.tries : [];
     const best = c.best != null ? c.best : (tries.length ? Math.max(...tries) : 0);
     const pct = total ? Math.round(best / total * 100) : null;
     return `<div class="cards-result">
