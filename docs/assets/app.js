@@ -223,9 +223,23 @@ export async function listMyClasses() {
 export async function transferClass(classId, code, toUid) {
   const fromUid = auth.currentUser.uid;
   if (toUid === fromUid) throw new Error("Cette classe vous appartient déjà.");
+
+  /* Le bouton s'affiche d'après le champ `isAdmin` STOCKÉ en base, alors que
+     les règles du serveur, elles, vérifient l'e-mail du compte connecté. Les
+     deux peuvent diverger : on le dit clairement plutôt que de laisser partir
+     une écriture qui sera refusée sans explication. */
+  const mail = (auth.currentUser.email || "").trim().toLowerCase();
+  if (mail !== ADMIN_EMAIL) {
+    throw new Error("Seul le compte administrateur (" + ADMIN_EMAIL + ") peut transférer une classe. " +
+      "Vous êtes connecté avec « " + (mail || "?") + " » : déconnectez-vous et reconnectez-vous avec le compte administrateur.");
+  }
+
   const snap = await get(ref(db, "classes/" + fromUid + "/" + classId));
   if (!snap.exists()) throw new Error("Classe introuvable.");
   const cls = snap.val();
+  if (!cls.section) {
+    throw new Error("Cette classe n'a pas de niveau enregistré : le serveur refusera le transfert. Recréez-la en choisissant un niveau.");
+  }
 
   const target = await get(ref(db, "teachers/" + toUid));
   if (!target.exists()) throw new Error("Ce professeur n'a pas de compte.");
@@ -237,12 +251,29 @@ export async function transferClass(classId, code, toUid) {
     throw new Error("Ce professeur n'est pas autorisé sur ce niveau. Ajoutez-le dans « Niveaux autorisés ».");
   }
 
-  await set(ref(db, "classes/" + toUid + "/" + classId), {
-    ...cls, teacherUid: toUid, transferredFrom: fromUid, transferredAt: serverTimestamp(),
-  });
-  // Le code de connexion des élèves ne change pas : on le réaffecte seulement.
-  if (code) await update(ref(db, "classCodes/" + code), { classId, teacherUid: toUid });
-  await remove(ref(db, "classes/" + fromUid + "/" + classId));
+  const denied = (e) => String((e && (e.code || e.message)) || "").toUpperCase().includes("PERMISSION_DENIED");
+  const rulesHint = "Refusé par Firebase : les règles publiées ne sont pas à jour. " +
+    "Ouvrez Realtime Database → Règles, publiez le contenu de database.rules.json, puis réessayez. " +
+    "(Repère : la règle de transfert doit contenir « root.child('teachers').child($tuid) ».)";
+
+  let placed = false;
+  try {
+    await set(ref(db, "classes/" + toUid + "/" + classId), {
+      ...cls, teacherUid: toUid, transferredFrom: fromUid, transferredAt: serverTimestamp(),
+    });
+    placed = true;
+    // Le code de connexion des élèves ne change pas : on le réaffecte seulement.
+    if (code) await update(ref(db, "classCodes/" + code), { classId, teacherUid: toUid });
+    await remove(ref(db, "classes/" + fromUid + "/" + classId));
+  } catch (e) {
+    // Échec à mi-chemin : on défait le dépôt pour ne pas laisser la classe
+    // visible des deux côtés, avec un code qui pointerait déjà ailleurs.
+    if (placed) {
+      await update(ref(db, "classCodes/" + code), { classId, teacherUid: fromUid }).catch(() => {});
+      await remove(ref(db, "classes/" + toUid + "/" + classId)).catch(() => {});
+    }
+    throw new Error(denied(e) ? rulesHint : "Transfert interrompu : " + (e.message || e));
+  }
   return { classId, toUid };
 }
 
